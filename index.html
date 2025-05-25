@@ -155,6 +155,24 @@
   </script>
 </head>
 <body>
+  <!-- Google Translate widget -->
+<div class="container mt-2 d-flex justify-content-center justify-content-md-end">
+  <div id="google_translate_element"></div>
+</div>
+<script>
+  (function(){
+    var lang = (navigator.language||'en').substr(0,2);
+    document.cookie = 'googtrans=/en/'+lang+';path=/';
+  })();
+  function googleTranslateElementInit(){
+    new google.translate.TranslateElement({
+      pageLanguage:'en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+
   <!-- all your other scripts and HTML -->
 
 <script>
@@ -165,31 +183,6 @@
 })();
 </script>
 
-<!-- ② Load the Google Translate engine, telling it to call your init() on load -->
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-  }, 'google_translate_element');
-}
-</script>
-
-<!-- helper to fire events -->
-
-  <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
-  <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
-  
-  <main id="main">
-    <!-- Hero / SEO-Rich Intro -->
-    <div class="bg-warning text-dark text-center py-2 shadow-sm">
-      🔎 <strong>Amazon Super Search</strong> — The Fast & Easy Way to Find Exactly What You Want on Amazon
-    </div>
-   <!-- 🌐 Google Translate Widget (Responsive Alignment) -->
-<div class="container mt-2 d-flex justify-content-center justify-content-md-end">
-  <div id="google_translate_element"></div>
-</div>
 <div class="text-center my-3">
   <h2 class="text-pulse display-6 fw-bold">
     🔥 Find  & Filter Instantly With Our Search Tool Designed For Amazon Products!
