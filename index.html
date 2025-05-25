@@ -1482,19 +1482,17 @@ const includeInput = form.querySelector('input[name="brand-include"]');
 let brands = [];
 
 if (includeInput._tagify) {
-  // read from Tagify
   brands = includeInput._tagify.value.map(tag => tag.value.trim());
 } else {
-  // fallback to raw comma-separated text
   brands = (includeInput.value || '')
-            .split(',')
-            .map(s => s.trim())
-            .filter(Boolean);
+             .split(',')
+             .map(s => s.trim())
+             .filter(Boolean);
 }
 
+// **IMPORTANT: URI-encode each brand value**
 brands.forEach(brand => {
-  // NOTE: no encodeURIComponent here
-  rh.push(`p_89:${brand}`);
+  rh.push(`p_89:${encodeURIComponent(brand)}`);
 });
     
     // 8) Boolean, field filters, ASIN lookup
