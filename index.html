@@ -153,24 +153,6 @@
     window.amzn_assoc_tracking_id = "echolover25-20";
     window.amzn_assoc_linkid      = "YOUR_LINK_ID_HERE";
   </script>
-  <style>
-  /* Modern styling for Google Translate widget */
-  #google_translate_element select {
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    padding: 6px 10px;
-    font-size: 0.95rem;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-  }
-
-  #google_translate_element select:hover {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0,123,255,0.25);
-  }
-</style>
-
 </head>
 <body>
   <!-- all your other scripts and HTML -->
@@ -199,15 +181,15 @@ function googleTranslateElementInit() {
   <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
   <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
   
+ <!-- 🌐 Google Translate (top right) -->
+<div class="position-fixed top-0 end-0 p-2 bg-light border shadow-sm" style="z-index:9999;">
+  <div id="google_translate_element"></div>
+</div>
   <main id="main">
     <!-- Hero / SEO-Rich Intro -->
     <div class="bg-warning text-dark text-center py-2 shadow-sm">
       🔎 <strong>Amazon Super Search</strong> — The Fast & Easy Way to Find Exactly What You Want on Amazon
     </div>
-   <!-- 🌐 Google Translate Widget (Responsive Alignment) -->
-<div class="container mt-2 d-flex justify-content-center justify-content-md-end">
-  <div id="google_translate_element"></div>
-</div>
 <div class="text-center my-3">
   <h2 class="text-pulse display-6 fw-bold">
     🔥 Find  & Filter Instantly With Our Search Tool Designed For Amazon Products!
