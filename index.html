@@ -1341,65 +1341,8 @@
     });
   }
   </script>
-<!-- Floating Share Panel -->
-<div class="floating-share">
-  <h2>Share With Friends</h2>
-  <div class="share-buttons">
-    <a href="#"
-       onclick="window.open(
-         'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),
-         '_blank'
-       ); return false;"
-       class="btn btn-primary btn-sm">
-      Facebook
-    </a>
-    <a href="#"
-       onclick="window.open(
-         'https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)
-         +'&text='+encodeURIComponent(document.title),
-         '_blank'
-       ); return false;"
-       class="btn btn-info btn-sm">
-      Twitter
-    </a>
-    <a href="#"
-       onclick="window.open(
-         'mailto:?subject='+encodeURIComponent(document.title)
-         +'&body='+encodeURIComponent(window.location.href),
-         '_self'
-       ); return false;"
-       class="btn btn-secondary btn-sm">
-      Email
-    </a>
-    <a href="#"
-       onclick="window.open(
-         'sms:?&body='+encodeURIComponent(window.location.href),
-         '_blank'
-       ); return false;"
-       class="btn btn-success btn-sm">
-      SMS
-    </a>
-  </div>
 </div>
-   <script>
-    if (navigator.share) {
-      document.querySelectorAll('.share-buttons a').forEach(btn => {
-        btn.addEventListener('click', async e => {
-          e.preventDefault();
-          try {
-            await navigator.share({
-              title: document.title,
-              text: 'Check out Amazon Super Search!',
-              url: window.location.href,
-            });
-          } catch (err) {
-            console.error('Share failed:', err);
-            window.open(btn.href, '_blank');
-          }
-        });
-      });
-    }
-      </script>
+  
 <!-- All your HTML content above... -->
 
    <!-- …all your page content above… -->
