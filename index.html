@@ -1492,16 +1492,25 @@ pushFilter('warehouse-refurb','p_n_condition-type', '2224371011'); // Used & Ref
     const vol = parseInt(data.get('max-volatility-7')||0);
     if (vol) rh.push(`p_n_price-volatility:${vol}`);
 
-    // 7) Brand Include (comma-separated list)
-const rawBrands = data.get('brand-include') || '';
-rawBrands
-  .split(',')
-  .map(b => b.trim())
-  .filter(b => b.length)
-  .forEach(brand => {
-    // this is the same filter param you were using before
-    rh.push(`p_89:${encodeURIComponent(brand)}`);
-  });
+    // 7) Brand Include (take Tagify values if available, fallback to comma-list)
+const includeInput = form.querySelector('input[name="brand-include"]');
+let brands = [];
+
+if (includeInput._tagify) {
+  // read from Tagify
+  brands = includeInput._tagify.value.map(tag => tag.value.trim());
+} else {
+  // fallback to raw comma-separated text
+  brands = (includeInput.value || '')
+            .split(',')
+            .map(s => s.trim())
+            .filter(Boolean);
+}
+
+brands.forEach(brand => {
+  // NOTE: no encodeURIComponent here
+  rh.push(`p_89:${brand}`);
+});
     
     // 8) Boolean, field filters, ASIN lookup
     if (data.get('enable-boolean')==='on') params.set('boolean','on');
