@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Preload the hero image -->
+  <link
+    rel="preload"
+    href="/images/hero-banner.webp"
+    as="image"
+    type="image/webp"
+  >
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-51QSZ395GS"></script>
   <script>
@@ -12,6 +19,12 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- OneLink: auto-redirect & tag mapping (move this up) -->
+  <script>
+    window.amzn_assoc_tracking_id = "echolover25-20";
+    window.amzn_assoc_linkid      = "YOUR_LINK_ID_HERE";
+  </script>
   
   <!-- ✅ Optimized Title -->
   <title>Amazon Super Search – Instantly Find Prime Deals, Lightning Discounts & Hidden Gems</title>
@@ -70,16 +83,15 @@
     "operatingSystem": "All",
     "description": "Instantly filter Amazon for in-stock items, Prime deals, lightning discounts, hidden coupons, and more. No signup required – just smart search filters that save you time and money."
   }
+  
   </script>
-
   <!-- Bootstrap CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Tagify CSS & JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css">
   <!-- ① Auto-detect and set the cookie before Translate loads -->
-
-  <style>
+<style>
       /* ——— AMAZON-ORANGE PULSING HEADING ——— */
     @keyframes text-pulse {
       0%   { text-shadow: 0 0 5px rgba(255,153,0,0.7), 0 0 10px rgba(255,153,0,0.5); }
@@ -166,11 +178,6 @@
     font-style: italic;
   }
     </style>
-  <!-- OneLink: auto-redirect & tag mapping (move this up) -->
-  <script>
-    window.amzn_assoc_tracking_id = "echolover25-20";
-    window.amzn_assoc_linkid      = "YOUR_LINK_ID_HERE";
-  </script>
 </head>
 <body>
   <main>
@@ -194,6 +201,8 @@
     var lang = (navigator.language||'en').substr(0,2);
     document.cookie = 'googtrans=/en/'+lang+';path=/';
   })();
+</script>
+    <script>
   function googleTranslateElementInit(){
     new google.translate.TranslateElement({
       pageLanguage:'en',
@@ -201,24 +210,10 @@
     }, 'google_translate_element');
   }
 </script>
-<script>
-  window.addEventListener('load', function(){
-    var s = document.createElement('script');
-    s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    s.async = true;
-    document.body.appendChild(s);
-  });
-</script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+
 
   <!-- all your other scripts and HTML -->
-
-<script>
-// ① Auto-detect and set the cookie before Translate loads
-(function(){
-  var userLang = (navigator.language || navigator.userLanguage).substr(0,2);
-  document.cookie = "googtrans=/en/" + userLang + "; path=/";
-})();
-</script>
 
 <div class="text-center my-3">
   <h2 class="text-pulse display-6 fw-bold">
@@ -229,11 +224,19 @@
     🎯 Start Your Custom Search in 5 Simple Steps
   </a>
 </div>
-
 </div>
- <section class="hero-section">
+<section class="hero-section">
   <div class="container-fluid text-center my-5 px-3 px-md-5">
     <div class="banner-inner">
+      <!-- Hero banner image as your LCP element -->
+      <img
+        src="/images/hero-banner.webp"
+        width="1200"
+        height="600"
+        alt="Advanced Amazon Search – Find Hidden Amazon Deals Fast"
+        class="banner-image mb-4"
+      >
+
       <h1 class="display-5 fw-bold mb-3">
         Advanced Amazon Search &amp; Instant Filter Options —<br>
         Simplicity Meets Power!
