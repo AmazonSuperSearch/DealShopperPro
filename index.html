@@ -77,7 +77,6 @@
 
   <!-- Tagify CSS & JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css">
-  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js"></script>
   <!-- ① Auto-detect and set the cookie before Translate loads -->
 
   <style>
@@ -168,7 +167,6 @@
   }
     </style>
   <!-- OneLink: auto-redirect & tag mapping (move this up) -->
-  <script src="//onetag-s.amazon-adsystem.com/onetag/js/utag-locale-min.js"></script>
   <script>
     window.amzn_assoc_tracking_id = "echolover25-20";
     window.amzn_assoc_linkid      = "YOUR_LINK_ID_HERE";
@@ -203,7 +201,14 @@
     }, 'google_translate_element');
   }
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+<script>
+  window.addEventListener('load', function(){
+    var s = document.createElement('script');
+    s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    s.async = true;
+    document.body.appendChild(s);
+  });
+</script>
 
   <!-- all your other scripts and HTML -->
 
@@ -1549,6 +1554,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
-
+<!-- Deferred JS -->
+<script defer src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js"></script>
+<script defer src="//onetag-s.amazon-adsystem.com/onetag/js/utag-locale-min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<!-- (Your other inline scripts can stay here, or also be wrapped in window.load if non-critical) -->
 </body>
 </html>
