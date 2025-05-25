@@ -390,26 +390,41 @@
 
   <div class="card border-success shadow-sm mb-4 p-3">
     <div class="row g-3">
+      <!-- Brand input field -->
       <div class="col-12 col-md-6">
         <label class="form-label" for="brandInclude">
-          Search by Brand(s) <small class="text-muted">(comma-separated)</small>
+          Search by Brand(s)
+          <small class="text-muted">(comma-separated)</small>
         </label>
         <input
           type="text"
           class="form-control"
-          id="brandInclude"
           name="brand-include"
+          id="brandInclude"
           placeholder="e.g. Sony, LG"
-          aria-describedby="brandHelp"
         >
-        <div id="brandHelp" class="form-text text-muted">
+        <small class="form-text text-muted">
           Enter one or more brands separated by commas.
+        </small>
+      </div>
+
+      <!-- “Match only these brands” checkbox -->
+      <div class="col-12 col-md-6 d-flex align-items-end">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            name="include-only"
+            id="includeOnly"
+          >
+          <label class="form-check-label" for="includeOnly">
+            Match only these brands
+          </label>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 
  <!-- Step 5: Fine-tune your preferences -->
