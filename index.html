@@ -383,31 +383,29 @@
   
 <!-- Step 4: Brand Filters -->
 <section class="container text-start mb-4">
-  <h2 class="mb-2">✅ Step 4: Choose which brand(s) to include.</h2>
+  <h2 class="mb-2">✅ Step 4: Choose which brand(s) to include</h2>
   <p class="text-muted mb-3">
     Narrow results by including only certain brands.
   </p>
 
   <div class="card border-success shadow-sm mb-4 p-3">
     <div class="row g-3">
-
-     <!-- Include Brands -->
-<div class="col-12 col-md-6">
-  <label class="form-label" for="brandInclude">
-    Search by Brand(s)
-    <small class="text-muted">(comma-separated)</small>
-  </label>
-  <input
-    type="text"
-    class="form-control"
-    name="brand-include"
-    id="brandInclude"
-    placeholder="e.g. Sony, LG"
-  >
-  <small class="form-text text-muted">
-    Enter one or more brands separated by commas.
-  </small>
-</div>
+      <div class="col-12 col-md-6">
+        <label class="form-label" for="brandInclude">
+          Search by Brand(s) <small class="text-muted">(comma-separated)</small>
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="brandInclude"
+          name="brand-include"
+          placeholder="e.g. Sony, LG"
+          aria-describedby="brandHelp"
+        >
+        <div id="brandHelp" class="form-text text-muted">
+          Enter one or more brands separated by commas.
+        </div>
+      </div>
     </div>
   </div>
 </section>
