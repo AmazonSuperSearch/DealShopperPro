@@ -1586,6 +1586,26 @@ pushFilter('warehouse-refurb','p_n_condition-type', '2224371011'); // Used & Ref
 if (rh.length) params.set('rh', rh.join(','));
 params.set('tag', 'echolover25-20'); // your affiliate tag
 
+    // Click‐sound setup
+  const clickSound = document.getElementById("clickSound");
+
+  // Play sound function
+  const playClick = () => {
+    if (!clickSound) return;
+    clickSound.currentTime = 0;
+    clickSound.play().catch(() => {});
+  };
+
+  // Handle all button clicks
+  document
+    .querySelectorAll("button, input[type=submit], input[type=button]")
+    .forEach(btn => btn.addEventListener("click", playClick));
+
+  // Handle all checkbox clicks
+  document
+    .querySelectorAll("input[type=checkbox]")
+    .forEach(chk => chk.addEventListener("change", playClick));
+
 // Get selected currency and map to appropriate Amazon domain
 const currency = data.get('currency') || 'usd';
 const domainMap = {
@@ -1599,28 +1619,6 @@ const host = domainMap[currency] || 'www.amazon.com';
 
 const url = `https://${host}/s?${params.toString()}`;
 window.open(url, '_blank');
-  });
-});
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const clickSound = document.getElementById("clickSound");
-
-  // Play sound function
-  const playClick = () => {
-    if (!clickSound) return;
-    clickSound.currentTime = 0;
-    clickSound.play().catch(() => {});
-  };
-
-  // Handle all button clicks
-  document.querySelectorAll("button, input[type=submit], input[type=button]").forEach(btn => {
-    btn.addEventListener("click", playClick);
-  });
-
-  // Handle all checkbox clicks
-  document.querySelectorAll("input[type=checkbox]").forEach(chk => {
-    chk.addEventListener("change", playClick);
   });
 });
 </script>
