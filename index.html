@@ -144,36 +144,6 @@
   }
     </style>
   <style>
-    /* Floating share panel */
-.floating-share {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  width: 200px;
-  padding: 0.75rem;
-  background: rgba(255,255,255,0.95);
-  border: 2px solid #007bff;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  z-index: 1000;
-}
-.floating-share h2 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  text-align: center;
-}
-.floating-share .share-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-}
-.floating-share .share-buttons a {
-  flex: 1 1 48%;
-  font-size: 0.85rem;
-  padding: 0.3rem;
-  text-align: center;
-}
     .banner-inner {
   max-width: 1546px;
   margin: 0 auto;
@@ -1392,65 +1362,7 @@
     });
   }
   </script>
-<!-- Floating Share Panel -->
-<div class="floating-share">
-  <h2>Share With Friends</h2>
-  <div class="share-buttons">
-    <a href="#"
-       onclick="window.open(
-         'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),
-         '_blank'
-       ); return false;"
-       class="btn btn-primary btn-sm">
-      Facebook
-    </a>
-    <a href="#"
-       onclick="window.open(
-         'https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)
-         +'&text='+encodeURIComponent(document.title),
-         '_blank'
-       ); return false;"
-       class="btn btn-info btn-sm">
-      Twitter
-    </a>
-    <a href="#"
-       onclick="window.open(
-         'mailto:?subject='+encodeURIComponent(document.title)
-         +'&body='+encodeURIComponent(window.location.href),
-         '_self'
-       ); return false;"
-       class="btn btn-secondary btn-sm">
-      Email
-    </a>
-    <a href="#"
-       onclick="window.open(
-         'sms:?&body='+encodeURIComponent(window.location.href),
-         '_blank'
-       ); return false;"
-       class="btn btn-success btn-sm">
-      SMS
-    </a>
-  </div>
-</div>
-   <script>
-    if (navigator.share) {
-      document.querySelectorAll('.share-buttons a').forEach(btn => {
-        btn.addEventListener('click', async e => {
-          e.preventDefault();
-          try {
-            await navigator.share({
-              title: document.title,
-              text: 'Check out Amazon Super Search!',
-              url: window.location.href,
-            });
-          } catch (err) {
-            console.error('Share failed:', err);
-            window.open(btn.href, '_blank');
-          }
-        });
-      });
-    }
-      </script>
+
 <!-- All your HTML content above... -->
 
    <!-- …all your page content above… -->
