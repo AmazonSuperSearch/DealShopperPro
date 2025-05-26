@@ -68,6 +68,51 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
+ <!-- Inter font -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  /* 1) Global font */
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* 2) Scale animation */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.05); }
+  }
+
+  /* 3) Text glow animation */
+  @keyframes glow {
+    0% {
+      text-shadow:
+        0 0 8px rgba(255,255,255,0.6),
+        0 0 16px rgba(255,255,255,0.4);
+    }
+    100% {
+      text-shadow:
+        0 0 16px rgba(255,255,255,1),
+        0 0 32px rgba(255,255,255,0.7);
+    }
+  }
+
+  /* 4) Apply to the banner heading */
+  .banner-inner.site-title {
+    display: inline-block;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.2;
+    color: #fff;
+    animation:
+      pulse 3s ease-in-out infinite,
+      glow  2.5s ease-in-out infinite alternate;
+  }
+</style>
+  
   <!-- Tagify CSS & JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css">
   <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js"></script>
@@ -262,7 +307,7 @@
 </nav>
   <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
   <main id="main">
-    <h1 class="display-4 text-center mb-4">
+   <h1 class="banner-inner site-title">
   Amazon Super Search: Your Lightning Deal & Filter Hub
 </h1>
     <!-- Google Translate dropdown -->
