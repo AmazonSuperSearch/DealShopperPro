@@ -1494,6 +1494,33 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Tagify on your brand inputs
   new Tagify(form.querySelector('input[name="brand-include"]'));
 
+   // Click-sound setup
+  const clickSound = document.getElementById("clickSound");
+
+  // Play sound function
+  const playClick = () => {
+    if (!clickSound) return;
+    clickSound.currentTime = 0;
+    clickSound.play().catch(() => {});
+  };
+
+  // Handle all button clicks
+  document
+    .querySelectorAll("button, input[type=submit], input[type=button]")
+    .forEach(btn => btn.addEventListener("click", playClick));
+
+  // Handle all checkbox clicks
+  document
+    .querySelectorAll("input[type=checkbox]")
+    .forEach(chk => chk.addEventListener("change", playClick));
+  /* ← end insert */
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const params = new URLSearchParams();
+    const rh = [];
+
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
@@ -1586,25 +1613,6 @@ pushFilter('warehouse-refurb','p_n_condition-type', '2224371011'); // Used & Ref
 if (rh.length) params.set('rh', rh.join(','));
 params.set('tag', 'echolover25-20'); // your affiliate tag
 
-    // Click‐sound setup
-  const clickSound = document.getElementById("clickSound");
-
-  // Play sound function
-  const playClick = () => {
-    if (!clickSound) return;
-    clickSound.currentTime = 0;
-    clickSound.play().catch(() => {});
-  };
-
-  // Handle all button clicks
-  document
-    .querySelectorAll("button, input[type=submit], input[type=button]")
-    .forEach(btn => btn.addEventListener("click", playClick));
-
-  // Handle all checkbox clicks
-  document
-    .querySelectorAll("input[type=checkbox]")
-    .forEach(chk => chk.addEventListener("change", playClick));
 
 // Get selected currency and map to appropriate Amazon domain
 const currency = data.get('currency') || 'usd';
