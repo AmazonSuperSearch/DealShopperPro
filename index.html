@@ -101,16 +101,20 @@
   }
 
   /* 4) Apply to the banner heading */
-  .banner-inner.site-title {
-    display: inline-block;
-    font-weight: 800;
-    font-size: clamp(2rem, 5vw, 4rem);
-    line-height: 1.2;
-    color: #FF9900;
-    animation:
-      pulse 3s ease-in-out infinite,
-      glow  2.5s ease-in-out infinite alternate;
-  }
+ .banner-inner .site-title {
+  display: block;
+  text-align: center;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  line-height: 1.2;
+  color: #FF9900;
+  animation:
+    pulse 3s ease-in-out infinite,
+    glow  2.5s ease-in-out infinite alternate;
+}
+
 </style>
   
   <!-- Tagify CSS & JS -->
@@ -208,10 +212,6 @@
   max-width: 1546px;
   margin: 0 auto;
 }
-    .banner-inner h1 {
-  font-size: clamp(2rem, 5vw, 4rem);
-  line-height: 1.2;
-}
 
 .banner-inner p {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
@@ -236,9 +236,9 @@
   .banner-inner {
     padding: 0 1rem;
   }
-  .banner-inner h1 {
-    font-size: 1.75rem;
-  }
+  .banner-inner .site-title {
+  font-size: clamp(1rem, 4vw, 1.75rem);
+}
   .banner-inner p {
     font-size: 1rem;
   }
@@ -307,10 +307,12 @@
 </nav>
   <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
   <main id="main">
-   <h1 class="banner-inner site-title text-center">
-  Amazon Super Search:<br>
-  Your Lightning Deal & Filter Hub
-</h1>
+   <div class="banner-inner">
+  <h1 class="site-title">
+    Amazon Super Search:<br>
+    Your Lightning Deal & Filter Hub
+  </h1>
+</div>
 
 
     <!-- Google Translate dropdown -->
