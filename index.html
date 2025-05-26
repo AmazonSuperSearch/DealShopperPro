@@ -1300,6 +1300,50 @@
     processed client-side and sent directly to Amazon through a <strong>secure redirect</strong>.
   </p>
 </section>
+     <!-- Share With Friends Section -->
+<section class="container text-center my-5">
+  <h2 class="mb-3">📣 Share With Friends</h2>
+  <p class="text-muted mb-4">Know someone who loves Amazon deals? Let them in on the secret.</p>
+
+  <div class="d-flex justify-content-center gap-3 flex-wrap">
+    <!-- Facebook -->
+ <a class="btn btn-primary btn-sm"
+   href="fb://facewebmodal/f?href=https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Famazonsupersearch.com"
+   target="_blank" rel="noopener noreferrer">
+  Share on Facebook
+</a>
+    <!-- Twitter -->
+   <a class="btn btn-info btn-sm text-white"
+   href="twitter://post?message=Check%20out%20this%20tool:%20https://amazonsupersearch.com"
+   target="_blank" rel="noopener noreferrer">
+  Share on Twitter
+</a>
+
+    <!-- Email -->
+    <a class="btn btn-secondary btn-sm"
+       href="mailto:?subject=Amazon%20Super%20Search&body=Find%20better%20Amazon%20deals%20with%20this%20tool:%20https%3A%2F%2Famazonsupersearch.com%2F%3Futm_source%3Demail%26utm_medium%3Dshare_button%26utm_campaign%3Dsocial">
+      Share via Email
+    </a>
+
+    <!-- SMS -->
+    <a class="btn btn-success btn-sm"
+       href="sms:?&body=Check%20this%20out:%20https%3A%2F%2Famazonsupersearch.com%2F%3Futm_source%3Dsms%26utm_medium%3Dshare_button%26utm_campaign%3Dsocial">
+      Share via Text
+    </a>
+  </div>
+
+  <div class="mt-3">
+    <button id="copyLinkBtn" class="btn btn-dark btn-sm">Copy Page Link</button>
+  </div>
+
+  <script>
+    document.getElementById('copyLinkBtn')?.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href)
+        .then(() => alert("Link copied!"))
+        .catch(() => alert("Failed to copy"));
+    });
+  </script>
+</section>
 </main>
 <footer class="text-center text-muted py-4" style="font-size: 0.9rem;">
   <div class="container">
