@@ -274,20 +274,37 @@ section.container h2 {
     transition: box-shadow .3s ease-in-out;
   }
 
-  /* ——— Responsive breakpoints ——— */
-  /* Desktop (large) */
-  @media (min-width: 992px) {
-    .banner-inner {
-      padding: 0 3rem;
-    }
-  }
-  /* Tablet / small desktop */
+ /* ——— Responsive breakpoints ——— */
+
+  /* Tablet / small desktop (768px–991px) */
   @media (min-width: 768px) and (max-width: 991px) {
     .banner-inner {
       padding: 0 2rem;
     }
+    .banner-inner img.img-fluid {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
   }
-  /* Mobile */
+
+  /* Desktop (992px and up) */
+  @media (min-width: 992px) {
+    .banner-inner {
+      padding: 0 3rem;
+    }
+    .banner-inner img.img-fluid {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+  /* Mobile (up to 767px) */
   @media (max-width: 767px) {
     .banner-inner {
       padding: 0 1rem;
@@ -298,8 +315,6 @@ section.container h2 {
     .banner-inner p {
       font-size: 1rem;
     }
-
-    /* center and tighten the lead text */
     .banner-inner .lead {
       font-size: 0.95rem;
       line-height: 1.4;
@@ -307,7 +322,6 @@ section.container h2 {
       margin: 0 auto;
       text-align: center;
     }
-    /* thumb-friendly buttons */
     .btn {
       padding: .75rem 1rem;
       font-size: 1rem;
