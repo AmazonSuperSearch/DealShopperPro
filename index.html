@@ -463,9 +463,6 @@ if (min > 0 || max > 0) {
 const pushFilter = (field, param, val) => {
   if (data.get(field) === 'on') rh.push(`${param}:${val}`);
 };
-    // example: eco-friendly
-    pushFilter('eco-friendly','p_n_feature_two_browse-bin','5657969011');
-    // …add your other pushFilter() calls here…
 
     // brand tags
     const tags = JSON.parse(data.get('brand-include')||'[]');
@@ -643,6 +640,21 @@ const pushFilter = (field, param, val) => {
         <option value="date-desc-rank">Newest Arrivals</option>
       </select>
     </div>
+     <!-- Eco-Friendly Toggle -->
+    <div class="col-12 col-lg-4">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          name="eco-friendly"
+          id="ecoFriendlyToggle"
+        >
+        <label class="form-check-label" for="ecoFriendlyToggle">
+          ♻️ Search Eco-Friendly
+        </label>
+      </div>
+    </div>
+
   </div>
 </div>
 </div>
@@ -747,16 +759,7 @@ const pushFilter = (field, param, val) => {
         <input class="form-check-input" type="checkbox" name="todays-deals" id="todaysDeals" aria-label="Show Today’s Deals only">
         <label class="form-check-label" for="todaysDeals">🔥Today's Deals Only🔥</label>
       </div>
-      <div class="form-check">
-  <input class="form-check-input" 
-         type="checkbox" 
-         name="eco-friendly" 
-         id="ecoFriendly" 
-         aria-label="Show only eco-friendly products">
-  <label class="form-check-label" for="ecoFriendly">
-    ♻️ Eco-Friendly Products
-  </label>
-</div>
+    
 
       <!-- Other Available Filters -->
       <div class="form-check">
@@ -1621,13 +1624,20 @@ setTimeout(() => {
     };
 
 
-    // 1) Basic query + sort
-    const q = data.get('q')?.trim();
-    if (!q) return alert('Please enter a search term.');
-    params.set('k', q);
+  // 1) Basic query + sort (with “eco-friendly” support)
+let q = data.get('q')?.trim();
+if (!q) return alert('Please enter a search term.');
 
-    const sort = data.get('sort');
-    if (sort) params.set('s', sort);
+// >>> NEW: if eco-friendly checkbox checked, append that keyword
+if (data.get('eco-friendly') === 'on') {
+  // ensure a space before appending
+  q = q + (q.endsWith(' ') ? '' : ' ') + 'eco friendly';
+}
+
+params.set('k', q);
+
+const sort = data.get('sort');
+if (sort) params.set('s', sort);
 
  // 2) Price range → push into rh[]
 const min = parseFloat(data.get('min-price') || 0);
@@ -1637,7 +1647,7 @@ if (min || max) {
   const maxC = Math.round(max * 100);
   rh.push(`p_36:${minC}-${maxC}`);
 }
-
+  
 
     // 3) Percentage-off dropdown
     const pctMap = {10:'2665401011',20:'2665412011',30:'2665413011',40:'2665414011',
@@ -1652,7 +1662,6 @@ pushFilter('prime-only',      'p_85',                     '2470955011');
 pushFilter('seller-fulfilled-prime', 'p_n_fulfillment_type-bin', '18407304011');
 pushFilter('free-shipping',   'p_76',    '1249177011');         // Free Shipping
 pushFilter('in-stock',        'p_n_availability', '2661601011'); // In Stock
-pushFilter('eco-friendly',    'p_n_feature_two_browse-bin', '5657969011');
 pushFilter('coupons',         'p_n_feature_browse-bin', '6779703011'); // Coupons Available
 pushFilter('lightning-deals', 'p_n_deal_type', '23566065011');  // Lightning Deals
 pushFilter('todays-deals',    'p_n_deal_type', '23566065011');  // Same as above (deals group)
