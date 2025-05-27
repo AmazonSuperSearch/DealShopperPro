@@ -384,19 +384,29 @@ section.container h2 {
   });
 </script>
 </head>
+<body>
   <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
-  <!-- Disclaimer -->
-    <div class="text-center text-muted small mt-1">
-      <em>I built this independent tool to help you pinpoint exactly what you’re looking for on Amazon—this site is not affiliated with or endorsed by Amazon.com.</em>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">Amazon Super Search</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <!-- Google Translate widget -->
+          <li class="nav-item">
+            <div id="google_translate_element" class="nav-link p-0"></div>
+          </li>
+          <!-- Help & How-To link -->
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="help.html">Help and How To Page</a>
+          </li>
+        </ul>
+      </div>
     </div>
-   <!-- 2) Centered Google Translate -->
-  <div id="google_translate_element" class="text-center my-2">
-    <!-- Google’s widget will render here -->
-  </div>
-  <!-- Add this inside your navbar/container where you want the link to appear -->
-<div class="ms-auto d-none d-lg-block">
-  <a href="help.html" class="nav-link fw-semibold">Help and How To Page</a>
-</div>
+  </nav>
   <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
