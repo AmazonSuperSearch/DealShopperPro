@@ -6,13 +6,21 @@
   <title>Amazon Super Search Help & How-To</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
   <link href="/styles.css" rel="stylesheet">
+  <style>
+    .help-card { border: none; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .help-card h2 { font-size: 1.5rem; }
+    .help-card p { font-size: 1rem; }
+  </style>
 </head>
-<body>
-  <!-- Include your site-wide header/nav here -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body class="bg-light">
+  <!-- Site-wide header/nav -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="/">Amazon Super Search</a>
-      <div class="collapse navbar-collapse">
+      <a class="navbar-brand fw-bold" href="/">Amazon Super Search</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
           <li class="nav-item"><a class="nav-link active" href="help.html">Help</a></li>
@@ -21,36 +29,81 @@
     </div>
   </nav>
 
-  <main class="container my-5">
-    <h1 class="mb-4">Help & How-To</h1>
+  <main class="container py-5">
+    <h1 class="mb-5 text-center display-6 fw-bold">Help & How-To</h1>
+    <div class="row g-4">
 
-    <article class="mb-5">
-      <h2>How to Filter by Price Range</h2>
-      <p>Use the <strong>Minimum Price</strong> and <strong>Maximum Price</strong> fields in Step 2 to narrow results to within your budget. Enter values and hit "Search Amazon" to see only items in your desired price bracket.</p>
-    </article>
+      <!-- Original articles -->
+      <!-- Example card -->
+      <div class="col-12 col-md-6">
+        <div class="card help-card p-4">
+          <h2><strong>How to Find Under-$20 Prime-Eligible Lightning Deals on Amazon</strong></h2>
+          <p>Use our <strong>Lightning Deals filter</strong> in Step 5 and set your price range to below <strong>$20</strong> in Step 2 to surface only affordable, Prime-eligible limited-time offers.</p>
+        </div>
+      </div>
 
-    <article class="mb-5">
-      <h2>Finding Coupons on Amazon</h2>
-      <p>In Step 5, toggle <strong>Coupons Available</strong> to display only listings with active coupon codes. Combine this with a <strong>discount percentage filter</strong> to find deep savings.</p>
-    </article>
+      <div class="col-12 col-md-6">
+        <div class="card help-card p-4">
+          <h2><strong>How to Exclude Out-of-Stock Items in Your Amazon Search Results</strong></h2>
+          <p>Check the <strong>In Stock</strong> box in Step 5 to remove all unavailable listings, so you only see products ready to ship immediately.</p>
+        </div>
+      </div>
 
-    <article class="mb-5">
-      <h2>Using Boolean Operators</h2>
-      <p>Enable <strong>Boolean Operators</strong> in Step 7 and use <code>AND</code>, <code>OR</code>, or <code>NOT</code> in your query to include or exclude terms. Example: <code>wireless AND earbuds NOT cheap</code>.</p>
-    </article>
+      <div class="col-12 col-md-6">
+        <div class="card help-card p-4">
+          <h2><strong>How to Uncover Hidden Amazon Coupon Codes Before Checkout</strong></h2>
+          <p>Toggle <strong>Coupons Available</strong> in Step 5 and look for the clipped coupon icon—this reveals items with hidden discount codes you can clip before purchasing.</p>
+        </div>
+      </div>
 
-    <article class="mb-5">
-      <h2>Applying Brand Filters</h2>
-      <p>In Step 4, type brand names (e.g. <em>Sony, LG</em>) and optionally check "Match only these brands" to restrict results to those manufacturers.</p>
-    </article>
+      <div class="col-12 col-md-6">
+        <div class="card help-card p-4">
+          <h2><strong>How to Sort Amazon Results by 90-Day Price Drop Percentage</strong></h2>
+          <p>Use the <strong>Deal-Hunter Goodies</strong> section’s <strong>Discount from 90-Day Avg Price</strong> field to filter for items that dropped the most in the past three months.</p>
+        </div>
+      </div>
 
-    <!-- Add more how-to sections as needed -->
+      <!-- Additional niche topics -->
+      <div class="col-12 col-md-6">
+        <div class="card help-card p-4">
+          <h2><strong>How to Find High-Quality Open-Box Electronics Under $30</strong></h2>
+          <p>In Deal-Hunter Goodies, check <strong>Warehouse / Open-Box</strong> and set your <strong>max price</strong> to under <strong>$30</strong> to locate budget-friendly, like-new electronics.</p>
+        </div>
+      </div>
 
+      <div class="col-12 col-md-6">
+        <div class="card help-card p-4">
+          <h2><strong>How to Search Amazon for Books with Free Prime Delivery</strong></h2>
+          <p>Select <strong>Prime Only</strong> and filter category to <strong>Books</strong> to see literature delivered free with your Prime membership.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="card help-card p-4">
+          <h2><strong>How to Locate Vegan & Cruelty-Free Beauty Products Under $25</strong></h2>
+          <p>Use the <strong>Eco-Friendly</strong> tag (Coming Soon), set category to <strong>Beauty</strong>, and cap price at <strong>$25</strong> for ethical skincare finds.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="card help-card p-4">
+          <h2><strong>How to Exclude International Sellers & See US-Only Listings</strong></h2>
+          <p>In Step 2, choose <strong>USD</strong> and in Deal-Hunter Goodies check <strong>Sold & Shipped by Amazon</strong> to limit results to US inventory.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="card help-card p-4">
+          <h2><strong>How to Track Price Drops on Amazon Wish List Items</strong></h2>
+          <p>Add items to your <strong>Wish List</strong>, then use our <strong>Price Tracker integration</strong> to monitor and filter for desired discount thresholds.</p>
+        </div>
+      </div>
+
+    </div>
   </main>
 
-  <!-- Include your site-wide footer here -->
-  <footer class="text-center py-4">
-    <p class="small">&copy; 2025 Amazon Super Search. All rights reserved.</p>
+  <footer class="text-center py-4 bg-white shadow-sm">
+    <p class="small mb-0">&copy; 2025 Amazon Super Search. All rights reserved.</p>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
