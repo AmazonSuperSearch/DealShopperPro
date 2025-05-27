@@ -409,29 +409,78 @@
   </nav>
 
   <!-- ↓ HERE ↓ -->
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // 1) Tagify
-    new Tagify(document.querySelector('input[name="brand-include"]'));
+  <!-- ↓ FULL SEARCH LOGIC ↓ -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // 1) Tagify
+  new Tagify(document.querySelector('input[name="brand-include"]'));
 
-    // 2) Translate auto-select
-    const userLang = (navigator.language||navigator.userLanguage).substr(0,2);
-    setTimeout(() => {
-      const combo = document.querySelector('.goog-te-combo');
-      if (combo && combo.value !== userLang) {
-        combo.value = userLang;
-        combo.dispatchEvent(new Event('change'));
-      }
-    }, 500);
+  // 2) Auto-select Google Translate
+  const userLang = (navigator.language||navigator.userLanguage).substr(0,2);
+  setTimeout(() => {
+    const combo = document.querySelector('.goog-te-combo');
+    if (combo && combo.value !== userLang) {
+      combo.value = userLang;
+      combo.dispatchEvent(new Event('change'));
+    }
+  }, 500);
 
-    // 3) Form submit logic
-    const form = document.getElementById('amazon-search-form');
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      // …your existing filter/build/open code…
-    });
+  // 3) Form submit → build & open Amazon URL
+  const form = document.getElementById('amazon-search-form');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const params = new URLSearchParams();
+    const rh = [];
+
+    // basic query + sort
+    const q = data.get('q')?.trim();
+    if (!q) return alert('Please enter a search term.');
+    params.set('k', q);
+    const sort = data.get('sort');
+    if (sort) params.set('s', sort);
+
+    // price range
+    const min = parseFloat(data.get('min-price')||0);
+    const max = parseFloat(data.get('max-price')||0);
+    if (min || max) {
+      const minC = Math.round(min * 100);
+      const maxC = Math.round(max * 100);
+      rh.push(`p_36:${minC}-${maxC}`);
+    }
+
+    // checkbox helper
+    const pushFilter = (field, param, val) => {
+      if (data.get(field)==='on') rh.push(`${param}:${val}`);
+    };
+    // example: eco-friendly
+    pushFilter('eco-friendly','p_n_feature_two_browse-bin','5657969011');
+    // …add your other pushFilter() calls here…
+
+    // brand tags
+    const tags = JSON.parse(data.get('brand-include')||'[]');
+    tags.forEach(t => rh.push(`p_89:${encodeURIComponent(t.value)}`));
+
+    // consolidate
+    if (rh.length) params.set('rh', rh.join(','));
+    params.set('tag','echolover25-20');
+
+    // domain by currency
+    const hostMap = {
+      usd:'www.amazon.com', eur:'www.amazon.de',
+      gbp:'www.amazon.co.uk', jpy:'www.amazon.co.jp',
+      inr:'www.amazon.in'
+    };
+    const host = hostMap[data.get('currency')]||'www.amazon.com';
+
+    const url = `https://${host}/s?${params.toString()}`;
+    console.log('🔗 Amazon URL:',url);
+    window.open(url, '_blank');
   });
-  </script>
+});
+</script>
+<!-- ↑ END FULL SEARCH LOGIC ↑ -->
+
   <!-- ↑ AND HERE ↑ -->
 
   <!-- then the rest of your page content… -->
