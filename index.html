@@ -73,6 +73,10 @@
   href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
   rel="stylesheet"
 />
+  
+  <!-- Tagify CSS & JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css">
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js"></script>
 
 <style>
   /* 1) Global font */
@@ -101,37 +105,31 @@
   }
 
   /* 4) Apply to the banner heading */
- .banner-inner .site-title {
-  display: block;
-  text-align: center;
+  .banner-inner .site-title {
+    display: block;
+    text-align: center;
 
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: clamp(1.5rem, 5vw, 3rem);
-  line-height: 1.2;
-  color: #FF9900;
-  animation:
-    pulse 3s ease-in-out infinite,
-    glow  2.5s ease-in-out infinite alternate;
-}
-   /* 5) Apply to the steps */
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    line-height: 1.2;
+    color: #FF9900;
+    animation:
+      pulse 3s ease-in-out infinite,
+      glow  2.5s ease-in-out infinite alternate;
+  }
+
+  /* 5) Apply to the steps */
   .container.text-start h2,
-section.container h2 {
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  /* optional: give them the same pulse/glow */
-  animation:
-    pulse 3s ease-in-out infinite,
-    glow  2.5s ease-in-out infinite alternate;
-}
+  section.container h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    animation:
+      pulse 3s ease-in-out infinite,
+      glow  2.5s ease-in-out infinite alternate;
+  }
 
-</style>
-  
-  <!-- Tagify CSS & JS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css">
-  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js"></script>
 
- <style>
   /* ——— AMAZON-ORANGE PULSING HEADING ——— */
   @keyframes text-pulse {
     0%   { text-shadow: 0 0 5px rgba(255,153,0,0.7), 0 0 10px rgba(255,153,0,0.5); }
@@ -274,8 +272,7 @@ section.container h2 {
     transition: box-shadow .3s ease-in-out;
   }
 
- /* ——— Responsive breakpoints ——— */
-
+  /* ——— Responsive breakpoints ——— */
   /* Tablet / small desktop (768px–991px) */
   @media (min-width: 768px) and (max-width: 991px) {
     .banner-inner {
@@ -327,26 +324,33 @@ section.container h2 {
       font-size: 1rem;
     }
   }
-   /* ——— True desktop cap (992px and up) ——— */
-@media (min-width: 992px) {
-  .banner-inner img.img-fluid {
-    width: 100% !important;       /* fill its container */
-    max-width: 600px !important;  /* cap it on large screens */
-    height: auto !important;
-    margin: 0 auto !important;
-    display: block !important;
+
+  /* ——— True desktop cap (992px and up) ——— */
+  @media (min-width: 992px) {
+    .banner-inner img.img-fluid {
+      width: 100% !important;
+      max-width: 600px !important;
+      height: auto !important;
+      margin: 0 auto !important;
+      display: block !important;
+    }
   }
-}
-   /* ——— Cap the “start with step 1” banner on desktop ——— */
-@media (min-width: 992px) {
-  .text-center.mt-2.mb-3 img.img-fluid.w-100 {
-    width: auto !important;
-    max-width: 600px !important;
-    height: auto !important;
-    margin: 0 auto !important;
-    display: block !important;
+
+  /* ——— Cap the “start with step 1” banner on desktop ——— */
+  @media (min-width: 992px) {
+    .text-center.mt-2.mb-3 img.img-fluid.w-100 {
+      width: auto !important;
+      max-width: 600px !important;
+      height: auto !important;
+      margin: 0 auto !important;
+      display: block !important;
+    }
   }
-}
+
+  /* Accordion button: allow normal wrapping and spacing */
+  .accordion-button {
+    white-space: normal;
+  }
 </style>
 
 
