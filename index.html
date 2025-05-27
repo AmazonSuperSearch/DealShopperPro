@@ -1578,11 +1578,10 @@ setTimeout(() => {
     if (sort) params.set('s', sort);
 
     // 2) Price range
-   // 2) Price range — use real query params
-const min = parseInt(data.get('min-price')||0, 10);
-const max = parseInt(data.get('max-price')||0, 10);
-if (min) params.set('low-price', min);
-if (max) params.set('high-price', max);
+const min = parseFloat(data.get('min-price')||0);
+const max = parseFloat(data.get('max-price')||0);
+if (min) params.set('low-price', min.toFixed(2));
+if (max) params.set('high-price', max.toFixed(2));
     }
 
     // 3) Percentage-off dropdown
