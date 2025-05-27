@@ -412,10 +412,14 @@
   <!-- ↓ FULL SEARCH LOGIC ↓ -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  // 1) Tagify (only if the brand-include input exists)
+   // 1) Tagify (only if the brand-include input exists)
   const brandInput = document.querySelector('input[name="brand-include"]');
   if (brandInput) {
-    new Tagify(brandInput);
+    try {
+      new Tagify(brandInput);
+    } catch (err) {
+      console.warn('Tagify init failed:', err);
+    }
   }
 
   // 2) Auto-select Google Translate
