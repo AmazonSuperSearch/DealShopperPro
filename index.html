@@ -447,19 +447,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const sort = data.get('sort');
     if (sort) params.set('s', sort);
 
-    // price range
-    const min = parseFloat(data.get('min-price')||0);
-    const max = parseFloat(data.get('max-price')||0);
-    if (min || max) {
-      const minC = Math.round(min * 100);
-      const maxC = Math.round(max * 100);
-      rh.push(`p_36:${minC}-${maxC}`);
-    }
+ // 2) Price range → push into rh[]
+const min = parseFloat(data.get('min-price') || 0);
+const max = parseFloat(data.get('max-price') || 0);
 
-    // checkbox helper
-    const pushFilter = (field, param, val) => {
-      if (data.get(field)==='on') rh.push(`${param}:${val}`);
-    };
+if (min > 0 || max > 0) {
+  const lower = min > 0 ? Math.round(min * 100) : '';
+  const upper = max > 0 ? Math.round(max * 100) : '';
+  rh.push(`p_36:${lower}-${upper}`);
+}
+
+// 3) Checkbox helper
+const pushFilter = (field, param, val) => {
+  if (data.get(field) === 'on') rh.push(`${param}:${val}`);
+};
     // example: eco-friendly
     pushFilter('eco-friendly','p_n_feature_two_browse-bin','5657969011');
     // …add your other pushFilter() calls here…
