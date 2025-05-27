@@ -1568,13 +1568,6 @@ setTimeout(() => {
       if (data.get(field) === 'on') rh.push(`${param}:${val}`);
     };
 
-    // Show warning if too many filters
-    const checkedCount = [...form.elements].filter(el =>
-      el.type === 'checkbox' &&
-      el.checked &&
-      !el.closest('.coming-soon')
-    ).length;
-    warningBox.style.display = checkedCount > 2 ? 'block' : 'none';
 
     // 1) Basic query + sort
     const q = data.get('q')?.trim();
@@ -1585,11 +1578,11 @@ setTimeout(() => {
     if (sort) params.set('s', sort);
 
     // 2) Price range
-    const min = parseFloat(data.get('min-price')||0);
-    const max = parseFloat(data.get('max-price')||0);
-    if (min || max) {
-      const minC = Math.round(min*100), maxC = Math.round(max*100);
-      rh.push(`p_36:${minC}-${maxC}`);
+   // 2) Price range — use real query params
+const min = parseInt(data.get('min-price')||0, 10);
+const max = parseInt(data.get('max-price')||0, 10);
+if (min) params.set('low-price', min);
+if (max) params.set('high-price', max);
     }
 
     // 3) Percentage-off dropdown
