@@ -327,6 +327,16 @@ section.container h2 {
       font-size: 1rem;
     }
   }
+   /* ——— True desktop cap (992px and up) ——— */
+@media (min-width: 992px) {
+  .banner-inner img.img-fluid {
+    width: 100% !important;       /* fill its container */
+    max-width: 600px !important;  /* cap it on large screens */
+    height: auto !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+}
 </style>
 
 
