@@ -1680,8 +1680,23 @@ pushFilter('warehouse-refurb','p_n_condition-type', '2224371011'); // Used & Ref
     if (vol) rh.push(`p_n_price-volatility:${vol}`);
 
     // 7) Brand Include (Tagify JSON arrays)
-    const includeTags = JSON.parse(data.get('brand-include') || '[]');
-    includeTags.forEach(t => rh.push(`p_89:${encodeURIComponent(t.value)}`));
+   let tagsRaw = data.get('brand-include') || '';
+let includeTags;
+
+try {
+  includeTags = JSON.parse(tagsRaw);
+  // If it parsed to a single string, wrap it in an array
+  if (!Array.isArray(includeTags)) {
+    includeTags = [{ value: String(includeTags) }];
+  }
+} catch {
+  // Fallback: split on commas
+  includeTags = tagsRaw
+    .split(',')
+    .map(s => s.trim())
+    .filter(Boolean)
+    .map(v => ({ value: v }));
+}
 
 
     // 8) Boolean, field filters, ASIN lookup
