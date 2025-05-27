@@ -645,7 +645,16 @@
       <!-- Most Popular Filters -->
       <div class="form-check">
         <input class="form-check-input" type="checkbox" name="prime-only" id="primeOnly" aria-label="Filter by Prime Only items">
-
+      <div class="form-check">
+         <input class="form-check-input" 
+         type="checkbox" 
+         name="seller-prime" 
+         id="sellerPrime" 
+         aria-label="Show seller-fulfilled Prime items">
+         <label class="form-check-label" for="sellerPrime">
+         🚚 Seller-Fulfilled Prime
+        </label>
+        </div>
         <label class="form-check-label" for="primeOnly">Prime Only</label>
       </div>
       <div class="form-check">
@@ -1596,6 +1605,7 @@ pushFilter('amazon-brands',   'p_n_feature_fourteen_browse-bin', '18584192011');
 pushFilter('low-rating',      'p_n_feature_twenty_browse-bin', '21397296011'); // 1–2 Star Items
 pushFilter('coupon-only',     'p_n_feature_browse-bin', '6779703011'); // Same as coupons
 pushFilter('warehouse-refurb','p_n_condition-type', '2224371011'); // Used & Refurbished (Warehouse)
+pushFilter('seller-prime',     'p_n_shipping_option-bin', '3242354011'); // Seller-Fulfilled Prime
 
 
     // 5) AI-driven filters
