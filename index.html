@@ -408,32 +408,6 @@
     </ol>
   </nav>
 
-  <!-- ↓ HERE ↓ -->
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // 1) Tagify
-    new Tagify(document.querySelector('input[name="brand-include"]'));
-
-    // 2) Translate auto-select
-    const userLang = (navigator.language||navigator.userLanguage).substr(0,2);
-    setTimeout(() => {
-      const combo = document.querySelector('.goog-te-combo');
-      if (combo && combo.value !== userLang) {
-        combo.value = userLang;
-        combo.dispatchEvent(new Event('change'));
-      }
-    }, 500);
-
-    // 3) Form submit logic
-    const form = document.getElementById('amazon-search-form');
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      // …your existing filter/build/open code…
-    });
-  });
-  </script>
-  <!-- ↑ AND HERE ↑ -->
-
   <!-- then the rest of your page content… -->
   <main id="main"> … </main>
   <footer> … </footer>
