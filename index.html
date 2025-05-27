@@ -443,6 +443,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // basic query + sort
     const q = data.get('q')?.trim();
     if (!q) return alert('Please enter a search term.');
+    if (data.get('eco-friendly') === 'on') {
+  q += (q.endsWith(' ') ? '' : ' ') + 'eco friendly';
+}
     params.set('k', q);
     const sort = data.get('sort');
     if (sort) params.set('s', sort);
@@ -744,16 +747,18 @@ const pushFilter = (field, param, val) => {
         <input class="form-check-input" type="checkbox" name="todays-deals" id="todaysDeals" aria-label="Show Today’s Deals only">
         <label class="form-check-label" for="todaysDeals">🔥Today's Deals Only🔥</label>
       </div>
-      <div class="form-check">
-  <input class="form-check-input"
-         type="checkbox"
-         name="eco-friendly"
-         id="ecoFriendlyToggle">
+     <!-- ♻️ Search Eco-Friendly -->
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    name="eco-friendly"
+    id="ecoFriendlyToggle"
+  >
   <label class="form-check-label" for="ecoFriendlyToggle">
     ♻️ Eco-Friendly Products
   </label>
 </div>
-    
 
       <!-- Other Available Filters -->
       <div class="form-check">
