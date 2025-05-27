@@ -1659,6 +1659,7 @@ const domainMap = {
 const host = domainMap[currency] || 'www.amazon.com';
 
 const url = `https://${host}/s?${params.toString()}`;
+  console.log('🔗 Amazon URL:', url);
 window.open(url, '_blank');
   });
 });
