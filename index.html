@@ -668,6 +668,16 @@
         <input class="form-check-input" type="checkbox" name="todays-deals" id="todaysDeals" aria-label="Show Today’s Deals only">
         <label class="form-check-label" for="todaysDeals">🔥Today's Deals Only🔥</label>
       </div>
+      <div class="form-check">
+  <input class="form-check-input" 
+         type="checkbox" 
+         name="eco-friendly" 
+         id="ecoFriendly" 
+         aria-label="Show only eco-friendly products">
+  <label class="form-check-label" for="ecoFriendly">
+    ♻️ Eco-Friendly Products
+  </label>
+</div>
 
       <!-- Other Available Filters -->
       <div class="form-check">
@@ -1572,6 +1582,7 @@ setTimeout(() => {
  pushFilter('prime-only',      'p_85',    '2470955011');         // Amazon Prime
 pushFilter('free-shipping',   'p_76',    '1249177011');         // Free Shipping
 pushFilter('in-stock',        'p_n_availability', '2661601011'); // In Stock
+pushFilter('eco-friendly',    'p_n_feature_two_browse-bin', '5657969011');
 pushFilter('coupons',         'p_n_feature_browse-bin', '6779703011'); // Coupons Available
 pushFilter('lightning-deals', 'p_n_deal_type', '23566065011');  // Lightning Deals
 pushFilter('todays-deals',    'p_n_deal_type', '23566065011');  // Same as above (deals group)
