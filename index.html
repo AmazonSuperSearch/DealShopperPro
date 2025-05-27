@@ -361,12 +361,9 @@
     document.cookie = "googtrans=/en/" + userLang + "; path=/";
   })();
 </script>
-
-<!-- Load Google’s Translate library, with our init callback -->
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-<script>
-  // 1) Initialize the widget (inline, no banner)
+</head>
+<body>
+  <script>
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'en',
@@ -374,21 +371,10 @@
       autoDisplay: false
     }, 'google_translate_element');
   }
-
-  // 2) Once it’s in the DOM, pick the browser’s lang and fire the change
-  document.addEventListener('DOMContentLoaded', () => {
-    const userLang = (navigator.language || navigator.userLanguage).substr(0,2);
-    setTimeout(() => {
-      const combo = document.querySelector('.goog-te-combo');
-      if (combo && combo.value !== userLang) {
-        combo.value = userLang;
-        combo.dispatchEvent(new Event('change'));
-      }
-    }, 500);
-  });
 </script>
-</head>
-<body>
+
+<!-- 2) Load Google’s Translate library, invoking that callback -->
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -412,11 +398,42 @@
     </div>
   </nav>
   <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Amazon Super Search</li>
-  </ol>
-</nav>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Amazon Super Search</li>
+    </ol>
+  </nav>
+
+  <!-- ↓ HERE ↓ -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1) Tagify
+    new Tagify(document.querySelector('input[name="brand-include"]'));
+
+    // 2) Translate auto-select
+    const userLang = (navigator.language||navigator.userLanguage).substr(0,2);
+    setTimeout(() => {
+      const combo = document.querySelector('.goog-te-combo');
+      if (combo && combo.value !== userLang) {
+        combo.value = userLang;
+        combo.dispatchEvent(new Event('change'));
+      }
+    }, 500);
+
+    // 3) Form submit logic
+    const form = document.getElementById('amazon-search-form');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      // …your existing filter/build/open code…
+    });
+  });
+  </script>
+  <!-- ↑ AND HERE ↑ -->
+
+  <!-- then the rest of your page content… -->
+  <main id="main"> … </main>
+  <footer> … </footer>
+
   <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
   <main id="main">
    <div class="banner-inner">
@@ -1494,6 +1511,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Tagify on your brand inputs
   new Tagify(form.querySelector('input[name="brand-include"]'));
 
+    // — Google Translate auto-select —
+const userLang = (navigator.language || navigator.userLanguage).substr(0,2);
+setTimeout(() => {
+  const combo = document.querySelector('.goog-te-combo');
+  if (combo && combo.value !== userLang) {
+    combo.value = userLang;
+    combo.dispatchEvent(new Event('change'));
+  }
+}, 500);
+
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
@@ -1624,6 +1651,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+<!-- Load Google’s Translate library, with our init callback -->
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<script>
+  // 1) Initialize the widget (inline, no banner)
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+      </script>
 </body>
 </html>
