@@ -452,7 +452,9 @@ const min = parseFloat(data.get('min-price') || 0);
 const max = parseFloat(data.get('max-price') || 0);
 
 if (min > 0 || max > 0) {
-  const lower = min > 0 ? Math.round(min * 100) : '';
+  // if user only set min, Amazon wants "p_36:<min>-"
+  // if user only set max, Amazon wants "p_36:0-<max>"
+  const lower = min > 0 ? Math.round(min * 100) : 0;
   const upper = max > 0 ? Math.round(max * 100) : '';
   rh.push(`p_36:${lower}-${upper}`);
 }
