@@ -1582,7 +1582,6 @@ const min = parseFloat(data.get('min-price')||0);
 const max = parseFloat(data.get('max-price')||0);
 if (min) params.set('low-price', min.toFixed(2));
 if (max) params.set('high-price', max.toFixed(2));
-    }
 
     // 3) Percentage-off dropdown
     const pctMap = {10:'2665401011',20:'2665412011',30:'2665413011',40:'2665414011',
