@@ -17,4 +17,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
+  <url>
+    <loc>https://amazonsupersearch.com/media.html</loc>
+    <lastmod>2025-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
 </urlset>
