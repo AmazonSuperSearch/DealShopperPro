@@ -1585,11 +1585,10 @@ setTimeout(() => {
     if (sort) params.set('s', sort);
 
     // 2) Price range
-    const min = parseFloat(data.get('min-price')||0);
-    const max = parseFloat(data.get('max-price')||0);
-    if (min || max) {
-      const minC = Math.round(min*100), maxC = Math.round(max*100);
-      rh.push(`p_36:${minC}-${maxC}`);
+    const min = parseFloat(data.get('min-price')  || 0);
+  const max = parseFloat(data.get('max-price')  || 0);
+  if (min) params.set('low-price',  min.toString());
+  if (max) params.set('high-price', max.toString());
     }
 
     // 3) Percentage-off dropdown
