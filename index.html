@@ -412,10 +412,11 @@
   <!-- ↓ FULL SEARCH LOGIC ↓ -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  // 1) Tagify
-const brandInput = document.querySelector('input[name="brand-include"]');
-if (brandInput) {
-  new Tagify(brandInput);
+  // 1) Tagify (only if the brand-include input exists)
+  const brandInput = document.querySelector('input[name="brand-include"]');
+  if (brandInput) {
+    new Tagify(brandInput);
+  }
 
   // 2) Auto-select Google Translate
   const userLang = (navigator.language||navigator.userLanguage).substr(0,2);
