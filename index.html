@@ -71,8 +71,7 @@
  <!-- Inter font -->
 <link
   href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-  rel="stylesheet"
-/>
+  rel="stylesheet">
   
   <!-- Tagify CSS & JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css">
@@ -498,7 +497,6 @@ const pushFilter = (field, param, val) => {
   <footer> … </footer>
 
   <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
-  <main id="main">
    <div class="banner-inner">
   <h1 class="site-title">
     Amazon Super Search:<br>
@@ -760,10 +758,17 @@ const pushFilter = (field, param, val) => {
   </label>
 </div>
       <!-- somewhere in your filters section -->
-<label>
-  <input type="checkbox" id="filter-cruelty-free" name="filter-cruelty-free">
-  Cruelty Free
-</label>
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    name="filter-cruelty-free"
+    id="filter-cruelty-free"
+  >
+  <label class="form-check-label" for="filter-cruelty-free">
+    Cruelty Free
+  </label>
+</div>
 
 
       <!-- Other Available Filters -->
