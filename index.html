@@ -558,19 +558,19 @@ const pushFilter = (field, param, val) => {
 
   <!-- Banner with centered image and right-side Quick Jump -->
 <div class="container mt-2 mb-3">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center align-items-start">
     <!-- Image column centered -->
     <div class="col-lg-8 text-center">
       <img
         src="amazon-super-search-start-with-step-1-below-banner.jpg"
         alt="Filter by price and find Amazon coupons instantly"
-        class="img-fluid mx-auto d-block"
+        class="img-fluid"
         style="max-width: 100%; height: auto;"
         loading="lazy"
       />
     </div>
 
-    <!-- Quick Jump column aligned right -->
+    <!-- Quick Jump column on the right -->
     <div class="col-lg-4">
       <div class="card shadow-sm p-3">
         <h6 class="card-title mb-3">📌 Quick Jump</h6>
@@ -591,6 +591,7 @@ const pushFilter = (field, param, val) => {
   </div>
 </div>
 
+
  <section id="step-1">
   <input type="hidden" name="i" value="">
   <form id="amazon-search-form">
@@ -602,18 +603,12 @@ const pushFilter = (field, param, val) => {
     </div>
   </form>
 </section>
-
-  
-
-
   <div class="card p-3">
     <div class="input-group">
       <!-- Mic on left -->
       <button class="btn btn-outline-secondary" type="button" id="voiceSearchBtn" aria-label="Activate voice search">
   🎤
 </button>
-
-    
       <!-- Then the text input -->
       <input
         type="text"
