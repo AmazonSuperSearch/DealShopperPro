@@ -449,6 +449,7 @@
       <li><a href="#step-7">Step 7: Advanced Settings</a></li>
       <li><a href="#faq">Frequently Asked Questions</a></li>
       <li><a href="#about-amazon-super-search">About Amazon Super Search</a></li>
+      <li><a href="#share-with-friends">Share With Friends</a></li>
     </ul>
   </section>
   <script>
@@ -575,6 +576,7 @@ const pushFilter = (field, param, val) => {
 />
     </div>
 
+ <section id="step-1">
   <input type="hidden" name="i" value="">
   <form id="amazon-search-form">
     <div class="container text-start mb-4">
@@ -582,6 +584,10 @@ const pushFilter = (field, param, val) => {
       <p class="text-muted mb-3">
         Type a product name, keyword, category, ASIN, ISBN, or UPC to start your search.
       </p>
+    </div>
+  </form>
+</section>
+
   
 
 
@@ -607,12 +613,15 @@ const pushFilter = (field, param, val) => {
   </div> <!-- /.container -->
   
       <!-- Step 2 heading ABOVE the card box -->
-<div class="container text-start mb-4">
- <h2>✅ Step 2: Filter by Price & Set Your Range ($) 
- </h2>
-<p class="text-muted mb-3">
-  Choose the minimum and maximum price you’re willing to spend—and instantly see items that match.
-</p>
+<section id="step-2">
+  <div class="container text-start mb-4">
+    <h2>✅ Step 2: Filter by Price & Set Your Range ($)</h2>
+    <p class="text-muted mb-3">
+      Choose the minimum and maximum price you’re willing to spend—and instantly see items that match.
+    </p>
+  </div>
+</section>
+
 
   <div class="card p-3">
     <div class="row g-3 align-items-end">
@@ -648,9 +657,15 @@ const pushFilter = (field, param, val) => {
 </div>
 </div>
 <!-- Step 3: Customize your deal filters -->
-<div class="container text-start mb-4">
-  <h2 class="mb-2">✅ Step 3: Customize your deal filters</h2>
-  <p class="text-muted mb-3">Pick a minimum discount, customer rating, and how you want the results sorted.</p>
+<section id="step-3">
+  <div class="container text-start mb-4">
+    <h2 class="mb-2">✅ Step 3: Customize your deal filters</h2>
+    <p class="text-muted mb-3">
+      Pick a minimum discount, customer rating, and how you want the results sorted.
+    </p>
+  </div>
+</section>
+
 
  <div class="card p-3">
   <div class="row g-3">
@@ -703,11 +718,15 @@ const pushFilter = (field, param, val) => {
    
   
 <!-- Step 4: Brand Filters -->
-<section class="container text-start mb-4">
-  <h2 class="mb-2">✅ Step 4: Choose which brands to include. Check the box below to limit results to only these brands.</h2>
-  <p class="text-muted mb-3">
-    Narrow results by including only certain brands.
-  </p>
+<section id="step-4">
+  <div class="container text-start mb-4">
+    <h2 class="mb-2">✅ Step 4: Choose which brands to include. Check the box below to limit results to only these brands.</h2>
+    <p class="text-muted mb-3">
+      Narrow results by including only certain brands.
+    </p>
+  </div>
+</section>
+
 
   <div class="card border-success shadow-sm mb-4 p-3">
     <div class="row g-3">
@@ -744,13 +763,17 @@ const pushFilter = (field, param, val) => {
 
 
  <!-- Step 5: Fine-tune your preferences -->
-<section class="container text-start mb-4">
- <h2 class="mb-2">
-  ✅ Step 5: Fine-tune Preferences & Find Coupons
-</h2>
-<p class="text-muted mb-3">
-  Select Prime-only, Lightning Deals only, in-stock, free shipping—and toggle coupon filters to become your own Amazon coupon finder.
-</p>
+<section id="step-5">
+  <div class="container text-start mb-4">
+    <h2 class="mb-2">
+      ✅ Step 5: Fine-tune Preferences & Find Coupons
+    </h2>
+    <p class="text-muted mb-3">
+      Select Prime-only, Lightning Deals only, in-stock, free shipping—and toggle coupon filters to become your own Amazon coupon finder.
+    </p>
+  </div>
+</section>
+
 
   <div class="card mb-4 p-3">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
@@ -907,13 +930,16 @@ const pushFilter = (field, param, val) => {
 </section> <!-- end of Step 5 section -->
 
   <!-- Step 6: Search Amazon -->
-<section class="container text-start mb-5">
-  <h2 class="mb-2">
-    ✅ Step 6: Begin Your Amazon Search or Continue Below Using Advanced Settings
-  </h2>
-  <p class="text-muted mb-3">
-    You’re all set! Click the button below to view your filtered results directly on Amazon.
-  </p>
+<section id="step-6">
+  <div class="container text-start mb-5">
+    <h2 class="mb-2">
+      ✅ Step 6: Begin Your Amazon Search or Continue Below Using Advanced Settings
+    </h2>
+    <p class="text-muted mb-3">
+      You’re all set! Click the button below to view your filtered results directly on Amazon.
+    </p>
+  </div>
+</section>
   <div class="text-center">
     <div id="filter-warning" style="display:none; color: orange; font-weight: bold; padding: 10px;">
   ⚠️ Too many filters may return no results. Try removing a few for better results.
@@ -933,13 +959,15 @@ const pushFilter = (field, param, val) => {
 
   </div>
 </section>
-<!-- Step 7: Advanced Settings -->
-<section class="container text-start mb-4">
-  <h2 class="mb-2">✅ Step 7: Advanced Settings</h2>
-  <p class="text-muted mb-3">
-    Explore advanced filters and tools to refine your search even further.
-  </p>
+<section id="step-7">
+  <div class="container text-start mb-4">
+    <h2 class="mb-2">✅ Step 7: Advanced Settings</h2>
+    <p class="text-muted mb-3">
+      Explore advanced filters and tools to refine your search even further.
+    </p>
+  </div>
 </section>
+
 
       <!-- Power-User Tools -->
 <section>
@@ -1512,9 +1540,11 @@ const pushFilter = (field, param, val) => {
 </section>
 
 <!-- Share With Friends Section -->
-<section class="container text-center my-5">
+<section id="share-with-friends" class="container text-center my-5">
   <h2 class="mb-3">📣 Share With Friends</h2>
   <p class="text-muted mb-4">Know someone who loves Amazon deals? Let them in on the secret.</p>
+</section>
+
 
   <div class="d-flex justify-content-center gap-3 flex-wrap">
     <!-- Facebook -->
