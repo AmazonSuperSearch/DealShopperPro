@@ -556,11 +556,11 @@ const pushFilter = (field, param, val) => {
   </p>
 </div>
 
- <div class="container my-5">
-  <div class="row align-items-start">
+  <div class="container my-5">
+  <div class="row align-items-center">
     
-    <!-- Image: Centered in its column -->
-    <div class="col-lg-8 text-center">
+    <!-- Column 1: Centered Image -->
+    <div class="col-lg-8 text-center mb-4 mb-lg-0">
       <img
         src="amazon-super-search-start-with-step-1-below-banner.jpg"
         alt="Filter by price and find Amazon coupons instantly"
@@ -570,11 +570,11 @@ const pushFilter = (field, param, val) => {
       />
     </div>
 
-    <!-- Quick Jump: Right-aligned next to image -->
+    <!-- Column 2: Quick Jump -->
     <div class="col-lg-4">
       <div class="card shadow-sm p-3">
         <h6 class="card-title mb-3">📌 Quick Jump</h6>
-        <ul class="list-unstyled small">
+        <ul class="list-unstyled small mb-0">
           <li><a href="#step-1">Step 1: Shopping</a></li>
           <li><a href="#step-2">Step 2: Price</a></li>
           <li><a href="#step-3">Step 3: Filters</a></li>
@@ -588,13 +588,12 @@ const pushFilter = (field, param, val) => {
         </ul>
       </div>
     </div>
-
   </div>
 </div>
-
-
-
- <section id="step-1">
+  
+ <div class="container my-5">
+  <div class="row align-items-start">
+  <section id="step-1">
   <input type="hidden" name="i" value="">
   <form id="amazon-search-form">
     <div class="container text-start mb-4">
