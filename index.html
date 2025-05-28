@@ -759,6 +759,12 @@ const pushFilter = (field, param, val) => {
     ♻️ Eco-Friendly Products
   </label>
 </div>
+      <!-- somewhere in your filters section -->
+<label>
+  <input type="checkbox" id="filter-cruelty-free" name="filter-cruelty-free">
+  Cruelty Free
+</label>
+
 
       <!-- Other Available Filters -->
       <div class="form-check">
@@ -1632,6 +1638,10 @@ if (data.get('eco-friendly') === 'on') {
   // ensure a space before appending
   q = q + (q.endsWith(' ') ? '' : ' ') + 'eco friendly';
 }
+    // after you gather other filters…
+if (data.get('filter-cruelty-free') === 'on') {
+  q = q + (q.endsWith(' ') ? '' : ' ') + 'cruelty free';
+}
 
 params.set('k', q);
 
@@ -1763,9 +1773,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
-<!-- Load Google’s Translate library, with our init callback -->
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <script>
   // 1) Initialize the widget (inline, no banner)
   function googleTranslateElementInit() {
