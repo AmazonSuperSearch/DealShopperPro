@@ -1760,6 +1760,11 @@ window.open(url, '_blank');
 document.addEventListener('DOMContentLoaded', () => {
   const clickSound = document.getElementById("clickSound");
 
+  if (location.hash === "#") {
+      // Replace the current history entry with one without the "#"
+      history.replaceState(null, "", location.pathname + location.search);
+    }
+
   // Play sound function
   const playClick = () => {
     if (!clickSound) return;
