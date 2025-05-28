@@ -28,6 +28,7 @@
 
 
 <title>Amazon Super Search – Find Prime Day 2025 Deals & Lightning Discounts</title>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/favicon.png" sizes="48x48">
   <link rel="manifest" href="/site.webmanifest">
 
@@ -76,7 +77,7 @@
   </script>
 
   <!-- 2) Load Google’s Translate library -->
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 
   <!-- 3) Override CSS: both general AND iframe-specific rules -->
   <style>
@@ -114,7 +115,7 @@
   
   <!-- Tagify CSS & JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css">
-  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js" defer></script>
 
 <style>
   /* 1) Global font */
@@ -431,6 +432,7 @@
     </ol>
   </nav>
   <!-- Override Translate menu height & scrolling -->
+<!-- NOTE: Consider fronting this site with a CDN like Cloudflare for caching and performance -->
 </head>
 <body>
   <script>
