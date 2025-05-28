@@ -64,32 +64,45 @@
     "description": "Amazon Super Search lets you uncover live in-stock lightning deals, filter by free shipping only, set deep discount thresholds, filter by past price trends, and sort by top customer ratings."
   }
   </script>
-<script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-</script>
-<!-- Load Google’s Translate library -->
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <!-- Override Translate menu height & scrolling -->
-<style>
-  .goog-te-menu2 {
-    max-height: 300px !important;
-    overflow-y: auto !important;
-  }
-  .goog-te-menu2 table {
-    width: 100% !important;
-  }
-  .goog-te-menu-frame {
-    max-height: 300px !important;
-    overflow-y: auto !important;
-  }
-</style>
+  <!-- 1) Define the init callback -->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
 
+  <!-- 2) Load Google’s Translate library -->
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- 3) Override CSS: both general AND iframe-specific rules -->
+  <style>
+    /* General scroll override inside the iframe */
+    .goog-te-menu2 {
+      max-height: 300px !important;
+      overflow-y: auto !important;
+    }
+    .goog-te-menu2 table {
+      width: 100% !important;
+    }
+
+    /* Scroll override for the injected iframe wrapper */
+    .goog-te-menu-frame,
+    iframe.goog-te-menu-frame.skiptranslate {
+      max-height: 300px !important;
+      overflow-y: auto !important;
+      height: auto !important;
+    }
+    /* Extra specificity for in-page menus */
+    .skiptranslate .goog-te-menu2 {
+      max-height: 300px !important;
+      overflow-y: auto !important;
+      height: auto !important;
+    }
+  </style>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
