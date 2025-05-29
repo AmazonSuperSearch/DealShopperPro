@@ -82,25 +82,13 @@
     }, 'google_translate_element');
   }
 </script>
-  <style>
-  .goog-te-menu-frame.skiptranslate {
-    position: fixed !important;
-    top: 56px !important;     /* tweak if your navbar height changes */
-    left: 5% !important;
-    right: 5% !important;
-    width: 90% !important;
-    height: 80vh !important;
-    z-index: 10000 !important;
-    border: none !important;
-    overflow: hidden !important;
-  }
-  .goog-te-menu-frame.skiptranslate .goog-te-menu2 {
-    height: 100% !important;
-    max-height: 100% !important;
-    overflow-y: scroll !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-</style>
+
+<!-- 2) Load Google’s Translate library (with our callback) -->
+<script
+  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  defer
+></script>
+
 
  <!-- Inter font -->
 <link
@@ -394,41 +382,6 @@
     document.cookie = "googtrans=/en/" + userLang + "; path=/";
   })();
 </script>
-    <!-- Define Translate init callback -->
-  <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-  </script>
-
-  <!-- Load Google’s Translate library -->
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
-
-  <!-- Force full-height, scrollable dropdown -->
-  <style>
-    .goog-te-menu-frame.skiptranslate {
-      position: fixed !important;
-      top: 56px !important;
-      left: 5% !important;
-      right: 5% !important;
-      width: 90% !important;
-      height: 80vh !important;
-      z-index: 10000 !important;
-      border: none !important;
-      overflow: hidden !important;
-    }
-    .goog-te-menu-frame.skiptranslate .goog-te-menu2 {
-      height: 100% !important;
-      max-height: 100% !important;
-      overflow-y: scroll !important;
-      -webkit-overflow-scrolling: touch !important;
-    }
-  </style>
-
 </head>
   <body>
     <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
