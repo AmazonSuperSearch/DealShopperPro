@@ -114,6 +114,37 @@
     }
   }
 </style>
+  <style>
+  /* ✅ Force scroll inside iframe menu */
+  .goog-te-menu-frame,
+  .goog-te-menu-frame.skiptranslate,
+  iframe.goog-te-menu-frame {
+    max-height: 300px !important;
+    height: auto !important;
+    overflow-y: scroll !important;
+    width: 100% !important;
+  }
+
+  .goog-te-menu2 {
+    max-height: 300px !important;
+    overflow-y: scroll !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .goog-te-menu2 table {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ✅ Mobile fix */
+  @media (max-width: 767px) {
+    .goog-te-menu2 {
+      max-height: 200px !important;
+    }
+  }
+</style>
+
   <!-- Bootstrap CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
