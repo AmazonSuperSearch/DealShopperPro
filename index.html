@@ -83,35 +83,24 @@
 
   <!-- 3) Override CSS: both general AND iframe-specific rules -->
   <style>
-  /* Google Translate menu scroll fix */
+ <style>
   .goog-te-menu2 {
     max-height: 300px !important;
     overflow-y: auto !important;
     width: 100% !important;
   }
 
-  .goog-te-menu-frame.skiptranslate {
-    max-height: 300px !important;
-    height: auto !important;
-    overflow-y: auto !important;
-  }
-
-  .skiptranslate .goog-te-menu2 {
-    max-height: 300px !important;
-    height: auto !important;
-    overflow-y: auto !important;
-  }
-
-  iframe.goog-te-menu-frame {
+  .goog-te-menu2 table {
     width: 100% !important;
-    box-sizing: border-box !important;
   }
 
-  @media (max-width: 767px) {
-    .goog-te-menu2 {
-      max-height: 200px !important;
-      overflow-y: scroll !important;
-    }
+  .goog-te-menu-frame,
+  .goog-te-menu-frame.skiptranslate,
+  iframe.goog-te-menu-frame {
+    max-height: 300px !important;
+    height: auto !important;
+    overflow-y: auto !important;
+    width: 100% !important;
   }
 </style>
   <style>
@@ -431,21 +420,10 @@
     white-space: normal;
   }
 </style>
-<style>
-  #google_translate_element {
-  display: inline-block;
-}
-
-  @media (max-width: 767px) {
-    #google_translate_element {
-      position: static;
-      margin: 1rem auto;
-      text-align: center;
-      display: block;
-    }
-  }
-</style>
-
+<!-- Full-width translate container -->
+<div style="width: 100%; background: #f8f9fa; padding: 10px 0; text-align: center;">
+  <div id="google_translate_element"></div>
+</div>
 
 <!-- Auto-detect and set the cookie before Translate loads -->
 <script>
