@@ -37,10 +37,10 @@
   <!-- Intro paragraph -->
 
   <!-- SEO Meta Tags -->
- <meta name="description" content="Use Amazon Super Search to find Amazon deals, search by discount, filter Prime-only items, and explore lightning deals instantly.">
+  <meta name="description" content="Find Amazon’s best in-stock deals, lightning discounts, and Prime-only items in seconds—filter by price, brand, rating & more.">
   <meta name="keywords" content="advanced Amazon search, Amazon filter tool, Amazon search by price, Amazon Prime-only deals, Amazon coupon filter, Amazon lightning deals finder, Amazon price tracker, Amazon sort by rating, exclude brands on Amazon, search Amazon by brand, best Amazon deals today, Amazon free shipping filter, Amazon deals with coupons, in-stock Amazon items, Amazon hidden deals, filter Amazon by condition, Amazon discount tracker, Amazon wishlist filter, Amazon smart search tool, Amazon product finder by features">
   <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.amazonsupersearch.com/">
+  <link rel="canonical" href="https://amazonsupersearch.com/">
 
   <!-- Open Graph / Social -->
   <meta property="og:title" content="Amazon Search Filter Tool – Find In-Stock Deals, Apply Filters, Filter by Past Price Trends">
@@ -427,30 +427,16 @@
     </div>
   </div>
 </nav>
-  <!-- Override Translate menu height & scrolling -->
-<!-- NOTE: Consider fronting this site with a CDN like Cloudflare for caching and performance -->
-  <style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
-
-</head>
-<body>
-   <nav aria-label="breadcrumb">
+  <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/">Home</a></li>
       <li class="breadcrumb-item active" aria-current="page">Amazon Super Search</li>
     </ol>
   </nav>
-  <div class="container my-4">
-  <div class="row">
-    <!-- Main content on the left -->
-    <div class="col-lg-9">
-      <!-- Your main content continues here -->
-    </div>
-
-
+  <!-- Override Translate menu height & scrolling -->
+<!-- NOTE: Consider fronting this site with a CDN like Cloudflare for caching and performance -->
+</head>
+<body>
   <script>
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
@@ -460,6 +446,8 @@
     }, 'google_translate_element');
   }
 </script>
+
+
 
   <!-- ↓ HERE ↓ -->
   <!-- ↓ FULL SEARCH LOGIC ↓ -->
@@ -542,6 +530,13 @@ const pushFilter = (field, param, val) => {
   });
 });
 </script>
+<!-- ↑ END FULL SEARCH LOGIC ↑ -->
+
+  <!-- ↑ AND HERE ↑ -->
+
+  <!-- then the rest of your page content… -->
+  <main id="main"> … </main>
+  <footer> … </footer>
 
   <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
    <div class="banner-inner">
@@ -556,42 +551,16 @@ const pushFilter = (field, param, val) => {
   </p>
 </div>
 
-  <!-- Banner with centered image and right-side Quick Jump -->
-<div class="container mt-2 mb-3">
-  <div class="row justify-content-center">
-    <!-- Image column centered -->
-    <div class="col-lg-8 text-center">
-      <img
-        src="amazon-super-search-start-with-step-1-below-banner.jpg"
-        alt="Filter by price and find Amazon coupons instantly"
-        class="img-fluid mx-auto d-block"
-        style="max-width: 100%; height: auto;"
-        loading="lazy"
-      />
+    <!-- Banner -->
+    <div class="text-center mt-2 mb-3">
+    <img
+  src="amazon-super-search-start-with-step-1-below-banner.jpg"
+  alt="Filter by price and find Amazon coupons instantly"
+  class="img-fluid d-block mx-auto w-100"
+  loading="lazy"
+/>
     </div>
 
-    <!-- Quick Jump column aligned right -->
-    <div class="col-lg-4">
-      <div class="card shadow-sm p-3">
-        <h6 class="card-title mb-3">📌 Quick Jump</h6>
-        <ul class="list-unstyled small">
-          <li><a href="#step-1">Step 1: Shopping</a></li>
-          <li><a href="#step-2">Step 2: Price</a></li>
-          <li><a href="#step-3">Step 3: Filters</a></li>
-          <li><a href="#step-4">Step 4: Brands</a></li>
-          <li><a href="#step-5">Step 5: Preferences</a></li>
-          <li><a href="#step-6">Step 6: Search</a></li>
-          <li><a href="#step-7">Step 7: Advanced</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#about-amazon-super-search">About</a></li>
-          <li><a href="#share-with-friends">Share</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
- <section id="step-1">
   <input type="hidden" name="i" value="">
   <form id="amazon-search-form">
     <div class="container text-start mb-4">
@@ -599,10 +568,6 @@ const pushFilter = (field, param, val) => {
       <p class="text-muted mb-3">
         Type a product name, keyword, category, ASIN, ISBN, or UPC to start your search.
       </p>
-    </div>
-  </form>
-</section>
-
   
 
 
@@ -628,15 +593,12 @@ const pushFilter = (field, param, val) => {
   </div> <!-- /.container -->
   
       <!-- Step 2 heading ABOVE the card box -->
-<section id="step-2">
-  <div class="container text-start mb-4">
-    <h2>✅ Step 2: Filter by Price & Set Your Range ($)</h2>
-    <p class="text-muted mb-3">
-      Choose the minimum and maximum price you’re willing to spend—and instantly see items that match.
-    </p>
-  </div>
-</section>
-
+<div class="container text-start mb-4">
+ <h2>✅ Step 2: Filter by Price & Set Your Range ($) 
+ </h2>
+<p class="text-muted mb-3">
+  Choose the minimum and maximum price you’re willing to spend—and instantly see items that match.
+</p>
 
   <div class="card p-3">
     <div class="row g-3 align-items-end">
@@ -672,15 +634,9 @@ const pushFilter = (field, param, val) => {
 </div>
 </div>
 <!-- Step 3: Customize your deal filters -->
-<section id="step-3">
-  <div class="container text-start mb-4">
-    <h2 class="mb-2">✅ Step 3: Customize your deal filters</h2>
-    <p class="text-muted mb-3">
-      Pick a minimum discount, customer rating, and how you want the results sorted.
-    </p>
-  </div>
-</section>
-
+<div class="container text-start mb-4">
+  <h2 class="mb-2">✅ Step 3: Customize your deal filters</h2>
+  <p class="text-muted mb-3">Pick a minimum discount, customer rating, and how you want the results sorted.</p>
 
  <div class="card p-3">
   <div class="row g-3">
@@ -733,15 +689,11 @@ const pushFilter = (field, param, val) => {
    
   
 <!-- Step 4: Brand Filters -->
-<section id="step-4">
-  <div class="container text-start mb-4">
-    <h2 class="mb-2">✅ Step 4: Choose which brands to include. Check the box below to limit results to only these brands.</h2>
-    <p class="text-muted mb-3">
-      Narrow results by including only certain brands.
-    </p>
-  </div>
-</section>
-
+<section class="container text-start mb-4">
+  <h2 class="mb-2">✅ Step 4: Choose which brands to include. Check the box below to limit results to only these brands.</h2>
+  <p class="text-muted mb-3">
+    Narrow results by including only certain brands.
+  </p>
 
   <div class="card border-success shadow-sm mb-4 p-3">
     <div class="row g-3">
@@ -778,17 +730,13 @@ const pushFilter = (field, param, val) => {
 
 
  <!-- Step 5: Fine-tune your preferences -->
-<section id="step-5">
-  <div class="container text-start mb-4">
-    <h2 class="mb-2">
-      ✅ Step 5: Fine-tune Preferences & Find Coupons
-    </h2>
-    <p class="text-muted mb-3">
-      Select Prime-only, Lightning Deals only, in-stock, free shipping—and toggle coupon filters to become your own Amazon coupon finder.
-    </p>
-  </div>
-</section>
-
+<section class="container text-start mb-4">
+ <h2 class="mb-2">
+  ✅ Step 5: Fine-tune Preferences & Find Coupons
+</h2>
+<p class="text-muted mb-3">
+  Select Prime-only, Lightning Deals only, in-stock, free shipping—and toggle coupon filters to become your own Amazon coupon finder.
+</p>
 
   <div class="card mb-4 p-3">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
@@ -945,16 +893,13 @@ const pushFilter = (field, param, val) => {
 </section> <!-- end of Step 5 section -->
 
   <!-- Step 6: Search Amazon -->
-<section id="step-6">
-  <div class="container text-start mb-5">
-    <h2 class="mb-2">
-      ✅ Step 6: Begin Your Amazon Search or Continue Below Using Advanced Settings
-    </h2>
-    <p class="text-muted mb-3">
-      You’re all set! Click the button below to view your filtered results directly on Amazon.
-    </p>
-  </div>
-</section>
+<section class="container text-start mb-5">
+  <h2 class="mb-2">
+    ✅ Step 6: Begin Your Amazon Search or Continue Below Using Advanced Settings
+  </h2>
+  <p class="text-muted mb-3">
+    You’re all set! Click the button below to view your filtered results directly on Amazon.
+  </p>
   <div class="text-center">
     <div id="filter-warning" style="display:none; color: orange; font-weight: bold; padding: 10px;">
   ⚠️ Too many filters may return no results. Try removing a few for better results.
@@ -974,15 +919,13 @@ const pushFilter = (field, param, val) => {
 
   </div>
 </section>
-<section id="step-7">
-  <div class="container text-start mb-4">
-    <h2 class="mb-2">✅ Step 7: Advanced Settings</h2>
-    <p class="text-muted mb-3">
-      Explore advanced filters and tools to refine your search even further.
-    </p>
-  </div>
+<!-- Step 7: Advanced Settings -->
+<section class="container text-start mb-4">
+  <h2 class="mb-2">✅ Step 7: Advanced Settings</h2>
+  <p class="text-muted mb-3">
+    Explore advanced filters and tools to refine your search even further.
+  </p>
 </section>
-
 
       <!-- Power-User Tools -->
 <section>
@@ -1507,7 +1450,6 @@ const pushFilter = (field, param, val) => {
 
   </div>
 </section>
-<p>Need tips? Visit our <a href="/help.html">Help Page</a> or explore our <a href="/media.html">Media Resources</a>.</p>
 
 <!-- …your search-logic <script> closes here… -->
 <!-- end of search logic -->
@@ -1555,11 +1497,9 @@ const pushFilter = (field, param, val) => {
 </section>
 
 <!-- Share With Friends Section -->
-<section id="share-with-friends" class="container text-center my-5">
+<section class="container text-center my-5">
   <h2 class="mb-3">📣 Share With Friends</h2>
   <p class="text-muted mb-4">Know someone who loves Amazon deals? Let them in on the secret.</p>
-</section>
-
 
   <div class="d-flex justify-content-center gap-3 flex-wrap">
     <!-- Facebook -->
@@ -1896,29 +1836,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 'google_translate_element');
   }
       </script>
-  <style>
-  #scrollToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 9999;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 14px;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    transition: opacity 0.3s ease;
-  }
-
-  #scrollToTopBtn:hover {
-    background-color: #0056b3;
-  }
-</style>
-
-  <button id="scrollToTopBtn" title="Go to top">⬆ Top</button>
 </body>
 </html>
