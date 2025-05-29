@@ -91,6 +91,24 @@
     .goog-te-menu2 table {
       width: 100% !important;
     }
+    .goog-te-menu-frame.skiptranslate {
+  max-height: 300px !important;
+  height: auto !important;
+  overflow-y: auto !important;
+}
+
+.skiptranslate .goog-te-menu2 {
+  max-height: 300px !important;
+  height: auto !important;
+  overflow-y: auto !important;
+}
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+
 
     /* Scroll override for the injected iframe wrapper */
     .goog-te-menu-frame,
@@ -391,6 +409,23 @@
   /* Accordion button: allow normal wrapping and spacing */
   .accordion-button {
     white-space: normal;
+  }
+</style>
+<style>
+  #google_translate_element {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  @media (max-width: 767px) {
+    #google_translate_element {
+      position: static;
+      margin: 1rem auto;
+      text-align: center;
+      display: block;
+    }
   }
 </style>
 
