@@ -591,37 +591,44 @@ const pushFilter = (field, param, val) => {
   </div>
 </div>
   
- <div class="container my-5">
+<div class="container my-5">
   <div class="row align-items-start">
-  <section id="step-1">
-  <input type="hidden" name="i" value="">
-  <form id="amazon-search-form">
-    <div class="container text-start mb-4">
-      <h2>✅ Step 1: What Are You Shopping For?</h2>
-      <p class="text-muted mb-3">
-        Type a product name, keyword, category, ASIN, ISBN, or UPC to start your search.
-      </p>
-    </div>
-  </form>
-</section>
-  <div class="card p-3">
-    <div class="input-group">
-      <!-- Mic on left -->
-      <button class="btn btn-outline-secondary" type="button" id="voiceSearchBtn" aria-label="Activate voice search">
-  🎤
-</button>
-      <!-- Then the text input -->
-      <input
-        type="text"
-        class="form-control"
-        id="mainSearchInput"
-        name="q"
-        placeholder="e.g. wireless headphones"
-        autocomplete="off"
-      >
-  </div> <!-- /.input-group -->
-    </div> <!-- /.card -->
-  </div> <!-- /.container -->
+    <section id="step-1">
+      <form id="amazon-search-form">
+        <input type="hidden" name="i" value="">
+
+        <!-- Heading -->
+        <div class="container text-start mb-4">
+          <h2>✅ Step 1: What Are You Shopping For?</h2>
+          <p class="text-muted mb-3">
+            Type a product name, keyword, category, ASIN, ISBN, or UPC to start your search.
+          </p>
+        </div>
+
+        <!-- Input field card -->
+        <div class="card p-3">
+          <div class="input-group">
+            <!-- Mic button -->
+            <button class="btn btn-outline-secondary" type="button" id="voiceSearchBtn" aria-label="Activate voice search">
+              🎤
+            </button>
+
+            <!-- Text input -->
+            <input
+              type="text"
+              class="form-control"
+              id="mainSearchInput"
+              name="q"
+              placeholder="e.g. wireless headphones"
+              autocomplete="off"
+            >
+          </div> <!-- /.input-group -->
+        </div> <!-- /.card -->
+
+      </form> <!-- ✅ Form closes here -->
+    </section>
+  </div> <!-- /.row -->
+</div> <!-- /.container -->
   
       <!-- Step 2 heading ABOVE the card box -->
 <section id="step-2">
