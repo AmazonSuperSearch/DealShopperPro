@@ -65,52 +65,46 @@
     "description": "Amazon Super Search lets you uncover live in-stock lightning deals, filter by free shipping only, set deep discount thresholds, filter by past price trends, and sort by top customer ratings."
   }
   </script>
- <!-- 1) Define the init callback -->
-<script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-</script>
+  <!-- 1) Define the init callback -->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
 
   <!-- 2) Load Google’s Translate library -->
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 
+  <!-- 3) Override CSS: both general AND iframe-specific rules -->
+  <style>
+    /* General scroll override inside the iframe */
+    .goog-te-menu2 {
+      max-height: 300px !important;
+      overflow-y: auto !important;
+    }
+    .goog-te-menu2 table {
+      width: 100% !important;
+    }
 
-<!-- then your Bootstrap CSS, Inter font, Tagify, etc. -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    /* Scroll override for the injected iframe wrapper */
+    .goog-te-menu-frame,
+    iframe.goog-te-menu-frame.skiptranslate {
+      max-height: 300px !important;
+      overflow-y: auto !important;
+      height: auto !important;
+    }
+    /* Extra specificity for in-page menus */
+    .skiptranslate .goog-te-menu2 {
+      max-height: 300px !important;
+      overflow-y: auto !important;
+      height: auto !important;
+    }
+  </style>
 
-
-<style>
-  /* allow full scrollable list on mobile */
-  .goog-te-menu2 {
-    max-height: 80vh !important;
-    overflow-y: auto !important;
-  }
-
-  /* ensure the iframe container can expand */
-  .goog-te-menu-frame,
-  iframe.goog-te-menu-frame.skiptranslate {
-    max-height: 80vh !important;
-    height: auto !important;
-    width: 90% !important;
-    margin: 0 auto !important;
-    z-index: 10000 !important;
-  }
-</style>
-<!-- 1) Define the init callback -->
-<script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-</script>
   <!-- Bootstrap CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
@@ -441,6 +435,19 @@
       <li class="breadcrumb-item active" aria-current="page">Amazon Super Search</li>
     </ol>
   </nav>
+  <!-- Override Translate menu height & scrolling -->
+<!-- NOTE: Consider fronting this site with a CDN like Cloudflare for caching and performance -->
+  <script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+
+
 
   <!-- ↓ HERE ↓ -->
   <!-- ↓ FULL SEARCH LOGIC ↓ -->
@@ -1815,6 +1822,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
-
+<script>
+  // 1) Initialize the widget (inline, no banner)
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+      </script>
 </body>
 </html>
