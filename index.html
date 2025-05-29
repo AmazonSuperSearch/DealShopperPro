@@ -65,14 +65,7 @@
     "description": "Amazon Super Search lets you uncover live in-stock lightning deals, filter by free shipping only, set deep discount thresholds, filter by past price trends, and sort by top customer ratings."
   }
   </script>
-
- <!-- Bootstrap CSS -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
-  rel="stylesheet"
-/>
-
-<!-- 1) Define the Google Translate init callback -->
+ <!-- 1) Define the init callback -->
 <script>
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
@@ -83,12 +76,43 @@
   }
 </script>
 
-<!-- 2) Load Google’s Translate library (with our callback) -->
-<script
-  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-  defer
-></script>
+  <!-- 2) Load Google’s Translate library -->
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 
+
+<!-- then your Bootstrap CSS, Inter font, Tagify, etc. -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+
+<style>
+  /* allow full scrollable list on mobile */
+  .goog-te-menu2 {
+    max-height: 80vh !important;
+    overflow-y: auto !important;
+  }
+
+  /* ensure the iframe container can expand */
+  .goog-te-menu-frame,
+  iframe.goog-te-menu-frame.skiptranslate {
+    max-height: 80vh !important;
+    height: auto !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    z-index: 10000 !important;
+  }
+</style>
+<!-- 1) Define the init callback -->
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
  <!-- Inter font -->
 <link
@@ -417,6 +441,91 @@
       <li class="breadcrumb-item active" aria-current="page">Amazon Super Search</li>
     </ol>
   </nav>
+
+  <!-- ↓ HERE ↓ -->
+  <!-- ↓ FULL SEARCH LOGIC ↓ -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+   // 1) Tagify (only if the brand-include input exists)
+  const brandInput = document.querySelector('input[name="brand-include"]');
+  if (brandInput) {
+    try {
+      new Tagify(brandInput);
+    } catch (err) {
+      console.warn('Tagify init failed:', err);
+    }
+  }
+
+  // 2) Auto-select Google Translate
+  const userLang = (navigator.language||navigator.userLanguage).substr(0,2);
+  setTimeout(() => {
+    const combo = document.querySelector('.goog-te-combo');
+    if (combo && combo.value !== userLang) {
+      combo.value = userLang;
+      combo.dispatchEvent(new Event('change'));
+    }
+  }, 500);
+
+  // 3) Form submit → build & open Amazon URL
+  const form = document.getElementById('amazon-search-form');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const params = new URLSearchParams();
+    const rh = [];
+
+    // basic query + sort
+    const q = data.get('q')?.trim();
+    if (!q) return alert('Please enter a search term.');
+    if (data.get('eco-friendly') === 'on') {
+  q += (q.endsWith(' ') ? '' : ' ') + 'eco friendly';
+}
+    params.set('k', q);
+    const sort = data.get('sort');
+    if (sort) params.set('s', sort);
+
+ // 2) Price range → push into rh[]
+const min = parseFloat(data.get('min-price') || 0);
+const max = parseFloat(data.get('max-price') || 0);
+
+if (min > 0 || max > 0) {
+  // if user only set min, Amazon wants "p_36:<min>-"
+  // if user only set max, Amazon wants "p_36:0-<max>"
+  const lower = min > 0 ? Math.round(min * 100) : 0;
+  const upper = max > 0 ? Math.round(max * 100) : '';
+  rh.push(`p_36:${lower}-${upper}`);
+}
+
+// 3) Checkbox helper
+const pushFilter = (field, param, val) => {
+  if (data.get(field) === 'on') rh.push(`${param}:${val}`);
+};
+
+    // brand tags
+    const tags = JSON.parse(data.get('brand-include')||'[]');
+    tags.forEach(t => rh.push(`p_89:${encodeURIComponent(t.value)}`));
+
+    // consolidate
+    if (rh.length) params.set('rh', rh.join(','));
+    params.set('tag','echolover25-20');
+
+    // domain by currency
+    const hostMap = {
+      usd:'www.amazon.com', eur:'www.amazon.de',
+      gbp:'www.amazon.co.uk', jpy:'www.amazon.co.jp',
+      inr:'www.amazon.in'
+    };
+    const host = hostMap[data.get('currency')]||'www.amazon.com';
+
+    const url = `https://${host}/s?${params.toString()}`;
+    console.log('🔗 Amazon URL:',url);
+    window.open(url, '_blank');
+  });
+});
+</script>
+<!-- ↑ END FULL SEARCH LOGIC ↑ -->
+
+  <!-- ↑ AND HERE ↑ -->
 
   <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
    <div class="banner-inner">
