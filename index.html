@@ -1876,6 +1876,42 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 </script>
+<script>
+  // Check if a visit alert was already sent this session
+  if (!sessionStorage.getItem("visitAlertSent")) {
+    sessionStorage.setItem("visitAlertSent", "1");
 
+    const referrer = document.referrer || "Direct visit";
+    const userAgent = navigator.userAgent;
+
+    fetch("https://ipapi.co/json/")
+      .then(res => res.json())
+      .then(data => {
+        const city = data.city || "Unknown City";
+        const country = data.country_name || "Unknown Country";
+
+        const message = `👋 New visitor from ${city}, ${country} just landed on your site!\n` +
+                        `🌐 Referrer: ${referrer}\n` +
+                        `💻 Device: ${userAgent}`;
+
+        fetch("https://eoobbx7fv4yud9k.m.pipedream.net", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: message })
+        });
+      })
+      .catch(() => {
+        const fallbackMessage = `👋 A new visitor landed on your site (location unknown)\n` +
+                                `🌐 Referrer: ${referrer}\n` +
+                                `💻 Device: ${userAgent}`;
+
+        fetch("https://eoobbx7fv4yud9k.m.pipedream.net", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: fallbackMessage })
+        });
+      });
+  }
+</script>
 </body>
 </html>
