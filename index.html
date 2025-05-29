@@ -1834,5 +1834,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 'google_translate_element');
   }
       </script>
+    <script>
+  // Only runs after the page loads since this is placed just before </body>
+  document.getElementById("search-button").addEventListener("click", function () {
+    if (sessionStorage.getItem("searchAlertSent")) return;
+    sessionStorage.setItem("searchAlertSent", "1");
+
+    const searchTerm = document.getElementById("main-search")?.value || "Unknown search term";
+    const referrer = document.referrer || "Direct visit";
+    const userAgent = navigator.userAgent;
+
+    fetch("https://ipapi.co/json/")
+      .then(res => res.json())
+      .then(data => {
+        const city = data.city || "Unknown City";
+        const country = data.country_name || "Unknown Country";
+
+        const message = `🔎 A user from ${city}, ${country} clicked Search!\n` +
+                        `🛒 Search Term: ${searchTerm}\n` +
+                        `🌐 Referrer: ${referrer}\n` +
+                        `💻 Device: ${userAgent}`;
+
+        fetch("https://eoobbx7fv4yud9k.m.pipedream.net", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: message })
+        });
+      })
+      .catch(() => {
+        const fallbackMessage = `🔎 A user clicked Search (location unknown)\n` +
+                                `🛒 Search Term: ${searchTerm}\n` +
+                                `🌐 Referrer: ${referrer}\n` +
+                                `💻 Device: ${userAgent}`;
+
+        fetch("https://eoobbx7fv4yud9k.m.pipedream.net", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: fallbackMessage })
+        });
+      });
+  });
+</script>
+
 </body>
 </html>
