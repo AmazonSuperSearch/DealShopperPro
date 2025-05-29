@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://amazonsupersearch.com/</loc>
+    <loc>https://www.amazonsupersearch.com/</loc>
     <lastmod>2025-05-16</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://amazonsupersearch.com/help.html</loc>
+    <loc>https://www.amazonsupersearch.com/help.html</loc>
     <lastmod>2025-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://amazonsupersearch.com/supersearch.html</loc>
+    <loc>https://www.amazonsupersearch.com/supersearch.html</loc>
     <lastmod>2025-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://amazonsupersearch.com/media.html</loc>
+    <loc>https://www.amazonsupersearch.com/media.html</loc>
     <lastmod>2025-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
