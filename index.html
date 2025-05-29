@@ -413,11 +413,8 @@ body {
 </style>
 <style>
   #google_translate_element {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 999;
-  }
+  display: inline-block;
+}
 
   @media (max-width: 767px) {
     #google_translate_element {
@@ -440,17 +437,6 @@ body {
 </head>
   <body>
     <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
-    <div id="google_translate_element" style="
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 999;
-  background: white;
-  padding: 4px 8px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-"></div>
-
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="/">Amazon Super Search</a>
@@ -471,6 +457,10 @@ body {
     </div>
   </div>
 </nav>
+    <!-- Moved Translate widget here -->
+<div class="container text-end mt-3 mb-2">
+  <div id="google_translate_element"></div>
+</div>
     <main id="main">
 
   <nav aria-label="breadcrumb">
