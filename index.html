@@ -400,7 +400,8 @@
     document.cookie = "googtrans=/en/" + userLang + "; path=/";
   })();
 </script>
-
+</head>
+  <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="/">Amazon Super Search</a>
@@ -433,8 +434,6 @@
   </nav>
   <!-- Override Translate menu height & scrolling -->
 <!-- NOTE: Consider fronting this site with a CDN like Cloudflare for caching and performance -->
-</head>
-<body>
   <script>
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
