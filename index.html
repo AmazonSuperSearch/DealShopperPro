@@ -1422,5 +1422,19 @@ body {
       });
     }
   </script>
+    <script>
+  // play click sound on every button/checkbox click
+  const clickSound = document.getElementById('clickSound');
+  if (clickSound) {
+    document.querySelectorAll(
+      'button, input[type="submit"], input[type="button"], input[type="checkbox"]'
+    ).forEach(el => {
+      el.addEventListener('click', () => {
+        clickSound.currentTime = 0;
+        clickSound.play().catch(()=>{/*silent*/});
+      });
+    });
+  }
+</script>
 </body>
 </html>
