@@ -1,6 +1,5 @@
 // search-logic.js
 // Consolidated, updated Amazon search logic moved to an external file
-console.log('Built Amazon URL:', url);
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
 
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       jpy: 'www.amazon.co.jp', inr: 'www.amazon.in'
     };
     const host = hostMap[data.get('currency')] || 'www.amazon.com';
-    const url = `https://${host}/s?${params}`;
+    const url = `https://${host}/s?${params.toString()}`;
 
     window.open(url, '_blank');
   });
