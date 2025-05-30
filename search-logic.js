@@ -20,52 +20,37 @@ document.addEventListener('DOMContentLoaded', () => {
         q += (q.endsWith(' ') ? '' : ' ') + phrase;
       }
     };
-    keywordAppend('eco-friendly',            'eco friendly');
-    keywordAppend('gifts-for-her',          'gifts for her');
-    keywordAppend('gifts-for-mom',          'gifts for mom');
-    keywordAppend('gifts-for-dad',          'gifts for dad');
-    keywordAppend('birthday-gifts',         'birthday gifts');
-    keywordAppend('anniversary-gifts',      'anniversary gifts');
-    keywordAppend('pets-safe',              'pet safe');
-    keywordAppend('low-impact-packaging',   'low impact packaging');
-    keywordAppend('climate-pledge-friendly','climate pledge friendly');
-    keywordAppend('black-owned',            'black owned business');
-    keywordAppend('latino-owned',           'latino owned business');
-    keywordAppend('women-owned',            'women owned business');
-    keywordAppend('aapi-owned',             'AAPI owned business');
-    keywordAppend('lgbtq-owned',            'LGBTQ owned business');
-    keywordAppend('eco-label-certified',    'eco label certified');
-    keywordAppend('drought-tolerant',       'drought tolerant');
-    keywordAppend('zero-waste',             'zero waste');
-    keywordAppend('gifts-for-kids',         'gifts for kids');
-    keywordAppend('gifts-for-teens',        'gifts for teens');
-    keywordAppend('gifts-for-babies',       'gifts for babies');
-    keywordAppend('gifts-for-coworkers',    'gifts for coworkers');
-    keywordAppend('gifts-under-25',         'gifts under $25');
-    keywordAppend('gifts-under-50',         'gifts under $50');
-    keywordAppend('stocking-stuffers',      'stocking stuffers');
-    keywordAppend('white-elephant',         'white elephant gifts');
-    keywordAppend('plastic-free',           'plastic free');
-    keywordAppend('upcycled',               'upcycled');
-    keywordAppend('secondhand',             'secondhand');
-    keywordAppend('fair-trade',             'fair trade');
-    keywordAppend('handmade',               'handmade');
-    keywordAppend('local-producer',         'locally made');
-    keywordAppend('minimalist-products',    'minimalist');
-    keywordAppend('boho-style',             'boho style');
-    keywordAppend('farmhouse-style',        'farmhouse decor');
-    keywordAppend('japanese-design',        'japanese minimalist');
-    keywordAppend('scandinavian-style',     'scandinavian design');
-    keywordAppend('yoga-gear',              'yoga gear');
-    keywordAppend('essential-oils',         'essential oils');
-    keywordAppend('aromatherapy',           'aromatherapy');
-    keywordAppend('blue-light-glasses',     'blue light glasses');
-    keywordAppend('graduation-gifts',       'graduation gifts');
-    keywordAppend('housewarming-gifts',     'housewarming gifts');
-    keywordAppend('back-to-school',         'back to school');
-    keywordAppend('new-year-deals',         'new year deals');
-    keywordAppend('summer-essentials',      'summer essentials');
+keywordAppend('eco-friendly',            'eco friendly');
+keywordAppend('biodegradable-packaging', 'biodegradable packaging');
+keywordAppend('vegan-products',          'vegan');
+keywordAppend('organic-products',        'organic');
+keywordAppend('carbon-neutral-delivery','carbon-neutral delivery');
+keywordAppend('filter-cruelty-free',     'cruelty free');
+keywordAppend('low-emf-devices',         'low emf');
+keywordAppend('allergy-friendly',        'allergy friendly');
 
+keywordAppend('gifts-for-her',           'gifts for her');
+keywordAppend('gifts-for-him',           'gifts for him');
+keywordAppend('gifts-for-dad',           'gifts for dad');
+keywordAppend('gifts-for-mom',           'gifts for mom');
+keywordAppend('gifts-for-kids',          'gifts for kids');
+keywordAppend('birthday-gifts',          'birthday gifts');
+keywordAppend('anniversary-gifts',       'anniversary gifts');
+keywordAppend('holiday-gift-picks',      'holiday gift picks');
+
+keywordAppend('meditation-mindfulness-gear', 'mindfulness gear');
+keywordAppend('best-value-per-ounce',        'best value per ounce');
+keywordAppend('most-reviewed',               'most reviewed');
+keywordAppend('steady-price-no-spike',       'steady price');
+
+keywordAppend('fba-only',            'shipped by amazon');
+keywordAppend('subscribe-save',      'subscribe & save');
+keywordAppend('small-business',      'small business');
+keywordAppend('amazon-choice',       "amazon's choice");
+keywordAppend('amazon-brands',       'amazon brands');
+keywordAppend('free-returns',        'free returns');
+keywordAppend('crowdfunded-origins', 'crowdfunded origins');
+    
     // 3) % Off, Rating & Sort → query params
     const pct = data.get('percent-off');
     if (pct)    params.set('pct-off', pct);
@@ -106,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const rhMap = {
         'prime-only':      'p_85:2470955011',
         'lightning-deals': 'p_n_deal_type:23566065011',
-        'todays-deals':    'p_n_deal_type:23566065011',
         'free-shipping':   'p_76:1249177011',
         'in-stock':        'p_n_availability:2661601011',
         'coupons':         'p_n_feature_browse-bin:6779703011',
