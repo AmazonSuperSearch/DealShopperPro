@@ -1,5 +1,6 @@
 // search-logic.js
 // Consolidated, updated Amazon search logic moved to an external file
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
 
@@ -11,26 +12,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1) Base query
     let q = data.get('q')?.trim();
-    if (!q) return alert('Please enter a search term.');
+    if (!q) {
+      return alert('Please enter a search term.');
+    }
 
     // detect “Match only these brands”
     const brandOnly = data.get('include-only') === 'on';
 
-    // 2) Keyword-based filters (always applied)
-    function keywordAppend(id, keyword) {
+    // 2) Keyword-based filters (always appended to q)
+    const keywordAppend = (id, phrase) => {
       if (data.get(id) === 'on') {
-        q += (q.endsWith(' ') ? '' : ' ') + keyword;
+        q += (q.endsWith(' ') ? '' : ' ') + phrase;
       }
-    }
+    };
     keywordAppend('eco-friendly', 'eco friendly');
     keywordAppend('gifts-for-her', 'gifts for her');
-    // …etc…
+    keywordAppend('gifts-for-him', 'gifts for him');
+    keywordAppend('gifts-for-kids', 'gifts for kids');
+    // …add any more of your keyword filters here…
 
-    // 3) Non-brand RH facets (skip if brandOnly)
+    // 3) Price-range facet (always applied, before RH facets)
+    const min = parseFloat(data.get('min-price') || 0);
+    const max = parseFloat(data.get('max-price') || 0);
+    if (min > 0 || max > 0) {
+      const lower = min > 0 ? Math.round(min * 100) : 0;
+      const upper = max > 0 ? Math.round(max * 100) : '';
+      rh.push(`p_36:${lower}-${upper}`);
+    }
+
+    // 4) Percent-off, rating & sort go into query params, not RH:
+    const pct = data.get('percent-off');
+    if (pct) params.set('pct-off', pct);
+    const rating = data.get('min-rating');
+    if (rating) params.set('min-rating', rating);
+    const sort = data.get('sort');
+    if (sort) params.set('sort', sort);
+
+    // 5) Non-brand RH facets (skip if brandOnly)
     if (!brandOnly) {
-      function pushRh(field, code) {
+      const pushRh = (field, code) => {
         if (data.get(field) === 'on') rh.push(code);
-      }
+      };
       const rhMap = {
         'prime-only':       'p_85:2470955011',
         'lightning-deals':  'p_n_deal_type:23566065011',
@@ -50,14 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // 4) BRAND-only or brand-plus-others logic
-    // Tagify emits JSON in “brand-include”
+    // 6) Brand-only or brand-plus-others logic
     const rawBrands = data.get('brand-include');
     if (rawBrands) {
       try {
         const brands = JSON.parse(rawBrands);
-        // if brandOnly, clear out any non-brand codes
-        if (brandOnly) rh = [];
+        if (brandOnly) {
+          rh = [];  // drop any non-brand filters
+        }
         brands.forEach(b => {
           if (b.value) {
             rh.push(`p_89:${encodeURIComponent(b.value)}`);
@@ -68,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // 5) Build & ship URL
+    // 7) Build & open URL
     params.set('k', q);
     if (rh.length) params.set('rh', rh.join(','));
     params.set('tag', 'echolover25-20');
@@ -83,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const host = hostMap[data.get('currency')] || 'www.amazon.com';
     const url = `https://${host}/s?${params.toString()}`;
 
+    console.log('🔗 Amazon URL:', url);
     window.open(url, '_blank');
   });
 });
-
