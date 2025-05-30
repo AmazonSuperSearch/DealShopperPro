@@ -69,14 +69,15 @@
   </script>
   <!-- 1) Define the init callback -->
   <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-  </script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'es,fr,ru,de,it,pt,nl,zh-CN,hi,ar',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
 
   <!-- 2) Load Google’s Translate library -->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
@@ -469,17 +470,6 @@ body {
       <li class="breadcrumb-item active" aria-current="page">Amazon Super Search</li>
     </ol>
   </nav>
-  <!-- Override Translate menu height & scrolling -->
-<!-- NOTE: Consider fronting this site with a CDN like Cloudflare for caching and performance -->
-  <script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-</script>
 
   <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
    <div class="banner-inner">
