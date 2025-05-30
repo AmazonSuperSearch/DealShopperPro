@@ -1385,44 +1385,42 @@ body {
   </div>
 </footer>
 
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <!-- 1) Bootstrap JS Bundle -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 
-<!-- 2) Main search logic (external) -->
-<script src="/js/search-logic.js" defer></script>
+  <!-- 2) Main search logic (external) -->
+  <script src="/js/search-logic.js" defer></script>
 
-<!-- 3) Voice-search handler -->
-<script>
-  const btn = document.getElementById('voiceSearchBtn');
-  const input = document.getElementById('mainSearchInput');
+  <!-- 3) Voice‐search handler -->
+  <script>
+    const btn   = document.getElementById('voiceSearchBtn');
+    const input = document.getElementById('mainSearchInput');
 
-  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-    btn.disabled = true;
-    btn.title = 'Voice search not supported';
-  } else {
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    const recog = new SpeechRecognition();
-    recog.continuous = false;
-    recog.lang = 'en-US';
-    recog.interimResults = false;
-    recog.maxAlternatives = 1;
+    if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+      btn.disabled = true;
+      btn.title = 'Voice search not supported';
+    } else {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recog = new SpeechRecognition();
+      recog.continuous = false;
+      recog.lang = 'en-US';
+      recog.interimResults = false;
+      recog.maxAlternatives = 1;
 
-    btn.addEventListener('click', () => {
-      recog.start();
-      btn.classList.add('active');
-    });
+      btn.addEventListener('click', () => {
+        recog.start();
+        btn.classList.add('active');
+      });
 
-    recog.addEventListener('result', (e) => {
-      const transcript = e.results[0][0].transcript;
-      input.value = transcript;
-      recog.stop();
-    });
+      recog.addEventListener('result', (e) => {
+        input.value = e.results[0][0].transcript;
+        recog.stop();
+      });
 
-    recog.addEventListener('end', () => {
-      btn.classList.remove('active');
-    });
-  }
-</script>
-
+      recog.addEventListener('end', () => {
+        btn.classList.remove('active');
+      });
+    }
+  </script>
 </body>
 </html>
