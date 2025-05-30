@@ -516,14 +516,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const rh = [];
 
     // basic query + sort
-    const q = data.get('q')?.trim();
-    if (!q) return alert('Please enter a search term.');
-    if (data.get('eco-friendly') === 'on') {
+let q = data.get('q')?.trim();
+if (!q) return alert('Please enter a search term.');
+
+if (data.get('eco-friendly') === 'on') {
   q += (q.endsWith(' ') ? '' : ' ') + 'eco friendly';
 }
-    params.set('k', q);
-    const sort = data.get('sort');
-    if (sort) params.set('s', sort);
+
+params.set('k', q); // ✅ FIXED: This line was broken
+
 
  // 2) Price range → push into rh[]
 const min = parseFloat(data.get('min-price') || 0);
