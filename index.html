@@ -1844,41 +1844,83 @@ if (min || max) {
     const pct = data.get('percent-off');
     if (pctMap[pct]) rh.push(`p_n_pct-off-with-tax:${pctMap[pct]}`);
 
-    // ── Step 5 filters ──
-const map = {
-  'prime-only':        'p_85:2470955011',
-  'free-shipping':     'p_76:1249177011',
-  'in-stock':          'p_n_availability:2661601011',
-  'lightning-deals':   'p_n_deal_type:23566065011',
-  'todays-deals':      'p_n_deal_type:23566065011',
-  'coupons':           'p_n_feature_browse-bin:6779703011',
-  'eco-friendly':      null, // handled via keywordAppend if you like
-  // … other code-based filters …
-  'refurbished-by-manufacturer':'p_n_condition-type:2224371011',
-  'overstock-or-clearance':'p_n_feature_twenty_browse-bin:21223116011',
-  'crowdfunded-origins':'p_89:kickstarter%20indiegogo',
-  'subscribe-save':    'p_n_is_sns_available:2619533011',
-  'amazon-choice':     'p_n_feature_twenty_browse-bin:21223116011',
-  'fba-only':          'p_n_shipping_option-bin:3242350011',
-  'free-returns':      'p_n_feature_eight_browse-bin:10171655011',
-  'gift-wrap':         'p_n_feature_seventeen_browse-bin:17482021011',
-  'small-business':    'p_n_cpf_eligible:5191495011',
-  'amazon-brands':     'p_n_feature_fourteen_browse-bin:18584192011',
-  'low-rating':        'p_n_feature_twenty_browse-bin:21397296011',
-  'most-reviewed':     'p_n_feature_thirty-six_browse-bin:2339709011',
-  'steady-price-no-spike':'p_n_feature_thirty-seven_browse-bin:2339708011',
-  'best-value-per-ounce':'p_89:value%20per%20ounce',
-  'birthday-gifts':    'p_89:birthday%20gift',
-  'anniversary-gifts': 'p_89:anniversary%20gift',
-  // … and so on …
-};
+      // ── Step 5 filters ──
+    const map = {
+      'prime-only':               'p_85:2470955011',
+      'free-shipping':            'p_76:1249177011',
+      'in-stock':                 'p_n_availability:2661601011',
+      'lightning-deals':          'p_n_deal_type:23566065011',
+      'todays-deals':             'p_n_deal_type:23566065011',
+      'coupons':                  'p_n_feature_browse-bin:6779703011',
+      // eco-friendly is handled earlier via keywordAppend
+      'refurbished-by-manufacturer': 'p_n_condition-type:2224371011',
+      'overstock-or-clearance':     'p_n_feature_twenty_browse-bin:21223116011',
+      'crowdfunded-origins':        'p_89:kickstarter%20indiegogo',
+      'subscribe-save':             'p_n_is_sns_available:2619533011',
+      'amazon-choice':              'p_n_feature_twenty_browse-bin:21223116011',
+      'fba-only':                   'p_n_shipping_option-bin:3242350011',
+      'free-returns':               'p_n_feature_eight_browse-bin:10171655011',
+      'gift-wrap':                  'p_n_feature_seventeen_browse-bin:17482021011',
+      'small-business':             'p_n_cpf_eligible:5191495011',
+      'amazon-brands':              'p_n_feature_fourteen_browse-bin:18584192011',
+      'low-rating':                 'p_n_feature_twenty-browse-bin:21397296011',
+      'most-reviewed':              'p_n_feature_thirty-six-browse-bin:2339709011',
+      'steady-price-no-spike':      'p_n_feature_thirty-seven-browse-bin:2339708011',
+      'best-value-per-ounce':       'p_89:value%20per%20ounce',
+      'birthday-gifts':             'p_89:birthday%20gift',
+      'anniversary-gifts':          'p_89:anniversary%20gift'
+    };
+    Object.entries(map).forEach(([name, clause]) => {
+      if (data.get(name) === 'on') {
+        rh.push(clause);
+      }
+    });
 
-Object.entries(map).forEach(([name, clause]) => {
-  if (clause && data.get(name)==='on') rh.push(clause);
+    // ── AI-driven filters ──
+    if (data.get('predictive-score') === 'on')   rh.push('p_n_predictive-score:1');
+    if (data.get('emotion-feedback') === 'on')  rh.push('p_n_emotion-feedback:1');
+    const restock = data.get('restock-forecast')?.trim();
+    if (restock) params.set('restock_asin', restock);
+
+    // ── Deal-Hunter goodies ──
+    ['below-avg-30','below-avg-60','below-avg-90'].forEach(key => {
+      const v = parseInt(data.get(key) || 0);
+      if (v) rh.push(`p_n_discount_${ key.endsWith('30') ? '30day' : key.endsWith('60') ? '60day' : '' }:${v}`);
+    });
+    const vol = parseInt(data.get('max-volatility-7') || 0);
+    if (vol) rh.push(`p_n_price-volatility:${vol}`);
+
+    // ── Brand tags (Tagify or comma-list) ──
+    let tagsRaw = data.get('brand-include') || '';
+    let includeTags;
+    try {
+      includeTags = JSON.parse(tagsRaw);
+      if (!Array.isArray(includeTags)) includeTags = [{value: String(includeTags)}];
+    } catch {
+      includeTags = tagsRaw.split(',')
+                           .map(s=>s.trim())
+                           .filter(Boolean)
+                           .map(v=>({value:v}));
+    }
+    includeTags.forEach(t => rh.push(`p_89:${encodeURIComponent(t.value)}`));
+
+    // ── Boolean, field filters, ASIN lookup ──
+    if (data.get('enable-boolean')==='on')   params.set('boolean','on');
+    const fields = data.get('field-filters')?.trim();
+    if (fields) params.set('fields', fields);
+    const asin = data.get('direct-lookup')?.trim();
+    if (asin) params.set('asin', asin);
+
+    // ── Finalize rh, tag, domain & open ──
+    if (rh.length) params.set('rh', rh.join(','));
+    params.set('tag','echolover25-20');
+    const host = ({usd:'www.amazon.com',eur:'www.amazon.de',gbp:'www.amazon.co.uk',jpy:'www.amazon.co.jp',inr:'www.amazon.in'})[data.get('currency')] || 'www.amazon.com';
+    const url = `https://${host}/s?${params.toString()}`;
+    console.log('🔗 Amazon URL:',url);
+    window.open(url,'_blank');
+  });
 });
-
-// Finally, consolidate into one rh…
-if (rh.length) params.set('rh', rh.join(','));
+</script>
 
 
 
@@ -1947,26 +1989,6 @@ window.open(url, '_blank');
   });
 });
 </script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const clickSound = document.getElementById("clickSound");
-
-  if (location.hash === "#") {
-      // Replace the current history entry with one without the "#"
-      history.replaceState(null, "", location.pathname + location.search);
-    }
-
-  // Play sound function
-  const playClick = () => {
-    if (!clickSound) return;
-    clickSound.currentTime = 0;
-    clickSound.play().catch(() => {});
-  };
-
-  // Handle all button clicks
-  document.querySelectorAll("button, input[type=submit], input[type=button]").forEach(btn => {
-    btn.addEventListener("click", playClick);
-  });
 
   // Handle all checkbox clicks
   document.querySelectorAll("input[type=checkbox]").forEach(chk => {
