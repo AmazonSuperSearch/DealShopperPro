@@ -407,6 +407,13 @@
     document.cookie = "googtrans=/en/" + userLang + "; path=/";
   })();
 </script>
+  <script>
+  (function(){
+    var userLang = (navigator.language || navigator.userLanguage).substr(0,2);
+    document.cookie = "googtrans=/en/" + userLang + "; path=/";
+  })();
+</script>
+
 </head>
   <body>
     <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
@@ -440,6 +447,21 @@
 </div>
 
     <main id="main">
+<!-- 🌐 Language Selector -->
+<div id="language-bar" style="background:#f8f9fa; padding:10px 0; text-align:center;">
+  <!-- Show this only on desktop -->
+  <div id="google_translate_element" class="d-none d-md-inline-block"></div>
+
+  <!-- Show this only on mobile -->
+  <div class="d-md-none">
+    🌐 Translate:
+    <a href="#" onclick="setLang('en')">English</a> |
+    <a href="#" onclick="setLang('es')">Español</a> |
+    <a href="#" onclick="setLang('fr')">Français</a> |
+    <a href="#" onclick="setLang('de')">Deutsch</a> |
+    <a href="#" onclick="setLang('zh-CN')">中文</a>
+  </div>
+</div>
 
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -1896,6 +1918,20 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 </script>
+<script>
+  function setLang(langCode) {
+    document.cookie = `googtrans=/en/${langCode}; path=/`;
+    location.reload();
+  }
+
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 
 
 </body>
