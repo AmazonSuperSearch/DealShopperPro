@@ -1705,13 +1705,6 @@ const keywordAppend = (name, phrase) => {
   }
 };
 
-// Append keywords for special filters (non-rh)
-const keywordAppend = (name, phrase) => {
-  if (data.get(name) === 'on') {
-    q += (q.endsWith(' ') ? '' : ' ') + phrase;
-  }
-};
-
 // 🔹 Existing keyword-based filters
 keywordAppend('eco-friendly', 'eco friendly');
 keywordAppend('cruelty-free', 'cruelty free');
