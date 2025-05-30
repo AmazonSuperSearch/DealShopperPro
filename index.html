@@ -1851,53 +1851,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 'google_translate_element');
   }
       </script>
- <script>
-  document.getElementById("search-button").addEventListener("click", function () {
-    const searchTerm = document.getElementById("search-input")?.value || "Unknown Search";
-    const pageUrl = window.location.href;
-    const userAgent = navigator.userAgent.toLowerCase();
-    const isMobile = /mobile|android|iphone|ipad/.test(userAgent) ? "📱 Mobile" : "💻 Desktop";
-    const timestamp = new Date().toLocaleString();
-
-    fetch("https://ipapi.co/json/")
-      .then(res => res.json())
-      .then(data => {
-        const city = data.city || "Unknown City";
-        const country = data.country_name || "Unknown Country";
-
-        const message = [
-          `🔎 **Amazon Search Clicked!**`,
-          `🗓️ **Time:** ${timestamp}`,
-          `📍 **Location:** ${city}, ${country}`,
-          `💬 **Search Term:** ${searchTerm}`,
-          `🌐 **Page:** ${pageUrl}`,
-          `🖥️ **Device:** ${isMobile}`
-        ].join("\n");
-
-        fetch("https://eoobbx7fv4yud9k.m.pipedream.net", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ text: message })
-        });
-      })
-      .catch(() => {
-        const message = [
-          `🔎 **Amazon Search Clicked (no location)**`,
-          `🗓️ **Time:** ${timestamp}`,
-          `💬 **Search Term:** ${searchTerm}`,
-          `🌐 **Page:** ${pageUrl}`,
-          `🖥️ **Device:** ${isMobile}`
-        ].join("\n");
-
-        fetch("https://eoobbx7fv4yud9k.m.pipedream.net", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ text: message })
-        });
-      });
-  });
-</script>
-
 
 </body>
 </html>
