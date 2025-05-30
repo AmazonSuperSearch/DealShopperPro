@@ -1,8 +1,6 @@
 // search-logic.js
 // Consolidated, updated Amazon search logic moved to an external file
 
-import Tagify from '@yaireo/tagify'; // if you bundle via ES modules, otherwise assume Tagify is global
-
 document.addEventListener('DOMContentLoaded', () => {
   // ————————————————
   // 0) Restore Tagify on your brand field
