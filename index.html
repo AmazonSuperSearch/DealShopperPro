@@ -1528,337 +1528,131 @@ form.addEventListener('submit', e => {
 <!-- Bootstrap JS Bundle -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
   
-<script>
-  const btn = document.getElementById('voiceSearchBtn');
-  const input = document.getElementById('mainSearchInput');
+  </footer>
 
-  // Check for browser support
-  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-    btn.disabled = true;
-    btn.title = 'Voice search not supported';
-  } else {
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    const recog = new SpeechRecognition();
-    recog.continuous = false;
-    recog.lang = 'en-US';
-    recog.interimResults = false;
-    recog.maxAlternatives = 1;
+  <!-- 1) Main search-logic -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('amazon-search-form');
 
-    btn.addEventListener('click', () => {
-      recog.start();
-      btn.classList.add('active');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const params = new URLSearchParams();
+      const rh = [];
+
+      // — NEW UPDATED SEARCH LOGIC —
+
+      // 1) Base query
+      let q = data.get('q')?.trim();
+      if (!q) return alert('Please enter a search term.');
+
+      // 2) Keyword-append helper & calls
+      function keywordAppend(id, keyword) {
+        if (data.get(id) === 'on') {
+          q += (q.endsWith(' ') ? '' : ' ') + keyword;
+        }
+      }
+      keywordAppend('eco-friendly', 'eco friendly');
+      keywordAppend('gifts-for-her', 'gifts for her');
+      keywordAppend('gifts-for-mom', 'gifts for mom');
+      keywordAppend('gifts-for-dad', 'gifts for dad');
+      keywordAppend('birthday-gifts', 'birthday gifts');
+      keywordAppend('anniversary-gifts', 'anniversary gifts');
+      keywordAppend('pets-safe', 'pet safe');
+      keywordAppend('low-impact-packaging', 'low impact packaging');
+      keywordAppend('climate-pledge-friendly', 'climate pledge friendly');
+      keywordAppend('black-owned', 'black owned business');
+      keywordAppend('latino-owned', 'latino owned business');
+      keywordAppend('women-owned', 'women owned business');
+      keywordAppend('aapi-owned', 'AAPI owned business');
+      keywordAppend('lgbtq-owned', 'LGBTQ owned business');
+      keywordAppend('eco-label-certified', 'eco label certified');
+      keywordAppend('drought-tolerant', 'drought tolerant');
+      keywordAppend('zero-waste', 'zero waste');
+
+      // 3) RH-push helper & map
+      function pushRh(condition, code) {
+        if (condition) rh.push(code);
+      }
+      const rhMap = {
+        'prime-only':      'p_85:2470955011',
+        'lightning-deals': 'p_n_deal_type:23566065011',
+        'todays-deals':    'p_n_deal_type:23566065011',
+        'free-shipping':   'p_76:1249177011',
+        'in-stock':        'p_n_availability:2661601011',
+        'coupons':         'p_n_feature_browse-bin:6779703011',
+        'fba-only':        'p_n_shipping_option-bin:3242350011',
+        'subscribe-save':  'p_n_is_sns_available:2619533011',
+        'amazon-choice':   'p_n_feature_twenty_browse-bin:21223116011',
+        'small-business':  'p_n_cpf_eligible:5191495011',
+        'amazon-brands':   'p_n_feature_fourteen_browse-bin:18584192011',
+        'warehouse-refurb':'p_n_condition-type:2224371011'
+      };
+      for (const [key, code] of Object.entries(rhMap)) {
+        pushRh(data.get(key) === 'on', code);
+      }
+
+      // 4) Build & open URL
+      params.set('k', q);
+      if (rh.length) params.set('rh', rh.join(','));
+      params.set('tag', 'echolover25-20');
+
+      const hostMap = {
+        usd: 'www.amazon.com',
+        eur: 'www.amazon.de',
+        gbp: 'www.amazon.co.uk',
+        jpy: 'www.amazon.co.jp',
+        inr: 'www.amazon.in'
+      };
+      const host = hostMap[data.get('currency')] || 'www.amazon.com';
+      const url = `https://${host}/s?${params.toString()}`;
+      window.open(url, '_blank');
     });
-
-    recog.addEventListener('result', (e) => {
-      const transcript = e.results[0][0].transcript;
-      input.value = transcript;
-      recog.stop();
-    });
-
-    recog.addEventListener('end', () => {
-      btn.classList.remove('active');
-    });
-  }
+  });
   </script>
 
-<!-- All your HTML content above... -->
+  <!-- 2) Share-link copy handler -->
+  <script>
+    document.getElementById('copyLinkBtn')?.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href)
+        .then(() => alert("Link copied!"))
+        .catch(() => alert("Failed to copy"));
+    });
+  </script>
 
-   <!-- …all your page content above… -->
-<script>
-(function(){
-  function sendEvent(name, params) {
-    if (typeof gtag === 'function') {
-      gtag('event', name, params);
+  <!-- 3) Voice-search handler -->
+  <script>
+    const btn = document.getElementById('voiceSearchBtn');
+    const input = document.getElementById('mainSearchInput');
+
+    if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+      btn.disabled = true;
+      btn.title = 'Voice search not supported';
+    } else {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recog = new SpeechRecognition();
+      recog.continuous = false;
+      recog.lang = 'en-US';
+      recog.interimResults = false;
+      recog.maxAlternatives = 1;
+
+      btn.addEventListener('click', () => {
+        recog.start();
+        btn.classList.add('active');
+      });
+
+      recog.addEventListener('result', (e) => {
+        const transcript = e.results[0][0].transcript;
+        input.value = transcript;
+        recog.stop();
+      });
+
+      recog.addEventListener('end', () => {
+        btn.classList.remove('active');
+      });
     }
-  }
-
-  var form = document.getElementById('amazon-search-form');
-
-  // ① Track form submissions
-  form.addEventListener('submit', function(e) {
-    var q = document.getElementById('mainSearchInput').value || '(empty)';
-    sendEvent('search_submitted', {
-      search_term: q,
-      percent_off: form['percent-off'].value || 'any',
-      min_rating: form['min-rating'].value || 'any'
-    });
-  });
-
-  // ② Track voice-search activation
-  document.getElementById('voiceSearchBtn')
-    .addEventListener('click', function() {
-      sendEvent('voice_search_start');
-    });
-
-  // ③ Auto-hook every checkbox in the form as a filter_toggle
-  form.querySelectorAll('input[type="checkbox"]').forEach(function(chk){
-    chk.addEventListener('change', function(){
-      sendEvent('filter_toggle', {
-        filter_name: chk.name || chk.id,
-        enabled: chk.checked
-      });
-    });
-  });
-
-  // ④ Auto-hook every <select> in the form as a filter_select
-  form.querySelectorAll('select').forEach(function(sel){
-    sel.addEventListener('change', function(){
-      sendEvent('filter_select', {
-        filter_name: sel.name || sel.id,
-        value: sel.value || 'any'
-      });
-    });
-  });
-
-  // ⑤ Track price range separately if you still want a dedicated event
-  var minPrice = form['min-price'], maxPrice = form['max-price'];
-  [minPrice, maxPrice].forEach(function(input) {
-    input.addEventListener('change', function() {
-      sendEvent('price_range_set', {
-        min: minPrice.value || 0,
-        max: maxPrice.value || 0
-      });
-    });
-  });
-
-})();
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('amazon-search-form');
-  const warningBox = document.getElementById('filter-warning');
-
-    // — Google Translate auto-select —
-const userLang = (navigator.language || navigator.userLanguage).substr(0,2);
-setTimeout(() => {
-  const combo = document.querySelector('.goog-te-combo');
-  if (combo && combo.value !== userLang) {
-    combo.value = userLang;
-    combo.dispatchEvent(new Event('change'));
-  }
-}, 500);
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const params = new URLSearchParams();
-    const rh = [];
-// — NEW UPDATED SEARCH LOGIC —
-
-// 1) Base query
-let q = data.get('q')?.trim();
-if (!q) return alert('Please enter a search term.');
-
-// 2) Keyword-append helper & calls
-function keywordAppend(id, keyword) {
-  if (data.get(id) === 'on') {
-    q += (q.endsWith(' ') ? '' : ' ') + keyword;
-  }
-}
-keywordAppend('eco-friendly', 'eco friendly');
-keywordAppend('gifts-for-her', 'gifts for her');
-keywordAppend('gifts-for-mom', 'gifts for mom');
-keywordAppend('gifts-for-dad', 'gifts for dad');
-keywordAppend('birthday-gifts', 'birthday gifts');
-keywordAppend('anniversary-gifts', 'anniversary gifts');
-keywordAppend('pets-safe', 'pet safe');
-keywordAppend('low-impact-packaging', 'low impact packaging');
-keywordAppend('climate-pledge-friendly', 'climate pledge friendly');
-keywordAppend('black-owned', 'black owned business');
-keywordAppend('latino-owned', 'latino owned business');
-keywordAppend('women-owned', 'women owned business');
-keywordAppend('aapi-owned', 'AAPI owned business');
-keywordAppend('lgbtq-owned', 'LGBTQ owned business');
-keywordAppend('eco-label-certified', 'eco label certified');
-keywordAppend('drought-tolerant', 'drought tolerant');
-keywordAppend('zero-waste', 'zero waste');
-
-// 3) RH-push helper & map
-function pushRh(condition, code) {
-  if (condition) rh.push(code);
-}
-const rhMap = {
-  'prime-only':           'p_85:2470955011',
-  'lightning-deals':      'p_n_deal_type:23566065011',
-  'todays-deals':         'p_n_deal_type:23566065011',
-  'free-shipping':        'p_76:1249177011',
-  'in-stock':             'p_n_availability:2661601011',
-  'coupons':              'p_n_feature_browse-bin:6779703011',
-  'fba-only':             'p_n_shipping_option-bin:3242350011',
-  'subscribe-save':       'p_n_is_sns_available:2619533011',
-  'amazon-choice':        'p_n_feature_twenty_browse-bin:21223116011',
-  'small-business':       'p_n_cpf_eligible:5191495011',
-  'amazon-brands':        'p_n_feature_fourteen_browse-bin:18584192011',
-  'warehouse-refurb':     'p_n_condition-type:2224371011'
-};
-for (const [key, code] of Object.entries(rhMap)) {
-  pushRh(data.get(key) === 'on', code);
-}
-
-// 4) Build & open URL
-params.set('k', q);
-if (rh.length) params.set('rh', rh.join(','));
-params.set('tag', 'echolover25-20');
-
-const hostMap = {
-  usd: 'www.amazon.com',
-  eur: 'www.amazon.de',
-  gbp: 'www.amazon.co.uk',
-  jpy: 'www.amazon.co.jp',
-  inr: 'www.amazon.in'
-};
-const host = hostMap[data.get('currency')] || 'www.amazon.com';
-const url = `https://${host}/s?${params.toString()}`;
-
-window.open(url, '_blank');
-
-    
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const clickSound = document.getElementById("clickSound");
-
-  if (location.hash === "#") {
-      // Replace the current history entry with one without the "#"
-      history.replaceState(null, "", location.pathname + location.search);
-    }
-
-  // Play sound function
-  const playClick = () => {
-    if (!clickSound) return;
-    clickSound.currentTime = 0;
-    clickSound.play().catch(() => {});
-  };
-
-  // Handle all button clicks
-  document.querySelectorAll("button, input[type=submit], input[type=button]").forEach(btn => {
-    btn.addEventListener("click", playClick);
-  });
-
-  // Handle all checkbox clicks
-  document.querySelectorAll("input[type=checkbox]").forEach(chk => {
-    chk.addEventListener("change", playClick);
-  });
-});
-</script>
-<script>
-  // 1) Initialize the widget (inline, no banner)
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-      </script>
-    <script>
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  const data = new FormData(form);
-  let q = document.getElementById('main-search').value.trim();
-  const rh = [];
-
-  // ----- Keyword Append Logic -----
-  function keywordAppend(id, keyword) {
-    if (data.get(id) === 'on') q += ' ' + keyword;
-  }
-
-  // ✅ Add your keyword-based filters
-  keywordAppend('eco-friendly', 'eco friendly');
-  keywordAppend('gifts-for-her', 'gifts for her');
-  keywordAppend('gifts-for-mom', 'gifts for mom');
-  keywordAppend('gifts-for-dad', 'gifts for dad');
-  keywordAppend('birthday-gifts', 'birthday gifts');
-  keywordAppend('anniversary-gifts', 'anniversary gifts');
-  keywordAppend('pets-safe', 'pet safe');
-  keywordAppend('low-impact-packaging', 'low impact packaging');
-  keywordAppend('climate-pledge-friendly', 'climate pledge friendly');
-  keywordAppend('black-owned', 'black owned business');
-  keywordAppend('latino-owned', 'latino owned business');
-  keywordAppend('women-owned', 'women owned business');
-  keywordAppend('aapi-owned', 'AAPI owned business');
-  keywordAppend('lgbtq-owned', 'LGBTQ owned business');
-  keywordAppend('eco-label-certified', 'eco label certified');
-  keywordAppend('drought-tolerant', 'drought tolerant');
-  keywordAppend('zero-waste', 'zero waste');
-
-  keywordAppend('gifts-for-kids', 'gifts for kids');
-  keywordAppend('gifts-for-teens', 'gifts for teens');
-  keywordAppend('gifts-for-babies', 'gifts for babies');
-  keywordAppend('gifts-for-coworkers', 'gifts for coworkers');
-  keywordAppend('gifts-under-25', 'gifts under $25');
-  keywordAppend('gifts-under-50', 'gifts under $50');
-  keywordAppend('stocking-stuffers', 'stocking stuffers');
-  keywordAppend('white-elephant', 'white elephant gifts');
-
-  keywordAppend('plastic-free', 'plastic free');
-  keywordAppend('upcycled', 'upcycled');
-  keywordAppend('secondhand', 'secondhand');
-  keywordAppend('fair-trade', 'fair trade');
-  keywordAppend('handmade', 'handmade');
-  keywordAppend('local-producer', 'locally made');
-
-  keywordAppend('minimalist-products', 'minimalist');
-  keywordAppend('boho-style', 'boho style');
-  keywordAppend('farmhouse-style', 'farmhouse decor');
-  keywordAppend('japanese-design', 'japanese minimalist');
-  keywordAppend('scandinavian-style', 'scandinavian design');
-
-  keywordAppend('yoga-gear', 'yoga gear');
-  keywordAppend('essential-oils', 'essential oils');
-  keywordAppend('aromatherapy', 'aromatherapy');
-  keywordAppend('blue-light-glasses', 'blue light glasses');
-
-  keywordAppend('graduation-gifts', 'graduation gifts');
-  keywordAppend('housewarming-gifts', 'housewarming gifts');
-  keywordAppend('back-to-school', 'back to school');
-  keywordAppend('new-year-deals', 'new year deals');
-  keywordAppend('summer-essentials', 'summer essentials');
-
-  // ----- rh Filters -----
-  function pushRh(condition, code) {
-    if (condition) rh.push(code);
-  }
-
-  const rhMap = {
-    'prime-only': 'p_85:2470955011',
-    'seller-fulfilled-prime': 'p_n_feature_four_browse-bin:22801363011',
-    'free-shipping': 'p_76:1249177011',
-    'in-stock': 'p_n_availability:2661601011',
-    'lightning-deals': 'p_89:8308921011',
-    'todays-deals': 'p_89:8308920011',
-    'subscribe-save': 'p_n_is_sns_available:2617005011',
-    'amazon-choice': 'p_n_is_amazon_brand:16594485011',
-    'fba-only': 'p_n_fulfilled_by_amazon:2661621011',
-    'free-returns': 'p_n_free_returns:7744528011',
-    'gift-wrap': 'p_n_is_gift_wrapped:376893011',
-    'small-business': 'p_n_cpf_eligible:23501558011',
-    'amazon-brands': 'p_n_is_private_label:16594481011',
-    'low-rating': 'p_n_feature_twelve_browse-bin:1248899011'
-  };
-
-  for (const [key, code] of Object.entries(rhMap)) {
-    pushRh(data.get(key) === 'on', code);
-  }
-
-  // ----- Finalize Query -----
-  const params = new URLSearchParams();
-  if (q) params.set('k', q);
-  if (rh.length) params.set('rh', rh.join(','));
-  params.set('tag', 'echolover25-20');
-
-  const host = ({
-    usd: 'www.amazon.com',
-    eur: 'www.amazon.de',
-    gbp: 'www.amazon.co.uk',
-    jpy: 'www.amazon.co.jp',
-    inr: 'www.amazon.in'
-  })[data.get('currency')] || 'www.amazon.com';
-
-  const url = `https://${host}/s?${params.toString()}`;
-  console.log('🔗 Amazon URL:', url);
-  window.open(url, '_blank');
-});
-    </script>
+  </script>
+<script src="/js/search-logic.js" defer></script>
 </body>
 </html>
