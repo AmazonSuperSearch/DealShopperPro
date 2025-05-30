@@ -1844,37 +1844,37 @@ if (min || max) {
     const pct = data.get('percent-off');
     if (pctMap[pct]) rh.push(`p_n_pct-off-with-tax:${pctMap[pct]}`);
 
-      // ── Step 5 filters ──
-    const map = {
-      'prime-only':               'p_85:2470955011',
-      'free-shipping':            'p_76:1249177011',
-      'in-stock':                 'p_n_availability:2661601011',
-      'lightning-deals':          'p_n_deal_type:23566065011',
-      'todays-deals':             'p_n_deal_type:23566065011',
-      'coupons':                  'p_n_feature_browse-bin:6779703011',
-      // eco-friendly is handled earlier via keywordAppend
-      'refurbished-by-manufacturer': 'p_n_condition-type:2224371011',
-      'overstock-or-clearance':     'p_n_feature_twenty_browse-bin:21223116011',
-      'crowdfunded-origins':        'p_89:kickstarter%20indiegogo',
-      'subscribe-save':             'p_n_is_sns_available:2619533011',
-      'amazon-choice':              'p_n_feature_twenty_browse-bin:21223116011',
-      'fba-only':                   'p_n_shipping_option-bin:3242350011',
-      'free-returns':               'p_n_feature_eight_browse-bin:10171655011',
-      'gift-wrap':                  'p_n_feature_seventeen_browse-bin:17482021011',
-      'small-business':             'p_n_cpf_eligible:5191495011',
-      'amazon-brands':              'p_n_feature_fourteen_browse-bin:18584192011',
-      'low-rating':                 'p_n_feature_twenty-browse-bin:21397296011',
-      'most-reviewed':              'p_n_feature_thirty-six-browse-bin:2339709011',
-      'steady-price-no-spike':      'p_n_feature_thirty-seven-browse-bin:2339708011',
-      'best-value-per-ounce':       'p_89:value%20per%20ounce',
-      'birthday-gifts':             'p_89:birthday%20gift',
-      'anniversary-gifts':          'p_89:anniversary%20gift'
-    };
-    Object.entries(map).forEach(([name, clause]) => {
-      if (data.get(name) === 'on') {
-        rh.push(clause);
-      }
-    });
+     // ── Step 5 filters ──
+const step5Map = {
+  'prime-only':                'p_85:2470955011',
+  'free-shipping':             'p_76:1249177011',
+  'in-stock':                  'p_n_availability:2661601011',
+  'lightning-deals':           'p_n_deal_type:23566065011',
+  'todays-deals':              'p_n_deal_type:23561065011', // different code!
+  'coupons':                   'p_n_feature_browse-bin:6779703011',
+  'refurbished-by-manufacturer':'p_n_condition-type:2224371011',
+  'overstock-or-clearance':     'p_n_feature_twenty_browse-bin:21223116011',
+  'crowdfunded-origins':        'p_89:kickstarter%20indiegogo',
+  'subscribe-save':             'p_n_is_sns_available:2619533011',
+  'amazon-choice':              'p_n_feature_twenty_browse-bin:21223116011',
+  'fba-only':                   'p_n_shipping_option-bin:3242350011',
+  'free-returns':               'p_n_feature_eight_browse-bin:10171655011',
+  'gift-wrap':                  'p_n_feature_seventeen_browse-bin:17482021011',
+  'small-business':             'p_n_cpf_eligible:5191495011',
+  'amazon-brands':              'p_n_feature_fourteen_browse-bin:18584192011',
+  'low-rating':                 'p_n_feature_twenty_browse-bin:21397296011',
+  'most-reviewed':              'p_n_feature_thirty-six_browse-bin:2339709011',
+  'steady-price-no-spike':      'p_n_feature_thirty-seven_browse-bin:2339708011',
+  'best-value-per-ounce':       'p_89:value%20per%20ounce',
+  'birthday-gifts':             'p_89:birthday%20gift',
+  'anniversary-gifts':          'p_89:anniversary%20gift'
+};
+
+Object.entries(step5Map).forEach(([field, clause]) => {
+  if (data.get(field) === 'on') {
+    rh.push(clause);
+  }
+});
 
     // ── AI-driven filters ──
     if (data.get('predictive-score') === 'on')   rh.push('p_n_predictive-score:1');
