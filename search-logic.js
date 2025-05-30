@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         q += (q.endsWith(' ') ? '' : ' ') + phrase;
       }
     };
-    keywordAppend('eco-friendly',            'eco friendly');
-    keywordAppend('gifts-for-her',           'gifts for her');
-    keywordAppend('gifts-for-mom',           'gifts for mom');
+    keywordAppend('eco-friendly',  'eco friendly');
+    keywordAppend('gifts-for-her', 'gifts for her');
+    keywordAppend('gifts-for-mom', 'gifts for mom');
     // …etc for your full list…
 
     // 3) Price-range facet
@@ -36,13 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
       rh.push(`p_36:${lower}-${upper}`);
     }
 
-    // 4) Percent-off, rating & sort go into query params
+    // 4) Percent-off, rating & sort → query params
     const pct = data.get('percent-off');
-    if (pct) params.set('pct-off', pct);
+    if (pct)    params.set('pct-off', pct);
     const rating = data.get('min-rating');
     if (rating) params.set('min-rating', rating);
     const sort = data.get('sort');
-    if (sort) params.set('sort', sort);
+    if (sort)   params.set('sort', sort);
 
     // ── Normalize Tagify’s JSON or fallback to comma-split ──
     let raw = data.get('brand-include') || '';
@@ -63,15 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ── Inject brand RH-facets ──
     if (brands.length) {
+      // if “Match only these brands” is checked, clear out any prior filters
       if (data.get('include-only') === 'on') {
-        rh = [];  // drop all non-brand filters
+        rh = [];
       }
       brands.forEach(b => {
         rh.push(`p_89:${encodeURIComponent(b)}`);
       });
     }
 
-    // 5) Non-brand RH facets
+    // 5) Non-brand RH facets (skip if brand-only)
     if (data.get('include-only') !== 'on') {
       const pushRh = (field, code) => {
         if (data.get(field) === 'on') rh.push(code);
