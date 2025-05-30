@@ -1660,10 +1660,77 @@ body {
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   // stubbed handler: disabled
-  // const form = document.getElementById('amazon-search-form');
-  // form.addEventListener('submit', e => { … });
   const form = document.getElementById('amazon-search-form');
   const warningBox = document.getElementById('filter-warning');
+  form.addEventListener('submit', e => {
+  e.preventDefault();
+  const data = new FormData(form);
+  let q = data.get('q')?.trim();
+  if (!q) return alert('Please enter a search term.');
+
+  // 1) Keyword appends
+  const keywordAppend = (name, phrase) => {
+    if (data.get(name) === 'on') q += (q.endsWith(' ') ? '' : ' ') + phrase;
+  };
+  keywordAppend('eco-friendly', 'eco friendly');
+  // …add your other keywordAppend calls here…
+
+  // 2) Params & sort
+  const params = new URLSearchParams();
+  params.set('k', q);
+  const sort = data.get('sort');
+  if (sort) params.set('s', sort);
+
+  // 3) Price range → rh[]
+  const rh = [];
+  const min = parseFloat(data.get('min-price') || 0);
+  const max = parseFloat(data.get('max-price') || 0);
+  if (min > 0 || max > 0) {
+    const lower = min > 0 ? Math.round(min * 100) : 0;
+    const upper = max > 0 ? Math.round(max * 100) : '';
+    rh.push(`p_36:${lower}-${upper}`);
+  }
+
+  // 4) Checkbox filters → rh[]
+  const pushFilter = (field, param, val) => {
+    if (data.get(field) === 'on') rh.push(`${param}:${val}`);
+  };
+  pushFilter('prime-only', 'p_85', '2470955011');
+  pushFilter('free-shipping', 'p_76', '1249177011');
+  pushFilter('in-stock', 'p_n_availability', '2661601011');
+  // …all your other pushFilter calls…
+
+  // 5) Brand tags
+  try {
+    const tags = JSON.parse(data.get('brand-include') || '[]');
+    tags.forEach(t => rh.push(`p_89:${encodeURIComponent(t.value)}`));
+  } catch {
+    (data.get('brand-include') || '')
+      .split(',')
+      .map(s => s.trim())
+      .filter(Boolean)
+      .forEach(v => rh.push(`p_89:${encodeURIComponent(v)}`));
+  }
+
+  // 6) Consolidate rh
+  if (rh.length) params.set('rh', rh.join(','));
+  params.set('tag', 'echolover25-20');
+
+  // 7) Domain by currency
+  const hostMap = {
+    usd: 'www.amazon.com',
+    eur: 'www.amazon.de',
+    gbp: 'www.amazon.co.uk',
+    jpy: 'www.amazon.co.jp',
+    inr: 'www.amazon.in'
+  };
+  const host = hostMap[data.get('currency')] || hostMap.usd;
+
+  // 8) Open
+  const url = `https://${host}/s?${params.toString()}`;
+  window.open(url, '_blank');
+});
+
 
     // — Google Translate auto-select —
 const userLang = (navigator.language || navigator.userLanguage).substr(0,2);
