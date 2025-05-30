@@ -1644,6 +1644,50 @@ setTimeout(() => {
     const params = new URLSearchParams();
     const rh = [];
 
+    // Step 5: Fine-Tune Filters
+const fineTuneFilters = [
+  'prime-only',
+  'lightning-deals',
+  'todays-deals',
+  'free-shipping',
+  'in-stock',
+  'coupons',
+  'eco-friendly',
+  'biodegradable-packaging',
+  'vegan-products',
+  'organic-products',
+  'carbon-neutral-delivery',
+  'filter-cruelty-free',
+  'low-emf-devices',
+  'allergy-friendly',
+  'gifts-for-her',
+  'gifts-for-him',
+  'gifts-for-dad',
+  'gifts-for-mom',
+  'gifts-for-kids',
+  'birthday-gifts',
+  'anniversary-gifts',
+  'holiday-gift-picks',
+  'meditation-mindfulness-gear',
+  'best-value-per-ounce',
+  'most-reviewed',
+  'steady-price-no-spike',
+  'fba-only',
+  'subscribe-save',
+  'small-business',
+  'amazon-choice',
+  'amazon-brands',
+  'free-returns',
+  'crowdfunded-origins'
+];
+
+fineTuneFilters.forEach(name => {
+  if (data.get(name) === 'on') {
+    params.append('keyword', name);
+  }
+});
+
+
     // Helper to push checkbox-driven filters
     const pushFilter = (field, param, val) => {
       if (data.get(field) === 'on') rh.push(`${param}:${val}`);
@@ -1851,6 +1895,114 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 'google_translate_element');
   }
       </script>
+    <script>
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const data = new FormData(form);
+  let q = document.getElementById('main-search').value.trim();
+  const rh = [];
 
+  // ----- Keyword Append Logic -----
+  function keywordAppend(id, keyword) {
+    if (data.get(id) === 'on') q += ' ' + keyword;
+  }
+
+  // ✅ Add your keyword-based filters
+  keywordAppend('eco-friendly', 'eco friendly');
+  keywordAppend('gifts-for-her', 'gifts for her');
+  keywordAppend('gifts-for-mom', 'gifts for mom');
+  keywordAppend('gifts-for-dad', 'gifts for dad');
+  keywordAppend('birthday-gifts', 'birthday gifts');
+  keywordAppend('anniversary-gifts', 'anniversary gifts');
+  keywordAppend('pets-safe', 'pet safe');
+  keywordAppend('low-impact-packaging', 'low impact packaging');
+  keywordAppend('climate-pledge-friendly', 'climate pledge friendly');
+  keywordAppend('black-owned', 'black owned business');
+  keywordAppend('latino-owned', 'latino owned business');
+  keywordAppend('women-owned', 'women owned business');
+  keywordAppend('aapi-owned', 'AAPI owned business');
+  keywordAppend('lgbtq-owned', 'LGBTQ owned business');
+  keywordAppend('eco-label-certified', 'eco label certified');
+  keywordAppend('drought-tolerant', 'drought tolerant');
+  keywordAppend('zero-waste', 'zero waste');
+
+  keywordAppend('gifts-for-kids', 'gifts for kids');
+  keywordAppend('gifts-for-teens', 'gifts for teens');
+  keywordAppend('gifts-for-babies', 'gifts for babies');
+  keywordAppend('gifts-for-coworkers', 'gifts for coworkers');
+  keywordAppend('gifts-under-25', 'gifts under $25');
+  keywordAppend('gifts-under-50', 'gifts under $50');
+  keywordAppend('stocking-stuffers', 'stocking stuffers');
+  keywordAppend('white-elephant', 'white elephant gifts');
+
+  keywordAppend('plastic-free', 'plastic free');
+  keywordAppend('upcycled', 'upcycled');
+  keywordAppend('secondhand', 'secondhand');
+  keywordAppend('fair-trade', 'fair trade');
+  keywordAppend('handmade', 'handmade');
+  keywordAppend('local-producer', 'locally made');
+
+  keywordAppend('minimalist-products', 'minimalist');
+  keywordAppend('boho-style', 'boho style');
+  keywordAppend('farmhouse-style', 'farmhouse decor');
+  keywordAppend('japanese-design', 'japanese minimalist');
+  keywordAppend('scandinavian-style', 'scandinavian design');
+
+  keywordAppend('yoga-gear', 'yoga gear');
+  keywordAppend('essential-oils', 'essential oils');
+  keywordAppend('aromatherapy', 'aromatherapy');
+  keywordAppend('blue-light-glasses', 'blue light glasses');
+
+  keywordAppend('graduation-gifts', 'graduation gifts');
+  keywordAppend('housewarming-gifts', 'housewarming gifts');
+  keywordAppend('back-to-school', 'back to school');
+  keywordAppend('new-year-deals', 'new year deals');
+  keywordAppend('summer-essentials', 'summer essentials');
+
+  // ----- rh Filters -----
+  function pushRh(condition, code) {
+    if (condition) rh.push(code);
+  }
+
+  const rhMap = {
+    'prime-only': 'p_85:2470955011',
+    'seller-fulfilled-prime': 'p_n_feature_four_browse-bin:22801363011',
+    'free-shipping': 'p_76:1249177011',
+    'in-stock': 'p_n_availability:2661601011',
+    'lightning-deals': 'p_89:8308921011',
+    'todays-deals': 'p_89:8308920011',
+    'subscribe-save': 'p_n_is_sns_available:2617005011',
+    'amazon-choice': 'p_n_is_amazon_brand:16594485011',
+    'fba-only': 'p_n_fulfilled_by_amazon:2661621011',
+    'free-returns': 'p_n_free_returns:7744528011',
+    'gift-wrap': 'p_n_is_gift_wrapped:376893011',
+    'small-business': 'p_n_cpf_eligible:23501558011',
+    'amazon-brands': 'p_n_is_private_label:16594481011',
+    'low-rating': 'p_n_feature_twelve_browse-bin:1248899011'
+  };
+
+  for (const [key, code] of Object.entries(rhMap)) {
+    pushRh(data.get(key) === 'on', code);
+  }
+
+  // ----- Finalize Query -----
+  const params = new URLSearchParams();
+  if (q) params.set('k', q);
+  if (rh.length) params.set('rh', rh.join(','));
+  params.set('tag', 'echolover25-20');
+
+  const host = ({
+    usd: 'www.amazon.com',
+    eur: 'www.amazon.de',
+    gbp: 'www.amazon.co.uk',
+    jpy: 'www.amazon.co.jp',
+    inr: 'www.amazon.in'
+  })[data.get('currency')] || 'www.amazon.com';
+
+  const url = `https://${host}/s?${params.toString()}`;
+  console.log('🔗 Amazon URL:', url);
+  window.open(url, '_blank');
+});
+    </script>
 </body>
 </html>
