@@ -81,59 +81,6 @@
   <!-- 2) Load Google’s Translate library -->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 
-  <!-- 3) Override CSS: both general AND iframe-specific rules -->
-  <style>
- <style>
-  .goog-te-menu2 {
-    max-height: 300px !important;
-    overflow-y: auto !important;
-    width: 100% !important;
-  }
-
-  .goog-te-menu2 table {
-    width: 100% !important;
-  }
-
-  .goog-te-menu-frame,
-  .goog-te-menu-frame.skiptranslate,
-  iframe.goog-te-menu-frame {
-    max-height: 300px !important;
-    height: auto !important;
-    overflow-y: auto !important;
-    width: 100% !important;
-  }
-</style>
-  <style>
-  /* ✅ Force scroll inside iframe menu */
-  .goog-te-menu-frame,
-  .goog-te-menu-frame.skiptranslate,
-  iframe.goog-te-menu-frame {
-    max-height: 300px !important;
-    height: auto !important;
-    overflow-y: scroll !important;
-    width: 100% !important;
-  }
-
-  .goog-te-menu2 {
-    max-height: 300px !important;
-    overflow-y: scroll !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  .goog-te-menu2 table {
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* ✅ Mobile fix */
-  @media (max-width: 767px) {
-    .goog-te-menu2 {
-      max-height: 200px !important;
-    }
-  }
-</style>
-
   <!-- Bootstrap CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
@@ -420,10 +367,38 @@
     white-space: normal;
   }
 </style>
-<!-- Full-width translate container -->
-<div style="width: 100%; background: #f8f9fa; padding: 10px 0; text-align: center;">
-  <div id="google_translate_element"></div>
-</div>
+<style>
+  /* Scrollable and mobile-safe Google Translate menu */
+  .goog-te-menu2 {
+    max-height: 250px !important;
+    overflow-y: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .goog-te-menu2 table {
+    width: 100% !important;
+  }
+
+  .goog-te-menu-frame,
+  .goog-te-menu-frame.skiptranslate,
+  iframe.goog-te-menu-frame {
+    max-height: 250px !important;
+    height: auto !important;
+    overflow-y: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Hide top banner */
+  .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+  }
+
+  body {
+    top: 0px !important;
+  }
+</style>
 
 <!-- Auto-detect and set the cookie before Translate loads -->
 <script>
@@ -435,6 +410,10 @@
 </head>
   <body>
     <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
+    <!-- Google Translate bar (mobile-safe) -->
+<div id="translate-wrapper" style="background:#f8f9fa; padding:10px 0; text-align:center;">
+  <div id="google_translate_element"></div>
+</div>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="/">Amazon Super Search</a>
@@ -478,6 +457,12 @@
       autoDisplay: false
     }, 'google_translate_element');
   }
+</script>
+<script>
+  (function(){
+    var userLang = (navigator.language || navigator.userLanguage).substr(0,2);
+    document.cookie = "googtrans=/en/" + userLang + "; path=/";
+  })();
 </script>
 
 
