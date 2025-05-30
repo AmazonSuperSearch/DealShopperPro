@@ -2,27 +2,26 @@
 // Consolidated, updated Amazon search logic moved to an external file
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ————————————————
-  // 0) Restore Tagify on your brand field
-  // ————————————————
+  // ——————————————————————————
+  // 0) Initialize Tagify on your brand field
+  // ——————————————————————————
   const brandInput = document.getElementById('brandInclude');
   if (brandInput) {
     try {
       new Tagify(brandInput, {
+        whitelist: [],           // never offer suggestions
         dropdown: {
-          enabled: 0,       // completely disable the suggestion dropdown
+          enabled: 0,            // fully disable dropdown UI
           closeOnSelect: true
         },
-        addTagOnBlur: false // don’t auto-add whatever is in the input when you blur
+        addTagOnBlur: false      // only add tags on Enter/Comma
       });
     } catch (err) {
       console.warn('Tagify init failed:', err);
     }
   }
 
-  // ————————————————
-  // 1) Your main search form handler
-  // ————————————————
+  // 1) Base query
   const form = document.getElementById('amazon-search-form');
   form.addEventListener('submit', e => {
     e.preventDefault();
