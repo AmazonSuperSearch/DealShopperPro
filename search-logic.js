@@ -1,6 +1,6 @@
 // search-logic.js
 // Consolidated, updated Amazon search logic moved to an external file
-
+console.log('Built Amazon URL:', url);
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
 
