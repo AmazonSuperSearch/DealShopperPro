@@ -902,194 +902,190 @@ const pushFilter = (field, param, val) => {
 
 
       <!-- somewhere in your filters section -->
-<div class="form-check">
-  <input
-    class="form-check-input"
-    type="checkbox"
-    name="filter-cruelty-free"
-    id="filter-cruelty-free"
-  >
-  <label class="form-check-label" for="filter-cruelty-free">
-    🐰Cruelty Free
-  </label>
-</div>
+<div class="card mb-4 p-3">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
 
+    <!-- Verified Filters -->
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="filter-cruelty-free" id="filter-cruelty-free" aria-label="Cruelty Free Products">
+      <label class="form-check-label" for="filter-cruelty-free">🐰 Cruelty Free</label>
+    </div>
 
-      <!-- Other Available Filters -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="subscribe-save" id="subscribeSave" aria-label="Show Subscribe & Save items">
-        <label class="form-check-label" for="subscribeSave">🔁Subscribe & Save</label>
-      </div>
-      <div class="form-check">
-       <input class="form-check-input" type="checkbox" name="amazon-choice" id="amazonChoice" aria-label="Show Amazon’s Choice items">
-        <label class="form-check-label" for="amazonChoice">🏅Amazon’s Choice</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="fba-only" id="fbaOnly" aria-label="Show items sold and shipped by Amazon">
-        <label class="form-check-label" for="fbaOnly">🏢Sold & Shipped by Amazon</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="free-returns" id="freeReturns" aria-label="Show items with Free Returns">
-        <label class="form-check-label" for="freeReturns">🔁Free Returns</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="gift-wrap" id="giftWrap" aria-label="Show items with Gift Wrap available">
-        <label class="form-check-label" for="giftWrap">🎁Gift Wrap Available</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="small-business" id="smallBusiness" aria-label="Show Small Business Products only">
-        <label class="form-check-label" for="smallBusiness">🧵Small Business Products</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="amazon-brands" id="amazonBrands" aria-label="Show Amazon Brand items only">
-        <label class="form-check-label" for="amazonBrands">🛒Amazon Brands Only</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="low-rating" id="lowRating" aria-label="Include Low Rating Products">
-        <label class="form-check-label" for="lowRating">Low Rating Products (⚠️)</label>
-      </div>
-      <div class="form-check">
-  <input class="form-check-input" type="checkbox" name="vegan-products" id="vegan-products">
-  <label class="form-check-label" for="vegan-products">
-    🥦 Vegan Products
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="organic-products" id="organic-products">
-  <label class="form-check-label" for="organic-products">
-    🌿 Organic Products
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="biodegradable-packaging" id="biodegradable-packaging">
-  <label class="form-check-label" for="biodegradable-packaging">
-    📦♻️ Biodegradable Packaging
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="carbon-neutral-delivery" id="carbon-neutral-delivery">
-  <label class="form-check-label" for="carbon-neutral-delivery">
-    🌍🚚 Carbon Neutral Delivery
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="meditation-mindfulness-gear" id="meditation-mindfulness-gear">
-  <label class="form-check-label" for="meditation-mindfulness-gear">
-    🧘 Meditation & Mindfulness Gear
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="low-emf-devices" id="low-emf-devices">
-  <label class="form-check-label" for="low-emf-devices">
-    📶❌ Low EMF Devices
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="allergy-friendly" id="allergy-friendly">
-  <label class="form-check-label" for="allergy-friendly">
-    🤧❌ Allergy-Friendly
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="holiday-gift-picks" id="holiday-gift-picks">
-  <label class="form-check-label" for="holiday-gift-picks">
-    🎄 Holiday Gift Picks
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="personalized-items" id="personalized-items">
-  <label class="form-check-label" for="personalized-items">
-    ✍️ Personalized Items
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="wedding-registry-items" id="wedding-registry-items">
-  <label class="form-check-label" for="wedding-registry-items">
-    💍 Wedding Registry Items
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="refurbished-by-manufacturer" id="refurbished-by-manufacturer">
-  <label class="form-check-label" for="refurbished-by-manufacturer">
-    🔧🏢 Refurbished by Manufacturer
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="overstock-or-clearance" id="overstock-or-clearance">
-  <label class="form-check-label" for="overstock-or-clearance">
-    🏷️🔥 Overstock or Clearance
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="crowdfunded-origins" id="crowdfunded-origins">
-  <label class="form-check-label" for="crowdfunded-origins">
-    🚀 Crowdfunded Origins
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="best-value-per-ounce" id="best-value-per-ounce">
-  <label class="form-check-label" for="best-value-per-ounce">
-    ⚖️💲 Best Value per Ounce
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="most-reviewed" id="most-reviewed">
-  <label class="form-check-label" for="most-reviewed">
-    🗣️📈 Most Reviewed
-  </label>
-</div>
-<div class="form-check">
-  <input class="form-check-input" type="checkbox" name="steady-price-no-spike" id="steady-price-no-spike">
-  <label class="form-check-label" for="steady-price-no-spike">
-    📉✅ Steady Price (No Spike)
-  </label>
-</div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="subscribe-save" id="subscribeSave" aria-label="Subscribe and Save Items">
+      <label class="form-check-label" for="subscribeSave">🔁 Subscribe & Save</label>
+    </div>
 
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="amazon-choice" id="amazonChoice" aria-label="Amazon’s Choice Items">
+      <label class="form-check-label" for="amazonChoice">🏅 Amazon’s Choice</label>
+    </div>
 
-      <!-- Coming Soon Filters -->
-      <div class="form-check coming-soon">
-        <input class="form-check-input" type="checkbox" name="ships-fast" id="shipsFast">
-        <label class="form-check-label" for="shipsFast">Ships in 24 Hours <small>(Coming Soon)</small></label>
-      </div>
-      <div class="form-check coming-soon">
-        <input class="form-check-input" type="checkbox" name="back-in-stock" id="backInStock">
-        <label class="form-check-label" for="backInStock">Back in Stock Today <small>(Coming Soon)</small></label>
-      </div>
-      <div class="form-check coming-soon">
-        <input class="form-check-input" type="checkbox" name="made-in-usa" id="madeInUsa">
-        <label class="form-check-label" for="madeInUsa">Made in USA <small>(Coming Soon)</small></label>
-      </div>
-      <div class="form-check coming-soon">
-        <input class="form-check-input" type="checkbox" name="trending-now" id="trendingNow">
-        <label class="form-check-label" for="trendingNow">Trending Right Now <small>(Coming Soon)</small></label>
-      </div>
-      <div class="form-check coming-soon">
-        <input class="form-check-input" type="checkbox" name="new-last-week" id="newLastWeek">
-        <label class="form-check-label" for="newLastWeek">New Arrivals (Last 7 Days) <small>(Coming Soon)</small></label>
-      </div>
-      <div class="form-check coming-soon">
-        <input class="form-check-input" type="checkbox" name="top-category" id="topCategory">
-        <label class="form-check-label" for="topCategory">Top 1% of Category <small>(Coming Soon)</small></label>
-      </div>
-      <div class="form-check coming-soon">
-        <input class="form-check-input" type="checkbox" name="hidden-coupon" id="hiddenCoupon">
-        <label class="form-check-label" for="hiddenCoupon">Hidden Coupons Only <small>(Coming Soon)</small></label>
-      </div>
-      <div class="form-check coming-soon">
-        <input class="form-check-input" type="checkbox" name="giftable" id="giftable">
-        <label class="form-check-label" for="giftable">Highly Giftable Items <small>(Coming Soon)</small></label>
-      </div>
-      <div class="form-check coming-soon">
-        <input class="form-check-input" type="checkbox" name="bundle-match" id="bundleMatch">
-        <label class="form-check-label" for="bundleMatch">Frequently Bought Together <small>(Coming Soon)</small></label>
-      </div>
-      <div class="form-check coming-soon">
-        <input class="form-check-input" type="checkbox" name="low-stock" id="lowStock">
-        <label class="form-check-label" for="lowStock">Low Inventory Left (Urgent) <small>(Coming Soon)</small></label>
-      </div>
- </div> <!-- end of .row -->
-</div> <!-- end of .card -->
-</section> <!-- end of Step 5 section -->
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="fba-only" id="fbaOnly" aria-label="Sold and Shipped by Amazon">
+      <label class="form-check-label" for="fbaOnly">🏢 Sold & Shipped by Amazon</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="free-returns" id="freeReturns" aria-label="Free Returns">
+      <label class="form-check-label" for="freeReturns">🔁 Free Returns</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="gift-wrap" id="giftWrap" aria-label="Gift Wrap Available">
+      <label class="form-check-label" for="giftWrap">🎁 Gift Wrap Available</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="small-business" id="smallBusiness" aria-label="Small Business Products">
+      <label class="form-check-label" for="smallBusiness">🧵 Small Business Products</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="amazon-brands" id="amazonBrands" aria-label="Amazon Brands Only">
+      <label class="form-check-label" for="amazonBrands">🛒 Amazon Brands Only</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="low-rating" id="lowRating" aria-label="Low Rating Products">
+      <label class="form-check-label" for="lowRating">⚠️ Low Rating Products</label>
+    </div>
+
+    <!-- Green Filters -->
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="vegan-products" id="vegan-products" aria-label="Vegan Products">
+      <label class="form-check-label" for="vegan-products">🥦 Vegan Products</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="organic-products" id="organic-products" aria-label="Organic Products">
+      <label class="form-check-label" for="organic-products">🌿 Organic Products</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="biodegradable-packaging" id="biodegradable-packaging" aria-label="Biodegradable Packaging">
+      <label class="form-check-label" for="biodegradable-packaging">📦♻️ Biodegradable Packaging</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="carbon-neutral-delivery" id="carbon-neutral-delivery" aria-label="Carbon Neutral Delivery">
+      <label class="form-check-label" for="carbon-neutral-delivery">🌍🚚 Carbon Neutral Delivery</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="meditation-mindfulness-gear" id="meditation-mindfulness-gear" aria-label="Mindfulness Gear">
+      <label class="form-check-label" for="meditation-mindfulness-gear">🧘 Meditation & Mindfulness Gear</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="low-emf-devices" id="low-emf-devices" aria-label="Low EMF Devices">
+      <label class="form-check-label" for="low-emf-devices">📶❌ Low EMF Devices</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="allergy-friendly" id="allergy-friendly" aria-label="Allergy Friendly">
+      <label class="form-check-label" for="allergy-friendly">🤧❌ Allergy-Friendly</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="holiday-gift-picks" id="holiday-gift-picks" aria-label="Holiday Gift Picks">
+      <label class="form-check-label" for="holiday-gift-picks">🎄 Holiday Gift Picks</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="personalized-items" id="personalized-items" aria-label="Personalized Items">
+      <label class="form-check-label" for="personalized-items">✍️ Personalized Items</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="wedding-registry-items" id="wedding-registry-items" aria-label="Wedding Registry Items">
+      <label class="form-check-label" for="wedding-registry-items">💍 Wedding Registry Items</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="refurbished-by-manufacturer" id="refurbished-by-manufacturer" aria-label="Refurbished by Manufacturer">
+      <label class="form-check-label" for="refurbished-by-manufacturer">🔧🏢 Refurbished by Manufacturer</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="overstock-or-clearance" id="overstock-or-clearance" aria-label="Overstock or Clearance">
+      <label class="form-check-label" for="overstock-or-clearance">🏷️🔥 Overstock or Clearance</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="crowdfunded-origins" id="crowdfunded-origins" aria-label="Crowdfunded Origins">
+      <label class="form-check-label" for="crowdfunded-origins">🚀 Crowdfunded Origins</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="best-value-per-ounce" id="best-value-per-ounce" aria-label="Best Value per Ounce">
+      <label class="form-check-label" for="best-value-per-ounce">⚖️💲 Best Value per Ounce</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="most-reviewed" id="most-reviewed" aria-label="Most Reviewed">
+      <label class="form-check-label" for="most-reviewed">🗣️📈 Most Reviewed</label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="steady-price-no-spike" id="steady-price-no-spike" aria-label="Steady Price (No Spike)">
+      <label class="form-check-label" for="steady-price-no-spike">📉✅ Steady Price (No Spike)</label>
+    </div>
+
+    <!-- Coming Soon Filters -->
+    <div class="form-check coming-soon">
+      <input class="form-check-input" type="checkbox" name="ships-fast" id="shipsFast" disabled>
+      <label class="form-check-label" for="shipsFast">Ships in 24 Hours <small>(Coming Soon)</small></label>
+    </div>
+
+    <div class="form-check coming-soon">
+      <input class="form-check-input" type="checkbox" name="back-in-stock" id="backInStock" disabled>
+      <label class="form-check-label" for="backInStock">Back in Stock Today <small>(Coming Soon)</small></label>
+    </div>
+
+    <div class="form-check coming-soon">
+      <input class="form-check-input" type="checkbox" name="made-in-usa" id="madeInUsa" disabled>
+      <label class="form-check-label" for="madeInUsa">Made in USA <small>(Coming Soon)</small></label>
+    </div>
+
+    <div class="form-check coming-soon">
+      <input class="form-check-input" type="checkbox" name="trending-now" id="trendingNow" disabled>
+      <label class="form-check-label" for="trendingNow">Trending Right Now <small>(Coming Soon)</small></label>
+    </div>
+
+    <div class="form-check coming-soon">
+      <input class="form-check-input" type="checkbox" name="new-last-week" id="newLastWeek" disabled>
+      <label class="form-check-label" for="newLastWeek">New Arrivals (Last 7 Days) <small>(Coming Soon)</small></label>
+    </div>
+
+    <div class="form-check coming-soon">
+      <input class="form-check-input" type="checkbox" name="top-category" id="topCategory" disabled>
+      <label class="form-check-label" for="topCategory">Top 1% of Category <small>(Coming Soon)</small></label>
+    </div>
+
+    <div class="form-check coming-soon">
+      <input class="form-check-input" type="checkbox" name="hidden-coupon" id="hiddenCoupon" disabled>
+      <label class="form-check-label" for="hiddenCoupon">Hidden Coupons Only <small>(Coming Soon)</small></label>
+    </div>
+
+    <div class="form-check coming-soon">
+      <input class="form-check-input" type="checkbox" name="giftable" id="giftable" disabled>
+      <label class="form-check-label" for="giftable">Highly Giftable Items <small>(Coming Soon)</small></label>
+    </div>
+
+    <div class="form-check coming-soon">
+      <input class="form-check-input" type="checkbox" name="bundle-match" id="bundleMatch" disabled>
+      <label class="form-check-label" for="bundleMatch">Frequently Bought Together <small>(Coming Soon)</small></label>
+    </div>
+
+    <div class="form-check coming-soon">
+      <input class="form-check-input" type="checkbox" name="low-stock" id="lowStock" disabled>
+      <label class="form-check-label" for="lowStock">Low Inventory Left (Urgent) <small>(Coming Soon)</small></label>
+    </div>
+
+  </div> <!-- end .row -->
+</div> <!-- end .card -->
+
 
   <!-- Step 6: Search Amazon -->
 <section class="container text-start mb-5">
