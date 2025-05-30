@@ -20,16 +20,63 @@ document.addEventListener('DOMContentLoaded', () => {
     const brandOnly = data.get('include-only') === 'on';
 
     // 2) Keyword-based filters (always appended to q)
-    const keywordAppend = (id, phrase) => {
-      if (data.get(id) === 'on') {
-        q += (q.endsWith(' ') ? '' : ' ') + phrase;
-      }
-    };
-    keywordAppend('eco-friendly', 'eco friendly');
-    keywordAppend('gifts-for-her', 'gifts for her');
-    keywordAppend('gifts-for-him', 'gifts for him');
-    keywordAppend('gifts-for-kids', 'gifts for kids');
-    // …add any more of your keyword filters here…
+const keywordAppend = (id, phrase) => {
+  if (data.get(id) === 'on') {
+    q += (q.endsWith(' ') ? '' : ' ') + phrase;
+  }
+};
+
+keywordAppend('eco-friendly',            'eco friendly');
+keywordAppend('gifts-for-her',           'gifts for her');
+keywordAppend('gifts-for-mom',           'gifts for mom');
+keywordAppend('gifts-for-dad',           'gifts for dad');
+keywordAppend('birthday-gifts',          'birthday gifts');
+keywordAppend('anniversary-gifts',       'anniversary gifts');
+keywordAppend('pets-safe',               'pet safe');
+keywordAppend('low-impact-packaging',    'low impact packaging');
+keywordAppend('climate-pledge-friendly', 'climate pledge friendly');
+keywordAppend('black-owned',             'black owned business');
+keywordAppend('latino-owned',            'latino owned business');
+keywordAppend('women-owned',             'women owned business');
+keywordAppend('aapi-owned',              'AAPI owned business');
+keywordAppend('lgbtq-owned',             'LGBTQ owned business');
+keywordAppend('eco-label-certified',     'eco label certified');
+keywordAppend('drought-tolerant',        'drought tolerant');
+keywordAppend('zero-waste',              'zero waste');
+
+keywordAppend('gifts-for-kids',          'gifts for kids');
+keywordAppend('gifts-for-teens',         'gifts for teens');
+keywordAppend('gifts-for-babies',        'gifts for babies');
+keywordAppend('gifts-for-coworkers',     'gifts for coworkers');
+keywordAppend('gifts-under-25',          'gifts under $25');
+keywordAppend('gifts-under-50',          'gifts under $50');
+keywordAppend('stocking-stuffers',       'stocking stuffers');
+keywordAppend('white-elephant',          'white elephant gifts');
+
+keywordAppend('plastic-free',            'plastic free');
+keywordAppend('upcycled',                'upcycled');
+keywordAppend('secondhand',              'secondhand');
+keywordAppend('fair-trade',              'fair trade');
+keywordAppend('handmade',                'handmade');
+keywordAppend('local-producer',          'locally made');
+
+keywordAppend('minimalist-products',     'minimalist');
+keywordAppend('boho-style',              'boho style');
+keywordAppend('farmhouse-style',         'farmhouse decor');
+keywordAppend('japanese-design',         'japanese minimalist');
+keywordAppend('scandinavian-style',      'scandinavian design');
+
+keywordAppend('yoga-gear',               'yoga gear');
+keywordAppend('essential-oils',          'essential oils');
+keywordAppend('aromatherapy',            'aromatherapy');
+keywordAppend('blue-light-glasses',      'blue light glasses');
+
+keywordAppend('graduation-gifts',        'graduation gifts');
+keywordAppend('housewarming-gifts',      'housewarming gifts');
+keywordAppend('back-to-school',          'back to school');
+keywordAppend('new-year-deals',          'new year deals');
+keywordAppend('summer-essentials',       'summer essentials');
+
 
     // 3) Price-range facet (always applied, before RH facets)
     const min = parseFloat(data.get('min-price') || 0);
