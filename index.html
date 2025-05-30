@@ -1963,7 +1963,39 @@ pushFilter('amazon-brands',   'p_n_feature_fourteen_browse-bin', '18584192011');
 pushFilter('low-rating',      'p_n_feature_twenty_browse-bin', '21397296011'); // 1–2 Star Items
 pushFilter('coupon-only',     'p_n_feature_browse-bin', '6779703011'); // Same as coupons
 pushFilter('warehouse-refurb','p_n_condition-type', '2224371011'); // Used & Refurbished (Warehouse)
+// 5) Keyword-based filters (add keywords to the 'k' param)
+const keywordAppend = (name, phrase) => {
+  if (data.get(name) === 'on') {
+    q += (q.endsWith(' ') ? '' : ' ') + phrase;
+  }
+};
 
+keywordAppend('eco-friendly', 'eco friendly');
+keywordAppend('filter-cruelty-free', 'cruelty free');
+keywordAppend('vegan-products', 'vegan');
+keywordAppend('organic-products', 'organic');
+keywordAppend('biodegradable-packaging', 'biodegradable packaging');
+keywordAppend('carbon-neutral-delivery', 'carbon neutral delivery');
+keywordAppend('meditation-mindfulness-gear', 'meditation mindfulness');
+keywordAppend('low-emf-devices', 'low emf');
+keywordAppend('allergy-friendly', 'allergy friendly');
+keywordAppend('holiday-gift-picks', 'holiday gift');
+keywordAppend('personalized-items', 'personalized');
+keywordAppend('wedding-registry-items', 'wedding registry');
+keywordAppend('refurbished-by-manufacturer', 'manufacturer refurbished');
+keywordAppend('overstock-or-clearance', 'overstock clearance');
+keywordAppend('crowdfunded-origins', 'kickstarter indiegogo');
+keywordAppend('best-value-per-ounce', 'value per ounce');
+keywordAppend('most-reviewed', 'most reviewed');
+keywordAppend('steady-price-no-spike', 'price stable');
+
+// 🎁 Gift Types
+keywordAppend('gifts-for-her', 'gift for her');
+keywordAppend('gifts-for-him', 'gift for him');
+keywordAppend('gifts-for-mom', 'gift for mom');
+keywordAppend('gifts-for-dad', 'gift for dad');
+keywordAppend('anniversary-gifts', 'anniversary gift');
+keywordAppend('birthday-gifts', 'birthday gift');
 
 
     // 5) AI-driven filters
