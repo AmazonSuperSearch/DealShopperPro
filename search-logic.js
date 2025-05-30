@@ -2,27 +2,8 @@
 // Consolidated, updated Amazon search logic moved to an external file
 
 document.addEventListener('DOMContentLoaded', () => {
-  // ——————————————————————————
-  // 0) Initialize Tagify on your brand field
-  // ——————————————————————————
-  const brandInput = document.getElementById('brandInclude');
-  if (brandInput) {
-    try {
-      new Tagify(brandInput, {
-        whitelist: [],           // never offer suggestions
-        dropdown: {
-          enabled: 0,            // fully disable dropdown UI
-          closeOnSelect: true
-        },
-        addTagOnBlur: false      // only add tags on Enter/Comma
-      });
-    } catch (err) {
-      console.warn('Tagify init failed:', err);
-    }
-  }
-
-  // 1) Base query
   const form = document.getElementById('amazon-search-form');
+
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
@@ -31,10 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1) Base query
     let q = data.get('q')?.trim();
-    if (!q) return alert('Please enter a search term.');
-
-    // detect “Match only these brands”
-    const brandOnly = data.get('include-only') === 'on';
+    if (!q) {
+      return alert('Please enter a search term.');
+    }
 
     // 2) Keyword-based filters (always appended to q)
     const keywordAppend = (id, phrase) => {
@@ -42,11 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
         q += (q.endsWith(' ') ? '' : ' ') + phrase;
       }
     };
-    // …add all your keywordAppend calls here…
     keywordAppend('eco-friendly',            'eco friendly');
     keywordAppend('gifts-for-her',           'gifts for her');
     keywordAppend('gifts-for-mom',           'gifts for mom');
-    // (etc. — include your entire list)
+    // …etc for your full list…
 
     // 3) Price-range facet
     const min = parseFloat(data.get('min-price') || 0);
@@ -57,13 +36,43 @@ document.addEventListener('DOMContentLoaded', () => {
       rh.push(`p_36:${lower}-${upper}`);
     }
 
-    // 4) Percent-off, rating & sort → params
-    if (data.get('percent-off')) params.set('pct-off', data.get('percent-off'));
-    if (data.get('min-rating'))  params.set('min-rating', data.get('min-rating'));
-    if (data.get('sort'))        params.set('sort', data.get('sort'));
+    // 4) Percent-off, rating & sort go into query params
+    const pct = data.get('percent-off');
+    if (pct) params.set('pct-off', pct);
+    const rating = data.get('min-rating');
+    if (rating) params.set('min-rating', rating);
+    const sort = data.get('sort');
+    if (sort) params.set('sort', sort);
 
-    // 5) Non-brand RH facets (skip if brandOnly)
-    if (!brandOnly) {
+    // ── Normalize Tagify’s JSON or fallback to comma-split ──
+    let raw = data.get('brand-include') || '';
+    let brands = [];
+    if (raw.startsWith('[')) {
+      try {
+        brands = JSON.parse(raw).map(tag => tag.value);
+      } catch (err) {
+        console.warn('Failed parsing brands JSON:', err);
+      }
+    }
+    if (!brands.length && raw) {
+      brands = raw
+        .split(',')
+        .map(s => s.trim())
+        .filter(Boolean);
+    }
+
+    // ── Inject brand RH-facets ──
+    if (brands.length) {
+      if (data.get('include-only') === 'on') {
+        rh = [];  // drop all non-brand filters
+      }
+      brands.forEach(b => {
+        rh.push(`p_89:${encodeURIComponent(b)}`);
+      });
+    }
+
+    // 5) Non-brand RH facets
+    if (data.get('include-only') !== 'on') {
       const pushRh = (field, code) => {
         if (data.get(field) === 'on') rh.push(code);
       };
@@ -86,21 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // 6) Brand-only or brand-plus-others logic
-    const rawBrands = data.get('brand-include');
-    if (rawBrands) {
-      try {
-        const brands = JSON.parse(rawBrands);
-        if (brandOnly) rh = [];  // drop any other filters
-        brands.forEach(b => {
-          if (b.value) rh.push(`p_89:${encodeURIComponent(b.value)}`);
-        });
-      } catch {
-        console.warn('Invalid brands JSON');
-      }
-    }
-
-    // 7) Build & open URL
+    // 6) Build & open URL
     params.set('k', q);
     if (rh.length) params.set('rh', rh.join(','));
     params.set('tag', 'echolover25-20');
@@ -113,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       inr: 'www.amazon.in'
     };
     const host = hostMap[data.get('currency')] || 'www.amazon.com';
-    const url  = `https://${host}/s?${params.toString()}`;
+    const url = `https://${host}/s?${params.toString()}`;
 
     console.log('🔗 Amazon URL:', url);
     window.open(url, '_blank');
