@@ -515,13 +515,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams();
     const rh = [];
 
-    // basic query + sort
+   // 1) Basic query + append keyword-based checkboxes
 let q = data.get('q')?.trim();
 if (!q) return alert('Please enter a search term.');
 
-if (data.get('eco-friendly') === 'on') {
-  q += (q.endsWith(' ') ? '' : ' ') + 'eco friendly';
-}
+// Append keywords for special filters (non-rh)
+const keywordAppend = (name, phrase) => {
+  if (data.get(name) === 'on') {
+    q += (q.endsWith(' ') ? '' : ' ') + phrase;
+  }
+};
+
+// ✅ ONLY keyword-based checkboxes — DO NOT include Prime, Deals, etc.
+keywordAppend('eco-friendly', 'eco friendly');
+keywordAppend('cruelty-free', 'cruelty free');
+keywordAppend('vegan-products', 'vegan');
+keywordAppend('organic-products', 'organic');
+keywordAppend('biodegradable-packaging', 'biodegradable packaging');
+keywordAppend('carbon-neutral-delivery', 'carbon neutral delivery');
+keywordAppend('meditation-gear', 'meditation mindfulness');
+keywordAppend('low-emf', 'low emf');
+keywordAppend('allergy-friendly', 'allergy friendly');
+keywordAppend('holiday-gift-picks', 'holiday gift');
+keywordAppend('personalized-items', 'personalized');
+keywordAppend('gifts-for-him', 'gifts for him');
+keywordAppend('wedding-registry', 'wedding registry');
+keywordAppend('refurbished-oem', 'manufacturer refurbished');
+keywordAppend('overstock-clearance', 'overstock clearance');
+keywordAppend('crowdfunded-origins', 'kickstarter indiegogo');
+keywordAppend('best-value', 'value per ounce');
+keywordAppend('most-reviewed', 'most reviewed');
+keywordAppend('stable-price', 'price stable');
+
+// Set the final query keyword into URL params
+params.set('k', q);
+
 
 params.set('k', q); // ✅ FIXED: This line was broken
 
