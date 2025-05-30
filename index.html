@@ -779,118 +779,138 @@ const pushFilter = (field, param, val) => {
     name="prime-only"
     id="primeOnly"
     aria-label="Filter by Prime Only items">
-  <label class="form-check-label" for="primeOnly">
-    🤩 Prime Only
-  </label>
+  <label class="form-check-label" for="primeOnly">🤩 Prime Only</label>
 </div>
 
-<!-- Seller-Fulfilled Prime -->
 <div class="form-check">
   <input
     class="form-check-input"
     type="checkbox"
     name="seller-fulfilled-prime"
     id="sellerFulfilledPrime"
-    aria-label="Show Seller-Fulfilled Prime only">
-  <label class="form-check-label" for="sellerFulfilledPrime">
-    🚚 Seller-Fulfilled Prime Only
-  </label>
+    aria-label="Filter by Seller-Fulfilled Prime Only">
+  <label class="form-check-label" for="sellerFulfilledPrime">🚚 Seller-Fulfilled Prime Only</label>
 </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="free-shipping" id="freeShipping" aria-label="Filter by Free Shipping only">
-        <label class="form-check-label" for="freeShipping">🚚Free Shipping</label>
-      </div>
-      <div class="form-check">
-       <input class="form-check-input" type="checkbox" name="in-stock" id="inStock" aria-label="Show only in-stock items">
-        <label class="form-check-label" for="inStock">📦In Stock</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="coupons" id="coupons" aria-label="Show items with available coupons">
-        <label class="form-check-label" for="coupons">🏷️Coupons Available</label>
-      </div>
-      <div class="form-check">
-       <input class="form-check-input" type="checkbox" name="lightning-deals" id="lightningDeals" aria-label="Show Lightning Deals only">
-        <label class="form-check-label" for="lightningDeals">⚡Lightning Deals⚡</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" name="todays-deals" id="todaysDeals" aria-label="Show Today’s Deals only">
-        <label class="form-check-label" for="todaysDeals">🔥Today's Deals Only🔥</label>
-      </div>
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-  <!-- Niche Checkboxes -->
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" name="free-shipping" id="freeShipping" aria-label="Filter by Free Shipping only">
+  <label class="form-check-label" for="freeShipping">🚚 Free Shipping</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" name="in-stock" id="inStock" aria-label="Filter by In-Stock only">
+  <label class="form-check-label" for="inStock">📦 In Stock</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" name="coupons" id="coupons" aria-label="Filter by Coupons Available">
+  <label class="form-check-label" for="coupons">🏷️ Coupons Available</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" name="lightning-deals" id="lightningDeals" aria-label="Filter by Lightning Deals only">
+  <label class="form-check-label" for="lightningDeals">⚡ Lightning Deals ⚡</label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" name="todays-deals" id="todaysDeals" aria-label="Filter by Today's Deals only">
+  <label class="form-check-label" for="todaysDeals">🔥 Today's Deals Only 🔥</label>
+</div>
+
+<!-- Niche Filters Row Start -->
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="eco-friendly" id="ecoFriendlyToggle">
+    <input class="form-check-input" type="checkbox" name="eco-friendly" id="ecoFriendlyToggle" aria-label="Eco-Friendly Products">
     <label class="form-check-label" for="ecoFriendlyToggle">♻️ Eco-Friendly</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="filter-cruelty-free" id="crueltyFreeToggle">
+    <input class="form-check-input" type="checkbox" name="filter-cruelty-free" id="crueltyFreeToggle" aria-label="Cruelty-Free Products">
     <label class="form-check-label" for="crueltyFreeToggle">🐰 Cruelty-Free</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="vegan-products" id="veganProducts">
+    <input class="form-check-input" type="checkbox" name="vegan-products" id="veganProducts" aria-label="Vegan Products">
     <label class="form-check-label" for="veganProducts">🥗 Vegan Products</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="organic-products" id="organicProducts">
+    <input class="form-check-input" type="checkbox" name="organic-products" id="organicProducts" aria-label="Organic Products">
     <label class="form-check-label" for="organicProducts">🌿 Organic</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="biodegradable-packaging" id="biodegradablePackaging">
+    <input class="form-check-input" type="checkbox" name="biodegradable-packaging" id="biodegradablePackaging" aria-label="Biodegradable Packaging">
     <label class="form-check-label" for="biodegradablePackaging">📦 Biodegradable Packaging</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="carbon-neutral-delivery" id="carbonNeutralDelivery">
+    <input class="form-check-input" type="checkbox" name="carbon-neutral-delivery" id="carbonNeutralDelivery" aria-label="Carbon-Neutral Delivery">
     <label class="form-check-label" for="carbonNeutralDelivery">🚴 Carbon-Neutral Delivery</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="meditation-mindfulness-gear" id="mindfulnessGear">
+    <input class="form-check-input" type="checkbox" name="meditation-mindfulness-gear" id="mindfulnessGear" aria-label="Meditation & Mindfulness Gear">
     <label class="form-check-label" for="mindfulnessGear">🧘 Mindfulness Gear</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="low-emf-devices" id="lowEmfDevices">
+    <input class="form-check-input" type="checkbox" name="low-emf-devices" id="lowEmfDevices" aria-label="Low EMF Devices">
     <label class="form-check-label" for="lowEmfDevices">📡 Low EMF Devices</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="allergy-friendly" id="allergyFriendly">
+    <input class="form-check-input" type="checkbox" name="allergy-friendly" id="allergyFriendly" aria-label="Allergy-Friendly Products">
     <label class="form-check-label" for="allergyFriendly">🤧 Allergy-Friendly</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="holiday-gift-picks" id="holidayGiftPicks">
+    <input class="form-check-input" type="checkbox" name="holiday-gift-picks" id="holidayGiftPicks" aria-label="Holiday Gift Picks">
     <label class="form-check-label" for="holidayGiftPicks">🎁 Holiday Gift Picks</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="personalized-items" id="personalizedItems">
+    <input class="form-check-input" type="checkbox" name="personalized-items" id="personalizedItems" aria-label="Personalized Items">
     <label class="form-check-label" for="personalizedItems">✍️ Personalized Items</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="wedding-registry-items" id="weddingRegistry">
+    <input class="form-check-input" type="checkbox" name="wedding-registry-items" id="weddingRegistry" aria-label="Wedding Registry Items">
     <label class="form-check-label" for="weddingRegistry">💍 Wedding Registry</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="refurbished-by-manufacturer" id="manufacturerRefurb">
+    <input class="form-check-input" type="checkbox" name="refurbished-by-manufacturer" id="manufacturerRefurb" aria-label="Manufacturer Refurbished Products">
     <label class="form-check-label" for="manufacturerRefurb">🛠️ Manufacturer Refurbished</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="overstock-or-clearance" id="overstockClearance">
+    <input class="form-check-input" type="checkbox" name="overstock-or-clearance" id="overstockClearance" aria-label="Overstock and Clearance Items">
     <label class="form-check-label" for="overstockClearance">🏷️ Overstock/Clearance</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="crowdfunded-origins" id="crowdfundedOrigins">
+    <input class="form-check-input" type="checkbox" name="crowdfunded-origins" id="crowdfundedOrigins" aria-label="Crowdfunded Origins">
     <label class="form-check-label" for="crowdfundedOrigins">🚀 Crowdfunded Origins</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="best-value-per-ounce" id="valuePerOunce">
+    <input class="form-check-input" type="checkbox" name="best-value-per-ounce" id="valuePerOunce" aria-label="Best Value per Ounce">
     <label class="form-check-label" for="valuePerOunce">📊 Best Value per Ounce</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="most-reviewed" id="mostReviewed">
+    <input class="form-check-input" type="checkbox" name="most-reviewed" id="mostReviewed" aria-label="Most Reviewed Products">
     <label class="form-check-label" for="mostReviewed">⭐ Most Reviewed</label>
   </div>
+
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="steady-price-no-spike" id="steadyPrice">
+    <input class="form-check-input" type="checkbox" name="steady-price-no-spike" id="steadyPrice" aria-label="Steady Price Products">
     <label class="form-check-label" for="steadyPrice">📉 Steady Price</label>
   </div>
 </div>
+
 
       <!-- somewhere in your filters section -->
 <div class="form-check">
