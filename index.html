@@ -514,7 +514,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = new FormData(form);
     const params = new URLSearchParams();
     const rh = [];
-
+console.log('Checked values:', [...data.entries()]);
+    
    // 1) Basic query + append keyword-based checkboxes
 let q = data.get('q')?.trim();
 if (!q) return alert('Please enter a search term.');
