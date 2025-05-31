@@ -417,43 +417,6 @@ body {
      right: 1rem   → gap from right edge of viewport
      width: 180px  → sidebar width (narrow)
      font-size: 0.85rem → smaller text, so more items fit */
-.fixed-sidebar {
-  position: fixed;    /* pin it to the viewport */
-  top: 100px;         /* offset below your navbar/header */
-  right: 1rem;        /* gap from the right edge of the viewport */
-  bottom: 20px;       /* stop 20px above the bottom of the viewport */
-  width: 180px;       /* fixed sidebar width */
-  
-  /* make the sidebar’s own content scroll if it overflows */
-  overflow-y: auto;   
-  
-  /* optional visual styling */
-  padding: 0.5rem;
-  background-color: #f9f9f9;
-  border-left: 1px solid #ddd;
-  font-size: 0.85rem;
-  z-index: 20;      
-  }
-  .fixed-sidebar h2 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  .fixed-sidebar h3 {
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
-  }
-  .fixed-sidebar p {
-    font-size: 0.8rem;
-    margin-bottom: 0.75rem;
-    color: #555;
-  }
-  .fixed-sidebar a {
-    color: inherit;
-    text-decoration: none;
-  }
-  .fixed-sidebar a:hover {
-    text-decoration: underline;
-  }
 /* ─── Main Content Adjustment ───
    Push your main content left so it never sits underneath the sidebar. */
 .main-content {
@@ -474,6 +437,102 @@ body {
       display: block;
     }
   }
+  /* ─── 1) IMPORT A MODERN FONT ─── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* ─── 2) BASE FONT SETUP ─── */
+.fixed-sidebar {
+  font-family: 'Poppins', sans-serif;    /* modern, friendly typeface */
+  color: #333333;                        /* slightly softer than pure black */
+  font-size: 0.9rem;                     /* comfortable reading size */
+  line-height: 1.5;
+}
+
+/* ─── 3) SIDEBAR “CARD” STYLING ─── */
+.fixed-sidebar {
+  position: fixed;
+  top: 100px;
+  right: 1rem;
+  bottom: 20px;
+  width: 200px;
+
+  background-color: #ffffff;                   /* crisp white card */
+  border-radius: 8px;                          /* gentle rounding */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);   /* subtle drop shadow */
+  padding: 1rem;                               /* inner spacing */
+
+  overflow-y: auto;    /* scroll internally if content is tall */
+  z-index: 20;
+}
+
+/* ─── 4) HEADER & DIVIDER ─── */
+.fixed-sidebar h2 {
+  font-size: 1rem;              /* slightly larger for the title */
+  font-weight: 600;             /* semi-bold for emphasis */
+  margin-bottom: 0.75rem;       /* space below the title */
+  padding-bottom: 0.25rem;      /* small padding before the divider */
+  border-bottom: 1px solid #e0e0e0;  /* light gray divider line */
+  color: #222222;               /* darker shade for the heading */
+}
+
+/* ─── 5) LINK STYLING ─── */
+.fixed-sidebar ul {
+  list-style: none;   /* remove default bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.fixed-sidebar li {
+  margin-bottom: 0.5rem;  /* vertical gap between items */
+}
+
+.fixed-sidebar a {
+  display: block;           /* expand clickable area */
+  font-weight: 500;         /* medium weight for link text */
+  color: #1a1a1a;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;  /* padding around each link */
+  border-radius: 4px;       /* small rounding for hover effect */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.fixed-sidebar a:hover {
+  background-color: #f3f3f3;
+  color: #007bff;           /* subtle blue highlight on hover */
+}
+
+/* ─── 6) OPTIONAL: ACTIVE LINK STATE ─── */
+.fixed-sidebar a.active {
+  font-weight: 600;
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* ─── 7) CUSTOM SCROLLBAR (WebKit) ─── */
+.fixed-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.fixed-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.fixed-sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+.fixed-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ─── 8) HIDE ON MOBILE ─── */
+@media (max-width: 991px) {
+  .fixed-sidebar {
+    display: none;
+  }
+  .main-content {
+    margin-right: 0;
+  }
+}
+
 </style>
 
 
