@@ -449,7 +449,7 @@ body {
   /* ─── 3) HIDE SIDEBAR ON NARROW SCREENS (≤ 991px) ───
      On tablets/mobiles, remove the fixed sidebar and let main-content be full width. */
   @media (max-width: 991px) {
-    .fixed-sidebar {
+    .help-sidebar {
       display: none;
     }
     .main-content {
@@ -458,18 +458,14 @@ body {
   }
     /* ─── Sidebar Container ─── */
 .help-sidebar {
-  position: fixed;
-  top: 100px;            /* adjust if you want the sidebar to start lower or higher */
-  right: 0;
+  position: static;
+  margin-top: 100px;            /* adjust if you want the sidebar to start lower or higher */
   width: 200px;          /* narrow width so it doesn’t cover too much */
-  max-height: calc(100vh - 120px); /* leaves a little breathing room at top/bottom */
-  overflow-y: auto;      /* allow scrolling inside the sidebar if content is long */
   padding: 0.5rem;
   background-color: #f9f9f9;  /* light background so it stands out */
   border-left: 1px solid #ddd;
   font-size: 0.875rem;   /* smaller text */
   line-height: 1.4;
-  z-index: 100;          /* keep it above most page content */
 }
 
 /* optionally hide the default scrollbar in WebKit (Chrome/Safari) but still allow scrolling */
