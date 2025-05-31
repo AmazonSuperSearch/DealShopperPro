@@ -1757,5 +1757,95 @@ body {
     });
   }
 </script>
+     <!-- PLACE THE FAQ JSON-LD HERE -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I use Amazon Super Search to find in-stock lightning deals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To find in-stock lightning deals, enter your product keyword or ASIN in the search box, check \"⚡ Lightning Deals\" and \"📦 In Stock\" in Step 5, then click \"🔍 Search Amazon.\" This filters Amazon results to show only active, in-stock lightning deals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I sort Amazon results by 90-day price drop percentage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. In Step 3, use \"Sort By → Date: Newest Arrivals,\" then expand \"Deal-Hunter Goodies\" and enter a value (e.g., \"20\") under \"Discount (%) from 90-Day Avg Price.\" After clicking \"🔍 Search Amazon,\" results are sorted by items at least 20 percent below their 90-day average price."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I filter for Prime-only and free shipping deals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Step 5, simply check \"🤩 Prime Only\" to view Prime-eligible listings and \"🚚 Free Shipping\" to view items with free shipping. These combined filters help you quickly find Amazon Prime deals at no extra shipping cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What’s the best way to search by brand or exclude specific brands on Amazon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Go to Step 4, type one or more brands in \"Include Brands,\" and toggle \"Match only these brands\" to restrict results to those brands. To exclude brands, expand \"Power-User Tools,\" enable Boolean operators, and use `NOT field-brand:BrandName` in the main search box."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I discover hidden Amazon coupon codes before checkout?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Check the \"🏷️ Coupons\" box in Step 5 to show only listings with available coupons. You can also enable \"🔍 Field Filters\" in Step 7 and enter `field-coupon:yes` to narrow results further. This surfaces products with hidden coupons that appear during checkout."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What advanced Boolean operators can I use for deeper Amazon search filtering?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In \"Power-User Tools,\" check \"Enable Boolean Operators.\" You can combine terms like `headphones AND noise-canceling NOT earbuds` in the main search box. Use `OR` for alternate keywords (e.g., `Sony OR Bose`), and `field-brand:BrandName` to pinpoint specific fields."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I use past price trends to find the best value on Amazon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Expand \"Deal-Hunter Goodies,\" enter a percentage under \"Discount (%) from 30-Day Avg\" or \"Discount (%) from 60-Day Avg,\" and click search. You’ll see products priced at least that much below their 30- or 60-day average. Combine with \"Sort By → Avg. Customer Review\" for highly rated, deeply discounted items."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I look up a product directly by ASIN, ISBN, or UPC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. In \"Power-User Tools,\" locate \"ASIN / ISBN Direct Lookup,\" paste any valid ASIN, ISBN, or UPC (e.g., B08N5WRWNW), then click \"🔍 Search Amazon.\" This takes you directly to the specific product’s Amazon page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I filter for eco-friendly, vegan, and sustainable products?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Step 5, check \"♻️ Eco-Friendly,\" \"🌱 Vegan,\" or \"🌿 Organic.\" You can also type `eco-friendly` or `vegan` as keywords in the main search box. This highlights Amazon listings with sustainability certifications or product attributes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What tips can help me avoid out-of-stock items and sold-out deals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Always check \"📦 In Stock\" in Step 5. For real-time alerts, enable voice search and ask “Are there any in-stock lightning deals for [product]?” Also, sort by “Newest Arrivals” in Step 3 to see newly restocked items first. Finally, combine “In Stock” with “Prime Only” to get Prime-fulfilled products that ship immediately."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- END FAQ JSON-LD -->
 </body>
 </html>
