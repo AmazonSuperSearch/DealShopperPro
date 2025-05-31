@@ -435,6 +435,86 @@ body {
     document.cookie = "googtrans=/en/" + userLang + "; path=/";
   })();
 </script>
+    <style>
+    /* ─── Constrain the shield wrapper to 48×48 px ─── */
+    .privacy-banner__graphic {
+      flex-shrink: 0;        /* prevent it from stretching or compressing */
+      width: 48px;           /* force exactly 48px width */
+      height: 48px;          /* force exactly 48px height */
+      display: flex;         /* center contents inside this box */
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ─── Make the inline SVG fill that 48×48 box ─── */
+    .privacy-banner__graphic-svg {
+      width: 100%;           /* fill the parent’s width */
+      height: 100%;          /* fill the parent’s height */
+      display: block;        /* remove any unwanted inline whitespace */
+      fill: #D9534F;         /* shield color (red) */
+    }
+
+    /* ─── If you prefer using an <img> instead of inline SVG ─── */
+    /*
+    .privacy-banner__graphic-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    */
+
+    /* ─── (Optional) Some basic text styling so your card still looks nice: ─── */
+    .privacy-banner {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;                   /* 16px between shield and text */
+      max-width: 600px;            /* never wider than 600px */
+      margin: 1rem auto;           /* center horizontally, 16px vertical spacing */
+      padding: 1rem 1.25rem;       /* 16px top/bottom, 20px left/right */
+      background-color: #FEF7EC;   /* light cream */
+      border: 2px solid #F0E0C8;   /* subtle cream border */
+      border-radius: 0.75rem;      /* 12px rounded corners */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* gentle drop shadow */
+    }
+    .privacy-banner__heading {
+      margin: 0 0 0.5rem 0;         /* no top margin, 8px bottom margin */
+      font-size: 1.25rem;           /* 20px (if root font size = 16px) */
+      font-weight: 600;             /* semi-bold */
+      line-height: 1.2;
+      color: #222;                  /* dark gray/near black */
+    }
+    .privacy-banner__body {
+      margin: 0;
+      font-size: 1rem;              /* 16px */
+      line-height: 1.5;             /* 24px line height */
+      color: #444;                  /* medium gray */
+    }
+    .privacy-banner__body strong {
+      color: #000;                  /* make <strong> stand out */
+    }
+
+    /* ─── Stack shield over text on very narrow screens: ─── */
+    @media (max-width: 400px) {
+      .privacy-banner {
+        flex-direction: column;     /* shield on top, text below */
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;                /* 8px gap on mobile */
+        padding: 0.75rem 1rem;      /* 12px top/bottom, 16px left/right */
+      }
+      .privacy-banner__graphic {
+        margin-bottom: 0.5rem;      /* extra 8px under shield */
+      }
+      .privacy-banner__heading {
+        font-size: 1.125rem;        /* 18px on small screens */
+      }
+      .privacy-banner__body {
+        font-size: 0.94rem;         /* ≈15px on small screens */
+      }
+    }
+  </style>
+
 </head>
   <body>
     <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
@@ -505,14 +585,6 @@ body {
       />
     </svg>
 
-    <!-- If instead you have a PNG/WebP shield file, comment out the SVG above
-         and uncomment the <img> below (assuming your file is at /images/shield.png):
-    <img
-      src="images/shield.png"
-      alt="Shield icon"
-      class="privacy-banner__graphic-img"
-    >
-    -->
   </div>
 
   <div class="privacy-banner__text">
