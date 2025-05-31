@@ -456,6 +456,36 @@ body {
       margin-right: 0;
     }
   }
+    /* ─── Sidebar Container ─── */
+.help-sidebar {
+  position: fixed;
+  top: 100px;            /* adjust if you want the sidebar to start lower or higher */
+  right: 0;
+  width: 200px;          /* narrow width so it doesn’t cover too much */
+  max-height: calc(100vh - 120px); /* leaves a little breathing room at top/bottom */
+  overflow-y: auto;      /* allow scrolling inside the sidebar if content is long */
+  padding: 0.5rem;
+  background-color: #f9f9f9;  /* light background so it stands out */
+  border-left: 1px solid #ddd;
+  font-size: 0.875rem;   /* smaller text */
+  line-height: 1.4;
+  z-index: 100;          /* keep it above most page content */
+}
+
+/* optionally hide the default scrollbar in WebKit (Chrome/Safari) but still allow scrolling */
+.help-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.help-sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+/* ─── Main Content Adjustment ───
+   Push your main content left so it never sits underneath the sidebar. */
+.main-content {
+  margin-right: 210px; /* must be >= (sidebar width + any border/padding). Here: 200px + 10px buffer */
+}
 </style>
 
 <style>
@@ -595,6 +625,116 @@ body {
 </div>
     <main id="main">
       <div class="main-content">
+<aside class="fixed-sidebar" aria-label="Quick How-To Links">
+  <h2>Quick How-To &amp; FAQs</h2>
+  <ul class="list-unstyled">
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#find-best-amazon-deals">
+          How to Find the Best Amazon Deals Using Advanced Filters
+        </a>
+      </h3>
+    </li>
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#find-under-20-prime-lightning-deals">
+          How to Find Under-$20 Prime-Eligible Lightning Deals on Amazon
+        </a>
+      </h3>
+    </li>
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#exclude-out-of-stock-items">
+          How to Exclude Out-of-Stock Items in Your Amazon Search Results
+        </a>
+      </h3>
+    </li>
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#uncover-hidden-coupons">
+          How to Uncover Hidden Amazon Coupon Codes Before Checkout
+        </a>
+      </h3>
+    </li>
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#sort-by-90-day-price-drop">
+          How to Sort Amazon Results by 90-Day Price Drop Percentage
+        </a>
+      </h3>
+    </li>
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#shop-eco-friendly-products">
+          How to Shop Eco-Friendly, Vegan &amp; Biodegradable Products on Amazon
+        </a>
+      </h3>
+    </li>
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#find-prime-only-lightning-deals">
+          How to Find Prime-Only &amp; Lightning Deals in Real Time
+        </a>
+      </h3>
+    </li>
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#filter-free-shipping-in-stock">
+          How to Filter for Free Shipping &amp; In-Stock Items
+        </a>
+      </h3>
+    </li>
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#shop-gifts-for-her-him-kids">
+          How to Shop Gifts for Her, Gifts for Him &amp; Gifts for Kids
+        </a>
+      </h3>
+    </li>
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#amazon-choice-amazon-brands">
+          How to Shop Amazon’s Choice &amp; Amazon Brands Products
+        </a>
+      </h3>
+    </li>
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#filter-free-returns-subscribe-save">
+          How to Filter for Free Returns &amp; Subscribe &amp; Save Deals
+        </a>
+      </h3>
+    </li>
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#browse-crowdfunded-small-business">
+          How to Browse Crowdfunded Origins &amp; Small Business Sellers
+        </a>
+      </h3>
+    </li>
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#steady-price-most-reviewed-electronics">
+          How to Identify Steady Price &amp; Most Reviewed Electronics Under $100
+        </a>
+      </h3>
+    </li>
+    <li class="mb-2">
+      <h3>
+        <a href="/help.html#find-mindfulness-gear-wellness">
+          How to Find Mindfulness Gear &amp; Sustainable Wellness Products
+        </a>
+      </h3>
+    </li>
+  </ul>
+
+  <div class="text-center mt-3">
+    <a href="https://www.amazonsupersearch.com/help.html"
+       class="btn btn-sm btn-primary">
+      Full Help &amp; How-To Page
+    </a>
+  </div>
+</aside>
 
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
