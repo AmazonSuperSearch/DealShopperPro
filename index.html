@@ -454,38 +454,6 @@ body {
   .fixed-sidebar a:hover {
     text-decoration: underline;
   }
-
-  /* ─── 3) HIDE SIDEBAR ON NARROW SCREENS (≤ 991px) ───
-     On tablets/mobiles, remove the fixed sidebar and let main-content be full width. */
-  @media (max-width: 991px) {
-    .help-sidebar {
-      display: none;
-    }
-    .main-content {
-      margin-right: 0;
-    }
-  }
-    /* ─── Sidebar Container ─── */
-.help-sidebar {
-  position: static;
-  margin-top: 100px;            /* adjust if you want the sidebar to start lower or higher */
-  width: 200px;          /* narrow width so it doesn’t cover too much */
-  padding: 0.5rem;
-  background-color: #f9f9f9;  /* light background so it stands out */
-  border-left: 1px solid #ddd;
-  font-size: 0.875rem;   /* smaller text */
-  line-height: 1.4;
-}
-
-/* optionally hide the default scrollbar in WebKit (Chrome/Safari) but still allow scrolling */
-.help-sidebar::-webkit-scrollbar {
-  width: 6px;
-}
-.help-sidebar::-webkit-scrollbar-thumb {
-  background-color: rgba(0,0,0,0.2);
-  border-radius: 3px;
-}
-
 /* ─── Main Content Adjustment ───
    Push your main content left so it never sits underneath the sidebar. */
 .main-content {
@@ -595,7 +563,19 @@ body {
       }
     }
   </style>
+<style>
+  @media (max-width: 991px) {
+  /* hide the fixed sidebar on tablets/mobiles */
+  .fixed-sidebar {
+    display: none;
+  }
 
+  /* allow main content to stretch back to full width */
+  .main-content {
+    margin-right: 0;
+  }
+}
+</style>
 </head>
   <body>
     <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
