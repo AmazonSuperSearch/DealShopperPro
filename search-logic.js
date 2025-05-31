@@ -96,7 +96,7 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
         'coupons':         'p_n_feature_browse-bin:6779703011',
         'fba-only':        'p_n_shipping_option-bin:3242350011',
         'subscribe-save':  'p_n_is_sns_available:2619533011',
-        'amazon-choice':   'p_n_feature_twenty_browse-bin:21223116011',
+        'amazon-choice':   'p_n_feature_twenty_browse-bin:17254144011',
         'small-business':  'p_n_cpf_eligible:5191495011',
         'amazon-brands':   'p_n_feature_fourteen_browse-bin:18584192011',
         'warehouse-refurb':'p_n_condition-type:2224371011'
