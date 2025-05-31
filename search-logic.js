@@ -43,11 +43,6 @@ keywordAppend('best-value-per-ounce',        'best value per ounce');
 keywordAppend('most-reviewed',               'most reviewed');
 keywordAppend('steady-price-no-spike',       'steady price');
 
-keywordAppend('fba-only',            'shipped by amazon');
-keywordAppend('subscribe-save',      'subscribe & save');
-keywordAppend('small-business',      'small business');
-keywordAppend('amazon-choice',       "amazon's choice");
-keywordAppend('amazon-brands',       'amazon brands');
 keywordAppend('free-returns',        'free returns');
 keywordAppend('crowdfunded-origins', 'crowdfunded origins');
     
