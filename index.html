@@ -417,13 +417,22 @@ body {
      right: 1rem   → gap from right edge of viewport
      width: 180px  → sidebar width (narrow)
      font-size: 0.85rem → smaller text, so more items fit */
-  .fixed-sidebar {
-    position: fixed;
-    top: 100px;      /* ← change to match your navbar height + a bit of breathing room */
-    right: 1rem;     /* small gap from viewport’s right edge */
-    width: 180px;    /* narrow sidebar width */
-    font-size: 0.85rem;
-    z-index: 20;     /* stay on top of lower-z elements */
+.fixed-sidebar {
+  position: fixed;    /* pin it to the viewport */
+  top: 100px;         /* offset below your navbar/header */
+  right: 1rem;        /* gap from the right edge of the viewport */
+  bottom: 20px;       /* stop 20px above the bottom of the viewport */
+  width: 180px;       /* fixed sidebar width */
+  
+  /* make the sidebar’s own content scroll if it overflows */
+  overflow-y: auto;   
+  
+  /* optional visual styling */
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+  border-left: 1px solid #ddd;
+  font-size: 0.85rem;
+  z-index: 20;      
   }
   .fixed-sidebar h2 {
     font-size: 1rem;
