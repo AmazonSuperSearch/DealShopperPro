@@ -488,9 +488,10 @@ body {
   alt="Amazon Super Search banner highlighting Lightning Deal & Filter Hub"
   style="display: block; max-width: 300px; width: 100%; height: auto; margin: 0 auto;"
 >
-      <section class="privacy-banner">
+     <section class="privacy-banner">
+  <!-- Wrap the shield in its own “graphic” div -->
   <div class="privacy-banner__graphic">
-    <!-- Inline SVG “shield” icon -->
+    <!-- If you have an SVG file, use it like this: -->
     <svg
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
@@ -503,17 +504,28 @@ body {
            5.16-1.26 9-6.45 9-12V5l-9-3zm-1 9h2v2h-2zm0-4h2v2h-2z"
       />
     </svg>
+
+    <!-- If instead you have a PNG/WebP shield file, comment out the SVG above
+         and uncomment the <img> below (assuming your file is at /images/shield.png):
+    <img
+      src="images/shield.png"
+      alt="Shield icon"
+      class="privacy-banner__graphic-img"
+    >
+    -->
   </div>
 
   <div class="privacy-banner__text">
     <h2 class="privacy-banner__heading">Your Privacy Matters</h2>
     <p class="privacy-banner__body">
-      We do <strong>not</strong> collect, store, or track any personal information—ever. There is no
-      login, no signup, and no tracking cookies on this site. All searches are processed client-side
-      and sent directly to Amazon through a secure redirect.
+      We do <strong>not</strong> collect, store, or track any personal
+      information—ever. There is no login, no signup, and no tracking cookies
+      on this site. All searches are processed client-side and sent directly to
+      Amazon through a secure redirect.
     </p>
   </div>
 </section>
+
       
     <!-- Banner -->
     <div class="text-center mt-2 mb-3">
