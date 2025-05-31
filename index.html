@@ -127,6 +127,12 @@ body {
   href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
   rel="stylesheet">
   
+    <!-- Google Font: Poppins -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  
   <!-- Tagify CSS & JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css">
   <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js" defer></script>
@@ -404,111 +410,81 @@ body {
   }
 </style>
  <style>
-  /* ─── 1) GIVE YOUR MAIN CONTENT A RIGHT MARGIN ───
-     Prevent the sidebar from covering any text.
-     If you want the sidebar narrower (e.g. 160px), adjust both values accordingly. */
-  .main-content {
-    margin-right: 200px; /* leave 200px on the right for the fixed sidebar */
-  }
+/* ────────────────────────────────────────────────────────────
+   MODERN SIDEBAR STYLES
+───────────────────────────────────────────────────────────── */
 
-  /* ─── 2) FIXED RIGHT-MARGIN SIDEBAR ───
-     position: fixed → stays put as you scroll
-     top: 100px    → push below your navbar/header (adjust as needed)
-     right: 1rem   → gap from right edge of viewport
-     width: 180px  → sidebar width (narrow)
-     font-size: 0.85rem → smaller text, so more items fit */
-/* ─── Main Content Adjustment ───
-   Push your main content left so it never sits underneath the sidebar. */
-.main-content {
-  margin-right: 210px; /* must be >= (sidebar width + any border/padding). Here: 200px + 10px buffer */
-}
-</style>
-
-<style>
-  #google_translate_element {
-  display: inline-block;
-}
-
-  @media (max-width: 767px) {
-    #google_translate_element {
-      position: static;
-      margin: 1rem auto;
-      text-align: center;
-      display: block;
-    }
-  }
-  /* ─── 1) IMPORT A MODERN FONT ─── */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-/* ─── 2) BASE FONT SETUP ─── */
+/* 1) Use a sleek font */
 .fixed-sidebar {
-  font-family: 'Poppins', sans-serif;    /* modern, friendly typeface */
-  color: #333333;                        /* slightly softer than pure black */
-  font-size: 0.9rem;                     /* comfortable reading size */
-  line-height: 1.5;
-}
+  font-family: 'Poppins', sans-serif;   /* Or 'Inter', sans-serif */
+  color: #2c2c2c;                       /* Dark gray for link text */
+  font-size: 0.95rem;                   /* Slightly larger for readability */
+  line-height: 1.6;                     /* More breathing room between lines */
 
-/* ─── 3) SIDEBAR “CARD” STYLING ─── */
-.fixed-sidebar {
+  /* 2) Positioning (kept from your original) */
   position: fixed;
   top: 100px;
   right: 1rem;
   bottom: 20px;
-  width: 200px;
+  width: 220px;                         /* A bit wider for comfort */
 
-  background-color: #ffffff;                   /* crisp white card */
-  border-radius: 8px;                          /* gentle rounding */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);   /* subtle drop shadow */
-  padding: 1rem;                               /* inner spacing */
+  /* 3) Clean background & subtle shadow */
+  background-color: #ffffff;            /* Pure white background */
+  border-radius: 12px;                  /* Softer, rounder corners */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 1.25rem;                     /* A little extra padding all around */
 
-  overflow-y: auto;    /* scroll internally if content is tall */
+  overflow-y: auto;
   z-index: 20;
 }
 
-/* ─── 4) HEADER & DIVIDER ─── */
+/* 4) Sidebar heading style */
 .fixed-sidebar h2 {
-  font-size: 1rem;              /* slightly larger for the title */
-  font-weight: 600;             /* semi-bold for emphasis */
-  margin-bottom: 0.75rem;       /* space below the title */
-  padding-bottom: 0.25rem;      /* small padding before the divider */
-  border-bottom: 1px solid #e0e0e0;  /* light gray divider line */
-  color: #222222;               /* darker shade for the heading */
+  font-size: 1.1rem;                    /* Slightly larger heading */
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #111111;                       /* Almost-black for better contrast */
 }
 
-/* ─── 5) LINK STYLING ─── */
+/* 5) Unordered list resets */
 .fixed-sidebar ul {
-  list-style: none;   /* remove default bullets */
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
+/* 6) Each list item: extra spacing */
 .fixed-sidebar li {
-  margin-bottom: 0.5rem;  /* vertical gap between items */
+  margin-bottom: 0.6rem;
 }
 
+/* 7) Link styling: bigger click area and modern hover */
 .fixed-sidebar a {
-  display: block;           /* expand clickable area */
-  font-weight: 500;         /* medium weight for link text */
-  color: #1a1a1a;
+  display: block;
+  font-weight: 500;
+  color: #2c2c2c;                       /* Dark gray text */
   text-decoration: none;
-  padding: 0.25rem 0.5rem;  /* padding around each link */
-  border-radius: 4px;       /* small rounding for hover effect */
-  transition: background-color 0.2s ease, color 0.2s ease;
+  padding: 0.4rem 0.6rem;               /* Comfortable padding per link */
+  border-radius: 6px;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
+/* 8) Hover state: light accent background */
 .fixed-sidebar a:hover {
-  background-color: #f3f3f3;
-  color: #007bff;           /* subtle blue highlight on hover */
+  background-color: #f1f5f9;            /* Very light grayish-blue */
+  color: #007bff;                       /* Bootstrap’s default blue */
 }
 
-/* ─── 6) OPTIONAL: ACTIVE LINK STATE ─── */
+/* 9) Active/selected link state */
 .fixed-sidebar a.active {
   font-weight: 600;
-  color: #007bff;
-  background-color: rgba(0, 123, 255, 0.1);
+  color: #007bff;                       /* Blue text */
+  background-color: rgba(0, 123, 255, 0.12);
 }
 
-/* ─── 7) CUSTOM SCROLLBAR (WebKit) ─── */
+/* 10) Custom scrollbar (light and thin) */
 .fixed-sidebar::-webkit-scrollbar {
   width: 6px;
 }
@@ -516,12 +492,23 @@ body {
   background: transparent;
 }
 .fixed-sidebar::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.12);
   border-radius: 3px;
 }
 .fixed-sidebar::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
 }
+
+/* 11) Hide on tablet/mobile if needed (same as before) */
+@media (max-width: 991px) {
+  .fixed-sidebar {
+    display: none;
+  }
+  .main-content {
+    margin-right: 0;  /* Remove right margin on narrow screens */
+  }
+}
+
 
 /* ─── 8) HIDE ON MOBILE ─── */
 @media (max-width: 991px) {
