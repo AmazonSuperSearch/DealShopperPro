@@ -403,6 +403,42 @@ body {
     white-space: normal;
   }
 </style>
+  <style>
+  /* ------ Sticky Sidebar (Right Margin) ------ */
+  .sticky-sidebar {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: 2rem;               /* distance from top, adjust if needed */
+    float: right;            /* push it to the right margin */
+    width: 28%;              /* adjust width to taste (e.g., 25% or 30%) */
+    margin-left: 1rem;       /* space between main content and sidebar */
+    z-index: 10;             /* ensure it overlaps if needed */
+  }
+  /* On small screens, make it full-width below the content */
+  @media (max-width: 991px) {
+    .sticky-sidebar {
+      position: static;      /* disable sticky on tablets/smaller */
+      width: 100%;           /* full width */
+      float: none;
+      margin-left: 0;
+    }
+  }
+  /* Card styling (you can tweak border/shadow as desired) */
+  .help-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  }
+  .help-card h2 {
+    font-size: 1.25rem;
+  }
+  .help-card h3 {
+    font-size: 1rem;
+  }
+  .help-card p {
+    font-size: 0.9rem;
+  }
+</style>
 <style>
   #google_translate_element {
   display: inline-block;
