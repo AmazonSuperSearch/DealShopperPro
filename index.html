@@ -610,31 +610,61 @@ body {
     }
   </style>
 <style>
+  /* ───────────────────────────────────────────────────────────────────
+     1) Hide the sidebar on tablets/mobiles (≤ 991 px) and reset margin
+  ─────────────────────────────────────────────────────────────────── */
   @media (max-width: 991px) {
-  /* hide the fixed sidebar on tablets/mobiles */
-  .fixed-sidebar {
-    display: none;
+    .fixed-sidebar {
+      display: none;
+    }
+    .main-content {
+      margin-right: 0; /* allow full width once sidebar is hidden */
+    }
   }
 
-  /* allow main content to stretch back to full width */
-  .main-content {
-    margin-right: 0;
-  }
-}
+  /* ───────────────────────────────────────────────────────────────────
+     2) Fixed footer – compact styling
+  ─────────────────────────────────────────────────────────────────── */
   .footer-fixed {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  padding: 0.75rem 0;
-  background-color: #ffffff;      /* match your page background */
-  border-top: 1px solid #e0e0e0;  /* optional separator */
-  font-size: 0.9rem;
-  color: #6c757d;                 /* optional: muted text */
-  z-index: 100;                   /* ensure it sits above other elements */
-}
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    /* compact vertical padding (≈32 px total height) */
+    padding: 0.5rem 0;
+
+    background-color: #ffffff;     /* match page background */
+    border-top:    1px solid #e0e0e0;
+    font-size:     0.8rem;          /* slightly smaller text */
+    color:         #6c757d;         /* muted color */
+
+    z-index: 100; /* sit above other elements */
+  }
+
+  /* ───────────────────────────────────────────────────────────────────
+     3) Add bottom padding to .main-content so nothing is hidden
+     behind the fixed footer (match footer’s total height ≈ 32 px)
+  ─────────────────────────────────────────────────────────────────── */
+  .main-content {
+    padding-bottom: 32px; /* adjust if your footer’s computed height is different */
+  }
+
+  /* ───────────────────────────────────────────────────────────────────
+     4) On small screens (≤ 600 px), make footer taller and update padding
+  ─────────────────────────────────────────────────────────────────── */
+  @media (max-width: 600px) {
+    .footer-fixed {
+      padding:    0.75rem 0; /* taller: ≈ 48 px total height */
+      font-size:  0.75rem;
+    }
+    .main-content {
+      padding-bottom: 48px; /* match new footer height on mobile */
+    }
+  }
 </style>
+
 </head>
   <body>
     <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
