@@ -632,38 +632,41 @@ body {
     width: 100%;
     text-align: center;
 
-    /* compact vertical padding (≈32 px total height) */
-    padding: 0.5rem 0;
+    /* match your actual footer’s height (~105px on desktop) */
+    padding: 1.5rem 0;        /* 1.5rem top + 1.5rem bottom = 48px */
+    font-size: 0.9rem;        /* as in your inline style */
 
     background-color: #ffffff;     /* match page background */
-    border-top:    1px solid #e0e0e0;
-    font-size:     0.8rem;          /* slightly smaller text */
-    color:         #6c757d;         /* muted color */
+    border-top: 1px solid #e0e0e0;
+    color: #6c757d;                /* muted color */
 
     z-index: 100; /* sit above other elements */
   }
 
   /* ───────────────────────────────────────────────────────────────────
-     3) Add bottom padding to .main-content so nothing is hidden
-     behind the fixed footer (match footer’s total height ≈ 32 px)
+     3) Push page content up so nothing is hidden behind the fixed footer
+     (match footer’s computed height ≈ 105px on desktop)
   ─────────────────────────────────────────────────────────────────── */
   .main-content {
-    padding-bottom: 32px; /* adjust if your footer’s computed height is different */
+    padding-bottom: 105px; /* adjust if your footer’s computed height changes */
   }
 
   /* ───────────────────────────────────────────────────────────────────
      4) On small screens (≤ 600 px), make footer taller and update padding
+     so .main-content never scrolls under it
+     (footer height ≈ 96px on mobile)
   ─────────────────────────────────────────────────────────────────── */
   @media (max-width: 600px) {
     .footer-fixed {
-      padding:    0.75rem 0; /* taller: ≈ 48 px total height */
-      font-size:  0.75rem;
+      padding: 1.5rem 0;     /* still 48px padding, but text is smaller below */
+      font-size: 0.75rem;    /* so three <p> tags take ~36px instead of ~48px */
     }
     .main-content {
-      padding-bottom: 48px; /* match new footer height on mobile */
+      padding-bottom: 96px;  /* match new mobile footer height */
     }
   }
 </style>
+
 
 </head>
   <body>
