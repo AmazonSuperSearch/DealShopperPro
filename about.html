@@ -18,10 +18,13 @@
   <meta name="twitter:description" content="Discover how Amazon Super Search helps you filter for the best Amazon deals instantly — no login, no tracking." />
   <meta name="twitter:image" content="https://www.amazonsupersearch.com/og-image-about.png" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: #f8f9fa;
     }
     .container {
@@ -38,16 +41,23 @@
     p {
       line-height: 1.6;
     }
+    .navbar-nav .nav-link {
+      font-weight: 500;
+    }
+    .navbar-brand {
+      font-weight: 700;
+    }
   </style>
 </head>
 <body>
- <!-- ——— HEADER / NAVIGATION ——— -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
     <a class="navbar-brand fw-bold" href="/">Amazon Super Search</a>
     <button class="navbar-toggler" type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
             aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -66,7 +76,7 @@
           <a class="nav-link" href="help.html">Help</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link active" href="about.html">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact</a>
@@ -76,38 +86,38 @@
   </div>
 </nav>
 
-  <div class="container">
-    <h1>About Amazon Super Search</h1>
-    <p><strong>Amazon Super Search</strong> is a powerful deal-finding engine designed to help you uncover the best Amazon bargains — fast.</p>
+<div class="container">
+  <h1>About Amazon Super Search</h1>
+  <p><strong>Amazon Super Search</strong> is a powerful deal-finding engine designed to help you uncover the best Amazon bargains — fast.</p>
 
-    <h2>🔎 What It Does</h2>
-    <p>Unlike standard Amazon search, our tool lets you filter results by:</p>
-    <ul>
-      <li>💡 Lightning Deals, Prime-only items, and free shipping</li>
-      <li>🏷️ Hidden coupon listings</li>
-      <li>📊 Past price drop history (30/60/90 days)</li>
-      <li>📦 In-stock products only</li>
-      <li>📈 Customer ratings and reviews</li>
-    </ul>
+  <h2>🔎 What It Does</h2>
+  <p>Unlike standard Amazon search, our tool lets you filter results by:</p>
+  <ul>
+    <li>💡 Lightning Deals, Prime-only items, and free shipping</li>
+    <li>🏷️ Hidden coupon listings</li>
+    <li>📊 Past price drop history (30/60/90 days)</li>
+    <li>📦 In-stock products only</li>
+    <li>📈 Customer ratings and reviews</li>
+  </ul>
 
-    <h2>🛡️ Privacy-First Promise</h2>
-    <p>We never collect, store, or track any personal information. There are:</p>
-    <ul>
-      <li>❌ No logins</li>
-      <li>❌ No cookies</li>
-      <li>✅ All searches are processed client-side and sent directly to Amazon via secure redirect.</li>
-    </ul>
+  <h2>🛡️ Privacy-First Promise</h2>
+  <p>We never collect, store, or track any personal information. There are:</p>
+  <ul>
+    <li>❌ No logins</li>
+    <li>❌ No cookies</li>
+    <li>✅ All searches are processed client-side and sent directly to Amazon via secure redirect.</li>
+  </ul>
 
-    <h2>🚀 Why Use It?</h2>
-    <p>Amazon’s default filters don’t let you combine multiple smart deal-finding criteria. With Amazon Super Search, you can:</p>
-    <ul>
-      <li>✅ Cut through the noise and avoid endless scrolling</li>
-      <li>✅ Reveal real discounts and clipped coupons</li>
-      <li>✅ Save money faster using smart filtering logic</li>
-    </ul>
+  <h2>🚀 Why Use It?</h2>
+  <p>Amazon’s default filters don’t let you combine multiple smart deal-finding criteria. With Amazon Super Search, you can:</p>
+  <ul>
+    <li>✅ Cut through the noise and avoid endless scrolling</li>
+    <li>✅ Reveal real discounts and clipped coupons</li>
+    <li>✅ Save money faster using smart filtering logic</li>
+  </ul>
 
-    <p class="text-muted mt-4">© 2025 Amazon Super Search. This is an independent site and is not affiliated with Amazon.com, Inc.</p>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" defer></script>
+  <p class="text-muted mt-4">© 2025 Amazon Super Search. This is an independent site and is not affiliated with Amazon.com, Inc.</p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
