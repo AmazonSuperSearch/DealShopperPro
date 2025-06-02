@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- Preconnects -->
-<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="dns-prefetch" href="//translate.google.com">
@@ -19,37 +19,33 @@
     gtag('config', 'G-51QSZ395GS');
   </script>
 
-
-<title>Amazon Super Search: In-Stock Lightning Deals & Prime Filters</title>
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="/favicon.png" sizes="48x48">
+  <title>Amazon Super Search | Filter In-Stock Lightning Deals and Prime-Only Offers</title>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" alt="Amazon Super Search Icon">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="48x48" alt="Favicon">
   <link rel="manifest" href="/site.webmanifest">
 
-  <!-- Intro paragraph -->
-
   <!-- SEO Meta Tags -->
-  <meta name="description"
-      content="Filter Amazon for in-stock lightning deals, Prime-only offers, deep discounts, and top-rated items—set price, brand, and rating criteria instantly.">
-  <meta name="keywords" content="advanced Amazon search, Amazon filter tool, Amazon search by price, Amazon Prime-only deals, Amazon coupon filter, Amazon lightning deals finder, Amazon price tracker, Amazon sort by rating, exclude brands on Amazon, search Amazon by brand, best Amazon deals today, Amazon free shipping filter, Amazon deals with coupons, in-stock Amazon items, Amazon hidden deals, filter Amazon by condition, Amazon discount tracker, Amazon wishlist filter, Amazon smart search tool, Amazon product finder by features">
+  <meta name="description" content="Filter Amazon for in-stock lightning deals, Prime-only offers, deep discounts, and top-rated items—set price, brand, and rating criteria instantly.">
+  <meta name="keywords" content="Amazon deal finder, Amazon filter tool, filter lightning deals, Prime-only offers, in-stock Amazon deals, Amazon coupon finder">
   <meta name="robots" content="index, follow">
- 
+
   <!-- Self-referential canonical -->
   <link rel="canonical" href="https://www.amazonsupersearch.com/">
 
   <!-- Open Graph / Social -->
-  <meta property="og:title" content="Amazon Search Filter Tool – Find In-Stock Deals, Apply Filters, Filter by Past Price Trends">
-  <meta property="og:description"
-      content="Use Amazon Super Search to find in-stock lightning deals, set discount thresholds, filter free shipping only, and sort by highest ratings.">
+  <meta property="og:title" content="Amazon Super Search | Filter In-Stock Lightning Deals and Prime-Only Offers">
+  <meta property="og:description" content="Filter Amazon for in-stock lightning deals, Prime-only offers, deep discounts, and top-rated items—set price, brand, and rating criteria instantly.">
   <meta property="og:url" content="https://www.amazonsupersearch.com/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.amazonsupersearch.com/thumbnail.png">
+  <meta property="og:image" content="https://www.amazonsupersearch.com/thumbnail.png" alt="Amazon Super Search Thumbnail">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
- <meta name="twitter:title" content="Advanced Amazon Filter Search Tool">
- <meta name="twitter:description" content="Discover Amazon’s best live deals: free shipping filters, deep discounts, lightning deals in stock & filters based on past price trends.">
-  <meta name="twitter:image" content="https://www.amazonsupersearch.com/thumbnail.png">
-  <!-- JSON-LD Structured Data -->
+  <meta name="twitter:title" content="Amazon Super Search | Filter In-Stock Lightning Deals and Prime-Only Offers">
+  <meta name="twitter:description" content="Filter Amazon for in-stock lightning deals, Prime-only offers, deep discounts, and top-rated items—set price, brand, and rating criteria instantly.">
+  <meta name="twitter:image" content="https://www.amazonsupersearch.com/thumbnail.png" alt="Amazon Super Search Thumbnail">
+
+  <!-- JSON-LD Structured Data: SoftwareApplication and SiteNavigationElement -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,27 +54,40 @@
     "url": "https://www.amazonsupersearch.com/",
     "applicationCategory": "WebApplication",
     "operatingSystem": "All",
-    "description": "Amazon Super Search lets you uncover live in-stock lightning deals, filter by free shipping only, set deep discount thresholds, filter by past price trends, and sort by top customer ratings."
+    "description": "Amazon Super Search lets you uncover live in-stock lightning deals, filter by Prime-only offers, set deep discount thresholds, filter by past price trends, and sort by top customer ratings."
   }
   </script>
-  <!-- 1) Define the init callback -->
-  <script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,es,fr,ru,de,it,pt,nl,zh-CN,hi,ar',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.amazonsupersearch.com/",
+    "name": "Amazon Super Search",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.amazonsupersearch.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
-</script>
+  </script>
+
+  <!-- 1) Define the init callback for Google Translate -->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,es,fr,ru,de,it,pt,nl,zh-CN,hi,ar',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
 
   <!-- 2) Load Google’s Translate library -->
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 
-  <!-- 3) Override CSS: both general AND iframe-specific rules -->
+  <!-- 3) Override CSS for Translate widget -->
   <style>
-    /* General scroll override inside the iframe */
     .goog-te-menu2 {
       max-height: 300px !important;
       overflow-y: auto !important;
@@ -87,1397 +96,982 @@
       width: 100% !important;
     }
     .goog-te-menu-frame.skiptranslate {
-  max-height: 300px !important;
-  height: auto !important;
-  overflow-y: auto !important;
-}
-
-.skiptranslate .goog-te-menu2 {
-  max-height: 300px !important;
-  height: auto !important;
-  overflow-y: auto !important;
-}
-.goog-te-banner-frame.skiptranslate {
-  display: none !important;
-}
-body {
-  top: 0px !important;
-}
-
-
-    /* Scroll override for the injected iframe wrapper */
-    .goog-te-menu-frame,
-    iframe.goog-te-menu-frame.skiptranslate {
       max-height: 300px !important;
-      overflow-y: auto !important;
       height: auto !important;
+      overflow-y: auto !important;
     }
-    /* Extra specificity for in-page menus */
     .skiptranslate .goog-te-menu2 {
       max-height: 300px !important;
-      overflow-y: auto !important;
       height: auto !important;
+      overflow-y: auto !important;
+    }
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+    body {
+      top: 0px !important;
     }
   </style>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 
- <!-- Inter font -->
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-  rel="stylesheet">
-  
-    <!-- Google Font: Poppins -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-    rel="stylesheet">
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-  
   <!-- Tagify CSS & JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css">
   <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js" defer></script>
 
-<style>
-  /* 1) Global font */
-  body {
-    font-family: 'Inter', sans-serif;
-  }
-
-  /* 2) Scale animation */
-  @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50%      { transform: scale(1.05); }
-  }
-
-  /* 3) Text glow animation */
-  @keyframes glow {
-    0% {
-      text-shadow:
-        0 0 8px rgba(255,255,255,0.6),
-        0 0 16px rgba(255,255,255,0.4);
+  <style>
+    /* Global font */
+    body {
+      font-family: 'Inter', sans-serif;
     }
-    100% {
-      text-shadow:
-        0 0 16px rgba(255,255,255,1),
-        0 0 32px rgba(255,255,255,0.7);
+    /* Banner Heading Animations */
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.05); }
     }
-  }
-
-  /* 4) Apply to the banner heading */
-  .banner-inner .site-title {
-    display: block;
-    text-align: center;
-
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    line-height: 1.2;
-    color: #FF9900;
-    animation:
-      pulse 3s ease-in-out infinite,
-      glow  2.5s ease-in-out infinite alternate;
-  }
-
-  /* 5) Apply to the banner */
-  .banner-inner .site-title {
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  animation:
-    pulse 3s ease-in-out infinite,
-    glow  2.5s ease-in-out infinite alternate;
-}
-
-  /* ——— AMAZON-ORANGE PULSING HEADING ——— */
-  @keyframes text-pulse {
-    0%   { text-shadow: 0 0 5px rgba(255,153,0,0.7), 0 0 10px rgba(255,153,0,0.5); }
-    50%  { text-shadow: 0 0 20px rgba(255,153,0,0.9), 0 0 30px rgba(255,153,0,0.7); }
-    100% { text-shadow: 0 0 5px rgba(255,153,0,0.7), 0 0 10px rgba(255,153,0,0.5); }
-  }
-  .text-pulse {
-    color: #FF9900;
-    text-shadow:
-      -1px -1px 0 #000,
-       1px -1px 0 #000,
-      -1px  1px 0 #000,
-       1px  1px 0 #000;
-    animation: text-pulse 2s infinite ease-in-out;
-  }
-
-  @keyframes orange-pulse {
-    0%   { box-shadow: 0 0 0 0 rgba(255,153,0, 0); }
-    50%  { box-shadow: 0 0 12px 6px rgba(255,153,0, 0.7); }
-    100% { box-shadow: 0 0 0 0 rgba(255,153,0, 0); }
-  }
-  .pulse-orange {
-    animation: orange-pulse 2s infinite ease-in-out;
-  }
-
-  /* ——— Fancy frames & cards ——— */
-  .card, .accordion-item {
-    border: 1px solid #007bff !important;
-    border-radius: .75rem !important;
-    box-shadow: 0 4px 12px rgba(0,123,255,0.15) !important;
-    padding: 1rem !important;
-    margin-bottom: 1.5rem !important;
-    background-color: #fff !important;
-  }
-  .equal-columns {
-    display: flex;
-    gap: 1rem;
-  }
-  .equal-columns > [class*="col-"] {
-    flex: 1 1 0;
-    display: flex;
-    flex-direction: column;
-  }
-  .equal-columns .card {
-    flex: 1 1 0;
-  }
-  .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,123,255,0.2) !important;
-  }
-
-  /* ——— Form element borders ——— */
-  .form-control,
-  .form-select,
-  .form-range {
-    border: 3px solid #000 !important;
-    border-radius: 4px !important;
-  }
-  .form-check-input {
-    width: 1.4em;
-    height: 1.4em;
-    border: 3px solid #000 !important;
-    border-radius: 3px;
-  }
-
-  /* ——— Minimized drawer ——— */
-  .minimized {
-    right: -260px;
-    opacity: 0.3;
-    transition: all 0.3s ease-in-out;
-  }
-  .minimized:hover {
-    opacity: 1;
-    cursor: pointer;
-  }
-
-  /* ——— Voice search button active ——— */
-  #voiceSearchBtn.active {
-    background-color: #ffc107;
-  }
-
-  /* ——— “Coming soon” disabled styling ——— */
-  .coming-soon input[type="checkbox"] {
-    pointer-events: none;
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  .coming-soon label small {
-    color: #6c757d;
-    font-style: italic;
-  }
-
-  /* ——— Banner container & text ——— */
-  .banner-inner {
-    max-width: 1546px;
-    margin: 0 auto;
-  }
-  .banner-inner p {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-    line-height: 1.5;
-    text-align: center;
-  }
-
-  /* ——— Rating dropdown states ——— */
-  #minRating:disabled {
-    background-color: #e9ecef;
-    cursor: not-allowed;
-  }
-  #minRating.enabled-glow {
-    box-shadow: 0 0 8px 2px rgba(255,193,7,0.8);
-    transition: box-shadow 0.5s ease-in-out;
-  }
-
-  /* ——— Hidden-focusable skip link ——— */
-  .visually-hidden-focusable {
-    position: absolute;
-    left: -9999px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-  }
-  .visually-hidden-focusable:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    left: auto;
-    background: #ffffcc;
-    padding: 0.5rem;
-    z-index: 1000;
-  }
-
-  /* ——— Pulse glow for buttons ——— */
-  @keyframes pulse-glow {
-    0%   { box-shadow: 0 0 0 0 rgba(13,110,253,0.5); }
-    50%  { box-shadow: 0 0 20px 10px rgba(13,110,253,0.5); }
-    100% { box-shadow: 0 0 0 0 rgba(13,110,253,0.5); }
-  }
-  .pulse-glow {
-    animation: pulse-glow 2s infinite;
-    transition: box-shadow .3s ease-in-out;
-  }
-
-  /* ——— Responsive breakpoints ——— */
-  /* Tablet / small desktop (768px–991px) */
-  @media (min-width: 768px) and (max-width: 991px) {
-    .banner-inner {
-      padding: 0 2rem;
-    }
-    .banner-inner img.img-fluid {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      margin: 0 auto;
-      display: block;
-    }
-  }
-
-  /* Desktop (992px and up) */
-  @media (min-width: 992px) {
-    .banner-inner {
-      padding: 0 3rem;
-    }
-    .banner-inner img.img-fluid {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      margin: 0 auto;
-      display: block;
-    }
-  }
-
-  /* Mobile (up to 767px) */
-  @media (max-width: 767px) {
-    .banner-inner {
-      padding: 0 1rem;
+    @keyframes glow {
+      0% {
+        text-shadow:
+          0 0 8px rgba(255,255,255,0.6),
+          0 0 16px rgba(255,255,255,0.4);
+      }
+      100% {
+        text-shadow:
+          0 0 16px rgba(255,255,255,1),
+          0 0 32px rgba(255,255,255,0.7);
+      }
     }
     .banner-inner .site-title {
-      font-size: clamp(1rem, 4vw, 1.75rem);
-    }
-    .banner-inner p {
-      font-size: 1rem;
-    }
-    .banner-inner .lead {
-      font-size: 0.95rem;
-      line-height: 1.4;
-      max-width: 32rem;
-      margin: 0 auto;
+      display: block;
       text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.5rem, 5vw, 3rem);
+      line-height: 1.2;
+      color: #FF9900;
+      animation:
+        pulse 3s ease-in-out infinite,
+        glow  2.5s ease-in-out infinite alternate;
     }
-    .btn {
-      padding: .75rem 1rem;
-      font-size: 1rem;
+    .text-pulse {
+      color: #FF9900;
+      text-shadow:
+        -1px -1px 0 #000,
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+      animation: glow 2.5s ease-in-out infinite alternate;
     }
-  }
-
-  /* ——— True desktop cap (992px and up) ——— */
-  @media (min-width: 992px) {
-    .banner-inner img.img-fluid {
-      width: 100% !important;
-      max-width: 600px !important;
-      height: auto !important;
-      margin: 0 auto !important;
-      display: block !important;
+    .pulse-glow {
+      animation: pulse-glow 2s infinite;
+      transition: box-shadow .3s ease-in-out;
     }
-  }
-
-  /* ——— Cap the “start with step 1” banner on desktop ——— */
-  @media (min-width: 992px) {
-    .text-center.mt-2.mb-3 img.img-fluid.w-100 {
-      width: auto !important;
-      max-width: 600px !important;
-      height: auto !important;
-      margin: 0 auto !important;
-      display: block !important;
+    @keyframes pulse-glow {
+      0%   { box-shadow: 0 0 0 0 rgba(13,110,253,0.5); }
+      50%  { box-shadow: 0 0 20px 10px rgba(13,110,253,0.5); }
+      100% { box-shadow: 0 0 0 0 rgba(13,110,253,0.5); }
     }
-  }
 
-  /* Accordion button: allow normal wrapping and spacing */
-  .accordion-button {
-    white-space: normal;
-  }
-</style>
- <style>
-/* ────────────────────────────────────────────────────────────
-   MODERN SIDEBAR STYLES
-───────────────────────────────────────────────────────────── */
+    /* Sidebar styling */
+    .fixed-sidebar {
+      font-family: 'Poppins', sans-serif;
+      color: #2c2c2c;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      position: fixed;
+      top: 100px;
+      right: 1rem;
+      bottom: 20px;
+      width: 220px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      padding: 1.25rem;
+      overflow-y: auto;
+      z-index: 20;
+    }
+    .fixed-sidebar h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      color: #111111;
+    }
+    .fixed-sidebar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .fixed-sidebar li {
+      margin-bottom: 0.6rem;
+    }
+    .fixed-sidebar a {
+      display: block;
+      font-weight: 500;
+      color: #2c2c2c;
+      text-decoration: none;
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+    .fixed-sidebar a:hover {
+      background-color: #f1f5f9;
+      color: #007bff;
+    }
+    .fixed-sidebar a.active {
+      font-weight: 600;
+      color: #007bff;
+      background-color: rgba(0, 123, 255, 0.12);
+    }
 
-/* 1) Use a sleek font */
-.fixed-sidebar {
-  font-family: 'Poppins', sans-serif;   /* Or 'Inter', sans-serif */
-  color: #2c2c2c;                       /* Dark gray for link text */
-  font-size: 0.95rem;                   /* Slightly larger for readability */
-  line-height: 1.6;                     /* More breathing room between lines */
-
-  /* 2) Positioning (kept from your original) */
-  position: fixed;
-  top: 100px;
-  right: 1rem;
-  bottom: 20px;
-  width: 220px;                         /* A bit wider for comfort */
-
-  /* 3) Clean background & subtle shadow */
-  background-color: #ffffff;            /* Pure white background */
-  border-radius: 12px;                  /* Softer, rounder corners */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  padding: 1.25rem;                     /* A little extra padding all around */
-
-  overflow-y: auto;
-  z-index: 20;
-}
-
-/* 4) Sidebar heading style */
-.fixed-sidebar h2 {
-  font-size: 1.1rem;                    /* Slightly larger heading */
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.25rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  color: #111111;                       /* Almost-black for better contrast */
-}
-
-/* 5) Unordered list resets */
-.fixed-sidebar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* 6) Each list item: extra spacing */
-.fixed-sidebar li {
-  margin-bottom: 0.6rem;
-}
-
-/* 7) Link styling: bigger click area and modern hover */
-.fixed-sidebar a {
-  display: block;
-  font-weight: 500;
-  color: #2c2c2c;                       /* Dark gray text */
-  text-decoration: none;
-  padding: 0.4rem 0.6rem;               /* Comfortable padding per link */
-  border-radius: 6px;
-  transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-/* 8) Hover state: light accent background */
-.fixed-sidebar a:hover {
-  background-color: #f1f5f9;            /* Very light grayish-blue */
-  color: #007bff;                       /* Bootstrap’s default blue */
-}
-
-/* 9) Active/selected link state */
-.fixed-sidebar a.active {
-  font-weight: 600;
-  color: #007bff;                       /* Blue text */
-  background-color: rgba(0, 123, 255, 0.12);
-}
-
-/* 10) Custom scrollbar (light and thin) */
-.fixed-sidebar::-webkit-scrollbar {
-  width: 6px;
-}
-.fixed-sidebar::-webkit-scrollbar-track {
-  background: transparent;
-}
-.fixed-sidebar::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.12);
-  border-radius: 3px;
-}
-.fixed-sidebar::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-/* 11) Hide on tablet/mobile if needed (same as before) */
-
-  .main-content {
-    margin-right: 0;  /* Remove right margin on narrow screens */
-  }
-
-
-/* ─── 8) HIDE ON MOBILE ─── */
-
-
-</style>
-
-
-<!-- Auto-detect and set the cookie before Translate loads -->
-<script>
-  (function(){
-    var userLang = (navigator.language || navigator.userLanguage).substr(0,2);
-    document.cookie = "googtrans=/en/" + userLang + "; path=/";
-  })();
-</script>
-    <style>
-    /* ─── Constrain the shield wrapper to 48×48 px ─── */
+    /* Privacy banner styling */
     .privacy-banner__graphic {
-      flex-shrink: 0;        /* prevent it from stretching or compressing */
-      width: 48px;           /* force exactly 48px width */
-      height: 48px;          /* force exactly 48px height */
-      display: flex;         /* center contents inside this box */
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
       align-items: center;
       justify-content: center;
     }
-
-    /* ─── Make the inline SVG fill that 48×48 box ─── */
     .privacy-banner__graphic-svg {
-      width: 100%;           /* fill the parent’s width */
-      height: 100%;          /* fill the parent’s height */
-      display: block;        /* remove any unwanted inline whitespace */
-      fill: #D9534F;         /* shield color (red) */
-    }
-
-    /* ─── If you prefer using an <img> instead of inline SVG ─── */
-    /*
-    .privacy-banner__graphic-img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
       display: block;
+      fill: #D9534F;
     }
-    */
-
-    /* ─── (Optional) Some basic text styling so your card still looks nice: ─── */
     .privacy-banner {
       display: flex;
       align-items: flex-start;
-      gap: 1rem;                   /* 16px between shield and text */
-      max-width: 600px;            /* never wider than 600px */
-      margin: 1rem auto;           /* center horizontally, 16px vertical spacing */
-      padding: 1rem 1.25rem;       /* 16px top/bottom, 20px left/right */
-      background-color: #FEF7EC;   /* light cream */
-      border: 2px solid #F0E0C8;   /* subtle cream border */
-      border-radius: 0.75rem;      /* 12px rounded corners */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* gentle drop shadow */
+      gap: 1rem;
+      max-width: 600px;
+      margin: 1rem auto;
+      padding: 1rem 1.25rem;
+      background-color: #FEF7EC;
+      border: 2px solid #F0E0C8;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
     .privacy-banner__heading {
-      margin: 0 0 0.5rem 0;         /* no top margin, 8px bottom margin */
-      font-size: 1.25rem;           /* 20px (if root font size = 16px) */
-      font-weight: 600;             /* semi-bold */
+      margin: 0 0 0.5rem 0;
+      font-size: 1.25rem;
+      font-weight: 600;
       line-height: 1.2;
-      color: #222;                  /* dark gray/near black */
+      color: #222;
     }
     .privacy-banner__body {
       margin: 0;
-      font-size: 1rem;              /* 16px */
-      line-height: 1.5;             /* 24px line height */
-      color: #444;                  /* medium gray */
-    }
-    .privacy-banner__body strong {
-      color: #000;                  /* make <strong> stand out */
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #444;
     }
 
-    /* ─── Stack shield over text on very narrow screens: ─── */
-    @media (max-width: 400px) {
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+      .fixed-sidebar {
+        display: none;
+      }
+      .main-content {
+        margin-right: 0 !important;
+      }
+    }
+    @media (max-width: 600px) {
       .privacy-banner {
-        flex-direction: column;     /* shield on top, text below */
+        flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 0.5rem;                /* 8px gap on mobile */
-        padding: 0.75rem 1rem;      /* 12px top/bottom, 16px left/right */
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
       }
       .privacy-banner__graphic {
-        margin-bottom: 0.5rem;      /* extra 8px under shield */
+        margin-bottom: 0.5rem;
       }
       .privacy-banner__heading {
-        font-size: 1.125rem;        /* 18px on small screens */
+        font-size: 1.125rem;
       }
       .privacy-banner__body {
-        font-size: 0.94rem;         /* ≈15px on small screens */
+        font-size: 0.94rem;
       }
     }
   </style>
-<style>
-  /* ───────────────────────────────────────────────────────────────────
-     1) Hide the sidebar on tablets/mobiles (≤ 991 px) and reset margin
-  ─────────────────────────────────────────────────────────────────── */
-  
-      .main-content {
-    margin-right: 0;
-  }
-  .footer-fixed {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
 
-    /* match your actual footer’s height (~105px on desktop) */
-    padding: 1.5rem 0;        /* 1.5rem top + 1.5rem bottom = 48px */
-    font-size: 0.9rem;        /* as in your inline style */
-
-    background-color: #ffffff;     /* match page background */
-    border-top: 1px solid #e0e0e0;
-    color: #6c757d;                /* muted color */
-
-    z-index: 100; /* sit above other elements */
-  }
-
-  /* ───────────────────────────────────────────────────────────────────
-     3) Push page content up so nothing is hidden behind the fixed footer
-     (match footer’s computed height ≈ 105px on desktop)
-  ─────────────────────────────────────────────────────────────────── */
-  .main-content {
-    padding-bottom: 105px; /* adjust if your footer’s computed height changes */
-  }
-
-  /* ───────────────────────────────────────────────────────────────────
-     4) On small screens (≤ 600 px), make footer taller and update padding
-     so .main-content never scrolls under it
-     (footer height ≈ 96px on mobile)
-  ─────────────────────────────────────────────────────────────────── */
-  @media (max-width: 600px) {
-    .footer-fixed {
-      padding: 1.5rem 0;     /* still 48px padding, but text is smaller below */
-      font-size: 0.75rem;    /* so three <p> tags take ~36px instead of ~48px */
-    }
-    .main-content {
-      padding-bottom: 96px;  /* match new mobile footer height */
-    }
-  }
-</style>
-
-
+  <!-- Auto-detect and set cookie for Translate -->
+  <script>
+    (function(){
+      var userLang = (navigator.language || navigator.userLanguage).substr(0,2);
+      document.cookie = "googtrans=/en/" + userLang + "; path=/";
+    })();
+  </script>
 </head>
-  <body>
-    <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
+<body>
+  <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
+
+  <!-- SITE HEADER / NAVIGATION -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="/">Amazon Super Search</a>
-      <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center">
-          <!-- Help & How-To link -->
           <li class="nav-item">
-            <a class="nav-link fw-semibold" href="help.html">Help and How To Page</a>
+            <a class="nav-link fw-semibold" href="help.html">Help and How-To Page</a>
           </li>
-        <!-- Our Media link -->
-        <li class="nav-item">
-          <a class="nav-link fw-semibold" href="media.html">Our Media</a>
-        </li>
-      </ul>
-  <div class="text-center mt-3">
-    <a href="help.html"
-       class="btn btn-sm btn-primary">
-      Full Help &amp; How-To Page
-    </a>
-  </div>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="media.html">Our Media</a>
+          </li>
+        </ul>
+        <div class="text-center mt-3">
+          <a href="help.html" class="btn btn-sm btn-primary">Full Help and How-To Page</a>
+        </div>
+      </div>
     </div>
-  </div>
-</nav>
-    <!-- Moved Translate widget here -->
-<div class="container text-end mt-3 mb-2">
-  <div id="google_translate_element"></div>
-</div>
-    <main id="main">
-      <div class="main-content">
-<aside class="fixed-sidebar" aria-label="Quick How-To Links">
-  <h2>Quick How-To &amp; FAQs</h2>
-  <ul class="list-unstyled">
-    <li class="mb-2">
-      <h3>
-        <a href="help.html#find-best-amazon-deals">
-          How to Find the Best Amazon Deals Using Advanced Filters
-        </a>
-      </h3>
-    </li>
-    <li class="mb-2">
-      <h3>
-        <a href="help.html#find-under-20-prime-lightning-deals">
-          How to Find Under-$20 Prime-Eligible Lightning Deals on Amazon
-        </a>
-      </h3>
-    </li>
-  </ul>
-
-  <div class="text-center mt-3">
-    <a href="help.html"
-       class="btn btn-sm btn-primary">
-      Full Help &amp; How-To Page
-    </a>
-  </div>
-</aside>
-
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Amazon Super Search</li>
-    </ol>
   </nav>
 
-  <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
-   <div class="banner-inner">
-  <h1 class="site-title">
-    Amazon Super Search:<br>
-    Your Lightning Deal & Filter Hub
-  </h1>
-  <p class="lead">
-    Welcome to <strong>Amazon Super Search: Your Lightning Deal & Filter Hub</strong>—the only tool you need 
-    to uncover Amazon’s best in-stock lightning deals, apply advanced filters, and snag hidden coupons 
-    in seconds.
-  </p>
-</div>
-    
-   <section class="privacy-banner" role="note" aria-labelledby="privacy-heading">
-  <!-- Shield icon wrapper -->
-  <div class="privacy-banner__graphic">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-      focusable="false"
-      viewBox="0 0 24 24"
-      class="privacy-banner__graphic-svg"
-    >
-      <path
-        d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12
-           5.16-1.26 9-6.45 9-12V5l-9-3zm-1 9h2v2h-2zm0-4h2v2h-2z"
-      />
-    </svg>
+  <!-- TRANSLATE WIDGET -->
+  <div class="container text-end mt-3 mb-2">
+    <div id="google_translate_element"></div>
   </div>
 
-  <div class="privacy-banner__text">
-    <!-- Matching id for aria-labelledby -->
-    <h2 id="privacy-heading" class="privacy-banner__heading">
-      Your Privacy Matters
-    </h2>
-    <p class="privacy-banner__body">
-      We do <strong>not</strong> collect, store, or track any personal information—ever.
-      There is no login, no signup, and no tracking cookies on this site. All searches
-      are processed client-side and sent directly to Amazon through a secure redirect.
-    </p>
-  </div>
-</section>
-
-<div style="text-align: center; margin: 2rem auto; max-width: 600px;">
-  <p class="hero-subtitle">
-    <strong> Say goodbye to endless scrolling! Find exactly what you are searching for in 5 simple steps. </strong>
-  </p>
-
-  <p>
-    <strong class="hero-cta text-pulse">Start With Step 1 Below</strong>
-  </p>
-</div>
-      
-  <input type="hidden" name="i" value="">
-  <form id="amazon-search-form">
-    <div class="container text-start mb-4">
-      <h2>✅ Step 1: Start Your Search</h2>
-      <p class="text-muted mb-3">
-       Enter a product name, keyword, category, ASIN, ISBN, or UPC to search Amazon for in-stock deals, coupons, and tailored filter results.
-      </p>
-  
-
-
-  <div class="card p-3">
-    <div class="input-group">
-      <!-- Mic on left -->
-      <button class="btn btn-outline-secondary" type="button" id="voiceSearchBtn" aria-label="Activate voice search">
-  🎤
-</button>
-
-    
-      <!-- Then the text input -->
-      <input
-        type="text"
-        class="form-control"
-        id="mainSearchInput"
-        name="q"
-        placeholder="e.g. wireless headphones"
-        autocomplete="off"
-      >
-  </div> <!-- /.input-group -->
-    </div> <!-- /.card -->
-  </div> <!-- /.container -->
-  
-      <!-- Step 2 heading ABOVE the card box -->
-<div class="container text-start mb-4">
- <h2>✅ Step 2: Set Your Price Range (Optional)
- </h2>
-<p class="text-muted mb-3">
-  Choose your currency and the minimum and maximum price you’re willing to spend.
-</p>
-
-  <div class="card p-3">
-    <div class="row g-3 align-items-end">
-  <!-- Currency -->
-  <div class="col-12 col-lg-2">
-    <label class="form-label" for="currencySelect">Currency</label>
-    <select class="form-select" id="currencySelect" name="currency">
-      <option value="usd" selected>USD ($)</option>
-      <option value="eur">EUR (€)</option>
-      <option value="gbp">GBP (£)</option>
-      <option value="jpy">JPY (¥)</option>
-      <option value="inr">INR (₹)</option>
-    </select>
-  </div>
-<!-- Min with $ -->
-<div class="col-12 col-lg-5">
-  <label class="form-label">Minimum Price</label>
-  <div class="input-group">
-    <span class="input-group-text">$</span>
-    <input type="number" step="0.01" class="form-control" name="min-price" placeholder="Min">
-  </div>
-</div>
-
-<!-- Max with $ -->
-<div class="col-12 col-lg-5">
-  <label class="form-label">Maximum Price</label>
-  <div class="input-group">
-    <span class="input-group-text">$</span>
-    <input type="number" step="0.01" class="form-control" name="max-price" placeholder="Max">
-  </div>
-</div>
-</div>
-</div>
-</div>
-<!-- Step 3: Customize your deal filters -->
-<div class="container text-start mb-4">
-  <h2 class="mb-2">✅ Step 3: Select your deal filters (Optional)</h2>
-  <p class="text-muted mb-3">Pick a minimum discount, customer rating, and how you want the results sorted.</p>
-
- <div class="card p-3">
-  <div class="row g-3">
-    <!-- % Off -->
-    <div class="col-12 col-lg-4">
-      <label class="form-label" for="percentOff">% Off</label>
-      <select class="form-select" name="percent-off" id="percentOff">
-        <option value="">Any</option>
-        <option value="10">10% or more</option>
-        <option value="20">20% or more</option>
-        <option value="30">30% or more</option>
-        <option value="40">40% or more</option>
-        <option value="50">50% or more</option>
-        <option value="60">60% or more</option>
-        <option value="70">70% or more</option>
-        <option value="80">80% or more</option>
-      </select>
-    </div>
-
-    <!-- Customer Review -->
-<div class="col-12 col-lg-4">
-  <label class="form-label" for="minRating">
-    Customer Review
-  </label>
-  <select class="form-select" name="min-rating" id="minRating">
-    <option value="">Any</option>
-    <option value="1">1★ & up</option>
-    <option value="2">2★ & up</option>
-    <option value="3">3★ & up</option>
-    <option value="4">4★ & up</option>
-    <option value="5">5★ & up</option>
-  </select>
-</div>
-
-
-    <!-- Sort By -->
-    <div class="col-12 col-lg-4">
-      <label class="form-label" for="sort">Sort By</label>
-      <select class="form-select" name="sort" id="sort">
-        <option value="">Relevance</option>
-        <option value="price-asc-rank">Price: Low → High</option>
-        <option value="price-desc-rank">Price: High → Low</option>
-        <option value="review-rank">Avg. Customer Review</option>
-        <option value="date-desc-rank">Newest Arrivals</option>
-      </select>
-    </div>
-  </div>
-</div>
-</div>
-   
-  
-<!-- Step 4: Brand Filters -->
-<section class="container text-start mb-4">
-  <h2 class="mb-2">✅ Step 4: Choose a Brand or Brands (Optional)</h2>
-  <p class="text-muted mb-3">
-    Select one or more brands below to display results exclusively from those brands.
-  </p>
-
-  <div class="card border-success shadow-sm mb-4 p-3">
-    <div class="row g-3">
-
-      <!-- Include Brands -->
-      <div class="col-12 col-md-6">
-        <label class="form-label" for="brandInclude">Include Brands</label>
-        <input
-          type="text"
-          class="form-control"
-          name="brand-include"
-          id="brandInclude"
-          placeholder="e.g. Sony, LG"
-        >
-        <div class="form-check mt-2">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            name="include-only"
-            id="includeOnly"
-          >
-          <label class="form-check-label" for="includeOnly">
-            Match only these brands
-          </label>
+  <main id="main">
+    <div class="main-content">
+      <!-- FIXED SIDEBAR WITH FIRST TWO FAQ LINKS -->
+      <aside class="fixed-sidebar" aria-label="Quick How-To Links">
+        <h2>Quick How-To and FAQs</h2>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <h3>
+              <a href="help.html#find-best-amazon-deals" title="Jump to How to Find the Best Amazon Deals Using Advanced Filters">
+                How to Find the Best Amazon Deals Using Advanced Filters
+              </a>
+            </h3>
+          </li>
+          <li class="mb-2">
+            <h3>
+              <a href="help.html#find-under-20-prime-lightning-deals" title="Jump to How to Find Under-$20 Prime-Eligible Lightning Deals on Amazon">
+                How to Find Under-$20 Prime-Eligible Lightning Deals on Amazon
+              </a>
+            </h3>
+          </li>
+        </ul>
+        <div class="text-center mt-3">
+          <a href="help.html" class="btn btn-sm btn-primary">Full Help and How-To Page</a>
         </div>
-        <small class="form-text text-muted">
-          Enter one or more brands (comma-separated or via tagify).
-        </small>
+      </aside>
+
+      <!-- BREADCRUMB -->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Amazon Super Search</li>
+        </ol>
+      </nav>
+
+      <!-- SKIP LINK -->
+      <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+
+      <!-- HERO BANNER -->
+      <div class="banner-inner">
+        <h1 class="site-title">
+          Amazon Super Search:<br>
+          Your Lightning Deal and Filter Hub
+        </h1>
+        <p class="lead">
+          Welcome to <strong>Amazon Super Search: Your Lightning Deal and Filter Hub</strong>—the only tool you need
+          to uncover Amazon’s best in-stock lightning deals, apply advanced filters, and snag hidden coupons in seconds.
+        </p>
       </div>
+
+      <!-- PRIVACY BANNER -->
+      <section class="privacy-banner" role="note" aria-labelledby="privacy-heading">
+        <div class="privacy-banner__graphic">
+          <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewBox="0 0 24 24" class="privacy-banner__graphic-svg">
+            <path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-1 9h2v2h-2zm0-4h2v2h-2z"/>
+          </svg>
+        </div>
+        <div class="privacy-banner__body">
+          <h2 id="privacy-heading" class="privacy-banner__heading">Your Privacy Matters</h2>
+          <p class="privacy-banner__body">
+            We do <strong>not</strong> collect, store, or track any personal information—ever. There is no login,
+            no signup, and no tracking cookies on this site. All searches are processed client-side and sent
+            directly to Amazon through a secure redirect.
+          </p>
+        </div>
+      </section>
+
+      <!-- INTRODUCTION TEXT -->
+      <div style="text-align: center; margin: 2rem auto; max-width: 600px;">
+        <p class="hero-subtitle">
+          <strong>Say goodbye to endless scrolling! Find exactly what you are searching for in 5 simple steps.</strong>
+        </p>
+        <p>
+          <strong class="hero-cta text-pulse">Start With Step 1 Below</strong>
+        </p>
+      </div>
+
+      <!-- AMAZON SEARCH FORM -->
+      <input type="hidden" name="i" value="">
+      <form id="amazon-search-form">
+        <!-- STEP 1 -->
+        <div class="container text-start mb-4">
+          <h2>✅ Step 1: Start Your Search</h2>
+          <p class="text-muted mb-3">
+            Enter a product name, keyword, category, ASIN, ISBN, or UPC to search Amazon for in-stock deals, coupons, and tailored filter results.
+          </p>
+          <div class="card p-3">
+            <div class="input-group">
+              <button class="btn btn-outline-secondary" type="button" id="voiceSearchBtn" aria-label="Activate voice search">🎤</button>
+              <input
+                type="text"
+                class="form-control"
+                id="mainSearchInput"
+                name="q"
+                placeholder="e.g. wireless headphones"
+                autocomplete="off"
+                aria-label="Main search input"
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="container text-start mb-4">
+          <h2>✅ Step 2: Set Your Price Range (Optional)</h2>
+          <p class="text-muted mb-3">
+            Choose your currency and the minimum and maximum price you’re willing to spend.
+          </p>
+          <div class="card p-3">
+            <div class="row g-3 align-items-end">
+              <div class="col-12 col-lg-2">
+                <label class="form-label" for="currencySelect">Currency</label>
+                <select class="form-select" id="currencySelect" name="currency" aria-label="Select currency">
+                  <option value="usd" selected>USD ($)</option>
+                  <option value="eur">EUR (€)</option>
+                  <option value="gbp">GBP (£)</option>
+                  <option value="jpy">JPY (¥)</option>
+                  <option value="inr">INR (₹)</option>
+                </select>
+              </div>
+              <div class="col-12 col-lg-5">
+                <label class="form-label" for="minPrice">Minimum Price</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="minPriceAddon">$</span>
+                  <input
+                    type="number"
+                    step="0.01"
+                    class="form-control"
+                    id="minPrice"
+                    name="min-price"
+                    placeholder="Min"
+                    aria-describedby="minPriceAddon"
+                  >
+                </div>
+              </div>
+              <div class="col-12 col-lg-5">
+                <label class="form-label" for="maxPrice">Maximum Price</label>
+                <div class="input-group">
+                  <span class="input-group-text" id="maxPriceAddon">$</span>
+                  <input
+                    type="number"
+                    step="0.01"
+                    class="form-control"
+                    id="maxPrice"
+                    name="max-price"
+                    placeholder="Max"
+                    aria-describedby="maxPriceAddon"
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="container text-start mb-4">
+          <h2>✅ Step 3: Select Your Deal Filters (Optional)</h2>
+          <p class="text-muted mb-3">Pick a minimum discount, customer rating, and how you want the results sorted.</p>
+          <div class="card p-3">
+            <div class="row g-3">
+              <div class="col-12 col-lg-4">
+                <label class="form-label" for="percentOff">% Off</label>
+                <select class="form-select" id="percentOff" name="percent-off" aria-label="Select percentage off">
+                  <option value="">Any</option>
+                  <option value="10">10% or more</option>
+                  <option value="20">20% or more</option>
+                  <option value="30">30% or more</option>
+                  <option value="40">40% or more</option>
+                  <option value="50">50% or more</option>
+                  <option value="60">60% or more</option>
+                  <option value="70">70% or more</option>
+                  <option value="80">80% or more</option>
+                </select>
+              </div>
+              <div class="col-12 col-lg-4">
+                <label class="form-label" for="minRating">Customer Review</label>
+                <select class="form-select" id="minRating" name="min-rating" aria-label="Select minimum customer rating">
+                  <option value="">Any</option>
+                  <option value="1">1★ & up</option>
+                  <option value="2">2★ & up</option>
+                  <option value="3">3★ & up</option>
+                  <option value="4">4★ & up</option>
+                  <option value="5">5★ & up</option>
+                </select>
+              </div>
+              <div class="col-12 col-lg-4">
+                <label class="form-label" for="sortOrder">Sort By</label>
+                <select class="form-select" id="sortOrder" name="sort" aria-label="Select sort order">
+                  <option value="">Relevance</option>
+                  <option value="price-asc-rank">Price: Low → High</option>
+                  <option value="price-desc-rank">Price: High → Low</option>
+                  <option value="review-rank">Avg. Customer Review</option>
+                  <option value="date-desc-rank">Newest Arrivals</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <section class="container text-start mb-4">
+          <h2>✅ Step 4: Choose a Brand or Brands (Optional)</h2>
+          <p class="text-muted mb-3">Select one or more brands below to display results exclusively from those brands.</p>
+          <div class="card border-success shadow-sm mb-4 p-3">
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="brandInclude">Include Brands</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="brandInclude"
+                  name="brand-include"
+                  placeholder="e.g. Sony, LG"
+                  aria-label="Include brands"
+                >
+                <div class="form-check mt-2">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="includeOnly"
+                    name="include-only"
+                    aria-label="Match only these brands"
+                  >
+                  <label class="form-check-label" for="includeOnly">Match only these brands</label>
+                </div>
+                <small class="form-text text-muted">Enter one or more brands (comma-separated or via Tagify).</small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 5 -->
+        <section class="container text-start mb-4">
+          <h2>✅ Step 5: Choose from the following (Optional)</h2>
+          <p class="text-muted mb-3">Narrow down your search: choose Prime-only, Lightning Deals, Eco-Friendly, Free Shipping, In-Stock items, and coupons to find the best Amazon bargains.</p>
+          <div class="card mb-4 p-3">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+              <div class="form-check">
+                <input class="form-check-input" id="primeOnly" name="prime-only" type="checkbox" aria-label="Prime Only">
+                <label class="form-check-label" for="primeOnly">🤩 Prime Only</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox" aria-label="Lightning Deals">
+                <label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox" aria-label="Today's Deals">
+                <label class="form-check-label" for="todaysDeals">🔥 Today's Deals</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox" aria-label="Free Shipping">
+                <label class="form-check-label" for="freeShipping">🚚 Free Shipping</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="inStock" name="in-stock" type="checkbox" aria-label="In Stock">
+                <label class="form-check-label" for="inStock">📦 In Stock</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="coupons" name="coupons" type="checkbox" aria-label="Coupons">
+                <label class="form-check-label" for="coupons">🏷️ Coupons</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox" aria-label="Eco-Friendly">
+                <label class="form-check-label" for="ecoFriendlyToggle">♻️ Eco-Friendly</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox" aria-label="Biodegradable">
+                <label class="form-check-label" for="biodegradablePackaging">📦 Biodegradable</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox" aria-label="Vegan">
+                <label class="form-check-label" for="veganProducts">🌱 Vegan</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="organicProducts" name="organic-products" type="checkbox" aria-label="Organic">
+                <label class="form-check-label" for="organicProducts">🌿 Organic</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox" aria-label="Carbon-Neutral Delivery">
+                <label class="form-check-label" for="carbonNeutralDelivery">🚴 Carbon-Neutral Delivery</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox" aria-label="Cruelty-Free">
+                <label class="form-check-label" for="crueltyFreeToggle">🐰 Cruelty-Free</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="lowEmfDevices" name="low-emf-devices" type="checkbox" aria-label="Low EMF">
+                <label class="form-check-label" for="lowEmfDevices">📶 Low EMF</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="allergyFriendly" name="allergy-friendly" type="checkbox" aria-label="Allergy-Friendly">
+                <label class="form-check-label" for="allergyFriendly">🤧 Allergy-Friendly</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox" aria-label="Gifts for Her">
+                <label class="form-check-label" for="giftsForHer">🎀 Gifts for Her</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox" aria-label="Gifts for Him">
+                <label class="form-check-label" for="giftsForHim">👔 Gifts for Him</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="giftsForDad" name="gifts-for-dad" type="checkbox" aria-label="Gifts for Dad">
+                <label class="form-check-label" for="giftsForDad">👨 Gifts for Dad</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="giftsForMom" name="gifts-for-mom" type="checkbox" aria-label="Gifts for Mom">
+                <label class="form-check-label" for="giftsForMom">👩 Gifts for Mom</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox" aria-label="Gifts for Kids">
+                <label class="form-check-label" for="giftsForKids">🧒 Gifts for Kids</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox" aria-label="Birthday Gifts">
+                <label class="form-check-label" for="birthdayGifts">🎂 Birthday Gifts</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="anniversaryGifts" name="anniversary-gifts" type="checkbox" aria-label="Anniversary Gifts">
+                <label class="form-check-label" for="anniversaryGifts">💝 Anniversary Gifts</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox" aria-label="Holiday Gift Picks">
+                <label class="form-check-label" for="holidayGiftPicks">🎄 Holiday Gift Picks</label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 6 -->
+        <section class="container text-start mb-5">
+          <h2>✅ Step 6: Begin Your Amazon Search or Continue Below Using Advanced Settings</h2>
+          <p class="text-muted mb-3">You’re all set! Click the button below to view your filtered results directly on Amazon.</p>
+          <div class="text-center">
+            <div id="filter-warning" style="display:none; color: orange; font-weight: bold; padding: 10px;">
+              ⚠️ Too many filters may return no results. Try removing a few for better results.
+            </div>
+            <button 
+              id="search-button"
+              type="submit" 
+              form="amazon-search-form" 
+              class="btn btn-primary btn-lg w-100 pulse-glow"
+              aria-label="Search Amazon with selected filters"
+            >
+              🔍 Search Amazon
+            </button>
+            <p class="text-warning mt-2 text-center" style="font-weight: bold;">
+              Too many filters may return no results.
+            </p>
+          </div>
+        </section>
+
+        <!-- STEP 7 -->
+        <div class="container text-start mb-4">
+          <h2>✅ Step 7: Advanced Settings</h2>
+          <p class="text-muted mb-3">Explore advanced filters and tools to refine your search even further.</p>
+          <div class="card border-primary p-3">
+            <!-- Power-User Tools Static Box -->
+            <h3 class="mb-2">Power-User Tools</h3>
+            <div class="card p-3 mb-4">
+              <p><strong>🧠 How to Use Power-User Tools</strong><br>
+                This section gives you extra control to target exactly what you want—like using “search magic.” Here’s how:
+              </p>
+              <ul>
+                <li><strong>Enable Boolean Operators</strong><br>
+                  Check the box and then use <code>AND</code>, <code>OR</code>, <code>NOT</code> in your main search.</li>
+                <li><strong>Field Filters</strong><br>
+                  Type things like <code>field-brand:Sony</code> to only show that brand.</li>
+                <li><strong>ASIN / ISBN Lookup</strong><br>
+                  Paste a product’s ASIN or ISBN (e.g. <code>B08N5WRWNW</code>) to go directly to it.</li>
+              </ul>
+              <hr>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" name="enable-boolean" id="enableBoolean" aria-label="Enable Boolean Operators">
+                <label class="form-check-label" for="enableBoolean">Enable Boolean Operators</label>
+              </div>
+              <div class="mb-2">
+                <label class="form-label" for="fieldFilters">Field Filters</label>
+                <input type="text" class="form-control" name="field-filters" id="fieldFilters" placeholder="e.g. field-brand:Sony" aria-label="Field Filters">
+              </div>
+              <div class="mb-4">
+                <label class="form-label" for="directLookup">ASIN / ISBN Direct Lookup</label>
+                <input type="text" class="form-control" name="direct-lookup" id="directLookup" placeholder="Enter ASIN, ISBN or UPC" aria-label="ASIN or ISBN lookup">
+              </div>
+              <div class="coming-soon">
+                <p class="text-muted"><em>More filters coming soon:</em></p>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" disabled aria-label="Discount (%) from 90-Day Avg Price (Coming Soon)">
+                  <label class="form-check-label">Discount (%) from 90-Day Avg Price <small>(Coming Soon)</small></label>
+                </div>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" disabled aria-label="Coupon-Clippable Only (Coming Soon)">
+                  <label class="form-check-label">Coupon-Clippable Only <small>(Coming Soon)</small></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Deal-Hunter Goodies Static Box -->
+            <h3 class="mb-2">Deal-Hunter Goodies</h3>
+            <div class="card p-3 mb-4">
+              <p><strong>💸 How to Use Deal-Hunter Goodies</strong><br>
+                Spot real bargains and coupon opportunities using past price trends and open-box deals:
+              </p>
+              <ul>
+                <li><strong>Discount from 90-Day Avg</strong><br>
+                  Type a percentage (e.g. “25”) to see items at least that much below their three-month avg price.</li>
+                <li><strong>Coupon-Clippable Only</strong><br>
+                  Check to show only products with a visible Amazon coupon at checkout.</li>
+                <li><strong>Warehouse / Open-Box</strong><br>
+                  Check to include gently used or open-box items sold by Amazon at a discount.</li>
+                <li><strong>Discount from 30/60/90-Day Avg</strong><br>
+                  Enter percentages to compare against one- or two-month averages.</li>
+                <li><strong>Max Daily Price Volatility</strong><br>
+                  Set a threshold (e.g. “5”) to hide listings whose price jumps wildly day-to-day.</li>
+              </ul>
+              <hr>
+              <div class="mb-3">
+                <label class="form-label" for="priceDrop90">Discount (%) from 90-Day Avg Price</label>
+                <input type="number" class="form-control" name="price-drop" id="priceDrop90" placeholder="e.g. 20" aria-label="Discount from 90-day avg">
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" name="coupon-only" id="couponOnly" aria-label="Coupon-Clippable Only">
+                <label class="form-check-label" for="couponOnly">Coupon-Clippable Only</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" name="warehouse-refurb" id="warehouseRefurb" aria-label="Warehouse / Open-Box">
+                <label class="form-check-label" for="warehouseRefurb">Warehouse / Open-Box</label>
+              </div>
+              <div class="row g-3 mt-3">
+                <div class="col-6 col-md-3">
+                  <label class="form-label" for="discount30">Discount (%) from 30-Day Avg</label>
+                  <input type="number" min="0" class="form-control" name="below-avg-30" id="discount30" placeholder="e.g. 20" aria-label="Discount from 30-day avg">
+                </div>
+                <div class="col-6 col-md-3">
+                  <label class="form-label" for="discount60">Discount (%) from 60-Day Avg</label>
+                  <input type="number" min="0" class="form-control" name="below-avg-60" id="discount60" placeholder="e.g. 15" aria-label="Discount from 60-day avg">
+                </div>
+                <div class="col-6 col-md-3">
+                  <label class="form-label" for="discount90">Discount (%) from 90-Day Avg</label>
+                  <input type="number" min="0" class="form-control" name="below-avg-90" id="discount90" placeholder="e.g. 10" aria-label="Discount from 90-day avg">
+                </div>
+                <div class="col-6 col-md-3">
+                  <label class="form-label" for="volatility7">Max Daily Price Volatility (%)</label>
+                  <input type="number" min="0" class="form-control" name="max-volatility-7" id="volatility7" placeholder="e.g. 5" aria-label="Max daily price volatility">
+                </div>
+              </div>
+              <div class="coming-soon mt-4">
+                <p class="text-muted"><em>More advanced goodies on the way:</em></p>
+                <div class="form-check mb-2">
+                  <input class="form-check-input" type="checkbox" disabled aria-label="Price-Drop Alerts (Coming Soon)">
+                  <label class="form-check-label">Price-Drop Alerts <small>(Coming Soon)</small></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Personalization & AI-Driven Static Box -->
+            <h3 class="mb-2">Personalization & AI-Driven</h3>
+            <div class="card p-3 mb-4">
+              <p>We’re cooking up visual and voice input—stay tuned!</p>
+            </div>
+
+            <!-- Visual & Voice Interfaces Static Box -->
+            <h3 class="mb-2">Visual & Voice Interfaces <small class="text-muted">(coming soon)</small></h3>
+            <div class="card p-3 mb-4">
+              <p>We’re cooking up visual and voice input—stay tuned!</p>
+            </div>
+
+            <!-- Niche & Lifestyle Filters Static Box -->
+            <h3 class="mb-2">Niche & Lifestyle Filters <small class="text-muted">(coming soon)</small></h3>
+            <div class="card p-3">
+              <p>Filters for your hobbies and lifestyles are on the way.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADDITIONAL SEARCH BUTTON BELOW -->
+        <h4 class="mb-2">Search Amazon</h4>
+        <p class="text-muted mb-3">Click below to run your current filter settings without scrolling.</p>
+        <div class="text-center mb-5">
+          <button type="submit" form="amazon-search-form" class="btn btn-success btn-lg w-100 pulse-glow" aria-label="Search Amazon">
+            🔍 Search Amazon
+          </button>
+          <p class="text-warning mt-2 text-center" style="font-weight: bold;">
+            Too many filters may return no results.
+          </p>
+        </div>
+      </form>
+
+      <!-- FAQ SECTION -->
+      <section id="faq" class="container my-5">
+        <h4 class="mb-4">🔍 Frequently Asked Questions</h4>
+        <div class="accordion" id="faqAccordion">
+          <!-- Q1 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                How do I use Amazon Super Search to find in-stock lightning deals?
+              </button>
+            </h5>
+            <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                To find in-stock lightning deals, enter your product keyword or ASIN in the search box, check “⚡ Lightning Deals” and “📦 In Stock” in Step 5, then click “🔍 Search Amazon.” This filters Amazon results to show only active, in-stock lightning deals.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                Can I sort Amazon results by 90-day price drop percentage?
+              </button>
+            </h5>
+            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes. In Step 3, use “Sort By → Date: Newest Arrivals,” then expand “Deal-Hunter Goodies” and enter a value (e.g., “20”) under “Discount (%) from 90-Day Avg Price.” After clicking “🔍 Search Amazon,” results are sorted by items at least 20% below their 90-day average price.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                How do I filter for Prime-only and free shipping deals?
+              </button>
+            </h5>
+            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                In Step 5, simply check “🤩 Prime Only” to view Prime-eligible listings and “🚚 Free Shipping” to view items with free shipping. These combined filters help you quickly find Amazon Prime deals at no extra shipping cost.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                What’s the best way to search by brand or exclude specific brands on Amazon?
+              </button>
+            </h5>
+            <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Go to Step 4, type one or more brands in “Include Brands,” and toggle “Match only these brands” to restrict results to those brands. To exclude brands, expand “Power-User Tools,” enable Boolean operators, and use <code>NOT field-brand:BrandName</code> in the main search box.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                How can I discover hidden Amazon coupon codes before checkout?
+              </button>
+            </h5>
+            <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Check the “🏷️ Coupons” box in Step 5 to show only listings with available coupons. You can also enable “🔍 Field Filters” in Step 7 and enter <code>field-coupon:yes</code> to narrow results further. This surfaces products with hidden coupons that appear during checkout.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading6">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                What advanced Boolean operators can I use for deeper Amazon search filtering?
+              </button>
+            </h5>
+            <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                In “Power-User Tools,” check “Enable Boolean Operators.” You can combine terms like <code>headphones AND noise-canceling NOT earbuds</code> in the main search box. Use <code>OR</code> for alternate keywords (e.g., <code>Sony OR Bose</code>), and <code>field-brand:BrandName</code> to pinpoint specific fields.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading7">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
+                How do I use past price trends to find the best value on Amazon?
+              </button>
+            </h5>
+            <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Expand “Deal-Hunter Goodies,” enter a percentage under “Discount (%) from 30-Day Avg” or “Discount (%) from 60-Day Avg,” and click search. You’ll see products priced at least that much below their 30- or 60-day average. Combine with “Sort By → Avg. Customer Review” for highly rated, deeply discounted items.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q8 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading8">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8">
+                Can I look up a product directly by ASIN, ISBN, or UPC?
+              </button>
+            </h5>
+            <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faqHeading8" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes. In “Power-User Tools,” locate “ASIN / ISBN Direct Lookup,” paste any valid ASIN, ISBN, or UPC (e.g., B08N5WRWNW), then click “🔍 Search Amazon.” This takes you directly to the specific product’s Amazon page.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q9 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading9">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse9" aria-expanded="false" aria-controls="faqCollapse9">
+                How do I filter for eco-friendly, vegan, and sustainable products?
+              </button>
+            </h5>
+            <div id="faqCollapse9" class="accordion-collapse collapse" aria-labelledby="faqHeading9" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                In Step 5, check “♻️ Eco-Friendly,” “🌱 Vegan,” or “🌿 Organic.” You can also type <code>eco-friendly</code> or <code>vegan</code> as keywords in the main search box. This highlights Amazon listings with sustainability certifications or product attributes.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q10 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading10">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse10" aria-expanded="false" aria-controls="faqCollapse10">
+                What tips can help me avoid out-of-stock items and sold-out deals?
+              </button>
+            </h5>
+            <div id="faqCollapse10" class="accordion-collapse collapse" aria-labelledby="faqHeading10" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Always check “📦 In Stock” in Step 5. For real-time alerts, enable voice search and ask “Are there any in-stock lightning deals for [product]?” Also, sort by “Newest Arrivals” in Step 3 to see newly restocked items first. Finally, combine “In Stock” with “Prime Only” to get Prime-fulfilled products that ship immediately.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- “About” Section -->
+      <section id="about-amazon-super-search" class="container my-5">
+        <h4 class="mb-3">🧭 What is Amazon Super Search and How Does It Help You?</h4>
+        <p>
+          Amazon Super Search is a powerful advanced Amazon deal filter that helps you find
+          best Amazon in-stock deals, hidden coupon codes, coupon-enabled listings, 
+          and Prime-only product search results—faster than ever before. Whether you’re hunting for
+          <em>wireless earbuds under $50 with free shipping</em>, <em>eco-friendly home goods on Amazon</em>, or <em>top-rated gadgets under budget</em>,
+          our tool lets you fine-tune every search with ease.
+        </p>
+
+        <h4 class="mt-4">🔍 How to Use It:</h4>
+        <ul>
+          <li>Enter your product keywords, ASIN, or UPC.</li>
+          <li>Use our filter Amazon by past price trends, discount percentage tracker, brand filter, and customer rating filter.</li>
+          <li>
+            Click “Search Amazon” to instantly view your custom results.
+            <em>All products display on Amazon’s official site—this is purely an advanced Amazon search tool.</em>
+          </li>
+          <li>Toggle “Coupons Available” to become your own Amazon coupon finder.</li>
+          <li>Zero in on your budget with our price range filter.</li>
+        </ul>
+
+        <h4 class="mt-4">💡 Why It Works:</h4>
+        <p>
+          With over 20 smart filters, including lightning deals finder, free returns filter,
+          Amazon’s Choice selector, and deep discount alerts, you can:
+        </p>
+        <ul>
+          <li>Avoid endless scrolling</li>
+          <li>Spot genuine markdowns—not fake deals</li>
+          <li>Uncover coupons Amazon hides at checkout</li>
+          <li>Save time and money with precise Amazon search filters</li>
+        </ul>
+
+        <h4 class="mt-4">🛡️ Your Privacy Matters:</h4>
+        <p>
+          We do not collect, store, or track any personal information—ever. There is 
+          no login, no signup, and no tracking cookies on this site. All searches are 
+          processed client-side and sent directly to Amazon through a secure redirect.
+        </p>
+      </section>
+
+      <!-- Share With Friends Section -->
+      <section class="container text-center my-5">
+        <h4 class="mb-3">📣 Share With Friends</h4>
+        <p class="text-muted mb-4">Know someone who loves Amazon deals? Let them in on the secret.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a class="btn btn-primary btn-sm"
+             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.amazonsupersearch.com"
+             target="_blank" rel="noopener noreferrer">
+            Share on Facebook
+          </a>
+          <a class="btn btn-info btn-sm text-white"
+             href="https://twitter.com/intent/tweet?text=Check%20out%20this%20tool:%20https%3A%2F%2Fwww.amazonsupersearch.com"
+             target="_blank" rel="noopener noreferrer">
+            Share on Twitter
+          </a>
+          <a class="btn btn-secondary btn-sm"
+             href="mailto:?subject=Amazon%20Super%20Search&body=Find%20better%20Amazon%20deals%20with%20this%20tool:%20https%3A%2F%2Fwww.amazonsupersearch.com%2F"
+             aria-label="Share via Email">
+            Share via Email
+          </a>
+          <a class="btn btn-success btn-sm"
+             href="sms:?&body=Check%20this%20out:%20https%3A%2F%2Fwww.amazonsupersearch.com%2F"
+             aria-label="Share via Text">
+            Share via Text
+          </a>
+        </div>
+        <div class="mt-3">
+          <button id="copyLinkBtn" class="btn btn-dark btn-sm" aria-label="Copy page link">Copy Page Link</button>
+        </div>
+      </section>
     </div>
-  </div>
-</section>
+  </main>
 
-
-
-<section class="container text-start mb-4">
-<h2 class="mb-2">
-  ✅ Step 5: Choose from the following (Optional)
-</h2>
-<p class="text-muted mb-3">
-  Narrow down your search: choose Prime-only, Lightning Deals, Eco-Friendly, Free Shipping, In-Stock items, and coupons to find the best Amazon bargains.
-</p>
-  <div class="card mb-4 p-3">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-
-      <!-- 🔍 Core Filters -->
-      <div class="form-check"><input class="form-check-input" id="primeOnly" name="prime-only" type="checkbox"><label class="form-check-label" for="primeOnly">🤩 Prime Only</label></div>
-      <div class="form-check"><input class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox"><label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label></div>
-      <div class="form-check"><input class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox"><label class="form-check-label" for="todaysDeals">🔥 Today's Deals</label></div>
-      <div class="form-check"><input class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox"><label class="form-check-label" for="freeShipping">🚚 Free Shipping</label></div>
-      <div class="form-check"><input class="form-check-input" id="inStock" name="in-stock" type="checkbox"><label class="form-check-label" for="inStock">📦 In Stock</label></div>
-      <div class="form-check"><input class="form-check-input" id="coupons" name="coupons" type="checkbox"><label class="form-check-label" for="coupons">🏷️ Coupons</label></div>
-
-      <!-- 🌿 Eco & Ethical -->
-      <div class="form-check"><input class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox"><label class="form-check-label" for="ecoFriendlyToggle">♻️ Eco-Friendly</label></div>
-      <div class="form-check"><input class="form-check-input" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox"><label class="form-check-label" for="biodegradablePackaging">📦 Biodegradable</label></div>
-      <div class="form-check"><input class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox"><label class="form-check-label" for="veganProducts">🌱 Vegan</label></div>
-      <div class="form-check"><input class="form-check-input" id="organicProducts" name="organic-products" type="checkbox"><label class="form-check-label" for="organicProducts">🌿 Organic</label></div>
-      <div class="form-check"><input class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox"><label class="form-check-label" for="carbonNeutralDelivery">🚴 Carbon-Neutral Delivery</label></div>
-      <div class="form-check"><input class="form-check-input" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox"><label class="form-check-label" for="crueltyFreeToggle">🐰 Cruelty-Free</label></div>
-      <div class="form-check"><input class="form-check-input" id="lowEmfDevices" name="low-emf-devices" type="checkbox"><label class="form-check-label" for="lowEmfDevices">📶 Low EMF</label></div>
-      <div class="form-check"><input class="form-check-input" id="allergyFriendly" name="allergy-friendly" type="checkbox"><label class="form-check-label" for="allergyFriendly">🤧 Allergy-Friendly</label></div>
-
-      <!-- 🎁 Gift Filters -->
-      <div class="form-check"><input class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox"><label class="form-check-label" for="giftsForHer">🎀 Gifts for Her</label></div>
-      <div class="form-check"><input class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox"><label class="form-check-label" for="giftsForHim">👔 Gifts for Him</label></div>
-      <div class="form-check"><input class="form-check-input" id="giftsForDad" name="gifts-for-dad" type="checkbox"><label class="form-check-label" for="giftsForDad">👨 Gifts for Dad</label></div>
-      <div class="form-check"><input class="form-check-input" id="giftsForMom" name="gifts-for-mom" type="checkbox"><label class="form-check-label" for="giftsForMom">👩 Gifts for Mom</label></div>
-      <div class="form-check"><input class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox"><label class="form-check-label" for="giftsForKids">🧒 Gifts for Kids</label></div>
-      <div class="form-check"><input class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox"><label class="form-check-label" for="birthdayGifts">🎂 Birthday Gifts</label></div>
-      <div class="form-check"><input class="form-check-input" id="anniversaryGifts" name="anniversary-gifts" type="checkbox"><label class="form-check-label" for="anniversaryGifts">💝 Anniversary Gifts</label></div>
-      <div class="form-check"><input class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox"><label class="form-check-label" for="holidayGiftPicks">🎄 Holiday Gift Picks</label></div>
-
-      <!-- 🧠 Mindfulness & Lifestyle -->
-      <div class="form-check"><input class="form-check-input" id="mindfulnessGear" name="meditation-mindfulness-gear" type="checkbox"><label class="form-check-label" for="mindfulnessGear">🧘 Mindfulness Gear</label></div>
-
-      <!-- 💰 Value & Deal Type -->
-      <div class="form-check"><input class="form-check-input" id="valuePerOunce" name="best-value-per-ounce" type="checkbox"><label class="form-check-label" for="valuePerOunce">📊 Best Value per Ounce</label></div>
-      <div class="form-check"><input class="form-check-input" id="mostReviewed" name="most-reviewed" type="checkbox"><label class="form-check-label" for="mostReviewed">⭐ Most Reviewed</label></div>
-      <div class="form-check"><input class="form-check-input" id="steadyPrice" name="steady-price-no-spike" type="checkbox"><label class="form-check-label" for="steadyPrice">📉 Steady Price</label></div>
-
-      <!-- 🏪 Ownership & Source -->
-      <div class="form-check"><input class="form-check-input" id="fbaOnly" name="fba-only" type="checkbox"><label class="form-check-label" for="fbaOnly">🏢 Shipped by Amazon</label></div>
-      <div class="form-check"><input class="form-check-input" id="subscribeSave" name="subscribe-save" type="checkbox"><label class="form-check-label" for="subscribeSave">🔁 Subscribe & Save</label></div>
-      <div class="form-check"><input class="form-check-input" id="smallBusiness" name="small-business" type="checkbox"><label class="form-check-label" for="smallBusiness">🏪 Small Business</label></div>
-      <div class="form-check"><input class="form-check-input" id="amazonChoice" name="amazon-choice" type="checkbox"><label class="form-check-label" for="amazonChoice">🏅 Amazon’s Choice</label></div>
-      <div class="form-check"><input class="form-check-input" id="amazonBrands" name="amazon-brands" type="checkbox"><label class="form-check-label" for="amazonBrands">🛍️ Amazon Brands</label></div>
-      <div class="form-check"><input class="form-check-input" id="freeReturns" name="free-returns" type="checkbox"><label class="form-check-label" for="freeReturns">↩️ Free Returns</label></div>
-      <div class="form-check"><input class="form-check-input" id="crowdfundedOrigins" name="crowdfunded-origins" type="checkbox"><label class="form-check-label" for="crowdfundedOrigins">🚀 Crowdfunded Origins</label></div>
-    </div> 
-  </div>  
-</section>
-
-
-  <!-- Step 6: Search Amazon -->
-<section class="container text-start mb-5">
-  <h2 class="mb-2">
-    ✅ Step 6: Begin Your Amazon Search or Continue Below Using Advanced Settings
-  </h2>
-  <p class="text-muted mb-3">
-    You’re all set! Click the button below to view your filtered results directly on Amazon.
-  </p>
-  <div class="text-center">
-    <div id="filter-warning" style="display:none; color: orange; font-weight: bold; padding: 10px;">
-  ⚠️ Too many filters may return no results. Try removing a few for better results.
-</div>
-
-   <button 
-  id="search-button"
-  type="submit" 
-  form="amazon-search-form" 
-  class="btn btn-primary btn-lg w-100 pulse-glow"
-  aria-label="Search Amazon with selected filters">
-  🔍 Search Amazon
-</button>
-
-    <p class="text-warning mt-2 text-center" style="font-weight: bold;">
-   Too many filters may return no results.
-</p>
-  </div>
-</section>
-
-<!-- Step 7: Advanced Settings Wrapped in Card -->
-<div class="container text-start mb-4">
-  <h2 class="mb-2">✅ Step 7: Advanced Settings</h2>
-  <p class="text-muted mb-3">
-    Explore advanced filters and tools to refine your search even further.
-  </p>
-  <div class="card border-primary p-3">
-    <!-- Power-User Tools Static Box -->
-    <h3 class="mb-2">Power-User Tools</h3>
-    <div class="card p-3 mb-4">
-      <!-- How-to instructions -->
-      <p><strong>🧠 How to Use Power-User Tools</strong><br>
-         This section gives you extra control to target exactly what you want—like using “search magic.” Here’s how:</p>
-      <ul>
-        <li><strong>Enable Boolean Operators</strong><br>
-          Check the box and then use <code>AND</code>, <code>OR</code>, <code>NOT</code> in your main search.</li>
-        <li><strong>Field Filters</strong><br>
-          Type things like <code>field-brand:Sony</code> to only show that brand.</li>
-        <li><strong>ASIN / ISBN Lookup</strong><br>
-          Paste a product’s ASIN or ISBN (e.g. <code>B08N5WRWNW</code>) to go directly to it.</li>
-      </ul>
-      <hr>
-
-      <!-- LIVE features -->
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="checkbox" name="enable-boolean" id="enableBoolean">
-        <label class="form-check-label" for="enableBoolean">
-          Enable Boolean Operators
-        </label>
-      </div>
-
-      <div class="mb-2">
-        <label class="form-label" for="field-filters">Field Filters</label>
-        <input type="text" class="form-control" name="field-filters" id="field-filters" placeholder="e.g. field-brand:Sony">
-      </div>
-
-      <div class="mb-4">
-        <label class="form-label" for="direct-lookup">ASIN / ISBN Direct Lookup</label>
-        <input type="text" class="form-control" name="direct-lookup" id="direct-lookup" placeholder="Enter ASIN, ISBN or UPC">
-      </div>
-
-      <!-- COMING SOON: everything below -->
-      <div class="coming-soon">
-        <p class="text-muted"><em>More filters coming soon:</em></p>
-        <div class="form-check mb-2">
-          <input class="form-check-input" type="checkbox" disabled>
-          <label class="form-check-label">
-            Discount (%) from 90-Day Avg Price <small>(Coming Soon)</small>
-          </label>
-        </div>
-        <div class="form-check mb-2">
-          <input class="form-check-input" type="checkbox" disabled>
-          <label class="form-check-label">
-            Coupon-Clippable Only <small>(Coming Soon)</small>
-          </label>
-        </div>
-      </div>
-    </div>
-
-    <!-- Deal-Hunter Goodies Static Box -->
-    <h3 class="mb-2">Deal-Hunter Goodies</h3>
-    <div class="card p-3 mb-4">
-      <!-- How-to instructions -->
-      <p><strong>💸 How to Use Deal-Hunter Goodies</strong><br>
-         Spot real bargains and coupon opportunities using past price trends and open-box deals:</p>
-      <ul>
-        <li><strong>Discount from 90-Day Avg</strong><br>
-          Type a percentage (e.g. “25”) to see items at least that much below their three-month avg price.</li>
-        <li><strong>Coupon-Clippable Only</strong><br>
-          Check to show only products with a visible Amazon coupon at checkout.</li>
-        <li><strong>Warehouse / Open-Box</strong><br>
-          Check to include gently used or open-box items sold by Amazon at a discount.</li>
-        <li><strong>Discount from 30/60/90-Day Avg</strong><br>
-          Enter percentages to compare against one- or two-month averages.</li>
-        <li><strong>Max Daily Price Volatility</strong><br>
-          Set a threshold (e.g. “5”) to hide listings whose price jumps wildly day-to-day.</li>
-      </ul>
-      <hr>
-
-      <!-- LIVE features -->
-      <div class="mb-3">
-        <label class="form-label">Discount (%) from 90-Day Avg Price</label>
-        <input type="number" class="form-control" name="price-drop" placeholder="e.g. 20">
-      </div>
-
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="checkbox" name="coupon-only" id="couponOnly">
-        <label class="form-check-label" for="couponOnly">
-          Coupon-Clippable Only
-        </label>
-      </div>
-
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="checkbox" name="warehouse-refurb" id="warehouseRefurb">
-        <label class="form-check-label" for="warehouseRefurb">
-          Warehouse / Open-Box
-        </label>
-      </div>
-
-      <div class="row g-3 mt-3">
-        <div class="col-6 col-md-3">
-          <label class="form-label">Discount (%) from 30-Day Avg</label>
-          <input type="number" min="0" class="form-control" name="below-avg-30" placeholder="e.g. 20">
-        </div>
-        <div class="col-6 col-md-3">
-          <label class="form-label">Discount (%) from 60-Day Avg</label>
-          <input type="number" min="0" class="form-control" name="below-avg-60" placeholder="e.g. 15">
-        </div>
-        <div class="col-6 col-md-3">
-          <label class="form-label">Discount (%) from 90-Day Avg</label>
-          <input type="number" min="0" class="form-control" name="below-avg-90" placeholder="e.g. 10">
-        </div>
-        <div class="col-6 col-md-3">
-          <label class="form-label">Max Daily Price Volatility (%)</label>
-          <input type="number" min="0" class="form-control" name="max-volatility-7" placeholder="e.g. 5">
-        </div>
-      </div>
-
-      <!-- COMING SOON: future goodies -->
-      <div class="coming-soon mt-4">
-        <p class="text-muted"><em>More advanced goodies on the way:</em></p>
-        <div class="form-check mb-2">
-          <input class="form-check-input" type="checkbox" disabled>
-          <label class="form-check-label">
-            Price-Drop Alerts <small>(Coming Soon)</small>
-          </label>
-        </div>
-      </div>
-    </div>
-
-    <!-- Personalization & AI-Driven Static Box -->
-    <h3 class="mb-2">Personalization & AI-Driven</h3>
-    <div class="card p-3 mb-4">
-      <p>We’re cooking up visual & voice input—stay tuned!</p>
-    </div>
-
-    <!-- Visual & Voice Interfaces Static Box -->
-    <h3 class="mb-2">Visual & Voice Interfaces <small class="text-muted">(coming soon)</small></h3>
-    <div class="card p-3 mb-4">
-      <p>We’re cooking up visual & voice input—stay tuned!</p>
-    </div>
-
-    <!-- Niche & Lifestyle Filters Static Box -->
-    <h3 class="mb-2">Niche & Lifestyle Filters <small class="text-muted">(coming soon)</small></h3>
-    <div class="card p-3">
-      <p>Filters for your hobbies &amp; lifestyles are on the way.</p>
-    </div>
-  </div>
-</div>
-
-  <h4 class="mb-2"> Search Amazon</h4>
-  <p class="text-muted mb-3">
-    Click below to run your current filter settings without scrolling.
-  </p>
-  <div class="text-center">
-    <button
-      type="submit"
-      form="amazon-search-form"
-      class="btn btn-success btn-lg w-100 pulse-glow">
-      🔍 Search Amazon
-    </button>
-    <p class="text-warning mt-2 text-center" style="font-weight: bold;">
-   Too many filters may return no results.
-</p>
-
-  </div>
-  </form>
-<section id="faq" class="container my-5">
-  <h4 class="mb-4">🔍 Frequently Asked Questions</h4>
-  <div class="accordion" id="faqAccordion">
-
-    <!-- Q1 -->
-    <div class="accordion-item">
-      <h5 class="accordion-header" id="faqHeading1">
-        <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapse1"
-                aria-expanded="false" aria-controls="faqCollapse1">
-          How do I use Amazon Super Search to find in-stock lightning deals?
-        </button>
-      </h5>
-      <div id="faqCollapse1" class="accordion-collapse collapse"
-           aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          To find in-stock lightning deals, enter your product keyword or ASIN in the search box, check “⚡ Lightning Deals” and “📦 In Stock” in Step 5, then click “🔍 Search Amazon.” This filters Amazon results to show only active, in-stock lightning deals.
-        </div>
-      </div>
-    </div>
-
-    <!-- Q2 -->
-    <div class="accordion-item">
-      <h5 class="accordion-header" id="faqHeading2">
-        <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapse2"
-                aria-expanded="false" aria-controls="faqCollapse2">
-          Can I sort Amazon results by 90-day price drop percentage?
-        </button>
-      </h5>
-      <div id="faqCollapse2" class="accordion-collapse collapse"
-           aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Yes. In Step 3, use “Sort By → Date: Newest Arrivals,” then expand “Deal-Hunter Goodies” and enter a value (e.g., “20”) under “Discount (%) from 90-Day Avg Price.” After clicking “🔍 Search Amazon,” results are sorted by items at least 20% below their 90-day average price.
-        </div>
-      </div>
-    </div>
-
-    <!-- Q3 -->
-    <div class="accordion-item">
-      <h5 class="accordion-header" id="faqHeading3">
-        <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapse3"
-                aria-expanded="false" aria-controls="faqCollapse3">
-          How do I filter for Prime-only and free shipping deals?
-        </button>
-      </h5>
-      <div id="faqCollapse3" class="accordion-collapse collapse"
-           aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          In Step 5, simply check “🤩 Prime Only” to view Prime-eligible listings and “🚚 Free Shipping” to view items with free shipping. These combined filters help you quickly find Amazon Prime deals at no extra shipping cost.
-        </div>
-      </div>
-    </div>
-
-    <!-- Q4 -->
-    <div class="accordion-item">
-      <h5 class="accordion-header" id="faqHeading4">
-        <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapse4"
-                aria-expanded="false" aria-controls="faqCollapse4">
-          What’s the best way to search by brand or exclude specific brands on Amazon?
-        </button>
-      </h5>
-      <div id="faqCollapse4" class="accordion-collapse collapse"
-           aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Go to Step 4, type one or more brands in “Include Brands,” and toggle “Match only these brands” to restrict results to those brands. To exclude brands, expand “Power-User Tools,” enable Boolean operators, and use `NOT field-brand:BrandName` in the main search box.
-        </div>
-      </div>
-    </div>
-
-    <!-- Q5 -->
-    <div class="accordion-item">
-      <h5 class="accordion-header" id="faqHeading5">
-        <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapse5"
-                aria-expanded="false" aria-controls="faqCollapse5">
-          How can I discover hidden Amazon coupon codes before checkout?
-        </button>
-      </h5>
-      <div id="faqCollapse5" class="accordion-collapse collapse"
-           aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Check the “🏷️ Coupons” box in Step 5 to show only listings with available coupons. You can also enable “🔍 Field Filters” in Step 7 and enter `field-coupon:yes` to narrow results further. This surfaces products with hidden coupons that appear during checkout.
-        </div>
-      </div>
-    </div>
-
-    <!-- Q6 -->
-    <div class="accordion-item">
-      <h5 class="accordion-header" id="faqHeading6">
-        <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapse6"
-                aria-expanded="false" aria-controls="faqCollapse6">
-          What advanced Boolean operators can I use for deeper Amazon search filtering?
-        </button>
-      </h5>
-      <div id="faqCollapse6" class="accordion-collapse collapse"
-           aria-labelledby="faqHeading6" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          In “Power-User Tools,” check “Enable Boolean Operators.” You can combine terms like `headphones AND noise-canceling NOT earbuds` in the main search box. Use `OR` for alternate keywords (e.g., `Sony OR Bose`), and `field-brand:BrandName` to pinpoint specific fields.
-        </div>
-      </div>
-    </div>
-
-    <!-- Q7 -->
-    <div class="accordion-item">
-      <h5 class="accordion-header" id="faqHeading7">
-        <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapse7"
-                aria-expanded="false" aria-controls="faqCollapse7">
-          How do I use past price trends to find the best value on Amazon?
-        </button>
-      </h5>
-      <div id="faqCollapse7" class="accordion-collapse collapse"
-           aria-labelledby="faqHeading7" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Expand “Deal-Hunter Goodies,” enter a percentage under “Discount (%) from 30-Day Avg” or “Discount (%) from 60-Day Avg,” and click search. You’ll see products priced at least that much below their 30- or 60-day average. Combine with “Sort By → Avg. Customer Review” for highly rated, deeply discounted items.
-        </div>
-      </div>
-    </div>
-
-    <!-- Q8 -->
-    <div class="accordion-item">
-      <h5 class="accordion-header" id="faqHeading8">
-        <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapse8"
-                aria-expanded="false" aria-controls="faqCollapse8">
-          Can I look up a product directly by ASIN, ISBN, or UPC?
-        </button>
-      </h5>
-      <div id="faqCollapse8" class="accordion-collapse collapse"
-           aria-labelledby="faqHeading8" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Yes. In “Power-User Tools,” locate “ASIN / ISBN Direct Lookup,” paste any valid ASIN, ISBN, or UPC (e.g., B08N5WRWNW), then click “🔍 Search Amazon.” This takes you directly to the specific product’s Amazon page.
-        </div>
-      </div>
-    </div>
-
-    <!-- Q9 -->
-    <div class="accordion-item">
-      <h5 class="accordion-header" id="faqHeading9">
-        <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapse9"
-                aria-expanded="false" aria-controls="faqCollapse9">
-          How do I filter for eco-friendly, vegan, and sustainable products?
-        </button>
-      </h5>
-      <div id="faqCollapse9" class="accordion-collapse collapse"
-           aria-labelledby="faqHeading9" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          In Step 5, check “♻️ Eco-Friendly,” “🌱 Vegan,” or “🌿 Organic.” You can also type `eco-friendly` or `vegan` as keywords in the main search box. This highlights Amazon listings with sustainability certifications or product attributes.
-        </div>
-      </div>
-    </div>
-
-    <!-- Q10 -->
-    <div class="accordion-item">
-      <h5 class="accordion-header" id="faqHeading10">
-        <button class="accordion-button collapsed" type="button"
-                data-bs-toggle="collapse" data-bs-target="#faqCollapse10"
-                aria-expanded="false" aria-controls="faqCollapse10">
-          What tips can help me avoid out-of-stock items and sold-out deals?
-        </button>
-      </h5>
-      <div id="faqCollapse10" class="accordion-collapse collapse"
-           aria-labelledby="faqHeading10" data-bs-parent="#faqAccordion">
-        <div class="accordion-body">
-          Always check “📦 In Stock” in Step 5. For real-time alerts, enable voice search and ask “Are there any in-stock lightning deals for [product]?” Also, sort by “Newest Arrivals” in Step 3 to see newly restocked items first. Finally, combine “In Stock” with “Prime Only” to get Prime-fulfilled products that ship immediately.
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- …your search-logic <script> closes here… -->
-<!-- end of search logic -->
-
-<section id="about-amazon-super-search" class="container my-5">
-  <h4 class="mb-3">🧭 What is Amazon Super Search and How Does It Help You?</h4>
-  <p>
-    Amazon Super Search is a powerful advanced Amazon deal filter that helps you find 
-    best Amazon in-stock deals, hidden coupon codes, coupon-enabled listings, 
-    and Prime-only product search results—faster than ever before. Whether you’re hunting for 
-    <em>wireless earbuds under $50 with free shipping</em>, <em>eco-friendly home goods on Amazon</em>, or <em>top-rated gadgets under budget</em>, 
-    our tool lets you fine-tune every search with ease.
-  </p>
-
-  <h4 class="mt-4">🔍 How to Use It:</h4>
-  <ul>
-    <li>Enter your product keywords, ASIN, or UPC.</li>
-    <li>Use our filter Amazon by past price trends, discount percentage tracker, brand filter, and customer rating filter.</li>
-    <li>
-      Click “Search Amazon” to instantly view your custom results. 
-      <em>All products display on Amazon’s official site—this is purely an advanced Amazon search tool.</em>
-    </li>
-    <li>Toggle “Coupons Available” to become your own Amazon coupon finder.</li>
-    <li>Zero in on your budget with our price range filter.</li>
-  </ul>
-
-  <h4 class="mt-4">💡 Why It Works:</h4>
-  <p>
-    With over 20 smart filters, including lightning deals finder, free returns filter, 
-    Amazon’s Choice selector, and deep discount alerts, you can:
-  </p>
-  <ul>
-    <li>Avoid endless scrolling</li>
-    <li>Spot genuine markdowns—not fake deals</li>
-    <li>Uncover coupons Amazon hides at checkout</li>
-    <li>Save time and money with precise Amazon search filters</li>
-  </ul>
-
-  <h4 class="mt-4">🛡️ Your Privacy Matters:</h4>
-  <p>
-    We do not collect, store, or track any personal information—ever. There is 
-    no login, no signup, and no tracking cookies on this site. All searches are 
-    processed client-side and sent directly to Amazon through a secure redirect.
-  </p>
-</section>
-
-<!-- Share With Friends Section -->
-<section class="container text-center my-5">
-  <h4 class="mb-3">📣 Share With Friends</h4>
-  <p class="text-muted mb-4">Know someone who loves Amazon deals? Let them in on the secret.</p>
-
-  <div class="d-flex justify-content-center gap-3 flex-wrap">
-    <!-- Facebook -->
-    <a class="btn btn-primary btn-sm"
-       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.amazonsupersearch.com"
-       target="_blank" rel="noopener noreferrer">
-      Share on Facebook
-    </a>
-    <!-- Twitter -->
-    <a class="btn btn-info btn-sm text-white"
-       href="https://twitter.com/intent/tweet?text=Check%20out%20this%20tool:%20https%3A%2F%2Fwww.amazonsupersearch.com"
-       target="_blank" rel="noopener noreferrer">
-      Share on Twitter
-    </a>
-    <!-- Email -->
-    <a class="btn btn-secondary btn-sm"
-       href="mailto:?subject=Amazon%20Super%20Search&body=Find%20better%20Amazon%20deals%20with%20this%20tool:%20https%3A%2F%2Fwww.amazonsupersearch.com%2F">
-      Share via Email
-    </a>
-    <!-- SMS -->
-    <a class="btn btn-success btn-sm"
-       href="sms:?&body=Check%20this%20out:%20https%3A%2F%2Fwww.amazonsupersearch.com%2F">
-      Share via Text
-    </a>
-  </div>
-
-  <div class="mt-3">
-    <button id="copyLinkBtn" class="btn btn-dark btn-sm">Copy Page Link</button>
-  </div>
-</section>
-      </div> <!-- /.main-content -->
-</main>
-<footer class="footer-fixed text-center text-muted py-4" style="font-size: 0.9rem;">
+  <!-- FOOTER -->
+  <footer class="footer-fixed text-center text-muted py-4" style="font-size: 0.9rem;">
     <div class="container">
       <hr>
       <p class="small mb-2">
         <strong>Important:</strong> This is an independent website not affiliated with, endorsed by, or sponsored by Amazon.com or any of its subsidiaries.
       </p>
-      <p class="small mb-02">
-        <strong>Affiliate Disclaimer:</strong> We may earn a small commission when you make a purchase, at no extra cost to you.
+      <p class="small mb-2">
+        <a href="/contact.html" class="text-decoration-none">Contact Us</a> | <a href="/about.html" class="text-decoration-none">About Amazon Super Search</a>
       </p>
       <p class="small mb-0">
         <strong>© 2025 Amazon Super Search. All rights reserved.</strong>
       </p>
     </div>
   </footer>
-  <!-- 1) Bootstrap JS Bundle -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 
-  <!-- 2) Main search logic (external) -->
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <!-- Main search logic (external) -->
   <script src="search-logic.js" defer></script>
 
-  <!-- 3) Voice‐search handler -->
+  <!-- Voice‐search handler -->
   <script>
     const btn   = document.getElementById('voiceSearchBtn');
     const input = document.getElementById('mainSearchInput');
@@ -1508,109 +1102,18 @@ body {
       });
     }
   </script>
-    <script>
-  // play click sound on every button/checkbox click
-  const clickSound = document.getElementById('clickSound');
-  if (clickSound) {
-    document.querySelectorAll(
-      'button, input[type="submit"], input[type="button"], input[type="checkbox"]'
-    ).forEach(el => {
-      el.addEventListener('click', () => {
-        clickSound.currentTime = 0;
-        clickSound.play().catch(()=>{/*silent*/});
+
+  <!-- Click sound playback on interactions -->
+  <script>
+    const clickSound = document.getElementById('clickSound');
+    if (clickSound) {
+      document.querySelectorAll('button, input[type="submit"], input[type="button"], input[type="checkbox"]').forEach(el => {
+        el.addEventListener('click', () => {
+          clickSound.currentTime = 0;
+          clickSound.play().catch(()=>{/*silent*/});
+        });
       });
-    });
-  }
-</script>
-     <!-- PLACE THE FAQ JSON-LD HERE -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I use Amazon Super Search to find in-stock lightning deals?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To find in-stock lightning deals, enter your product keyword or ASIN in the search box, check \"⚡ Lightning Deals\" and \"📦 In Stock\" in Step 5, then click \"🔍 Search Amazon.\" This filters Amazon results to show only active, in-stock lightning deals."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I sort Amazon results by 90-day price drop percentage?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. In Step 3, use \"Sort By → Date: Newest Arrivals,\" then expand \"Deal-Hunter Goodies\" and enter a value (e.g., \"20\") under \"Discount (%) from 90-Day Avg Price.\" After clicking \"🔍 Search Amazon,\" results are sorted by items at least 20 percent below their 90-day average price."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I filter for Prime-only and free shipping deals?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In Step 5, simply check \"🤩 Prime Only\" to view Prime-eligible listings and \"🚚 Free Shipping\" to view items with free shipping. These combined filters help you quickly find Amazon Prime deals at no extra shipping cost."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What’s the best way to search by brand or exclude specific brands on Amazon?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Go to Step 4, type one or more brands in \"Include Brands,\" and toggle \"Match only these brands\" to restrict results to those brands. To exclude brands, expand \"Power-User Tools,\" enable Boolean operators, and use `NOT field-brand:BrandName` in the main search box."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can I discover hidden Amazon coupon codes before checkout?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Check the \"🏷️ Coupons\" box in Step 5 to show only listings with available coupons. You can also enable \"🔍 Field Filters\" in Step 7 and enter `field-coupon:yes` to narrow results further. This surfaces products with hidden coupons that appear during checkout."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What advanced Boolean operators can I use for deeper Amazon search filtering?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In \"Power-User Tools,\" check \"Enable Boolean Operators.\" You can combine terms like `headphones AND noise-canceling NOT earbuds` in the main search box. Use `OR` for alternate keywords (e.g., `Sony OR Bose`), and `field-brand:BrandName` to pinpoint specific fields."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I use past price trends to find the best value on Amazon?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Expand \"Deal-Hunter Goodies,\" enter a percentage under \"Discount (%) from 30-Day Avg\" or \"Discount (%) from 60-Day Avg,\" and click search. You’ll see products priced at least that much below their 30- or 60-day average. Combine with \"Sort By → Avg. Customer Review\" for highly rated, deeply discounted items."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I look up a product directly by ASIN, ISBN, or UPC?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. In \"Power-User Tools,\" locate \"ASIN / ISBN Direct Lookup,\" paste any valid ASIN, ISBN, or UPC (e.g., B08N5WRWNW), then click \"🔍 Search Amazon.\" This takes you directly to the specific product’s Amazon page."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I filter for eco-friendly, vegan, and sustainable products?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In Step 5, check \"♻️ Eco-Friendly,\" \"🌱 Vegan,\" or \"🌿 Organic.\" You can also type `eco-friendly` or `vegan` as keywords in the main search box. This highlights Amazon listings with sustainability certifications or product attributes."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What tips can help me avoid out-of-stock items and sold-out deals?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Always check \"📦 In Stock\" in Step 5. For real-time alerts, enable voice search and ask “Are there any in-stock lightning deals for [product]?” Also, sort by “Newest Arrivals” in Step 3 to see newly restocked items first. Finally, combine “In Stock” with “Prime Only” to get Prime-fulfilled products that ship immediately."
-        }
-      }
-    ]
-  }
+    }
   </script>
-  <!-- END FAQ JSON-LD -->
 </body>
 </html>
