@@ -343,6 +343,7 @@
     </div>
   </div>
 </nav>
+>
 
   <!-- TRANSLATE WIDGET -->
   <div class="container text-end mt-3 mb-2">
@@ -838,7 +839,215 @@
 
       </form>
 
-     <!-- Share With Friends Section -->
+      <!-- FAQ SECTION -->
+      <section id="faq" class="container my-5">
+        <h4 class="mb-4">🔍 Frequently Asked Questions</h4>
+        <div class="accordion" id="faqAccordion">
+          <!-- Q1 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                How do I use Amazon Super Search to find in-stock lightning deals?
+              </button>
+            </h5>
+            <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                To find in-stock lightning deals, enter your product keyword or ASIN in the search box, check “⚡ Lightning Deals” and “📦 In Stock” in Step 5, then click “🔍 Search Amazon.” This filters Amazon results to show only active, in-stock lightning deals.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                Can I sort Amazon results by 90-day price drop percentage?
+              </button>
+            </h5>
+            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes. In Step 3, use “Sort By → Date: Newest Arrivals,” then expand “Deal-Hunter Goodies” and enter a value (e.g., “20”) under “Discount (%) from 90-Day Avg Price.” After clicking “🔍 Search Amazon,” results are sorted by items at least 20% below their 90-day average price.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                How do I filter for Prime-only and free shipping deals?
+              </button>
+            </h5>
+            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                In Step 5, simply check “🤩 Prime Only” to view Prime-eligible listings and “🚚 Free Shipping” to view items with free shipping. These combined filters help you quickly find Amazon Prime deals at no extra shipping cost.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                What’s the best way to search by brand or exclude specific brands on Amazon?
+              </button>
+            </h5>
+            <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Go to Step 4, type one or more brands in “Include Brands,” and toggle “Match only these brands” to restrict results to those brands. To exclude brands, expand “Power-User Tools,” enable Boolean operators, and use <code>NOT field-brand:BrandName</code> in the main search box.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                How can I discover hidden Amazon coupon codes before checkout?
+              </button>
+            </h5>
+            <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Check the “🏷️ Coupons” box in Step 5 to show only listings with available coupons. You can also enable “🔍 Field Filters” in Step 7 and enter <code>field-coupon:yes</code> to narrow results further. This surfaces products with hidden coupons that appear during checkout.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading6">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                What advanced Boolean operators can I use for deeper Amazon search filtering?
+              </button>
+            </h5>
+            <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                In “Power-User Tools,” check “Enable Boolean Operators.” You can combine terms like <code>headphones AND noise-canceling NOT earbuds</code> in the main search box. Use <code>OR</code> for alternate keywords (e.g., <code>Sony OR Bose</code>), and <code>field-brand:BrandName</code> to pinpoint specific fields.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading7">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
+                How do I use past price trends to find the best value on Amazon?
+              </button>
+            </h5>
+            <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Expand “Deal-Hunter Goodies,” enter a percentage under “Discount (%) from 30-Day Avg” or “Discount (%) from 60-Day Avg,” and click search. You’ll see products priced at least that much below their 30- or 60-day average. Combine with “Sort By → Avg. Customer Review” for highly rated, deeply discounted items.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q8 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading8">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8">
+                Can I look up a product directly by ASIN, ISBN, or UPC?
+              </button>
+            </h5>
+            <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faqHeading8" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes. In “Power-User Tools,” locate “ASIN / ISBN Direct Lookup,” paste any valid ASIN, ISBN, or UPC (e.g., B08N5WRWNW), then click “🔍 Search Amazon.” This takes you directly to the specific product’s Amazon page.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q9 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading9">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse9" aria-expanded="false" aria-controls="faqCollapse9">
+                How do I filter for eco-friendly, vegan, and sustainable products?
+              </button>
+            </h5>
+            <div id="faqCollapse9" class="accordion-collapse collapse" aria-labelledby="faqHeading9" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                In Step 5, check “♻️ Eco-Friendly,” “🌱 Vegan,” or “🌿 Organic.” You can also type <code>eco-friendly</code> or <code>vegan</code> as keywords in the main search box. This highlights Amazon listings with sustainability certifications or product attributes.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q10 -->
+          <div class="accordion-item">
+            <h5 class="accordion-header" id="faqHeading10">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse10" aria-expanded="false" aria-controls="faqCollapse10">
+                What tips can help me avoid out-of-stock items and sold-out deals?
+              </button>
+            </h5>
+            <div id="faqCollapse10" class="accordion-collapse collapse" aria-labelledby="faqHeading10" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Always check “📦 In Stock” in Step 5. For real-time alerts, enable voice search and ask “Are there any in-stock lightning deals for [product]?” Also, sort by “Newest Arrivals” in Step 3 to see newly restocked items first. Finally, combine “In Stock” with “Prime Only” to get Prime-fulfilled products that ship immediately.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- “About” Section -->
+<section id="about-amazon-super-search" class="container my-5">
+  <h4 class="mb-3">🧭 What Is <strong>Amazon Super Search</strong> & How Can It Help You?</h4>
+  <p>
+    <strong>Amazon Super Search</strong> is an <strong>advanced deal-filter tool</strong> that makes finding Amazon bargains effortless. Instantly uncover the best 
+    <strong>in-stock lightning deals</strong>, surface <strong>hidden coupon codes</strong>, pinpoint <strong>coupon-enabled listings</strong>, and zero in on 
+    <strong>Prime-only offers</strong>. Whether you’re hunting for 
+    <em>wireless earbuds under $50 with free shipping</em>, 
+    <em>eco-friendly home goods on Amazon</em>, or 
+    <em>top-rated gadgets on a budget</em>, our intuitive filters let you dial in exactly what you want—faster than ever.
+  </p>
+
+  <h4 class="mt-4">🔍 How to Use <strong>Amazon Super Search</strong>:</h4>
+  <ul>
+    <li>
+      <strong>Enter your search term:</strong> Type a product keyword, ASIN, or UPC into the main search box.
+    </li>
+    <li>
+      <strong>Apply powerful filters:</strong> Narrow results by 
+      <strong>past price trends</strong>, 
+      <strong>discount percentages</strong>, 
+      <strong>brand names</strong>, and 
+      <strong>customer ratings</strong>.
+    </li>
+    <li>
+      <strong>Click “Search Amazon”:</strong> View your customized, filtered results on Amazon’s site in a new tab—no sign-ups required.
+    </li>
+    <li>
+      <strong>Toggle “Coupons Available”:</strong> Instantly filter for listings with active Amazon coupons at checkout.
+    </li>
+    <li>
+      <strong>Set a precise price range:</strong> Zero in on your budget using our Min/Max price selectors.
+    </li>
+  </ul>
+
+  <h4 class="mt-4">💡 Why <strong>Amazon Super Search</strong> Works:</h4>
+  <p>
+    With more than <strong>20 powerful filters</strong>—like a 
+    <strong>lightning-deals finder</strong>, 
+    <strong>free-returns filter</strong>, 
+    <strong>Amazon’s Choice selector</strong>, and 
+    <strong>deep-discount alerts</strong>—you can:
+  </p>
+  <ul>
+    <li><strong>Avoid endless scrolling</strong> by seeing only relevant deals</li>
+    <li><strong>Spot genuine markdowns</strong>—not outdated or fake “deals”</li>
+    <li><strong>Reveal hidden Amazon coupons</strong> before checkout</li>
+    <li><strong>Save time & money</strong> with precision targeting of exactly what you need</li>
+  </ul>
+
+  <h4 class="mt-4">🛡️ Your Privacy & Next Steps</h4>
+  <p>
+    We <strong>never collect or store personal data</strong>—period. There’s <strong>no login</strong>, <strong>no tracking cookies</strong>, and <strong>no sign-ups</strong>. All searches run client-side and redirect securely to Amazon.
+  </p>
+  <p>
+    Want to learn more? Visit our 
+    <a href="help.html#about-amazon-super-search" class="fw-semibold">Help page</a> for step-by-step tutorials, or check out our 
+    <a href="media.html" class="fw-semibold">Media page</a> for video demos and user testimonials.
+  </p>
+</section>
+
+
+      <!-- Share With Friends Section -->
       <section class="container text-center my-5">
         <h4 class="mb-3">📣 Share With Friends</h4>
         <p class="text-muted mb-4">Know someone who loves Amazon deals? Let them in on the secret.</p>
@@ -869,18 +1078,6 @@
         </div>
       </section>
     </div>
-
-
-  <h4 class="mt-4">🛡️ Your Privacy & Next Steps</h4>
-  <p>
-    We <strong>never collect or store personal data</strong>—period. There’s <strong>no login</strong>, <strong>no tracking cookies</strong>, and <strong>no sign-ups</strong>. All searches run client-side and redirect securely to Amazon.
-  </p>
-  <p>
-    Want to learn more? Visit our 
-    <a href="help.html#about-amazon-super-search" class="fw-semibold">Help page</a> for step-by-step tutorials, or check out our 
-    <a href="media.html" class="fw-semibold">Media page</a> for video demos and user testimonials.
-  </p>
-</section>
   </main>
 
   <!-- FOOTER -->
