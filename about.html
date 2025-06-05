@@ -7,16 +7,17 @@
   <meta name="description" content="Learn about Amazon Super Search — a privacy-first tool for finding Amazon deals, coupons, and Prime offers fast.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.amazonsupersearch.com/about.html">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
   <script>
     const page = window.location.pathname.split("/").pop();
     const lang = navigator.language || navigator.userLanguage;
     if (lang.startsWith('es')) window.location.href = `/es/${page}`;
     else if (lang.startsWith('fr')) window.location.href = `/fr/${page}`;
   </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
 </head>
 <body>
-<!-- ——— HEADER / NAVIGATION ——— -->
+
+<!-- HEADER / NAVIGATION -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
     <a class="navbar-brand fw-bold" href="/">Amazon Super Search</a>
@@ -28,27 +29,26 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="media.html">Media</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="help.html">Help</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="container mt-5">
+<!-- BREADCRUMBS -->
+<nav aria-label="breadcrumb" class="my-3 container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://www.amazonsupersearch.com/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">About</li>
+  </ol>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="container mt-5">
   <h1>About Amazon Super Search</h1>
   <p><strong>Amazon Super Search</strong> is a powerful deal-finding engine designed to help you uncover the best Amazon bargains — fast.</p>
 
@@ -75,8 +75,9 @@
     <li>✅ Reveal real discounts and clipped coupons</li>
     <li>✅ Save money faster using smart filtering logic</li>
   </ul>
-</div>
+</main>
 
+<!-- FOOTER -->
 <footer class="text-center py-4 bg-white shadow-sm">
   <p class="small mb-0">&copy; 2025 Amazon Super Search. All rights reserved.</p>
   <div id="google_translate_element" style="display: none;"></div>
