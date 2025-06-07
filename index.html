@@ -222,7 +222,10 @@
       line-height: 1.5;
       color: #444;
     }
-
+.hover-orange:hover {
+  color: #FF9900 !important;
+  transition: color 0.2s ease-in-out;
+}
     /* Responsive adjustments */
     @media (max-width: 600px) {
       .privacy-banner {
@@ -254,7 +257,7 @@
 <body>
   <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
 
- <!-- ——— HEADER / NAVIGATION ——— -->
+<!-- ——— HEADER / NAVIGATION ——— -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
   <div class="container">
     <a class="navbar-brand fw-bold" href="/" style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; color: #FF9900;">
@@ -267,23 +270,23 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="media.html">Media</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="help.html">Help</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-      </ul>
+      <ul class="navbar-nav ms-auto fw-semibold" style="font-family: 'Poppins', sans-serif;">
+  <li class="nav-item">
+    <a class="nav-link px-3 text-dark hover-orange" href="/">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link px-3 text-dark hover-orange" href="media.html">Media</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link px-3 text-dark hover-orange" href="help.html">Help</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link px-3 text-dark hover-orange" href="about.html">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link px-3 text-dark hover-orange" href="contact.html">Contact</a>
+  </li>
+</ul>
     </div>
   </div>
 </nav>
