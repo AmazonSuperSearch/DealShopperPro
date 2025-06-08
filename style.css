@@ -1,0 +1,4 @@
+.hover-orange:hover {
+  color: #FF9900 !important;
+  transition: color 0.2s ease-in-out;
+}
