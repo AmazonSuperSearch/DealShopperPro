@@ -61,6 +61,7 @@
 </ol>
 </nav>
 <!-- YouTube Section with VideoObject Schema -->
+<p id="wordCount" class="text-end text-muted mb-1"></p>
 <h1 class="text-center fw-bold my-4">Amazon Super Search: Media Coverage &amp; Social Proof</h1>
 <section class="container my-4">
 <p>Media coverage and social proof drive user trust and engagement. In today’s digital landscape, readers and shoppers rely heavily on recommendations from credible sources before making purchase decisions. Amazon Super Search has garnered significant attention not only for its advanced filtering capabilities but also for the way it integrates seamlessly with diverse platforms. By showcasing real-world demonstrations, expert interviews, and firsthand user testimonials, our media coverage highlights the innovative approach behind our tool. Whether featured in tech blogs, video reviews, or industry podcasts, Amazon Super Search continues to build social proof through transparent and informative content that resonates with audiences worldwide.</p>
@@ -157,9 +158,9 @@
 <section class="container my-4">
 <p>We've received positive coverage from creators, influencers, and media blogs alike. Many users say Amazon Super Search saves them hours of scrolling, especially during major sales events like Prime Day and Black Friday. With precise filters and a clean interface, it's built to help you find what you're really looking for—faster.</p>
 <p>Our browser-based tool doesn't require you to sign in, which keeps your browsing private. Users can filter by Prime-only items, in-stock listings, warehouse deals, coupon-clippable products, and even sort by historical price drops. It’s like having a deal hunter built into your browser.</p>
-<p>Content creators often mention how easy it is to  using Amazon Super Search. This boosts their  and lets their followers skip the clutter of generic Amazon results. We've been featured in YouTube videos, Reddit threads, and independent blog reviews for our simplicity and power-user capabilities.</p>
+<p>Content creators often mention how easy it is to  using Amazon Super Search. This boosts their reach and lets their followers skip the clutter of generic Amazon results. We've been featured in YouTube videos, Reddit threads, and independent blog reviews for our simplicity and power-user capabilities.</p>
 <p>In future updates, we're planning to launch a browser extension, mobile app, and personalized filter memory. You’ll soon be able to save your favorite search combinations and access lightning deals with one click. Keep an eye on our roadmap as we continue evolving with user feedback.</p>
-<p>Whether you're a casual shopper or an , Amazon Super Search is your secret weapon for deal discovery. Try it out today, and don’t forget to share it with friends who love saving money online.</p>
+<p>Whether you're a casual shopper or an eCommerce expert, Amazon Super Search is your secret weapon for deal discovery. Try it out today, and don’t forget to share it with friends who love saving money online.</p>
 </section>
 <section class="container my-4">
 <h2>What the Media Is Saying</h2>
@@ -169,6 +170,49 @@
 <p>This growing media buzz continues to attract a loyal user base. With word-of-mouth, , and media shares driving traffic, the tool’s popularity shows no sign of slowing. Whether featured in niche deal blogs or large video channels, Amazon Super Search is making waves in the shopping and tech discovery space.</p>
 </section>
 <!-- FOOTER -->
+
+<section class="container mb-5" id="faq">
+  <h2 class="h4 mb-3">Frequently Asked Questions</h2>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faqHeading1">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+          How can I use Amazon Super Search to find eco-friendly products?
+        </button>
+      </h3>
+      <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Simply type your desired eco-friendly product keywords, enable the "Eco-Friendly" filter preset, and sort by in-stock lightning deals to find sustainable options quickly.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faqHeading2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+          Do I need to sign in to access coupon deals?
+        </button>
+      </h3>
+      <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          No, Amazon Super Search does not require login for coupon clipping or warehouse deal filters—everything runs in-browser for maximum privacy.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faqHeading3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+          Will you release a browser extension or mobile app?
+        </button>
+      </h3>
+      <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes! A browser extension and mobile app are planned for late 2025, featuring saved filter profiles plus instant notifications for new lightning deals.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="bg-light text-center py-4">
 <p><a class="text-decoration-none" href="/">← Back to Home</a></p>
 <p class="small mb-0">© 2025 Amazon Super Search. All rights reserved.</p>
@@ -202,5 +246,15 @@
     new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
   }
 </script>
+
+<script>
+(function(){
+  var text = document.body.innerText || "";
+  var count = text.trim().split(/\s+/).length;
+  var el = document.getElementById('wordCount');
+  if(el) el.innerText = 'Word Count: ' + count + ' words';
+})();
+</script>
+
 </body>
 </html>
