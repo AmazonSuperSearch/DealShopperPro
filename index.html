@@ -191,92 +191,107 @@
       100% { box-shadow: 0 0 0 0 rgba(13,110,253,0.5); }
     }
 
-    /* Privacy banner styling */
-    .privacy-banner__graphic {
-      flex-shrink: 0;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .privacy-banner__graphic-svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-      fill: #D9534F;
-    }
-    .privacy-banner {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      max-width: 600px;
-      margin: 1rem auto;
-      padding: 1rem 1.25rem;
-      background-color: #FEF7EC;
-      border: 2px solid #F0E0C8;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-    .privacy-banner__heading {
-      margin: 0 0 0.5rem 0;
-      font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 1.2;
-      color: #222;
-    }
-    .privacy-banner__body {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.5;
-      color: #444;
-    }
-/* —— Mobile Hero Text Tuning —— */
-@media (max-width: 600px) {
-  .banner-inner {
-    height: auto;                  /* let it grow with content */
-    padding: 2rem 1rem;            /* extra breathing room */
-  }
+  /* Privacy banner styling */
+.privacy-banner__graphic {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.privacy-banner__graphic-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: #D9534F;
+}
+.privacy-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 1rem 1.25rem;
+  background-color: #FEF7EC;
+  border: 2px solid #F0E0C8;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.privacy-banner__heading {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #222;
+}
+.privacy-banner__body {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
 
+/* —— Mobile Hero & Privacy Tuning —— */
+@media (max-width: 600px) {
+  /* Hero tweaks */
+  .banner-inner {
+    height: auto;                /* let it grow with content */
+    padding: 2rem 1rem;          /* extra breathing room */
+  }
   .banner-inner .site-title {
     font-size: clamp(1.25rem, 6vw, 2rem);
     line-height: 1.2;
     margin-bottom: 0.5rem;
+    background-color: rgba(0,0,0,0.6);
+    border: 1px solid #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    max-width: 90%;
+    margin: 0.25rem auto;
+    color: #FF9900;  /* preserve orange on mobile */
+    text-shadow:
+      -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000;
   }
-
   .banner-inner .lead {
     font-size: clamp(0.875rem, 4vw, 1rem);
-    max-width: 90%;                /* contain it */
+    max-width: 90%;
     margin: 0 auto 1rem;
-    text-shadow:
-      0 0 4px rgba(0,0,0,0.6);     /* soften outline on small text */
+    text-shadow: 0 0 4px rgba(0,0,0,0.6); /* soften outline */
+    background-color: rgba(0,0,0,0.6);
+    border: 1px solid #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    margin: 0.25rem auto 1rem;
   }
-
   .banner-inner .btn {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
   }
-}
 
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-      .privacy-banner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 0.5rem;
-        padding: 0.75rem 1rem;
-      }
-      .privacy-banner__graphic {
-        margin-bottom: 0.5rem;
-      }
-      .privacy-banner__heading {
-        font-size: 1.125rem;
-      }
-      .privacy-banner__body {
-        font-size: 0.94rem;
-      }
-    }
+  /* Privacy banner tweaks */
+  .privacy-banner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+  .privacy-banner__graphic {
+    margin-bottom: 0.5rem;
+  }
+  .privacy-banner__heading {
+    font-size: 1.125rem;
+  }
+  .privacy-banner__body {
+    font-size: 0.94rem;
+  }
+}
   </style>
   <!-- Auto-detect and set cookie for Translate -->
   <script>
