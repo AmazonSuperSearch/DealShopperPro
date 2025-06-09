@@ -17,11 +17,7 @@
   <link href="https://www.amazonsupersearch.com/media.html" rel="canonical">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/favicon.png">
-  
-  
-  <!-- Bootstrap CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
   <style>
     body {
@@ -77,18 +73,15 @@
     @media (max-width: 575px) {
       section { padding: 1.3rem 0.7rem; }
     }
-    /* Section color tags */
     #videos { border-left: 5px solid #FF595E;}
     #articles { border-left: 5px solid #1982C4;}
     #blogspot { border-left: 5px solid #6A4C93;}
     #social { border-left: 5px solid #FFCA3A;}
-    /* List hover effect */
     ul.list-unstyled li:hover, ul.list-unstyled li:focus-within {
       background: #f8fafc;
       border-radius: 7px;
       box-shadow: 0 1px 5px 0 #eee;
     }
-    /* Translate button styling */
     #loadTranslate {
       margin: 0 auto 2.5rem auto;
       display: block;
@@ -107,216 +100,8 @@
   </style>
 </head>
 <body>
- <!-- ——— HEADER / NAVIGATION ——— -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="/" style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; color: #FF9900;">
-      <i class="bi bi-lightning-charge-fill"></i> Amazon Super Search
-    </a>
-    <button class="navbar-toggler" type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
-        <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+  <div class="container text-center mt-4">
+    <h1 class="display-5 fw-bold text-center">Amazon Super Search Media</h1>
   </div>
-</nav>
-<nav aria-label="breadcrumb" class="my-3 container">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="https://www.amazonsupersearch.com/">Home</a></li>
-    <li aria-current="page" class="breadcrumb-item active">Media</li>
-  </ol>
-</nav>
-
-<!-- Media Page Intro -->
-<section class="container my-4">
-  <h2 class="h5"><i class="bi bi-newspaper"></i> Amazon Super Search Media Links</h2>
-  <p>Amazon Super Search has been featured across various platforms, including YouTube, Medium, and blogs. This page serves as a directory of all public-facing content, allowing users and search engines to easily explore demos, guides, and walkthroughs.</p>
-</section>
-
-<!-- YouTube Section -->
-<section class="container" id="videos">
-  <h2 class="h4 mb-3"><i class="bi bi-youtube" style="color:#FF595E"></i> YouTube Channel &amp; Shorts</h2>
-  <ul class="list-unstyled media-list">
-    <li>
-      <i class="bi bi-youtube media-icon" style="color:#FF595E"></i>
-      <a href="https://www.youtube.com/@SuperSearchPro" rel="noopener noreferrer" target="_blank">SuperSearchPro YouTube Channel</a>
-    </li>
-    <li>
-      <i class="bi bi-camera-reels-fill media-icon" style="color:#FF595E"></i>
-      <a href="https://youtube.com/shorts/D_UWyn1DC3M?feature=shared" rel="noopener noreferrer" target="_blank">Short: How to Find Amazon Lightning Deals in 30 Seconds</a>
-    </li>
-    <li>
-      <i class="bi bi-ticket-perforated-fill media-icon" style="color:#FF595E"></i>
-      <a href="https://youtube.com/shorts/vW2Jkg1niFw?feature=shared" rel="noopener noreferrer" target="_blank">Short: Secret Amazon Coupon Finder Demo</a>
-    </li>
-    <li>
-      <i class="bi bi-broadcast-pin media-icon" style="color:#FF595E"></i>
-      <a href="https://youtube.com/shorts/s_17P7T0mCc?feature=shared" rel="noopener noreferrer" target="_blank">Short: In-Stock Lightning Deal Tracker Overview</a>
-    </li>
-    <li>
-      <i class="bi bi-bar-chart-fill media-icon" style="color:#FF595E"></i>
-      <a href="https://youtube.com/shorts/OiFssgG4Xl4?feature=shared" rel="noopener noreferrer" target="_blank">Short: Deep Discount vs. Past Price Average</a>
-    </li>
-    <li>
-      <i class="bi bi-globe2 media-icon" style="color:#FF595E"></i>
-      <a href="https://youtube.com/shorts/xtzWUD4SGn4?feature=shared" rel="noopener noreferrer" target="_blank">Short: Tired of Endless Scrolling on Amazon? Find Eco-Friendly Deals in Seconds!</a>
-    </li>
-    <li>
-      <i class="bi bi-star-fill media-icon" style="color:#FF595E"></i>
-      <a href="https://youtube.com/shorts/34AFP6HrwXM?feature=share" rel="noopener noreferrer" target="_blank">Short: How to Unlock Prime Day 2025 Deals on Amazon</a>
-    </li>
-    <li>
-      <i class="bi bi-gift-fill media-icon" style="color:#FF595E"></i>
-      <a href="https://youtube.com/shorts/m3KfhUjwFsI?feature=share" rel="noopener noreferrer" target="_blank">Short: Find the Perfect Amazon Gift in Seconds</a>
-    </li>
-  </ul>
-  <!-- VideoObject schema for the first featured YouTube short -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "VideoObject",
-      "name": "How to Find Amazon Lightning Deals in 30 Seconds",
-      "description": "A quick demo on finding lightning deals using Amazon Super Search.",
-      "thumbnailUrl": "https://img.youtube.com/vi/D_UWyn1DC3M/0.jpg",
-      "uploadDate": "2025-03-15T08:00:00Z",
-      "contentUrl": "https://www.youtube.com/watch?v=D_UWyn1DC3M",
-      "embedUrl": "https://www.youtube.com/embed/D_UWyn1DC3M",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Amazon Super Search",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.amazonsupersearch.com/logo.png"
-        }
-      }
-    }
-  </script>
-</section>
-
-<!-- Medium Articles Section -->
-<section class="container" id="articles">
-  <h2 class="h4 mb-3"><i class="bi bi-medium" style="color:#1982C4"></i> Medium Articles</h2>
-  <ul class="list-unstyled media-list">
-    <li>
-      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
-      <a href="https://medium.com/@amazondealhunter/unlock-amazon-deal-of-the-day-by-brand-no-login-required-483330962670" rel="noopener noreferrer" target="_blank">Unlock Amazon Deal of the Day by Brand—No Login Required</a>
-    </li>
-    <li>
-      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
-      <a href="https://medium.com/@amazondealhunter/unlock-amazon-warehouse-deals-no-signup-needed-34994ba28ad3" rel="noopener noreferrer" target="_blank">Unlock Amazon Warehouse Deals—No Signup Needed</a>
-    </li>
-    <li>
-      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
-      <a href="https://medium.com/@amazondealhunter/discover-prime-only-lightning-deals-on-amazon-no-login-required-d4c5fcfc344c" rel="noopener noreferrer" target="_blank">Discover Prime-Only Lightning Deals on Amazon—No Login Required</a>
-    </li>
-    <li>
-      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
-      <a href="https://medium.com/@amazondealhunter/how-i-uncover-amazons-best-hidden-deals-in-under-a-minute-b6a7e0f296e0" rel="noopener noreferrer" target="_blank">How I Uncover Amazon’s Best Hidden Deals in Under a Minute</a>
-    </li>
-    <li>
-      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
-      <a href="https://medium.com/@amazondealhunter/search-amazon-like-a-pro-the-free-tool-i-use-daily-22c18f467206" rel="noopener noreferrer" target="_blank">Search Amazon Like a Pro: The Free Tool I Use Daily</a>
-    </li>
-    <li>
-      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
-      <a href="https://medium.com/@amazondealhunter/how-i-find-hidden-amazon-deals-without-wasting-time-651683f3bc7e" rel="noopener noreferrer" target="_blank">How I Find Hidden Amazon Deals Without Wasting Time</a>
-    </li>
-    <li>
-      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
-      <a href="https://medium.com/@amazondealhunter/how-to-find-eco-friendly-products-on-amazon-without-logging-in-1bb0c084d51c" rel="noopener noreferrer" target="_blank">How to Find Eco-Friendly Products on Amazon Without Logging In</a>
-    </li>
-  </ul>
-  <p class="mt-3">
-    <a class="btn btn-sm btn-primary" href="help.html"><i class="bi bi-question-circle"></i> Learn how to use these features</a>
-  </p>
-</section>
-
-<!-- Blogspot Posts Section -->
-<section class="container" id="blogspot">
-  <h2 class="h4 mb-3"><i class="bi bi-file-earmark-post" style="color:#6A4C93"></i> Blogspot Posts</h2>
-  <ul class="list-unstyled media-list">
-    <li>
-      <i class="bi bi-file-earmark-post media-icon" style="color:#6A4C93"></i>
-      <a href="https://amazonsupersearch.blogspot.com/2025/05/how-to-find-in-stock-amazon-lightning.html" rel="noopener noreferrer" target="_blank">How to Find In-Stock Amazon Lightning Deals (Blogpost)</a>
-    </li>
-    <li>
-      <i class="bi bi-file-earmark-post media-icon" style="color:#6A4C93"></i>
-      <a href="https://amazonsupersearch.blogspot.com/2025/05/unlock-hidden-savings-amazon-coupon.html" rel="noopener noreferrer" target="_blank">Unlock Hidden Savings: Amazon Coupon Tricks (Blogpost)</a>
-    </li>
-    <li>
-      <i class="bi bi-file-earmark-post media-icon" style="color:#6A4C93"></i>
-      <a href="https://amazonsupersearch.blogspot.com/2025/05/unlock-hidden-savings-with-amazon.html" rel="noopener noreferrer" target="_blank">Unlock Hidden Savings with Amazon Super Search (Blogpost)</a>
-    </li>
-  </ul>
-  <p class="mt-3">
-    <a class="btn btn-sm btn-primary" href="help.html"><i class="bi bi-question-circle"></i> Learn more on our Help Page</a>
-  </p>
-</section>
-
-<!-- Social Section -->
-<section class="container" id="social">
-  <h2 class="h4 mb-3"><i class="bi bi-share-fill" style="color:#FFCA3A"></i> Instagram, Tumblr &amp; Other Social</h2>
-  <ul class="list-unstyled media-list">
-    <li>
-      <i class="bi bi-tumblr media-icon" style="color:#FFCA3A"></i>
-      <a href="https://www.tumblr.com/amazonsupersearch/784459844898963456/tired-of-fake-amazon-deals-try-this-free-tool-i?source=share" rel="noopener noreferrer" target="_blank">Tumblr Post: Tired of Fake Amazon Deals? Try This Free Tool</a>
-    </li>
-    <!-- Add more social links as you publish them! -->
-  </ul>
-  <p class="mt-3">
-    <a class="btn btn-sm btn-primary" href="help.html"><i class="bi bi-arrow-left"></i> Back to Help &amp; How-To</a>
-  </p>
-</section>
-
-<section class="container my-5">
-  <h2 class="h5"><i class="bi bi-megaphone-fill"></i> Latest Media Updates</h2>
-  <p>This media roundup grows as we publish new content. Stay tuned for fresh videos, tutorials, and deal-finding strategies powered by Amazon Super Search.</p>
-</section>
- <!-- ——————————— SITE-WIDE FOOTER ——————————— -->
-
-<footer class="text-center py-4 bg-white shadow-sm" style="font-size: 0.9rem;">
-  <div class="container">
-    <hr>
-    <p class="small mb-2">
-      <strong>Disclaimer:</strong> Amazon Super Search is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries.
-      As an Amazon Associate, we earn from qualifying purchases—this supports our free service.
-    </p>
-    <p class="small mb-2">
-      Discover top Amazon deals with advanced filters for Lightning Deals, Prime-eligible items, in-stock products, and hidden coupons.
-    </p>
-    <p class="small mb-2">
-      <a href="/contact.html" class="text-decoration-none">Contact Us</a> |
-      <a href="/about.html" class="text-decoration-none">About Amazon Super Search</a> |
-      <a href="/help.html" class="text-decoration-none">Help Guide</a> |
-      <a href="/media.html" class="text-decoration-none">Media Coverage</a>
-    </p>
-    <p class="small mb-0">
-      <strong>© 2025 Amazon Super Search. All rights reserved.</strong>
-</div>
-</footer>
-<!-- Bootstrap JS bundle (Popper + JS) -->
-<script crossorigin="anonymous" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-<!-- BreadcrumbList schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.amazonsupersearch.com/" },
-    { "@type": "ListItem", "position": 2, "name": "Media", "item": "https://www.amazonsupersearch.com/media.html" }
-  ]
-}
-</script>
-
 </body>
 </html>
