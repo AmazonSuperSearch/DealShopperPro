@@ -223,12 +223,12 @@
       color: #444;
     }
 
-/* Hero Banner Image */
+/* Hero banner: edge-to-edge crop on desktop */
 .banner-inner {
   background-image: url("/amazon-super-search-hero-two-women-using-laptop-finding-deals.jpg");
   background-repeat: no-repeat;
-  background-size: contain;          /* default: show whole image */
-  background-position: center center;
+  background-size: cover;       /* default = desktop: cover & crop */
+  background-position: center top;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -239,11 +239,11 @@
   text-shadow: 0 0 8px rgba(0,0,0,0.6);
 }
 
-/* On desktop (≥768px), switch to edge-to-edge cover crop */
-@media (min-width: 768px) {
+/* Mobile (≤767px): show the full image, no cropping */
+@media (max-width: 767px) {
   .banner-inner {
-    background-size: cover;          /* fill & crop horizontally */
-    background-position: center top; /* keep faces in view */
+    background-size: contain;
+    background-position: center center;
   }
 }
 
