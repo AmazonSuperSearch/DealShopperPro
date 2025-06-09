@@ -12,7 +12,7 @@
 <meta content="Media Coverage of Amazon Super Search" name="twitter:title">
 <meta content="Explore videos, demos, articles, and testimonials showcasing Amazon Super Search in action." name="twitter:description">
 <meta content="https://www.amazonsupersearch.com/og-image-media.png" name="twitter:image">
-<title>Media Coverage | Amazon Super Search</title>
+<title>Articles & Videos: Amazon Super Search Demos and Tutorials</title>
 <meta content="View Amazon Super Search’s media features on YouTube, Medium, Instagram, and more—discover demos, deep dives, and user testimonials." name="description">
 <meta content="index, follow" name="robots">
 <!-- Self-referential canonical -->
@@ -145,28 +145,37 @@
   <h2 class="h5">Latest Media Updates</h2>
 <p>This media roundup grows as we publish new content. Stay tuned for fresh videos, tutorials, and deal-finding strategies powered by Amazon Super Search.</p>
 </section>
-
-<footer class="text-center py-4 bg-white shadow-sm" style="font-size: 0.9rem;">
-  <div class="container">
-    <hr>
-    <p class="small mb-2">
-      <strong>Disclaimer:</strong> Amazon Super Search is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries.
-      As an Amazon Associate, we earn from qualifying purchases—this supports our free service.
-    </p>
-    <p class="small mb-2">
-      Discover top Amazon deals with advanced filters for Lightning Deals, Prime-eligible items, in-stock products, and hidden coupons.
-    </p>
-    <p class="small mb-2">
-      <a href="/contact.html" class="text-decoration-none">Contact Us</a> |
-      <a href="/about.html" class="text-decoration-none">About Amazon Super Search</a> |
-      <a href="/help.html" class="text-decoration-none">Help Guide</a> |
-      <a href="/media.html" class="text-decoration-none">Media Coverage</a>
-    </p>
-    <p class="small mb-0">
-      <strong>© 2025 Amazon Super Search. All rights reserved.</strong>
-    </p>
-  </div>
+<footer class="bg-light text-center py-4">
+<p><a class="text-decoration-none" href="/">← Back to Home</a></p>
+<p class="small mb-0">© 2025 Amazon Super Search. All rights reserved.</p>
 </footer>
-
+<!-- Bootstrap JS bundle (Popper + JS) -->
+<script crossorigin="anonymous" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.amazonsupersearch.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Media", "item": "https://www.amazonsupersearch.com/media.html" }
+  ]
+}
+</script>
+<button id="loadTranslate">Translate This Page</button>
+<div id="google_translate_element" style="display:none;"></div>
+<script>
+  document.getElementById('loadTranslate').addEventListener('click', function () {
+    if (!window.googleTranslateScriptLoaded) {
+      const script = document.createElement('script');
+      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      document.body.appendChild(script);
+      window.googleTranslateScriptLoaded = true;
+    }
+    document.getElementById('google_translate_element').style.display = 'block';
+  });
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+  }
+</script>
 </body>
 </html>
