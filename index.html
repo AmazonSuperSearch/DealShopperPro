@@ -231,6 +231,32 @@
       line-height: 1.5;
       color: #444;
     }
+/* —— Mobile Hero Text Tuning —— */
+@media (max-width: 600px) {
+  .banner-inner {
+    height: auto;                  /* let it grow with content */
+    padding: 2rem 1rem;            /* extra breathing room */
+  }
+
+  .banner-inner .site-title {
+    font-size: clamp(1.25rem, 6vw, 2rem);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .banner-inner .lead {
+    font-size: clamp(0.875rem, 4vw, 1rem);
+    max-width: 90%;                /* contain it */
+    margin: 0 auto 1rem;
+    text-shadow:
+      0 0 4px rgba(0,0,0,0.6);     /* soften outline on small text */
+  }
+
+  .banner-inner .btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
 
     /* Responsive adjustments */
     @media (max-width: 600px) {
