@@ -238,7 +238,19 @@
   color: white;
   text-shadow: 0 0 8px rgba(0,0,0,0.6);
 }
+/* Mobile/tablet (default): show the whole image */
+.banner-inner {
+  background-size: contain;
+  background-position: center center;
+}
 
+/* Desktop (wider than 768px): full-bleed & crop top-anchored */
+@media (min-width: 768px) {
+  .banner-inner {
+    background-size: cover;
+    background-position: center top;
+  }
+}
 
 
     /* Responsive adjustments */
