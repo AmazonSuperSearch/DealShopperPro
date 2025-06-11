@@ -18,6 +18,25 @@
     .banner-inner .lead { font-size: 1rem; color: #000; text-shadow: none; text-align: center; }
   </style>
   <!-- Preconnect & Font Optimization -->
+  <!-- DESKTOP-ONLY CRITICAL CSS -->
+  <style>
+    @media (min-width: 992px) {
+      /* Desktop hero background */
+      .banner-inner {
+        background-image: url('/images/hero-desktop.webp');
+        background-size: cover;
+        background-position: center;
+      }
+      /* Desktop nav FCP */
+      nav.navbar { display: flex; align-items: center; justify-content: space-between; }
+      .navbar-brand { font-size: 1.75rem; }
+      .site-search { width: 350px; }
+    }
+  </style>
+  <!-- DESKTOP-ONLY PRELOADS -->
+  <link rel="preload" as="image" href="/images/hero-desktop.webp" media="(min-width:992px)">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/inter-800.woff2" media="(min-width:992px)">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/poppins-500.woff2" media="(min-width:992px)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
