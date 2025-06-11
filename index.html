@@ -1,9 +1,15 @@
-<!-- DESKTOP-ONLY PERFORMANCE PATCH -->
+<!-- DESKTOP-PERFORMANCE PATCH (MOBILE UNCHANGED) -->
 
-<!-- 1) Wrap hero background & enhancements for desktop only -->
+<!-- 1) Ensure viewport meta is present -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- 2) Desktop-only hero enhancements -->
 <style media="(min-width: 992px)">
   .banner-inner {
-    background-image: url('/amazon-super-search-lightning-deals-banner.jpg');
+    background-image: image-set(
+      url('/amazon-super-search-lightning-deals-banner.jpg') 1x,
+      url('/amazon-super-search-lightning-deals-banner@2x.jpg') 2x
+    );
     background-size: cover;
     background-position: center;
   }
@@ -14,7 +20,6 @@
     animation: pulse 3s ease-in-out infinite, glow 2.5s ease-in-out infinite alternate;
     font-size: clamp(1.5rem,5vw,3rem);
     color: #FF9900;
-    text-shadow: none;
   }
   /* Translate widget overrides */
   .goog-te-menu2 { max-height:300px!important; overflow-y:auto!important; }
@@ -25,7 +30,7 @@
   body { top:0!important; }
 </style>
 
-<!-- 2) Make CSS preload links desktop-only -->
+<!-- 3) Scope CSS preloads to desktop -->
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
       as="style" onload="this.onload=null;this.rel='stylesheet'" media="(min-width:992px)">
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -33,16 +38,29 @@
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css"
       as="style" onload="this.onload=null;this.rel='stylesheet'" media="(min-width:992px)">
 
-<!-- 3) Ensure only one defer load each (desktop only) -->
+<!-- 4) Lazy-load images only on desktop -->
 <script>
   if (window.innerWidth >= 992) {
-    let s1 = document.createElement('script');
-    s1.src = 'https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js';
-    s1.defer = true;
-    document.head.appendChild(s1);
-    let s2 = document.createElement('script');
-    s2.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    s2.defer = true;
-    document.head.appendChild(s2);
+    document.querySelectorAll('img').forEach(img => {
+      if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+    });
+  }
+</script>
+
+<!-- 5) Defer and dedupe scripts on desktop -->
+<script>
+  if (window.innerWidth >= 992) {
+    // Remove duplicates if present
+    document.querySelectorAll('script[src*="tagify.min.js"]').forEach((s, i) => i>0 && s.remove());
+    document.querySelectorAll('script[src*="translate_a/element.js"]').forEach((s, i) => i>0 && s.remove());
+    // Defer load
+    ['https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js',
+     'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
+    ].forEach(src => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.defer = true;
+      document.head.appendChild(s);
+    });
   }
 </script>
