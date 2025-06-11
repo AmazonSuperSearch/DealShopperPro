@@ -1,80 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Inline critical CSS for hero & privacy banner -->
+  <!-- 1) SEO & Core Meta FIRST -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Advanced Amazon Search Engine with Coupons and In-Stock Filter | Deal Shopper Pro</title>
+  <meta name="description" content="Advanced Amazon search engine with coupons, in-stock filters, Prime-only deals, and lightning discounts—no signup required.">
+  <link rel="canonical" href="https://www.dealshopperpro.com/">
+  <meta property="og:title" content="Advanced Amazon Search Engine | Deal Shopper Pro">
+  <meta property="og:description" content="Search Amazon by price, rating, Prime, brand, coupons & lightning deals. 100% free—no signup needed.">
+  <meta property="og:url" content="https://www.dealshopperpro.com/">
+  <meta property="og:image" content="https://www.dealshopperpro.com/thumbnail.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- 2) Inline critical CSS for both mobile and desktop above-the-fold -->
   <style>
-    /* Hero */
-    .banner-inner { display: flex; align-items: center; justify-content: center; min-height: 60vh; }
-    .banner-inner .site-title { font-weight: 800; font-size: 2rem; text-align: center; }
-    .banner-inner .lead { font-size: 1rem; color: #000; text-shadow: none; text-align: center; }
-    /* Privacy Banner Inline */
-    .privacy-banner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; padding: 0.75rem 1rem; background-color: #FEF7EC; border: 2px solid #F0E0C8; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
-    .privacy-banner__body { font-size: 0.94rem; line-height: 1.5; color: #444; }
-  </style>
+    /* HERO & PRIVACY (applies to all) */
+    .banner-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      /* desktop bg overridden below */
+    }
+    .banner-inner .site-title {
+      font-weight: 800;
+      text-align: center;
+      /* font-size per viewport below */
+    }
+    .banner-inner .lead {
+      font-size: 1rem;
+      color: #000;
+      text-shadow: none;
+      text-align: center;
+    }
+    .privacy-banner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: .5rem;
+      padding: .75rem 1rem;
+      background-color: #FEF7EC;
+      border: 2px solid #F0E0C8;
+      border-radius: .75rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .privacy-banner__body {
+      font-size: .94rem;
+      line-height: 1.5;
+      color: #444;
+    }
 
-  <!-- Desktop-only optimizations -->
-  <!-- Preload desktop hero image only on large screens -->
-  <link rel="preload" as="image" href="/images/hero-desktop.webp" media="(min-width: 992px)">
+    /* MOBILE HERO & BANNER (≤600px) */
+    @media (max-width: 600px) {
+      /* system font, hide graphic */
+      html, body, .privacy-banner__body, .banner-inner .lead {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+      }
+      .privacy-banner__graphic, .privacy-banner__graphic-svg,
+      .banner-inner { background-image: none !important; }
 
-  <!-- Preload desktop fonts only on large screens -->
-  <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin media="(min-width: 992px)">
-  <link rel="preload" href="/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin media="(min-width: 992px)">
+      .banner-inner {
+        height: auto;
+        padding: 2rem 1rem;
+      }
+      .banner-inner .site-title {
+        font-size: clamp(1.25rem, 6vw, 2rem);
+        margin: .25rem auto .5rem;
+        padding: .25rem .5rem;
+        border-radius: .25rem;
+        display: inline-block;
+        max-width: 90%;
+        color: #FF9900;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      }
+      .banner-inner .lead {
+        margin: 0 auto 1rem;
+        padding: .25rem .5rem;
+        border-radius: .25rem;
+        display: inline-block;
+        max-width: 90%;
+      }
+    }
 
-  <!-- Inline desktop-critical CSS for hero and nav -->
-  <style>
+    /* DESKTOP HERO & NAV (≥992px) */
     @media (min-width: 992px) {
-      .banner-inner { background-image: url('/images/hero-desktop.webp'); }
-      nav.main-nav { display: flex; align-items: center; justify-content: space-between; }
-      .navbar-brand { font-size: 1.75rem; }
-      .site-search { width: 350px; }
+      /* preload your hero bg */
+      .banner-inner {
+        background-image: url('/images/hero-desktop.webp');
+      }
+      .banner-inner .site-title {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+      }
+      nav.main-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .navbar-brand {
+        font-size: 1.75rem;
+      }
+      .site-search {
+        width: 350px;
+      }
     }
   </style>
 
-  <!-- Defer desktop-only widget script -->
+  <!-- 3) Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="//translate.google.com">
+
+  <!-- 4) Preload assets -->
+  <!-- desktop-only hero -->
+  <link rel="preload" as="image" href="/images/hero-desktop.webp" media="(min-width:992px)">
+  <!-- desktop-only fonts -->
+  <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin media="(min-width:992px)">
+  <link rel="preload" href="/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin media="(min-width:992px)">
+  <!-- critical CSS -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css">
+  </noscript>
+
+  <!-- 5) Defer JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js" defer></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-51QSZ395GS"></script>
   <script>
-    if (window.matchMedia('(min-width: 992px)').matches) {
-      const s = document.createElement('script');
-      s.src = '/js/desktop-widget.js';
-      s.defer = true;
+    window.dataLayer = window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-51QSZ395GS');
+  </script>
+
+  <!-- 6) Desktop-only widget -->
+  <script>
+    if (window.matchMedia('(min-width:992px)').matches) {
+      const s=document.createElement('script');
+      s.src='/js/desktop-widget.js';
+      s.defer=true;
       document.head.appendChild(s);
     }
   </script>
-
-  <!-- Preconnect & Font Optimization -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Preload and Async CSS -->
-  <link
-    rel="preload"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  >
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"></noscript>
-
-  <link
-    rel="preload"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  >
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-
-  <link
-    rel="preload"
-    href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  >
-  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css"></noscript>
-
-  <!-- Defer JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js" defer></script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
