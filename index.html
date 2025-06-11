@@ -1,370 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Inline critical CSS for hero -->
-  <!-- Inline critical CSS for hero & privacy banner -->
-  <style>
-    /* Hero */
-    .banner-inner { display: flex; align-items: center; justify-content: center; min-height: 60vh; }
-    .banner-inner .site-title { font-weight: 800; font-size: 2rem; text-align: center; }
-    .banner-inner .lead { font-size: 1rem; color: #000; text-shadow: none; text-align: center; }
-    /* Privacy Banner Inline */
-    .privacy-banner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; padding: 0.75rem 1rem; background-color: #FEF7EC; border: 2px solid #F0E0C8; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
-    .privacy-banner__body { font-size: 0.94rem; line-height: 1.5; color: #444; }
-  </style>
-  <style>
-    .banner-inner { display: flex; align-items: center; justify-content: center; min-height: 60vh; }
-    .banner-inner .site-title { font-weight: 800; font-size: 2rem; text-align: center; }
-    .banner-inner .lead { font-size: 1rem; color: #000; text-shadow: none; text-align: center; }
-  </style>
-  <!-- Preconnect & Font Optimization -->
-  <!-- DESKTOP-ONLY CRITICAL CSS -->
-  <style>
-    @media (min-width: 992px) {
-      /* Desktop hero background */
-      .banner-inner {
-        background-image: url('/images/hero-desktop.webp');
-        background-size: cover;
-        background-position: center;
-      }
-      /* Desktop nav FCP */
-      nav.navbar { display: flex; align-items: center; justify-content: space-between; }
-      .navbar-brand { font-size: 1.75rem; }
-      .site-search { width: 350px; }
-    }
-  </style>
-  <!-- DESKTOP-ONLY PRELOADS -->
-  <link rel="preload" as="image" href="/images/hero-desktop.webp" media="(min-width:992px)">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/inter-800.woff2" media="(min-width:992px)">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/poppins-500.woff2" media="(min-width:992px)">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Preload and Async CSS -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <!-- Preload self-hosted fonts -->
-  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/poppins.woff2" as="font" type="font/woff2" crossorigin>
-
-
-  <!-- Defer JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js" defer></script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
-
+  <!-- 1) SEO & Core Meta FIRST -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Preconnects -->
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <title>Advanced Amazon Search Engine with Coupons and In-Stock Filter | Deal Shopper Pro</title>
+  <meta name="description" content="Advanced Amazon search engine with coupons, in-stock filters, Prime-only deals, and lightning discounts—no signup required.">
+  <link rel="canonical" href="https://www.dealshopperpro.com/">
+  <meta property="og:title" content="Advanced Amazon Search Engine | Deal Shopper Pro">
+  <meta property="og:description" content="Search Amazon by price, rating, Prime, brand, coupons & lightning deals. 100% free—no signup needed.">
+  <meta property="og:url" content="https://www.dealshopperpro.com/">
+  <meta property="og:image" content="https://www.dealshopperpro.com/thumbnail.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- 2) Inline critical CSS for both mobile and desktop above-the-fold -->
+  <style>
+    /* HERO & PRIVACY (applies to all) */
+    .banner-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      /* desktop bg overridden below */
+    }
+    .banner-inner .site-title {
+      font-weight: 800;
+      text-align: center;
+      /* font-size per viewport below */
+    }
+    .banner-inner .lead {
+      font-size: 1rem;
+      color: #000;
+      text-shadow: none;
+      text-align: center;
+    }
+    .privacy-banner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: .5rem;
+      padding: .75rem 1rem;
+      background-color: #FEF7EC;
+      border: 2px solid #F0E0C8;
+      border-radius: .75rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .privacy-banner__body {
+      font-size: .94rem;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    /* MOBILE HERO & BANNER (≤600px) */
+    @media (max-width: 600px) {
+      /* system font, hide graphic */
+      html, body, .privacy-banner__body, .banner-inner .lead {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+      }
+      .privacy-banner__graphic, .privacy-banner__graphic-svg,
+      .banner-inner { background-image: none !important; }
+
+      .banner-inner {
+        height: auto;
+        padding: 2rem 1rem;
+      }
+      .banner-inner .site-title {
+        font-size: clamp(1.25rem, 6vw, 2rem);
+        margin: .25rem auto .5rem;
+        padding: .25rem .5rem;
+        border-radius: .25rem;
+        display: inline-block;
+        max-width: 90%;
+        color: #FF9900;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      }
+      .banner-inner .lead {
+        margin: 0 auto 1rem;
+        padding: .25rem .5rem;
+        border-radius: .25rem;
+        display: inline-block;
+        max-width: 90%;
+      }
+    }
+
+    /* DESKTOP HERO & NAV (≥992px) */
+    @media (min-width: 992px) {
+      /* preload your hero bg */
+      .banner-inner {
+        background-image: url('/images/hero-desktop.webp');
+      }
+      .banner-inner .site-title {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+      }
+      nav.main-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .navbar-brand {
+        font-size: 1.75rem;
+      }
+      .site-search {
+        width: 350px;
+      }
+    }
+  </style>
+
+  <!-- 3) Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="dns-prefetch" href="//translate.google.com">
 
-  <!-- Google tag (gtag.js) -->
+  <!-- 4) Preload assets -->
+  <!-- desktop-only hero -->
+  <link rel="preload" as="image" href="/images/hero-desktop.webp" media="(min-width:992px)">
+  <!-- desktop-only fonts -->
+  <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin media="(min-width:992px)">
+  <link rel="preload" href="/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin media="(min-width:992px)">
+  <!-- critical CSS -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css">
+  </noscript>
+
+  <!-- 5) Defer JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js" defer></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-51QSZ395GS"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer||[];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-51QSZ395GS');
+    gtag('config','G-51QSZ395GS');
   </script>
 
-  <title>Advanced Amazon Search Engine with Coupons and In-Stock Filter | Deal Shopper Pro</title>
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="/favicon.png" sizes="48x48">
-  <link rel="manifest" href="/site.webmanifest">
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Advanced Amazon search engine with coupons, in-stock filters, Prime-only deals, and lightning discounts—no signup required.">
-  <meta name="robots" content="index, follow">
-
-  <!-- Self-referential canonical -->
-  <link rel="canonical" href="https://www.dealshopperpro.com/">
-
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content=" | Price, Rating, Brand & Coupon Filters">
-  <meta property="og:description" content="Search Amazon by price, rating, Prime, brand, coupons & lightning deals. 100% free—no signup needed.">
-  <meta property="og:url" content="https://www.dealshopperpro.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.dealshopperpro.com/thumbnail.png">
-  <meta property="og:image:alt" content=" Hero Image">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content=": Filter by Price, Rating & Coupons">
-<meta name="twitter:description" content="Find Amazon deals fast with filters for price, rating, Prime, coupons & lightning deals. 100% free.">
-<meta name="twitter:image" content="https://www.dealshopperpro.com/thumbnail.png">
-
-
-  <!-- JSON-LD Structured Data: SoftwareApplication and SiteNavigationElement -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "",
-    "url": "https://www.dealshopperpro.com/",
-    "applicationCategory": "WebApplication",
-    "operatingSystem": "All",
-    "description": "Filter Amazon by price, rating, brand, coupons & Lightning Deals—free  no signup."
-  }
-  </script>
- <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "https://www.dealshopperpro.com/",
-  "name": "Deal Shopper Pro",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.dealshopperpro.com/?q=usb+charger",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-
-  <!-- 1) Define the init callback for Google Translate -->
+  <!-- 6) Desktop-only widget -->
   <script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,es,fr,ru,de,it,pt,nl,zh-CN,hi,ar',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
+    if (window.matchMedia('(min-width:992px)').matches) {
+      const s=document.createElement('script');
+      s.src='/js/desktop-widget.js';
+      s.defer=true;
+      document.head.appendChild(s);
     }
-  </script>
-
-  <!-- 2) Load Google’s Translate library -->
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
-
-  <!-- 3) Override CSS for Translate widget -->
-  <style>
-    .goog-te-menu2 {
-      max-height: 300px !important;
-      overflow-y: auto !important;
-    }
-    .goog-te-menu2 table {
-      width: 100% !important;
-    }
-    .goog-te-menu-frame.skiptranslate {
-      max-height: 300px !important;
-      height: auto !important;
-      overflow-y: auto !important;
-    }
-    .skiptranslate .goog-te-menu2 {
-      max-height: 300px !important;
-      height: auto !important;
-      overflow-y: auto !important;
-    }
-    .goog-te-banner-frame.skiptranslate {
-      display: none !important;
-    }
-    body {
-      top: 0px !important;
-    }
-  </style>
-
-  <!-- Bootstrap CSS -->
-
-  <!-- Font Awesome CSS (place here) -->
-
-  <!-- Inter font -->
-  <!-- Poppins font -->
-
-  <!-- Tagify CSS & JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js" defer></script>
-
-  <style>
-    /* Global font */
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    /* Banner Heading Animations */
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50%      { transform: scale(1.05); }
-    }
-    @keyframes glow {
-      0% {
-        text-shadow:
-          0 0 8px rgba(255,255,255,0.6),
-          0 0 16px rgba(255,255,255,0.4);
-      }
-      100% {
-        text-shadow:
-          0 0 16px rgba(255,255,255,1),
-          0 0 32px rgba(255,255,255,0.7);
-      }
-    }
-    .banner-inner .site-title {
-      display: block;
-      text-align: center;
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
-      font-size: clamp(1.5rem, 5vw, 3rem);
-      line-height: 1.2;
-      color: #FF9900;
-      animation:
-        pulse 3s ease-in-out infinite,
-        glow  2.5s ease-in-out infinite alternate;
-    }
-    .banner-inner .lead {
-  color: white;
-  /* Four-way text shadow to simulate a 1px black outline */
-  text-shadow:
-    1px  1px 0 #000,
-   -1px  1px 0 #000,
-    1px -1px 0 #000,
-   -1px -1px 0 #000;
-}
-    .text-pulse {
-      color: #FF9900;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
-      animation: glow 2.5s ease-in-out infinite alternate;
-    }
-    .pulse-glow {
-      animation: pulse-glow 2s infinite;
-      transition: box-shadow .3s ease-in-out;
-    }
-    @keyframes pulse-glow {
-      0%   { box-shadow: 0 0 0 0 rgba(13,110,253,0.5); }
-      50%  { box-shadow: 0 0 20px 10px rgba(13,110,253,0.5); }
-      100% { box-shadow: 0 0 0 0 rgba(13,110,253,0.5); }
-    }
-/* — Show the hero background only on devices ≥ 992 px (Bootstrap’s “lg”) — */
-@media (min-width: 992px) {
-  .banner-inner {
-    background-image: url('/amazon-super-search-lightning-deals-banner.jpg');
-  }
-}
-
-  /* Privacy banner styling */
-.privacy-banner__graphic {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.privacy-banner__graphic-svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  fill: #D9534F;
-}
-.privacy-banner {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  max-width: 600px;
-  margin: 1rem auto;
-  padding: 1rem 1.25rem;
-  background-color: #FEF7EC;
-  border: 2px solid #F0E0C8;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-.privacy-banner__heading {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #222;
-}
-.privacy-banner__body {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #444;
-}
-
-/* —— Mobile Hero & Privacy Tuning —— */
-@media (max-width: 600px) {
-  /* Mobile system font and hide graphic for faster paint */
-  html, body, .privacy-banner__body, .banner-inner .lead {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-  }
-  .privacy-banner__graphic, .privacy-banner__graphic-svg { display: none !important; }
-  /* Prevent hero image loading on mobile */
-  .banner-inner { background-image: none !important; }
-
-  /* Hero text */
-  .banner-inner .lead {
-    color: #000 !important;       /* solid black */
-    text-shadow: none !important; /* remove the outline */
-    font-size: clamp(0.875rem, 4vw, 1rem);
-    max-width: 90%;
-    margin: 0 auto 1rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    display: inline-block;
-  }
-
-  /* Hero container tweaks */
-  .banner-inner {
-    height: auto;
-    padding: 2rem 1rem;
-    /* background-color removed for mobile */
-  }
-
-  /* Hero title */
-  .banner-inner .site-title {
-    font-size: clamp(1.25rem, 6vw, 2rem);
-    line-height: 1.2;
-    margin: 0.25rem auto 0.5rem;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    display: inline-block;
-    max-width: 90%;
-    color: #FF9900;  /* preserve orange on mobile */
-    text-shadow:
-      -1px -1px 0 #000,
-       1px -1px 0 #000,
-      -1px  1px 0 #000,
-       1px  1px 0 #000;
-  }
-
-  /* Hero button */
-  .banner-inner .btn {
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-  }
-
-  /* Privacy banner tweaks */
-  .privacy-banner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1rem;
-  }
-  .privacy-banner__graphic {
-    margin-bottom: 0.5rem;
-  }
-  .privacy-banner__heading {
-    font-size: 1.125rem;
-  }
-  .privacy-banner__body {
-    font-size: 0.94rem;
-  }
-}
-
-  </style>
-  <!-- Auto-detect and set cookie for Translate -->
-  <script>
-    (function(){
-      var userLang = (navigator.language || navigator.userLanguage).substr(0,2);
-      document.cookie = "googtrans=/en/" + userLang + "; path=/";
-    })();
   </script>
 </head>
 <body>
