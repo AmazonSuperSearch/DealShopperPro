@@ -190,6 +190,12 @@
       50%  { box-shadow: 0 0 20px 10px rgba(13,110,253,0.5); }
       100% { box-shadow: 0 0 0 0 rgba(13,110,253,0.5); }
     }
+/* — Show the hero background only on devices ≥ 992 px (Bootstrap’s “lg”) — */
+@media (min-width: 992px) {
+  .banner-inner {
+    background-image: url('/amazon-super-search-lightning-deals-banner.jpg');
+  }
+}
 
   /* Privacy banner styling */
 .privacy-banner__graphic {
