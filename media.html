@@ -1,805 +1,313 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<!-- Preconnect & Font Optimization -->
-
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-
-<!-- Preload and Async CSS -->
-<link as="style" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
-<noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"/></noscript>
-
-<noscript></noscript>
-<link as="style" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
-<noscript><link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet"/></noscript>
-<!-- Defer JavaScript -->
-
-<script defer="" src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js"></script>
-<script defer="" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<!-- Preconnects -->
-<link crossorigin="" href="https://www.googletagmanager.com" rel="preconnect"/>
-<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
-<link crossorigin="" href="https://cdn.jsdelivr.net" rel="preconnect"/>
-<link href="//translate.google.com" rel="dns-prefetch"/>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-51QSZ395GS"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-51QSZ395GS');
-  </script>
-<title>Advanced Amazon Search Engine with Coupons and In-Stock Filter | Deal Shopper Pro</title>
-<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
-<link href="/favicon.png" rel="icon" sizes="48x48" type="image/png"/>
-<link href="/site.webmanifest" rel="manifest"/>
-<!-- SEO Meta Tags -->
-<meta content="Advanced Amazon search engine with coupons, in-stock filters, Prime-only deals, and lightning discounts—no signup required." name="description"/>
-<meta content="index, follow" name="robots"/>
-<!-- Self-referential canonical -->
-<link href="https://www.dealshopperpro.com/" rel="canonical"/>
-<!-- Open Graph / Social -->
-<meta content=" | Price, Rating, Brand &amp; Coupon Filters" property="og:title"/>
-<meta content="Search Amazon by price, rating, Prime, brand, coupons &amp; lightning deals. 100% free—no signup needed." property="og:description"/>
-<meta content="https://www.dealshopperpro.com/" property="og:url"/>
-<meta content="website" property="og:type"/>
-<meta content="https://www.dealshopperpro.com/thumbnail.png" property="og:image"/>
-<meta content=" Hero Image" property="og:image:alt"/>
-<!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content=": Filter by Price, Rating &amp; Coupons" name="twitter:title"/>
-<meta content="Find Amazon deals fast with filters for price, rating, Prime, coupons &amp; lightning deals. 100% free." name="twitter:description"/>
-<meta content="https://www.dealshopperpro.com/thumbnail.png" name="twitter:image"/>
-<!-- JSON-LD Structured Data: SoftwareApplication and SiteNavigationElement -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "",
-    "url": "https://www.dealshopperpro.com/",
-    "applicationCategory": "WebApplication",
-    "operatingSystem": "All",
-    "description": "Filter Amazon by price, rating, brand, coupons & Lightning Deals—free  no signup."
-  }
-  </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "https://www.dealshopperpro.com/",
-  "name": "Deal Shopper Pro",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.dealshopperpro.com/?q=usb+charger",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-<!-- 1) Define the init callback for Google Translate -->
-<script>
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,es,fr,ru,de,it,pt,nl,zh-CN,hi,ar',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-  </script>
-<!-- 2) Load Google’s Translate library -->
-<script defer="" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<!-- 3) Override CSS for Translate widget -->
-<style>
-    .goog-te-menu2 {
-      max-height: 300px !important;
-      overflow-y: auto !important;
-    }
-    .goog-te-menu2 table {
-      width: 100% !important;
-    }
-    .goog-te-menu-frame.skiptranslate {
-      max-height: 300px !important;
-      height: auto !important;
-      overflow-y: auto !important;
-    }
-    .skiptranslate .goog-te-menu2 {
-      max-height: 300px !important;
-      height: auto !important;
-      overflow-y: auto !important;
-    }
-    .goog-te-banner-frame.skiptranslate {
-      display: none !important;
-    }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Media Coverage of Deal Shopper Pro" property="og:title">
+  <meta content="Explore videos, demos, articles, and testimonials showcasing Deal Shopper Pro in action." property="og:description">
+  <meta content="https://www.dealshopperpro.com/media.html" property="og:url">
+  <meta content="https://www.dealshopperpro.com/og-image-media.png" property="og:image">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="Media Coverage of Deal Shopper Pro" name="twitter:title">
+  <meta content="Explore videos, demos, articles, and testimonials showcasing Deal Shopper Pro in action." name="twitter:description">
+  <meta content="https://www.dealshopperpro.com/og-image-media.png" name="twitter:image">
+  <title>Articles &amp; Videos: Deal Shopper Pro Demos and Tutorials</title>
+  <meta content="View Deal Shopper Pro’s media features on YouTube, Medium, Instagram, and more—discover demos, deep dives, and user testimonials." name="description">
+  <meta content="index, follow" name="robots">
+  <link href="https://www.dealshopperpro.com/media.html" rel="canonical">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+  <style>
     body {
-      top: 0px !important;
+      background: #f6f7fb;
+      font-family: 'Inter', 'Poppins', Arial, sans-serif;
     }
-  </style>
-<!-- Bootstrap CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
-<!-- Font Awesome CSS (place here) -->
-
-<!-- Inter font -->
-
-<!-- Poppins font -->
-
-<!-- Tagify CSS & JS -->
-<link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet"/>
-<script defer="" src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js"></script>
-<style>
-    /* Global font */
-    body {
-      font-family: 'Inter', sans-serif;
+    .navbar-brand {
+      display: flex; align-items: center;
     }
-    /* Banner Heading Animations */
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50%      { transform: scale(1.05); }
+    .navbar-brand .bi {
+      margin-right: .5rem;
+      font-size: 1.5em;
+      color: #FF9900;
     }
-    @keyframes glow {
-      0% {
-        text-shadow:
-          0 0 8px rgba(255,255,255,0.6),
-          0 0 16px rgba(255,255,255,0.4);
-      }
-      100% {
-        text-shadow:
-          0 0 16px rgba(255,255,255,1),
-          0 0 32px rgba(255,255,255,0.7);
-      }
+    section {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 8px rgba(50,50,93,0.06);
+      padding: 2.2rem 1.3rem 1.7rem 1.3rem;
+      margin-bottom: 2rem;
     }
-    .banner-inner .site-title {
+    h2.h4, h2.h5 { display: flex; align-items: center; gap: 0.55em;}
+    .media-list li, .media-list a {
+      font-size: 1.12em;
+    }
+    .media-icon {
+      width: 1.35em;
+      height: 1.35em;
+      margin-right: 0.4em;
+      vertical-align: text-bottom;
+      opacity: 0.85;
+    }
+    ul.list-unstyled > li {
+      margin-bottom: 0.7em;
+      padding-left: 0.5em;
+      display: flex; align-items: center;
+    }
+    .btn-primary {
+      background: #FF9900;
+      border: none;
+      font-weight: 600;
+      transition: background .2s;
+    }
+    .btn-primary:hover {
+      background: #e08b04;
+    }
+    .breadcrumb {
+      background: none;
+      padding: 0 0 1rem 0;
+      margin-bottom: 0;
+    }
+    .breadcrumb a { text-decoration: none; }
+    @media (max-width: 575px) {
+      section { padding: 1.3rem 0.7rem; }
+    }
+    /* Section color tags */
+    #videos { border-left: 5px solid #FF595E;}
+    #articles { border-left: 5px solid #1982C4;}
+    #blogspot { border-left: 5px solid #6A4C93;}
+    #social { border-left: 5px solid #FFCA3A;}
+    /* List hover effect */
+    ul.list-unstyled li:hover, ul.list-unstyled li:focus-within {
+      background: #f8fafc;
+      border-radius: 7px;
+      box-shadow: 0 1px 5px 0 #eee;
+    }
+    /* Translate button styling */
+    #loadTranslate {
+      margin: 0 auto 2.5rem auto;
       display: block;
-      text-align: center;
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
-      font-size: clamp(1.5rem, 5vw, 3rem);
-      line-height: 1.2;
-      color: #FF9900;
-      animation:
-        pulse 3s ease-in-out infinite,
-        glow  2.5s ease-in-out infinite alternate;
+      background: #eee;
+      color: #333;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      padding: 0.6em 1.1em;
+      transition: background .2s;
     }
-    .banner-inner .lead {
-  color: white;
-  /* Four-way text shadow to simulate a 1px black outline */
-  text-shadow:
-    1px  1px 0 #000,
-   -1px  1px 0 #000,
-    1px -1px 0 #000,
-   -1px -1px 0 #000;
-}
-    .text-pulse {
-      color: #FF9900;
-      text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
-      animation: glow 2.5s ease-in-out infinite alternate;
+    #loadTranslate:hover {
+      background: #ffecb3;
+      color: #ff9900;
     }
-    .pulse-glow {
-      animation: pulse-glow 2s infinite;
-      transition: box-shadow .3s ease-in-out;
-    }
-    @keyframes pulse-glow {
-      0%   { box-shadow: 0 0 0 0 rgba(13,110,253,0.5); }
-      50%  { box-shadow: 0 0 20px 10px rgba(13,110,253,0.5); }
-      100% { box-shadow: 0 0 0 0 rgba(13,110,253,0.5); }
-    }
-/* — Show the hero background only on devices ≥ 992 px (Bootstrap’s “lg”) — */
-@media (min-width: 992px) {
-  .banner-inner {
-    background-image: url('/amazon-super-search-lightning-deals-banner.jpg');
-  }
-}
-
-  /* Privacy banner styling */
-.privacy-banner__graphic {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.privacy-banner__graphic-svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  fill: #D9534F;
-}
-.privacy-banner {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  max-width: 600px;
-  margin: 1rem auto;
-  padding: 1rem 1.25rem;
-  background-color: #FEF7EC;
-  border: 2px solid #F0E0C8;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-.privacy-banner__heading {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #222;
-}
-.privacy-banner__body {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #444;
-}
-
-/* —— Mobile Hero & Privacy Tuning —— */
-@media (max-width: 600px) {
-  /* Hero tweaks */
-  .banner-inner {
-    height: auto;                /* let it grow with content */
-    padding: 2rem 1rem;          /* extra breathing room */
-  }
-  .banner-inner .site-title {
-    font-size: clamp(1.25rem, 6vw, 2rem);
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-    background-color: rgba(0,0,0,0.6);
-    border: 1px solid #fff;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    display: inline-block;
-    max-width: 90%;
-    margin: 0.25rem auto;
-    color: #FF9900;  /* preserve orange on mobile */
-    text-shadow:
-      -1px -1px 0 #000,
-       1px -1px 0 #000,
-      -1px  1px 0 #000,
-       1px  1px 0 #000;
-  }
-  .banner-inner .lead {
-    font-size: clamp(0.875rem, 4vw, 1rem);
-    max-width: 90%;
-    margin: 0 auto 1rem;
-    text-shadow: 0 0 4px rgba(0,0,0,0.6); /* soften outline */
-    background-color: rgba(0,0,0,0.6);
-    border: 1px solid #fff;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    display: inline-block;
-    margin: 0.25rem auto 1rem;
-  }
-  .banner-inner .btn {
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-  }
-
-  /* Privacy banner tweaks */
-  .privacy-banner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1rem;
-  }
-  .privacy-banner__graphic {
-    margin-bottom: 0.5rem;
-  }
-  .privacy-banner__heading {
-    font-size: 1.125rem;
-  }
-  .privacy-banner__body {
-    font-size: 0.94rem;
-  }
-}
   </style>
-<!-- Auto-detect and set cookie for Translate -->
-<script>
-    (function(){
-      var userLang = (navigator.language || navigator.userLanguage).substr(0,2);
-      document.cookie = "googtrans=/en/" + userLang + "; path=/";
-    })();
-  </script>
-
-<style>
-  body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
-  header, .site-header { padding: 1rem; background: #fff; text-align: center; }
-  h1, .site-title { font-size: 1.5rem; font-weight: 600; margin: 0; }
-  .main-search-bar { padding: 1rem; }
-</style>
-
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-<audio id="clickSound" preload="auto" src="/click.mp3"></audio>
-<!-- ——— HEADER / NAVIGATION ——— -->
+ <!-- ——— HEADER / NAVIGATION ——— -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-<div class="container">
-<a class="navbar-brand fw-bold" href="/" style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; color: #FF9900;">
-  🔎 Deal Shopper Pro
-</a>
-<button aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item">
-<a class="nav-link" href="/">Home</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="media.html">Media</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="help.html">Help</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="about.html">About</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="contact.html">Contact</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-<!-- TRANSLATE WIDGET -->
-<div class="container text-end mt-3 mb-2">
-<div id="google_translate_element"></div>
-</div>
-<main id="main">
-<div class="main-content">
-<!-- SKIP LINK -->
-<a class="visually-hidden-focusable" href="#main">Skip to main content</a>
-<!-- HERO BANNER -->
-<header class="banner-inner text-center py-5" style="
-          background-size: cover;
-          background-position: center;
-          height: 300px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          padding: 1rem;
-          color: white;
-          text-shadow: 0 0 8px rgba(0,0,0,0.6);
-        ">
-<h1 class="site-title hero-heading">
-    Find Amazon Deals<br/>
-    with Advanced Filters
-  </h1>
-<p class="lead mb-4">
-    Instantly uncover in-stock Lightning Deals, apply custom price, rating, brand &amp; coupon filters, and discover eco-friendly products—no signup required.
-  </p>
-<a aria-label="Start Advanced Amazon Search" class="btn btn-primary btn-lg px-4" href="#amazon-search-form">
-    Start Advanced Amazon Search
-  </a>
-</header>
-<!-- PRIVACY BANNER MOVED BELOW -->
-<section aria-labelledby="privacy-heading" class="privacy-banner" role="note">
-<div class="privacy-banner__graphic">
-<svg aria-hidden="true" class="privacy-banner__graphic-svg" focusable="false" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-1 9h2v2h-2zm0-4h2v2h-2z"></path>
-</svg>
-</div>
-<div class="privacy-banner__body">
-<h2 class="privacy-banner__heading" id="privacy-heading">Your Privacy Matters</h2>
-
-</div>
-</section>
-<!-- INTRODUCTION TEXT -->
-<div style="text-align: center; margin: 2rem auto; max-width: 600px;">
-<p class="hero-subtitle"><strong>Goodbye endless scrolling—find exactly what you need in 5 steps.</strong></p>
-<p>
-<strong class="hero-cta text-pulse">Start With Step 1 Below</strong>
-</p>
-</div>
-<!-- AMAZON SEARCH FORM -->
-<input name="i" type="hidden" value=""/>
-<form id="amazon-search-form">
-<!-- STEP 1 -->
-<div class="container text-start mb-4">
-<h2>✅ Step 1: Advanced Amazon Search</h2>
-<p class="text-muted mb-3">
-            Enter a product name, keyword, category, ASIN, ISBN, or UPC.
-          </p>
-<div class="card p-3">
-<div class="input-group">
-<button aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button">🎤</button>
-<input aria-label="Main search input" autocomplete="off" class="form-control" id="mainSearchInput" name="q" placeholder="e.g. wireless headphones" type="text"/>
-</div>
-</div>
-</div>
-<!-- STEP 2 -->
-<div class="container text-start mb-4">)
-          <h2>✅ Step 2: Price Range Filter Amazon</h2>
-<p class="text-muted mb-3">
-            Choose your currency and the minimum and maximum price you’re willing to spend.
-          </p>
-<div class="card p-3">
-<div class="row g-3 align-items-end">
-<div class="col-12 col-lg-2">
-<label class="form-label" for="currencySelect">Currency</label>
-<select aria-label="Select currency" class="form-select" id="currencySelect" name="currency">
-<option selected="" value="usd">USD ($)</option>
-<option value="eur">EUR (€)</option>
-<option value="gbp">GBP (£)</option>
-<option value="jpy">JPY (¥)</option>
-<option value="inr">INR (₹)</option>
-</select>
-</div>
-<div class="col-12 col-lg-5">
-<label class="form-label" for="minPrice">Minimum Price</label>
-<div class="input-group">
-<span class="input-group-text" id="minPriceAddon">$</span>
-<input aria-describedby="minPriceAddon" class="form-control" id="minPrice" name="min-price" placeholder="Min" step="0.01" type="number"/>
-</div>
-</div>
-<div class="col-12 col-lg-5">
-<label class="form-label" for="maxPrice">Maximum Price</label>
-<div class="input-group">
-<span class="input-group-text" id="maxPriceAddon">$</span>
-<input aria-describedby="maxPriceAddon" class="form-control" id="maxPrice" name="max-price" placeholder="Max" step="0.01" type="number"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- STEP 3 -->
-<div class="container text-start mb-4">
-<h2>✅ Step 3: Amazon Rating Filter</h2>
-<p class="text-muted mb-3">Pick a minimum discount, customer rating, and how you want the results sorted.</p>
-<div class="card p-3">
-<div class="row g-3">
-<div class="col-12 col-lg-4">
-<label class="form-label" for="percentOff">% Off</label>
-<select aria-label="Select percentage off" class="form-select" id="percentOff" name="percent-off">
-<option value="">Any</option>
-<option value="10">10% or more</option>
-<option value="20">20% or more</option>
-<option value="30">30% or more</option>
-<option value="40">40% or more</option>
-<option value="50">50% or more</option>
-<option value="60">60% or more</option>
-<option value="70">70% or more</option>
-<option value="80">80% or more</option>
-</select>
-</div>
-<div class="col-12 col-lg-4">
-<label class="form-label" for="minRating">Customer Review</label>
-<select aria-label="Select minimum customer rating" class="form-select" id="minRating" name="min-rating">
-<option value="">Any</option>
-<option value="1">1★ &amp; up</option>
-<option value="2">2★ &amp; up</option>
-<option value="3">3★ &amp; up</option>
-<option value="4">4★ &amp; up</option>
-<option value="5">5★ &amp; up</option>
-</select>
-</div>
-<div class="col-12 col-lg-4">
-<label class="form-label" for="sortOrder">Sort By</label>
-<select aria-label="Select sort order" class="form-select" id="sortOrder" name="sort">
-<option value="">Relevance</option>
-<option value="price-asc-rank">Price: Low → High</option>
-<option value="price-desc-rank">Price: High → Low</option>
-<option value="review-rank">Avg. Customer Review</option>
-<option value="date-desc-rank">Newest Arrivals</option>
-</select>
-</div>
-</div>
-</div>
-</div>
-<!-- STEP 4 -->
-<section class="container text-start mb-4">
-<h2>✅ Step 4: Amazon Brand Filter</h2>
-<p class="text-muted mb-3">Select one or more brands below to display results exclusively from those brands.</p>
-<div class="card border-success shadow-sm mb-4 p-3">
-<div class="row g-3">
-<div class="col-12 col-md-6">
-<label class="form-label" for="brandInclude">Include Brands</label>
-<input aria-label="Include brands" class="form-control" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text"/>
-<div class="form-check mt-2">
-<input aria-label="Match only these brands" class="form-check-input" id="includeOnly" name="include-only" type="checkbox"/>
-<label class="form-check-label" for="includeOnly">Match only these brands</label>
-</div>
-<small class="form-text text-muted">Enter one or more brands (comma-separated or via Tagify).</small>
-</div>
-</div>
-</div>
-</section>
-<!-- STEP 5 -->
-<section class="container text-start mb-4">
-<h2>✅ Step 5: Amazon Coupon Finder &amp; Lightning Deals Filter</h2>
-<p class="text-muted mb-3">Narrow down your search: choose Prime-only, Lightning Deals, Eco-Friendly, Free Shipping, In-Stock items, and coupons to find the perfect Amazon products.</p>
-<div class="card mb-4 p-3">
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-<div class="form-check">
-<input aria-label="Prime Only" class="form-check-input" id="primeOnly" name="prime-only" type="checkbox"/>
-<label class="form-check-label" for="primeOnly">🤩 Prime Only</label>
-</div>
-<div class="form-check">
-<input aria-label="Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox"/>
-<label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label>
-</div>
-<div class="form-check">
-<input aria-label="Today's Deals" class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox"/>
-<label class="form-check-label" for="todaysDeals">🔥 Today's Deals</label>
-</div>
-<div class="form-check">
-<input aria-label="Free Shipping" class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox"/>
-<label class="form-check-label" for="freeShipping">🚚 Free Shipping</label>
-</div>
-<div class="form-check">
-<input aria-label="In Stock" class="form-check-input" id="inStock" name="in-stock" type="checkbox"/>
-<label class="form-check-label" for="inStock">📦 In Stock</label>
-</div>
-<div class="form-check">
-<input aria-label="Coupons" class="form-check-input" id="coupons" name="coupons" type="checkbox"/>
-<label class="form-check-label" for="coupons">🏷️ Coupons</label>
-</div>
-<div class="form-check">
-<input aria-label="Eco-Friendly" class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox"/>
-<label class="form-check-label" for="ecoFriendlyToggle">♻️ Eco-Friendly</label>
-</div>
-<div class="form-check">
-<input aria-label="Biodegradable" class="form-check-input" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox"/>
-<label class="form-check-label" for="biodegradablePackaging">📦 Biodegradable</label>
-</div>
-<div class="form-check">
-<input aria-label="Vegan" class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox"/>
-<label class="form-check-label" for="veganProducts">🌱 Vegan</label>
-</div>
-<div class="form-check">
-<input aria-label="Organic" class="form-check-input" id="organicProducts" name="organic-products" type="checkbox"/>
-<label class="form-check-label" for="organicProducts">🌿 Organic</label>
-</div>
-<div class="form-check">
-<input aria-label="Carbon-Neutral Delivery" class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox"/>
-<label class="form-check-label" for="carbonNeutralDelivery">🚴 Carbon-Neutral Delivery</label>
-</div>
-<div class="form-check">
-<input aria-label="Cruelty-Free" class="form-check-input" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox"/>
-<label class="form-check-label" for="crueltyFreeToggle">🐰 Cruelty-Free</label>
-</div>
-<div class="form-check">
-<input aria-label="Low EMF" class="form-check-input" id="lowEmfDevices" name="low-emf-devices" type="checkbox"/>
-<label class="form-check-label" for="lowEmfDevices">📶 Low EMF</label>
-</div>
-<div class="form-check">
-<input aria-label="Allergy-Friendly" class="form-check-input" id="allergyFriendly" name="allergy-friendly" type="checkbox"/>
-<label class="form-check-label" for="allergyFriendly">🤧 Allergy-Friendly</label>
-</div>
-<div class="form-check">
-<input aria-label="Gifts for Her" class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox"/>
-<label class="form-check-label" for="giftsForHer">🎀 Gifts for Her</label>
-</div>
-<div class="form-check">
-<input aria-label="Gifts for Him" class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox"/>
-<label class="form-check-label" for="giftsForHim">👔 Gifts for Him</label>
-</div>
-<div class="form-check">
-<input aria-label="Gifts for Dad" class="form-check-input" id="giftsForDad" name="gifts-for-dad" type="checkbox"/>
-<label class="form-check-label" for="giftsForDad">👨 Gifts for Dad</label>
-</div>
-<div class="form-check">
-<input aria-label="Gifts for Mom" class="form-check-input" id="giftsForMom" name="gifts-for-mom" type="checkbox"/>
-<label class="form-check-label" for="giftsForMom">👩 Gifts for Mom</label>
-</div>
-<div class="form-check">
-<input aria-label="Gifts for Kids" class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox"/>
-<label class="form-check-label" for="giftsForKids">🧒 Gifts for Kids</label>
-</div>
-<div class="form-check">
-<input aria-label="Birthday Gifts" class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox"/>
-<label class="form-check-label" for="birthdayGifts">🎂 Birthday Gifts</label>
-</div>
-<div class="form-check">
-<input aria-label="Anniversary Gifts" class="form-check-input" id="anniversaryGifts" name="anniversary-gifts" type="checkbox"/>
-<label class="form-check-label" for="anniversaryGifts">💝 Anniversary Gifts</label>
-</div>
-<div class="form-check">
-<input aria-label="Holiday Gift Picks" class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox"/>
-<label class="form-check-label" for="holidayGiftPicks">🎄 Holiday Gift Picks</label>
-</div>
-</div>
-</div>
-</section>
-<!-- STEP 6 -->
-<section class="container text-start mb-5">
-<h2>✅ Step 6: Begin Your Amazon Search or Continue Below Using Advanced Settings</h2>
-<p class="text-muted mb-3">You’re all set! Click the button below to view your filtered results directly on Amazon.</p>
-<div class="text-center">
-<div id="filter-warning" style="display:none; color: orange; font-weight: bold; padding: 10px;">
-              ⚠️ Too many filters may return no results. Try removing a few for better results.
-            </div>
-<button aria-label="Run Advanced Amazon Search" class="btn btn-primary btn-lg w-100 pulse-glow" form="amazon-search-form" id="search-button" type="submit">Run Advanced Amazon Search</button>
-<p class="text-warning mt-2 text-center" style="font-weight: bold;">
-              Too many filters may return no results.
-            </p>
-</div>
-</section>
-<!-- STEP 7 -->
-<div class="container text-start mb-4">
-<h2>✅ Step 7: Advanced Settings</h2>
-<p class="text-muted mb-3">Explore advanced filters and tools to refine your search even further.</p>
-<div class="card border-primary p-3">
-<!-- Power-User Tools Static Box -->
-<h3 class="mb-2">Power-User Tools</h3>
-<div class="card p-3 mb-4">
-<hr/>
-<div class="form-check mb-2">
-<input aria-label="Enable Boolean Operators" class="form-check-input" id="enableBoolean" name="enable-boolean" type="checkbox"/>
-<label class="form-check-label" for="enableBoolean">Enable Boolean Operators</label>
-</div>
-<div class="mb-2">
-<label class="form-label" for="fieldFilters">Field Filters</label>
-<input aria-label="Field Filters" class="form-control" id="fieldFilters" name="field-filters" placeholder="e.g. field-brand:Sony" type="text"/>
-</div>
-<div class="mb-4">
-<label class="form-label" for="directLookup">ASIN / ISBN Direct Lookup</label>
-<input aria-label="ASIN or ISBN lookup" class="form-control" id="directLookup" name="direct-lookup" placeholder="Enter ASIN, ISBN or UPC" type="text"/>
-</div>
-<div class="coming-soon">
-<p class="text-muted"><em>More filters coming soon:</em></p>
-<div class="form-check mb-2">
-<input aria-label="Discount (%) from 90-Day Avg Price (Coming Soon)" class="form-check-input" disabled="" type="checkbox"/>
-<label class="form-check-label">Discount (%) from 90-Day Avg Price <small>(Coming Soon)</small></label>
-</div>
-<div class="form-check mb-2">
-<input aria-label="Coupon-Clippable Only (Coming Soon)" class="form-check-input" disabled="" type="checkbox"/>
-<label class="form-check-label">Coupon-Clippable Only <small>(Coming Soon)</small></label>
-</div>
-</div>
-</div>
-<!-- Deal-Hunter Goodies Static Box -->
-<h3 class="mb-2">Deal-Hunter Goodies</h3>
-<div class="card p-3 mb-4">
-<hr/>
-<div class="mb-3">
-<label class="form-label" for="priceDrop90">Discount (%) from 90-Day Avg Price</label>
-<input aria-label="Discount from 90-day avg" class="form-control" id="priceDrop90" name="price-drop" placeholder="e.g. 20" type="number"/>
-</div>
-<div class="form-check mb-2">
-<input aria-label="Coupon-Clippable Only" class="form-check-input" id="couponOnly" name="coupon-only" type="checkbox"/>
-<label class="form-check-label" for="couponOnly">Coupon-Clippable Only</label>
-</div>
-<div class="form-check mb-2">
-<input aria-label="Warehouse / Open-Box" class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox"/>
-<label class="form-check-label" for="warehouseRefurb">Warehouse / Open-Box</label>
-</div>
-<div class="row g-3 mt-3">
-<div class="col-6 col-md-3">
-<label class="form-label" for="discount30">Discount (%) from 30-Day Avg</label>
-<input aria-label="Discount from 30-day avg" class="form-control" id="discount30" min="0" name="below-avg-30" placeholder="e.g. 20" type="number"/>
-</div>
-<div class="col-6 col-md-3">
-<label class="form-label" for="discount60">Discount (%) from 60-Day Avg</label>
-<input aria-label="Discount from 60-day avg" class="form-control" id="discount60" min="0" name="below-avg-60" placeholder="e.g. 15" type="number"/>
-</div>
-<div class="col-6 col-md-3">
-<label class="form-label" for="discount90">Discount (%) from 90-Day Avg</label>
-<input aria-label="Discount from 90-day avg" class="form-control" id="discount90" min="0" name="below-avg-90" placeholder="e.g. 10" type="number"/>
-</div>
-<div class="col-6 col-md-3">
-<label class="form-label" for="volatility7">Max Daily Price Volatility (%)</label>
-<input aria-label="Max daily price volatility" class="form-control" id="volatility7" min="0" name="max-volatility-7" placeholder="e.g. 5" type="number"/>
-</div>
-</div>
-<div class="coming-soon mt-4">
-<p class="text-muted"><em>More advanced goodies on the way:</em></p>
-<div class="form-check mb-2">
-<input aria-label="Price-Drop Alerts" class="form-check-input" disabled="" type="checkbox"/>
-<label class="form-check-label">Price-Drop Alerts</label>
-</div>
-</div>
-</div>
-<!-- Personalization & AI-Driven Static Box -->
-<h3 class="mb-2">Personalization &amp; AI-Driven</h3>
-<div class="card p-3 mb-4">
-<p>We’re cooking up Personalization &amp; AI-Driven—stay tuned!</p>
-</div>
-<!-- Visual & Voice Interfaces Static Box -->
-<h3 class="mb-2">Visual &amp; Voice Interfaces</h3>
-<div class="card p-3 mb-4">
-<p>We’re cooking up Visual &amp; Voice Interfaces—stay tuned!</p>
-</div>
-<!-- Niche & Lifestyle Filters Static Box -->
-<h3 class="mb-2">Niche &amp; Lifestyle Filters</h3>
-<div class="card p-3 mb-4">
-<p>We’re cooking up Niche &amp; Lifestyle Filters—stay tuned!</p>
-</div>
-</div>
-</div>
-<!-- ADDITIONAL SEARCH BUTTON BELOW -->
-<h4 class="mb-2 text-center">Search Amazon</h4>
-<p class="text-muted mb-3 text-center">Click below to run your current filter settings without scrolling.</p>
-<div class="text-center mb-4">
-<button class="btn btn-primary px-5 py-2 fs-5 shadow" style="border-radius: 8px;">
-    🔍 Search Amazon
-  </button>
-<p class="text-warning mt-3 fw-bold">
-    Too many filters may return no results.
-  </p>
-</div>
-</form>
-<div class="container my-5">
-<div class="card p-4 shadow-sm mx-auto text-center" style="max-width: 700px; border: 2px solid #ccc; border-radius: 12px;">
-<h4 class="mb-3">🛡️ Your Privacy &amp; Next Steps</h4>
-<p>
-      We <strong>never collect or store personal data</strong>—period. There’s <strong>no login</strong>, <strong>no tracking cookies</strong>, and <strong>no sign-ups</strong>. All searches run client-side and redirect securely to Amazon.
-    </p>
-<p>
-      Want to learn more? Visit our 
-      <a class="fw-semibold" href="help.html#about-amazon-super-search">Help page</a> for step-by-step tutorials, or check out our 
-      <a class="fw-semibold" href="media.html">Media page</a> for video demos and user testimonials.
-    </p>
-</div>
-</div>
-<!-- Share With Friends Section -->
-<section class="container text-center my-5">
-<h4 class="mb-3">📣 Share With Friends</h4>
-<p class="text-muted mb-4">
-    Know someone who loves Amazon deals? Let them in on the secret.
-  </p>
-<div class="d-flex justify-content-center gap-3 flex-wrap">
-<a aria-label="Share on Facebook" class="btn btn-primary btn-sm" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
-      Share on Facebook
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/" style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; color: #FF9900;">
+      <i class="bi bi-lightning-charge-fill"></i> Deal Shopper Pro
     </a>
-<a aria-label="Share on Twitter" class="btn btn-info btn-sm text-white" href="https://twitter.com/intent/tweet?text=Check%20out%20this%20tool:%20https%3A%2F%2Fwww.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
-      Share on Twitter
-    </a>
-<a aria-label="Share via Email" class="btn btn-secondary btn-sm" href="mailto:?subject=Amazon%20Super%20Search&amp;body=Find%20better%20Amazon%20deals%20with%20this%20tool:%20https%3A%2F%2Fwww.dealshopperpro.com%2F">
-      Share via Email
-    </a>
-<a aria-label="Share via Text" class="btn btn-success btn-sm" href="sms:?&amp;body=Check%20this%20out:%20https%3A%2F%2Fwww.dealshopperpro.com%2F">
-      Share via Text
-    </a>
-</div>
-<div class="mt-3">
-<button aria-label="Copy page link" class="btn btn-dark btn-sm" data-link="https://www.dealshopperpro.com/" id="copyLinkBtn">
-      Copy Page Link
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="help.html">Help</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav aria-label="breadcrumb" class="my-3 container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="https://www.dealshopperpro.com/">Home</a></li>
+    <li aria-current="page" class="breadcrumb-item active">Media</li>
+  </ol>
+</nav>
+
+<!-- Main Page Heading -->
+<div class="container mb-4">
+  <h1 class="display-5 fw-bold text-center">Deal Shopper Pro Media</h1>
 </div>
+
+<!-- Media Page Intro -->
+<section class="container my-4">
+  <h2 class="h5"><i class="bi bi-newspaper"></i> Deal Shopper Pro Media Links</h2>
+  <p>Deal Shopper Pro has been featured across various platforms, including YouTube, Medium, and blogs. This page serves as a directory of all public-facing content, allowing users and search engines to easily explore demos, guides, and walkthroughs.</p>
 </section>
-<!-- Copy Page Link Script (Place before </body>) -->
-<script>
-  document.getElementById("copyLinkBtn").addEventListener("click", function () {
-    const pageUrl = this.getAttribute("data-link") || window.location.href;
-    navigator.clipboard.writeText(pageUrl).then(() => {
-      this.textContent = "Copied!";
-      setTimeout(() => {
-        this.textContent = "Copy Page Link";
-      }, 2000);
-    }).catch(err => {
-      console.error("Copy failed:", err);
-      alert("Failed to copy link.");
-    });
-  });
-</script>
-</div>
-</main>
-<!-- ——————————— SITE-WIDE FOOTER ——————————— -->
+
+<!-- YouTube Section -->
+<section class="container" id="videos">
+  <h2 class="h4 mb-3"><i class="bi bi-youtube" style="color:#FF595E"></i> YouTube Channel &amp; Shorts</h2>
+  <ul class="list-unstyled media-list">
+    <li>
+      <i class="bi bi-youtube media-icon" style="color:#FF595E"></i>
+      <a href="https://www.youtube.com/@SuperSearchPro" rel="noopener noreferrer" target="_blank">SuperSearchPro YouTube Channel</a>
+    </li>
+    <li>
+      <i class="bi bi-camera-reels-fill media-icon" style="color:#FF595E"></i>
+      <a href="https://youtube.com/shorts/D_UWyn1DC3M?feature=shared" rel="noopener noreferrer" target="_blank">Short: How to Find Amazon Lightning Deals in 30 Seconds</a>
+    </li>
+    <li>
+      <i class="bi bi-ticket-perforated-fill media-icon" style="color:#FF595E"></i>
+      <a href="https://youtube.com/shorts/vW2Jkg1niFw?feature=shared" rel="noopener noreferrer" target="_blank">Short: Secret Amazon Coupon Finder Demo</a>
+    </li>
+    <li>
+      <i class="bi bi-broadcast-pin media-icon" style="color:#FF595E"></i>
+      <a href="https://youtube.com/shorts/s_17P7T0mCc?feature=shared" rel="noopener noreferrer" target="_blank">Short: In-Stock Lightning Deal Tracker Overview</a>
+    </li>
+    <li>
+      <i class="bi bi-bar-chart-fill media-icon" style="color:#FF595E"></i>
+      <a href="https://youtube.com/shorts/OiFssgG4Xl4?feature=shared" rel="noopener noreferrer" target="_blank">Short: Deep Discount vs. Past Price Average</a>
+    </li>
+    <li>
+      <i class="bi bi-globe2 media-icon" style="color:#FF595E"></i>
+      <a href="https://youtube.com/shorts/xtzWUD4SGn4?feature=shared" rel="noopener noreferrer" target="_blank">Short: Tired of Endless Scrolling on Amazon? Find Eco-Friendly Deals in Seconds!</a>
+    </li>
+    <li>
+      <i class="bi bi-star-fill media-icon" style="color:#FF595E"></i>
+      <a href="https://youtube.com/shorts/34AFP6HrwXM?feature=share" rel="noopener noreferrer" target="_blank">Short: How to Unlock Prime Day 2025 Deals on Amazon</a>
+    </li>
+    <li>
+      <i class="bi bi-gift-fill media-icon" style="color:#FF595E"></i>
+      <a href="https://youtube.com/shorts/m3KfhUjwFsI?feature=share" rel="noopener noreferrer" target="_blank">Short: Find the Perfect Amazon Gift in Seconds</a>
+    </li>
+  </ul>
+  <!-- VideoObject schema for the first featured YouTube short -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "How to Find Amazon Lightning Deals in 30 Seconds",
+      "description": "A quick demo on finding lightning deals using Deal Shopper Pro.",
+      "thumbnailUrl": "https://img.youtube.com/vi/D_UWyn1DC3M/0.jpg",
+      "uploadDate": "2025-03-15T08:00:00Z",
+      "contentUrl": "https://www.youtube.com/watch?v=D_UWyn1DC3M",
+      "embedUrl": "https://www.youtube.com/embed/D_UWyn1DC3M",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Deal Shopper Pro",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.dealshopperpro.com/logo.png"
+        }
+      }
+    }
+  </script>
+</section>
+
+<!-- Medium Articles Section -->
+<section class="container" id="articles">
+  <h2 class="h4 mb-3"><i class="bi bi-medium" style="color:#1982C4"></i> Medium Articles</h2>
+  <ul class="list-unstyled media-list">
+    <li>
+      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
+      <a href="https://medium.com/@amazondealhunter/unlock-amazon-deal-of-the-day-by-brand-no-login-required-483330962670" rel="noopener noreferrer" target="_blank">Unlock Amazon Deal of the Day by Brand—No Login Required</a>
+    </li>
+    <li>
+      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
+      <a href="https://medium.com/@amazondealhunter/unlock-amazon-warehouse-deals-no-signup-needed-34994ba28ad3" rel="noopener noreferrer" target="_blank">Unlock Amazon Warehouse Deals—No Signup Needed</a>
+    </li>
+    <li>
+      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
+      <a href="https://medium.com/@amazondealhunter/discover-prime-only-lightning-deals-on-amazon-no-login-required-d4c5fcfc344c" rel="noopener noreferrer" target="_blank">Discover Prime-Only Lightning Deals on Amazon—No Login Required</a>
+    </li>
+    <li>
+      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
+      <a href="https://medium.com/@amazondealhunter/how-i-uncover-amazons-best-hidden-deals-in-under-a-minute-b6a7e0f296e0" rel="noopener noreferrer" target="_blank">How I Uncover Amazon’s Best Hidden Deals in Under a Minute</a>
+    </li>
+    <li>
+      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
+      <a href="https://medium.com/@amazondealhunter/search-amazon-like-a-pro-the-free-tool-i-use-daily-22c18f467206" rel="noopener noreferrer" target="_blank">Search Amazon Like a Pro: The Free Tool I Use Daily</a>
+    </li>
+    <li>
+      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
+      <a href="https://medium.com/@amazondealhunter/how-i-find-hidden-amazon-deals-without-wasting-time-651683f3bc7e" rel="noopener noreferrer" target="_blank">How I Find Hidden Amazon Deals Without Wasting Time</a>
+    </li>
+    <li>
+      <i class="bi bi-journal-richtext media-icon" style="color:#1982C4"></i>
+      <a href="https://medium.com/@amazondealhunter/how-to-find-eco-friendly-products-on-amazon-without-logging-in-1bb0c084d51c" rel="noopener noreferrer" target="_blank">How to Find Eco-Friendly Products on Amazon Without Logging In</a>
+    </li>
+  </ul>
+  <p class="mt-3">
+    <a class="btn btn-sm btn-primary" href="help.html"><i class="bi bi-question-circle"></i> Learn how to use these features</a>
+  </p>
+</section>
+
+<!-- Blogspot Posts Section -->
+<section class="container" id="blogspot">
+  <h2 class="h4 mb-3"><i class="bi bi-file-earmark-post" style="color:#6A4C93"></i> Blogspot Posts</h2>
+  <ul class="list-unstyled media-list">
+    <li>
+      <i class="bi bi-file-earmark-post media-icon" style="color:#6A4C93"></i>
+      <a href="https://amazonsupersearch.blogspot.com/2025/05/how-to-find-in-stock-amazon-lightning.html" rel="noopener noreferrer" target="_blank">How to Find In-Stock Amazon Lightning Deals (Blogpost)</a>
+    </li>
+    <li>
+      <i class="bi bi-file-earmark-post media-icon" style="color:#6A4C93"></i>
+      <a href="https://amazonsupersearch.blogspot.com/2025/05/unlock-hidden-savings-amazon-coupon.html" rel="noopener noreferrer" target="_blank">Unlock Hidden Savings: Amazon Coupon Tricks (Blogpost)</a>
+    </li>
+    <li>
+      <i class="bi bi-file-earmark-post media-icon" style="color:#6A4C93"></i>
+      <a href="https://amazonsupersearch.blogspot.com/2025/05/unlock-hidden-savings-with-amazon.html" rel="noopener noreferrer" target="_blank">Unlock Hidden Savings with Deal Shopper Pro (Blogpost)</a>
+    </li>
+  </ul>
+  <p class="mt-3">
+    <a class="btn btn-sm btn-primary" href="help.html"><i class="bi bi-question-circle"></i> Learn more on our Help Page</a>
+  </p>
+</section>
+
+<!-- Social Section -->
+<section class="container" id="social">
+  <h2 class="h4 mb-3"><i class="bi bi-share-fill" style="color:#FFCA3A"></i> Instagram, Tumblr &amp; Other Social</h2>
+  <ul class="list-unstyled media-list">
+    <li>
+      <i class="bi bi-tumblr media-icon" style="color:#FFCA3A"></i>
+      <a href="https://www.tumblr.com/amazonsupersearch/784459844898963456/tired-of-fake-amazon-deals-try-this-free-tool-i?source=share" rel="noopener noreferrer" target="_blank">Tumblr Post: Tired of Fake Amazon Deals? Try This Free Tool</a>
+    </li>
+    <!-- Add more social links as you publish them! -->
+  </ul>
+  <p class="mt-3">
+    <a class="btn btn-sm btn-primary" href="help.html"><i class="bi bi-arrow-left"></i> Back to Help &amp; How-To</a>
+  </p>
+</section>
+
+<section class="container my-5">
+  <h2 class="h5"><i class="bi bi-megaphone-fill"></i> Latest Media Updates</h2>
+  <p>This media roundup grows as we publish new content. Stay tuned for fresh videos, tutorials, and deal-finding strategies powered by Deal Shopper Pro.</p>
+</section>
+ <!-- ——————————— SITE-WIDE FOOTER ——————————— -->
+
 <footer>
-<div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
-<p><strong>Disclaimer:</strong> Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries.<br/>
+  <div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
+    <p><strong>Disclaimer:</strong> Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries.<br>
     As an Amazon Associate, we earn from qualifying purchases — this supports our free service.</p>
-<p>Discover top Amazon deals with advanced filters for Lightning Deals, Prime-eligible items, in-stock products, and hidden coupons.</p>
-<p>
-<a href="https://www.dealshopperpro.com/contact.html">Contact Us</a> |
+
+    <p>Discover top Amazon deals with advanced filters for Lightning Deals, Prime-eligible items, in-stock products, and hidden coupons.</p>
+
+    <p>
+      <a href="https://www.dealshopperpro.com/contact.html">Contact Us</a> |
       <a href="https://www.dealshopperpro.com/about.html">About Deal Shopper Pro</a> |
       <a href="https://www.dealshopperpro.com/help.html">Help Guide</a> |
-      <a href="https://www.dealshopperpro.com/media.html">Articles &amp; Videos</a> |
+      <a href="https://www.dealshopperpro.com/media.html">Articles & Videos</a> |
       <a href="https://www.dealshopperpro.com/privacy.html">Privacy Policy</a> |
       <a href="https://www.dealshopperpro.com/terms.html">Terms of Use</a>
-</p>
-<p><strong>© 2025 Deal Shopper Pro. All rights reserved.</strong></p>
-<script type="application/ld+json">
+    </p>
+
+    <p><strong>© 2025 Deal Shopper Pro. All rights reserved.</strong></p>
+
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -812,54 +320,21 @@
       }
     }
     </script>
-</div>
+  </div>
 </footer>
-<!-- Bootstrap JS Bundle -->
+<!-- Bootstrap JS bundle (Popper + JS) -->
+<script crossorigin="anonymous" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<!-- BreadcrumbList schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dealshopperpro.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Media", "item": "https://www.dealshopperpro.com/media.html" }
+  ]
+}
+</script>
 
-<!-- Main search logic (external) -->
-<script defer="" src="search-logic.js"></script>
-<!-- Voice‐search handler -->
-<script>
-    const btn   = document.getElementById('voiceSearchBtn');
-    const input = document.getElementById('mainSearchInput');
-
-    if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-      btn.disabled = true;
-      btn.title = 'Voice search not supported';
-    } else {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      const recog = new SpeechRecognition();
-      recog.continuous = false;
-      recog.lang = 'en-US';
-      recog.interimResults = false;
-      recog.maxAlternatives = 1;
-
-      btn.addEventListener('click', () => {
-        recog.start();
-        btn.classList.add('active');
-      });
-
-      recog.addEventListener('result', (e) => {
-        input.value = e.results[0][0].transcript;
-        recog.stop();
-      });
-
-      recog.addEventListener('end', () => {
-        btn.classList.remove('active');
-      });
-    }
-  </script>
-<!-- Click sound playback on interactions -->
-<script>
-    const clickSound = document.getElementById('clickSound');
-    if (clickSound) {
-      document.querySelectorAll('button, input[type="submit"], input[type="button"], input[type="checkbox"]').forEach(el => {
-        el.addEventListener('click', () => {
-          clickSound.currentTime = 0;
-          clickSound.play().catch(()=>{/*silent*/});
-        });
-      });
-    }
-  </script>
 </body>
 </html>
