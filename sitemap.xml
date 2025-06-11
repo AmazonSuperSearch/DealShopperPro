@@ -3,36 +3,36 @@
 
   <!-- Home -->
   <url>
-    <loc>https://www.amazonsupersearch.com/</loc>
+    <loc>https://www.dealshopperpro.com/</loc>
     <lastmod>2025-06-09</lastmod>
-    <changefreq>weekly</changefreq>   <!-- added -->
+    <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
 
   <!-- Core pages -->
   <url>
-    <loc>https://www.amazonsupersearch.com/help.html</loc>
+    <loc>https://www.dealshopperpro.com/help.html</loc>
     <lastmod>2025-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
 
   <url>
-    <loc>https://www.amazonsupersearch.com/media.html</loc>
+    <loc>https://www.dealshopperpro.com/media.html</loc>
     <lastmod>2025-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://www.amazonsupersearch.com/about.html</loc>
+    <loc>https://www.dealshopperpro.com/about.html</loc>
     <lastmod>2025-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://www.amazonsupersearch.com/contact.html</loc>
+    <loc>https://www.dealshopperpro.com/contact.html</loc>
     <lastmod>2025-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
@@ -40,14 +40,14 @@
 
   <!-- Legal pages -->
   <url>
-    <loc>https://www.amazonsupersearch.com/privacy.html</loc>
+    <loc>https://www.dealshopperpro.com/privacy.html</loc>
     <lastmod>2025-06-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
 
   <url>
-    <loc>https://www.amazonsupersearch.com/terms.html</loc>
+    <loc>https://www.dealshopperpro.com/terms.html</loc>
     <lastmod>2025-06-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
