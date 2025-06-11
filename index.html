@@ -260,23 +260,34 @@
 
 /* —— Mobile Hero & Privacy Tuning —— */
 @media (max-width: 600px) {
-  /* Hero tweaks */
+  /* Hero text */
+  .banner-inner .lead {
+    color: #000 !important;       /* solid black */
+    text-shadow: none !important; /* remove the outline */
+    font-size: clamp(0.875rem, 4vw, 1rem);
+    max-width: 90%;
+    margin: 0 auto 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+  }
+
+  /* Hero container tweaks */
   .banner-inner {
     height: auto;
     padding: 2rem 1rem;
     /* background-color removed for mobile */
   }
+
+  /* Hero title */
   .banner-inner .site-title {
     font-size: clamp(1.25rem, 6vw, 2rem);
     line-height: 1.2;
-    margin-bottom: 0.5rem;
-    /* background-color: rgba(0,0,0,0.6); */  /* ← removed */
-    /* border: 1px solid #fff; */              /* ← removed */
+    margin: 0.25rem auto 0.5rem;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     display: inline-block;
     max-width: 90%;
-    margin: 0.25rem auto;
     color: #FF9900;  /* preserve orange on mobile */
     text-shadow:
       -1px -1px 0 #000,
@@ -284,22 +295,14 @@
       -1px  1px 0 #000,
        1px  1px 0 #000;
   }
-  .banner-inner .lead {
-    font-size: clamp(0.875rem, 4vw, 1rem);
-    max-width: 90%;
-    margin: 0 auto 1rem;
-    /* background-color: rgba(0,0,0,0.6); */  /* ← removed */
-    /* border: 1px solid #fff; */              /* ← removed */
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
-    display: inline-block;
-    margin: 0.25rem auto 1rem;
-  }
+
+  /* Hero button */
   .banner-inner .btn {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
   }
-  /* Privacy banner tweaks… */
+
+  /* Privacy banner tweaks */
   .privacy-banner {
     flex-direction: column;
     align-items: center;
@@ -317,6 +320,7 @@
     font-size: 0.94rem;
   }
 }
+
   </style>
   <!-- Auto-detect and set cookie for Translate -->
   <script>
