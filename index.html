@@ -366,6 +366,17 @@
       document.cookie = "googtrans=/en/" + userLang + "; path=/";
     })();
   </script>
+  <!-- MOBILE-ONLY CLEANUP: preserve high mobile performance -->
+  <style>
+    @media (max-width: 600px) {
+      /* Prevent desktop hero bg on mobile */
+      .banner-inner { background-image: none !important; }
+      /* Ensure system fonts on mobile */
+      html, body, .banner-inner .site-title, .banner-inner .lead, .privacy-banner__body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <audio id="clickSound" src="/click.mp3" preload="auto"></audio>
