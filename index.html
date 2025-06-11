@@ -262,15 +262,16 @@
 @media (max-width: 600px) {
   /* Hero tweaks */
   .banner-inner {
-    height: auto;                /* let it grow with content */
-    padding: 2rem 1rem;          /* extra breathing room */
+    height: auto;
+    padding: 2rem 1rem;
+    /* background-color removed for mobile */
   }
   .banner-inner .site-title {
     font-size: clamp(1.25rem, 6vw, 2rem);
     line-height: 1.2;
     margin-bottom: 0.5rem;
-    background-color: rgba(0,0,0,0.6);
-    border: 1px solid #fff;
+    /* background-color: rgba(0,0,0,0.6); */  /* ← removed */
+    /* border: 1px solid #fff; */              /* ← removed */
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     display: inline-block;
@@ -287,9 +288,8 @@
     font-size: clamp(0.875rem, 4vw, 1rem);
     max-width: 90%;
     margin: 0 auto 1rem;
-    text-shadow: 0 0 4px rgba(0,0,0,0.6); /* soften outline */
-    background-color: rgba(0,0,0,0.6);
-    border: 1px solid #fff;
+    /* background-color: rgba(0,0,0,0.6); */  /* ← removed */
+    /* border: 1px solid #fff; */              /* ← removed */
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
     display: inline-block;
@@ -299,8 +299,7 @@
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
   }
-
-  /* Privacy banner tweaks */
+  /* Privacy banner tweaks… */
   .privacy-banner {
     flex-direction: column;
     align-items: center;
