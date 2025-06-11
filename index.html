@@ -260,6 +260,9 @@
 
 /* —— Mobile Hero & Privacy Tuning —— */
 @media (max-width: 600px) {
+  /* Prevent hero image loading on mobile */
+  .banner-inner { background-image: none !important; }
+
   /* Hero text */
   .banner-inner .lead {
     color: #000 !important;       /* solid black */
