@@ -9,6 +9,32 @@
     .banner-inner .site-title { font-weight: 800; font-size: 2rem; text-align: center; }
     .banner-inner .lead { font-size: 1rem; color: #000; text-shadow: none; text-align: center; }
     /* Privacy Banner Inline */
+  <!-- Desktop-only optimizations -->
+  <!-- Preload desktop hero image only on large screens -->
+  <link rel="preload" as="image" href="/images/hero-desktop.webp" media="(min-width: 992px)">
+  <!-- Preload desktop fonts only on large screens -->
+  <link rel="preload" href="/fonts/inter-800.woff2" as="font" type="font/woff2" crossorigin media="(min-width: 992px)">
+  <link rel="preload" href="/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin media="(min-width: 992px)">
+  <!-- Inline desktop-critical CSS for hero and nav -->
+  <style>
+    @media (min-width: 992px) {
+      .banner-inner {
+        background-image: url('/images/hero-desktop.webp');
+      }
+      nav.main-nav { display: flex; align-items: center; justify-content: space-between; }
+      .navbar-brand { font-size: 1.75rem; }
+      .site-search { width: 350px; }
+    }
+  </style>
+  <!-- Defer desktop-only widget script -->
+  <script>
+    if (window.matchMedia('(min-width: 992px)').matches) {
+      const s = document.createElement('script');
+      s.src = '/js/desktop-widget.js';
+      s.defer = true;
+      document.head.appendChild(s);
+    }
+  </script>
     .privacy-banner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; padding: 0.75rem 1rem; background-color: #FEF7EC; border: 2px solid #F0E0C8; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
     .privacy-banner__body { font-size: 0.94rem; line-height: 1.5; color: #444; }
   </style>
