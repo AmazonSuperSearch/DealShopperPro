@@ -112,7 +112,7 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
     // 6) Build & open URL
     params.set('k', q);
     if (rh.length) params.set('rh', rh.join(','));
-    params.set('tag', 'echolover25-20');
+    params.set('tag', 'dealshopperpr-20');
 
     const hostMap = {
       usd: 'www.amazon.com',
