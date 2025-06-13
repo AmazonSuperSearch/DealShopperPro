@@ -471,378 +471,390 @@
     <!-- AMAZON SEARCH FORM -->
     <input name="i" type="hidden" value=""/>
     <form id="amazon-search-form">
-     <!-- STEP 1 -->
-     <div class="container text-start mb-4">
-      <h2>
-       ✅ Step 1: Start Your Advanced Amazon Search
-      </h2>
-      <p class="text-muted mb-3">
-       Enter a product name, keyword, category, ASIN, ISBN, or UPC.
-      </p>
-      <div class="card p-3">
-       <div class="input-group">
-        <button aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button">
-         🎤
-        </button>
-        <input aria-label="Main search input" autocomplete="off" class="form-control" id="mainSearchInput" name="q" placeholder="e.g. wireless headphones" type="text"/>
-       </div>
-      </div>
-     </div>
-     <!-- STEP 2 -->
-     <div class="container text-start mb-4">
-      <h2>
-       ✅ Step 2: Select Your Price Range Filters for Amazon
-      </h2>
-      <p class="text-muted mb-3">
-       Choose your currency and the minimum and maximum price you’re willing to spend.
-      </p>
-      <div class="card p-3">
-       <div class="row g-3 align-items-end">
-        <div class="col-12 col-lg-2">
-         <label class="form-label" for="currencySelect">
-          Currency
-         </label>
-         <select aria-label="Select currency" class="form-select" id="currencySelect" name="currency">
-          <option selected="" value="usd">
-           USD ($)
-          </option>
-          <option value="eur">
-           EUR (€)
-          </option>
-          <option value="gbp">
-           GBP (£)
-          </option>
-          <option value="jpy">
-           JPY (¥)
-          </option>
-          <option value="inr">
-           INR (₹)
-          </option>
-         </select>
-        </div>
-        <div class="col-12 col-lg-5">
-         <label class="form-label" for="minPrice">
-          Minimum Price
-         </label>
-         <div class="input-group">
-          <span class="input-group-text" id="minPriceAddon">
-           $
-          </span>
-          <input aria-describedby="minPriceAddon" class="form-control" id="minPrice" name="min-price" placeholder="Min" step="0.01" type="number"/>
-         </div>
-        </div>
-        <div class="col-12 col-lg-5">
-         <label class="form-label" for="maxPrice">
-          Maximum Price
-         </label>
-         <div class="input-group">
-          <span class="input-group-text" id="maxPriceAddon">
-           $
-          </span>
-          <input aria-describedby="maxPriceAddon" class="form-control" id="maxPrice" name="max-price" placeholder="Max" step="0.01" type="number"/>
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-     <!-- STEP 3 -->
-     <div class="container text-start mb-4">
-      <h2>
-       ✅ Step 3: Set Your Amazon Rating Filter
-      </h2>
-      <p class="text-muted mb-3">
-       Pick a minimum discount, customer rating, and how you want the results sorted.
-      </p>
-      <div class="card p-3">
-       <div class="row g-3">
-        <div class="col-12 col-lg-4">
-         <label class="form-label" for="percentOff">
-          % Off
-         </label>
-         <select aria-label="Select percentage off" class="form-select" id="percentOff" name="percent-off">
-          <option value="">
-           Any
-          </option>
-          <option value="10">
-           10% or more
-          </option>
-          <option value="20">
-           20% or more
-          </option>
-          <option value="30">
-           30% or more
-          </option>
-          <option value="40">
-           40% or more
-          </option>
-          <option value="50">
-           50% or more
-          </option>
-          <option value="60">
-           60% or more
-          </option>
-          <option value="70">
-           70% or more
-          </option>
-          <option value="80">
-           80% or more
-          </option>
-         </select>
-        </div>
-        <div class="col-12 col-lg-4">
-         <label class="form-label" for="minRating">
-          Customer Review
-         </label>
-         <select aria-label="Select minimum customer rating" class="form-select" id="minRating" name="min-rating">
-          <option value="">
-           Any
-          </option>
-          <option value="1">
-           1★ &amp; up
-          </option>
-          <option value="2">
-           2★ &amp; up
-          </option>
-          <option value="3">
-           3★ &amp; up
-          </option>
-          <option value="4">
-           4★ &amp; up
-          </option>
-          <option value="5">
-           5★ &amp; up
-          </option>
-         </select>
-        </div>
-        <div class="col-12 col-lg-4">
-         <label class="form-label" for="sortOrder">
-          Sort By
-         </label>
-         <select aria-label="Select sort order" class="form-select" id="sortOrder" name="sort">
-          <option value="">
-           Relevance
-          </option>
-          <option value="price-asc-rank">
-           Price: Low → High
-          </option>
-          <option value="price-desc-rank">
-           Price: High → Low
-          </option>
-          <option value="review-rank">
-           Avg. Customer Review
-          </option>
-          <option value="date-desc-rank">
-           Newest Arrivals
-          </option>
-         </select>
-        </div>
-       </div>
-      </div>
-     </div>
-     <!-- STEP 4 -->
-     <section class="container text-start mb-4">
-      <h2>
-       ✅ Step 4: Amazon Brand Filter Option
-      </h2>
-      <p class="text-muted mb-3">
-       Select one or more brands below to display results exclusively from those brands.
-      </p>
-      <div class="card border-success shadow-sm mb-4 p-3">
-       <div class="row g-3">
-        <div class="col-12 col-md-6">
-         <label class="form-label" for="brandInclude">
-          Include Brands
-         </label>
-         <input aria-label="Include brands" class="form-control" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text"/>
-         <div class="form-check mt-2">
-          <input aria-label="Match only these brands" class="form-check-input" id="includeOnly" name="include-only" type="checkbox"/>
-          <label class="form-check-label" for="includeOnly">
-           Match only these brands
-          </label>
-         </div>
-         <small class="form-text text-muted">
-          Enter one or more brands (comma-separated or via Tagify).
-         </small>
-        </div>
-       </div>
-      </div>
-     </section>
-     <!-- STEP 5 -->
-     <section class="container text-start mb-4">
-      <h2>
-       ✅ Step 5: Amazon Coupon Finder, Lightning Deals Filter and much more!
-      </h2>
-      <p class="text-muted mb-3">
-       Narrow down your search: choose Prime-only, Lightning Deals, Eco-Friendly, Free Shipping, In-Stock items, and coupons to find the perfect Amazon products.
-      </p>
-      <div class="card mb-4 p-3">
-       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-        <div class="form-check">
-         <input aria-label="Prime Only" class="form-check-input" id="primeOnly" name="prime-only" type="checkbox"/>
-         <label class="form-check-label" for="primeOnly">
-          🤩 Prime Only
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox"/>
-         <label class="form-check-label" for="lightningDeals">
-          ⚡ Lightning Deals
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Today's Deals" class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox"/>
-         <label class="form-check-label" for="todaysDeals">
-          🔥 Today's Deals
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Free Shipping" class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox"/>
-         <label class="form-check-label" for="freeShipping">
-          🚚 Free Shipping
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="In Stock" class="form-check-input" id="inStock" name="in-stock" type="checkbox"/>
-         <label class="form-check-label" for="inStock">
-          📦 In Stock
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Coupons" class="form-check-input" id="coupons" name="coupons" type="checkbox"/>
-         <label class="form-check-label" for="coupons">
-          🏷️ Coupons
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Eco-Friendly" class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox"/>
-         <label class="form-check-label" for="ecoFriendlyToggle">
-          ♻️ Eco-Friendly
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Biodegradable" class="form-check-input" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox"/>
-         <label class="form-check-label" for="biodegradablePackaging">
-          📦 Biodegradable
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Vegan" class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox"/>
-         <label class="form-check-label" for="veganProducts">
-          🌱 Vegan
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Organic" class="form-check-input" id="organicProducts" name="organic-products" type="checkbox"/>
-         <label class="form-check-label" for="organicProducts">
-          🌿 Organic
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Carbon-Neutral Delivery" class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox"/>
-         <label class="form-check-label" for="carbonNeutralDelivery">
-          🚴 Carbon-Neutral Delivery
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Cruelty-Free" class="form-check-input" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox"/>
-         <label class="form-check-label" for="crueltyFreeToggle">
-          🐰 Cruelty-Free
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Low EMF" class="form-check-input" id="lowEmfDevices" name="low-emf-devices" type="checkbox"/>
-         <label class="form-check-label" for="lowEmfDevices">
-          📶 Low EMF
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Allergy-Friendly" class="form-check-input" id="allergyFriendly" name="allergy-friendly" type="checkbox"/>
-         <label class="form-check-label" for="allergyFriendly">
-          🤧 Allergy-Friendly
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Gifts for Her" class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox"/>
-         <label class="form-check-label" for="giftsForHer">
-          🎀 Gifts for Her
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Gifts for Him" class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox"/>
-         <label class="form-check-label" for="giftsForHim">
-          👔 Gifts for Him
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Gifts for Dad" class="form-check-input" id="giftsForDad" name="gifts-for-dad" type="checkbox"/>
-         <label class="form-check-label" for="giftsForDad">
-          👨 Gifts for Dad
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Gifts for Mom" class="form-check-input" id="giftsForMom" name="gifts-for-mom" type="checkbox"/>
-         <label class="form-check-label" for="giftsForMom">
-          👩 Gifts for Mom
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Gifts for Kids" class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox"/>
-         <label class="form-check-label" for="giftsForKids">
-          🧒 Gifts for Kids
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Birthday Gifts" class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox"/>
-         <label class="form-check-label" for="birthdayGifts">
-          🎂 Birthday Gifts
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Anniversary Gifts" class="form-check-input" id="anniversaryGifts" name="anniversary-gifts" type="checkbox"/>
-         <label class="form-check-label" for="anniversaryGifts">
-          💝 Anniversary Gifts
-         </label>
-        </div>
-        <div class="form-check">
-         <input aria-label="Holiday Gift Picks" class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox"/>
-         <label class="form-check-label" for="holidayGiftPicks">
-          🎄 Holiday Gift Picks
-         </label>
-        </div>
-       </div>
-      </div>
-     </section>
-     <!-- STEP 6 -->
-     <section class="container text-start mb-5">
-      <h2>
-       ✅ Step 6: Begin Your Amazon Search or Continue Below Using Advanced Settings
-      </h2>
-      <p class="text-muted mb-3">
-       You’re all set! Click the button below to view your filtered results directly on Amazon.
-      </p>
-      <div class="text-center">
-       <div id="filter-warning" style="display:none; color: orange; font-weight: bold; padding: 10px;">
-        ⚠️ Too many filters may return no results. Try removing a few for better results.
-       </div>
-       <button aria-label="Run Advanced Amazon Search" class="btn btn-primary btn-lg w-100 pulse-glow" form="amazon-search-form" id="search-button" type="submit">
-        Run Advanced Amazon Search
-       </button>
-       <p class="text-warning mt-2 text-center" style="font-weight: bold;">
-        Too many filters may return no results.
-       </p>
-      </div>
-     </section>
-     <!-- STEP 7 -->
-     <div class="container text-start mb-4">
-      <h2>
-       ✅ Step 7: Advanced Settings
-      </h2>
-      <p class="text-muted mb-3">
-       Explore advanced filters and tools to refine your search even further.
-      </p>
-      <div class="card border-primary p-3">
-       <!-- Power-User Tools Static Box -->
-       <h3 class="mb-2">
+    <!-- STEP 1 -->
+<div class="container text-start mb-4">
+ <img alt="Get started banner" src="/images/step-start-banner.svg" style="max-width:100%;margin-bottom:1rem;"/>
+ <h2>
+  🔍
+  ✅ Step 1: Start Your Advanced Amazon Search
+ </h2>
+ <p class="text-muted mb-3">
+  Enter a product name, keyword, category, ASIN, ISBN, or UPC.
+ </p>
+ <div class="card p-3">
+  <div class="input-group">
+   <button aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button">
+    🎤
+   </button>
+   <input alt="e.g. wireless headphones" aria-label="Main search input" autocomplete="off" class="form-control" id="mainSearchInput" name="q" placeholder="e.g. wireless headphones" type="text"/>
+  </div>
+ </div>
+</div>
+<!-- STEP 2 -->
+<div class="container text-start mb-4">
+ <h2>
+  💰
+  ✅ Step 2: Select Your Price Range Filters for Amazon
+ </h2>
+ <p class="text-muted mb-3">
+  Choose your currency and the minimum and maximum price you’re willing to spend.
+ </p>
+ <div class="card p-3">
+  <div class="row g-3 align-items-end">
+   <div class="col-12 col-lg-2">
+    <label class="form-label" for="currencySelect">
+     Currency
+    </label>
+    <select aria-label="Select currency" class="form-select" id="currencySelect" name="currency">
+     <option selected="" value="usd">
+      USD ($)
+     </option>
+     <option value="eur">
+      EUR (€)
+     </option>
+     <option value="gbp">
+      GBP (£)
+     </option>
+     <option value="jpy">
+      JPY (¥)
+     </option>
+     <option value="inr">
+      INR (₹)
+     </option>
+    </select>
+   </div>
+   <div class="col-12 col-lg-5">
+    <label class="form-label" for="minPrice">
+     Minimum Price
+    </label>
+    <div class="input-group">
+     <span class="input-group-text" id="minPriceAddon">
+      $
+     </span>
+     <input alt="Min" aria-describedby="minPriceAddon" class="form-control" id="minPrice" name="min-price" placeholder="Min" step="0.01" type="number"/>
+    </div>
+   </div>
+   <div class="col-12 col-lg-5">
+    <label class="form-label" for="maxPrice">
+     Maximum Price
+    </label>
+    <div class="input-group">
+     <span class="input-group-text" id="maxPriceAddon">
+      $
+     </span>
+     <input alt="Max" aria-describedby="maxPriceAddon" class="form-control" id="maxPrice" name="max-price" placeholder="Max" step="0.01" type="number"/>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+<!-- STEP 3 -->
+<div class="container text-start mb-4">
+ <h2>
+  ⭐
+  ✅ Step 3: Set Your Amazon Rating Filter
+ </h2>
+ <p class="text-muted mb-3">
+  Pick a minimum discount, customer rating, and how you want the results sorted.
+ </p>
+ <div class="card p-3">
+  <div class="row g-3">
+   <div class="col-12 col-lg-4">
+    <label class="form-label" for="percentOff">
+     % Off
+    </label>
+    <select aria-label="Select percentage off" class="form-select" id="percentOff" name="percent-off">
+     <option value="">
+      Any
+     </option>
+     <option value="10">
+      10% or more
+     </option>
+     <option value="20">
+      20% or more
+     </option>
+     <option value="30">
+      30% or more
+     </option>
+     <option value="40">
+      40% or more
+     </option>
+     <option value="50">
+      50% or more
+     </option>
+     <option value="60">
+      60% or more
+     </option>
+     <option value="70">
+      70% or more
+     </option>
+     <option value="80">
+      80% or more
+     </option>
+    </select>
+   </div>
+   <div class="col-12 col-lg-4">
+    <label class="form-label" for="minRating">
+     Customer Review
+    </label>
+    <select aria-label="Select minimum customer rating" class="form-select" id="minRating" name="min-rating">
+     <option value="">
+      Any
+     </option>
+     <option value="1">
+      1★ &amp; up
+     </option>
+     <option value="2">
+      2★ &amp; up
+     </option>
+     <option value="3">
+      3★ &amp; up
+     </option>
+     <option value="4">
+      4★ &amp; up
+     </option>
+     <option value="5">
+      5★ &amp; up
+     </option>
+    </select>
+   </div>
+   <div class="col-12 col-lg-4">
+    <label class="form-label" for="sortOrder">
+     Sort By
+    </label>
+    <select aria-label="Select sort order" class="form-select" id="sortOrder" name="sort">
+     <option value="">
+      Relevance
+     </option>
+     <option value="price-asc-rank">
+      Price: Low → High
+     </option>
+     <option value="price-desc-rank">
+      Price: High → Low
+     </option>
+     <option value="review-rank">
+      Avg. Customer Review
+     </option>
+     <option value="date-desc-rank">
+      Newest Arrivals
+     </option>
+    </select>
+   </div>
+  </div>
+ </div>
+</div>
+<!-- STEP 4 -->
+<section class="container text-start mb-4">
+ <h2>
+  🏷️
+  ✅ Step 4: Amazon Brand Filter Option
+ </h2>
+ <p class="text-muted mb-3">
+  Select one or more brands below to display results exclusively from those brands.
+ </p>
+ <div class="card border-success shadow-sm mb-4 p-3">
+  <div class="row g-3">
+   <div class="col-12 col-md-6">
+    <label class="form-label" for="brandInclude">
+     Include Brands
+    </label>
+    <input alt="e.g. Sony, LG" aria-label="Include brands" class="form-control" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text"/>
+    <div class="form-check mt-2">
+     <input aria-label="Match only these brands" class="form-check-input" id="includeOnly" name="include-only" type="checkbox"/>
+     <label class="form-check-label" for="includeOnly">
+      Match only these brands
+     </label>
+    </div>
+    <small class="form-text text-muted">
+     Enter one or more brands (comma-separated or via Tagify).
+    </small>
+   </div>
+  </div>
+ </div>
+</section>
+<!-- STEP 5 -->
+<section class="container text-start mb-4">
+ <h2>
+  🎯
+  ✅ Step 5: Amazon Coupon Finder, Lightning Deals Filter and much more!
+ </h2>
+ <p class="text-muted mb-3">
+  Narrow down your search: choose Prime-only, Lightning Deals, Eco-Friendly, Free Shipping, In-Stock items, and coupons to find the perfect Amazon products.
+ </p>
+ <div class="card mb-4 p-3">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+   <div class="form-check">
+    <input aria-label="Prime Only" class="form-check-input" id="primeOnly" name="prime-only" type="checkbox"/>
+    <label class="form-check-label" for="primeOnly">
+     🤩 Prime Only
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox"/>
+    <label class="form-check-label" for="lightningDeals">
+     ⚡ Lightning Deals
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Today's Deals" class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox"/>
+    <label class="form-check-label" for="todaysDeals">
+     🔥 Today's Deals
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Free Shipping" class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox"/>
+    <label class="form-check-label" for="freeShipping">
+     🚚 Free Shipping
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="In Stock" class="form-check-input" id="inStock" name="in-stock" type="checkbox"/>
+    <label class="form-check-label" for="inStock">
+     📦 In Stock
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Coupons" class="form-check-input" id="coupons" name="coupons" type="checkbox"/>
+    <label class="form-check-label" for="coupons">
+     🏷️ Coupons
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Eco-Friendly" class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox"/>
+    <label class="form-check-label" for="ecoFriendlyToggle">
+     ♻️ Eco-Friendly
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Biodegradable" class="form-check-input" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox"/>
+    <label class="form-check-label" for="biodegradablePackaging">
+     📦 Biodegradable
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Vegan" class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox"/>
+    <label class="form-check-label" for="veganProducts">
+     🌱 Vegan
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Organic" class="form-check-input" id="organicProducts" name="organic-products" type="checkbox"/>
+    <label class="form-check-label" for="organicProducts">
+     🌿 Organic
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Carbon-Neutral Delivery" class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox"/>
+    <label class="form-check-label" for="carbonNeutralDelivery">
+     🚴 Carbon-Neutral Delivery
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Cruelty-Free" class="form-check-input" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox"/>
+    <label class="form-check-label" for="crueltyFreeToggle">
+     🐰 Cruelty-Free
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Low EMF" class="form-check-input" id="lowEmfDevices" name="low-emf-devices" type="checkbox"/>
+    <label class="form-check-label" for="lowEmfDevices">
+     📶 Low EMF
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Allergy-Friendly" class="form-check-input" id="allergyFriendly" name="allergy-friendly" type="checkbox"/>
+    <label class="form-check-label" for="allergyFriendly">
+     🤧 Allergy-Friendly
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Gifts for Her" class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox"/>
+    <label class="form-check-label" for="giftsForHer">
+     🎀 Gifts for Her
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Gifts for Him" class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox"/>
+    <label class="form-check-label" for="giftsForHim">
+     👔 Gifts for Him
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Gifts for Dad" class="form-check-input" id="giftsForDad" name="gifts-for-dad" type="checkbox"/>
+    <label class="form-check-label" for="giftsForDad">
+     👨 Gifts for Dad
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Gifts for Mom" class="form-check-input" id="giftsForMom" name="gifts-for-mom" type="checkbox"/>
+    <label class="form-check-label" for="giftsForMom">
+     👩 Gifts for Mom
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Gifts for Kids" class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox"/>
+    <label class="form-check-label" for="giftsForKids">
+     🧒 Gifts for Kids
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Birthday Gifts" class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox"/>
+    <label class="form-check-label" for="birthdayGifts">
+     🎂 Birthday Gifts
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Anniversary Gifts" class="form-check-input" id="anniversaryGifts" name="anniversary-gifts" type="checkbox"/>
+    <label class="form-check-label" for="anniversaryGifts">
+     💝 Anniversary Gifts
+    </label>
+   </div>
+   <div class="form-check">
+    <input aria-label="Holiday Gift Picks" class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox"/>
+    <label class="form-check-label" for="holidayGiftPicks">
+     🎄 Holiday Gift Picks
+    </label>
+   </div>
+  </div>
+ </div>
+</section>
+<!-- STEP 6 -->
+<section class="container text-start mb-5">
+ <h2>
+  🚀
+  ✅ Step 6: Begin Your Amazon Search or Continue Below Using Advanced Settings
+ </h2>
+ <p class="text-muted mb-3">
+  You’re all set! Click the button below to view your filtered results directly on Amazon.
+ </p>
+ <div class="text-center">
+  <div id="filter-warning" style="display:none; color: orange; font-weight: bold; padding: 10px;">
+   ⚠️ Too many filters may return no results. Try removing a few for better results.
+  </div>
+  <button aria-label="Run Advanced Amazon Search" class="btn btn-primary btn-lg w-100 pulse-glow" form="amazon-search-form" id="search-button" type="submit">
+   🔎 View Filtered Results on Amazon
+  </button>
+  <p class="text-warning mt-2 text-center" style="font-weight: bold;">
+   Too many filters may return no results.
+  </p>
+ </div>
+ <p class="text-center small mt-4" style="color: #666;">
+  Disclosure: As an Amazon Associate, we earn from qualifying purchases. This helps support our free tools—thank you!
+ </p>
+</section>
+<!-- STEP 7 -->
+<div class="container text-start mb-4">
+ <h2>
+  🛠️
+  ✅ Step 7: Advanced Settings
+ </h2>
+ <p class="text-muted mb-3">
+  Explore advanced filters and tools to refine your search even further.
+ </p>
+ <div class="card border-primary p-3">
+ </div>
+</div>
+
         Power-User Tools
        </h3>
        <div class="card p-3 mb-4">
