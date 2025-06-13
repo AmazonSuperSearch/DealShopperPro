@@ -906,160 +906,113 @@
   Disclosure: As an Amazon Associate, we earn from qualifying purchases. This helps support our free tools—thank you!
  </p>
 </section>
-<!-- STEP 7 -->
-<div class="container text-start mb-4">
+<div class="container text-start mb-5">
  <h2>
-  🛠️
   ✅ Step 7: Advanced Settings
  </h2>
  <p class="text-muted mb-3">
-  Explore advanced filters and tools to refine your search even further.
+  Explore power-user features, price trackers, and smart filters to find the perfect deal faster.
  </p>
- <div class="card border-primary p-3">
+ <div class="mb-4">
+  <h3 class="mb-2">
+   Deal-Hunter Goodies
+  </h3>
+  <div class="card p-3 mb-4">
+   <hr/>
+   <div class="mb-3">
+    <label class="form-label" for="priceDrop90">
+     Discount (%) from 90-Day Avg Price
+    </label>
+    <input aria-label="Discount from 90-day avg" class="form-control" id="priceDrop90" name="price-drop" placeholder="e.g. 20" type="number"/>
+   </div>
+   <div class="form-check mb-2">
+    <input aria-label="Coupon-Clippable Only" class="form-check-input" id="couponOnly" name="coupon-only" type="checkbox"/>
+    <label class="form-check-label" for="couponOnly">
+     Coupon-Clippable Only
+    </label>
+   </div>
+   <div class="form-check mb-2">
+    <input aria-label="Warehouse / Open-Box" class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox"/>
+    <label class="form-check-label" for="warehouseRefurb">
+     Warehouse / Open-Box
+    </label>
+   </div>
+   <div class="row g-3 mt-3">
+    <div class="col-6 col-md-3">
+     <label class="form-label" for="discount30">
+      Discount (%) from 30-Day Avg
+     </label>
+     <input aria-label="Discount from 30-day avg" class="form-control" id="discount30" min="0" name="below-avg-30" placeholder="e.g. 20" type="number"/>
+    </div>
+    <div class="col-6 col-md-3">
+     <label class="form-label" for="discount60">
+      Discount (%) from 60-Day Avg
+     </label>
+     <input aria-label="Discount from 60-day avg" class="form-control" id="discount60" min="0" name="below-avg-60" placeholder="e.g. 15" type="number"/>
+    </div>
+    <div class="col-6 col-md-3">
+     <label class="form-label" for="discount90">
+      Discount (%) from 90-Day Avg
+     </label>
+     <input aria-label="Discount from 90-day avg" class="form-control" id="discount90" min="0" name="below-avg-90" placeholder="e.g. 10" type="number"/>
+    </div>
+    <div class="col-6 col-md-3">
+     <label class="form-label" for="volatility7">
+      Max Daily Price Volatility (%)
+     </label>
+     <input aria-label="Max daily price volatility" class="form-control" id="volatility7" min="0" name="max-volatility-7" placeholder="e.g. 5" type="number"/>
+    </div>
+   </div>
+   <div class="coming-soon mt-4">
+    <p class="text-muted">
+     <em>
+      More advanced goodies on the way:
+     </em>
+    </p>
+    <div class="form-check mb-2">
+     <input aria-label="Price-Drop Alerts" class="form-check-input" disabled="" type="checkbox"/>
+     <label class="form-check-label">
+      Price-Drop Alerts
+     </label>
+    </div>
+   </div>
+  </div>
+  <!-- Personalization & AI-Driven Static Box -->
+ </div>
+ <div class="mb-4">
+  <h3 class="mb-2">
+   Personalization &amp; AI-Driven
+  </h3>
+  <div class="card p-3 mb-4">
+   <p>
+    We’re cooking up Personalization &amp; AI-Driven—stay tuned!
+   </p>
+  </div>
+  <!-- Visual & Voice Interfaces Static Box -->
+ </div>
+ <div class="mb-4">
+  <h3 class="mb-2">
+   Visual &amp; Voice Interfaces
+  </h3>
+  <div class="card p-3 mb-4">
+   <p>
+    We’re cooking up Visual &amp; Voice Interfaces—stay tuned!
+   </p>
+  </div>
+  <!-- Niche & Lifestyle Filters Static Box -->
+ </div>
+ <div class="mb-4">
+  <h3 class="mb-2">
+   Niche &amp; Lifestyle Filters
+  </h3>
+  <div class="card p-3 mb-4">
+   <p>
+    We’re cooking up Niche &amp; Lifestyle Filters—stay tuned!
+   </p>
+  </div>
  </div>
 </div>
 
-        Power-User Tools
-       </h3>
-       <div class="card p-3 mb-4">
-        <hr/>
-        <div class="form-check mb-2">
-         <input aria-label="Enable Boolean Operators" class="form-check-input" id="enableBoolean" name="enable-boolean" type="checkbox"/>
-         <label class="form-check-label" for="enableBoolean">
-          Enable Boolean Operators
-         </label>
-        </div>
-        <div class="mb-2">
-         <label class="form-label" for="fieldFilters">
-          Field Filters
-         </label>
-         <input aria-label="Field Filters" class="form-control" id="fieldFilters" name="field-filters" placeholder="e.g. field-brand:Sony" type="text"/>
-        </div>
-        <div class="mb-4">
-         <label class="form-label" for="directLookup">
-          ASIN / ISBN Direct Lookup
-         </label>
-         <input aria-label="ASIN or ISBN lookup" class="form-control" id="directLookup" name="direct-lookup" placeholder="Enter ASIN, ISBN or UPC" type="text"/>
-        </div>
-        <div class="coming-soon">
-         <p class="text-muted">
-          <em>
-           More filters coming soon:
-          </em>
-         </p>
-         <div class="form-check mb-2">
-          <input aria-label="Discount (%) from 90-Day Avg Price (Coming Soon)" class="form-check-input" disabled="" type="checkbox"/>
-          <label class="form-check-label">
-           Discount (%) from 90-Day Avg Price
-           <small>
-            (Coming Soon)
-           </small>
-          </label>
-         </div>
-         <div class="form-check mb-2">
-          <input aria-label="Coupon-Clippable Only (Coming Soon)" class="form-check-input" disabled="" type="checkbox"/>
-          <label class="form-check-label">
-           Coupon-Clippable Only
-           <small>
-            (Coming Soon)
-           </small>
-          </label>
-         </div>
-        </div>
-       </div>
-       <!-- Deal-Hunter Goodies Static Box -->
-       <h3 class="mb-2">
-        Deal-Hunter Goodies
-       </h3>
-       <div class="card p-3 mb-4">
-        <hr/>
-        <div class="mb-3">
-         <label class="form-label" for="priceDrop90">
-          Discount (%) from 90-Day Avg Price
-         </label>
-         <input aria-label="Discount from 90-day avg" class="form-control" id="priceDrop90" name="price-drop" placeholder="e.g. 20" type="number"/>
-        </div>
-        <div class="form-check mb-2">
-         <input aria-label="Coupon-Clippable Only" class="form-check-input" id="couponOnly" name="coupon-only" type="checkbox"/>
-         <label class="form-check-label" for="couponOnly">
-          Coupon-Clippable Only
-         </label>
-        </div>
-        <div class="form-check mb-2">
-         <input aria-label="Warehouse / Open-Box" class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox"/>
-         <label class="form-check-label" for="warehouseRefurb">
-          Warehouse / Open-Box
-         </label>
-        </div>
-        <div class="row g-3 mt-3">
-         <div class="col-6 col-md-3">
-          <label class="form-label" for="discount30">
-           Discount (%) from 30-Day Avg
-          </label>
-          <input aria-label="Discount from 30-day avg" class="form-control" id="discount30" min="0" name="below-avg-30" placeholder="e.g. 20" type="number"/>
-         </div>
-         <div class="col-6 col-md-3">
-          <label class="form-label" for="discount60">
-           Discount (%) from 60-Day Avg
-          </label>
-          <input aria-label="Discount from 60-day avg" class="form-control" id="discount60" min="0" name="below-avg-60" placeholder="e.g. 15" type="number"/>
-         </div>
-         <div class="col-6 col-md-3">
-          <label class="form-label" for="discount90">
-           Discount (%) from 90-Day Avg
-          </label>
-          <input aria-label="Discount from 90-day avg" class="form-control" id="discount90" min="0" name="below-avg-90" placeholder="e.g. 10" type="number"/>
-         </div>
-         <div class="col-6 col-md-3">
-          <label class="form-label" for="volatility7">
-           Max Daily Price Volatility (%)
-          </label>
-          <input aria-label="Max daily price volatility" class="form-control" id="volatility7" min="0" name="max-volatility-7" placeholder="e.g. 5" type="number"/>
-         </div>
-        </div>
-        <div class="coming-soon mt-4">
-         <p class="text-muted">
-          <em>
-           More advanced goodies on the way:
-          </em>
-         </p>
-         <div class="form-check mb-2">
-          <input aria-label="Price-Drop Alerts" class="form-check-input" disabled="" type="checkbox"/>
-          <label class="form-check-label">
-           Price-Drop Alerts
-          </label>
-         </div>
-        </div>
-       </div>
-       <!-- Personalization & AI-Driven Static Box -->
-       <h3 class="mb-2">
-        Personalization &amp; AI-Driven
-       </h3>
-       <div class="card p-3 mb-4">
-        <p>
-         We’re cooking up Personalization &amp; AI-Driven—stay tuned!
-        </p>
-       </div>
-       <!-- Visual & Voice Interfaces Static Box -->
-       <h3 class="mb-2">
-        Visual &amp; Voice Interfaces
-       </h3>
-       <div class="card p-3 mb-4">
-        <p>
-         We’re cooking up Visual &amp; Voice Interfaces—stay tuned!
-        </p>
-       </div>
-       <!-- Niche & Lifestyle Filters Static Box -->
-       <h3 class="mb-2">
-        Niche &amp; Lifestyle Filters
-       </h3>
-       <div class="card p-3 mb-4">
-        <p>
-         We’re cooking up Niche &amp; Lifestyle Filters—stay tuned!
-        </p>
-       </div>
-      </div>
-     </div>
      <!-- ADDITIONAL SEARCH BUTTON BELOW -->
      <h4 class="mb-2 text-center">
       Search Amazon
