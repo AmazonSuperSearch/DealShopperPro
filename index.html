@@ -12,7 +12,6 @@
     .privacy-banner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.5rem; padding: 0.75rem 1rem; background-color: #FEF7EC; border: 2px solid #F0E0C8; border-radius: 0.75rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
     .privacy-banner__body { font-size: 0.94rem; line-height: 1.5; color: #444; }
   </style>
- 
   <!-- Preconnect & Font Optimization -->
   <!-- DESKTOP-ONLY CRITICAL CSS -->
   <style>
@@ -48,15 +47,12 @@
   <!-- Defer JavaScript -->
   <script defer="" src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js">
   </script>
-  <script defer="" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-  </script>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <!-- Preconnects -->
   <link crossorigin="" href="https://www.googletagmanager.com" rel="preconnect"/>
   <link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
   <link crossorigin="" href="https://cdn.jsdelivr.net" rel="preconnect"/>
-  <link href="//translate.google.com" rel="dns-prefetch"/>
   <!-- Google tag (gtag.js) -->
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-51QSZ395GS">
   </script>
@@ -115,45 +111,8 @@
 }
   </script>
   <!-- 1) Define the init callback for Google Translate -->
-  <script>
-   function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,es,fr,ru,de,it,pt,nl,zh-CN,hi,ar',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-  </script>
   <!-- 2) Load Google’s Translate library -->
-  <script defer="" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-  </script>
   <!-- 3) Override CSS for Translate widget -->
-  <style>
-   .goog-te-menu2 {
-      max-height: 300px !important;
-      overflow-y: auto !important;
-    }
-    .goog-te-menu2 table {
-      width: 100% !important;
-    }
-    .goog-te-menu-frame.skiptranslate {
-      max-height: 300px !important;
-      height: auto !important;
-      overflow-y: auto !important;
-    }
-    .skiptranslate .goog-te-menu2 {
-      max-height: 300px !important;
-      height: auto !important;
-      overflow-y: auto !important;
-    }
-    .goog-te-banner-frame.skiptranslate {
-      display: none !important;
-    }
-    body {
-      top: 0px !important;
-    }
-  </style>
   <!-- Bootstrap CSS -->
   <!-- Font Awesome CSS (place here) -->
   <!-- Inter font -->
@@ -341,69 +300,7 @@
   }
 }
   </style>
-  <!-- Auto-detect and set cookie for Translate -->
-  <script>
-   (function(){
-      var userLang = (navigator.language || navigator.userLanguage).substr(0,2);
-      document.cookie = "googtrans=/en/" + userLang + "; path=/";
-    })();
-  </script>
  </head>
- <body>
-  <audio id="clickSound" preload="auto" src="/click.mp3">
-  </audio>
-  <!-- ——— HEADER / NAVIGATION ——— -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-   <div class="container">
-    <a class="navbar-brand fw-bold" href="/" style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; color: #FF9900;">
-     🔎 Deal Shopper Pro
-    </a>
-    <button aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-     <span class="navbar-toggler-icon">
-     </span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-     <ul class="navbar-nav ms-auto">
-      <li class="nav-item">
-       <a class="nav-link" href="/">
-        Home
-       </a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link" href="media.html">
-        Media
-       </a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link" href="help.html">
-        Help
-       </a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link" href="about.html">
-        About
-       </a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link" href="contact.html">
-        Contact
-       </a>
-      </li>
-     </ul>
-    </div>
-   </div>
-  </nav>
-  <!-- TRANSLATE WIDGET -->
-  <div class="container text-end mt-3 mb-2">
-   <div id="google_translate_element">
-   </div>
-  </div>
-  <main id="main">
-   <div class="main-content">
-    <!-- SKIP LINK -->
-    <a class="visually-hidden-focusable" href="#main">
-     Skip to main content
-    </a>
       <!-- HERO BANNER -->
      
 <header class="banner-inner text-center text-md-start py-5" style="background-size: cover; background-position: center; color: white; text-shadow: 0 0 8px rgba(0,0,0,0.6);">
