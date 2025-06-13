@@ -42,7 +42,7 @@ keywordAppend('meditation-mindfulness-gear', 'mindfulness gear');
 keywordAppend('best-value-per-ounce',        'best value per ounce');
 keywordAppend('most-reviewed',               'most reviewed');
 keywordAppend('steady-price-no-spike',       'steady price');
-keywordAppend('amazon-choice', 'amazon choice');
+keywordAppend('top-picks', 'amazon choice');
 keywordAppend('free-returns',        'free returns');
 keywordAppend('crowdfunded-origins', 'crowdfunded origins');
     
