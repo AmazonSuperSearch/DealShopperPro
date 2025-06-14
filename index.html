@@ -947,53 +947,76 @@
     </script>
 </div>
 </footer>
-<!-- Bootstrap JS Bundle -->
-<!-- Main search logic (external) -->
-<script defer="" src="search-logic.js">
-</script>
-<!-- Voice‐search handler -->
-<script>
-   const btn   = document.getElementById('voiceSearchBtn');
-    const input = document.getElementById('mainSearchInput');
 
-    if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+<!-- Main search logic (external) -->
+<script defer src="search-logic.js"></script>
+
+<!-- Voice Search Handler -->
+<script>
+  const btn = document.getElementById('voiceSearchBtn');
+  const input = document.getElementById('mainSearchInput');
+
+  if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+    if (btn) {
       btn.disabled = true;
       btn.title = 'Voice search not supported';
-    } else {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      const recog = new SpeechRecognition();
-      recog.continuous = false;
-      recog.lang = 'en-US';
-      recog.interimResults = false;
-      recog.maxAlternatives = 1;
+    }
+  } else {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recog = new SpeechRecognition();
+    recog.continuous = false;
+    recog.lang = 'en-US';
+    recog.interimResults = false;
+    recog.maxAlternatives = 1;
 
+    if (btn) {
       btn.addEventListener('click', () => {
         recog.start();
         btn.classList.add('active');
       });
+    }
 
-      recog.addEventListener('result', (e) => {
+    recog.addEventListener('result', (e) => {
+      if (input) {
         input.value = e.results[0][0].transcript;
-        recog.stop();
-      });
+      }
+      recog.stop();
+    });
 
-      recog.addEventListener('end', () => {
+    recog.addEventListener('end', () => {
+      if (btn) {
         btn.classList.remove('active');
-      });
-    }
-  </script>
-<!-- Click sound playback on interactions -->
+      }
+    });
+  }
+</script>
+
+<!-- Click Sound Playback -->
+<audio id="click-sound" src="sounds/click.mp3" preload="auto"></audio>
 <script>
-   const clickSound = document.getElementById('clickSound');
-    if (clickSound) {
-      document.querySelectorAll('button, input[type="submit"], input[type="button"], input[type="checkbox"]').forEach(el => {
-        el.addEventListener('click', () => {
-          clickSound.currentTime = 0;
-          clickSound.play().catch(()=>{/*silent*/});
-        });
+  document.addEventListener('DOMContentLoaded', function () {
+    const clickSound = document.getElementById('click-sound');
+    if (!clickSound) return;
+
+    const clickableSelectors = [
+      'button',
+      'input[type=\"submit\"]',
+      'input[type=\"button\"]',
+      'input[type=\"checkbox\"]',
+      'a'
+    ];
+
+    document.querySelectorAll(clickableSelectors.join(',')).forEach(el => {
+      el.addEventListener('click', () => {
+        clickSound.currentTime = 0;
+        clickSound.play().catch(() => {}); // Silently ignore autoplay issues
       });
-    }
-  </script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" defer></script>
+    });
+  });
+</script>
+
+<!-- Bootstrap Bundle -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
