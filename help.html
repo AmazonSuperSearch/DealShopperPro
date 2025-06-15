@@ -3,12 +3,21 @@
 <head>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-51QSZ395GS"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-51QSZ395GS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+
   gtag('js', new Date());
-  gtag('config', 'G-51QSZ395GS');
+
+  /* GA-4 property */
+  gtag('config', 'G-51QSZ395GS', {
+    anonymize_ip: true,   // 🔒 trims IP addresses
+    transport_type: 'beacon'
+    /* Optionally add a consent check here if you run a CMP */
+  });
 </script>
+
 <meta charset="utf-8"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
