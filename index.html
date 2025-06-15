@@ -8,13 +8,13 @@
 <!-- Preconnect & Font Optimization -->
 <!-- DESKTOP-ONLY CRITICAL CSS -->
 <!-- DESKTOP-ONLY PRELOADS -->
-<link as="font" crossorigin="" href="/fonts/inter-800.woff2" media="(min-width:992px)" rel="preload" type="font/woff2">
-<link as="font" crossorigin="" href="/fonts/poppins-500.woff2" media="(min-width:992px)" rel="preload" type="font/woff2">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/inter-800.woff2" crossorigin fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/poppins-500.woff2" crossorigin media="(min-width:992px)">
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <!-- Preload and Async CSS -->
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"></noscript>
 
 <!-- Font Awesome CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -106,7 +106,7 @@
 <!-- Tagify CSS & JS -->
 <script defer="" src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js">
 </script>
-<link as="image" href="/images/hero-desktop.webp" media="(min-width:992px)" rel="preload">
+<link rel="preload" as="image" href="/images/hero-desktop.webp" fetchpriority="high" media="(min-width:992px)" rel="preload">
 <style>
    /* Hero */
     .banner-inner { display: flex; align-items: center; justify-content: center; min-height: 60vh; }
@@ -132,6 +132,9 @@
   </style> 
   <!-- Animate.css CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-V8tEOtZK+/M1lQuUnwMybzU4hXbA3RHra5RmfLKlLaZQ8Z9mTrYRHZ6P+fn9kp9XKR8+7e9cJ6jaqXmxmLSrVg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Lite YouTube facade CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.4/src/lite-yt-embed.css">
 </head>
 <body>
 <!-- ——— HEADER / NAVIGATION ——— -->
@@ -168,13 +171,8 @@
         </p>
 
         <!-- Video -->
-        <div class="ratio ratio-16x9 mb-4 rounded overflow-hidden shadow-sm animate__animated animate__zoomIn animate__delay-2s">
-          <iframe allow="autoplay; encrypted-media" allowfullscreen
-            src="https://www.youtube.com/embed/cx4PvPP3C0I?rel=0&autoplay=1&mute=1&loop=1&playlist=cx4PvPP3C0I"
-            title="Deal Shopper Pro Demo"></iframe>
-        </div>
-
-        <!-- Headline -->
+        <lite-youtube videoid="cx4PvPP3C0I" playlabel="Play Deal Shopper Pro demo" style="aspect-ratio:16/9;margin-bottom:1.5rem;border-radius:0.5rem;overflow:hidden;"></lite-youtube>
+<!-- Headline -->
         <h1 class="hero-heading mb-3 fw-bold animate__animated animate__fadeInUp animate__delay-2s" style="background: linear-gradient(to right, #FF8F00, #FFC107); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 5px rgba(255,255,255,0.3);">
           Find Hidden Amazon Deals<br>with Advanced Filters
         </h1>
@@ -1046,5 +1044,8 @@
   });
 </script>
 
+
+  <!-- Lite YouTube facade JS -->
+  <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.4/dist/lite-yt-embed.js" defer></script>
 </body>
 </html>
