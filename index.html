@@ -115,7 +115,7 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
 <!-- Tagify CSS & JS -->
 <script defer="" src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js">
 </script>
-<link as="image" href="/images/hero-desktop.webp" media="(min-width:992px)" rel="preload">
+
 <style>
    /* Hero */
     .banner-inner { display: flex; align-items: center; justify-content: center; min-height: 60vh; }
@@ -126,13 +126,7 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
     .privacy-banner__body { font-size: 0.94rem; line-height: 1.5; color: #444; }
   </style>
 <style>
-   @media (min-width: 992px) {
-      /* Desktop hero background */
-      .banner-inner {
-        background-image: url('/images/hero-desktop.webp');
-        background-size: cover;
-        background-position: center;
-      }
+   
       /* Desktop nav FCP */
       nav.navbar { display: flex; align-items: center; justify-content: space-between; }
       .navbar-brand { font-size: 1.75rem; }
@@ -148,6 +142,20 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
     <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.4/src/lite-yt-embed.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.4/src/lite-yt-embed.css"></noscript>
     
+
+<style>
+@font-face{
+  font-family:'Inter';
+  src:url('/fonts/inter.woff2') format('woff2');
+  font-display:swap;
+}
+@font-face{
+  font-family:'Poppins';
+  src:url('/fonts/poppins.woff2') format('woff2');
+  font-display:swap;
+}
+</style>
+
 </head>
 <body>
 <!-- ——— HEADER / NAVIGATION ——— -->
@@ -1035,6 +1043,22 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
     setTimeout(observeTagifyInput, 5000);
   }
 })();
+</script>
+
+
+<script>
+window.addEventListener('load', function(){
+  var s=document.createElement('script');
+  s.src='https://www.googletagmanager.com/gtag/js?id=G-51QSZ395GS';
+  s.async=true;
+  document.head.appendChild(s);
+  s.onload=function(){
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-51QSZ395GS');
+  };
+});
 </script>
 
 </body>
