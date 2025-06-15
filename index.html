@@ -36,7 +36,7 @@
 <style>
 /* Critical styles */
 body{font-family:'Inter',sans-serif;margin:0;padding:0}
-.banner-inner{display:flex;align-items:center;justify-content:center;min-height:60vh;padding:0 1rem;background:#fff;color:#111;text-align:center}
+.banner-inner{display:flex;align-items:center;justify-content:center;min-height:60vh;padding:0 1rem;color:#111;text-align:center}
 .banner-inner h1{font-weight:800;font-size:clamp(1.75rem,6vw,3rem);margin-bottom:.5rem}
 .banner-inner p.lead{font-size:1rem;font-weight:500;color:#FFC107;margin:.75rem auto 0;max-width:460px}
 nav.navbar{display:flex;align-items:center;justify-content:space-between}
@@ -44,17 +44,12 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
 
 <style id="contrast-tweaks">
 /* Readability & contrast adjustments */
-.hero-heading{
-  background:linear-gradient(to right,#d17a00 0%,#ffb200 100%) !important;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  text-shadow:0 0 1px #924f00;
-}
+.hero-heading{color:#FF8F00;display:inline-block;padding:0 4px;border-radius:4px;text-shadow:0 0 1px #924f00;}
 .just-searched{color:#d17a00;font-weight:600;}
-.badge.bg-primary{background:#0d6efd;}
+.badge.bg-primary{}
 .badge.bg-primary.text-white{font-weight:600;}
 .hero-subtitle{color:#495057 !important;}
-.icon-pill,.chatgpt-pill{background:#e9ecef;color:#212529;}
+.icon-pill,.chatgpt-pill{color:#212529;}
 .btn-primary{text-shadow:0 1px 1px rgba(0,0,0,.35);}
 </style>
 
@@ -197,7 +192,7 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
         <p class="h5 fw-bold mb-3 px-3 py-2 rounded bg-warning text-dark">
           ⚡ Smarter Amazon Shopping Starts Here — Powered by AI
         </p><!-- Headline -->
-<h1 class="hero-heading mb-3 fw-bold" style="color:#FF8F00;background:#fff;display:inline-block;padding:0 4px;border-radius:4px;text-shadow:0 0 1px #924f00;">Find Hidden Amazon Deals<br>with Advanced Filters</h1>
+<h1 class="hero-heading mb-3 fw-bold" style="color:#FF8F00;display:inline-block;padding:0 4px;border-radius:4px;text-shadow:0 0 1px #924f00;">Find Hidden Amazon Deals<br>with Advanced Filters</h1>
 
         <!-- Subtext -->
         <p class="lead mb-4 text-dark fw-semibold fs-5">
@@ -219,7 +214,7 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
 
         <!-- CTA Button -->
         <a class="btn btn-primary btn-lg me-3 mb-3 shadow-sm" href="#amazon-search-form"
-          style="background: linear-gradient(to right, #1976D2, #2196F3); border: none; font-weight: 600;">
+          style=" border: none; font-weight: 600;">
           Start Searching Now
         </a>
 
@@ -237,7 +232,7 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
           <i class="fas fa-lock fa-2x me-3 text-dark" title="SSL Secure"></i>
           <i class="fab fa-cloudflare fa-2x me-3 text-dark" title="Protected by Cloudflare"></i>
           <i class="fas fa-search-dollar fa-2x me-3 text-dark" title="Affiliate Supported"></i>
-          <span class="fw-semibold align-middle fs-6 d-inline-block mt-2 mt-md-0" style="color: #2E2E2E; background: linear-gradient(to right, #F5F5F5, #FAFAFA); padding: 4px 12px; border-left: 4px solid #00BFFF; border-radius: 6px;">
+          <span class="fw-semibold align-middle fs-6 d-inline-block mt-2 mt-md-0" style="color: #2E2E2E;  padding: 4px 12px; border-left: 4px solid #00BFFF; border-radius: 6px;">
             🤖 Built with help from <strong style="color:#00BFFF;">ChatGPT</strong> — 100% Free & Secure
           </span>
         </div>
