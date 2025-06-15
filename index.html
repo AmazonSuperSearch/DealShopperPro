@@ -8,8 +8,8 @@
 <!-- Preconnect & Font Optimization -->
 <!-- DESKTOP-ONLY CRITICAL CSS -->
 <!-- DESKTOP-ONLY PRELOADS -->
-<link as="font" crossorigin="" href="/fonts/inter-800.woff2" media="(min-width:992px)" rel="preload" type="font/woff2">
-<link as="font" crossorigin="" href="/fonts/poppins-500.woff2" media="(min-width:992px)" rel="preload" type="font/woff2">
+<link as="font" fetchpriority="high" crossorigin="" href="/fonts/inter-800.woff2" media="(min-width:992px)" rel="preload" type="font/woff2">
+<link as="font" fetchpriority="high" crossorigin="" href="/fonts/poppins-500.woff2" media="(min-width:992px)" rel="preload" type="font/woff2">
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <!-- Preload and Async CSS -->
@@ -21,10 +21,10 @@
    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"></noscript>
 
 <!-- Tagify CSS -->
-<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css"></noscript>
+<noscript></noscript>
 
 <!-- === BOOTSTRAP JS BUNDLE (must load before your other JS) === -->
-<script crossorigin="anonymous" defer="" integrity="sha512-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyz4dIi2d8zs0UgnPmO5XY+tO5iqY5Nkg1kg9pmw==" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js">
+<script crossorigin="anonymous" defer="" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js">
 </script>
 <!-- Preload self-hosted fonts -->
 <link as="font" crossorigin="" href="/fonts/inter.woff2" rel="preload" type="font/woff2">
@@ -176,7 +176,7 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
       <div class="col-md-6">
 
         <!-- Tagline -->
-        <p class="h5 fw-bold mb-3 px-3 py-2 rounded bg-warning text-dark animate__delay-1s">
+        <p class="h5 fw-bold mb-3 px-3 py-2 rounded bg-warning text-dark">
           ⚡ Smarter Amazon Shopping Starts Here — Powered by AI
         </p>
 
@@ -184,17 +184,17 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
         <lite-youtube videoid="cx4PvPP3C0I" playlabel="Play Deal Shopper Pro demo" style="aspect-ratio:16/9;max-width:100%;border-radius:0.5rem;overflow:hidden;"></lite-youtube>
 
         <!-- Headline -->
-        <h1 class="hero-heading mb-3 fw-bold animate__delay-2s" style="background: linear-gradient(to right, #FF8F00, #FFC107); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color:#FF9900; text-shadow: 0 0 5px rgba(255,255,255,0.3);">
+        <h1 class="hero-heading mb-3 fw-bold" style="background: linear-gradient(to right, #FF8F00, #FFC107); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color:#FF9900; text-shadow: 0 0 5px rgba(255,255,255,0.3);">
           Find Hidden Amazon Deals<br>with Advanced Filters
         </h1>
 
         <!-- Subtext -->
-        <p class="lead mb-4 text-dark fw-semibold fs-5 animate__delay-3s">
+        <p class="lead mb-4 text-dark fw-semibold fs-5">
           Instantly uncover in-stock Lightning Deals, apply custom price, rating, brand & coupon filters, and discover eco-friendly products — <strong>no signup required</strong>.
         </p>
 
         <!-- Suggested Pills -->
-        <div class="mb-4 animate__delay-4s">
+        <div class="mb-4">
           <span class="me-2 fw-semibold text-dark fs-6">Suggested:</span>
           <a class="badge bg-primary text-white me-1" href="#">wireless headphones under $50</a>
           <a class="badge bg-primary text-white me-1" href="#">Prime-only deals</a>
@@ -202,25 +202,25 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
         </div>
 
         <!-- Search Badge -->
-        <p class="fst-italic mb-4 text-warning fw-semibold animate__delay-4s">
+        <p class="fst-italic mb-4 text-warning fw-semibold">
           🛒 Just searched: <strong>"wireless headphones under $50"</strong>
         </p>
 
         <!-- CTA Button -->
-        <a class="btn btn-primary btn-lg me-3 mb-3 shadow-sm animate__delay-5s animate__infinite" href="#amazon-search-form"
+        <a class="btn btn-primary btn-lg me-3 mb-3 shadow-sm" href="#amazon-search-form"
           style="background: linear-gradient(to right, #1976D2, #2196F3); border: none; font-weight: 600;">
           Start Searching Now
         </a>
 
         <!-- Trust Badge -->
-        <span class="d-block d-sm-inline-block fw-semibold mb-3 text-dark animate__delay-5s">
+        <span class="d-block d-sm-inline-block fw-semibold mb-3 text-dark">
           <span class="px-3 py-1 rounded-pill bg-info text-dark">
             🔓 No login required
           </span>
         </span>
 
         <!-- Trust Icons -->
-        <div class="mt-4 text-start animate__delay-6s">
+        <div class="mt-4 text-start">
           <i class="fas fa-shield-alt fa-2x me-3 text-dark" title="Norton Secured"></i>
           <i class="fas fa-robot fa-2x me-3 text-dark" title="Built with AI"></i>
           <i class="fas fa-lock fa-2x me-3 text-dark" title="SSL Secure"></i>
@@ -870,23 +870,7 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
       </button>
 </div>
 </section>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const userLang = navigator.language || navigator.userLanguage;
-    const currentLang = document.documentElement.lang;
 
-    if (userLang && !userLang.startsWith(currentLang)) {
-      const banner = document.createElement('div');
-      banner.innerHTML = `
-        <div style="position: fixed; top: 0; width: 100%; background: #ffeb3b; color: #000; text-align: center; font-weight: bold; padding: 0.75rem; z-index: 9999;">
-          🌍 Would you like to translate this page to <span style="text-transform: capitalize;">${userLang}</span>? 
-          <button onclick="window.open('https://translate.google.com/translate?sl=auto&tl=${userLang}&u='+encodeURIComponent(window.location.href), '_blank')" style="margin-left: 10px; padding: 0.25rem 0.5rem; font-weight: bold;">Translate</button>
-        </div>
-      `;
-      document.body.prepend(banner);
-    }
-  });
-</script>
 <script>
      document.getElementById("copyLinkBtn").addEventListener("click", function () {
     const pageUrl = this.getAttribute("data-link") || window.location.href;
@@ -1015,24 +999,40 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
 
 
 <!-- Google Translate Prompt Banner -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const userLang = navigator.language || navigator.userLanguage;
-    const currentLang = document.documentElement.lang;
 
-    if (userLang && !userLang.startsWith(currentLang)) {
-      const banner = document.createElement('div');
-      banner.innerHTML = `
-        <div style="position: fixed; top: 0; width: 100%; background: #ffeb3b; color: #000; text-align: center; font-weight: bold; padding: 0.75rem; z-index: 9999;">
-          🌍 Would you like to translate this page to <span style="text-transform: capitalize;">${userLang}</span>? 
-          <button onclick="window.open('https://translate.google.com/translate?sl=auto&tl=${userLang}&u='+encodeURIComponent(window.location.href), '_blank')" style="margin-left: 10px; padding: 0.25rem 0.5rem; font-weight: bold;">Translate</button>
-        </div>
-      `;
-      document.body.prepend(banner);
-    }
-  });
-</script>
 
 <script defer src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.4/dist/lite-yt-embed.js"></script>
+
+<script>
+(function(){
+  const observeTagifyInput = () => {
+    const tagifyInput = document.getElementById('brandInclude');
+    if (!tagifyInput) return;
+    const io = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        // load CSS
+        const css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.href = 'https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css';
+        document.head.appendChild(css);
+        // load JS
+        const s = document.createElement('script');
+        s.src = 'https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.min.js';
+        s.onload = () => { new Tagify(tagifyInput); };
+        document.body.appendChild(s);
+        io.disconnect();
+      }
+    });
+    io.observe(tagifyInput);
+  };
+  if ('IntersectionObserver' in window) {
+    window.addEventListener('DOMContentLoaded', observeTagifyInput);
+  } else {
+    // Fallback: load after 5s
+    setTimeout(observeTagifyInput, 5000);
+  }
+})();
+</script>
+
 </body>
 </html>
