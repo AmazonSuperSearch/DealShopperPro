@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head><meta charset="utf-8">
+<head>
+<meta name="language" content="en"><meta charset="utf-8">
 <!-- Inline critical CSS for hero -->
 <!-- Inline critical CSS for hero & privacy banner -->
 <!-- Preconnect & Font Optimization -->
@@ -877,7 +878,27 @@
       </button>
 </div>
 </section>
-<!-- Copy Page Link Script (Place before </body>) -->
+<!-- Copy Page Link Script (Place before 
+<!-- Google Translate Prompt Banner -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const userLang = navigator.language || navigator.userLanguage;
+    const currentLang = document.documentElement.lang;
+
+    if (userLang && !userLang.startsWith(currentLang)) {
+      const banner = document.createElement('div');
+      banner.innerHTML = `
+        <div style="position: fixed; top: 0; width: 100%; background: #ffeb3b; color: #000; text-align: center; font-weight: bold; padding: 0.75rem; z-index: 9999;">
+          🌍 Would you like to translate this page to <span style="text-transform: capitalize;">${userLang}</span>? 
+          <button onclick="window.open('https://translate.google.com/translate?sl=auto&tl=${userLang}&u='+encodeURIComponent(window.location.href), '_blank')" style="margin-left: 10px; padding: 0.25rem 0.5rem; font-weight: bold;">Translate</button>
+        </div>
+      `;
+      document.body.prepend(banner);
+    }
+  });
+</script>
+
+</body>) -->
 <script>
      document.getElementById("copyLinkBtn").addEventListener("click", function () {
     const pageUrl = this.getAttribute("data-link") || window.location.href;
@@ -1025,6 +1046,26 @@
 
 <!-- Bootstrap Bundle -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Google Translate Prompt Banner -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const userLang = navigator.language || navigator.userLanguage;
+    const currentLang = document.documentElement.lang;
+
+    if (userLang && !userLang.startsWith(currentLang)) {
+      const banner = document.createElement('div');
+      banner.innerHTML = `
+        <div style="position: fixed; top: 0; width: 100%; background: #ffeb3b; color: #000; text-align: center; font-weight: bold; padding: 0.75rem; z-index: 9999;">
+          🌍 Would you like to translate this page to <span style="text-transform: capitalize;">${userLang}</span>? 
+          <button onclick="window.open('https://translate.google.com/translate?sl=auto&tl=${userLang}&u='+encodeURIComponent(window.location.href), '_blank')" style="margin-left: 10px; padding: 0.25rem 0.5rem; font-weight: bold;">Translate</button>
+        </div>
+      `;
+      document.body.prepend(banner);
+    }
+  });
+</script>
 
 </body>
 </html>
