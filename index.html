@@ -3,19 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="language" content="en">
-<!-- ——— Consent-gated GA4 ——— -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-51QSZ395GS"></script>
-<script>
-  function fireGA(){
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-51QSZ395GS', { anonymize_ip:true, transport_type:'beacon' });
-  }
-  /* Example CMP gate */
-  if (localStorage.getItem('ga_consent') === 'granted') fireGA();
-</script>
-
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 
