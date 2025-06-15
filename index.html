@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:;">
 <meta name="language" content="en">
 <!-- ——— Consent-gated GA4 ——— -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-51QSZ395GS"></script>
@@ -315,7 +316,7 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
   id="mainSearchInput"
   name="q"
   placeholder="Example: wireless headphones"
-  type="text">
+  type="text" required>
 </div>
 </div>
 <!-- STEP 2 -->
@@ -509,7 +510,7 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
   id="brandInclude" 
   name="brand-include" 
   placeholder="e.g. Sony, LG" 
-  type="text">
+  type="text" required>
 
 <div class="form-check mt-2">
 <input aria-label="Match only these brands" class="form-check-input" id="includeOnly" name="include-only" type="checkbox">
