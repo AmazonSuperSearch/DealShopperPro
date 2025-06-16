@@ -3,196 +3,84 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>How to Filter Amazon Lightning Deals (2025 Guide) – Deal Shopper Pro</title>
+  <title>How to Filter Amazon Lightning Deals – 2025 Guide | Deal Shopper Pro</title>
   <link rel="canonical" href="https://www.dealshopperpro.com/guides/how-to-filter-lightning-deals-on-amazon.html" />
-  <meta name="description" content="Four fast ways to filter Amazon Lightning Deals by price, rating, discount %, and more—plus a one‑click tool that does it all." />
-
-  <!-- Bootstrap & Icons (asynchronously swapped in) -->
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'" />
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" /></noscript>
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /></noscript>
-
-  <!-- Critical styles only -->
+  <meta name="description" content="The fastest way to filter Amazon Lightning Deals by price, rating and discount—with zero manual URL hacks." />
   <style>
-    :root {
-      --dsp-brand: #ff8f00;
-      --dsp-blue: #0d6efd;
-      --gray-bg: #f8f9fa;
-    }
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      color: #212529;
-    }
-    /* Hero */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50vh;
-      padding: 3rem 1rem 2rem;
-      text-align: center;
-      background: radial-gradient(circle at top left, var(--dsp-brand) 10%, #ffbe3d 40%, #fff9ec 100%);
-      color: #212529;
-      overflow: hidden;
-    }
-    .hero h1 {
-      font-weight: 800;
-      font-size: clamp(1.8rem, 4.5vw, 2.4rem);
-      margin-bottom: 1rem;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-    }
-    .hero quick-answer {
-      font-weight: 600;
-    }
-    /* Table of contents */
-    .toc {
-      background: var(--gray-bg);
-      border: 1px solid #e2e8f0;
-      border-radius: 0.75rem;
-      padding: 1rem 1.25rem;
-      max-width: 600px;
-      margin: 2rem auto;
-    }
-    .toc a {
-      color: var(--dsp-blue);
-      text-decoration: none;
-    }
-    .toc a:hover { text-decoration: underline; }
-
-    /* Code blocks */
-    pre {
-      background: var(--gray-bg);
-      border: 1px solid #e2e8f0;
-      border-radius: 6px;
-      padding: 0.75rem 1rem;
-      overflow-x: auto;
-    }
-    /* CTA */
-    .cta-btn {
-      background: var(--dsp-blue);
-      color: #fff;
-      font-weight: 600;
-      padding: 0.65rem 1.2rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-      display: inline-block;
-      box-shadow: 0 3px 6px rgba(13, 110, 253, 0.25);
-    }
-    .cta-btn:hover { background: #0b5ed7; }
-
-    /* Utility */
-    .section-img {
-      width: 100%;
-      max-width: 700px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      margin: 1rem auto 1.5rem;
-      display: block;
-    }
-    h2 {
-      margin-top: 2.25rem;
-      font-size: clamp(1.25rem, 3.2vw, 1.6rem);
-      position: relative;
-      padding-left: 2rem;
-    }
-    h2 .fa { position: absolute; left: 0; top: .1rem; color: var(--dsp-brand); }
-
-    /* Responsive tweaks */
-    @media (max-width: 575.98px) {
-      .toc { padding: 0.75rem 1rem; }
-    }
+    /* --- critical styles only (≈4 KB) --- */
+    :root{--dsp-blue:#0d6efd;--dsp-bg:#fdfdfd;--dsp-gray:#495057}
+    *{box-sizing:border-box;margin:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--dsp-bg);padding:0 1rem;line-height:1.55}
+    h1{font-size:clamp(1.9rem,4.5vw,2.5rem);margin:1.5rem 0 .75rem;font-weight:800;color:var(--dsp-blue)}
+    h2{font-size:clamp(1.3rem,3.2vw,1.7rem);margin:1.5rem 0 .5rem;color:#202020}
+    p{margin:.75rem 0;color:var(--dsp-gray)}
+    pre{background:#f8f9fa;border:1px solid #e2e8f0;border-radius:6px;padding:.75rem;overflow:auto}
+    .cta-btn{display:inline-block;background:var(--dsp-blue);color:#fff;font-weight:600;padding:.65rem 1.1rem;border-radius:.45rem;text-decoration:none;box-shadow:0 2px 4px rgba(13,110,253,.25);transition:background .15s}
+    .cta-btn:hover{background:#0a58ca}
+    .toc{background:#eef6ff;border:1px solid #d0e4ff;padding:1rem;border-radius:8px;margin:2rem 0}
+    .toc h2{margin-top:0;font-size:1.1rem;color:#004a9f}
+    .toc a{text-decoration:none;color:var(--dsp-blue)}
+    .toc li{margin:.35rem 0}
+    .card{background:#fff;border:1px solid #e8e8e8;border-radius:10px;padding:1.25rem;box-shadow:0 2px 5px rgba(0,0,0,.04)}
+    .faq q{font-weight:700;color:#222}
+    .faq p{margin:.4rem 0 1rem 0}
+    /* reserve space so hero text never jumps */
+    @media(max-width:767.98px){.hero-heading-wrapper{min-height:8rem}}
   </style>
 </head>
 <body>
 
-  <!-- ===== Hero ===== -->
-  <header class="hero">
-    <div>
-      <h1><i class="fa-solid fa-bolt" aria-hidden="true"></i> Filter Amazon Lightning Deals Like a Pro</h1>
-      <p><strong>Quick answer:</strong> add <code>?p_36=MIN-MAX</code> or <code>&amp;discount=40-100</code> to the Lightning Deals URL—or jump to <a href="#tool">Method&nbsp;#2</a> for a one‑click filter.</p>
-    </div>
-  </header>
+<!-- === Hero === -->
+<h1>How to Filter Lightning Deals on Amazon</h1>
+<p><strong>Quick answer:</strong> Use Deal Shopper Pro’s one‑click filters to zero‑in on Prime‑eligible Lightning Deals by price, rating or discount—no URL hacks required.</p>
 
-  <!-- ===== TOC ===== -->
-  <nav class="toc" aria-label="Table of contents">
-    <h2 class="h5 mb-2">Jump to:</h2>
-    <ol class="mb-0 ps-3">
-      <li><a href="#how-lightning-deals-work">How Lightning Deals Work</a></li>
-      <li><a href="#url-hack">Method 1 – Copy‑Paste URL Filters</a></li>
-      <li><a href="#tool">Method 2 – One‑Click (Deal Shopper Pro)</a></li>
-      <li><a href="#mobile">Method 3 – Mobile vs Desktop</a></li>
-      <li><a href="#faq">FAQ</a></li>
-    </ol>
-  </nav>
+<!-- === TOC === -->
+<nav class="toc" aria-label="Table of contents">
+  <h2>Jump to:</h2>
+  <ol>
+    <li><a href="#tool">Step 1 – One‑click with Deal Shopper Pro</a></li>
+    <li><a href="#mobile">Step 2 – Mobile vs desktop tips</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ol>
+</nav>
 
-  <main class="container-lg" style="max-width: 840px;">
-    <!-- Section 1 -->
-    <h2 id="how-lightning-deals-work"><i class="fa-solid fa-clock-three"></i> How Lightning Deals Work</h2>
-    <p>Lightning Deals are limited‑time promotions that live on Amazon’s <em>Today’s Deals</em> page. Each deal runs for a set number of hours—or until stock sells out. Once it’s gone, the offer vanishes from search results.</p>
-    <img src="https://cdn.jsdelivr.net/gh/dealshopperpro/assets/lightning-deals-dashboard.webp" alt="Screenshot of Amazon Lightning Deals dashboard" class="section-img" loading="lazy">
+<!-- === CONTENT === -->
+<h2 id="tool">Step 1 – Filter Lightning Deals in one click</h2>
+<div class="card">
+  <p>Skip the manual URL parameters and head straight to a pre‑filtered Lightning Deals view. Click the button below, choose your price or rating, then let Deal Shopper Pro redirect you to Amazon’s Lightning Deals list with those filters applied.</p>
+  <p style="text-align:center;margin:1.1rem 0"><a class="cta-btn" href="https://www.dealshopperpro.com/#amazon-search-form">Try the filter tool →</a></p>
+</div>
 
-    <!-- Section 2 -->
-    <h2 id="url-hack"><i class="fa-solid fa-code"></i> Method 1 – Copy‑Paste URL Filters</h2>
-    <ol>
-      <li>Open <a href="https://www.amazon.com/gp/goldbox" target="_blank" rel="noopener">Amazon Lightning Deals</a>.</li>
-      <li>Add a price filter. Example: limit to $10–40:<br>
-        <pre>https://www.amazon.com/gp/goldbox?&amp;p_36=1000-4000</pre>
-      </li>
-      <li>Add a discount‑percent filter (≥40 % off):<br>
-        <pre>…&amp;discount=40-100</pre></li>
-      <li>Combine filters:<br>
-        <pre>…?p_36=1000-4000&amp;discount=40-100&amp;sort=discount-desc-rank</pre></li>
-    </ol>
-    <img src="https://cdn.jsdelivr.net/gh/dealshopperpro/assets/url-filter-demo.webp" alt="Demo of URL filters applied" class="section-img" loading="lazy">
+<h2 id="mobile">Step 2 – Mobile vs desktop</h2>
+<p>The Lightning Deals list hides most filters on small screens. After the redirect:</p>
+<ul>
+  <li><strong>Desktop:</strong> filters show on the left sidebar immediately.</li>
+  <li><strong>Mobile:</strong> tap the <em>Filter ▾</em> dropdown at the top of the list to reveal price and rating sliders.</li>
+</ul>
+<p>Deal Shopper Pro passes the same parameters, so results are identical.</p>
 
-    <!-- Section 3 -->
-    <h2 id="tool"><i class="fa-solid fa-wand-magic-sparkles"></i> Method 2 – One‑Click with Deal Shopper Pro</h2>
-    <p>Skip the manual URL hacks—use our free tool to apply any filter instantly:</p>
-    <p><a class="cta-btn" href="https://www.dealshopperpro.com/#amazon-search-form" target="_blank" rel="noopener">Launch Deal Shopper Pro →</a></p>
-    <img src="https://cdn.jsdelivr.net/gh/dealshopperpro/assets/deal-shopper-demo.webp" alt="Deal Shopper Pro filter interface" class="section-img" loading="lazy">
+<h2 id="faq">FAQ</h2>
+<section class="faq">
+  <q>Can I sort Lightning Deals by highest discount?</q>
+  <p>Yes. Inside Deal Shopper Pro choose <strong>Sort → Discount %</strong> before clicking “View Results.”</p>
+  <q>Why do Lightning Deals disappear?</q>
+  <p>Each deal has limited stock and a timer (usually 4–12 hours). When either runs out, Amazon removes the listing.</p>
+</section>
 
-    <!-- Section 4 -->
-    <h2 id="mobile"><i class="fa-solid fa-mobile-screen"></i> Method 3 – Mobile vs Desktop</h2>
-    <p>On Amazon’s mobile app the URL bar isn’t visible, so URL hacks don’t work. Use Deal Shopper Pro in your mobile browser or:<ul>
-      <li>Go to Deals ▶ Lightning Deals</li>
-      <li>Tap the <strong>filter funnel</strong> icon</li>
-      <li>Slide toggles for price or discount</li>
-    </ul></p>
-    <img src="https://cdn.jsdelivr.net/gh/dealshopperpro/assets/mobile-filter.gif" alt="Mobile filter walkthrough" class="section-img" loading="lazy">
+<!-- Structured FAQ Schema -->
+<script type="application/ld+json">{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[{
+   "@type":"Question",
+   "name":"Can I sort Lightning Deals by highest discount?",
+   "acceptedAnswer":{"@type":"Answer","text":"Yes. Inside Deal Shopper Pro choose 'Sort → Discount %' before clicking View Results."}
+ },{
+   "@type":"Question",
+   "name":"Why do Lightning Deals disappear?",
+   "acceptedAnswer":{"@type":"Answer","text":"Each Lightning Deal has limited stock and a countdown timer. When either ends, the deal leaves the list."}
+ }]
+}</script>
 
-    <!-- FAQ -->
-    <h2 id="faq"><i class="fa-solid fa-circle-question"></i> FAQ</h2>
-    <p><strong>Can I sort Lightning Deals by highest discount?</strong> Yes—append <code>&amp;sort=discount-desc-rank</code> to the URL, or click the “Sort by Discount” toggle in Deal Shopper Pro.
-    </p>
-    <p><strong>Why do Lightning Deals disappear?</strong> They’re time‑boxed and stock‑limited; when the timer or inventory ends, Amazon removes them from the list.</p>
-  </main>
-
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": "Can I sort Lightning Deals by highest discount?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Add &sort=discount-desc-rank to the Lightning Deals URL or click 'Sort by Discount' in Deal Shopper Pro."
-      }
-    },{
-      "@type": "Question",
-      "name": "Why do Lightning Deals disappear?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Each Lightning Deal is limited‑time and stock. When the timer or inventory ends, Amazon removes it from the list."
-      }
-    }]
-  }
-  </script>
 </body>
 </html>
-
