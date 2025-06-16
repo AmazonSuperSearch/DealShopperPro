@@ -46,6 +46,29 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
   width: 1em;
   height: 1em;
 }
+   /* ========== HERO CRITICAL PATCH ========== */
+.hero-tagline {
+  font-size: 1.125rem;        /* Bootstrap’s .h5 on mobile */
+  font-weight: 700;           /* .fw-bold */
+  margin-bottom: 0.75rem;     /* .mb-3 */
+  padding: 0.5rem 0.75rem;    /* px-3 py-2 */
+  background: #ffc107;        /* bg-warning */
+  color: #212529;             /* text-dark */
+  border-radius: 0.25rem;
+}
+
+.hero-subtitle {              /* replaces .lead .text-dark .fw-semibold */
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 1rem 0;
+}
+
+/* Reserve vertical space for tagline + h1 on small screens */
+@media (max-width: 767.98px){
+  .hero-heading-wrapper{min-height: 7.5rem;}   /* was 4.5rem */
+}
+
 </style> 
 </style>
 <style id="contrast-tweaks">
@@ -186,19 +209,19 @@ nav.navbar{display:flex;align-items:center;justify-content:space-between}
       <div class="col-md-6">
 
         <!-- Tagline -->
-        <p class="h5 fw-bold mb-3 px-3 py-2 rounded bg-warning text-dark">
-          ⚡ Smarter Deal Searching Starts Here — Powered by AI
-        </p><!-- Headline -->
+       <p class="hero-tagline">
+  ⚡ Smarter Deal Searching Starts Here — Powered by AI
+</p><!-- Headline -->
 <div class="hero-heading-wrapper">
   <h1 class="hero-heading mb-3 fw-bold">
     Find the Best Deals on Amazon Using Advanced Filters
   </h1>
 </div>
 
-        <!-- Subtext -->
-        <p class="lead mb-4 text-dark fw-semibold fs-5">
-          Instantly reveal in-stock items, apply price, rating, brand & coupon filters, and explore eco-conscious products — <strong>no signup needed</strong>.
-        </p>
+       <!-- Subtext -->
+<p class="hero-subtitle">
+  Instantly reveal in-stock items, apply price, rating, brand & coupon filters, and explore eco-conscious products — <strong>no signup needed</strong>.
+</p>
 
         <!-- Suggested Pills -->
         <div class="mb-4">
