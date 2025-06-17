@@ -28,8 +28,7 @@
     .chat-box { max-height: 70vh; overflow-y: auto; font-size: 0.9rem; background: #f1f3f5; padding: 1rem; border-radius: 0.5rem; }
     .chat-input { width: 100%; padding: 0.5rem; margin-top: 1rem; border: 1px solid #ccc; border-radius: 5px; }
     .disclaimer { font-size: 0.85rem; color: #555; background: #fffbe6; border: 1px solid #f0e68c; padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1.5rem; }
-    .tutorial { background: #e9f7ff; border: 1px solid #b6e2ff; padding: 1rem; border-radius: 10px; margin-top: 2rem; }
-    .tutorial h4 { margin-top: 0; color: #0077cc; }
+    label { font-weight: 600; margin-top: 1rem; }
   </style>
 </head>
 <body>
@@ -41,8 +40,51 @@
     <div class="row">
       <div class="col-lg-8">
         <div class="form-section">
-          <!-- Form content remains unchanged -->
-          <!-- ... -->
+          <form method="GET" action="https://www.amazon.com/s">
+            <label for="k">Search Keyword</label>
+            <input type="text" class="form-control" name="k" id="k" placeholder="wireless earbuds under 50" required>
+
+            <div class="row">
+              <div class="col">
+                <label for="low-price">Min Price</label>
+                <input class="form-control" type="number" name="low-price" min="0" step="0.01">
+              </div>
+              <div class="col">
+                <label for="high-price">Max Price</label>
+                <input class="form-control" type="number" name="high-price" min="0" step="0.01">
+              </div>
+            </div>
+
+            <label for="discount">Minimum Discount</label>
+            <select class="form-control" name="pct-off">
+              <option value="">Any</option>
+              <option value="10-">10%+</option>
+              <option value="25-">25%+</option>
+              <option value="50-">50%+</option>
+              <option value="70-">70%+</option>
+            </select>
+
+            <label for="sort">Sort By</label>
+            <select class="form-control" name="s">
+              <option value="">Relevance</option>
+              <option value="price-asc-rank">Price: Low to High</option>
+              <option value="price-desc-rank">Price: High to Low</option>
+              <option value="review-rank">Avg. Customer Review</option>
+              <option value="date-desc-rank">Newest Arrivals</option>
+            </select>
+
+            <div class="form-check mt-3">
+              <input class="form-check-input" type="checkbox" name="sref" value="n:!2407749011" id="prime">
+              <label class="form-check-label" for="prime">Prime Only</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="deal-type" value="lightning" id="lightning">
+              <label class="form-check-label" for="lightning">Lightning Deals</label>
+            </div>
+
+            <input type="hidden" name="tag" value="dealshopperpr-20">
+            <button type="submit" class="btn btn-primary mt-4">Search Amazon Deals</button>
+          </form>
         </div>
       </div>
       <div class="col-lg-4">
