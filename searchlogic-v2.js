@@ -45,7 +45,7 @@ keywordAppend('steady-price-no-spike',       'steady price');
 keywordAppend('amazon-choice', 'amazon choice');
 keywordAppend('free-returns',        'free returns');
 keywordAppend('crowdfunded-origins', 'crowdfunded origins');
-    
+
     // 3) % Off, Rating & Sort → query params
     const pct = data.get('percent-off');
     if (pct)    params.set('pct-off', pct);
@@ -133,16 +133,16 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
     window.open(url, '_blank');
   });
 });
-  // ✅ Click Sound Logic – moved outside of form submit
-  const clickSound = new Audio('/click.mp3');
 
-  document.querySelectorAll('button, a, input[type=submit]').forEach(el => {
-    el.addEventListener('click', () => {
-      try {
-        clickSound.currentTime = 0;
-        clickSound.play();
-      } catch (e) {
-        // ignore autoplay errors
-      }
-    });
+// ✅ Click Sound Logic – moved outside of form submit
+const clickSound = new Audio('/click.mp3');
+document.querySelectorAll('button, a, input[type=submit]').forEach(el => {
+  el.addEventListener('click', () => {
+    try {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    } catch (e) {
+      // ignore autoplay errors
+    }
   });
+});
