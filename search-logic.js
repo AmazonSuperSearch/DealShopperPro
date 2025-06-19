@@ -78,24 +78,25 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
       });
     }
 
-    // 4) Non-brand RH facets (only if not brand-only)
-    if (data.get('include-only') !== 'on') {
-      const pushRh = (field, code) => {
-        if (data.get(field) === 'on') rh.push(code);
-      };
-      const rhMap = {
-        'prime-only':      'p_85:2470955011',
-        'lightning-deals': 'p_n_deal_type:23566065011',
-        'free-shipping':   'p_76:1249177011',
-        'in-stock':        'p_n_availability:2661601011',
-        'coupons':         'p_n_feature_browse-bin:6779703011',
-        'fba-only':        'p_n_shipping_option-bin:3242350011',
-        'subscribe-save':  'p_n_is_sns_available:2619533011',
-        'small-business':  'p_n_cpf_eligible:5191495011',
-        'amazon-brands':   'p_n_feature_fourteen_browse-bin:18584192011',
-        'warehouse-refurb':'p_n_condition-type:2224371011'
-      };
-      for (let [field, code] of Object.entries(rhMap)) {
+    // 4) Non-brand RH facets (always check Lightning Deals, others only if not brand-only)
+    const pushRh = (field, code) => {
+      if (data.get(field) === 'on') rh.push(code);
+    };
+    const rhMap = {
+      'prime-only':      'p_85:2470955011',
+      'lightning-deals': 'p_n_deal_type:23566065011',
+      'free-shipping':   'p_76:1249177011',
+      'in-stock':        'p_n_availability:2661601011',
+      'coupons':         'p_n_feature_browse-bin:6779703011',
+      'fba-only':        'p_n_shipping_option-bin:3242350011',
+      'subscribe-save':  'p_n_is_sns_available:2619533011',
+      'small-business':  'p_n_cpf_eligible:5191495011',
+      'amazon-brands':   'p_n_feature_fourteen_browse-bin:18584192011',
+      'warehouse-refurb':'p_n_condition-type:2224371011'
+    };
+
+    for (let [field, code] of Object.entries(rhMap)) {
+      if (field === 'lightning-deals' || data.get('include-only') !== 'on') {
         pushRh(field, code);
       }
     }
