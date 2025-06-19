@@ -135,13 +135,18 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
 });
 
 
-// ✅ Universal Click Sound Logic using event delegation
+// ✅ Universal Click Sound Logic including checkboxes
 window.addEventListener('load', () => {
   const clickSound = new Audio('/click.mp3');
 
   document.body.addEventListener('click', e => {
     const tag = e.target.tagName.toLowerCase();
-    if (['button', 'a'].includes(tag) || e.target.type === 'submit') {
+    const type = e.target.type?.toLowerCase();
+
+    if (
+      ['button', 'a'].includes(tag) ||
+      ['submit', 'checkbox', 'radio'].includes(type)
+    ) {
       try {
         clickSound.currentTime = 0;
         clickSound.play();
