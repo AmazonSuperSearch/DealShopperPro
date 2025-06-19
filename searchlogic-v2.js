@@ -134,15 +134,20 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
   });
 });
 
-// ✅ Click Sound Logic – moved outside of form submit
-const clickSound = new Audio('/click.mp3');
-document.querySelectorAll('button, a, input[type=submit]').forEach(el => {
-  el.addEventListener('click', () => {
-    try {
-      clickSound.currentTime = 0;
-      clickSound.play();
-    } catch (e) {
-      // ignore autoplay errors
+
+// ✅ Universal Click Sound Logic using event delegation
+window.addEventListener('load', () => {
+  const clickSound = new Audio('/click.mp3');
+
+  document.body.addEventListener('click', e => {
+    const tag = e.target.tagName.toLowerCase();
+    if (['button', 'a'].includes(tag) || e.target.type === 'submit') {
+      try {
+        clickSound.currentTime = 0;
+        clickSound.play();
+      } catch (err) {
+        // silently ignore
+      }
     }
   });
 });
