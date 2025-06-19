@@ -50,7 +50,11 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
     const pct = data.get('percent-off');
     if (pct)    params.set('pct-off', pct);
     const rating = data.get('min-rating');
-    if (rating) params.set('min-rating', rating);
+    if (rating === '1') rh.push('p_72:1248880011');
+    if (rating === '2') rh.push('p_72:1248881011');
+    if (rating === '3') rh.push('p_72:1248882011');
+    if (rating === '4') rh.push('p_72:1248883011');
+    if (rating === '5') rh.push('p_72:1248884011');
     const sort = data.get('sort');
     if (sort)   params.set('s', sort);
 
