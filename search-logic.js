@@ -68,15 +68,17 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
       brands = raw.split(',').map(s => s.trim()).filter(Boolean);
     }
 
-    // ── Inject brand RH-facets ──
-    if (brands.length) {
-      if (data.get('include-only') === 'on') {
-        rh = []; // clear all non-brand filters
-      }
-      brands.forEach(b => {
-        rh.push(`p_89:${encodeURIComponent(b)}`);
-      });
-    }
+   // ── Inject brand RH-facets ──
+if (brands.length) {
+  // Preserve Lightning Deals and other valid non-brand filters
+  if (data.get('include-only') === 'on') {
+    rh = rh.filter(facet => facet.startsWith('p_89:'));
+  }
+
+  brands.forEach(b => {
+    rh.push(`p_89:${encodeURIComponent(b)}`);
+  });
+}
 
     // 4) Non-brand RH facets (only if not brand-only)
     if (data.get('include-only') !== 'on') {
