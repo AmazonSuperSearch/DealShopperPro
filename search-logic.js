@@ -129,7 +129,7 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
   });
 });
   // ✅ Click Sound Logic – moved outside of form submit
-  const clickSound = new Audio('/sounds/click.mp3');
+  const clickSound = new Audio('/click.mp3');
 
   document.querySelectorAll('button, a, input[type=submit]').forEach(el => {
     el.addEventListener('click', () => {
