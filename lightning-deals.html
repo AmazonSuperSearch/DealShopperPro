@@ -106,28 +106,79 @@
   </div>
 </footer>
 
-<!-- ✅ Image Zoom Modal -->
-<div class="modal fade" id="zoomModal" tabindex="-1" aria-labelledby="zoomModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content bg-transparent border-0">
-      <img id="zoomImage" src="" class="img-fluid rounded shadow" alt="Zoomed image">
-    </div>
-  </div>
-</div>
-
-<!-- ✅ Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
 <script>
+  const zoomModal = document.getElementById('zoomModal');
+  const zoomImage = document.getElementById('zoomImage');
+  const zoomStatus = document.getElementById('zoomStatus');
+  let panzoomInstance;
+
+  function updateZoomIndicator() {
+    if (!panzoomInstance) return;
+    const scale = panzoomInstance.getScale();
+    zoomStatus.textContent = `Zoom: ${(scale * 100).toFixed(0)}%`;
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('img.img-fluid').forEach(img => {
       img.style.cursor = 'zoom-in';
       img.addEventListener('click', () => {
-        document.getElementById('zoomImage').src = img.src;
-        new bootstrap.Modal(document.getElementById('zoomModal')).show();
+        zoomImage.src = img.src;
+        const modal = new bootstrap.Modal(zoomModal);
+        modal.show();
+
+        setTimeout(() => {
+          panzoomInstance?.destroy();
+          panzoomInstance = Panzoom(zoomImage, {
+            maxScale: 6,
+            minScale: 1,
+            contain: 'outside',
+            startScale: 1,
+            setTransform: (el, transform) => {
+              el.style.transform = transform;
+              updateZoomIndicator();
+            }
+          });
+
+          zoomImage.parentElement.addEventListener('wheel', panzoomInstance.zoomWithWheel);
+
+          // Double tap to zoom
+          let lastTap = 0;
+          zoomImage.addEventListener('touchend', e => {
+            const now = new Date().getTime();
+            if (now - lastTap < 300) {
+              panzoomInstance.zoomIn();
+              e.preventDefault();
+            }
+            lastTap = now;
+          }, false);
+
+          updateZoomIndicator();
+        }, 300);
       });
+    });
+
+    // Buttons
+    document.getElementById('zoomInBtn').addEventListener('click', () => {
+      panzoomInstance?.zoomIn();
+      updateZoomIndicator();
+    });
+    document.getElementById('zoomOutBtn').addEventListener('click', () => {
+      panzoomInstance?.zoomOut();
+      updateZoomIndicator();
+    });
+    document.getElementById('resetZoomBtn').addEventListener('click', () => {
+      panzoomInstance?.reset();
+      updateZoomIndicator();
+    });
+
+    zoomModal.addEventListener('hidden.bs.modal', () => {
+      panzoomInstance?.reset();
+      zoomStatus.textContent = '';
     });
   });
 </script>
+
 
 </body>
 </html>
