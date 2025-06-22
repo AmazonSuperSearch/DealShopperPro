@@ -12,46 +12,50 @@ document.write(`
 `);
 
 const currentURL = encodeURIComponent(window.location.href);
+const rawURL = window.location.href;
 
 const shareLinks = () => {
   const platforms = [
     {
-      name: "Twitter",
-      icon: "twitter",
-      url: `https://twitter.com/intent/tweet?url=${currentURL}`
-    },
-    {
       name: "Facebook",
       icon: "facebook",
-      url: `intent://www.facebook.com/sharer/sharer.php?u=${currentURL}#Intent;package=com.facebook.katana;scheme=https;end`
+      appLink: `fb://facewebmodal/f?href=https://www.facebook.com/sharer/sharer.php?u=${currentURL}`,
+      webFallback: `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`
+    },
+    {
+      name: "Twitter / X",
+      icon: "twitter",
+      appLink: `twitter://post?message=${rawURL}`,
+      webFallback: `https://twitter.com/intent/tweet?url=${currentURL}`
     },
     {
       name: "LinkedIn",
       icon: "linkedin",
-      url: `https://www.linkedin.com/sharing/share-offsite/?url=${currentURL}`
+      appLink: `linkedin://shareArticle?mini=true&url=${currentURL}`,
+      webFallback: `https://www.linkedin.com/sharing/share-offsite/?url=${currentURL}`
     },
     {
       name: "Pinterest",
       icon: "pinterest",
-      url: `intent://pinterest.com/pin/create/button/?url=${currentURL}#Intent;package=com.pinterest;scheme=https;end`
+      appLink: `pinterest://pin/create/button/?url=${currentURL}`,
+      webFallback: `https://www.pinterest.com/pin/create/button/?url=${currentURL}`
     },
     {
       name: "Email",
       icon: "envelope",
-      url: `mailto:?subject=Check this out&body=${currentURL}`
+      appLink: `mailto:?subject=Check this out&body=Take a look: ${rawURL}`,
+      webFallback: null // No fallback needed
     },
   ];
 
   const menu = document.getElementById('shareLinks');
-  if (menu) {
-    menu.innerHTML = platforms.map(p => `
-      <li>
-        <a class="dropdown-item" href="${p.url}" target="_blank" rel="noopener">
-          <i class="bi bi-${p.icon} me-2"></i>${p.name}
-        </a>
-      </li>
-    `).join('');
-  }
-};
+  if (!menu) return;
 
-window.addEventListener('DOMContentLoaded', shareLinks);
+  menu.innerHTML = platforms.map(p => `
+    <li>
+      <a class="dropdown-item" href="${p.appLink}" onclick="${
+        p.webFallback
+          ? `setTimeout(() => { window.open('${p.webFallback}', '_blank'); }, 500);`
+          : ''
+      } return true;" rel="noopener">
+        <i class="bi bi-${p.icon} me-2"></i>${p.
