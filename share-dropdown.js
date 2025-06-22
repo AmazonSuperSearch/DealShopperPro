@@ -12,13 +12,34 @@ document.write(`
 `);
 
 const currentURL = encodeURIComponent(window.location.href);
+
 const shareLinks = () => {
   const platforms = [
-    { name: "Twitter", icon: "twitter", url: `https://twitter.com/intent/tweet?url=${currentURL}` },
-    { name: "Facebook", icon: "facebook", url: `https://www.facebook.com/sharer/sharer.php?u=${currentURL}` },
-    { name: "LinkedIn", icon: "linkedin", url: `https://www.linkedin.com/sharing/share-offsite/?url=${currentURL}` },
-    { name: "Pinterest", icon: "pinterest", url: `https://pinterest.com/pin/create/button/?url=${currentURL}` },
-    { name: "Email", icon: "envelope", url: `mailto:?subject=Check this out&body=${currentURL}` },
+    {
+      name: "Twitter",
+      icon: "twitter",
+      url: `https://twitter.com/intent/tweet?url=${currentURL}`
+    },
+    {
+      name: "Facebook",
+      icon: "facebook",
+      url: `intent://www.facebook.com/sharer/sharer.php?u=${currentURL}#Intent;package=com.facebook.katana;scheme=https;end`
+    },
+    {
+      name: "LinkedIn",
+      icon: "linkedin",
+      url: `https://www.linkedin.com/sharing/share-offsite/?url=${currentURL}`
+    },
+    {
+      name: "Pinterest",
+      icon: "pinterest",
+      url: `intent://pinterest.com/pin/create/button/?url=${currentURL}#Intent;package=com.pinterest;scheme=https;end`
+    },
+    {
+      name: "Email",
+      icon: "envelope",
+      url: `mailto:?subject=Check this out&body=${currentURL}`
+    },
   ];
 
   const menu = document.getElementById('shareLinks');
