@@ -25,7 +25,7 @@ const shareLinks = () => {
     {
       name: "Twitter / X",
       icon: "twitter",
-      appLink: `twitter://post?message=${rawURL}`,
+      appLink: `twitter://post?message=Check this out ${rawURL}`,
       webFallback: `https://twitter.com/intent/tweet?url=${currentURL}`
     },
     {
@@ -41,21 +41,19 @@ const shareLinks = () => {
       webFallback: `https://www.pinterest.com/pin/create/button/?url=${currentURL}`
     },
     {
-      name: "Email",
-      icon: "envelope",
-      appLink: `mailto:?subject=Check this out&body=Take a look: ${rawURL}`,
-      webFallback: null // No fallback needed
+      name: "WhatsApp",
+      icon: "whatsapp",
+      appLink: `whatsapp://send?text=Check this out ${rawURL}`,
+      webFallback: `https://wa.me/?text=Check%20this%20out%20${currentURL}`
     },
-  ];
-
-  const menu = document.getElementById('shareLinks');
-  if (!menu) return;
-
-  menu.innerHTML = platforms.map(p => `
-    <li>
-      <a class="dropdown-item" href="${p.appLink}" onclick="${
-        p.webFallback
-          ? `setTimeout(() => { window.open('${p.webFallback}', '_blank'); }, 500);`
-          : ''
-      } return true;" rel="noopener">
-        <i class="bi bi-${p.icon} me-2"></i>${p.
+    {
+      name: "Messenger",
+      icon: "messenger",
+      appLink: `fb-messenger://share/?link=${currentURL}`,
+      webFallback: `https://www.facebook.com/dialog/send?link=${currentURL}&app_id=966242223397117&redirect_uri=${currentURL}`
+    },
+    {
+      name: "Telegram",
+      icon: "telegram",
+      appLink: `tg://msg_url?url=${currentURL}`,
+      webFallback: `https://t.me/share/url?url=${c
