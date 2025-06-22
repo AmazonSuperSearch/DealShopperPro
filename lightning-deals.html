@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,9 +51,10 @@
     if (keywords !== "") {
       var baseUrl = "https://www.amazon.com/s?";
       var queryParam = "k=" + encodeURIComponent(keywords);  
-      var dealsParam = "rh=p_n_deal_type:23566065011";        // Lightning Deals filter:contentReference[oaicite:2]{index=2}
-      var tagParam   = "tag=dealshopperpr-20";               // Affiliate tracking tag:contentReference[oaicite:3]{index=3}
-      var searchUrl  = baseUrl + queryParam + "&" + dealsParam + "&" + tagParam;
+      var dealsParam = "rh=p_n_deal_type:23566065011,p_85:2470955011,p_36:0-5000"; // Strict Lightning Deals
+      var sortParam = "sort=review-rank";
+      var tagParam   = "tag=dealshopperpr-20"; // Affiliate tag
+      var searchUrl  = baseUrl + queryParam + "&" + dealsParam + "&" + sortParam + "&" + tagParam;
       window.open(searchUrl, "_blank");  // open results in a new browser tab
     }
   });
