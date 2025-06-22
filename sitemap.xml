@@ -4,68 +4,80 @@
   <!-- Home -->
   <url>
     <loc>https://www.dealshopperpro.com/</loc>
-    <lastmod>2025-06-16</lastmod>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
 
-  <!-- Core pages -->
+  <!-- Core Pages -->
   <url>
     <loc>https://www.dealshopperpro.com/help.html</loc>
-    <lastmod>2025-06-16</lastmod>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
-
   <url>
     <loc>https://www.dealshopperpro.com/media.html</loc>
-    <lastmod>2025-06-16</lastmod>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
-
   <url>
-  <loc>https://www.dealshopperpro.com/posts.html</loc>
-  <lastmod>2025-06-16</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-
+    <loc>https://www.dealshopperpro.com/posts.html</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
   <url>
     <loc>https://www.dealshopperpro.com/about.html</loc>
-    <lastmod>2025-06-16</lastmod>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
-
   <url>
     <loc>https://www.dealshopperpro.com/contact.html</loc>
-    <lastmod>2025-06-16</lastmod>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
-  <!-- Legal pages -->
+  <!-- Legal Pages -->
   <url>
     <loc>https://www.dealshopperpro.com/privacy.html</loc>
-    <lastmod>2025-06-16</lastmod>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
-
   <url>
     <loc>https://www.dealshopperpro.com/terms.html</loc>
-    <lastmod>2025-06-16</lastmod>
+    <lastmod>2025-06-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
 
-<!-- Guides -->
+  <!-- Product Filtering Pages -->
   <url>
-    <loc>https://www.dealshopperpro.com/guides/how-to-filter-lightning-deals-on-amazon.html</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.55</priority>
+    <loc>https://www.dealshopperpro.com/lightning-deals.html</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
-
+  <url>
+    <loc>https://www.dealshopperpro.com/prime-only-deals.html</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.dealshopperpro.com/how-it-works.html</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.dealshopperpro.com/best-deals-today.html</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.90</priority>
+  </url>
 </urlset>
