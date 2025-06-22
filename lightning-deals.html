@@ -76,22 +76,7 @@
 </div>
 <p style="margin-top: 1rem;">*If no Lightning Deals are active for your search, Amazon may show regular deals instead.*</p>
 </div>
-<script>
-  // On form submission, open Amazon search results for Lightning Deals in a new tab
-  document.getElementById('lightningDealSearchForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const keywords = document.getElementById('dealKeywords').value.trim();
-    if (keywords !== "") {
-      const baseUrl = "https://www.amazon.com/s?";
-      const queryParam = "k=" + encodeURIComponent(keywords);
-      const dealsParam = "rh=p_n_deal_type:23566065011";
-      const sortParam = "sort=review-rank";
-      const tagParam   = "tag=dealshopperpr-20";
-      const searchUrl  = baseUrl + queryParam + "&" + dealsParam + "&" + sortParam + "&" + tagParam;
-      window.open(searchUrl, "_blank");
-    }
-  });
-</script>
+
 <!-- ——————————— SITE-WIDE FOOTER ——————————— -->
 <section id="how-to-guide">  <h2>🛠️ How to Filter Amazon Lightning Deals (Guide)</h2>
   <h3>🔦 How to Find Lightning Deals by Price</h3><p>Looking for time-sensitive bargains that fit your budget? Here's how you can instantly reveal Amazon Lightning Deals using Deal Shopper Pro:</p><p>Amazon Lightning Deals are short-lived offers that often disappear in minutes. If you want to grab these fast-moving discounts without endless scrolling, Deal Shopper Pro makes it simple. By combining price filtering, deal status, and Prime-only visibility, our free tool helps you lock in real savings before time runs out.</p><h2>🛠️ Step-by-Step Guide</h2><ol>
