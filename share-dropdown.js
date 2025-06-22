@@ -56,4 +56,32 @@ const shareLinks = () => {
       name: "Telegram",
       icon: "telegram",
       appLink: `tg://msg_url?url=${currentURL}`,
-      webFallback: `https://t.me/share/url?url=${c
+      webFallback: `https://t.me/share/url?url=${currentURL}`
+    },
+    {
+      name: "Email",
+      icon: "envelope",
+      appLink: `mailto:?subject=Check this out&body=Take a look: ${rawURL}`,
+      webFallback: null
+    }
+  ];
+
+  const menu = document.getElementById('shareLinks');
+  if (!menu) return;
+
+  menu.innerHTML = platforms.map(p => {
+    const fallback = p.webFallback
+      ? `setTimeout(() => { try { window.open('${p.webFallback}', '_blank'); } catch(e) {} }, 500);`
+      : '';
+
+    return `
+      <li>
+        <a class="dropdown-item" href="${p.appLink}" onclick="${fallback} return true;" rel="noopener">
+          <i class="bi bi-${p.icon} me-2"></i>${p.name}
+        </a>
+      </li>
+    `;
+  }).join('');
+};
+
+window.addEventListener('DOMContentLoaded', shareLinks);
