@@ -19,8 +19,8 @@ const shareLinks = () => {
     {
       name: "Facebook",
       icon: "facebook",
-      appLink: `fb://facewebmodal/f?href=https://www.facebook.com/sharer/sharer.php?u=${currentURL}`,
-      webFallback: `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`
+      appLink: `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`,
+      webFallback: null // no fallback needed since this is already the reliable URL
     },
     {
       name: "Twitter / X",
