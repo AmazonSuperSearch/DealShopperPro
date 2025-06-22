@@ -51,7 +51,7 @@
     if (keywords !== "") {
       var baseUrl = "https://www.amazon.com/s?";
       var queryParam = "k=" + encodeURIComponent(keywords);  
-      var dealsParam = "rh=p_n_deal_type:23566065011,p_85:2470955011,p_36:0-5000"; // Strict Lightning Deals
+      var dealsParam = "rh=p_n_deal_type:23566065011"; // Lightning Deals only
       var sortParam = "sort=review-rank";
       var tagParam   = "tag=dealshopperpr-20"; // Affiliate tag
       var searchUrl  = baseUrl + queryParam + "&" + dealsParam + "&" + sortParam + "&" + tagParam;
