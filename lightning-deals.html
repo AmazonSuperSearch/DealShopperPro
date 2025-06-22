@@ -127,23 +127,23 @@
     </div>
   </div>
 </div>
-
+  
 <!-- ✅ Zoom Modal Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
 <script>
-  const zoomModal = document.getElementById('zoomModal');
-  const zoomImage = document.getElementById('zoomImage');
-  const zoomStatus = document.getElementById('zoomStatus');
-  let panzoomInstance;
-
-  function updateZoomIndicator() {
-    if (!panzoomInstance) return;
-    const scale = panzoomInstance.getScale();
-    zoomStatus.textContent = `Zoom: ${(scale * 100).toFixed(0)}%`;
-  }
-
   document.addEventListener('DOMContentLoaded', () => {
+    const zoomModal = document.getElementById('zoomModal');
+    const zoomImage = document.getElementById('zoomImage');
+    const zoomStatus = document.getElementById('zoomStatus');
+    let panzoomInstance = null;
+
+    function updateZoomIndicator() {
+      if (!panzoomInstance) return;
+      const scale = panzoomInstance.getScale();
+      zoomStatus.textContent = `Zoom: ${(scale * 100).toFixed(0)}%`;
+    }
+
     document.querySelectorAll('img.img-fluid').forEach(img => {
       img.style.cursor = 'zoom-in';
       img.addEventListener('click', () => {
@@ -152,16 +152,11 @@
         modal.show();
 
         setTimeout(() => {
-          panzoomInstance?.destroy();
+          if (panzoomInstance) panzoomInstance.destroy();
           panzoomInstance = Panzoom(zoomImage, {
             maxScale: 6,
             minScale: 1,
-            contain: 'outside',
-            startScale: 1,
-            setTransform: (el, transform) => {
-              el.style.transform = transform;
-              updateZoomIndicator();
-            }
+            contain: 'outside'
           });
 
           zoomImage.parentElement.addEventListener('wheel', panzoomInstance.zoomWithWheel);
@@ -172,34 +167,43 @@
             const now = new Date().getTime();
             if (now - lastTap < 300) {
               panzoomInstance.zoomIn();
+              updateZoomIndicator();
               e.preventDefault();
             }
             lastTap = now;
-          }, false);
+          });
 
           updateZoomIndicator();
-        }, 300);
+        }, 200);
       });
     });
 
     document.getElementById('zoomInBtn').addEventListener('click', () => {
-      panzoomInstance?.zoomIn();
-      updateZoomIndicator();
+      if (panzoomInstance) {
+        panzoomInstance.zoomIn();
+        updateZoomIndicator();
+      }
     });
 
     document.getElementById('zoomOutBtn').addEventListener('click', () => {
-      panzoomInstance?.zoomOut();
-      updateZoomIndicator();
+      if (panzoomInstance) {
+        panzoomInstance.zoomOut();
+        updateZoomIndicator();
+      }
     });
 
     document.getElementById('resetZoomBtn').addEventListener('click', () => {
-      panzoomInstance?.reset();
-      updateZoomIndicator();
+      if (panzoomInstance) {
+        panzoomInstance.reset();
+        updateZoomIndicator();
+      }
     });
 
     zoomModal.addEventListener('hidden.bs.modal', () => {
-      panzoomInstance?.reset();
-      zoomStatus.textContent = '';
+      if (panzoomInstance) {
+        panzoomInstance.reset();
+        zoomStatus.textContent = '';
+      }
     });
   });
 </script>
