@@ -13,7 +13,7 @@
   <!-- ✅ Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- ✅ Bootstrap JS -->
+  <!-- ✅ Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body style="font-family: Arial, sans-serif;">
@@ -33,4 +33,50 @@
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="/lightning-deals.html">Lightning Deals</a></li>
         <li class="nav-item"><a class="nav-link" href="/prime-only-deals.html">Prime-Only Deals</a></li>
-        <li class="nav-item"><a class="nav-link" href="/ho
+        <li class="nav-item"><a class="nav-link" href="/how-it-works.html">How It Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="/best-deals-today.html">Best Deals Today</a></li>
+        <li class="nav-item"><a class="nav-link" href="/help.html">Help</a></li>
+        <li class="nav-item"><a class="nav-link" href="/media.html">Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ✅ Main Content -->
+<div style="max-width: 800px; margin: 2rem auto; padding: 1rem;">
+  <h1>Filter Amazon Lightning Deals by Price, Rating & Discount</h1>
+
+  <p>Want to find the best Amazon Lightning Deals without scrolling endlessly? Deal Shopper Pro lets you instantly filter deals by price range, customer rating, brand, discount percentage, and more — no login required.</p>
+
+  <!-- Lightning Deals Search Form -->
+  <form id="lightningDealSearchForm" style="max-width:400px; width:100%; margin:auto; display:flex;">
+    <input type="text" id="dealKeywords" placeholder="Search Lightning Deals..." 
+          style="flex:1; padding:8px; font-size:1rem;" />
+    <button type="submit" style="padding:8px 12px; font-size:1rem;">Search</button>
+  </form>
+
+  <p style="margin-top: 1rem;">*If no Lightning Deals are active for your search, Amazon may show regular deals instead.*</p>
+  <p>For a more advanced search, use our <a href="/">free Lightning Deal filter tool</a> to skip the clutter and jump straight to the best offers.</p>
+</div>
+
+<script>
+  // On form submission, open Amazon search results for Lightning Deals in a new tab
+  document.getElementById('lightningDealSearchForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const keywords = document.getElementById('dealKeywords').value.trim();
+    if (keywords !== "") {
+      const baseUrl = "https://www.amazon.com/s?";
+      const queryParam = "k=" + encodeURIComponent(keywords);
+      const dealsParam = "rh=p_n_deal_type:23566065011";
+      const sortParam = "sort=review-rank";
+      const tagParam   = "tag=dealshopperpr-20";
+      const searchUrl  = baseUrl + queryParam + "&" + dealsParam + "&" + sortParam + "&" + tagParam;
+      window.open(searchUrl, "_blank");
+    }
+  });
+</script>
+
+</body>
+</html>
