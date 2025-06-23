@@ -67,10 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!brands.length && raw) {
       brands = raw.split(',').map(s => s.trim()).filter(Boolean);
     }
-    if (brands.length) {
-      if (data.get('include-only') === 'on') rh = [];
-      brands.forEach(b => rh.push(`p_89:${encodeURIComponent(b)}`));
-    }
+    const validBrands = brands.filter(b => b.trim().length > 0);
+if (validBrands.length) {
+  if (data.get('include-only') === 'on') rh = [];
+  validBrands.forEach(b => rh.push(`p_89:${encodeURIComponent(b)}`));
+}
+
 
     // 5) Non-brand RH facets
     const pushRh = (field, code) => {
@@ -98,16 +100,11 @@ document.addEventListener('DOMContentLoaded', () => {
       rh.push(`p_36:${lower}-${upper}`);
     }
 
-   // 7) Lightning-only: Goldbox redirect (with affiliate tag)
+  // 7) Lightning-only: force Lightning Deals filter
 if (lightningOnly) {
-  let url = 'https://www.amazon.com/gp/goldbox?ref_=nav_topnav_deals';
-  if (q)        url += `&k=${encodeURIComponent(q)}`;
-  if (min > 0)  url += `&low-price=${Math.round(min*100)}`;
-  if (max > 0)  url += `&high-price=${Math.round(max*100)}`;
-  url += '&tag=dealshopperpr-20';          // ← add the tag here
-  window.open(url, '_blank');
-  return;
+  rh.push('p_n_deal_type:23566065011');
 }
+    
     // 8) Fallback search URL
     params.set('k', q);
     if (rh.length) params.set('rh', rh.join(','));
