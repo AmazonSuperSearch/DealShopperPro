@@ -2,21 +2,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
 
-  // ▶️ NEW: when Lightning-Deals is toggled, disable all other controls
-  const lightningToggle = form.querySelector('#lightningDeals');
-  const keep = ['q','currency','min-price','max-price','lightning-deals'];
-  const controlsToToggle = Array.from(form.querySelectorAll('input, select'))
-    .filter(el => !keep.includes(el.name));
-  const updateControls = () => {
-    const off = lightningToggle.checked;
-    controlsToToggle.forEach(el => {
-      el.disabled = off;
-      if (off && el.type === 'checkbox') el.checked = false;
-    });
-  };
-  lightningToggle.addEventListener('change', updateControls);
-  updateControls();
-
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
@@ -27,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!q && !lightningOnly) {
       return alert('Please enter a search term.');
     }
-
     // 2) Keyword-based filters (always appended to q)
     const keywordAppend = (id, phrase) => {
       if (data.get(id) === 'on') {
