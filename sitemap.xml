@@ -80,4 +80,37 @@
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
+
+  <!-- Helpful Guides / SEO Pages -->
+  <url>
+    <loc>https://www.dealshopperpro.com/lightning-deals-guide.html</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.dealshopperpro.com/eco-friendly-deals.html</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.dealshopperpro.com/gift-filters.html</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.dealshopperpro.com/amazon-coupons.html</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.dealshopperpro.com/subscribe-save-deals.html</loc>
+    <lastmod>2025-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
 </urlset>
