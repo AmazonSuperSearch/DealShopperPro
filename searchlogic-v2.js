@@ -90,16 +90,16 @@ document.addEventListener('DOMContentLoaded', () => {
       rh.push(`p_36:${lower}-${upper}`);
     }
 
-    // 7) Lightning-only: Goldbox redirect
-    if (lightningOnly) {
-      let url = 'https://www.amazon.com/gp/goldbox?ref_=nav_topnav_deals';
-      if (q) url += `&k=${encodeURIComponent(q)}`;
-      if (min > 0) url += `&low-price=${Math.round(min*100)}`;
-      if (max > 0) url += `&high-price=${Math.round(max*100)}`;
-      window.open(url, '_blank');
-      return;
-    }
-
+   // 7) Lightning-only: Goldbox redirect (with affiliate tag)
+if (lightningOnly) {
+  let url = 'https://www.amazon.com/gp/goldbox?ref_=nav_topnav_deals';
+  if (q)        url += `&k=${encodeURIComponent(q)}`;
+  if (min > 0)  url += `&low-price=${Math.round(min*100)}`;
+  if (max > 0)  url += `&high-price=${Math.round(max*100)}`;
+  url += '&tag=dealshopperpr-20';          // ← add the tag here
+  window.open(url, '_blank');
+  return;
+}
     // 8) Fallback search URL
     params.set('k', q);
     if (rh.length) params.set('rh', rh.join(','));
