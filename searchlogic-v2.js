@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
 
   // ▶️ NEW: when Lightning-Deals is toggled, disable all other controls
-  const lightningToggle = form.querySelector('#lightning-deals');
+  const lightningToggle = form.querySelector('#lightningDeals');
   // collect every input/select in the form except q, min-price, max-price, and the lightning checkbox itself
   const controlsToToggle = Array.from(
     form.querySelectorAll('input, select')
   ).filter(el =>
-    !['q','min-price','max-price','lightning-deals'].includes(el.id)
+    !['q','min-price','max-price','lightningdeals'].includes(el.id)
   );
 
   const updateControls = () => {
