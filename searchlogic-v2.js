@@ -1,9 +1,30 @@
-// search-logic.js
+// searchlogic-v2.js
 // Consolidated, updated Amazon search logic moved to an external file
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
 
+  // ▶️ NEW: when Lightning-Deals is toggled, disable all other controls
+  const lightningToggle = form.querySelector('#lightning-deals');
+  // collect every input/select in the form except q, min-price, max-price, and the lightning checkbox itself
+  const controlsToToggle = Array.from(
+    form.querySelectorAll('input, select')
+  ).filter(el =>
+    !['q','min-price','max-price','lightning-deals'].includes(el.id)
+  );
+
+  const updateControls = () => {
+    const off = lightningToggle.checked;
+    controlsToToggle.forEach(el => {
+      el.disabled = off;
+      // also uncheck any checkboxes/radios if you want
+      if (off && el.type === 'checkbox') el.checked = false;
+    });
+  };
+
+  lightningToggle.addEventListener('change', updateControls);
+  updateControls();  // initialize on load
+  
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
@@ -88,7 +109,6 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
     };
     const rhMap = {
       'prime-only':      'p_85:2470955011',
-      'lightning-deals': 'p_n_deal_type:23566065011',
       'free-shipping':   'p_76:1249177011',
       'in-stock':        'p_n_availability:2661601011',
       'coupons':         'p_n_feature_browse-bin:6779703011',
@@ -112,6 +132,20 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
       const lower = min  > 0 ? Math.round(min * 100) : 0;
       const upper = max  > 0 ? Math.round(max * 100) : '';
       rh.push(`p_36:${lower}-${upper}`);
+    }
+    
+    // ————— If Lightning Deals ONLY, go to Goldbox instead —————
+    if (data.get('lightning-deals') === 'on') {
+      const lower = min  > 0 ? Math.round(min * 100) : '';
+      const upper = max  > 0 ? Math.round(max * 100) : '';
+      const goldboxBase = 'https://www.amazon.com/gp/goldbox?ref_=nav_topnav_deals';
+      const goldboxURL =
+        `${goldboxBase}`
+        + `&k=${encodeURIComponent(q)}`
+        + (lower    ? `&low-price=${lower}`  : '')
+        + (upper    ? `&high-price=${upper}` : '');
+      window.open(goldboxURL, '_blank');
+      return;  // stop here — don’t fall back to the regular search URL
     }
 
     // 6) Build & open URL
