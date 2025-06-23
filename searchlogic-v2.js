@@ -1,29 +1,12 @@
 // searchlogic-v2.js
-// Consolidated, updated Amazon search logic moved to an external file
-
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('amazon-search-form');
-
-
- document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
 
   // ▶️ NEW: when Lightning-Deals is toggled, disable all other controls
   const lightningToggle = form.querySelector('#lightningDeals');
-
-  // Only these form names stay enabled if Lightning-Deals is checked:
-  const keep = [
-    'q',               // search term
-    'currency',        // currency dropdown
-    'min-price',       // minimum price
-    'max-price',       // maximum price
-    'lightning-deals'  // the Lightning-Deals checkbox itself
-  ];
-
-  const controlsToToggle = Array.from(
-    form.querySelectorAll('input, select')
-  ).filter(el => !keep.includes(el.name));
-
+  const keep = ['q','currency','min-price','max-price','lightning-deals'];
+  const controlsToToggle = Array.from(form.querySelectorAll('input, select'))
+    .filter(el => !keep.includes(el.name));
   const updateControls = () => {
     const off = lightningToggle.checked;
     controlsToToggle.forEach(el => {
@@ -31,19 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
       if (off && el.type === 'checkbox') el.checked = false;
     });
   };
-  
   lightningToggle.addEventListener('change', updateControls);
-  updateControls();  // initialize on load
-  
+  updateControls();
+
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
-    const params = new URLSearchParams();
-    let rh = [];
 
-    // 1) Base query
-    let q = data.get('q')?.trim();
-    if (!q) return alert('Please enter a search term.');
+    // ⚡ 1) Base query (allow Lightning-only searches)
+    const lightningOnly = data.get('lightning-deals') === 'on';
+    let q = (data.get('q') || '').trim();
+    if (!q && !lightningOnly) {
+      return alert('Please enter a search term.');
+    }
 
     // 2) Keyword-based filters (always appended to q)
     const keywordAppend = (id, phrase) => {
