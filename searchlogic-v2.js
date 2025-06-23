@@ -1,17 +1,40 @@
 // searchlogic-v2.js
+// Consolidated, updated Amazon search logic moved to an external file
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
 
+  // ▶️ NEW: when Lightning-Deals is toggled, disable all other controls
+  const lightningToggle = form.querySelector('#lightning-deals');
+  // collect every input/select in the form except q, min-price, max-price, and the lightning checkbox itself
+  const controlsToToggle = Array.from(
+    form.querySelectorAll('input, select')
+  ).filter(el =>
+    !['q','min-price','max-price','lightning-deals'].includes(el.id)
+  );
+
+  const updateControls = () => {
+    const off = lightningToggle.checked;
+    controlsToToggle.forEach(el => {
+      el.disabled = off;
+      // also uncheck any checkboxes/radios if you want
+      if (off && el.type === 'checkbox') el.checked = false;
+    });
+  };
+
+  lightningToggle.addEventListener('change', updateControls);
+  updateControls();  // initialize on load
+  
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
+    const params = new URLSearchParams();
+    let rh = [];
 
-    // ⚡ 1) Base query (allow Lightning-only searches)
-    const lightningOnly = data.get('lightning-deals') === 'on';
-    let q = (data.get('q') || '').trim();
-    if (!q && !lightningOnly) {
-      return alert('Please enter a search term.');
-    }
+    // 1) Base query
+    let q = data.get('q')?.trim();
+    if (!q) return alert('Please enter a search term.');
+
     // 2) Keyword-based filters (always appended to q)
     const keywordAppend = (id, phrase) => {
       if (data.get(id) === 'on') {
@@ -76,7 +99,7 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
         rh = []; // clear all non-brand filters
       }
       brands.forEach(b => {
-        rh.push(`p_89:${encodeURIComponent(b)}`);
+        rh.push(p_89:${encodeURIComponent(b)});
       });
     }
 
@@ -108,7 +131,7 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
     if (min > 0 || max > 0) {
       const lower = min  > 0 ? Math.round(min * 100) : 0;
       const upper = max  > 0 ? Math.round(max * 100) : '';
-      rh.push(`p_36:${lower}-${upper}`);
+      rh.push(p_36:${lower}-${upper});
     }
     
     // ————— If Lightning Deals ONLY, go to Goldbox instead —————
@@ -117,10 +140,10 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
       const upper = max  > 0 ? Math.round(max * 100) : '';
       const goldboxBase = 'https://www.amazon.com/gp/goldbox?ref_=nav_topnav_deals';
       const goldboxURL =
-        `${goldboxBase}`
-        + `&k=${encodeURIComponent(q)}`
-        + (lower    ? `&low-price=${lower}`  : '')
-        + (upper    ? `&high-price=${upper}` : '');
+        ${goldboxBase}
+        + &k=${encodeURIComponent(q)}
+        + (lower    ? &low-price=${lower}  : '')
+        + (upper    ? &high-price=${upper} : '');
       window.open(goldboxURL, '_blank');
       return;  // stop here — don’t fall back to the regular search URL
     }
@@ -138,7 +161,7 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
       inr: 'www.amazon.in'
     };
     const host = hostMap[data.get('currency')] || 'www.amazon.com';
-    const url = `https://${host}/s?${params.toString()}`;
+    const url = https://${host}/s?${params.toString()};
 
     console.log('🔗 Amazon URL:', url);
     window.open(url, '_blank');
