@@ -4,27 +4,32 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
 
- // ▶️ NEW: when Lightning-Deals is toggled, disable all other controls
-const lightningToggle = form.querySelector('#lightningDeals');
 
-// Only these form “name” values stay enabled when Lightning-Deals is checked:
-const keep = ['q', 'min-price', 'max-price', 'lightning-deals'];
+  // ▶️ NEW: when Lightning-Deals is toggled, disable all other controls
+  const lightningToggle = form.querySelector('#lightningDeals');
 
-// Everything else (inputs & selects) will be disabled/cleared
-const controlsToToggle = Array.from(
-  form.querySelectorAll('input, select')
-).filter(el =>
-  !keep.includes(el.name)
-);
+  // Only these form "name" attributes stay enabled when Lightning Deals is checked:
+  const keep = [
+    'q',               // search term
+    'currency',        // currency select (part of price range)
+    'min-price',       // minimum price
+    'max-price',       // maximum price
+    'lightning-deals'  // the Lightning Deals checkbox
+  ];
 
-const updateControls = () => {
-  const off = lightningToggle.checked;
-  controlsToToggle.forEach(el => {
-    el.disabled = off;
-    if (off && el.type === 'checkbox') el.checked = false;
-  });
-};
+  // Grab every input/select that should be disabled/cleared
+  const controlsToToggle = Array.from(
+    form.querySelectorAll('input, select')
+  ).filter(el => !keep.includes(el.name));
 
+  const updateControls = () => {
+    const off = lightningToggle.checked;
+    controlsToToggle.forEach(el => {
+      el.disabled = off;
+      if (off && el.type === 'checkbox') el.checked = false;
+    });
+  };
+  
   lightningToggle.addEventListener('change', updateControls);
   updateControls();  // initialize on load
   
