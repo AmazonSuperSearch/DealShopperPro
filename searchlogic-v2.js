@@ -1,18 +1,8 @@
 // searchlogic-v2.js
-// Consolidated, updated Amazon search logic moved to an external file
 
-// This file no longer disables controls; it supports Lightning-Only searches and Goldbox redirect.
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
 
-  // ▶️ Warning for conflicting filters
-  const lightningToggle = form.querySelector('#lightning-deals');
-  const warningEl     = document.getElementById('lightning-warning');
-
-  lightningToggle.addEventListener('change', () => {
-    warningEl.style.display = lightningToggle.checked ? 'block' : 'none';
-  });
-  warningEl.style.display = lightningToggle.checked ? 'block' : 'none';
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
@@ -21,40 +11,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams();
     let rh = [];
 
-    // 1) Base query (allow Lightning-only searches)
-    const lightningOnly = data.get('lightning-deals') === 'on';
+    // 1) Base query
     let q = (data.get('q') || '').trim();
-    if (!q && !lightningOnly) {
-      return alert('Please enter a search term.');
-    }
+    if (!q) return alert('Please enter a search term.');
 
-    // 2) Keyword-based filters (always appended to q)
+    // 2) Keyword-based filters
     const keywordAppend = (id, phrase) => {
       if (data.get(id) === 'on') {
         q += (q.endsWith(' ') ? '' : ' ') + phrase;
       }
     };
-    keywordAppend('eco-friendly',            'eco friendly');
+    keywordAppend('eco-friendly', 'eco friendly');
     keywordAppend('biodegradable-packaging', 'biodegradable packaging');
-    keywordAppend('vegan-products',          'vegan');
-    keywordAppend('organic-products',        'organic');
-    keywordAppend('carbon-neutral-delivery','carbon-neutral delivery');
-    keywordAppend('filter-cruelty-free',     'cruelty free');
-    keywordAppend('low-emf-devices',         'low emf');
-    keywordAppend('allergy-friendly',        'allergy friendly');
-    // (add other keywordAppend calls as needed)
+    keywordAppend('vegan-products', 'vegan');
+    keywordAppend('organic-products', 'organic');
+    keywordAppend('carbon-neutral-delivery', 'carbon-neutral delivery');
+    keywordAppend('filter-cruelty-free', 'cruelty free');
+    keywordAppend('low-emf-devices', 'low emf');
+    keywordAppend('allergy-friendly', 'allergy friendly');
 
-    // 3) % Off, Rating & Sort → query params
+    // 3) % Off, Rating & Sort
     const pct = data.get('percent-off');
-    if (pct)    params.set('pct-off', pct);
+    if (pct) params.set('pct-off', pct);
+
     const rating = data.get('min-rating');
     if (rating === '1') rh.push('p_72:1248880011');
     if (rating === '2') rh.push('p_72:1248881011');
     if (rating === '3') rh.push('p_72:1248882011');
     if (rating === '4') rh.push('p_72:1248883011');
     if (rating === '5') rh.push('p_72:1248884011');
+
     const sort = data.get('sort');
-    if (sort)   params.set('s', sort);
+    if (sort) params.set('s', sort);
 
     // 4) Brand filters
     let raw = data.get('brand-include') || '';
@@ -68,11 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
       brands = raw.split(',').map(s => s.trim()).filter(Boolean);
     }
     const validBrands = brands.filter(b => b.trim().length > 0);
-if (validBrands.length) {
-  if (data.get('include-only') === 'on') rh = [];
-  validBrands.forEach(b => rh.push(`p_89:${encodeURIComponent(b)}`));
-}
-
+    if (validBrands.length) {
+      if (data.get('include-only') === 'on') rh = [];
+      validBrands.forEach(b => rh.push(`p_89:${encodeURIComponent(b)}`));
+    }
 
     // 5) Non-brand RH facets
     const pushRh = (field, code) => {
@@ -87,7 +74,8 @@ if (validBrands.length) {
       'subscribe-save':  'p_n_is_sns_available:2619533011',
       'small-business':  'p_n_cpf_eligible:5191495011',
       'amazon-brands':   'p_n_feature_fourteen_browse-bin:18584192011',
-      'warehouse-refurb':'p_n_condition-type:2224371011'
+      'warehouse-refurb':'p_n_condition-type:2224371011',
+      'lightning-deals': 'p_n_deal_type:23566065011' // ✅ now acts like a normal filter
     };
     Object.entries(rhMap).forEach(([field, code]) => pushRh(field, code));
 
@@ -100,16 +88,18 @@ if (validBrands.length) {
       rh.push(`p_36:${lower}-${upper}`);
     }
 
-  // 7) Lightning-only: force Lightning Deals filter
-if (lightningOnly) {
-  rh.push('p_n_deal_type:23566065011');
-}
-    
-    // 8) Fallback search URL
+    // 7) Final URL
     params.set('k', q);
     if (rh.length) params.set('rh', rh.join(','));
     params.set('tag', 'dealshopperpr-20');
-    const hostMap = {usd:'www.amazon.com', eur:'www.amazon.de', gbp:'www.amazon.co.uk', jpy:'www.amazon.co.jp', inr:'www.amazon.in'};
+
+    const hostMap = {
+      usd: 'www.amazon.com',
+      eur: 'www.amazon.de',
+      gbp: 'www.amazon.co.uk',
+      jpy: 'www.amazon.co.jp',
+      inr: 'www.amazon.in'
+    };
     const host = hostMap[data.get('currency')] || 'www.amazon.com';
     const url = `https://${host}/s?${params.toString()}`;
     window.open(url, '_blank');
