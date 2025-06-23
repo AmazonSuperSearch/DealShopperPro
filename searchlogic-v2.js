@@ -21,14 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
         q += (q.endsWith(' ') ? '' : ' ') + phrase;
       }
     };
-    keywordAppend('eco-friendly', 'eco friendly');
-    keywordAppend('biodegradable-packaging', 'biodegradable packaging');
-    keywordAppend('vegan-products', 'vegan');
-    keywordAppend('organic-products', 'organic');
-    keywordAppend('carbon-neutral-delivery', 'carbon-neutral delivery');
-    keywordAppend('filter-cruelty-free', 'cruelty free');
-    keywordAppend('low-emf-devices', 'low emf');
-    keywordAppend('allergy-friendly', 'allergy friendly');
+    
+keywordAppend('eco-friendly',             'eco friendly');
+keywordAppend('biodegradable-packaging',  'biodegradable packaging');
+keywordAppend('vegan-products',           'vegan');
+keywordAppend('organic-products',         'organic');
+keywordAppend('carbon-neutral-delivery',  'carbon-neutral delivery');
+keywordAppend('filter-cruelty-free',      'cruelty free');
+keywordAppend('low-emf-devices',          'low emf');
+keywordAppend('allergy-friendly',         'allergy friendly');
+keywordAppend('gifts-for-her',            'gifts for her');
+keywordAppend('gifts-for-mom',            'gifts for mom');
+keywordAppend('anniversary-gifts',        'anniversary gifts');
+keywordAppend('gifts-for-him',            'gifts for him');
+keywordAppend('gifts-for-kids',           'gifts for kids');
+keywordAppend('gifts-for-dad',            'gifts for dad');
+keywordAppend('birthday-gifts',           'birthday gifts');
+keywordAppend('holiday-gift-picks',       'holiday gift picks');
+
 
     // 3) % Off, Rating & Sort
     const pct = data.get('percent-off');
