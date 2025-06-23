@@ -5,6 +5,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
 
+  // ▶️ Warning for conflicting filters
+  const lightningToggle = form.querySelector('#lightning-deals');
+  const warningEl     = document.getElementById('lightning-warning');
+
+  lightningToggle.addEventListener('change', () => {
+    warningEl.style.display = lightningToggle.checked ? 'block' : 'none';
+  });
+  warningEl.style.display = lightningToggle.checked ? 'block' : 'none';
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
