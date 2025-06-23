@@ -1,39 +1,24 @@
 // searchlogic-v2.js
 // Consolidated, updated Amazon search logic moved to an external file
 
+// This file no longer disables controls; it supports Lightning-Only searches and Goldbox redirect.
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
 
-  // ▶️ NEW: when Lightning-Deals is toggled, disable all other controls
-  const lightningToggle = form.querySelector('#lightning-deals');
-  // collect every input/select in the form except q, min-price, max-price, and the lightning checkbox itself
-  const controlsToToggle = Array.from(
-    form.querySelectorAll('input, select')
-  ).filter(el =>
-    !['q','min-price','max-price','lightning-deals'].includes(el.id)
-  );
-
-  const updateControls = () => {
-    const off = lightningToggle.checked;
-    controlsToToggle.forEach(el => {
-      el.disabled = off;
-      // also uncheck any checkboxes/radios if you want
-      if (off && el.type === 'checkbox') el.checked = false;
-    });
-  };
-
-  lightningToggle.addEventListener('change', updateControls);
-  updateControls();  // initialize on load
-  
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
+
+    // ── Init query-builder ──
     const params = new URLSearchParams();
     let rh = [];
 
-    // 1) Base query
-    let q = data.get('q')?.trim();
-    if (!q) return alert('Please enter a search term.');
+    // 1) Base query (allow Lightning-only searches)
+    const lightningOnly = data.get('lightning-deals') === 'on';
+    let q = (data.get('q') || '').trim();
+    if (!q && !lightningOnly) {
+      return alert('Please enter a search term.');
+    }
 
     // 2) Keyword-based filters (always appended to q)
     const keywordAppend = (id, phrase) => {
@@ -41,31 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
         q += (q.endsWith(' ') ? '' : ' ') + phrase;
       }
     };
-keywordAppend('eco-friendly',            'eco friendly');
-keywordAppend('biodegradable-packaging', 'biodegradable packaging');
-keywordAppend('vegan-products',          'vegan');
-keywordAppend('organic-products',        'organic');
-keywordAppend('carbon-neutral-delivery','carbon-neutral delivery');
-keywordAppend('filter-cruelty-free',     'cruelty free');
-keywordAppend('low-emf-devices',         'low emf');
-keywordAppend('allergy-friendly',        'allergy friendly');
-
-keywordAppend('gifts-for-her',           'gifts for her');
-keywordAppend('gifts-for-him',           'gifts for him');
-keywordAppend('gifts-for-dad',           'gifts for dad');
-keywordAppend('gifts-for-mom',           'gifts for mom');
-keywordAppend('gifts-for-kids',          'gifts for kids');
-keywordAppend('birthday-gifts',          'birthday gifts');
-keywordAppend('anniversary-gifts',       'anniversary gifts');
-keywordAppend('holiday-gift-picks',      'holiday gift picks');
-
-keywordAppend('meditation-mindfulness-gear', 'mindfulness gear');
-keywordAppend('best-value-per-ounce',        'best value per ounce');
-keywordAppend('most-reviewed',               'most reviewed');
-keywordAppend('steady-price-no-spike',       'steady price');
-keywordAppend('amazon-choice', 'amazon choice');
-keywordAppend('free-returns',        'free returns');
-keywordAppend('crowdfunded-origins', 'crowdfunded origins');
+    keywordAppend('eco-friendly',            'eco friendly');
+    keywordAppend('biodegradable-packaging', 'biodegradable packaging');
+    keywordAppend('vegan-products',          'vegan');
+    keywordAppend('organic-products',        'organic');
+    keywordAppend('carbon-neutral-delivery','carbon-neutral delivery');
+    keywordAppend('filter-cruelty-free',     'cruelty free');
+    keywordAppend('low-emf-devices',         'low emf');
+    keywordAppend('allergy-friendly',        'allergy friendly');
+    // (add other keywordAppend calls as needed)
 
     // 3) % Off, Rating & Sort → query params
     const pct = data.get('percent-off');
@@ -79,31 +48,23 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
     const sort = data.get('sort');
     if (sort)   params.set('s', sort);
 
-    // ── Normalize Tagify’s JSON or fallback to comma-split ──
+    // 4) Brand filters
     let raw = data.get('brand-include') || '';
     let brands = [];
     if (raw.startsWith('[')) {
       try {
         brands = JSON.parse(raw).map(tag => tag.value);
-      } catch (err) {
-        console.warn('Failed parsing brands JSON:', err);
-      }
+      } catch {}
     }
     if (!brands.length && raw) {
       brands = raw.split(',').map(s => s.trim()).filter(Boolean);
     }
-
-    // ── Inject brand RH-facets ──
     if (brands.length) {
-      if (data.get('include-only') === 'on') {
-        rh = []; // clear all non-brand filters
-      }
-      brands.forEach(b => {
-        rh.push(p_89:${encodeURIComponent(b)});
-      });
+      if (data.get('include-only') === 'on') rh = [];
+      brands.forEach(b => rh.push(`p_89:${encodeURIComponent(b)}`));
     }
 
-    // 4) Non-brand RH facets (always check Lightning Deals, others only if not brand-only)
+    // 5) Non-brand RH facets
     const pushRh = (field, code) => {
       if (data.get(field) === 'on') rh.push(code);
     };
@@ -118,75 +79,34 @@ keywordAppend('crowdfunded-origins', 'crowdfunded origins');
       'amazon-brands':   'p_n_feature_fourteen_browse-bin:18584192011',
       'warehouse-refurb':'p_n_condition-type:2224371011'
     };
+    Object.entries(rhMap).forEach(([field, code]) => pushRh(field, code));
 
-    for (let [field, code] of Object.entries(rhMap)) {
-      if (field === 'lightning-deals' || data.get('include-only') !== 'on') {
-        pushRh(field, code);
-      }
-    }
-
-    // 5) Now push your price-range facet last
+    // 6) Price range
     const min = parseFloat(data.get('min-price') || 0);
     const max = parseFloat(data.get('max-price') || 0);
     if (min > 0 || max > 0) {
-      const lower = min  > 0 ? Math.round(min * 100) : 0;
-      const upper = max  > 0 ? Math.round(max * 100) : '';
-      rh.push(p_36:${lower}-${upper});
-    }
-    
-    // ————— If Lightning Deals ONLY, go to Goldbox instead —————
-    if (data.get('lightning-deals') === 'on') {
-      const lower = min  > 0 ? Math.round(min * 100) : '';
-      const upper = max  > 0 ? Math.round(max * 100) : '';
-      const goldboxBase = 'https://www.amazon.com/gp/goldbox?ref_=nav_topnav_deals';
-      const goldboxURL =
-        ${goldboxBase}
-        + &k=${encodeURIComponent(q)}
-        + (lower    ? &low-price=${lower}  : '')
-        + (upper    ? &high-price=${upper} : '');
-      window.open(goldboxURL, '_blank');
-      return;  // stop here — don’t fall back to the regular search URL
+      const lower = min > 0 ? Math.round(min * 100) : 0;
+      const upper = max > 0 ? Math.round(max * 100) : '';
+      rh.push(`p_36:${lower}-${upper}`);
     }
 
-    // 6) Build & open URL
+    // 7) Lightning-only: Goldbox redirect
+    if (lightningOnly) {
+      let url = 'https://www.amazon.com/gp/goldbox?ref_=nav_topnav_deals';
+      if (q) url += `&k=${encodeURIComponent(q)}`;
+      if (min > 0) url += `&low-price=${Math.round(min*100)}`;
+      if (max > 0) url += `&high-price=${Math.round(max*100)}`;
+      window.open(url, '_blank');
+      return;
+    }
+
+    // 8) Fallback search URL
     params.set('k', q);
     if (rh.length) params.set('rh', rh.join(','));
     params.set('tag', 'dealshopperpr-20');
-
-    const hostMap = {
-      usd: 'www.amazon.com',
-      eur: 'www.amazon.de',
-      gbp: 'www.amazon.co.uk',
-      jpy: 'www.amazon.co.jp',
-      inr: 'www.amazon.in'
-    };
+    const hostMap = {usd:'www.amazon.com', eur:'www.amazon.de', gbp:'www.amazon.co.uk', jpy:'www.amazon.co.jp', inr:'www.amazon.in'};
     const host = hostMap[data.get('currency')] || 'www.amazon.com';
-    const url = https://${host}/s?${params.toString()};
-
-    console.log('🔗 Amazon URL:', url);
+    const url = `https://${host}/s?${params.toString()}`;
     window.open(url, '_blank');
-  });
-});
-
-
-// ✅ Universal Click Sound Logic including checkboxes
-window.addEventListener('load', () => {
-  const clickSound = new Audio('/click.mp3');
-
-  document.body.addEventListener('click', e => {
-    const tag = e.target.tagName.toLowerCase();
-    const type = e.target.type?.toLowerCase();
-
-    if (
-      ['button', 'a'].includes(tag) ||
-      ['submit', 'checkbox', 'radio'].includes(type)
-    ) {
-      try {
-        clickSound.currentTime = 0;
-        clickSound.play();
-      } catch (err) {
-        // silently ignore
-      }
-    }
   });
 });
