@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -57,17 +56,17 @@
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" src="https://www.youtube.com/embed/wpj1l1XUunw" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" title="How to Filter Lightning Deals on Amazon in 30 Seconds (2025 Guide)">
 </iframe>
 </div>
-<div style="margin-top: 1rem; font-size: 1rem; line-height: 1.6;">
+<div class="how-to-guide" style="margin-top: 1rem; font-size: 1rem; line-height: 1.6;">
 <strong>Step 1:</strong> Enter a product name, category, or department<br/>
-<img alt="Enter product keyword on Deal Shopper Pro to start Amazon search" class="img-fluid my-2" src="enter-amazon-search-keyword.png"/>
+<img alt="Enter product keyword on Deal Shopper Pro to start Amazon search" class="img-fluid my-2" src="enter-amazon-search-keyword.png" role="button" tabindex="0"/>
 <strong>Steps 2–4:</strong> (Optional) Apply additional filters as needed<br/>
-<img alt="Apply Amazon filters like price range and customer rating" class="img-fluid my-2" src="apply-amazon-filters-price-rating.png"/>
-<img alt="Refine Amazon deals by discount percentage, rating, and sort order" class="img-fluid my-2" src="refine-by-rating-discount-sort-order.png"/>
-<img alt="Filter Amazon deals by entering specific brand names" class="img-fluid my-2" src="filter-amazon-deals-by-brand-name.png"/>
+<img alt="Apply Amazon filters like price range and customer rating" class="img-fluid my-2" src="apply-amazon-filters-price-rating.png" role="button" tabindex="0"/>
+<img alt="Refine Amazon deals by discount percentage, rating, and sort order" class="img-fluid my-2" src="refine-by-rating-discount-sort-order.png" role="button" tabindex="0"/>
+<img alt="Filter Amazon deals by entering specific brand names" class="img-fluid my-2" src="filter-amazon-deals-by-brand-name.png" role="button" tabindex="0"/>
 <strong>Step 5:</strong> Check the box for "<em>Lightning Deals</em>"<br/>
-<img alt="Check the Lightning Deals box to filter only active Amazon Lightning Deals" class="img-fluid my-2" src="check-lightning-deals-box.png"/>
+<img alt="Check the Lightning Deals box to filter only active Amazon Lightning Deals" class="img-fluid my-2" src="check-lightning-deals-box.png" role="button" tabindex="0"/>
 <strong>Step 6:</strong> Click the blue <em>"View Filtered Results"</em> button to search on Amazon<br/>
-<img alt="Click the View Filtered Results button to see Amazon deals" class="img-fluid my-2" src="click-view-filtered-results-button.png"/>
+<img alt="Click the View Filtered Results button to see Amazon deals" class="img-fluid my-2" src="click-view-filtered-results-button.png" role="button" tabindex="0"/>
 </div>
 <!-- ✅ CTA Button -->
 <div style="text-align: center; margin-top: 1rem;">
@@ -129,11 +128,12 @@
 </div>
 </div>
 <script>
-  document.querySelectorAll('img.img-fluid').forEach(img => {
+  document.querySelectorAll('.how-to-guide img.img-fluid').forEach(img => {
     img.style.cursor = 'pointer';
     img.addEventListener('click', () => {
       const modalImg = document.getElementById('modalImage');
       modalImg.src = img.src;
+      modalImg.alt = img.alt;
       const modal = new bootstrap.Modal(document.getElementById('imageModal'));
       modal.show();
     });
