@@ -179,7 +179,11 @@
           <div id="zoomStatus" class="mt-2 small fw-bold"></div>
         </div>
         <div id="zoomContainer" style="max-width: 90%; max-height: 90%; overflow: hidden;">
-          <img id="zoomImage" src="" class="img-fluid rounded shadow" style="cursor: grab;" alt="Zoomed image">
+         <img id="zoomImage"
+     src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+     class="img-fluid rounded shadow"
+     style="cursor: grab;"
+     alt="Zoomed image">
         </div>
       </div>
     </div>
@@ -202,7 +206,7 @@
       zoomStatus.textContent = `Zoom: ${(scale * 100).toFixed(0)}%`;
     }
 
-    document.querySelectorAll('img.img-fluid').forEach(img => {
+    document.querySelectorAll('img.zoom-trigger').forEach(img => {
       img.style.cursor = 'zoom-in';
       img.addEventListener('click', () => {
         zoomImage.src = img.src;
