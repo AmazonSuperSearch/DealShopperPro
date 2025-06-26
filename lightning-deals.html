@@ -95,32 +95,58 @@
       <iframe src="https://www.youtube.com/embed/wpj1l1XUunw" title="How to Filter Lightning Deals on Amazon in 30 Seconds" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>
     </div>
 
-    <!-- Steps -->
-    <section>
-      <h2>Step 1: Enter Your Search Term</h2>
-      <p>Type a product name, category, or department (e.g., “headphones”).</p>
-      <img src="how-to-find-lightning-deals-step1.png" alt="How to start your search for Amazon Lightning Deals" class="img-fluid my-3 zoom-trigger">
-    </section>
+    <!-- Lightning Deals Search Form -->
+<form id="lightning-search-form" action="/#amazon-search-form" method="get" class="mb-5">
+  <div class="row g-2 align-items-end">
+    <!-- 1) Keyword -->
+    <div class="col-sm-6">
+      <label for="q-lightning" class="form-label">Search term</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        id="q-lightning" 
+        name="q" 
+        placeholder="e.g. headphones" 
+        required>
+    </div>
 
-    <section>
-      <h2>Step 2: Apply the Lightning Deals Filter</h2>
-      <p>Check the Lightning Deals box to show only active deals.</p>
-      <img src="how-to-find-lightning-deals-step2-lightning-deals.png" alt="Check the Lightning Deals filter to only display Amazon Lightning Deals" class="img-fluid my-3 zoom-trigger">
+    <!-- 2) (Hidden) Lightning Deals -->
+    <input type="hidden" name="lightning" value="on">
 
-      <h3>Optional: Filter by Price, Rating & Discount</h3>
-      <p>Use the dropdowns to set a minimum price, customer rating, or discount percentage.</p>
-      <img src="how-to-find-lightning-deals-step2-optional-filters.png" alt="Filter lightning deals by price, rating, and discount percentage" class="img-fluid my-3 zoom-trigger">
-    </section>
+    <!-- 3) Optional: Price Range -->
+    <div class="col-sm-3">
+      <label for="low-lightning" class="form-label">Min Price</label>
+      <input 
+        type="number" 
+        class="form-control" 
+        id="low-lightning" 
+        name="low-price" 
+        placeholder="0">
+    </div>
+    <div class="col-sm-3">
+      <label for="high-lightning" class="form-label">Max Price</label>
+      <input 
+        type="number" 
+        class="form-control" 
+        id="high-lightning" 
+        name="high-price" 
+        placeholder="1000">
+    </div>
 
-    <section>
-      <h2>Step 3: View Your Results on Amazon</h2>
-      <p>Click the blue <strong>“View Filtered Results”</strong> button to load your custom deal list on Amazon.</p>
-      <img src="how-to-find-lightning-deals-step3.png" alt="Click View Filtered Results to see Amazon Lightning Deals" class="img-fluid my-3 zoom-trigger">
-    </section>
-
-    <!-- CTA -->
-    <div class="text-center my-4">
-      <a href="/#amazon-search-form" class="btn btn-primary btn-lg shadow-sm" style="font-weight:600;">Start Searching Now</a>
+    <!-- 4) Submit Buttons -->
+    <div class="col-12 d-flex">
+      <button type="submit" class="btn btn-primary me-2">
+        Search Lightning Deals
+      </button>
+      <a 
+        href="https://www.amazon.com/gp/goldbox?ref_=nav_topnav_deals&tag=dealshopperpr-20" 
+        class="btn btn-outline-secondary" 
+        target="_blank" rel="noopener">
+        View All Current Lightning Deals
+      </a>
+    </div>
+  </div>
+</form>
       <p class="small text-muted mt-2"><em>*If no Lightning Deals are active, Amazon may show regular deals instead.*</em></p>
     </div>
 
