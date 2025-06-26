@@ -236,32 +236,38 @@
     });
   </script>
   <script>
-document.getElementById('lightning-search-form').addEventListener('submit', function(e) {
-  e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('lightning-search-form');
+  if (!form) return;
 
-  // 1) grab values
-  const q   = this.querySelector('[name="q"]').value.trim();
-  const low = this.querySelector('[name="low-price"]').value;
-  const high= this.querySelector('[name="high-price"]').value;
-  if (!q) {
-    return alert('Please enter a search term.');
-  }
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
 
-  // 2) build Amazon search URL
-  let url = 'https://www.amazon.com/s?';
-  // Amazon’s search param is “k”
-  url += 'k=' + encodeURIComponent(q);
-  // ensure the Lightning Deals filter ref
-  url += '&ref_=nav_topnav_deals';
-  // apply price filters if set
-  if (low)  url += '&low-price='  + encodeURIComponent(low);
-  if (high) url += '&high-price=' + encodeURIComponent(high);
-  // your affiliate tag
-  url += '&tag=dealshopperpr-20';
+    // 1) grab values
+    const q    = this.querySelector('[name="q"]').value.trim();
+    const low  = this.querySelector('[name="low-price"]').value;
+    const high = this.querySelector('[name="high-price"]').value;
+    if (!q) {
+      return alert('Please enter a search term.');
+    }
 
-  // 3) open in a new window/tab
-  window.open(url, '_blank');
+    // 2) build Amazon search URL
+    let url = 'https://www.amazon.com/s?';
+    url += 'k=' + encodeURIComponent(q);
+    url += '&ref_=nav_topnav_deals';
+    // add Lightning Deals filter
+    url += '&rh=p_n_special_merchandising_six_browse-bin%3A2664819011';
+    // apply price filters if set
+    if (low)  url += '&low-price='  + encodeURIComponent(low);
+    if (high) url += '&high-price=' + encodeURIComponent(high);
+    // your affiliate tag
+    url += '&tag=dealshopperpr-20';
+
+    // 3) open in a new window/tab
+    window.open(url, '_blank');
+  });
 });
 </script>
+
 </body>
 </html>
