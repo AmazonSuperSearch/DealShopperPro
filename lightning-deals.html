@@ -96,33 +96,51 @@
     </div>
 
     <!-- Lightning Deals Search Form -->
-<form
-  id="lightning-search-form"
-  action="https://www.amazon.com/s"
-  method="get"
-  target="_blank"
-  class="mb-5"
->
-  <!-- 1) Keyword -->
-  <input type="text" name="k" placeholder="Search term" required>
-
-  <!-- 2) Pre-check Lightning Deals -->
-  <input type="hidden" name="eligibleLightningDeals" value="1">
-
-  <!-- 3) Price range -->
-  <input type="number" name="low-price" placeholder="Min Price">
-  <input type="number" name="high-price" placeholder="Max Price">
-
-  <!-- 4) Affiliate tag (if you use one) -->
-  <input type="hidden" name="tag" value="dealshopperpr-20">
-
-  <!-- 5) Submit -->
-  <button type="submit" class="btn btn-primary">
-    Search Lightning Deals
-  </button>
-</form>
-      <p class="small text-muted mt-2"><em>*If no Lightning Deals are active, Amazon may show regular deals instead.*</em></p>
+<!-- Mini Lightning-Deals Search Form -->
+<form id="lightning-search-form" class="mb-5">
+  <div class="row g-2 align-items-end">
+    <div class="col-sm-6">
+      <label for="q-lightning" class="form-label">Search term</label>
+      <input
+        type="text"
+        id="q-lightning"
+        name="q"
+        class="form-control"
+        placeholder="e.g. shoes"
+        required>
     </div>
+    <div class="col-sm-3">
+      <label for="low-lightning" class="form-label">Min Price</label>
+      <input
+        type="number"
+        id="low-lightning"
+        name="low-price"
+        class="form-control"
+        placeholder="0">
+    </div>
+    <div class="col-sm-3">
+      <label for="high-lightning" class="form-label">Max Price</label>
+      <input
+        type="number"
+        id="high-lightning"
+        name="high-price"
+        class="form-control"
+        placeholder="1000">
+    </div>
+    <div class="col-12 d-flex">
+      <button type="submit" class="btn btn-primary me-2">
+        Search Lightning Deals
+      </button>
+      <a
+        href="https://www.amazon.com/gp/goldbox?ref_=nav_topnav_deals&tag=dealshopperpr-20"
+        class="btn btn-outline-secondary"
+        target="_blank"
+        rel="noopener">
+        View All Current Lightning Deals
+      </a>
+    </div>
+  </div>
+</form>
 
     <!-- FAQ Section -->
     <section id="faq" class="mt-5">
@@ -217,5 +235,33 @@
       zoomModal.addEventListener('hidden.bs.modal', () => { if(panzoomInstance){ panzoomInstance.reset(); zoomStatus.textContent=''; } });
     });
   </script>
+  <script>
+document.getElementById('lightning-search-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // 1) grab values
+  const q   = this.querySelector('[name="q"]').value.trim();
+  const low = this.querySelector('[name="low-price"]').value;
+  const high= this.querySelector('[name="high-price"]').value;
+  if (!q) {
+    return alert('Please enter a search term.');
+  }
+
+  // 2) build Amazon search URL
+  let url = 'https://www.amazon.com/s?';
+  // Amazon’s search param is “k”
+  url += 'k=' + encodeURIComponent(q);
+  // ensure the Lightning Deals filter ref
+  url += '&ref_=nav_topnav_deals';
+  // apply price filters if set
+  if (low)  url += '&low-price='  + encodeURIComponent(low);
+  if (high) url += '&high-price=' + encodeURIComponent(high);
+  // your affiliate tag
+  url += '&tag=dealshopperpr-20';
+
+  // 3) open in a new window/tab
+  window.open(url, '_blank');
+});
+</script>
 </body>
 </html>
