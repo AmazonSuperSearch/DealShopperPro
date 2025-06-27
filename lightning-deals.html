@@ -206,19 +206,19 @@
 
   <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
     <!-- WhatsApp -->
-    <a class="btn btn-success" id="waShare"  title="Share via WhatsApp"   rel="noopener noreferrer" target="_blank">WhatsApp</a>
+    <a href="#" class="btn btn-success" id="waShare" title="Share via WhatsApp" rel="noopener noreferrer" target="_blank">WhatsApp</a>
 
     <!-- Messenger -->
-    <a class="btn btn-primary" id="msShare"  title="Share via Messenger" rel="noopener noreferrer" target="_blank">Messenger</a>
+    <a href="#" class="btn btn-primary" id="msShare" title="Share via Messenger" rel="noopener noreferrer" target="_blank">Messenger</a>
 
     <!-- SMS -->
-    <a class="btn btn-secondary" id="smsShare" title="Share via SMS"     rel="noopener noreferrer" target="_blank">Text Message</a>
+    <a href="#" class="btn btn-secondary" id="smsShare" title="Share via SMS" rel="noopener noreferrer" target="_blank">Text Message</a>
 
     <!-- Twitter / X -->
-    <a class="btn btn-info text-white" id="twShare" title="Share on X"   rel="noopener noreferrer" target="_blank">Twitter / X</a>
+    <a href="#" class="btn btn-info text-white" id="twShare" title="Share on X" rel="noopener noreferrer" target="_blank">Twitter / X</a>
 
     <!-- Facebook -->
-    <a class="btn btn-primary" id="fbShare"  title="Share on Facebook"   rel="noopener noreferrer" target="_blank">Facebook</a>
+    <a href="#" class="btn btn-primary" id="fbShare" title="Share on Facebook" rel="noopener noreferrer" target="_blank">Facebook</a>
 
     <!-- Copy Link -->
     <button id="copyLinkBtn" class="btn btn-dark" aria-label="Copy page link to clipboard">Copy Page Link</button>
@@ -230,18 +230,22 @@
   const pageUrl   = encodeURIComponent(location.href);
   const pageTitle = encodeURIComponent(document.title);
 
-  /* Dynamic share URLs */
+  // Assign dynamic hrefs
   waShare.href = `https://wa.me/?text=${pageTitle}%20${pageUrl}`;
   msShare.href = `fb-messenger://share?link=${pageUrl}`;
   smsShare.href = `sms:&body=Check%20out%20this%20Amazon%20Lightning%20Deals%20finder:%20${pageUrl}`;
   twShare.href = `https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here%20—%20${pageUrl}`;
   fbShare.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
 
-  /* Clipboard */
+  // Prevent default # behavior on links with dummy hrefs
+  document.querySelectorAll('a[href="#"]').forEach(el =>
+    el.addEventListener('click', e => e.preventDefault())
+  );
+
+  // Copy-to-clipboard logic
   copyLinkBtn.addEventListener('click', () => {
     const copyText = location.href;
     navigator.clipboard?.writeText(copyText).catch(() => {
-      /* Fallback for older browsers */
       window.prompt('Copy this link:', copyText);
     }).finally(() => {
       copyLinkBtn.textContent = 'Copied ✅';
