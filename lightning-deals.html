@@ -94,9 +94,16 @@
   <li><strong>Detailed Step-by-Step Guide</strong> – Follow our comprehensive walkthrough to master finding limited-time offers.</li>
 </ol>
 
-    <div class="ratio ratio-16x9 my-4" aria-label="Instructional video">
-      <iframe src="https://www.youtube.com/embed/wpj1l1XUunw" title="How to Filter Lightning Deals on Amazon in 30 Seconds" allowfullscreen></iframe>
-    </div>
+    <div class="ratio ratio-16x9 my-4" role="region" aria-labelledby="videoTitle">
+  <h2 id="videoTitle" class="visually-hidden">How to Filter Lightning Deals (Video)</h2>
+  <iframe
+    src="https://www.youtube.com/embed/wpj1l1XUunw"
+    title="How to Filter Lightning Deals on Amazon in 30 Seconds"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
 
     <section id="options">
       <h3 class="mt-4">Option 1: View All Lightning Deals</h3>
@@ -191,18 +198,29 @@
   </footer>
 
   <!-- Zoom Modal -->
-  <div class="modal fade" id="zoomModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content bg-dark border-0">
-        <div class="modal-header border-0">
-          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body d-flex justify-content-center align-items-center">
-          <img id="zoomImage" src="" alt="Zoomed image" class="img-fluid rounded shadow">
-        </div>
+ <div class="modal fade" id="zoomModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content bg-dark border-0">
+      <div class="modal-header border-0">
+        <button
+          type="button"
+          class="btn-close btn-close-white ms-auto"
+          data-bs-dismiss="modal"
+          aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body d-flex justify-content-center align-items-center">
+        <img
+          id="zoomImage"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+          alt="Zoomed image"
+          class="img-fluid rounded shadow"
+        >
       </div>
     </div>
   </div>
+</div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
