@@ -247,35 +247,29 @@
       zoomModal.addEventListener('hidden.bs.modal', () => { if(panzoomInstance){ panzoomInstance.reset(); zoomStatus.textContent=''; } });
     });
   </script>
-  <script>
+<script>
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('lightning-search-form');
   if (!form) return;
 
-  form.addEventListener('submit', function(e) {
+  form.addEventListener('submit', e => {
     e.preventDefault();
+    const q    = form.querySelector('[name="q"]').value.trim();
+    const low  = form.querySelector('[name="low-price"]').value;
+    const high = form.querySelector('[name="high-price"]').value;
+    if (!q) return alert('Please enter a search term.');
 
-    // 1) grab values
-    const q    = this.querySelector('[name="q"]').value.trim();
-    const low  = this.querySelector('[name="low-price"]').value;
-    const high = this.querySelector('[name="high-price"]').value;
-    if (!q) {
-      return alert('Please enter a search term.');
-    }
-
-    // 2) build Amazon search URL
-    let url = 'https://www.amazon.com/s?';
-    url += 'k=' + encodeURIComponent(q);
-    url += '&ref_=nav_topnav_deals';
-    // add Lightning Deals filter
-    url += '&rh=p_n_special_merchandising_six_browse-bin%3A2664819011';
-    // apply price filters if set
+    // Build the Lightning Deals URL
+    let url = 'https://www.amazon.com/s?i=lightning-deals';
+    url += '&k=' + encodeURIComponent(q);
+    // only show live Lightning Deals
+    url += '&eligibleLightningDeals=1';
+    // price filters
     if (low)  url += '&low-price='  + encodeURIComponent(low);
     if (high) url += '&high-price=' + encodeURIComponent(high);
-    // your affiliate tag
-    url += '&tag=dealshopperpr-20';
+    // affiliate & ref tags
+    url += '&ref_=nav_topnav_deals&tag=dealshopperpr-20';
 
-    // 3) open in a new window/tab
     window.open(url, '_blank');
   });
 });
