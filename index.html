@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+<head><link as="image" fetchpriority="high" href="/thumbnail.png" rel="preload">
 <meta charset="utf-8">
 <meta content="en" name="language">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <title>Filter Amazon Lightning Deals by Price, Rating, Prime &amp; Coupons | Deal Shopper Pro</title>
 <meta content="Use Deal Shopper Pro to instantly filter Amazon Lightning Deals by discount %, price, reviews, Prime eligibility &amp; hidden coupons. No login. 100% free." name="description">
-<meta content="index, follow" name="robots">
+<meta content="index, follow, max-snippet:160, max-image-preview:large, max-video-preview:-1" name="robots">
 <link href="https://www.dealshopperpro.com/" rel="canonical">
 <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
 <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -51,7 +51,7 @@
     "description": "Free Amazon Lightning Deal filter tool. Sort by price, rating, Prime-only, coupons, in-stock status, and more."
   }
   </script>
-  <style> section h1,
+<style> section h1,
 article h1,
 nav h1,
 aside h1 {
@@ -66,75 +66,120 @@ aside h1 {
 <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"></noscript>
 <link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect">
 <link crossorigin="" href="https://cdn.jsdelivr.net" rel="preconnect">
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
+<link as="font" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2">
 <script crossorigin="anonymous" defer="" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-</head>
+<meta content="Deal Shopper Pro" property="og:site_name"><meta content="@DealShopperPro" name="twitter:site"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.dealshopperpro.com/"
+    }
+  ]
+}</script><meta content="1200" property="og:image:width"><meta content="630" property="og:image:height"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Deal Shopper Pro really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes\u2014no login and no paid plans."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an Amazon account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We redirect you straight to Amazon; nothing is stored here."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a Lightning Deal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It\u2019s a limited\u2011time, limited\u2011stock Amazon promo. Our filter shows only items currently on offer."
+      }
+    }
+  ]
+}</script></head>
 <body>
 <!-- ✅ Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-warning d-flex align-items-center" href="/" style="font-size: 1.5rem;">
-      <i class="bi bi-lightning-charge-fill me-2"></i> Deal Shopper Pro
+<div class="container">
+<a class="navbar-brand fw-bold text-warning d-flex align-items-center" href="/" style="font-size: 1.5rem;">
+<i aria-hidden="true" class="bi bi-lightning-charge-fill me-2"></i> Deal Shopper Pro
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <!-- Main navigation links -->
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/how-it-works.html">How It Works</a></li>
-        <li class="nav-item"><a class="nav-link" href="/lightning-deals.html">Lightning Deals</a></li>
-        <li class="nav-item"><a class="nav-link" href="/prime-only-deals.html">Prime-Only Deals</a></li>
-        <li class="nav-item"><a class="nav-link" href="/best-deals-today.html">Best Deals Today</a></li>
-        <li class="nav-item"><a class="nav-link" href="/help.html">Help</a></li>
-        <li class="nav-item"><a class="nav-link" href="/media.html">Media</a></li>
-        <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="/sitemap.html">Sitemap</a></li>
-        <li class="nav-item">
-          <a class="nav-link text-primary fw-semibold" href="https://www.facebook.com/share/g/1C1BARo5YJ/" target="_blank" rel="noopener noreferrer">
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<!-- Main navigation links -->
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="/how-it-works.html">How It Works</a></li>
+<li class="nav-item"><a class="nav-link" href="/lightning-deals.html" rel="noreferrer noopener sponsored">Lightning Deals</a></li>
+<li class="nav-item"><a class="nav-link" href="/prime-only-deals.html">Prime-Only Deals</a></li>
+<li class="nav-item"><a class="nav-link" href="/best-deals-today.html">Best Deals Today</a></li>
+<li class="nav-item"><a class="nav-link" href="/help.html">Help</a></li>
+<li class="nav-item"><a class="nav-link" href="/media.html">Media</a></li>
+<li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+<li class="nav-item"><a class="nav-link" href="/sitemap.html">Sitemap</a></li>
+<li class="nav-item">
+<a class="nav-link text-primary fw-semibold" href="https://www.facebook.com/share/g/1C1BARo5YJ/" rel="noopener noreferrer" target="_blank">
             💬 Facebook Group
           </a>
-        </li>
-      </ul>
-
-      <!-- ✅ Social Share Links -->
-      <div class="d-flex align-items-center ms-lg-3">
-        <span class="me-2 fw-semibold text-muted">Share this page:</span>
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item me-2">
-            <a class="nav-link p-0" href="https://twitter.com/intent/tweet?url=https://www.dealshopperpro.com" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter">
+</li>
+</ul>
+<!-- ✅ Social Share Links -->
+<div class="d-flex align-items-center ms-lg-3">
+<span class="me-2 fw-semibold text-muted">Share this page:</span>
+<ul class="navbar-nav flex-row">
+<li class="nav-item me-2">
+<a aria-label="Share on Twitter" class="nav-link p-0" href="https://twitter.com/intent/tweet?url=https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
               🐦 Twitter
             </a>
-          </li>
-          <li class="nav-item me-2">
-            <a class="nav-link p-0" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
+</li>
+<li class="nav-item me-2">
+<a aria-label="Share on Facebook" class="nav-link p-0" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
               📘 Facebook
             </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link p-0" href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.dealshopperpro.com" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">
+</li>
+<li class="nav-item">
+<a aria-label="Share on LinkedIn" class="nav-link p-0" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
               💼 LinkedIn
             </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </nav>
-
-  
 <section class="intro-section text-center my-5 px-3" style="max-width: 720px; margin: auto;">
 <h2 class="fw-bold mb-3">🎯 Instantly Filter Amazon Lightning Deals by Price, Rating &amp; More</h2>
 <p style="font-size: 1.15rem; color: #333;">
     Deal Shopper Pro is your <strong>free Amazon filter tool</strong> for uncovering real-time <strong>Lightning Deals</strong>, hidden <strong>coupons</strong>, and <strong>Prime-eligible offers</strong>—no login required. Sort deals by <strong>discount percentage</strong>, customer <strong>ratings</strong>, price range, or brand, and skip the clutter of traditional search. It works seamlessly on desktop and mobile, making your Amazon shopping faster, smarter, and stress-free.
   </p>
+</section><section aria-labelledby="faq-head" class="container my-5" id="mini-faq">
+<h2 class="h4 mb-3" id="faq-head">Common Questions</h2>
+<h3>Is Deal Shopper Pro really free?</h3>
+<p>Yes—no login and no paid plans.</p>
+<h3>Do I need an Amazon account?</h3>
+<p>No. We redirect you straight to Amazon; nothing is stored here.</p>
+<h3>What is a Lightning Deal?</h3>
+<p>It’s a limited‑time, limited‑stock Amazon promo. Our filter shows only items currently on offer.</p>
 </section>
+<picture class="d-block mx-auto my-4" style="max-width:720px;">
 
-
+<img alt="Deal Shopper Pro interface preview" class="img-fluid rounded shadow" height="630" src="/thumbnail.png" width="1200">
+</picture>
 <!-- HERO BANNER -->
 <section>
 <header class="banner-inner py-5 text-center" style="background-size: cover; background-position: center; text-shadow: 0 0 8px rgba(0,0,0,0.6);">
@@ -158,9 +203,9 @@ aside h1 {
 <!-- Suggested Pills -->
 <div class="mb-4">
 <span class="me-2 fw-semibold text-dark fs-6">Suggested:</span>
-<a class="badge bg-primary text-white me-1" href="#">wireless headphones under $50</a>
-<a class="badge bg-primary text-white me-1" href="#">Prime-only deals</a>
-<a class="badge bg-primary text-white" href="#">4+ star appliances</a>
+<a class="badge bg-primary text-white me-1" href="/?q=wireless+headphones+under+$50">wireless headphones under $50</a>
+<a class="badge bg-primary text-white me-1" href="/?q=prime+only+deals">Prime-only deals</a>
+<a class="badge bg-primary text-white" href="/?q=4+star+appliances">4+ star appliances</a>
 </div>
 <!-- Search Badge -->
 <p class="just-searched fst-italic mb-4 fw-semibold">
@@ -178,11 +223,11 @@ aside h1 {
 </span>
 <!-- Trust Icons -->
 <div class="mt-4 d-flex flex-wrap justify-content-center align-items-center gap-3">
-<i class="fas fa-shield-alt fa-2x text-dark" title="Norton Secured"></i>
-<i class="fas fa-robot fa-2x text-dark" title="Built with AI"></i>
-<i class="fas fa-lock fa-2x text-dark" title="SSL Secure"></i>
-<i class="fab fa-cloudflare fa-2x text-dark" title="Protected by Cloudflare"></i>
-<i class="fas fa-search-dollar fa-2x text-dark" title="Affiliate Supported"></i>
+<i aria-hidden="true" class="fas fa-shield-alt fa-2x text-dark" title="Norton Secured"></i>
+<i aria-hidden="true" class="fas fa-robot fa-2x text-dark" title="Built with AI"></i>
+<i aria-hidden="true" class="fas fa-lock fa-2x text-dark" title="SSL Secure"></i>
+<i aria-hidden="true" class="fab fa-cloudflare fa-2x text-dark" title="Protected by Cloudflare"></i>
+<i aria-hidden="true" class="fas fa-search-dollar fa-2x text-dark" title="Affiliate Supported"></i>
 </div>
 <div class="mt-3">
 <span class="fw-semibold fs-6 d-inline-block px-3 py-2 border-start border-4 border-info rounded bg-light text-dark">
@@ -236,8 +281,7 @@ aside h1 {
 </p>
 </div>
 <!-- AMAZON SEARCH FORM -->
-<input name="i" type="hidden" value="">
-<form id="amazon-search-form">
+<form id="amazon-search-form"><input name="i" type="hidden" value="">
 <!-- STEP 1 -->
 <div class="container text-start mb-4">
 <div class="alert alert-info text-center fw-bold" role="alert" style="font-size:1.1rem;">
@@ -302,7 +346,6 @@ aside h1 {
 <input aria-describedby="minPriceAddon" class="form-control" id="minPrice" name="min-price" placeholder="Min" step="0.01" type="number">
 </div>
 </div>
-</div>
 <div class="col-12 col-lg-5">
 <label class="form-label" for="maxPrice">
      Maximum Price
@@ -313,7 +356,7 @@ aside h1 {
      </span>
 <input aria-describedby="maxPriceAddon" class="form-control" id="maxPrice" name="max-price" placeholder="Max" step="0.01" type="number">
 </div>
-</div>
+</div></div>
 </div>
 </div>
 </div>
@@ -462,10 +505,7 @@ aside h1 {
 <input aria-label="Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox">
 <label class="form-check-label" for="lightningDeals">
   ⚡ Lightning Deals
-    <a class="ms-1"
-   href="https://www.dealshopperpro.com/lightning-deals.html"
-   rel="noopener"
-   target="_blank">
+    <a class="ms-1" href="https://www.dealshopperpro.com/lightning-deals.html" rel="noreferrer noopener sponsored" target="_blank">
   Lightning Deals
 </a>
 <small>(how it works)</small>
@@ -829,30 +869,30 @@ aside h1 {
 </script>
 <!-- ——————————— SITE-WIDE FOOTER ——————————— -->
 <footer>
-  <div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
-    <p>
-      <strong>Disclaimer:</strong>
+<div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
+<p>
+<strong>Disclaimer:</strong>
       Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries.<br>
       As an Amazon Associate, we earn from qualifying purchases — this supports our free service.<br>
-      <small>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</small>
-    </p>
-    <p>
+<small>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</small>
+</p>
+<p>
       Discover top Amazon deals with advanced filters for Lightning Deals, Prime-eligible items, in-stock products, and hidden coupons.
     </p>
-    <p>
-      <a href="https://www.dealshopperpro.com/contact.html">Contact Us</a> |
+<p>
+<a href="https://www.dealshopperpro.com/contact.html">Contact Us</a> |
       <a href="https://www.dealshopperpro.com/about.html">About Deal Shopper Pro</a> |
       <a href="https://www.dealshopperpro.com/help.html">Help Guide</a> |
       <a href="https://www.dealshopperpro.com/media.html">Articles &amp; Videos</a> |
       <a href="https://www.dealshopperpro.com/sitemap.html">Sitemap</a> |
-      <a class="text-primary fw-semibold" href="https://www.facebook.com/share/g/1C1BARo5YJ/" target="_blank" rel="noopener noreferrer">💬 Facebook Group</a> |
+      <a class="text-primary fw-semibold" href="https://www.facebook.com/share/g/1C1BARo5YJ/" rel="noopener noreferrer" target="_blank">💬 Facebook Group</a> |
       <a href="https://www.dealshopperpro.com/privacy.html">Privacy Policy</a> |
       <a href="https://www.dealshopperpro.com/terms.html">Terms of Use</a>
-    </p>
-    <p>
-      <strong>© 2025 Deal Shopper Pro. All rights reserved.</strong>
-    </p>
-    <script type="application/ld+json">
+</p>
+<p>
+<strong>© 2025 Deal Shopper Pro. All rights reserved.</strong>
+</p>
+<script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -865,9 +905,8 @@ aside h1 {
         }
       }
     </script>
-  </div>
+</div>
 </footer>
-
 <!-- Main search logic (external) -->
 <script defer="" src="searchlogic-v2.js"></script>
 <!-- Voice Search Handler -->
