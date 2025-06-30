@@ -4,7 +4,7 @@
   <!-- Home -->
   <url>
     <loc>https://www.dealshopperpro.com/</loc>
-    <lastmod>2025-06-29</lastmod>
+    <lastmod>2025-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
@@ -12,25 +12,25 @@
   <!-- Core Pages -->
   <url>
     <loc>https://www.dealshopperpro.com/help.html</loc>
-    <lastmod>2025-06-29</lastmod>
+    <lastmod>2025-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>https://www.dealshopperpro.com/media.html</loc>
-    <lastmod>2025-06-29</lastmod>
+    <lastmod>2025-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
   <url>
     <loc>https://www.dealshopperpro.com/about.html</loc>
-    <lastmod>2025-06-29</lastmod>
+    <lastmod>2025-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>https://www.dealshopperpro.com/contact.html</loc>
-    <lastmod>2025-06-29</lastmod>
+    <lastmod>2025-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
@@ -38,13 +38,13 @@
   <!-- Legal Pages -->
   <url>
     <loc>https://www.dealshopperpro.com/privacy.html</loc>
-    <lastmod>2025-06-29</lastmod>
+    <lastmod>2025-06-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.20</priority>
   </url>
   <url>
     <loc>https://www.dealshopperpro.com/terms.html</loc>
-    <lastmod>2025-06-29</lastmod>
+    <lastmod>2025-06-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.20</priority>
   </url>
@@ -52,13 +52,13 @@
   <!-- Product Filtering Pages -->
   <url>
     <loc>https://www.dealshopperpro.com/lightning-deals.html</loc>
-    <lastmod>2025-06-29</lastmod>
+    <lastmod>2025-06-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.dealshopperpro.com/prime-only-deals.html</loc>
-    <lastmod>2025-06-29</lastmod>
+    <lastmod>2025-06-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -66,7 +66,7 @@
   <!-- Best Deals Today -->
   <url>
     <loc>https://www.dealshopperpro.com/best-deals-today.html</loc>
-    <lastmod>2025-06-29</lastmod>
+    <lastmod>2025-06-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
   </url>
@@ -74,7 +74,7 @@
   <!-- How It Works -->
   <url>
     <loc>https://www.dealshopperpro.com/how-it-works.html</loc>
-    <lastmod>2025-06-29</lastmod>
+    <lastmod>2025-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
@@ -82,7 +82,7 @@
   <!-- Public Sitemap Page -->
   <url>
     <loc>https://www.dealshopperpro.com/sitemap.html</loc>
-    <lastmod>2025-06-29</lastmod>
+    <lastmod>2025-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.40</priority>
   </url>
