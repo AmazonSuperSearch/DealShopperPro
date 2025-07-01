@@ -99,35 +99,77 @@
  </div>
 
 <section id="option1">
-  <h2>Option 1: View All Lightning Deals</h2>
-  <p>
-    Option one takes you to Amazon.com and displays all of the current Lightning Deals.  
-    This is perfect for people who just want to browse every active deal.
-  </p>
-  <div class="card mb-5 mx-auto" style="max-width:800px">
+  <h3 class="mt-4 mb-3">Option 1: View All Lightning Deals</h3>
+  <div class="card mb-4">
     <div class="card-body text-center">
       <a
-        href="https://www.amazon.com/s?eligibleLightningDeals=1&tag=dealshopperpr-20"
-        class="btn btn-outline-primary"
+        class="btn btn-glow btn-lg shadow-sm"
+        href="https://www.amazon.com/gp/goldbox?dealType=lightningDeals&amp;tag=dealshopperpr-20&amp;ref_=nav_topnav_deals"
+        target="_blank"
+        rel="sponsored noopener noreferrer"
         aria-label="View all Lightning Deals on Amazon"
-        rel="noopener noreferrer sponsored"
       >
-        ★ View All Lightning Deals
+        <i class="bi bi-star-fill" aria-hidden="true"></i>
+        View All Lightning Deals
       </a>
     </div>
- <section id="option2">
-  <h3 class="mb-3">Option 2: Fast Lightning Deals Search</h3>
-  <div class="card mb-4">
-   <div class="card-body text-center">
-    <form id="lightning-search-form" class="row g-2 justify-content-center align-items-end">
-     <div class="col-sm-6"><input class="form-control" id="q-lightning" name="q" placeholder="Search term (e.g. headphones)" required type="text" aria-label="Search term"></div>
-     <div class="col-sm-3"><input class="form-control" id="low-lightning" name="low-price" placeholder="Min" type="number" aria-label="Minimum price"></div>
-     <div class="col-sm-3"><input class="form-control" id="high-lightning" name="high-price" placeholder="Max" type="number" aria-label="Maximum price"></div>
-     <div class="col-12 text-center"><button class="btn btn-primary" type="submit">Search Lightning Deals</button></div>
-    </form>
-   </div>
   </div>
- </section>
+</section>
+
+
+ <section id="option2">
+  <h3 class="mt-4 mb-3">Option 2: Fast Lightning Deals Search</h3>
+  <p>
+    Search Amazon Lightning Deals by keyword and price range—ideal for bargain hunters who want to quickly uncover budget-friendly, limited-time offers tailored to their needs.
+  </p>
+  <div class="card mb-4">
+    <div class="card-body">
+      <form
+        action="https://www.amazon.com/s"
+        method="get"
+        aria-label="Fast Lightning Deals Search"
+        class="d-flex gap-2 flex-wrap justify-content-center"
+      >
+        <input
+          type="text"
+          name="k"
+          placeholder="Search term (e.g., headphones)"
+          aria-label="Search term"
+          required
+          class="form-control"
+          style="max-width:200px;"
+        >
+        <input
+          type="number"
+          name="low-price"
+          placeholder="Min"
+          aria-label="Minimum price"
+          min="0"
+          class="form-control"
+          style="max-width:100px;"
+        >
+        <input
+          type="number"
+          name="high-price"
+          placeholder="Max"
+          aria-label="Maximum price"
+          min="0"
+          class="form-control"
+          style="max-width:100px;"
+        >
+        <input type="hidden" name="eligibleLightningDeals" value="1">
+        <input type="hidden" name="tag" value="dealshopperpr-20">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          aria-label="Search Lightning Deals"
+        >
+          Search Lightning Deals
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
 
  <section id="option3">
   <h2 class="mb-3">Option 3: Advanced Lightning Deals Search — Detailed Step-by-Step Guide</h2>
