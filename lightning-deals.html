@@ -172,10 +172,14 @@
   <li><a href="#option3"><strong>Detailed Step-by-Step Guide</strong></a></li>
 </ol>
 
- <div class="ratio ratio-16x9 my-4" role="region" aria-labelledby="videoTitle">
-  <h2 id="videoTitle" class="visually-hidden">Lightning Deals Filter Demo</h2>
-  <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/wpj1l1XUunw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="border-0" title="How to Filter Lightning Deals on Amazon in 30 Seconds"></iframe>
- </div>
+ <div
+  class="youtube-lite ratio ratio-16x9 my-4"
+  data-video-id="wpj1l1XUunw"
+  aria-label="Click to load Lightning Deals demo"
+  role="button"
+  tabindex="0"
+  style="background-size:cover;background-position:center"
+></div>
 
 <section id="option1">
   <h3 class="mt-4 mb-3">Option 1: View All Lightning Deals</h3>
@@ -647,6 +651,24 @@ document.getElementById('lightning-search-form')?.addEventListener('submit', fun
   }
 }
 </script>
-
+<script>
+  document.querySelectorAll('.youtube-lite').forEach(el => {
+    const id = el.dataset.videoId;
+    // set the poster image as background
+    el.style.backgroundImage = `url(https://img.youtube.com/vi/${id}/hqdefault.jpg)`;
+    // on click (or Enter key), inject the real iframe
+    function loadIframe() {
+      const iframe = document.createElement('iframe');
+      iframe.setAttribute('src', `https://www.youtube-nocookie.com/embed/${id}?autoplay=1`);
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.className = 'border-0 w-100 h-100';
+      el.innerHTML = '';
+      el.appendChild(iframe);
+    }
+    el.addEventListener('click', loadIframe);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter') loadIframe(); });
+  });
+</script>
 </body>
 </html>
