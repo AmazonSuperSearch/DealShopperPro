@@ -46,45 +46,98 @@
   "description": "Free Amazon Lightning Deal filter tool. Sort by price, rating, Prime-only, coupons, in-stock status, and more."
 }</script>
 <style>
-  /* Base heading size reset */
-  section h1,
-  article h1,
-  nav h1,
-  aside h1 {
-    font-size: 1.5rem;
+  /*─────────────────────────────────────────────────────────────────────────
+    Variables
+  ─────────────────────────────────────────────────────────────────────────*/
+  :root {
+    --heading-size: 1.5rem;
+
+    --intro-max-width: 720px;
+    --intro-text-size: 1.15rem;
+    --intro-text-color: #333;
+
+    --banner-bg: #FFF8E1;
+    --banner-border: #FFECB3;
+    --banner-radius: 12px;
+    --banner-padding-vertical: 1.5rem;
+    --banner-padding-horizontal: 1.5rem;
+    --banner-shadow: rgba(0, 0, 0, 0.04);
+    --banner-gap: 1rem;
+    --banner-heading-color: #5D4037;
+    --banner-body-color: #333;
+    --banner-link-color: #0056b3;
   }
 
-  /* Limits width and centers content */
-  .intro-container {
-    max-width: 720px;
-    margin: auto;
+  /*─────────────────────────────────────────────────────────────────────────
+    Headings
+  ─────────────────────────────────────────────────────────────────────────*/
+  h1 {
+    font-size: var(--heading-size);
   }
 
-  /* Paragraph styling in intro */
-  .intro-text {
-    font-size: 1.15rem;
-    color: #333;
+  /*─────────────────────────────────────────────────────────────────────────
+    Intro Section
+  ─────────────────────────────────────────────────────────────────────────*/
+  .intro-section__container {
+    max-width: var(--intro-max-width);
+    margin: 0 auto;
+    text-align: center;
   }
 
-  /* Width limit for pictures */
-  .responsive-picture {
-    max-width: 720px;
+  .intro-section__text {
+    font-size: var(--intro-text-size);
+    color: var(--intro-text-color);
   }
 
-  /* Privacy banner styles */
+  .intro-section__image {
+    display: block;
+    margin: 1rem auto;
+    max-width: var(--intro-max-width);
+  }
+
+  /*─────────────────────────────────────────────────────────────────────────
+    Privacy Banner
+  ─────────────────────────────────────────────────────────────────────────*/
   .privacy-banner {
-    background: #f8f9fa;
-    border-top: 1px solid #dee2e6;
-    padding: 1rem;
-    font-size: 0.875rem;
-    color: #495057;
+    background-color: var(--banner-bg);
+    border: 1px solid var(--banner-border);
+    border-radius: var(--banner-radius);
+    padding: var(--banner-padding-vertical) var(--banner-padding-horizontal);
+    margin: 2rem auto;
+    max-width: 850px;
+    box-shadow: 0 2px 6px var(--banner-shadow);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--banner-gap);
   }
 
-  .privacy-banner a {
+  .privacy-banner__graphic {
+    flex-shrink: 0;
+  }
+
+  .privacy-banner__content {
+    flex: 1;
+  }
+
+  .privacy-banner__heading {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--banner-heading-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .privacy-banner__body p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--banner-body-color);
+  }
+
+  .privacy-banner__body a {
     text-decoration: underline;
-    color: #0056b3;
+    color: var(--banner-link-color);
   }
 </style>
+
 
 <link as="style" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload">
 <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"></noscript>
