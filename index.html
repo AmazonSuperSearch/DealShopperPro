@@ -45,29 +45,47 @@
   "url": "https://www.dealshopperpro.com",
   "description": "Free Amazon Lightning Deal filter tool. Sort by price, rating, Prime-only, coupons, in-stock status, and more."
 }</script>
-<style> section h1,
-article h1,
-nav h1,
-aside h1 {
-  font-size: 1.5rem;
-}
-  </style>
-  <style>
+<style>
+  /* Base heading size reset */
+  section h1,
+  article h1,
+  nav h1,
+  aside h1 {
+    font-size: 1.5rem;
+  }
+
   /* Limits width and centers content */
   .intro-container {
     max-width: 720px;
     margin: auto;
   }
+
   /* Paragraph styling in intro */
   .intro-text {
     font-size: 1.15rem;
     color: #333;
   }
+
   /* Width limit for pictures */
   .responsive-picture {
     max-width: 720px;
   }
+
+  /* Privacy banner styles */
+  .privacy-banner {
+    background: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: #495057;
+  }
+
+  .privacy-banner a {
+    text-decoration: underline;
+    color: #0056b3;
+  }
 </style>
+
 <link as="style" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload">
 <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"></noscript>
 <link as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload">
@@ -174,25 +192,9 @@ aside h1 {
     </div>
   </header>
 </div>
- <section class="intro-section text-center my-5 px-3 intro-container">
-<h2 class="fw-bold mb-3">🎯 Instantly Filter Amazon Lightning Deals by Price, Rating &amp; More</h2>
-<p class="intro-text">
-    Deal Shopper Pro is your <strong>free Amazon filter tool</strong> for uncovering real-time <strong>Lightning Deals</strong>, hidden <strong>coupons</strong>, and <strong>Prime-eligible offers</strong>—no login required. Sort deals by <strong>discount percentage</strong>, customer <strong>ratings</strong>, price range, or brand, and skip the clutter of traditional search. It works seamlessly on desktop and mobile, making your Amazon shopping faster, smarter, and stress-free.
-  </p>
-</section><section aria-labelledby="faq-head" class="container my-5" id="mini-faq">
-<h2 class="h4 mb-3" id="faq-head">Common Questions</h2>
-<h3>Is Deal Shopper Pro really free?</h3>
-<p>Yes—no login and no paid plans.</p>
-<h3>Do I need an Amazon account?</h3>
-<p>No. We redirect you straight to Amazon; nothing is stored here.</p>
-<h3>What is a Lightning Deal?</h3>
-<p>It’s a limited‑time, limited‑stock Amazon promo. Our filter shows only items currently on offer.</p>
-</section>
-<picture class="d-block mx-auto my-4 responsive-picture">
-<img alt="Deal Shopper Pro interface preview" class="img-fluid rounded shadow" height="630" src="/thumbnail.png" width="1200">
-</picture>
-
-<!-- Suggested Pills -->
+  <section id="hero-extras" class="hero-extras text-center my-4 px-3">
+  <h2 class="visually-hidden">Suggested Searches & Badges</h2>
+  <!-- Suggested Pills -->
 <div class="mb-4">
 <span class="me-2 fw-semibold text-dark fs-6">Suggested:</span>
 <a class="badge bg-primary text-white me-1" href="/?q=wireless+headphones+under+$50">wireless headphones under $50</a>
@@ -242,6 +244,23 @@ aside h1 {
               🤖 Built with help from <strong style="color:#00BFFF;">ChatGPT</strong> — Free to use, no affiliation with Amazon
             </span>
 </div>
+ <section class="intro-section text-center my-5 px-3 intro-container">
+<h2 class="fw-bold mb-3">🎯 Instantly Filter Amazon Lightning Deals by Price, Rating &amp; More</h2>
+<p class="intro-text">
+    Deal Shopper Pro is your <strong>free Amazon filter tool</strong> for uncovering real-time <strong>Lightning Deals</strong>, hidden <strong>coupons</strong>, and <strong>Prime-eligible offers</strong>—no login required. Sort deals by <strong>discount percentage</strong>, customer <strong>ratings</strong>, price range, or brand, and skip the clutter of traditional search. It works seamlessly on desktop and mobile, making your Amazon shopping faster, smarter, and stress-free.
+  </p>
+</section><section aria-labelledby="faq-head" class="container my-5" id="mini-faq">
+<h2 class="h4 mb-3" id="faq-head">Common Questions</h2>
+<h3>Is Deal Shopper Pro really free?</h3>
+<p>Yes—no login and no paid plans.</p>
+<h3>Do I need an Amazon account?</h3>
+<p>No. We redirect you straight to Amazon; nothing is stored here.</p>
+<h3>What is a Lightning Deal?</h3>
+<p>It’s a limited‑time, limited‑stock Amazon promo. Our filter shows only items currently on offer.</p>
+</section>
+<picture class="d-block mx-auto my-4 responsive-picture">
+<img alt="Deal Shopper Pro interface preview" class="img-fluid rounded shadow" height="630" src="/thumbnail.png" width="1200">
+</picture>
 </div>
 </div>
 </div>
