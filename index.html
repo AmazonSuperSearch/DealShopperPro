@@ -108,24 +108,38 @@ aside h1 {
 <body>
 <!-- ✅ Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3" aria-label="Site navigation">
- <div class="container">
-  <a class="navbar-brand fw-bold text-warning d-flex align-items-center" href="/" style="font-size:1.5rem;">
-   <i class="bi bi-lightning-charge-fill me-2" aria-hidden="true"></i>Deal Shopper Pro
-  </a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-  <div id="navbarNav" class="collapse navbar-collapse">
-   <ul class="navbar-nav ms-auto">
-    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-    <li class="nav-item"><a class="nav-link" href="/how-it-works.html">How It Works</a></li>
-    <li class="nav-item"><a class="nav-link active" href="/lightning-deals.html">Lightning Deals</a></li>
-    <li class="nav-item"><a class="nav-link" href="/prime-only-deals.html">Prime‑Only Deals</a></li>
-    <li class="nav-item"><a class="nav-link" href="/best-deals-today.html">Best Deals Today</a></li>
-    <li class="nav-item"><a class="nav-link" href="/help.html">Help</a></li>
-    <li class="nav-item"><a class="nav-link" href="/media.html">Media</a></li>
-     <li class="nav-item"><a class="nav-link" href="/sitemap.html">Sitemap</a></li>
-    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-   </ul>
-  </div>
+<div id="navbarNav" class="collapse navbar-collapse">
+  <ul class="navbar-nav ms-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/how-it-works.html">How It Works</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/lightning-deals.html">Lightning Deals</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/prime-only-deals.html">Prime-Only Deals</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/best-deals-today.html">Best Deals Today</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/help.html">Help</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/media.html">Media</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/sitemap.html">Sitemap</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/contact.html">Contact</a>
+    </li>
+  </ul>
+</div>
+
  </div>
 </nav>
 <main>
@@ -153,15 +167,20 @@ aside h1 {
 <img alt="Deal Shopper Pro interface preview" class="img-fluid rounded shadow" height="630" src="/thumbnail.png" width="1200">
 </picture>
 <!-- HERO BANNER -->
-<section>
-<header class="banner-inner py-5 text-center" style="background-size: cover; background-position: center; text-shadow: 0 0 8px rgba(0,0,0,0.6);">
-<div class="container">
-<div class="row justify-content-center text-center"> <!-- ✅ Center content -->
-<div class="col-lg-10 col-xl-8"> <!-- ✅ Narrow and centered -->
-<!-- Tagline -->
-<p class="hero-tagline">
+<div class="hero-banner">
+  <header class="banner-inner py-5 text-center" style="…">
+   <h1 class="hero-heading mb-3 fw-bold">
+    Find the Best Deals on Amazon Using Advanced Filters
+  </h1>
+
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10 col-xl-8">
+          <!-- Tagline -->
+          <p class="hero-tagline">
             ⚡ Smarter Deal Searching Starts Here — Powered by AI
           </p>
+
 
 <!-- Subtext -->
 <p class="hero-subtitle">
@@ -485,14 +504,28 @@ aside h1 {
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox">
-<label class="form-check-label" for="lightningDeals">
-  ⚡ Lightning Deals
-    <a class="ms-1" href="https://www.dealshopperpro.com/lightning-deals.html" rel="noreferrer noopener" target="_blank">
-  Lightning Deals
-</a>
-<small>(how it works)</small>
-</label>
+  <input
+    class="form-check-input"
+    type="checkbox"
+    id="lightningDeals"
+    name="lightning-deals"
+    aria-label="Lightning Deals"
+    aria-describedby="lightningDealsHelp"
+  >
+  <label class="form-check-label" for="lightningDeals">
+    ⚡ Lightning Deals
+  </label>
+  <div class="form-text">
+    <a
+      class="help-link"
+      href="https://www.dealshopperpro.com/lightning-deals.html"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      How Lightning Deals work
+    </a>
+    <small id="lightningDealsHelp">Opens in a new tab</small>
+  </div>
 </div>
 <div class="form-check">
 <input aria-label="Today's Deals" class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox">
