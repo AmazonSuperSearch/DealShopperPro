@@ -85,7 +85,7 @@
   }
 
   .intro-section__text {
-    font-size: var(--intro-text-size);
+    font-size: var(---size);
     color: var(--intro-text-color);
   }
 
@@ -298,9 +298,9 @@
             </span>
 </div>
     </section>
- <section class="intro-section text-center my-5 px-3 intro-container">
+ <section class="intro-section text-center my-5 px-3 intro-section__container">
 <h2 class="fw-bold mb-3">🎯 Instantly Filter Amazon Lightning Deals by Price, Rating &amp; More</h2>
-<p class="intro-text">
+<p class="intro-section__text">
     Deal Shopper Pro is your <strong>free Amazon filter tool</strong> for uncovering real-time <strong>Lightning Deals</strong>, hidden <strong>coupons</strong>, and <strong>Prime-eligible offers</strong>—no login required. Sort deals by <strong>discount percentage</strong>, customer <strong>ratings</strong>, price range, or brand, and skip the clutter of traditional search. It works seamlessly on desktop and mobile, making your Amazon shopping faster, smarter, and stress-free.
   </p>
 </section><section aria-labelledby="faq-head" class="container my-5" id="mini-faq">
@@ -312,7 +312,7 @@
 <h3>What is a Lightning Deal?</h3>
 <p>It’s a limited‑time, limited‑stock Amazon promo. Our filter shows only items currently on offer.</p>
 </section>
-<picture class="d-block mx-auto my-4 responsive-picture">
+<picture class="d-block mx-auto my-4 intro-section__image">
 <img alt="Deal Shopper Pro interface preview" class="img-fluid rounded shadow" height="630" src="/thumbnail.png" width="1200">
 </picture>
 <section aria-labelledby="privacy-heading" class="privacy-banner" role="note" style="
@@ -327,24 +327,20 @@
   align-items: flex-start;
   gap: 1rem;
 ">
-<div class="privacy-banner__graphic" style="flex-shrink: 0;">
-<svg aria-hidden="true" style="height: 32px; width: 32px; fill: #FFB300;" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-1 9h2v2h-2zm0-4h2v2h-2z"></path>
-</svg>
+<div class="privacy-banner__graphic" aria-hidden="true">
+  <svg …></svg>
 </div>
-<div class="privacy-banner__body" style="flex-grow: 1;">
-<h2 class="privacy-banner__heading" id="privacy-heading" style="
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: #5D4037;
-      margin-bottom: 0.5rem;
-    ">Your Privacy Matters</h2>
-<p style="margin: 0; font-size: 0.95rem; color: #333;">
-      We do <strong>not</strong> collect, store, or track any personal information at any time.
-      There is no login, signup, or tracking cookies used.
-      All searches are processed <strong>client-side</strong> and securely redirected to Amazon.
+<div class="privacy-banner__content">
+  <h2 class="privacy-banner__heading" id="privacy-heading">
+    Your Privacy Matters
+  </h2>
+  <div class="privacy-banner__body">
+    <p>
+      We do <strong>not</strong> collect, store, or track any personal information…
     </p>
+  </div>
 </div>
+
 </section>
 <!-- INTRODUCTION TEXT -->
 <div style="text-align: center; margin: 2rem auto; max-width: 600px;">
