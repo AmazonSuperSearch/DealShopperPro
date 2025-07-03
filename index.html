@@ -52,6 +52,22 @@ aside h1 {
   font-size: 1.5rem;
 }
   </style>
+  <style>
+  /* Limits width and centers content */
+  .intro-container {
+    max-width: 720px;
+    margin: auto;
+  }
+  /* Paragraph styling in intro */
+  .intro-text {
+    font-size: 1.15rem;
+    color: #333;
+  }
+  /* Width limit for pictures */
+  .responsive-picture {
+    max-width: 720px;
+  }
+</style>
 <link as="style" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload">
 <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"></noscript>
 <link as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload">
@@ -142,9 +158,9 @@ aside h1 {
 </div>
 </nav>
 <main>
-  <section class="intro-section text-center my-5 px-3" style="max-width: 720px; margin: auto;">
+ <section class="intro-section text-center my-5 px-3 intro-container">
 <h2 class="fw-bold mb-3">🎯 Instantly Filter Amazon Lightning Deals by Price, Rating &amp; More</h2>
-<p style="font-size: 1.15rem; color: #333;">
+<p class="intro-text">
     Deal Shopper Pro is your <strong>free Amazon filter tool</strong> for uncovering real-time <strong>Lightning Deals</strong>, hidden <strong>coupons</strong>, and <strong>Prime-eligible offers</strong>—no login required. Sort deals by <strong>discount percentage</strong>, customer <strong>ratings</strong>, price range, or brand, and skip the clutter of traditional search. It works seamlessly on desktop and mobile, making your Amazon shopping faster, smarter, and stress-free.
   </p>
 </section><section aria-labelledby="faq-head" class="container my-5" id="mini-faq">
@@ -156,7 +172,7 @@ aside h1 {
 <h3>What is a Lightning Deal?</h3>
 <p>It’s a limited‑time, limited‑stock Amazon promo. Our filter shows only items currently on offer.</p>
 </section>
-<picture class="d-block mx-auto my-4" style="max-width:720px;">
+<picture class="d-block mx-auto my-4 responsive-picture">
 <img alt="Deal Shopper Pro interface preview" class="img-fluid rounded shadow" height="630" src="/thumbnail.png" width="1200">
 </picture>
 <!-- HERO BANNER -->
