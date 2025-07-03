@@ -149,6 +149,7 @@
   </div>
  </div>
 </nav>
+  <main id="main-content" role="main">
  <!-- 🎬 Lightning Deals Demo Video -->
 <div class="container my-4">
   <div class="youtube-lite ratio ratio-16x9"
@@ -161,7 +162,6 @@
 </div>
  
 <!-- ✅ Hero Banner -->
-<main id="main-content" role="main">
   <header class="hero-banner text-center py-5" role="banner" aria-labelledby="page-title">
     <h1 id="page-title" class="hero-heading mb-3 fw-bold">
       How to Find Lightning Deals on Amazon
@@ -176,11 +176,17 @@
           <h2 class="mt-3 h5 text-muted">
   Explore the 3 Methods Below to Find Lightning Deals on Amazon
 </h2>
-          <ul class="list-unstyled small text-muted">
-            <li>✔️ <a href="#option1" class="fw-semibold">Option 1: View All Lightning Deals</a></li>
-            <li>✔️ <a href="#option2" class="fw-semibold">Option 2: Fast Keyword + Price Search</a></li>
-            <li>✔️ <a href="#option3" class="fw-semibold">Option 3: Advanced Lightning Deal Filters</a></li>
-          </ul>
+          <div class="mt-4 d-flex flex-wrap justify-content-center gap-3">
+  <a href="#option1" class="btn btn-outline-primary btn-lg fw-semibold shadow-sm">
+    🔍 View All Lightning Deals
+  </a>
+  <a href="#option2" class="btn btn-outline-success btn-lg fw-semibold shadow-sm">
+    ⚡ Fast Keyword + Price Search
+  </a>
+  <a href="#option3" class="btn btn-outline-warning btn-lg fw-semibold shadow-sm">
+    🧠 Advanced Deal Filters (6 Steps)
+  </a>
+</div>
         </div>
       </div>
     </div>
@@ -224,184 +230,234 @@
   </p>
 </section>
 
-<section id="option1" class="mb-5">
+<section id="option1" class="py-5">
   <div class="container text-center">
-    <h2 class="h4 mb-3">Option 1: View All Active <span class="fw-bold">Lightning Deals</span> on Amazon</h2>
-    <p class="mb-3">Instantly browse every active Amazon Lightning Deal—all live offers in one place.</p>
-
-</p>
-  <div class="card mb-4">
-    <div class="card-body text-center">
-      <a
-        class="btn btn-glow btn-lg shadow-sm"
-        href="https://www.amazon.com/gp/goldbox?dealType=lightningDeals&amp;tag=dealshopperpr-20&amp;ref_=nav_topnav_deals"
-        target="_blank"
-        rel="sponsored noopener noreferrer"
-        aria-label="View all Lightning Deals on Amazon"
-      >
-        <i class="bi bi-star-fill" aria-hidden="true"></i>
-        View All Lightning Deals
-      </a>
+    <h3 class="mb-3">Option 1: View All Active <strong>Lightning Deals on Amazon</strong></h3>
+    <p class="mb-3 text-muted">
+      Instantly browse every active Amazon Lightning Deal—all live offers in one place.
+    </p>
+    <div class="card mb-4 mx-auto" style="max-width:500px">
+      <div class="card-body text-center">
+        <a
+          class="btn btn-glow btn-lg shadow-sm"
+          href="https://www.amazon.com/gp/goldbox?dealType=lightningDeals&amp;tag=dealshopperpr-20&amp;ref_=nav_topnav_deals"
+          target="_blank"
+          rel="sponsored noopener noreferrer"
+          aria-label="View all Lightning Deals on Amazon"
+        >
+          <i class="bi bi-star-fill" aria-hidden="true"></i>
+          View All Lightning Deals
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 
-<section id="option2" class="my-5">
+<section id="option2" class="py-5">
   <div class="container text-center">
-    <h2 class="h5 mb-3">Option 2: <strong>Search Amazon Lightning Deals</strong> by Keyword and Price Range</h2>
-    <p class="mb-3">Quickly search Amazon Lightning Deals by entering a keyword and setting a price range. No sign-in or app required—just deals that match your budget.</p>
+    <h2 class="h5 mb-3">
+      Option 2: <strong>Search Amazon Lightning Deals</strong> by Keyword and Price Range
+    </h2>
+    <p class="mb-4 text-muted">
+      Quickly search Amazon Lightning Deals by entering a keyword and setting a price range. 
+      No sign-in or app required—just deals that match your budget.
+    </p>
 
-  <div class="card mb-4">
-    <div class="card-body text-center">
-      <form id="lightning-search-form" class="row g-2 justify-content-center align-items-end">
-  <div class="col-sm-6">
-    <label for="q-lightning" class="visually-hidden">Search term</label>
-    <input
-      class="form-control"
-      id="q-lightning"
-      name="q"
-      placeholder="Search term (e.g. headphones)"
-      required
-      type="text"
-      aria-label="Search term"
-    >
-  </div>
-  <div class="col-sm-3">
-    <label for="low-lightning" class="visually-hidden">Minimum price</label>
-    <input
-      class="form-control"
-      id="low-lightning"
-      name="low-price"
-      placeholder="Minimum $"
-      type="number"
-      aria-label="Minimum price"
-    >
-  </div>
-  <div class="col-sm-3">
-    <label for="high-lightning" class="visually-hidden">Maximum price</label>
-    <input
-      class="form-control"
-      id="high-lightning"
-      name="high-price"
-      placeholder="Maximum $"
-      type="number"
-      aria-label="Maximum price"
-    >
-  </div>
-  <div class="col-12 text-center">
-    <button
-      class="btn btn-glow btn-lg shadow-sm"
-      type="submit"
-      aria-label="Search Lightning Deals"
-    >
-      <i class="bi bi-search" aria-hidden="true"></i>
-      Search Lightning Deals
-    </button>
-  </div>
-</form>
- </div>
+    <div class="card mx-auto" style="max-width: 800px;">
+      <div class="card-body">
+        <form id="lightning-search-form" class="row g-3 justify-content-center align-items-end">
+          <div class="col-sm-6">
+            <label for="q-lightning" class="visually-hidden">Search term</label>
+            <input
+              type="text"
+              id="q-lightning"
+              name="q"
+              class="form-control"
+              placeholder="Search term (e.g. headphones)"
+              aria-label="Search term"
+              required
+            >
+          </div>
+          <div class="col-sm-3">
+            <label for="low-lightning" class="visually-hidden">Minimum price</label>
+            <input
+              type="number"
+              id="low-lightning"
+              name="low-price"
+              class="form-control"
+              placeholder="Minimum $"
+              aria-label="Minimum price"
+            >
+          </div>
+          <div class="col-sm-3">
+            <label for="high-lightning" class="visually-hidden">Maximum price</label>
+            <input
+              type="number"
+              id="high-lightning"
+              name="high-price"
+              class="form-control"
+              placeholder="Maximum $"
+              aria-label="Maximum price"
+            >
+          </div>
+          <div class="col-12">
+            <button
+              type="submit"
+              class="btn btn-glow btn-lg shadow-sm mt-2"
+              aria-label="Search Lightning Deals"
+            >
+              <i class="bi bi-search" aria-hidden="true"></i>
+              Search Lightning Deals
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="option3" class="my-5">
+
+<section id="option3" class="py-5">
   <div class="container text-center">
-    <h2 class="h5 mb-3">Option 3: Step-by-Step: <strong>Filter Lightning Deals on Amazon</strong> Using Advanced Search</h2>
-    <p class="mb-4">
-      Use our AI-powered advanced search on DealShopperPro.com to pinpoint Amazon Lightning Deals tailored to your needs.
-      In six simple steps you’ll refine by keyword, currency & price range, rating & discount, brand, extra filters, and then view your filtered results.
+    <h2 class="h5 mb-3">
+      Option 3: Step-by-Step – <strong>Filter Lightning Deals on Amazon</strong> Using Advanced Search
+    </h2>
+    <p class="mb-4 text-muted">
+      Use our AI-powered advanced search to pinpoint Amazon Lightning Deals tailored to your needs.
+      In six simple steps, you’ll refine by keyword, currency, price, rating, discount, brand, and more—then view your filtered results.
     </p>
-  <div class="card mb-5 mx-auto card--wide">
-    <div class="card-body card-body--spaced">
 
-      <ol class="list-unstyled m-0 p-0">
-        <!-- Step 1 -->
-        <li id="option3-step1" class="mb-4">
-          <h4 class="h6">Step 1: Enter a Product Name</h4>
-          <figure class="my-2">
-            <img
-              src="enter-amazon-search-keyword.png"
-              class="img-fluid zoom-trigger"
-              alt="Search Lightning Deals by product name on Amazon"
-              width="800" height="450"
-              loading="lazy"
-            >
-          </figure>
-        </li>
+    <div class="card mx-auto mb-5" style="max-width: 900px;">
+      <div class="card-body px-3 py-4">
 
-        <!-- Step 2 -->
-        <li id="option3-step2" class="mb-4">
-          <h4 class="h6">Step 2: Select Currency &amp; Set Price Range</h4>
-          <figure class="my-2">
-            <img
-              src="apply-amazon-filters-price-rating.png"
-              class="img-fluid zoom-trigger"
-              alt="Amazon price and currency filters to narrow results"
-              width="800" height="450"
-              loading="lazy"
-            >
-          </figure>
-        </li>
+        <ol class="list-unstyled m-0 p-0 text-start">
+          <!-- Step 1 -->
+          <li id="option3-step1" class="mb-5">
+            <h4 class="h6">Step 1: Enter a Product Name</h4>
+            <figure class="my-2">
+              <img
+                src="enter-amazon-search-keyword.png"
+                class="img-fluid zoom-trigger"
+                alt="Search Lightning Deals by product name on Amazon"
+                width="800" height="450"
+                loading="lazy"
+              >
+            </figure>
+          </li>
 
-        <!-- Step 3 -->
-        <li id="option3-step3" class="mb-4">
-          <h4 class="h6">Step 3: Filter results by percent off, minimum rating and sort order</h4>
-          <figure class="my-2">
-            <img
-              src="refine-by-rating-discount-sort-order.png"
-              class="img-fluid zoom-trigger"
-              alt="Refine Amazon deals using rating, savings, and sorting options"
-              width="800" height="450"
-              loading="lazy"
-            >
-          </figure>
-         </li>
+          <!-- Step 2 -->
+          <li id="option3-step2" class="mb-5">
+            <h4 class="h6">Step 2: Select Currency &amp; Set Price Range</h4>
+            <figure class="my-2">
+              <img
+                src="apply-amazon-filters-price-rating.png"
+                class="img-fluid zoom-trigger"
+                alt="Set Amazon filters by currency and price"
+                width="800" height="450"
+                loading="lazy"
+              >
+            </figure>
+          </li>
+
+          <!-- Step 3 -->
+          <li id="option3-step3" class="mb-5">
+            <h4 class="h6">Step 3: Filter by Discount, Rating &amp; Sort Order</h4>
+            <figure class="my-2">
+              <img
+                src="refine-by-rating-discount-sort-order.png"
+                class="img-fluid zoom-trigger"
+                alt="Filter Amazon deals by customer rating, discount and sort order"
+                width="800" height="450"
+                loading="lazy"
+              >
+            </figure>
+          </li>
 
           <!-- Step 4 -->
-        <li id="option3-step4" class="mb-4">
-          <h4 class="h6">Step 4: Filter by Brand</h4>
-          <figure class="my-2">
-            <img
-              src="filter-amazon-deals-by-brand-name.png"
-              class="img-fluid zoom-trigger"
-              alt="Narrow Amazon deals by filtering specific brand names"
-              width="800" height="450"
-              loading="lazy"
-            >
-          </figure>
-        </li>
+          <li id="option3-step4" class="mb-5">
+            <h4 class="h6">Step 4: Filter by Brand</h4>
+            <figure class="my-2">
+              <img
+                src="filter-amazon-deals-by-brand-name.png"
+                class="img-fluid zoom-trigger"
+                alt="Narrow Amazon deals by specific brand"
+                width="800" height="450"
+                loading="lazy"
+              >
+            </figure>
+          </li>
 
-        <!-- Step 5 -->
-        <li id="option3-step5" class="mb-4">
-          <h4 class="h6">Step 5: Check the <em>Lightning Deals</em> Box</h4>
-          <figure class="my-2">
-            <img
-              src="check-lightning-deals-box.png"
-              class="img-fluid zoom-trigger"
-              alt="Activate Amazon’s Lightning Deals filter setting"
-              width="800" height="450"
-              loading="lazy"
-            >
-          </figure>
-        </li>
+          <!-- Step 5 -->
+          <li id="option3-step5" class="mb-5">
+            <h4 class="h6">Step 5: Check the <em>Lightning Deals</em> Box</h4>
+            <figure class="my-2">
+              <img
+                src="check-lightning-deals-box.png"
+                class="img-fluid zoom-trigger"
+                alt="Enable the Lightning Deals filter on Amazon"
+                width="800" height="450"
+                loading="lazy"
+              >
+            </figure>
+          </li>
 
-        <!-- Step 6 -->
-        <li id="option3-step6" class="mb-4">
-         <h4 class="h6">Step 6: View Filtered Lightning Deals on Amazon</h4>
-          <figure class="my-2">
-            <img
-              src="click-view-filtered-results-button.png"
-              class="img-fluid zoom-trigger"
-              alt="View personalized Lightning Deals filtered by your criteria"
-              width="800" height="450"
-              loading="lazy"
-            >
-          </figure>
-        </li>
-      </ol>
+          <!-- Step 6 -->
+          <li id="option3-step6" class="mb-0">
+            <h4 class="h6">Step 6: View Filtered Lightning Deals</h4>
+            <figure class="my-2">
+              <img
+                src="click-view-filtered-results-button.png"
+                class="img-fluid zoom-trigger"
+                alt="View filtered Lightning Deals on Amazon"
+                width="800" height="450"
+                loading="lazy"
+              >
+            </figure>
+          </li>
+        </ol>
 
+      </div>
     </div>
   </div>
+</section>
+
+<!-- ✅ Bonus: Advanced Filter Features (Option 3 Only) -->
+<section class="my-5 text-center" aria-labelledby="filter-tags-heading">
+  <h2 id="filter-tags-heading" class="h5 mb-2">🎁 Bonus: Option 3 – Advanced Search Features</h2>
+  <p class="mb-3 fw-semibold">Filter by:</p>
+
+  <div class="d-flex flex-wrap justify-content-center gap-2">
+    <span class="badge bg-primary">🤩 Prime‑Only</span>
+    <span class="badge bg-warning text-dark">⚡ Lightning Deals</span>
+    <span class="badge bg-danger">🔥 Today’s Deals</span>
+    <span class="badge bg-success">🚚 Free Shipping</span>
+    <span class="badge bg-info text-dark">📦 In Stock</span>
+    <span class="badge bg-dark">🏷️ Coupons</span>
+    <span class="badge bg-secondary">💲 Currency</span>
+    <span class="badge bg-primary">📉 Discount %</span>
+    <span class="badge bg-warning text-dark">⭐ Min Rating</span>
+    <span class="badge bg-success">🏷️ Brand Filter</span>
+    <span class="badge bg-primary">💰 Min Price</span>
+    <span class="badge bg-primary">💵 Max Price</span>
+    <span class="badge bg-info text-dark">🔁 Subscribe & Save</span>
+    <span class="badge bg-light text-dark border">🎀 Gifts for Her</span>
+    <span class="badge bg-light text-dark border">👔 Gifts for Him</span>
+    <span class="badge bg-light text-dark border">🎂 Birthday</span>
+    <span class="badge bg-light text-dark border">💝 Anniversary</span>
+    <span class="badge bg-light text-dark border">🎄 Holiday</span>
+    <span class="badge bg-success">♻️ Eco‑Friendly</span>
+    <span class="badge bg-light text-dark border">🌱 Vegan</span>
+    <span class="badge bg-light text-dark border">🌿 Organic</span>
+    <span class="badge bg-light text-dark border">🚴 Carbon‑Neutral</span>
+    <span class="badge bg-light text-dark border">🐰 Cruelty‑Free</span>
+    <span class="badge bg-light text-dark border">📦 Warehouse</span>
+    <span class="badge bg-light text-dark border">🏪 Small Business</span>
+  </div>
+
+  <p class="mt-3 text-muted small">
+    These filters are only available in <a href="#option3" class="fw-semibold">Option 3: Advanced Lightning Deal Search</a>.
+  </p>
 </section>
 
 
