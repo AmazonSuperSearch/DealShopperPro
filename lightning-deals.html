@@ -703,42 +703,43 @@ document.getElementById('lightning-search-form')?.addEventListener('submit', fun
     {
       "@type": "Question",
       "name": "How do I find Lightning Deals on Amazon?",
+      "url": "https://www.dealshopperpro.com/lightning-deals.html#find-lightning-deals",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use Deal Shopper Pro’s quick search or advanced 6-step filters to surface active Lightning Deals instantly.",
-        "url": "https://www.dealshopperpro.com/lightning-deals.html#find-lightning-deals"
+        "text": "Use Deal Shopper Pro’s quick search or advanced 6-step filters to surface active Lightning Deals instantly."
       }
     },
     {
       "@type": "Question",
       "name": "Can I find Lightning Deals without the Amazon app?",
+      "url": "https://www.dealshopperpro.com/lightning-deals.html#faq-no-app",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes—Deal Shopper Pro lets you search Lightning Deals using your browser with no app or login required.",
-        "url": "https://www.dealshopperpro.com/lightning-deals.html#faq-no-app"
+        "text": "Yes—Deal Shopper Pro lets you search Lightning Deals using your browser with no app or login required."
       }
     },
     {
       "@type": "Question",
       "name": "Can I filter by discount percentage?",
+      "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step3",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes—just enter your keyword and minimum discount in Step 3 to instantly filter by percent off. Most Lightning Deals show at least 20% off.",
-        "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step3"
+        "text": "Yes—just enter your keyword and minimum discount in Step 3 to instantly filter by percent off. Most Lightning Deals show at least 20% off."
       }
     },
     {
       "@type": "Question",
       "name": "What if no Lightning Deals are active?",
+      "url": "https://www.dealshopperpro.com/lightning-deals.html#faq-no-deals",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If no Lightning Deals appear, try refreshing later or broaden your keyword and price range filters.",
-        "url": "https://www.dealshopperpro.com/lightning-deals.html#faq-no-deals"
+        "text": "If no Lightning Deals appear, try refreshing later or broaden your keyword and price range filters."
       }
     }
   ]
 }
 </script>
+
 
 <script>
   document.getElementById('copyLinkBtn')?.addEventListener('click', function() {
@@ -758,7 +759,6 @@ document.getElementById('lightning-search-form')?.addEventListener('submit', fun
       alert('Page link copied to clipboard!');
     }
   });
-</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -768,17 +768,19 @@ document.getElementById('lightning-search-form')?.addEventListener('submit', fun
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://www.dealshopperpro.com"
+      "item": { "@id": "https://www.dealshopperpro.com/" }
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Lightning Deals",
-      "item": "https://www.dealshopperpro.com/lightning-deals.html"
+      "item": { "@id": "https://www.dealshopperpro.com/lightning-deals.html" }
     }
   ]
 }
 </script>
+
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
