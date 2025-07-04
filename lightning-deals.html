@@ -313,10 +313,25 @@
               aria-label="Search Lightning Deals"
             >
               <i class="bi bi-search" aria-hidden="true"></i>
-              Search Lightning Deals
-            </button>
+  Find Matching Deals
+</button>
           </div>
         </form>
+         <!-- Affiliate link appears after form is submitted -->
+    <a
+      id="lightningAffiliateLink"
+      class="btn btn-glow btn-lg shadow-sm mt-2 d-none"
+      href="#"
+      target="_blank"
+      rel="sponsored noopener noreferrer"
+      aria-label="View matching Lightning Deals on Amazon"
+    >
+      <i class="bi bi-search" aria-hidden="true"></i>
+      View Lightning Deals on Amazon
+    </a>
+    <small class="text-muted d-block mt-2">
+      As an Amazon Associate, we earn from qualifying purchases.
+    </small>
       </div>
     </div>
   </div>
@@ -561,15 +576,27 @@
 
 <script>
 document.getElementById('lightning-search-form')?.addEventListener('submit', function(e){
- e.preventDefault();
- const q=this.q.value.trim(), low=this['low-price'].value, high=this['high-price'].value;
- if(!q){alert('Enter a search term.');return;}
- let url='https://www.amazon.com/s?i=lightning-deals&k='+encodeURIComponent(q)+'&eligibleLightningDeals=1';
- if(low)  url+='&low-price='+encodeURIComponent(low);
- if(high) url+='&high-price='+encodeURIComponent(high);
- url+='&ref_=nav_topnav_deals&tag=dealshopperpr-20';
- window.open(url,'_blank','noopener,noreferrer');
+  e.preventDefault();
+  const q = this.q.value.trim();
+  const low = this['low-price'].value;
+  const high = this['high-price'].value;
+
+  if (!q) {
+    alert('Enter a search term.');
+    return;
+  }
+
+  let url = 'https://www.amazon.com/s?i=lightning-deals&k=' + encodeURIComponent(q) + '&eligibleLightningDeals=1';
+  if (low)  url += '&low-price=' + encodeURIComponent(low);
+  if (high) url += '&high-price=' + encodeURIComponent(high);
+  url += '&ref_=nav_topnav_deals&tag=dealshopperpr-20';
+
+  const link = document.getElementById('lightningAffiliateLink');
+  link.href = url;
+  link.classList.remove('d-none');
+  link.focus();
 });
+
 </script>
 <!-- HowTo structured data for the 6-step guide -->
 <script type="application/ld+json">
