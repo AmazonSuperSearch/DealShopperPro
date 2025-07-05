@@ -803,38 +803,42 @@
 <!-- 2) lite-youtube-embed JS with SRI -->
 <script
   src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.3/dist/lite-yt-embed.js"
-  integrity="sha384-<GENERATED_JS_SRI_HASH>"
+  integrity="sha384-<YOUR_GENERATED_JS_SRI_HASH>"
   crossorigin="anonymous"
   defer
 ></script>
 
-<!-- 3) Inline page scripts -->
+<!-- 3) Lightning Search Form Handler -->
 <script>
   document.getElementById('lightning-search-form')?.addEventListener('submit', function(e){
     e.preventDefault();
-    const q = this.q.value.trim();
+    const q   = this.q.value.trim();
     const low = this['low-price'].value;
-    const high = this['high-price'].value;
+    const high= this['high-price'].value;
     if (!q) {
-      alert('Enter a search term.');
-      return;
+      return alert('Enter a search term.');
     }
-    let url = 'https://www.amazon.com/s?i=lightning-deals&k=' + encodeURIComponent(q) + '&eligibleLightningDeals=1';
-    if (low)  url += '&low-price=' + encodeURIComponent(low);
-    if (high) url += '&high-price=' + encodeURIComponent(high);
+    let url = 'https://www.amazon.com/s?i=lightning-deals&k='
+            + encodeURIComponent(q)
+            + '&eligibleLightningDeals=1';
+    if (low)   url += '&low-price='  + encodeURIComponent(low);
+    if (high)  url += '&high-price=' + encodeURIComponent(high);
     url += '&ref_=nav_topnav_deals&tag=dealshopperpr-20';
+
     const link = document.getElementById('lightningAffiliateLink');
     link.href = url;
     link.classList.remove('d-none');
     link.focus();
   });
 </script>
+
+<!-- 4) Copy-Link Button Handler -->
 <script>
   document.getElementById('copyLinkBtn')?.addEventListener('click', function() {
     const link = this.dataset.link;
     if (navigator.clipboard) {
       navigator.clipboard.writeText(link)
-        .then(() => alert('Page link copied to clipboard!'))
+        .then(() => alert('Page link copied!'))
         .catch(err => console.error('Copy failed:', err));
     } else {
       const input = document.createElement('input');
@@ -843,13 +847,16 @@
       input.select();
       document.execCommand('copy');
       document.body.removeChild(input);
-      alert('Page link copied to clipboard!');
+      alert('Page link copied!');
     }
   });
 </script>
+
+<!-- 5) YouTube-Lite Placeholder Loader -->
 <script>
   document.querySelectorAll('.youtube-lite').forEach(el => {
     const id = el.dataset.videoId;
+    // set the poster
     el.style.backgroundImage = `url(https://img.youtube.com/vi/${id}/hqdefault.jpg)`;
     function loadIframe() {
       const iframe = document.createElement('iframe');
@@ -860,7 +867,7 @@
       el.innerHTML = '';
       el.appendChild(iframe);
     }
-    el.addEventListener('click', loadIframe);
+    el.addEventListener('click',    loadIframe);
     el.addEventListener('keydown', e => { if (e.key === 'Enter') loadIframe(); });
   });
 </script>
