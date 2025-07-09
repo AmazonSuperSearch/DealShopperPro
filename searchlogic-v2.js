@@ -45,11 +45,11 @@ keywordAppend('holiday-gift-picks',       'holiday gift picks');
     if (pct) params.set('pct-off', pct);
 
     const rating = data.get('min-rating');
-    if (rating === '1') rh.push('p_72:1248880011');
-    if (rating === '2') rh.push('p_72:1248881011');
-    if (rating === '3') rh.push('p_72:1248882011');
-    if (rating === '4') rh.push('p_72:1248883011');
-    if (rating === '5') rh.push('p_72:1248884011');
+    if (rating === '1') rh.push('p_72:1248879011'); // 1★ & up
+if (rating === '2') rh.push('p_72:1248880011'); // 2★ & up
+if (rating === '3') rh.push('p_72:1248882011'); // 3★ & up
+if (rating === '4') rh.push('p_72:1248883011'); // 4★ & up
+if (rating === '5') rh.push('p_72:1248884011'); // 5★ only
 
     const sort = data.get('sort');
     if (sort) params.set('s', sort);
