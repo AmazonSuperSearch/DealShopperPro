@@ -248,146 +248,145 @@
  </div>
 </nav>
 <main>
- <!-- HERO BANNER -->
-<div class="hero-banner">
-  <header class="banner-inner py-5 text-center">
-    <h1 class="hero-heading mb-3 fw-bold">
-      Deal Shopper Pro: The Ultimate Amazon Search & Filter Engine
+  <!-- HERO -->
+  <section class="hero text-center py-5">
+    <h1 class="display-4 mb-3">
+      Advanced Amazon Product Search — Faster, Smarter, No Login
     </h1>
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-10 col-xl-8">
-          <p class="hero-tagline">
-            ⚡ Smarter Amazon Deal Searching—No Login Required
-          </p>
-          <p class="hero-subtitle">
-            Quickly reveal in-stock items and filter by price, rating, Prime, brand, coupons, and more.
-          </p>
-        </div>
+    <p class="lead mb-4">
+      Search by keyword, price, rating, Prime, coupons &amp; more—find exactly what you want in seconds.
+    </p>
+    <a href="#amazon-search-form" class="btn btn-primary btn-lg me-3 mb-3 shadow-sm" style="font-weight:600;">
+      Start Searching Now
+    </a>
+    <a href="#how-it-works" class="btn btn-link mb-3">
+      How It Works
+    </a>
+  </section>
+
+  <!-- SUGGESTED SEARCHES -->
+  <section class="suggested-searches text-center my-4 px-3">
+    <h2 class="visually-hidden">Suggested Searches</h2>
+    <span class="me-2 fw-semibold text-dark fs-6">Suggested:</span>
+    <a class="badge bg-primary text-white me-1" href="/?q=wireless+headphones+under+$50">
+      wireless headphones under $50
+    </a>
+    <a class="badge bg-primary text-white me-1" href="/?q=prime+only+deals">
+      Prime-only deals
+    </a>
+    <a class="badge bg-primary text-white" href="/?q=4+star+appliances">
+      4+ star appliances
+    </a>
+  </section>
+
+  <!-- JUST SEARCHED SAMPLE -->
+  <div class="text-center fst-italic mb-4 fw-semibold" id="justSearched">
+    🛒 Just searched: <strong>"wireless headphones under $50"</strong>
+  </div>
+  <script>
+    (function(){
+      const samples = [
+        "wireless headphones under $50",
+        "4★ kitchen gadgets",
+        "eco-friendly water bottle",
+        "gaming mouse lightning deal",
+        "Prime-only laptop deals",
+        "vegan protein powder 30% off"
+      ];
+      const el = document.getElementById('justSearched');
+      if (el && el.querySelector('strong')) {
+        const q = samples[Math.floor(Math.random() * samples.length)];
+        el.querySelector('strong').textContent = '"' + q + '"';
+      }
+    })();
+  </script>
+
+  <!-- TRUST ICONS & BADGES -->
+  <div class="trust-icons text-center my-4">
+    <span class="d-block d-sm-inline-block fw-semibold mb-3 text-dark">
+      <span class="px-3 py-1 rounded-pill bg-info text-dark">
+        🔓 No login required
+      </span>
+    </span>
+    <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-3">
+      <i class="fas fa-shield-alt fa-2x text-dark" title="Norton Secured" aria-hidden="true"></i>
+      <i class="fas fa-robot fa-2x text-dark" title="Built with AI" aria-hidden="true"></i>
+      <i class="fas fa-lock fa-2x text-dark" title="SSL Secure" aria-hidden="true"></i>
+      <i class="fab fa-cloudflare fa-2x text-dark" title="Protected by Cloudflare" aria-hidden="true"></i>
+      <i class="fas fa-search-dollar fa-2x text-dark" title="Affiliate Supported" aria-hidden="true"></i>
+    </div>
+    <span class="fw-semibold fs-6 px-3 py-2 border-start border-4 border-info rounded bg-light text-dark">
+      🤖 Built with help from <strong style="color:#00BFFF;">ChatGPT</strong> — Free to use, no affiliation with Amazon
+    </span>
+  </div>
+
+  <!-- INTRO SECTION -->
+  <section class="intro-section text-center my-5 px-3 intro-section__container">
+    <h2 class="fw-bold mb-3">🎯 Instantly Filter Amazon Lightning Deals by Price, Rating &amp; More</h2>
+    <p class="intro-section__text">
+      Deal Shopper Pro is your <strong>free Amazon filter tool</strong> for uncovering real-time <strong>Lightning Deals</strong>, hidden <strong>coupons</strong>, and <strong>Prime-eligible offers</strong>—no login required. Sort deals by <strong>discount percentage</strong>, customer <strong>ratings</strong>, price range, or brand, and skip the clutter of traditional search. It works seamlessly on desktop and mobile, making your Amazon shopping faster, smarter, and stress-free.
+    </p>
+  </section>
+
+  <!-- MINI-FAQ -->
+  <section aria-labelledby="faq-head" class="container my-5" id="mini-faq">
+    <h2 class="h4 mb-3" id="faq-head">Common Questions</h2>
+    <h3>Is Deal Shopper Pro really free?</h3>
+    <p>Yes—no login and no paid plans.</p>
+    <h3>Do I need an Amazon account?</h3>
+    <p>No. We redirect you straight to Amazon; nothing is stored here.</p>
+    <h3>What is a Lightning Deal?</h3>
+    <p>It’s a limited-time, limited-stock Amazon promo. Our filter shows only items currently on offer.</p>
+  </section>
+
+  <!-- INTERFACE PREVIEW -->
+  <picture class="d-block mx-auto my-4 intro-section__image">
+    <img
+      alt="Deal Shopper Pro interface preview"
+      class="img-fluid rounded shadow"
+      width="1200" height="630"
+      src="/thumbnail.png">
+  </picture>
+
+  <!-- PRIVACY BANNER -->
+  <section aria-labelledby="privacy-heading" class="privacy-banner" role="note" style="
+    background-color: #FFF8E1;
+    border: 1px solid #FFECB3;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 850px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  ">
+    <div class="privacy-banner__graphic" aria-hidden="true">
+      <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+    <div class="privacy-banner__content">
+      <h2 class="privacy-banner__heading" id="privacy-heading">
+        Your Privacy Matters
+      </h2>
+      <div class="privacy-banner__body">
+        <p>
+          We do <strong>not</strong> collect, store, or track any personal information…
+        </p>
       </div>
     </div>
-  </header>
-</div>
+  </section>
 
-  <section id="hero-extras" class="hero-extras text-center my-4 px-3">
-  <h2 class="visually-hidden">Suggested Searches & Badges</h2>
-  <!-- Suggested Pills -->
-<div class="mb-4">
-<span class="me-2 fw-semibold text-dark fs-6">Suggested:</span>
-<a class="badge bg-primary text-white me-1" href="/?q=wireless+headphones+under+$50">wireless headphones under $50</a>
-<a class="badge bg-primary text-white me-1" href="/?q=prime+only+deals">Prime-only deals</a>
-<a class="badge bg-primary text-white" href="/?q=4+star+appliances">4+ star appliances</a>
-</div>
-<!-- Search Badge -->
-<p class="just-searched fst-italic mb-4 fw-semibold" id="justSearched">
-            🛒 Just searched: <strong>"wireless headphones under $50"</strong>
-</p><script>
-(function(){
-  const samples=[
-    "wireless headphones under $50",
-    "4★ kitchen gadgets",
-    "eco-friendly water bottle",
-    "gaming mouse lightning deal",
-    "Prime-only laptop deals",
-    "vegan protein powder 30% off"
-  ];
-  const el=document.getElementById('justSearched');
-  if(el && el.querySelector('strong')){
-    const q=samples[Math.floor(Math.random()*samples.length)];
-    el.querySelector('strong').textContent = '"' + q + '"';
-  }
-})();
-</script>
-<!-- CTA Button -->
-<a class="btn btn-primary btn-lg me-3 mb-3 shadow-sm" href="#amazon-search-form" style="border: none; font-weight: 600;">
-            Start Searching Now
-          </a>
-<!-- Trust Badge -->
-<span class="d-block d-sm-inline-block fw-semibold mb-3 text-dark">
-<span class="px-3 py-1 rounded-pill bg-info text-dark">
-              🔓 No login required
-            </span>
-</span>
-<!-- Trust Icons -->
-<div class="mt-4 d-flex flex-wrap justify-content-center align-items-center gap-3">
-<i aria-hidden="true" class="fas fa-shield-alt fa-2x text-dark" title="Norton Secured"></i>
-<i aria-hidden="true" class="fas fa-robot fa-2x text-dark" title="Built with AI"></i>
-<i aria-hidden="true" class="fas fa-lock fa-2x text-dark" title="SSL Secure"></i>
-<i aria-hidden="true" class="fab fa-cloudflare fa-2x text-dark" title="Protected by Cloudflare"></i>
-<i aria-hidden="true" class="fas fa-search-dollar fa-2x text-dark" title="Affiliate Supported"></i>
-</div>
-<div class="mt-3">
-<span class="fw-semibold fs-6 d-inline-block px-3 py-2 border-start border-4 border-info rounded bg-light text-dark">
-              🤖 Built with help from <strong style="color:#00BFFF;">ChatGPT</strong> — Free to use, no affiliation with Amazon
-            </span>
-</div>
-    </section>
- <section class="intro-section text-center my-5 px-3 intro-section__container">
-<h2 class="fw-bold mb-3">🎯 Instantly Filter Amazon Lightning Deals by Price, Rating &amp; More</h2>
-<p class="intro-section__text">
-    Deal Shopper Pro is your <strong>free Amazon filter tool</strong> for uncovering real-time <strong>Lightning Deals</strong>, hidden <strong>coupons</strong>, and <strong>Prime-eligible offers</strong>—no login required. Sort deals by <strong>discount percentage</strong>, customer <strong>ratings</strong>, price range, or brand, and skip the clutter of traditional search. It works seamlessly on desktop and mobile, making your Amazon shopping faster, smarter, and stress-free.
-  </p>
-</section><section aria-labelledby="faq-head" class="container my-5" id="mini-faq">
-<h2 class="h4 mb-3" id="faq-head">Common Questions</h2>
-<h3>Is Deal Shopper Pro really free?</h3>
-<p>Yes—no login and no paid plans.</p>
-<h3>Do I need an Amazon account?</h3>
-<p>No. We redirect you straight to Amazon; nothing is stored here.</p>
-<h3>What is a Lightning Deal?</h3>
-<p>It’s a limited‑time, limited‑stock Amazon promo. Our filter shows only items currently on offer.</p>
-</section>
-<picture class="d-block mx-auto my-4 intro-section__image">
-<img alt="Deal Shopper Pro interface preview" class="img-fluid rounded shadow" height="630" src="/thumbnail.png" width="1200">
-</picture>
-<section aria-labelledby="privacy-heading" class="privacy-banner" role="note" style="
-  background-color: #FFF8E1;
-  border: 1px solid #FFECB3;
-  border-radius: 12px;
-  padding: 1.5rem 1.5rem 1.25rem;
-  margin: 2rem auto;
-  max-width: 850px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-">
-<div class="privacy-banner__graphic" aria-hidden="true">
-  <svg
-   role="img"
-   aria-hidden="true"
-   viewBox="0 0 24 24"
-   xmlns="http://www.w3.org/2000/svg"
- ></svg>
-</div>
-<div class="privacy-banner__content">
-  <h2 class="privacy-banner__heading" id="privacy-heading">
-    Your Privacy Matters
-  </h2>
-  <div class="privacy-banner__body">
+  <!-- ADDITIONAL INTRO TEXT -->
+  <div style="text-align: center; margin: 2rem auto; max-width: 600px;">
+    <p class="hero-subtitle" style="font-size: 1.1rem;">
+      <span aria-hidden="true" style="font-size: 1.5rem;">👋</span>
+      <strong>No more scrolling—discover hidden Amazon deals in just 5 simple steps!</strong>
+    </p>
     <p>
-      We do <strong>not</strong> collect, store, or track any personal information…
+      <strong class="hero-cta text-pulse">Start With Step 1 Below</strong>
     </p>
   </div>
-</div>
 
-</section>
-<!-- INTRODUCTION TEXT -->
-<div style="text-align: center; margin: 2rem auto; max-width: 600px;">
-<p class="hero-subtitle" style="font-size: 1.1rem;">
-<span aria-hidden="true" style="font-size: 1.5rem;">👋</span>
-<strong>No more scrolling—discover hidden Amazon deals in just 5 simple steps!</strong>
-</p>
-<p>
-<strong class="hero-cta text-pulse">Start With Step 1 Below</strong>
-</p>
-</div>
-<!-- AMAZON SEARCH FORM -->
-<form id="amazon-search-form">
-<!-- STEP 1 -->
-<div class="container text-start mb-4">
-<div class="alert alert-info text-center fw-bold" role="alert" style="font-size:1.1rem;">
-  🚀 Ready to Begin? Follow the Steps Below to Discover Great Amazon Deals!
-</div>
 <h2>
   🔍
   ✅ Step 1: Start Your Product Search
