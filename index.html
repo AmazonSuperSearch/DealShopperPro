@@ -256,7 +256,7 @@
     <p class="lead mb-4">
       Search by keyword, price, rating, Prime, coupons &amp; more—find exactly what you want in seconds.
     </p>
-    <a href="#amazon-search-form" class="btn btn-primary btn-lg me-3 mb-3 shadow-sm" style="font-weight:600;">
+    <a href="#search-form" class="btn btn-primary btn-lg me-3 mb-3 shadow-sm" style="font-weight:600;">
       Start Searching Now
     </a>
     <a href="#how-it-works" class="btn btn-link mb-3">
@@ -265,60 +265,64 @@
   </section>
 
   <!-- SUGGESTED SEARCHES -->
-  <section class="suggested-searches text-center my-4 px-3">
-    <h2 class="visually-hidden">Suggested Searches</h2>
-    <span class="me-2 fw-semibold text-dark fs-6">Suggested:</span>
-    <a class="badge bg-primary text-white me-1" href="/?q=wireless+headphones+under+$50">
-      wireless headphones under $50
-    </a>
-    <a class="badge bg-primary text-white me-1" href="/?q=prime+only+deals">
-      Prime-only deals
-    </a>
-    <a class="badge bg-primary text-white" href="/?q=4+star+appliances">
-      4+ star appliances
-    </a>
-  </section>
+  <section class="hero-extras text-center my-4 px-3">
+    <h2 class="visually-hidden">Suggested Searches & Badges</h2>
+    <div class="mb-4">
+      <span class="me-2 fw-semibold text-dark fs-6">Suggested:</span>
+      <a class="badge bg-primary text-white me-1" href="/?q=wireless+headphones+under+$50">
+        wireless headphones under $50
+      </a>
+      <a class="badge bg-primary text-white me-1" href="/?q=prime+only+deals">
+        Prime-only deals
+      </a>
+      <a class="badge bg-primary text-white" href="/?q=4+star+appliances">
+        4+ star appliances
+      </a>
+    </div>
 
-  <!-- JUST SEARCHED SAMPLE -->
-  <div class="text-center fst-italic mb-4 fw-semibold" id="justSearched">
-    🛒 Just searched: <strong>"wireless headphones under $50"</strong>
-  </div>
-  <script>
-    (function(){
-      const samples = [
-        "wireless headphones under $50",
-        "4★ kitchen gadgets",
-        "eco-friendly water bottle",
-        "gaming mouse lightning deal",
-        "Prime-only laptop deals",
-        "vegan protein powder 30% off"
-      ];
-      const el = document.getElementById('justSearched');
-      if (el && el.querySelector('strong')) {
-        const q = samples[Math.floor(Math.random() * samples.length)];
-        el.querySelector('strong').textContent = '"' + q + '"';
-      }
-    })();
-  </script>
+    <!-- JUST SEARCHED SAMPLE -->
+    <p class="just-searched fst-italic mb-4 fw-semibold" id="justSearched">
+      🛒 Just searched: <strong>"wireless headphones under $50"</strong>
+    </p>
+    <script>
+      (function(){
+        const samples = [
+          "wireless headphones under $50",
+          "4★ kitchen gadgets",
+          "eco-friendly water bottle",
+          "gaming mouse lightning deal",
+          "Prime-only laptop deals",
+          "vegan protein powder 30% off"
+        ];
+        const el = document.getElementById('justSearched');
+        if (el && el.querySelector('strong')) {
+          const q = samples[Math.floor(Math.random()*samples.length)];
+          el.querySelector('strong').textContent = '"' + q + '"';
+        }
+      })();
+    </script>
 
-  <!-- TRUST ICONS & BADGES -->
-  <div class="trust-icons text-center my-4">
+    <!-- TRUST BADGE -->
     <span class="d-block d-sm-inline-block fw-semibold mb-3 text-dark">
       <span class="px-3 py-1 rounded-pill bg-info text-dark">
         🔓 No login required
       </span>
     </span>
-    <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-3">
+
+    <!-- TRUST ICONS -->
+    <div class="mt-4 d-flex flex-wrap justify-content-center align-items-center gap-3">
       <i class="fas fa-shield-alt fa-2x text-dark" title="Norton Secured" aria-hidden="true"></i>
       <i class="fas fa-robot fa-2x text-dark" title="Built with AI" aria-hidden="true"></i>
       <i class="fas fa-lock fa-2x text-dark" title="SSL Secure" aria-hidden="true"></i>
       <i class="fab fa-cloudflare fa-2x text-dark" title="Protected by Cloudflare" aria-hidden="true"></i>
       <i class="fas fa-search-dollar fa-2x text-dark" title="Affiliate Supported" aria-hidden="true"></i>
     </div>
-    <span class="fw-semibold fs-6 px-3 py-2 border-start border-4 border-info rounded bg-light text-dark">
-      🤖 Built with help from <strong style="color:#00BFFF;">ChatGPT</strong> — Free to use, no affiliation with Amazon
-    </span>
-  </div>
+    <div class="mt-3">
+      <span class="fw-semibold fs-6 d-inline-block px-3 py-2 border-start border-4 border-info rounded bg-light text-dark">
+        🤖 Built with help from <strong style="color:#00BFFF;">ChatGPT</strong> — Free to use, no affiliation with Amazon
+      </span>
+    </div>
+  </section>
 
   <!-- INTRO SECTION -->
   <section class="intro-section text-center my-5 px-3 intro-section__container">
@@ -345,7 +349,8 @@
       alt="Deal Shopper Pro interface preview"
       class="img-fluid rounded shadow"
       width="1200" height="630"
-      src="/thumbnail.png">
+      src="/thumbnail.png"
+    >
   </picture>
 
   <!-- PRIVACY BANNER -->
@@ -386,6 +391,7 @@
       <strong class="hero-cta text-pulse">Start With Step 1 Below</strong>
     </p>
   </div>
+
 
 <h2>
   🔍
