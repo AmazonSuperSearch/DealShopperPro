@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +26,7 @@
 <meta content="View Deal Shopper Pro’s media features on YouTube, Medium, Instagram, and more—discover demos, deep dives, and user testimonials." name="description">
 <meta content="index, follow" name="robots">
 <link href="https://www.dealshopperpro.com/media.html" rel="canonical">
+  
 <!-- Favicon icons for all platforms -->
 <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
 <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -33,8 +36,11 @@
 <link href="/favicon-512x512.png" rel="icon" sizes="512x512" type="image/png">
 <link href="/favicon-180x180.png" rel="apple-touch-icon" sizes="180x180">
 <link href="/site.webmanifest" rel="manifest">
-<!-- Bootstrap CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Preload Bootstrap CSS for faster paint -->
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"></noscript>
+  
 <!-- Bootstrap Icons -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
 <style>
