@@ -273,8 +273,71 @@
         <p class="mb-4 text-muted">
           Quickly surface lightning deals that match your search term and budget—no app, no login.
         </p>
-        <!-- form unchanged -->
-        <div class="card mx-auto mb-4" style="max-width: 800px;"><!-- … --></div>
+        <div class="card mx-auto mb-4" style="max-width: 800px;">
+  <div class="card-body text-center">
+        <form id="lightning-search-form" class="row g-3 justify-content-center align-items-end">
+          <div class="col-sm-6">
+            <label for="q-lightning" class="visually-hidden">Search term</label>
+            <input
+              type="text"
+              id="q-lightning"
+              name="q"
+              class="form-control"
+              placeholder="Search term (e.g. headphones)"
+              aria-label="Search term"
+              required
+            >
+          </div>
+          <div class="col-sm-3">
+            <label for="low-lightning" class="visually-hidden">Minimum price</label>
+            <input
+              type="number"
+              id="low-lightning"
+              name="low-price"
+              class="form-control"
+              placeholder="Minimum $"
+              aria-label="Minimum price"
+            >
+          </div>
+          <div class="col-sm-3">
+            <label for="high-lightning" class="visually-hidden">Maximum price</label>
+            <input
+              type="number"
+              id="high-lightning"
+              name="high-price"
+              class="form-control"
+              placeholder="Maximum $"
+              aria-label="Maximum price"
+            >
+          </div>
+          <div class="col-12">
+            <button
+              type="submit"
+              class="btn btn-glow btn-lg shadow-sm mt-2"
+              aria-label="Search Lightning Deals"
+            >
+              <i class="bi bi-search" aria-hidden="true"></i>
+  Find Matching Deals
+</button>
+          </div>
+        </form>
+         <!-- Affiliate link appears after form is submitted -->
+    <a
+      id="lightningAffiliateLink"
+      class="btn btn-glow btn-lg shadow-sm mt-2 d-none"
+      href="#"
+      target="_blank"
+      rel="sponsored noopener noreferrer"
+      aria-label="View matching Lightning Deals on Amazon"
+    >
+      <i class="bi bi-search" aria-hidden="true"></i>
+      View Lightning Deals on Amazon
+    </a>
+    <small class="text-muted d-block mt-2">
+      As an Amazon Associate, we earn from qualifying purchases.
+    </small>
+      </div>
+    </div>
       </div>
     </section>
 
@@ -286,8 +349,99 @@
         <p class="mb-4 text-muted">
           Use our 6-step advanced guide to pinpoint the perfect lightning deals—filter by keyword, price, rating, discount, brand and more.
         </p>
-        <!-- steps unchanged -->
-        <div class="text-center mt-4"><!-- … --></div>
+       <div class="card mx-auto mb-4" style="max-width: 800px;">
+  <div class="card-body text-center">
+
+        <ol class="list-unstyled m-0 p-0 text-start">
+          <!-- Step 1 -->
+          <li id="option3-step1" class="mb-5">
+            <h4 class="h6">Step 1: Enter a Product Name</h4>
+            <figure class="my-2">
+              <img
+  src="amazon-lightning-deals-keyword-search.png"
+  class="img-fluid zoom-trigger"
+  alt="Keyword search input for Amazon Lightning Deals"
+  width="800" height="450"
+  loading="lazy">
+            </figure>
+          </li>
+
+          <!-- Step 2 -->
+          <li id="option3-step2" class="mb-5">
+            <h4 class="h6">Step 2: Select Currency &amp; Set Price Range</h4>
+            <figure class="my-2">
+              <img
+  src="amazon-lightning-deals-price-rating-filter.png"
+  class="img-fluid zoom-trigger"
+  alt="Price and rating filter options for Amazon Lightning Deals"
+  width="800" height="450"
+  loading="lazy">
+            </figure>
+          </li>
+
+          <!-- Step 3 -->
+          <li id="option3-step3" class="mb-5">
+            <h4 class="h6">Step 3: Filter by Discount, Rating &amp; Sort Order</h4>
+            <figure class="my-2">
+              <img
+  src="refine-by-rating-discount-sort-order.png"
+  class="img-fluid zoom-trigger"
+  alt="Rating, discount, and sort order filter controls for Amazon Lightning Deals"
+  width="800" height="450"
+  loading="lazy">
+            </figure>
+          </li>
+
+          <!-- Step 4 -->
+          <li id="option3-step4" class="mb-5">
+            <h4 class="h6">Step 4: Filter by Brand</h4>
+            <figure class="my-2">
+              <img
+  src="amazon-lightning-deals-brand-filter.png"
+  class="img-fluid zoom-trigger"
+  alt="Brand filter options for Amazon Lightning Deals"
+  width="800" height="450"
+  loading="lazy">
+            </figure>
+          </li>
+
+          <!-- Step 5 -->
+          <li id="option3-step5" class="mb-5">
+            <h4 class="h6">Step 5: Check the <em>Lightning Deals</em> Box</h4>
+            <figure class="my-2">
+              <img
+  src="amazon-lightning-deals-enable-lightning-deals-filter.png"
+  class="img-fluid zoom-trigger"
+  alt="Lightning Deals checkbox filter in Amazon search options"
+  width="800" height="450"
+  loading="lazy">
+            </figure>
+          </li>
+
+          <!-- Step 6 -->
+          <li id="option3-step6" class="mb-0">
+            <h4 class="h6">Step 6: View Filtered Lightning Deals</h4>
+            <figure class="my-2">
+              <img
+  src="amazon-lightning-deals-view-results.png"
+  class="img-fluid zoom-trigger"
+  alt="Filtered Amazon Lightning Deals results page"
+  width="800" height="450"
+  loading="lazy">
+            </figure>
+          </li>
+        </ol>
+<div class="text-center mt-4">
+  <a
+    href="/#amazon-search-form"
+    class="btn btn-outline-primary btn-lg fw-semibold shadow-sm"
+    aria-label="Try the advanced Lightning-Deals search on Deal Shopper Pro"
+  >
+    🔍 Try the Advanced Lightning-Deals Search
+  </a>
+</div>
+</div>
+</div> 
       </div>
     </section>
 
