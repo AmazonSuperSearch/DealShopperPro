@@ -97,7 +97,98 @@
 <link crossorigin="" href="https://img.youtube.com" rel="preconnect"/>
 <link crossorigin="" href="https://s.ytimg.com" rel="preconnect"/>
 <link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
-<link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/><link href="/favicon-64x64.png" rel="icon" sizes="64x64" type="image/png"/><link href="/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/><link href="/favicon-512x512.png" rel="icon" sizes="512x512" type="image/png"/><link href="/favicon-180x180.png" rel="apple-touch-icon" sizes="180x180"/></head>
+<link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png"/><link href="/favicon-64x64.png" rel="icon" sizes="64x64" type="image/png"/><link href="/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/><link href="/favicon-512x512.png" rel="icon" sizes="512x512" type="image/png"/><link href="/favicon-180x180.png" rel="apple-touch-icon" sizes="180x180"/><link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/><style>
+  /*─────────────────────────────────────────────────────────────────────────
+    Variables
+  ─────────────────────────────────────────────────────────────────────────*/
+  :root {
+    --heading-size: 1.5rem;
+
+    --intro-max-width: 720px;
+    --intro-text-size: 1.15rem;
+    --intro-text-color: #333;
+
+    --banner-bg: #FFF8E1;
+    --banner-border: #FFECB3;
+    --banner-radius: 12px;
+    --banner-padding-vertical: 1.5rem;
+    --banner-padding-horizontal: 1.5rem;
+    --banner-shadow: rgba(0, 0, 0, 0.04);
+    --banner-gap: 1rem;
+    --banner-heading-color: #5D4037;
+    --banner-body-color: #333;
+    --banner-link-color: #0056b3;
+  }
+
+  /*─────────────────────────────────────────────────────────────────────────
+    Headings
+  ─────────────────────────────────────────────────────────────────────────*/
+  h1 {
+    font-size: var(--heading-size);
+  }
+
+  /*─────────────────────────────────────────────────────────────────────────
+    Intro Section
+  ─────────────────────────────────────────────────────────────────────────*/
+  .intro-section__container {
+    max-width: var(--intro-max-width);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .intro-section__text {
+    font-size: var(--intro-text-size);
+    color: var(--intro-text-color);
+  }
+
+  .intro-section__image {
+    display: block;
+    margin: 1rem auto;
+    max-width: var(--intro-max-width);
+  }
+
+  /*─────────────────────────────────────────────────────────────────────────
+    Privacy Banner
+  ─────────────────────────────────────────────────────────────────────────*/
+  .privacy-banner {
+    background-color: var(--banner-bg);
+    border: 1px solid var(--banner-border);
+    border-radius: var(--banner-radius);
+    padding: var(--banner-padding-vertical) var(--banner-padding-horizontal);
+    margin: 2rem auto;
+    max-width: 850px;
+    box-shadow: 0 2px 6px var(--banner-shadow);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--banner-gap);
+  }
+
+  .privacy-banner__graphic {
+    flex-shrink: 0;
+  }
+
+  .privacy-banner__content {
+    flex: 1;
+  }
+
+  .privacy-banner__heading {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--banner-heading-color);
+    margin-bottom: 0.5rem;
+  }
+
+  .privacy-banner__body p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--banner-body-color);
+  }
+
+  .privacy-banner__body a {
+    text-decoration: underline;
+    color: var(--banner-link-color);
+  }
+</style></head>
 <body>
 <!-- ✅ Navbar -->
 <nav aria-label="Site navigation" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
