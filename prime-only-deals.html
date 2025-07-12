@@ -400,30 +400,7 @@
 </div>
 </footer>
 <script defer="" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-document.getElementById('lightning-search-form')?.addEventListener('submit', function(e){
-  e.preventDefault();
-  const q = this.q.value.trim();
-  const low = this['low-price'].value;
-  const high = this['high-price'].value;
 
-  if (!q) {
-    alert('Enter a search term.');
-    return;
-  }
-
-  let url = 'https://www.amazon.com/s?i=prime-only-deals&k=' + encodeURIComponent(q) + '&eligibleLightningDeals=1';
-  if (low)  url += '&low-price=' + encodeURIComponent(low);
-  if (high) url += '&high-price=' + encodeURIComponent(high);
-  url += '&ref_=nav_topnav_deals&tag=dealshopperpr-20';
-
-  const link = document.getElementById('lightningAffiliateLink');
-  link.href = url;
-  link.classList.remove('d-none');
-  link.focus();
-});
-
-</script>
 <!-- HowTo structured data for the 6-step guide -->
 <script type="application/ld+json">
 {
