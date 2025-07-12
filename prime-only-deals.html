@@ -244,48 +244,55 @@
     <section id="option2" class="py-5">
       <div class="container text-center">
         <h2 class="h5 mb-3">
-          Option 2: Find Prime‑Only Deals on Amazon by Keyword &amp; Price
-        </h2>
-        <p class="mb-4 text-muted">
-          Quickly surface Prime‑Only Deals that match your search term and budget—no app, no login.
-        </p>
-        <div class="card mx-auto mb-4" style="max-width: 800px;">
+  Option 2: Find Prime‑Only Deals on Amazon by Keyword &amp; Price
+</h2>
+<p class="mb-4 text-muted">
+  Quickly surface Prime‑Only Deals that match your search term and budget—no app, no login.
+</p>
+<div class="card mx-auto mb-4" style="max-width: 800px;">
   <div class="card-body text-center">
-        <form id="prime-search-form" class="row g-3 justify-content-center align-items-end">
-          <div class="col-sm-6">
-            <label for="q-prime" class="visually-hidden">Search term</label>
-            <input
-              type="text"
-              id="q-prime"
-              name="q"
-              class="form-control"
-              placeholder="Search term (e.g. headphones)"
-              aria-label="Search term"
-              required
-            >
-          </div>
-          <div class="col-sm-3">
-            <label for="low-prime" class="visually-hidden">Minimum price</label>
-            <input
-              type="number"
-              id="low-prime"
-              name="low-price"
-              class="form-control"
-              placeholder="Minimum $"
-              aria-label="Minimum price"
-            >
-          </div>
-          <div class="col-sm-3">
-            <label for="high-prime" class="visually-hidden">Maximum price</label>
-            <input
-              type="number"
-              id="high-prime"
-              name="high-price"
-              class="form-control"
-              placeholder="Maximum $"
-              aria-label="Maximum price"
-            >
-          </div>
+    <form id="prime-search-form" class="row g-3 justify-content-center align-items-end" autocomplete="off" novalidate>
+      <div class="col-sm-6">
+        <label for="q-prime" class="visually-hidden">Search term</label>
+        <input
+          type="text"
+          id="q-prime"
+          name="q"
+          class="form-control"
+          placeholder="Search term (e.g. headphones)"
+          aria-label="Search term"
+          required
+        >
+      </div>
+      <div class="col-sm-3">
+        <label for="low-prime" class="visually-hidden">Minimum price in dollars</label>
+        <input
+          type="number"
+          id="low-prime"
+          name="low-price"
+          class="form-control"
+          placeholder="Minimum $"
+          aria-label="Minimum price in dollars"
+          inputmode="decimal"
+          min="0"
+          step="0.01"
+        >
+      </div>
+      <div class="col-sm-3">
+        <label for="high-prime" class="visually-hidden">Maximum price in dollars</label>
+        <input
+          type="number"
+          id="high-prime"
+          name="high-price"
+          class="form-control"
+          placeholder="Maximum $"
+          aria-label="Maximum price in dollars"
+          inputmode="decimal"
+          min="0"
+          step="0.01"
+        >
+      </div>
+
           <div class="col-12">
             <button
               type="submit"
@@ -815,11 +822,24 @@ document.getElementById('prime-search-form')?.addEventListener('submit', functio
   url += '&tag=dealshopperpr-20';
 
   const link = document.getElementById('primeAffiliateLink');
-  link.href = url;
-  link.classList.remove('d-none');
-  link.focus();
+
+  if (link) {
+    link.href = url;
+    link.classList.remove('d-none');
+    link.focus();
+
+    // Optional: screen reader accessibility enhancement
+    const live = document.createElement('div');
+    live.setAttribute('aria-live', 'polite');
+    live.classList.add('visually-hidden');
+    live.textContent = 'Matching Prime‑Only Deals button is now available.';
+    link.parentNode.insertBefore(live, link.nextSibling);
+  } else {
+    console.warn('Affiliate link element not found.');
+  }
 });
 </script>
+
 
 </body>
 </html>
