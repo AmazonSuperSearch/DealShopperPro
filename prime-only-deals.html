@@ -42,14 +42,6 @@
   <!-- Preconnect for third-party origins -->
   <link rel="preconnect" href="https://www.amazon.com" crossorigin>
   <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/youtube-lite@1.5.0/dist/lite-yt-embed.css"
->
-<script
-  defer
-  src="https://cdn.jsdelivr.net/npm/youtube-lite@1.5.0/dist/lite-yt-embed.js"
-></script>
 
   <!-- Inline critical CSS for the above-the-fold heading & core utilities -->
   <style>
@@ -181,7 +173,7 @@
         </ul>
 
         <p>
-          This free service never tracks you. See our <a href="#footer">privacy policy</a> below, and share with friends to help them find lightning deals on Amazon faster.
+          This free service never tracks you. See our <a href="/privacy.html">privacy policy</a> below, and share with friends to help them find lightning deals on Amazon faster.
         </p>
 
         <h2 class="mt-3 text-muted">
@@ -245,11 +237,11 @@
         <div class="card mb-4 mx-auto" style="max-width:500px">
           <div class="card-body text-center">
             <a class="btn btn-glow btn-lg shadow-sm"
-               href="https://www.amazon.com/gp/goldbox?dealType=lightningDeals&amp;tag=dealshopperpr-20"
-               target="_blank" rel="sponsored noopener noreferrer">
-              <i class="bi bi-star-fill" aria-hidden="true"></i>
-              View All Lightning Deals
-            </a>
+   href="https://www.amazon.com/s?k=&rh=p_85:2470955011&tag=dealshopperpr-20"
+   target="_blank" rel="sponsored noopener noreferrer">
+   View All Prime‑Only Deals
+</a>
+
           </div>
         </div>
       </div>
@@ -318,10 +310,11 @@
       href="#"
       target="_blank"
       rel="sponsored noopener noreferrer"
-      aria-label="View matching Lightning Deals on Amazon"
+      aria-label="View matching Prime Only Deals on Amazon"
     >
       <i class="bi bi-search" aria-hidden="true"></i>
-      View Lightning Deals on Amazon
+     View Prime‑Only Deals on Amazon
+
     </a>
     <small class="text-muted d-block mt-2">
       As an Amazon Associate, we earn from qualifying purchases.
@@ -788,31 +781,10 @@
 }
 </script>
 
-<script>
-  document.querySelectorAll('.youtube-lite').forEach(el => {
-    const id = el.dataset.videoId;
-    // set the poster image as background
-    el.style.backgroundImage = `url(https://img.youtube.com/vi/${id}/hqdefault.jpg)`;
-    // on click (or Enter key), inject the real iframe
-    function loadIframe() {
-      const iframe = document.createElement('iframe');
-      iframe.setAttribute('src', `https://www.youtube-nocookie.com/embed/${id}?autoplay=1`);
-      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-      iframe.setAttribute('allowfullscreen', '');
-      iframe.className = 'border-0 w-100 h-100';
-      el.innerHTML = '';
-      el.appendChild(iframe);
-    }
-    el.addEventListener('click', loadIframe);
-    el.addEventListener('keydown', e => { if (e.key === 'Enter') loadIframe(); });
-  });
-</script>
-  <script src="https://cdn.jsdelivr.net/npm/youtube-lite@1.5.0/dist/lite-yt-embed.js" defer></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/youtube-lite@1.5.0/dist/lite-yt-embed.css">
-
-<script>
+  <script>
 document.getElementById('prime-search-form')?.addEventListener('submit', function(e){
   e.preventDefault();
+
   const q = document.getElementById('q-prime').value.trim();
   const low = document.getElementById('low-prime').value;
   const high = document.getElementById('high-prime').value;
@@ -822,9 +794,16 @@ document.getElementById('prime-search-form')?.addEventListener('submit', functio
     return;
   }
 
-  let url = 'https://www.amazon.com/s?k=' + encodeURIComponent(q) + '&rh=p_85:2470955011';
-  if (low)  url += ',p_36:' + parseInt(low * 100);
-  if (high) url += '-' + parseInt(high * 100);
+  let url = `https://www.amazon.com/s?k=${encodeURIComponent(q)}&rh=p_85:2470955011`;
+
+  if (low && high) {
+    url += `,p_36:${parseInt(low * 100)}-${parseInt(high * 100)}`;
+  } else if (low) {
+    url += `,p_36:${parseInt(low * 100)}-`;
+  } else if (high) {
+    url += `,p_36:0-${parseInt(high * 100)}`;
+  }
+
   url += '&tag=dealshopperpr-20';
 
   const link = document.getElementById('primeAffiliateLink');
