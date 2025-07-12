@@ -663,5 +663,33 @@ document.getElementById('lightning-search-form')?.addEventListener('submit', fun
 </script>
 <script defer="" src="https://cdn.jsdelivr.net/npm/youtube-lite@1.5.0/dist/lite-yt-embed.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/youtube-lite@1.5.0/dist/lite-yt-embed.css" rel="stylesheet"/>
+    <script>
+document.getElementById('prime-search-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const keyword = encodeURIComponent(document.getElementById('q-lightning').value.trim());
+  const minPrice = document.getElementById('low-lightning').value.trim();
+  const maxPrice = document.getElementById('high-lightning').value.trim();
+
+  let url = 'https://www.amazon.com/s?';
+  let params = `k=${keyword}&rh=p_85:2470955011`;
+
+  if (minPrice) {
+    params += `&low-price=${encodeURIComponent(minPrice)}`;
+  }
+  if (maxPrice) {
+    params += `&high-price=${encodeURIComponent(maxPrice)}`;
+  }
+
+  // Affiliate tag
+  params += '&tag=dealshopperpr-20';
+
+  const finalUrl = url + params;
+
+  const link = document.getElementById('lightningAffiliateLink');
+  link.href = finalUrl;
+  link.classList.remove('d-none');
+});
+</script>
 </body>
 </html>
