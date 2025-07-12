@@ -782,11 +782,11 @@
 }
 </script>
 
-  <script>
-document.getElementById('prime-search-form')?.addEventListener('submit', function(e){
+<script>
+document.getElementById('prime-search-form')?.addEventListener('submit', function(e) {
   e.preventDefault();
 
-  const q = document.getElementById('').value.trim();
+  const q = document.getElementById('q-prime').value.trim();
   const low = document.getElementById('low-prime').value;
   const high = document.getElementById('high-prime').value;
 
@@ -795,14 +795,22 @@ document.getElementById('prime-search-form')?.addEventListener('submit', functio
     return;
   }
 
+  const toCents = (val) => {
+    const cents = parseInt(parseFloat(val) * 100);
+    return isNaN(cents) ? null : cents;
+  };
+
+  const lowCents = toCents(low);
+  const highCents = toCents(high);
+
   let url = `https://www.amazon.com/s?k=${encodeURIComponent(q)}&rh=p_85:2470955011`;
 
-  if (low && high) {
-    url += `,p_36:${parseInt(low * 100)}-${parseInt(high * 100)}`;
-  } else if (low) {
-    url += `,p_36:${parseInt(low * 100)}-`;
-  } else if (high) {
-    url += `,p_36:0-${parseInt(high * 100)}`;
+  if (lowCents !== null && highCents !== null) {
+    url += `,p_36:${lowCents}-${highCents}`;
+  } else if (lowCents !== null) {
+    url += `,p_36:${lowCents}-`;
+  } else if (highCents !== null) {
+    url += `,p_36:0-${highCents}`;
   }
 
   url += '&tag=dealshopperpr-20';
