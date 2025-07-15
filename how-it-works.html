@@ -12,7 +12,7 @@
   <meta property="og:description" content="Follow 6 simple steps to use Deal Shopper Pro — the advanced Amazon filter tool that finds hidden deals fast.">
   <meta property="og:url" content="https://www.dealshopperpro.com/how-it-works.html">
   <meta property="og:image" content="https://www.dealshopperpro.com/advanced-amazon-search-tool-deal-shopper-pro.png">
-  <script type="application/ld+json">
+ <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -20,7 +20,10 @@
   "url": "https://www.dealshopperpro.com/how-it-works.html",
   "name": "How It Works | Deal Shopper Pro",
   "description": "Learn how to use Deal Shopper Pro's 6-step advanced Amazon search tool to filter by keyword, price, rating, brand, coupons, and more.",
-  "inLanguage": "en-US"
+  "inLanguage": "en-US",
+  "mainEntityOfPage": "https://www.dealshopperpro.com/how-it-works.html",
+  "datePublished": "2025-07-14",
+  "dateModified": "2025-07-14"
 }
 </script>
 <script type="application/ld+json">
@@ -67,6 +70,26 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.dealshopperpro.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "How It Works",
+      "item": "https://www.dealshopperpro.com/how-it-works.html"
+    }
+  ]
+}
+</script>
 
 </head>
 <body>
@@ -80,8 +103,8 @@
   <div id="navbarNav" class="collapse navbar-collapse">
    <ul class="navbar-nav ms-auto">
     <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-    <li class="nav-item"><a class="nav-link" href="/how-it-works.html">How It Works</a></li>
-    <li class="nav-item"><a class="nav-link active" href="/lightning-deals.html">Lightning Deals</a></li>
+   <li class="nav-item"><a class="nav-link active" href="/how-it-works.html" aria-current="page">How It Works</a></li>
+<li class="nav-item"><a class="nav-link" href="/lightning-deals.html">Lightning Deals</a></li>
     <li class="nav-item"><a class="nav-link" href="/prime-only-deals.html">Prime‑Only Deals</a></li>
     <li class="nav-item"><a class="nav-link" href="/best-deals-today.html">Best Deals Today</a></li>
     <li class="nav-item"><a class="nav-link" href="/help.html">Help</a></li>
@@ -238,7 +261,7 @@
 </div>
 
   </main>
-<footer>
+<footer aria-label="Site footer">
   <div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
     <p>
       <strong>Disclaimer:</strong>
@@ -277,12 +300,40 @@
     </script>
   </div>
 </footer>
-  </main>
-
-  <footer class="text-center text-muted py-4">
-    <p>Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com.</p>
-    <p>As an Amazon Associate, we may earn commissions from qualifying purchases.</p>
-  </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("copyLinkBtn");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        const link = btn.getAttribute("data-link");
+        navigator.clipboard.writeText(link).then(() => {
+          btn.innerText = "Copied!";
+          setTimeout(() => {
+            btn.innerText = "Copy Page Link";
+          }, 1500);
+        }).catch(err => {
+          console.error("Copy failed:", err);
+        });
+      });
+    }
+  });
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname;
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPath) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.classList.remove("active");
+        link.removeAttribute("aria-current");
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
