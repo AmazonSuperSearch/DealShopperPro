@@ -193,135 +193,138 @@
     These filters are only available in <a class="fw-semibold" href="#option3">Option 3: Advanced Prime Deals Explore</a>.
   </p>
 </section>
+<!-- ✅ Option 1 -->
 <section class="py-5" id="option1">
-<div class="container text-center">
-<h3 class="mb-3">
-          Option 1: Find Prime-Only Deals — View All Active Deals
-        </h3>
-<p class="mb-3 text-muted">
-          Instantly browse every live Prime Deals in one place.
-        </p>
-<div class="card mb-4 mx-auto" style="max-width:500px">
-<div class="card-body text-center">
-<a class="btn btn-glow btn-lg shadow-sm" href="https://www.amazon.com/s?k=&amp;rh=p_85:2470955011&amp;tag=dealshopperpr-20" rel="sponsored noopener noreferrer" target="_blank">
-   View All Prime Deals
-</a>
-</div>
-</div>
-</div>
-</section>
-<section class="py-5" id="option2">
-<div class="container text-center">
-<h2 class="h5 mb-3">
-  Option 2: Discover Prime Deals by Keyword &amp; Price
-</h2>
-<p class="mb-4 text-muted">
-  Quickly surface Prime Deals that match your search term and budget—no app, no login.
-</p>
-<div class="card mx-auto mb-4" style="max-width: 800px;">
-<div class="card-body text-center">
-<form autocomplete="off" class="row g-3 justify-content-center align-items-end" id="prime-search-form" novalidate="">
-<div class="col-sm-6">
-<label class="visually-hidden" for="q-prime">Explore term</label>
-<input aria-label="Explore term" class="form-control" id="q-prime" name="q" placeholder="Explore term (e.g. headphones)" required="" type="text"/>
-</div>
-<div class="col-sm-3">
-<label class="visually-hidden" for="low-prime">Minimum price in dollars</label>
-<input aria-label="Minimum price in dollars" class="form-control" id="low-prime" inputmode="decimal" min="0" name="low-price" placeholder="Minimum $" step="0.01" type="number"/>
-</div>
-<div class="col-sm-3">
-<label class="visually-hidden" for="high-prime">Maximum price in dollars</label>
-<input aria-label="Maximum price in dollars" class="form-control" id="high-prime" inputmode="decimal" min="0" name="high-price" placeholder="Maximum $" step="0.01" type="number"/>
-</div>
-<div class="col-12">
-<button aria-label="Explore Prime Deals" class="btn btn-glow btn-lg shadow-sm mt-2" type="submit">
-<i aria-hidden="true" class="bi bi-search"></i>
-  Discover Matching Deals
-</button>
-</div>
-</form>
-<noscript>
-<div class="alert alert-warning mt-3" role="alert">
-    JavaScript is required to run this search. 
-    You can still <a href="https://www.amazon.com/s?k=&amp;rh=p_85:2470955011&amp;tag=dealshopperpr-20" rel="sponsored noopener noreferrer" target="_blank">view all Prime Deals here</a>.
+  <div class="container">
+    <div class="card shadow-sm mx-auto text-center" style="max-width: 800px;">
+      <div class="card-body">
+        <h2 class="h5 mb-3">Option 1: Find Prime-Only Deals — View All Active Deals</h2>
+        <p class="mb-3 text-muted">Instantly browse every live Prime Deal in one place.</p>
+        <a class="btn btn-glow btn-lg shadow-sm"
+           href="https://www.amazon.com/s?k=&amp;rh=p_85:2470955011&amp;tag=dealshopperpr-20"
+           rel="sponsored noopener noreferrer"
+           target="_blank">
+          View All Prime Deals
+        </a>
+      </div>
+    </div>
   </div>
-</noscript>
-<!-- Affiliate link appears after form is submitted -->
-<a aria-label="View matching Prime Only Deals on Amazon" class="btn btn-glow btn-lg shadow-sm mt-2 d-none" href="#" id="primeAffiliateLink" rel="sponsored noopener noreferrer" target="_blank">
-<i aria-hidden="true" class="bi bi-search"></i>
-     View Prime Deals
-
-    </a>
-<small class="text-muted d-block mt-2">
-      As an Amazon Associate, we earn from qualifying purchases.
-    </small>
-</div>
-</div>
-</div>
 </section>
+
+<!-- ✅ Option 2 -->
+<section class="py-5" id="option2">
+  <div class="container">
+    <div class="card shadow-sm mx-auto text-center" style="max-width: 800px;">
+      <div class="card-body">
+        <h2 class="h5 mb-3">Option 2: Discover Prime Deals by Keyword &amp; Price</h2>
+        <p class="mb-3 text-muted">Quickly surface Prime Deals that match your search term and budget—no app, no login.</p>
+
+        <form id="prime-search-form" autocomplete="off" class="row g-3 justify-content-center align-items-end" novalidate>
+          <div class="col-sm-6">
+            <label class="visually-hidden" for="q-prime">Explore term</label>
+            <input type="text" id="q-prime" name="q" class="form-control" placeholder="Explore term (e.g. headphones)" required aria-label="Explore term">
+          </div>
+          <div class="col-sm-3">
+            <label class="visually-hidden" for="low-prime">Minimum price</label>
+            <input type="number" id="low-prime" name="low-price" class="form-control" placeholder="Minimum $" inputmode="decimal" min="0" step="0.01" aria-label="Minimum price in dollars">
+          </div>
+          <div class="col-sm-3">
+            <label class="visually-hidden" for="high-prime">Maximum price</label>
+            <input type="number" id="high-prime" name="high-price" class="form-control" placeholder="Maximum $" inputmode="decimal" min="0" step="0.01" aria-label="Maximum price in dollars">
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-glow btn-lg shadow-sm mt-2" aria-label="Explore Prime Deals">
+              <i class="bi bi-search" aria-hidden="true"></i> Discover Matching Deals
+            </button>
+          </div>
+        </form>
+
+        <noscript>
+          <div class="alert alert-warning mt-3" role="alert">
+            JavaScript is required to run this search. 
+            You can still <a href="https://www.amazon.com/s?k=&amp;rh=p_85:2470955011&amp;tag=dealshopperpr-20" rel="sponsored noopener noreferrer" target="_blank">view all Prime Deals here</a>.
+          </div>
+        </noscript>
+
+        <!-- Dynamic affiliate link -->
+        <a id="primeAffiliateLink"
+           class="btn btn-glow btn-lg shadow-sm mt-2 d-none"
+           href="#"
+           target="_blank"
+           rel="sponsored noopener noreferrer"
+           aria-label="View matching Prime Only Deals on Amazon">
+          <i class="bi bi-search" aria-hidden="true"></i> View Prime Deals
+        </a>
+
+        <small class="text-muted d-block mt-2">
+          As an Amazon Associate, we earn from qualifying purchases.
+        </small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Option 3 -->
 <section class="py-5" id="option3">
-<div class="container text-center">
-<h2 class="h5 mb-3">
-      Option 3: Filter Prime Deals with Our 6-Step Advanced Guide
-    </h2>
-<p class="mb-4 text-muted">
-      Use our 6-step advanced guide to pinpoint the perfect Prime Deals—filter by keyword, price, rating, discount, brand and more.
-    </p>
-<div class="card mx-auto mb-4" style="max-width: 800px;">
-<div class="card-body text-center">
-<ol class="list-unstyled m-0 p-0 text-start">
-<!-- Step 1 -->
-<li class="mb-5" id="option3-step1">
-<h4 class="h6">Step 1: Enter a Product Name</h4>
-<figure class="my-2">
-<img alt="Amazon Prime filter by keyword" class="img-fluid zoom-trigger" height="450" loading="lazy" src="amazon-prime-deals-keyword-search.png" width="800"/>
-</figure>
-</li>
-<!-- Step 2 -->
-<li class="mb-5" id="option3-step2">
-<h4 class="h6">Step 2: Select Currency &amp; Set Price Range</h4>
-<figure class="my-2">
-<img alt="Set price range on Amazon Prime deals" class="img-fluid zoom-trigger" height="450" loading="lazy" src="amazon-prime-deals-price-rating-filter.png" width="800"/>
-</figure>
-</li>
-<!-- Step 3 -->
-<li class="mb-5" id="option3-step3">
-<h4 class="h6">Step 3: Filter by Discount, Rating &amp; Sort Order</h4>
-<figure class="my-2">
-<img alt="Refine Prime deal search by brand" class="img-fluid zoom-trigger" height="450" loading="lazy" src="refine-by-rating-discount-sort-order.png" width="800"/>
-</figure>
-</li>
-<!-- Step 4 -->
-<li class="mb-5" id="option3-step4">
-<h4 class="h6">Step 4: Filter by Brand</h4>
-<figure class="my-2">
-<img alt="Apply advanced filters to Prime deals" class="img-fluid zoom-trigger" height="450" loading="lazy" src="amazon-prime-deals-brand-filter.png" width="800"/>
-</figure>
-</li>
-<!-- Step 5 -->
-<li class="mb-5" id="option3-step5">
-<h4 class="h6">Step 5: Check the <em>Prime Deals</em> Box</h4>
-<figure class="my-2">
-<img alt="View filtered Prime search results" class="img-fluid zoom-trigger" height="450" loading="lazy" src="amazon-prime-deals-enable-prime-only-deals-filter.png" width="800"/>
-</figure>
-</li>
-<!-- Step 6 -->
-<li class="mb-0" id="option3-step6">
-<h4 class="h6">Step 6: View Refined Prime Deals</h4>
-<figure class="my-2">
-<img alt="Refined Prime Deals results page" class="img-fluid zoom-trigger" height="450" loading="lazy" src="amazon-prime-deals-view-results.png" width="800"/>
-</figure>
-</li>
-</ol>
-<div class="text-center mt-4">
-<a aria-label="Try the Advanced Prime Deals search on Deal Shopper Pro" class="btn btn-outline-primary btn-lg fw-semibold shadow-sm" href="/#amazon-search-form">
+  <div class="container">
+    <div class="card shadow-sm mx-auto text-center" style="max-width: 800px;">
+      <div class="card-body">
+        <h2 class="h5 mb-3">Option 3: Filter Prime Deals with Our 6-Step Advanced Guide</h2>
+        <p class="mb-3 text-muted">
+          Use our 6-step advanced guide to pinpoint the perfect Prime Deals—filter by keyword, price, rating, discount, brand and more.
+        </p>
+
+        <ol class="list-unstyled text-start m-0 p-0">
+          <li id="option3-step1" class="mb-5">
+            <h4 class="h6">Step 1: Enter a Product Name</h4>
+            <figure class="my-2">
+              <img src="amazon-prime-deals-keyword-search.png" alt="Amazon Prime filter by keyword" class="img-fluid zoom-trigger" width="800" height="450" loading="lazy">
+            </figure>
+          </li>
+          <li id="option3-step2" class="mb-5">
+            <h4 class="h6">Step 2: Select Currency &amp; Set Price Range</h4>
+            <figure class="my-2">
+              <img src="amazon-prime-deals-price-rating-filter.png" alt="Set price range on Amazon Prime deals" class="img-fluid zoom-trigger" width="800" height="450" loading="lazy">
+            </figure>
+          </li>
+          <li id="option3-step3" class="mb-5">
+            <h4 class="h6">Step 3: Filter by Discount, Rating &amp; Sort Order</h4>
+            <figure class="my-2">
+              <img src="refine-by-rating-discount-sort-order.png" alt="Refine Prime deal search by rating" class="img-fluid zoom-trigger" width="800" height="450" loading="lazy">
+            </figure>
+          </li>
+          <li id="option3-step4" class="mb-5">
+            <h4 class="h6">Step 4: Filter by Brand</h4>
+            <figure class="my-2">
+              <img src="amazon-prime-deals-brand-filter.png" alt="Apply brand filter to Prime deals" class="img-fluid zoom-trigger" width="800" height="450" loading="lazy">
+            </figure>
+          </li>
+          <li id="option3-step5" class="mb-5">
+            <h4 class="h6">Step 5: Check the <em>Prime Deals</em> Box</h4>
+            <figure class="my-2">
+              <img src="amazon-prime-deals-enable-prime-only-deals-filter.png" alt="Enable Prime-only filter" class="img-fluid zoom-trigger" width="800" height="450" loading="lazy">
+            </figure>
+          </li>
+          <li id="option3-step6" class="mb-0">
+            <h4 class="h6">Step 6: View Refined Prime Deals</h4>
+            <figure class="my-2">
+              <img src="amazon-prime-deals-view-results.png" alt="Refined Prime Deals results" class="img-fluid zoom-trigger" width="800" height="450" loading="lazy">
+            </figure>
+          </li>
+        </ol>
+
+        <div class="text-center mt-4">
+          <a href="/#amazon-search-form"
+             class="btn btn-outline-primary btn-lg fw-semibold shadow-sm"
+             aria-label="Try the Advanced Prime Deals search on Deal Shopper Pro">
             🔍 Try the Advanced Prime Deals Explore
           </a>
-</div>
-</div>
-</div>
-</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <section id="faq">
 <h2 class="mb-3">Frequently Asked Questions</h2>
 <h3 id="faq-lightning">Find Prime-Only Deals?</h3>
