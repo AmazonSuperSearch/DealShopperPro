@@ -13,6 +13,7 @@
   "@graph": [
     {
       "@type": "Organization",
+      "@id": "https://www.dealshopperpro.com/#organization",
       "name": "Deal Shopper Pro",
       "url": "https://www.dealshopperpro.com",
       "logo": {
@@ -25,6 +26,9 @@
       "@id": "https://www.dealshopperpro.com/#website",
       "url": "https://www.dealshopperpro.com",
       "name": "Deal Shopper Pro",
+      "publisher": {
+        "@id": "https://www.dealshopperpro.com/#organization"
+      },
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://www.dealshopperpro.com/?q={search_term_string}",
@@ -61,12 +65,20 @@
             "text": "No. We redirect you straight to Amazon; nothing is stored here."
           }
         },
-        
+        {
+          "@type": "Question",
+          "name": "What is a Lightning Deal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It’s a limited‑time, limited‑stock Amazon promo. Our filter shows only items currently on offer."
+          }
+        }
       ]
     }
   ]
 }
 </script>
+
 <!-- Open Graph / Social Sharing -->
 <meta content="website" property="og:type"/>
 <meta content="Deal Shopper Pro" property="og:site_name"/>
