@@ -80,17 +80,19 @@
     outline: 2px solid #007bff;
     outline-offset: 4px;
   }
-@media (min-width: 768px) {
-  .intro-image {
-    max-width: 500px;
-  }
-}
-
 .intro-image {
-  width: 100%;
-  height: auto;
   display: block;
   margin: 1.5rem auto;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .intro-image {
+    width: 480px !important; /* force fixed desktop width */
+    max-width: 100%;
+  }
 }
 
   </style>
@@ -129,12 +131,10 @@
 </div>
 </div>
 </nav>
-    <div class="container my-4 text-center">
-  <img src="how-to-find-lightning-deals-amazon.webp"
-       alt="How to Find Lightning Deals on Amazon"
-       class="img-fluid rounded intro-image"
-       width="1000" height="auto" loading="lazy">
-</div>
+   <img src="how-to-find-lightning-deals-amazon.webp"
+     alt="How to Find Lightning Deals on Amazon"
+     class="intro-image"
+     width="480" height="auto" loading="lazy">
 <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 <main id="main-content">
 <!-- ✅ Hero Banner -->
