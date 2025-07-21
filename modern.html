@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -100,7 +101,10 @@
 </script></head>
 <body 
 <div class="text-right p-4">
-    
+    <button onclick="document.documentElement.classList.toggle('dark')"
+            class="ml-4 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition">
+        🌙 Toggle Dark Mode
+    </button>
     </div>
  
 
@@ -108,19 +112,9 @@
   <header class="bg-gray-900 text-white">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 class="text-xl font-bold">Deal Shopper Pro</h1>
-      
-<nav class="bg-gray-900 text-white px-4 py-3 flex flex-wrap justify-between items-center">
-  <a href="/" class="text-xl font-bold">Deal Shopper Pro</a>
-  <ul class="flex space-x-4 text-sm font-medium">
-    <li><a href="/index.html" class="hover:text-yellow-400">Home</a></li>
-    <li><a href="/how-it-works.html" class="hover:text-yellow-400">How It Works</a></li>
-    <li><a href="/prime-only-deals.html" class="hover:text-yellow-400">Prime-Only Deals</a></li>
-    <li><a href="/best-deals-today.html" class="hover:text-yellow-400">Best Deals Today</a></li>
-    <li><a href="/help.html" class="hover:text-yellow-400">Help</a></li>
-    <li><a href="/media.html" class="hover:text-yellow-400">Media</a></li>
-  </ul>
-</nav>
-
+      <nav class="space-x-4">
+        <!-- Navigation Links -->
+      </nav>
     </div>
   </header>
 
@@ -230,19 +224,27 @@
 </script></head>
 <body 
 <!-- ✅ Navbar -->
-
-<nav class="bg-gray-900 text-white px-4 py-3 flex flex-wrap justify-between items-center">
-  <a href="/" class="text-xl font-bold">Deal Shopper Pro</a>
-  <ul class="flex space-x-4 text-sm font-medium">
-    <li><a href="/index.html" class="hover:text-yellow-400">Home</a></li>
-    <li><a href="/how-it-works.html" class="hover:text-yellow-400">How It Works</a></li>
-    <li><a href="/prime-only-deals.html" class="hover:text-yellow-400">Prime-Only Deals</a></li>
-    <li><a href="/best-deals-today.html" class="hover:text-yellow-400">Best Deals Today</a></li>
-    <li><a href="/help.html" class="hover:text-yellow-400">Help</a></li>
-    <li><a href="/media.html" class="hover:text-yellow-400">Media</a></li>
-  </ul>
+<nav aria-label="Site navigation" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+<div class="container">
+<a class="navbar-brand fw-bold text-warning d-flex align-items-center" href="/" style="font-size:1.5rem;">
+<i aria-hidden="true" class="bi bi-lightning-charge-fill me-2"></i>Deal Shopper Pro
+  </a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="/how-it-works.html">How It Works</a></li>
+<li class="nav-item"><a class="nav-link active" href="/lightning-deals.html">Lightning Deals</a></li>
+<li class="nav-item"><a class="nav-link" href="/prime-only-deals.html">Prime‑Only Deals</a></li>
+<li class="nav-item"><a class="nav-link" href="/best-deals-today.html">Best Deals Today</a></li>
+<li class="nav-item"><a class="nav-link" href="/help.html">Help</a></li>
+<li class="nav-item"><a class="nav-link" href="/media.html">Media</a></li>
+<li class="nav-item"><a class="nav-link" href="/sitemap.html">Sitemap</a></li>
+<li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
 </nav>
-
 <main>
 <picture class="d-block mx-auto my-4 intro-section__image w-50">
 <img alt="Deal Shopper Pro interface preview" class="img-fluid rounded shadow" src="/advanced-amazon-search-tool-deal-shopper-pro.png"/>
