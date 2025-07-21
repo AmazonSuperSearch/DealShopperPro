@@ -1,92 +1,108 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Use advanced filters to search Amazon deals by price, customer rating, Prime status, coupons, and more. No login needed.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Advanced Amazon Filters – Custom Deal Finder by Price & Rating</title>
-  <link rel="canonical" href="https://www.dealshopperpro.com/modern.html">
+  <meta name="description" content="Use advanced filters to search Amazon deals by price, customer rating, Prime status, coupons, and more. No login needed." />
+  <link rel="canonical" href="https://www.dealshopperpro.com/modern.html" />
+  <meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large, max-video-preview:-1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Deal Shopper Pro" />
+  <meta property="og:url" content="https://www.dealshopperpro.com" />
+  <meta property="og:title" content="Advanced Amazon Search Tool to Filter Deals" />
+  <meta property="og:description" content="Use our advanced Amazon search tool to filter deals by price, rating, and coupons. Find lightning deals, hidden discounts, and Prime offers—fast." />
+  <meta property="og:image" content="https://www.dealshopperpro.com/advanced-amazon-search-tool-deal-shopper-pro.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Advanced Amazon Search Tool to Filter Deals" />
+  <meta name="twitter:description" content="Use our advanced Amazon search tool to filter deals by price, rating, and coupons." />
+  <meta name="twitter:image" content="https://www.dealshopperpro.com/thumbnail.png" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <meta property="og:title" content="Advanced Amazon Search Tool to Filter Deals">
-  <meta property="og:description" content="Use our advanced Amazon search tool to filter deals by price, rating, and coupons. Find lightning deals, hidden discounts, and Prime offers—fast.">
-  <meta property="og:image" content="https://www.dealshopperpro.com/advanced-amazon-search-tool-deal-shopper-pro.png">
-  <meta property="og:url" content="https://www.dealshopperpro.com">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Advanced Amazon Search Tool to Filter Deals">
-  <meta name="twitter:description" content="Use our advanced Amazon search tool to filter deals by price, rating, and coupons.">
-  <meta name="twitter:image" content="https://www.dealshopperpro.com/thumbnail.png">
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 </head>
-<body class="bg-white text-gray-800">
-  <nav class="bg-white shadow-md py-4">
-    <div class="container mx-auto flex justify-between items-center px-4">
-      <a href="/" class="text-xl font-bold text-yellow-500 flex items-center gap-2">
-        <i class="bi bi-lightning-charge-fill"></i> Deal Shopper Pro
-      </a>
-      <ul class="flex gap-4 text-sm">
-        <li><a href="/" class="hover:text-blue-600">Home</a></li>
-        <li><a href="/how-it-works.html" class="hover:text-blue-600">How It Works</a></li>
-        <li><a href="/lightning-deals.html" class="hover:text-blue-600">Lightning Deals</a></li>
-        <li><a href="/prime-only-deals.html" class="hover:text-blue-600">Prime‑Only Deals</a></li>
-        <li><a href="/best-deals-today.html" class="hover:text-blue-600">Best Deals Today</a></li>
-        <li><a href="/help.html" class="hover:text-blue-600">Help</a></li>
-        <li><a href="/media.html" class="hover:text-blue-600">Media</a></li>
-        <li><a href="/sitemap.html" class="hover:text-blue-600">Sitemap</a></li>
-        <li><a href="/contact.html" class="hover:text-blue-600">Contact</a></li>
-      </ul>
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center px-4 py-3 shadow bg-white dark:bg-gray-800">
+    <a href="/" class="text-xl font-bold text-yellow-500 flex items-center gap-2">
+      ⚡ Deal Shopper Pro
+    </a>
+    <div class="flex items-center gap-4 text-sm">
+      <a href="/" class="hover:underline">Home</a>
+      <a href="/how-it-works.html" class="hover:underline">How It Works</a>
+      <a href="/lightning-deals.html" class="hover:underline">Lightning Deals</a>
+      <a href="/prime-only-deals.html" class="hover:underline">Prime‑Only Deals</a>
+      <a href="/best-deals-today.html" class="hover:underline">Best Deals Today</a>
+      <a href="/help.html" class="hover:underline">Help</a>
+      <a href="/media.html" class="hover:underline">Media</a>
+      <a href="/sitemap.html" class="hover:underline">Sitemap</a>
+      <a href="/contact.html" class="hover:underline">Contact</a>
+      <button id="toggleTheme" class="ml-4 text-sm px-3 py-1 rounded border dark:border-gray-400 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">🌓</button>
     </div>
   </nav>
 
-  <main>
-    <section class="text-center my-8 px-4">
-      <h1 class="text-2xl md:text-3xl font-bold mb-3">Advanced Amazon Filters – Smarter Search Starts Here</h1>
-      <p class="text-gray-700 max-w-2xl mx-auto">⚡ Smarter Amazon Deal Searching—No Login Required</p>
-      <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Search Amazon with powerful filters like price range, ratings, Prime eligibility, and hidden coupons—all in one place.</p>
-      <div class="mt-4">
-        <a href="#amazon-search-form" class="bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700">Start Searching Now</a>
+  <!-- Hero -->
+  <section class="text-center px-4 py-10">
+    <h1 class="text-3xl font-bold mb-2">Advanced Amazon Filters – Smarter Search Starts Here</h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300">⚡ Smarter Amazon Deal Searching—No Login Required</p>
+    <p class="max-w-2xl mx-auto mt-2">Search Amazon with powerful filters like price range, ratings, Prime eligibility, and hidden coupons—all in one place.</p>
+    <a href="#amazon-search-form" class="inline-block mt-5 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Start Searching Now</a>
+  </section>
+
+  <!-- Example Form Section -->
+  <section id="amazon-search-form" class="max-w-3xl mx-auto px-4 py-10">
+    <form class="space-y-6 bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+      <div>
+        <label class="block mb-1 font-semibold">Step 1: Start Your Product Search</label>
+        <div class="flex gap-2">
+          <button type="button" class="px-3 py-2 border rounded">🎤</button>
+          <input type="text" placeholder="e.g. wireless headphones" class="w-full border rounded px-3 py-2 dark:bg-gray-900 dark:border-gray-700 dark:text-white" />
+        </div>
       </div>
-    </section>
-
-    <section class="bg-yellow-50 text-center py-6">
-      <p class="text-lg font-semibold">🎤 Voice search, 🔍 advanced filtering, 📦 real-time Prime deals—all in one tool.</p>
-    </section>
-
-    <section id="amazon-search-form" class="max-w-4xl mx-auto px-4 py-10">
-      <form class="space-y-6 bg-white shadow-lg p-6 rounded-xl" action="#">
-        <div>
-          <label class="block font-semibold mb-1">Step 1: Start Your Product Search</label>
-          <div class="flex gap-2">
-            <button type="button" class="px-3 py-2 border rounded">🎤</button>
-            <input type="text" placeholder="e.g. wireless headphones" class="flex-grow border rounded px-3 py-2" />
-          </div>
+      <div>
+        <label class="block mb-1 font-semibold">Step 2: Set Your Price Range</label>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <select class="border rounded px-3 py-2 dark:bg-gray-900 dark:border-gray-700 dark:text-white">
+            <option>USD ($)</option>
+            <option>EUR (€)</option>
+            <option>GBP (£)</option>
+          </select>
+          <input type="number" placeholder="Min Price" class="border rounded px-3 py-2 dark:bg-gray-900 dark:border-gray-700 dark:text-white">
+          <input type="number" placeholder="Max Price" class="border rounded px-3 py-2 dark:bg-gray-900 dark:border-gray-700 dark:text-white">
         </div>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">🔎 View Filtered Results</button>
+      </div>
+    </form>
+  </section>
 
-        <div>
-          <label class="block font-semibold mb-1">Step 2: Set Your Price Range</label>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <select class="border rounded px-3 py-2">
-              <option>USD ($)</option>
-              <option>EUR (€)</option>
-              <option>GBP (£)</option>
-            </select>
-            <input type="number" placeholder="Min Price" class="border rounded px-3 py-2">
-            <input type="number" placeholder="Max Price" class="border rounded px-3 py-2">
-          </div>
-        </div>
-
-        <div class="text-center">
-          <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">🔎 View Filtered Results</button>
-        </div>
-      </form>
-    </section>
-  </main>
-
-  <footer class="text-center text-sm text-gray-500 py-10 px-4 border-t">
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-600 dark:text-gray-400 py-10 px-4 border-t dark:border-gray-700">
     <p class="mb-2"><strong>Disclaimer:</strong> Deal Shopper Pro is not affiliated with Amazon.com, Inc. or its subsidiaries.</p>
     <p class="mb-2"><strong>As an Amazon Associate I earn from qualifying purchases.</strong></p>
     <p class="mb-4">Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</p>
     <p>© 2025 Deal Shopper Pro. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.getElementById('toggleTheme').addEventListener('click', function () {
+      const htmlEl = document.documentElement;
+      if (htmlEl.classList.contains('dark')) {
+        htmlEl.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        htmlEl.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    });
+  </script>
 </body>
 </html>
