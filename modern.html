@@ -93,7 +93,14 @@
   }
 }
 </script></head>
-<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans">
+<body>
+<div class="text-right p-4">
+    <button onclick="document.documentElement.classList.toggle('dark')"
+            class="ml-4 px-4 py-2 bg-gray-800 text-white rounded hover:bg-gray-700 transition">
+        🌙 Toggle Dark Mode
+    </button>
+    </div>
+ class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans">
 
   <!-- Navbar -->
   <header class="bg-gray-900 text-white">
@@ -332,7 +339,7 @@
 <button aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button">
     🎤
    </button>
-<input aria-label="Main search input" autocomplete="off" class="form-control" id="mainSearchInput" name="q" placeholder="Example: wireless headphones, lightning deals" type="text"/>
+<input aria-label="Main search input" autocomplete="off" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="mainSearchInput" name="q" placeholder="Example: wireless headphones, lightning deals" type="text"/>
 </div>
 </div>
 <!-- STEP 2 -->
@@ -376,7 +383,7 @@
 <span class="input-group-text" id="minPriceAddon">
       $
      </span>
-<input aria-describedby="minPriceAddon" class="form-control" id="minPrice" name="min-price" placeholder="Minimum $" step="0.01" type="number"/>
+<input aria-describedby="minPriceAddon" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="minPrice" name="min-price" placeholder="Minimum $" step="0.01" type="number"/>
 </div>
 </div>
 <div class="col-12 col-lg-5">
@@ -387,7 +394,7 @@
 <span class="input-group-text" id="maxPriceAddon">
       $
      </span>
-<input aria-describedby="maxPriceAddon" class="form-control" id="maxPrice" name="max-price" placeholder="Maximum $" step="0.01" type="number"/>
+<input aria-describedby="maxPriceAddon" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="maxPrice" name="max-price" placeholder="Maximum $" step="0.01" type="number"/>
 </div>
 </div></div>
 </div>
@@ -503,7 +510,7 @@
 <label class="form-label" for="brandInclude">
      Include Brands
     </label>
-<input aria-label="Include brands" class="form-control" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text"/>
+<input aria-label="Include brands" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text"/>
 <div class="form-check mt-2">
 <input aria-label="Match only these brands" class="form-check-input" id="includeOnly" name="include-only" type="checkbox"/>
 <label class="form-check-label" for="includeOnly">
@@ -728,7 +735,7 @@
 <label class="form-label" for="priceDrop90">
      Discount (%) from 90-Day Avg Price
     </label>
-<input aria-label="Discount from 90-day avg" class="form-control" id="priceDrop90" name="price-drop" placeholder="e.g. 20" type="number"/>
+<input aria-label="Discount from 90-day avg" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="priceDrop90" name="price-drop" placeholder="e.g. 20" type="number"/>
 </div>
 <div class="form-check mb-2">
 <input aria-label="Coupon-Clippable Only" class="form-check-input" id="couponOnly" name="coupon-only" type="checkbox"/>
@@ -747,25 +754,25 @@
 <label class="form-label" for="discount30">
       Discount (%) from 30-Day Avg
      </label>
-<input aria-label="Discount from 30-day avg" class="form-control" id="discount30" min="0" name="below-avg-30" placeholder="e.g. 20" type="number"/>
+<input aria-label="Discount from 30-day avg" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="discount30" min="0" name="below-avg-30" placeholder="e.g. 20" type="number"/>
 </div>
 <div class="col-6 col-md-3">
 <label class="form-label" for="discount60">
       Discount (%) from 60-Day Avg
      </label>
-<input aria-label="Discount from 60-day avg" class="form-control" id="discount60" min="0" name="below-avg-60" placeholder="e.g. 15" type="number"/>
+<input aria-label="Discount from 60-day avg" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="discount60" min="0" name="below-avg-60" placeholder="e.g. 15" type="number"/>
 </div>
 <div class="col-6 col-md-3">
 <label class="form-label" for="discount90">
       Discount (%) from 90-Day Avg
      </label>
-<input aria-label="Discount from 90-day avg" class="form-control" id="discount90" min="0" name="below-avg-90" placeholder="e.g. 10" type="number"/>
+<input aria-label="Discount from 90-day avg" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="discount90" min="0" name="below-avg-90" placeholder="e.g. 10" type="number"/>
 </div>
 <div class="col-6 col-md-3">
 <label class="form-label" for="volatility7">
       Max Daily Price Volatility (%)
      </label>
-<input aria-label="Max daily price volatility" class="form-control" id="volatility7" min="0" name="max-volatility-7" placeholder="e.g. 5" type="number"/>
+<input aria-label="Max daily price volatility" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="volatility7" min="0" name="max-volatility-7" placeholder="e.g. 5" type="number"/>
 </div>
 </div>
 <div class="coming-soon mt-4">
@@ -877,13 +884,13 @@
 <!-- WhatsApp -->
 <a class="btn btn-success" href="https://wa.me/?text=https://www.dealshopperpro.com" target="_blank">WhatsApp</a>
 <!-- Messenger -->
-<a class="btn btn-primary" href="fb-messenger://share?link=https://www.dealshopperpro.com" target="_blank">Messenger</a>
+<a class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow" href="fb-messenger://share?link=https://www.dealshopperpro.com" target="_blank">Messenger</a>
 <!-- SMS -->
 <a class="btn btn-secondary" href="sms:?body=Check%20out%20this%20free%20Amazon%20deal%20filter:%20https://www.dealshopperpro.com" target="_blank">Text Message</a>
 <!-- Twitter -->
 <a class="btn btn-info" href="https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here:%20https://www.dealshopperpro.com" target="_blank">Twitter / X</a>
 <!-- Facebook -->
-<a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com" target="_blank">Facebook</a>
+<a class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com" target="_blank">Facebook</a>
 <!-- Copy Link -->
 <button class="btn btn-dark" data-link="https://www.dealshopperpro.com" id="copyLinkBtn">Copy Page Link</button>
 </div>
@@ -1239,7 +1246,7 @@
 <button aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button">
     🎤
    </button>
-<input aria-label="Main search input" autocomplete="off" class="form-control" id="mainSearchInput" name="q" placeholder="Example: wireless headphones, lightning deals" type="text"/>
+<input aria-label="Main search input" autocomplete="off" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="mainSearchInput" name="q" placeholder="Example: wireless headphones, lightning deals" type="text"/>
 </div>
 </div>
 <!-- STEP 2 -->
@@ -1283,7 +1290,7 @@
 <span class="input-group-text" id="minPriceAddon">
       $
      </span>
-<input aria-describedby="minPriceAddon" class="form-control" id="minPrice" name="min-price" placeholder="Minimum $" step="0.01" type="number"/>
+<input aria-describedby="minPriceAddon" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="minPrice" name="min-price" placeholder="Minimum $" step="0.01" type="number"/>
 </div>
 </div>
 <div class="col-12 col-lg-5">
@@ -1294,7 +1301,7 @@
 <span class="input-group-text" id="maxPriceAddon">
       $
      </span>
-<input aria-describedby="maxPriceAddon" class="form-control" id="maxPrice" name="max-price" placeholder="Maximum $" step="0.01" type="number"/>
+<input aria-describedby="maxPriceAddon" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="maxPrice" name="max-price" placeholder="Maximum $" step="0.01" type="number"/>
 </div>
 </div></div>
 </div>
@@ -1410,7 +1417,7 @@
 <label class="form-label" for="brandInclude">
      Include Brands
     </label>
-<input aria-label="Include brands" class="form-control" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text"/>
+<input aria-label="Include brands" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text"/>
 <div class="form-check mt-2">
 <input aria-label="Match only these brands" class="form-check-input" id="includeOnly" name="include-only" type="checkbox"/>
 <label class="form-check-label" for="includeOnly">
@@ -1635,7 +1642,7 @@
 <label class="form-label" for="priceDrop90">
      Discount (%) from 90-Day Avg Price
     </label>
-<input aria-label="Discount from 90-day avg" class="form-control" id="priceDrop90" name="price-drop" placeholder="e.g. 20" type="number"/>
+<input aria-label="Discount from 90-day avg" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="priceDrop90" name="price-drop" placeholder="e.g. 20" type="number"/>
 </div>
 <div class="form-check mb-2">
 <input aria-label="Coupon-Clippable Only" class="form-check-input" id="couponOnly" name="coupon-only" type="checkbox"/>
@@ -1654,25 +1661,25 @@
 <label class="form-label" for="discount30">
       Discount (%) from 30-Day Avg
      </label>
-<input aria-label="Discount from 30-day avg" class="form-control" id="discount30" min="0" name="below-avg-30" placeholder="e.g. 20" type="number"/>
+<input aria-label="Discount from 30-day avg" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="discount30" min="0" name="below-avg-30" placeholder="e.g. 20" type="number"/>
 </div>
 <div class="col-6 col-md-3">
 <label class="form-label" for="discount60">
       Discount (%) from 60-Day Avg
      </label>
-<input aria-label="Discount from 60-day avg" class="form-control" id="discount60" min="0" name="below-avg-60" placeholder="e.g. 15" type="number"/>
+<input aria-label="Discount from 60-day avg" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="discount60" min="0" name="below-avg-60" placeholder="e.g. 15" type="number"/>
 </div>
 <div class="col-6 col-md-3">
 <label class="form-label" for="discount90">
       Discount (%) from 90-Day Avg
      </label>
-<input aria-label="Discount from 90-day avg" class="form-control" id="discount90" min="0" name="below-avg-90" placeholder="e.g. 10" type="number"/>
+<input aria-label="Discount from 90-day avg" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="discount90" min="0" name="below-avg-90" placeholder="e.g. 10" type="number"/>
 </div>
 <div class="col-6 col-md-3">
 <label class="form-label" for="volatility7">
       Max Daily Price Volatility (%)
      </label>
-<input aria-label="Max daily price volatility" class="form-control" id="volatility7" min="0" name="max-volatility-7" placeholder="e.g. 5" type="number"/>
+<input aria-label="Max daily price volatility" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="volatility7" min="0" name="max-volatility-7" placeholder="e.g. 5" type="number"/>
 </div>
 </div>
 <div class="coming-soon mt-4">
@@ -1784,13 +1791,13 @@
 <!-- WhatsApp -->
 <a class="btn btn-success" href="https://wa.me/?text=https://www.dealshopperpro.com" target="_blank">WhatsApp</a>
 <!-- Messenger -->
-<a class="btn btn-primary" href="fb-messenger://share?link=https://www.dealshopperpro.com" target="_blank">Messenger</a>
+<a class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow" href="fb-messenger://share?link=https://www.dealshopperpro.com" target="_blank">Messenger</a>
 <!-- SMS -->
 <a class="btn btn-secondary" href="sms:?body=Check%20out%20this%20free%20Amazon%20deal%20filter:%20https://www.dealshopperpro.com" target="_blank">Text Message</a>
 <!-- Twitter -->
 <a class="btn btn-info" href="https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here:%20https://www.dealshopperpro.com" target="_blank">Twitter / X</a>
 <!-- Facebook -->
-<a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com" target="_blank">Facebook</a>
+<a class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com" target="_blank">Facebook</a>
 <!-- Copy Link -->
 <button class="btn btn-dark" data-link="https://www.dealshopperpro.com" id="copyLinkBtn">Copy Page Link</button>
 </div>
@@ -2151,7 +2158,7 @@
 <button aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button">
     🎤
    </button>
-<input aria-label="Main search input" autocomplete="off" class="form-control" id="mainSearchInput" name="q" placeholder="Example: wireless headphones, lightning deals" type="text"/>
+<input aria-label="Main search input" autocomplete="off" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="mainSearchInput" name="q" placeholder="Example: wireless headphones, lightning deals" type="text"/>
 </div>
 </div>
 <!-- STEP 2 -->
@@ -2195,7 +2202,7 @@
 <span class="input-group-text" id="minPriceAddon">
       $
      </span>
-<input aria-describedby="minPriceAddon" class="form-control" id="minPrice" name="min-price" placeholder="Minimum $" step="0.01" type="number"/>
+<input aria-describedby="minPriceAddon" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="minPrice" name="min-price" placeholder="Minimum $" step="0.01" type="number"/>
 </div>
 </div>
 <div class="col-12 col-lg-5">
@@ -2206,7 +2213,7 @@
 <span class="input-group-text" id="maxPriceAddon">
       $
      </span>
-<input aria-describedby="maxPriceAddon" class="form-control" id="maxPrice" name="max-price" placeholder="Maximum $" step="0.01" type="number"/>
+<input aria-describedby="maxPriceAddon" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="maxPrice" name="max-price" placeholder="Maximum $" step="0.01" type="number"/>
 </div>
 </div></div>
 </div>
@@ -2322,7 +2329,7 @@
 <label class="form-label" for="brandInclude">
      Include Brands
     </label>
-<input aria-label="Include brands" class="form-control" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text"/>
+<input aria-label="Include brands" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text"/>
 <div class="form-check mt-2">
 <input aria-label="Match only these brands" class="form-check-input" id="includeOnly" name="include-only" type="checkbox"/>
 <label class="form-check-label" for="includeOnly">
@@ -2547,7 +2554,7 @@
 <label class="form-label" for="priceDrop90">
      Discount (%) from 90-Day Avg Price
     </label>
-<input aria-label="Discount from 90-day avg" class="form-control" id="priceDrop90" name="price-drop" placeholder="e.g. 20" type="number"/>
+<input aria-label="Discount from 90-day avg" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="priceDrop90" name="price-drop" placeholder="e.g. 20" type="number"/>
 </div>
 <div class="form-check mb-2">
 <input aria-label="Coupon-Clippable Only" class="form-check-input" id="couponOnly" name="coupon-only" type="checkbox"/>
@@ -2566,25 +2573,25 @@
 <label class="form-label" for="discount30">
       Discount (%) from 30-Day Avg
      </label>
-<input aria-label="Discount from 30-day avg" class="form-control" id="discount30" min="0" name="below-avg-30" placeholder="e.g. 20" type="number"/>
+<input aria-label="Discount from 30-day avg" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="discount30" min="0" name="below-avg-30" placeholder="e.g. 20" type="number"/>
 </div>
 <div class="col-6 col-md-3">
 <label class="form-label" for="discount60">
       Discount (%) from 60-Day Avg
      </label>
-<input aria-label="Discount from 60-day avg" class="form-control" id="discount60" min="0" name="below-avg-60" placeholder="e.g. 15" type="number"/>
+<input aria-label="Discount from 60-day avg" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="discount60" min="0" name="below-avg-60" placeholder="e.g. 15" type="number"/>
 </div>
 <div class="col-6 col-md-3">
 <label class="form-label" for="discount90">
       Discount (%) from 90-Day Avg
      </label>
-<input aria-label="Discount from 90-day avg" class="form-control" id="discount90" min="0" name="below-avg-90" placeholder="e.g. 10" type="number"/>
+<input aria-label="Discount from 90-day avg" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="discount90" min="0" name="below-avg-90" placeholder="e.g. 10" type="number"/>
 </div>
 <div class="col-6 col-md-3">
 <label class="form-label" for="volatility7">
       Max Daily Price Volatility (%)
      </label>
-<input aria-label="Max daily price volatility" class="form-control" id="volatility7" min="0" name="max-volatility-7" placeholder="e.g. 5" type="number"/>
+<input aria-label="Max daily price volatility" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" id="volatility7" min="0" name="max-volatility-7" placeholder="e.g. 5" type="number"/>
 </div>
 </div>
 <div class="coming-soon mt-4">
@@ -2696,13 +2703,13 @@
 <!-- WhatsApp -->
 <a class="btn btn-success" href="https://wa.me/?text=https://www.dealshopperpro.com" target="_blank">WhatsApp</a>
 <!-- Messenger -->
-<a class="btn btn-primary" href="fb-messenger://share?link=https://www.dealshopperpro.com" target="_blank">Messenger</a>
+<a class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow" href="fb-messenger://share?link=https://www.dealshopperpro.com" target="_blank">Messenger</a>
 <!-- SMS -->
 <a class="btn btn-secondary" href="sms:?body=Check%20out%20this%20free%20Amazon%20deal%20filter:%20https://www.dealshopperpro.com" target="_blank">Text Message</a>
 <!-- Twitter -->
 <a class="btn btn-info" href="https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here:%20https://www.dealshopperpro.com" target="_blank">Twitter / X</a>
 <!-- Facebook -->
-<a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com" target="_blank">Facebook</a>
+<a class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com" target="_blank">Facebook</a>
 <!-- Copy Link -->
 <button class="btn btn-dark" data-link="https://www.dealshopperpro.com" id="copyLinkBtn">Copy Page Link</button>
 </div>
