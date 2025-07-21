@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Deal Shopper Pro is a free Amazon deal finder. Filter by price, rating, Prime, coupons & more. Instantly find the best Amazon deals fast." />
+  <title>Deal Shopper Pro – Modern Version</title>
+  <link rel="canonical" href="https://www.dealshopperpro.com/modern.html" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta property="og:title" content="Deal Shopper Pro – Instantly Filter Amazon Deals by Price, Prime & Rating" />
+  <meta property="og:description" content="Free Amazon deal finder. Instantly filter by price, rating, Prime-only, coupons & more." />
+  <meta property="og:url" content="https://www.dealshopperpro.com/modern.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- Header -->
+  <header class="bg-gray-100 shadow-md py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Deal Shopper Pro</h1>
+      <nav class="space-x-4 text-sm">
+        <a href="/" class="text-blue-600 hover:underline">Home</a>
+        <a href="/how-it-works.html" class="hover:text-blue-600">How It Works</a>
+        <a href="/help.html" class="hover:text-blue-600">Help</a>
+        <a href="/media.html" class="hover:text-blue-600">Media</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-10 px-4">
+    <h2 class="text-3xl font-bold mb-3">🎯 Instantly Filter Amazon Products and Deals</h2>
+    <p class="text-lg max-w-2xl mx-auto">Use our free advanced Amazon search tool to filter by price, rating, Prime-only items, coupons, and more—without signing in or installing anything.</p>
+  </section>
+
+  <!-- Form Section -->
+  <section class="bg-gray-50 py-10">
+    <div class="max-w-3xl mx-auto px-4">
+      <form action="https://www.amazon.com/s" method="GET" target="_blank" class="space-y-5 bg-white shadow p-6 rounded-xl">
+        <input type="hidden" name="tag" value="your-affiliate-id" />
+
+        <div>
+          <label class="block font-semibold mb-1">1. Enter keywords</label>
+          <input type="text" name="k" class="w-full border rounded p-2" placeholder="e.g. wireless headphones" required />
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">2. Set a minimum price (optional)</label>
+          <input type="number" name="low-price" class="w-full border rounded p-2" placeholder="Minimum price" min="0" step="0.01" />
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">3. Set a maximum price (optional)</label>
+          <input type="number" name="high-price" class="w-full border rounded p-2" placeholder="Maximum price" min="0" step="0.01" />
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">4. Prime-only?</label>
+          <select name="rh" class="w-full border rounded p-2">
+            <option value="">Show all</option>
+            <option value="p_85:2470955011">Prime Only</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">5. Filter by star rating</label>
+          <select name="reviewer-type" class="w-full border rounded p-2">
+            <option value="">Any rating</option>
+            <option value="reviewer-type:avp_only_reviews">4 stars & up</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">6. Filter by coupon status</label>
+          <select name="coupon" class="w-full border rounded p-2">
+            <option value="">Any</option>
+            <option value="1">Only with coupons</option>
+          </select>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">🔍 View Filtered Amazon Results</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-6 px-4 border-t mt-10">
+    <p class="mb-2"><strong>Disclaimer:</strong> Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries.</p>
+    <p class="mb-2"><strong>As an Amazon Associate I earn from qualifying purchases.</strong></p>
+    <p class="mb-2">Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</p>
+    <p class="mt-4">© 2025 DealShopperPro.com</p>
+  </footer>
+</body>
+</html>
