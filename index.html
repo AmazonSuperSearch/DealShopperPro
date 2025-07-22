@@ -282,12 +282,34 @@
 
 
     <!-- Suggested Tags -->
-    <div class="my-3">
-      <span class="fw-semibold text-dark">Suggested:</span>
-      <a class="badge bg-primary text-white me-1" href="/?q=wireless+headphones+under+$50">wireless headphones under $50</a>
-      <a class="badge bg-primary text-white me-1" href="/?q=prime+only+deals">Prime-only deals</a>
-      <a class="badge bg-primary text-white" href="/?q=4+star+appliances">4+ star appliances</a>
-    </div>
+<div class="my-3">
+  <span class="fw-semibold text-dark">Suggested:</span>
+  <a href="#" class="badge bg-primary text-white me-1 suggested-tag" data-query="wireless headphones under $50">wireless headphones under $50</a>
+  <a href="#" class="badge bg-primary text-white me-1 suggested-tag" data-query="prime only deals">Prime-only deals</a>
+  <a href="#" class="badge bg-primary text-white suggested-tag" data-query="4 star appliances">4+ star appliances</a>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tags = document.querySelectorAll('.suggested-tag');
+    const input = document.getElementById('mainSearchInput');
+    const form = document.getElementById('amazon-search-form');
+
+    tags.forEach(tag => {
+      tag.addEventListener('click', function (e) {
+        e.preventDefault();
+        const query = tag.getAttribute('data-query');
+        if (input) {
+          input.value = query;
+          input.focus();
+        }
+        if (form) {
+          form.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  });
+</script>
 
     <!-- Dynamic Query -->
     <p class="fst-italic fw-semibold mb-4" id="justSearched">🛒 Just searched: <strong>"wireless headphones under $50"</strong></p>
