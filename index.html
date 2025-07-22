@@ -233,110 +233,88 @@
 <body>
 <!-- ✅ Navbar -->
 <nav aria-label="Site navigation" class="navbar navbar-expand-lg navbar-custom">
-<div class="container">
-<a class="navbar-brand fw-bold text-warning d-flex align-items-center" href="/" style="font-size:1.5rem;">
-<i aria-hidden="true" class="bi bi-lightning-charge-fill me-2"></i>Deal Shopper Pro
-  </a>
-<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
-<li class="nav-item"><a class="nav-link" href="/how-it-works.html">How It Works</a></li>
-<li class="nav-item"><a class="nav-link" href="/lightning-deals.html">Lightning Deals</a></li>
-<li class="nav-item"><a class="nav-link" href="/prime-only-deals.html">Prime‑Only Deals</a></li>
-<li class="nav-item"><a class="nav-link" href="/best-deals-today.html">Best Deals Today</a></li>
-<li class="nav-item"><a class="nav-link" href="/help.html">Help</a></li>
-<li class="nav-item"><a class="nav-link" href="/media.html">Media</a></li>
-<li class="nav-item"><a class="nav-link" href="/sitemap.html">Sitemap</a></li>
-<li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-</ul>
-</div>
-</div>
+  <div class="container">
+    <a class="navbar-brand fw-bold text-warning d-flex align-items-center" href="/" style="font-size:1.5rem;">
+      <i aria-hidden="true" class="bi bi-lightning-charge-fill me-2"></i>Deal Shopper Pro
+    </a>
+    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/how-it-works.html">How It Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="/lightning-deals.html">Lightning Deals</a></li>
+        <li class="nav-item"><a class="nav-link" href="/prime-only-deals.html">Prime‑Only Deals</a></li>
+        <li class="nav-item"><a class="nav-link" href="/best-deals-today.html">Best Deals Today</a></li>
+        <li class="nav-item"><a class="nav-link" href="/help.html">Help</a></li>
+        <li class="nav-item"><a class="nav-link" href="/media.html">Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="/sitemap.html">Sitemap</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 </nav>
-<main>
-<!-- HERO BANNER -->
-<div class="hero-banner">
-<header class="banner-inner py-5 text-center">
-<h1 class="hero-heading mb-3 fw-bold">Advanced Amazon Filters – Smarter Search Starts Here</h1>
-<div class="container">
-<div class="row justify-content-center text-center">
-<div class="col-lg-10 col-xl-8">
-<p class="hero-tagline">
-            ⚡ Smarter Amazon Deal Searching—No Login Required
-          </p>
-<p class="hero-subtitle">Search Amazon with powerful filters like price range, ratings, Prime eligibility, and hidden coupons—all in one place.</p>
-</div>
-</div>
-</div>
+
+<!-- ✅ Hero Section -->
+<header class="hero-banner py-5 text-center">
+  <div class="container">
+    <h1 class="hero-heading fw-bold mb-3">Advanced Amazon Filters – Smarter Search Starts Here</h1>
+    <p class="hero-tagline lead mb-2">⚡ Smarter Amazon Deal Searching — No Login Required</p>
+    <p class="hero-subtitle">Search Amazon using powerful filters for price range, Prime eligibility, ratings, discounts, and hidden coupons—all in one place.</p>
+
+    <!-- Suggested Tags -->
+    <div class="my-3">
+      <span class="fw-semibold text-dark">Suggested:</span>
+      <a class="badge bg-primary text-white me-1" href="/?q=wireless+headphones+under+$50">wireless headphones under $50</a>
+      <a class="badge bg-primary text-white me-1" href="/?q=prime+only+deals">Prime-only deals</a>
+      <a class="badge bg-primary text-white" href="/?q=4+star+appliances">4+ star appliances</a>
+    </div>
+
+    <!-- Dynamic Query -->
+    <p class="fst-italic fw-semibold mb-4" id="justSearched">🛒 Just searched: <strong>"wireless headphones under $50"</strong></p>
+    <script>
+      (function(){
+        const samples = [
+          "wireless headphones under $50",
+          "4★ kitchen gadgets",
+          "eco-friendly water bottle",
+          "gaming mouse lightning deal",
+          "Prime-only laptop deals",
+          "vegan protein powder 30% off"
+        ];
+        const el = document.getElementById('justSearched');
+        if(el && el.querySelector('strong')){
+          const q = samples[Math.floor(Math.random()*samples.length)];
+          el.querySelector('strong').textContent = '"' + q + '"';
+        }
+      })();
+    </script>
+
+    <!-- CTA Button + Badge -->
+    <a class="btn btn-primary btn-lg shadow-sm fw-semibold me-2 mb-3" href="#amazon-search-form">Start Searching Now</a>
+    <span class="d-block d-sm-inline-block fw-semibold mb-3 text-dark">
+      <span class="px-3 py-1 rounded-pill bg-info text-dark">🔓 No login required</span>
+    </span>
+
+    <!-- Icons -->
+    <div class="mt-4 d-flex flex-wrap justify-content-center align-items-center gap-3">
+      <i class="fas fa-shield-alt fa-2x text-dark" title="Norton Secured"></i>
+      <i class="fas fa-robot fa-2x text-dark" title="Built with AI"></i>
+      <i class="fas fa-lock fa-2x text-dark" title="SSL Secure"></i>
+      <i class="fab fa-cloudflare fa-2x text-dark" title="Protected by Cloudflare"></i>
+      <i class="fas fa-search-dollar fa-2x text-dark" title="Affiliate Supported"></i>
+    </div>
+
+    <!-- Attribution -->
+    <div class="mt-3">
+      <span class="fw-semibold fs-6 d-inline-block px-3 py-2 border-start border-4 border-info rounded bg-light text-dark">
+        🤖 Built with help from <strong style="color:#00BFFF;">ChatGPT</strong> — Free to use, no affiliation with Amazon
+      </span>
+    </div>
+  </div>
 </header>
-</div>
-<section class="hero-extras text-center my-4 px-3" id="hero-extras">
-<h2 class="visually-hidden">Suggested Searches &amp; Badges</h2>
-<!-- Suggested Pills -->
-<div class="mb-4">
-<span class="me-2 fw-semibold text-dark fs-6">Suggested:</span>
-<a class="badge bg-primary text-white me-1" href="/?q=wireless+headphones+under+$50">wireless headphones under $50</a>
-<a class="badge bg-primary text-white me-1" href="/?q=prime+only+deals">Prime-only deals</a>
-<a class="badge bg-primary text-white" href="/?q=4+star+appliances">4+ star appliances</a>
-</div>
-<!-- Search Badge -->
-<p class="just-searched fst-italic mb-4 fw-semibold" id="justSearched">
-            🛒 Just searched: <strong>"wireless headphones under $50"</strong>
-</p><script>
-(function(){
-  const samples=[
-    "wireless headphones under $50",
-    "4★ kitchen gadgets",
-    "eco-friendly water bottle",
-    "gaming mouse lightning deal",
-    "Prime-only laptop deals",
-    "vegan protein powder 30% off"
-  ];
-  const el=document.getElementById('justSearched');
-  if(el && el.querySelector('strong')){
-    const q=samples[Math.floor(Math.random()*samples.length)];
-    el.querySelector('strong').textContent = '"' + q + '"';
-  }
-})();
-</script>
-<!-- CTA Button -->
-<a class="btn btn-primary btn-lg me-3 mb-3 shadow-sm" href="#amazon-search-form" style="border: none; font-weight: 600;">
-            Start Searching Now
-          </a>
-<!-- Trust Badge -->
-<span class="d-block d-sm-inline-block fw-semibold mb-3 text-dark">
-<span class="px-3 py-1 rounded-pill bg-info text-dark">
-              🔓 No login required
-            </span>
-</span>
-<!-- Trust Icons -->
-<div class="mt-4 d-flex flex-wrap justify-content-center align-items-center gap-3">
-<i aria-hidden="true" class="fas fa-shield-alt fa-2x text-dark" title="Norton Secured"></i>
-<i aria-hidden="true" class="fas fa-robot fa-2x text-dark" title="Built with AI"></i>
-<i aria-hidden="true" class="fas fa-lock fa-2x text-dark" title="SSL Secure"></i>
-<i aria-hidden="true" class="fab fa-cloudflare fa-2x text-dark" title="Protected by Cloudflare"></i>
-<i aria-hidden="true" class="fas fa-search-dollar fa-2x text-dark" title="Affiliate Supported"></i>
-</div>
-<div class="mt-3">
-<span class="fw-semibold fs-6 d-inline-block px-3 py-2 border-start border-4 border-info rounded bg-light text-dark">
-              🤖 Built with help from <strong style="color:#00BFFF;">ChatGPT</strong> — Free to use, no affiliation with Amazon
-            </span>
-</div>
-</section>
-<section class="intro-section text-center my-5 px-3 intro-section__container">
-<h2 class="fw-bold mb-3">🎯 Instantly Filter Amazon Products and Deals by Price, Rating &amp; More</h2>
-<p class="intro-section__text">Deal Shopper Pro is a free Amazon deal finder that lets you filter Amazon deals by price and rating, Prime-only status, coupons, and more. It’s a custom Amazon deal finder that uses advanced filters to help you find better deals fast.</p>
-</section>
-<!-- AMAZON SEARCH FORM -->
-<form id="amazon-search-form">
-<!-- STEP 1 -->
-<div class="container text-start mb-4">
-<!-- INTRODUCTION TEXT (Combined Hero + Alert) -->
-<div class="alert alert-info text-center fw-bold" role="alert" style="font-size: 1.1rem; max-width: 650px; margin: 2rem auto;">
-  <span aria-hidden="true" style="font-size: 1.5rem;">👋</span>
-  <strong>No more scrolling—discover hidden Amazon deals in just 6 simple steps!</strong><br/>
-  🚀 Fast, easy, and stress-free. <span class="hero-cta text-pulse">Start with Step 1 below.</span>
-</div>
+
 
 <h2>
   🔍
