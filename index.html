@@ -151,7 +151,48 @@
     text-decoration: underline;
     color: var(--banner-link-color);
   }
-</style><script type="application/ld+json">
+/*─────────────────────────────────────────────────────────────────────────
+  Navbar – Modern Blue with Hover Effects
+─────────────────────────────────────────────────────────────────────────*/
+.navbar-custom {
+  background-color: var(--navbar-bg) !important;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-custom .navbar-brand {
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-custom .navbar-brand i {
+  font-size: 1.2rem;
+}
+
+.navbar-custom .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+  color: var(--navbar-hover) !important;
+  text-decoration: none;
+}
+
+.navbar-custom .nav-link.active {
+  border-bottom: 2px solid var(--navbar-hover);
+}
+</style>
+  
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -186,7 +227,7 @@
 </script></head>
 <body>
 <!-- ✅ Navbar -->
-<nav aria-label="Site navigation" class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+<nav aria-label="Site navigation" class="navbar navbar-expand-lg navbar-custom">
 <div class="container">
 <a class="navbar-brand fw-bold text-warning d-flex align-items-center" href="/" style="font-size:1.5rem;">
 <i aria-hidden="true" class="bi bi-lightning-charge-fill me-2"></i>Deal Shopper Pro
@@ -194,9 +235,9 @@
 <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
 <div class="collapse navbar-collapse" id="navbarNav">
 <ul class="navbar-nav ms-auto">
-<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
 <li class="nav-item"><a class="nav-link" href="/how-it-works.html">How It Works</a></li>
-<li class="nav-item"><a class="nav-link active" href="/lightning-deals.html">Lightning Deals</a></li>
+<li class="nav-item"><a class="nav-link" href="/lightning-deals.html">Lightning Deals</a></li>
 <li class="nav-item"><a class="nav-link" href="/prime-only-deals.html">Prime‑Only Deals</a></li>
 <li class="nav-item"><a class="nav-link" href="/best-deals-today.html">Best Deals Today</a></li>
 <li class="nav-item"><a class="nav-link" href="/help.html">Help</a></li>
