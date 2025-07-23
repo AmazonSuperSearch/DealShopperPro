@@ -78,29 +78,40 @@
   /*─────────────────────────────────────────────────────────────────────────
     Variables
   ─────────────────────────────────────────────────────────────────────────*/
- :root {
-  --heading-size: 1.5rem;
+  :root {
+    --heading-size: 1.5rem;
 
-  --intro-max-width: 720px;
-  --intro-text-size: 1.15rem;
-  --intro-text-color: #333;
+    --intro-max-width: 720px;
+    --intro-text-size: 1.15rem;
+    --intro-text-color: #333;
 
-  --banner-bg: #FFF8E1;
-  --banner-border: #FFECB3;
-  --banner-radius: 12px;
-  --banner-padding-vertical: 1.5rem;
-  --banner-padding-horizontal: 1.5rem;
-  --banner-shadow: rgba(0, 0, 0, 0.04);
-  --banner-gap: 1rem;
-  --banner-heading-color: #5D4037;
-  --banner-body-color: #333;
-  --banner-link-color: #0056b3;
+    --banner-bg: #FFF8E1;
+    --banner-border: #FFECB3;
+    --banner-radius: 12px;
+    --banner-padding-vertical: 1.5rem;
+    --banner-padding-horizontal: 1.5rem;
+    --banner-shadow: rgba(0, 0, 0, 0.04);
+    --banner-gap: 1rem;
+    --banner-heading-color: #5D4037;
+    --banner-body-color: #333;
+    --banner-link-color: #0056b3;
+  }
 
- .navbar-custom {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-}
+  /* ✅ Navbar override — moved outside :root */
+  .navbar-custom {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
 
+  .navbar-custom a,
+  .navbar-custom .nav-link {
+    color: #ffffff !important;
+  }
+
+  .navbar-custom a:hover,
+  .navbar-custom .nav-link:hover {
+    color: #FFD700 !important;
+  }
 
 
   /*─────────────────────────────────────────────────────────────────────────
