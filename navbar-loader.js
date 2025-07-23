@@ -1,18 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Load the navbar
   fetch("/navbar.html")
     .then(response => response.text())
     .then(html => {
       const navContainer = document.getElementById("navbar-placeholder");
-      if (navContainer) navContainer.innerHTML = html;
-    });
+      if (navContainer) {
+        navContainer.innerHTML = html;
 
-  // Inject padding-top for fixed navbar
-  const style = document.createElement("style");
-  style.innerHTML = `
-    body {
-      padding-top: 70px;
-    }
-  `;
-  document.head.appendChild(style);
+        // Wait until DOM includes the inserted navbar
+        requestAnimationFrame(() => {
+          const navbar = document.querySelector(".navbar");
+          if (navbar) {
+            const height = navbar.offsetHeight;
+            document.body.style.paddingTop = height + "px";
+          }
+        });
+      }
+    });
 });
