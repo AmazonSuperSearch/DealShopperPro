@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
       if (navContainer) {
         navContainer.innerHTML = html;
 
-        // Wait until DOM includes the inserted navbar
-        requestAnimationFrame(() => {
+        // Wait for browser to reflow with the inserted navbar
+        setTimeout(() => {
           const navbar = document.querySelector(".navbar");
           if (navbar) {
             const height = navbar.offsetHeight;
             document.body.style.paddingTop = height + "px";
           }
-        });
+        }, 100); // slight delay to ensure rendering
       }
     });
 });
