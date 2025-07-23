@@ -37,8 +37,9 @@
 <!-- Preconnect for third-party origins -->
 <link crossorigin="" href="https://www.amazon.com" rel="preconnect">
 <link crossorigin="" href="https://www.youtube-nocookie.com" rel="preconnect">
-<link href="https://cdn.jsdelivr.net/npm/youtube-lite@1.5.0/dist/lite-yt-embed.css" rel="stylesheet">
-<script defer="" src="https://cdn.jsdelivr.net/npm/youtube-lite@1.5.0/dist/lite-yt-embed.js"></script>
+<!-- Lite YouTube Embed (Paul Irish's version) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.3/src/lite-yt-embed.css" />
+<script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.3/src/lite-yt-embed.js" type="module"></script>
 <!-- Inline critical CSS for the above-the-fold heading & core utilities -->
 <style>
     /* Heading style for LCP */
@@ -334,19 +335,17 @@
     <div class="my-4">
       <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6"> <!-- Limit width on desktop -->
-          <div
-            class="youtube-lite ratio ratio-16x9"
-            data-video-id="wpj1l1XUunw"
-            role="button"
-            aria-label="Click to load Lightning Deals demo video"
-            tabindex="0"
-            style="background-size:cover; background-position:center;">
-          </div>
+          <lite-youtube videoid="wpj1l1XUunw"
+                        playlabel="Play: Lightning Deals Demo"
+                        title="How to Filter Lightning Deals on Amazon in 30 Seconds (2025 Guide)"
+                        style="background-color: #000; border-radius: 12px; display: block; max-width: 100%; aspect-ratio: 16 / 9;">
+          </lite-youtube>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- 📘 FAQ Section -->
 <section class="bg-light py-5" aria-labelledby="faq-wrapper-heading">
@@ -740,5 +739,7 @@ document.getElementById('lightning-search-form')?.addEventListener('submit', fun
 </script>
 <script defer="" src="https://cdn.jsdelivr.net/npm/youtube-lite@1.5.0/dist/lite-yt-embed.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/youtube-lite@1.5.0/dist/lite-yt-embed.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.3/src/lite-yt-embed.js" type="module"></script>
+
 </body>
 </html>
