@@ -1,4 +1,3 @@
-<script>
 document.addEventListener("DOMContentLoaded", () => {
   const placeholder = document.getElementById("navbar-placeholder");
   if (!placeholder) return;
@@ -27,4 +26,3 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => console.error("Navbar load error:", err));
 });
-</script>
