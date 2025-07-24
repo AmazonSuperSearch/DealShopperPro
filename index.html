@@ -336,72 +336,115 @@
   <main>
 <div id="navbar-placeholder"></div>
   <script src="/navbar-loader.js" defer></script>
-<!-- ✅ Hero Section -->
-<header class="hero-banner py-5 text-center">
-  <div class="container">
-    <h1 class="hero-heading fw-bold mb-3">Advanced Amazon Search Tool – Smarter Filters, Faster Results</h1>
-    <p class="hero-tagline lead mb-2">⚡ Smarter Amazon Deal Searching — No Login Required</p>
-    <p class="hero-subtitle">Search Amazon using powerful filters for price range, Prime eligibility, ratings, discounts, and hidden coupons—all in one place.</p>
-    <p class="text-muted mx-auto" style="max-width: 720px;">
+<!-- ✅ Hero Section: Modern Look -->
+<header class="hero-banner py-5 text-center position-relative" style="background: linear-gradient(145deg, #0f2027, #203a43, #2c5364); color: #fff; font-family: 'Segoe UI', 'Roboto', 'Orbitron', sans-serif;">
+  <div class="container position-relative" style="z-index: 1;">
+
+    <h1 class="fw-bold mb-3 display-5 text-glow">
+      Advanced Amazon Search Tool – Smarter Filters, Faster Results
+    </h1>
+
+    <p class="lead mb-2 fs-4 text-accent">
+      ⚡ Smarter Amazon Deal Searching — No Login Required
+    </p>
+
+    <p class="fs-5 text-light mb-2">
+      Search Amazon using powerful filters for price range, Prime eligibility, ratings, discounts, and hidden coupons—all in one place.
+    </p>
+
+    <p class="text-muted mx-auto mb-4" style="max-width: 720px;">
       Whether you're looking for the best Amazon Lightning Deals, Prime-only discounts, or products under a specific budget, Deal Shopper Pro helps you shop smarter and save time with real-time filters.
     </p>
 
-
     <!-- Suggested Tags -->
-<div class="my-3">
-  <span class="fw-semibold text-dark">Suggested:</span>
-  <a href="#" class="badge bg-primary text-white me-1 suggested-tag" data-query="wireless headphones under $50">wireless headphones under $50</a>
-  <a href="#" class="badge bg-primary text-white me-1 suggested-tag" data-query="prime only deals">Prime-only deals</a>
-  <a href="#" class="badge bg-primary text-white suggested-tag" data-query="4 star appliances">4+ star appliances</a>
-</div>
+    <div class="my-3">
+      <span class="fw-semibold text-white me-2">Suggested:</span>
+      <a href="#" class="badge futuristic-badge suggested-tag" data-query="wireless headphones under $50">wireless headphones under $50</a>
+      <a href="#" class="badge futuristic-badge suggested-tag" data-query="prime only deals">Prime-only deals</a>
+      <a href="#" class="badge futuristic-badge suggested-tag" data-query="4 star appliances">4+ star appliances</a>
+    </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const tags = document.querySelectorAll('.suggested-tag');
-    const input = document.getElementById('mainSearchInput');
-    const form = document.getElementById('amazon-search-form');
-
-    tags.forEach(tag => {
-      tag.addEventListener('click', function (e) {
-        e.preventDefault();
-        const query = tag.getAttribute('data-query');
-        if (input) {
-          input.value = query;
-          input.focus();
-        }
-        if (form) {
-          form.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  });
-</script>
-
-    <!-- Dynamic Query -->
-    <p class="fst-italic fw-semibold mb-4" id="justSearched">🛒 Just searched: <strong>"wireless headphones under $50"</strong></p>
-    <script>
-      (function(){
-        const samples = [
-          "wireless headphones under $50",
-          "4★ kitchen gadgets",
-          "eco-friendly water bottle",
-          "gaming mouse lightning deal",
-          "Prime-only laptop deals",
-          "vegan protein powder 30% off"
-        ];
-        const el = document.getElementById('justSearched');
-        if(el && el.querySelector('strong')){
-          const q = samples[Math.floor(Math.random()*samples.length)];
-          el.querySelector('strong').textContent = '"' + q + '"';
-        }
-      })();
-    </script>
+    <p class="fst-italic fw-semibold mb-4 text-info" id="justSearched">
+      🛒 Just searched: <strong>"wireless headphones under $50"</strong>
+    </p>
 
     <!-- CTA Button + Badge -->
-<a class="btn btn-primary btn-lg shadow-sm fw-semibold me-2 mb-3" href="#amazon-search-form">Start Searching Now</a>
-<span class="d-block d-sm-inline-block fw-semibold mb-3 text-dark">
-  <span class="px-3 py-1 rounded-pill bg-info text-dark">🔓 No login required</span>
-</span>
+    <a class="btn futuristic-btn btn-lg fw-semibold me-2 mb-3" href="#amazon-search-form">
+      Start Searching Now
+    </a>
+    <span class="d-block d-sm-inline-block fw-semibold mb-3 text-white">
+      <span class="px-3 py-1 rounded-pill bg-light text-dark shadow-sm">🔓 No login required</span>
+    </span>
+  </div>
+</header>
+
+<!-- 💫 Modern Hero Styles -->
+<style>
+  .text-glow {
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  }
+
+  .text-accent {
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+  }
+
+  .futuristic-btn {
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 213, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .futuristic-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 213, 255, 0.6);
+  }
+
+  .futuristic-badge {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: #fff !important;
+    padding: 0.5em 0.9em;
+    border-radius: 2em;
+    font-size: 0.95rem;
+    box-shadow: 0 0 10px rgba(100, 100, 255, 0.3);
+    transition: transform 0.2s ease;
+  }
+
+  .futuristic-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(100, 100, 255, 0.5);
+  }
+
+  @media (max-width: 576px) {
+    .futuristic-btn {
+      width: 100%;
+    }
+  }
+</style>
+
+<!-- 🔄 Just Searched Script (Unchanged) -->
+<script>
+  (function(){
+    const samples = [
+      "wireless headphones under $50",
+      "4★ kitchen gadgets",
+      "eco-friendly water bottle",
+      "gaming mouse lightning deal",
+      "Prime-only laptop deals",
+      "vegan protein powder 30% off"
+    ];
+    const el = document.getElementById('justSearched');
+    if(el && el.querySelector('strong')){
+      const q = samples[Math.floor(Math.random()*samples.length)];
+      el.querySelector('strong').textContent = '"' + q + '"';
+    }
+  })();
+</script>
+
 
 <!-- YouTube Section -->
 <div class="container text-center my-5">
