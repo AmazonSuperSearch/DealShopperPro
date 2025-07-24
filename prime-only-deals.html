@@ -616,55 +616,63 @@
 }
 </script>
 <script>
-document.getElementById('prime-search-form')?.addEventListener('submit', function(e) {
-  e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('prime-search-form');
+  const qInput = document.getElementById('q-prime');
+  const lowInput = document.getElementById('low-prime');
+  const highInput = document.getElementById('high-prime');
+  const link = document.getElementById('primeAffiliateLink');
 
-  const q = document.getElementById('q-prime').value.trim();
-  const low = document.getElementById('low-prime').value;
-  const high = document.getElementById('high-prime').value;
-
-  if (!q) {
-    alert('Enter a search term.');
+  if (!form || !qInput || !lowInput || !highInput || !link) {
+    console.warn('One or more Prime search elements are missing.');
     return;
   }
 
-  const toCents = (val) => {
-    const cents = parseInt(parseFloat(val) * 100);
-    return isNaN(cents) ? null : cents;
-  };
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
 
-  const lowCents = toCents(low);
-  const highCents = toCents(high);
+    const q = qInput.value.trim();
+    const low = lowInput.value;
+    const high = highInput.value;
 
-  let url = `https://www.amazon.com/s?k=${encodeURIComponent(q)}&rh=p_85:2470955011`;
+    if (!q) {
+      alert('Enter a search term.');
+      return;
+    }
 
-  if (lowCents !== null && highCents !== null) {
-    url += `,p_36:${lowCents}-${highCents}`;
-  } else if (lowCents !== null) {
-    url += `,p_36:${lowCents}-`;
-  } else if (highCents !== null) {
-    url += `,p_36:0-${highCents}`;
-  }
+    const toCents = (val) => {
+      const cleaned = val.replace(/[^\d.]/g, ''); // allow $12.99 or 12.99
+      const cents = Math.round(parseFloat(cleaned) * 100);
+      return isNaN(cents) ? null : cents;
+    };
 
-  url += '&tag=dealshopperpr-20';
+    const lowCents = toCents(low);
+    const highCents = toCents(high);
 
-  const link = document.getElementById('primeAffiliateLink');
+    let url = `https://www.amazon.com/s?k=${encodeURIComponent(q)}&rh=p_85:2470955011`;
 
-  if (link) {
+    if (lowCents !== null && highCents !== null) {
+      url += `,p_36:${lowCents}-${highCents}`;
+    } else if (lowCents !== null) {
+      url += `,p_36:${lowCents}-`;
+    } else if (highCents !== null) {
+      url += `,p_36:0-${highCents}`;
+    }
+
+    url += '&tag=dealshopperpr-20';
+
     link.href = url;
     link.classList.remove('d-none');
     link.focus();
 
-    // Optional: screen reader accessibility enhancement
     const live = document.createElement('div');
     live.setAttribute('aria-live', 'polite');
     live.classList.add('visually-hidden');
     live.textContent = 'Matching Prime Deals button is now available.';
     link.parentNode.insertBefore(live, link.nextSibling);
-  } else {
-    console.warn('Affiliate link element not found.');
-  }
+  });
 });
 </script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
