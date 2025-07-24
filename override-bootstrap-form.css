@@ -1,31 +1,29 @@
-/* /override-bootstrap-form.css */
-
-.form-control,
-.form-select {
+body .form-control,
+body .form-select {
   border: none !important;
   border-radius: 12px !important;
   background-color: #2b2e38 !important;
   color: #fff !important;
   padding: 0.6rem 1rem !important;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.5) !important;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5) !important;
 }
 
-.form-control::placeholder {
+body .form-control::placeholder {
   color: #ccc !important;
   opacity: 1 !important;
 }
 
-.form-select option {
+body .form-select option {
   background-color: #2b2e38 !important;
   color: #fff !important;
 }
 
-.form-check-input:checked {
-  background-color: #0d6efd !important;
-  border-color: #0d6efd !important;
+body .form-check-input:checked {
+  background-color: #0dd6fd !important;
+  border-color: #0dd6fd !important;
 }
 
-label,
-.form-label {
+body label,
+body .form-label {
   color: #eee !important;
 }
