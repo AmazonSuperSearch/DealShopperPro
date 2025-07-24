@@ -51,3 +51,26 @@
 .bg-light label,
 .bg-light .form-text,
 .bg-l
+
+/* Fix the unique showcase box */
+.example-showcase-card {
+  background-color: #f8f9fa; /* Soft light gray */
+  color: #212529;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.example-showcase-card p,
+.example-showcase-card li {
+  color: #212529 !important;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.example-showcase-card ul {
+  padding-left: 1.25rem;
+  margin-top: 1rem;
+}
+
