@@ -68,14 +68,16 @@
 <link rel="stylesheet" href="/navbar.css">
   
 <!-- Frameworks -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"></noscript>
 
-<!-- ✅ Override styles (must come last) -->
-<link rel="stylesheet" href="/override-bootstrap-form.css">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"></noscript>
+
   <style>
-    
   :root {
     --heading-size: 1.5rem;
     --intro-max-width: 720px;
@@ -225,7 +227,8 @@
     filter: brightness(1.15);
   }
 </style>
-  
+
+
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -333,150 +336,74 @@
   <main>
 <div id="navbar-placeholder"></div>
   <script src="/navbar-loader.js" defer></script>
-<!-- ✅ Hero Section: Modern Look -->
-<header class="hero-banner py-5 text-center position-relative" style="background: linear-gradient(145deg, #0f2027, #203a43, #2c5364); color: #fff; font-family: 'Segoe UI', 'Roboto', 'Orbitron', sans-serif;">
-  <div class="container position-relative" style="z-index: 1;">
-
-    <h1 class="fw-bold mb-3 display-5 text-glow">
-      Advanced Amazon Search Tool – Smarter Filters, Faster Results
-    </h1>
-
-    <p class="lead mb-2 fs-4 text-accent">
-      ⚡ Smarter Amazon Deal Searching — No Login Required
-    </p>
-
-    <p class="fs-5 text-light mb-2">
-      Search Amazon using powerful filters for price range, Prime eligibility, ratings, discounts, and hidden coupons—all in one place.
-    </p>
-
-    <p class="text-muted mx-auto mb-4" style="max-width: 720px;">
+<!-- ✅ Hero Section -->
+<header class="hero-banner py-5 text-center">
+  <div class="container">
+    <h1 class="hero-heading fw-bold mb-3">Advanced Amazon Search Tool – Smarter Filters, Faster Results</h1>
+    <p class="hero-tagline lead mb-2">⚡ Smarter Amazon Deal Searching — No Login Required</p>
+    <p class="hero-subtitle">Search Amazon using powerful filters for price range, Prime eligibility, ratings, discounts, and hidden coupons—all in one place.</p>
+    <p class="text-muted mx-auto" style="max-width: 720px;">
       Whether you're looking for the best Amazon Lightning Deals, Prime-only discounts, or products under a specific budget, Deal Shopper Pro helps you shop smarter and save time with real-time filters.
     </p>
 
+
     <!-- Suggested Tags -->
-    <div class="my-3">
-      <span class="fw-semibold text-white me-2">Suggested:</span>
-      <a href="#" class="badge futuristic-badge suggested-tag" data-query="wireless headphones under $50">wireless headphones under $50</a>
-      <a href="#" class="badge futuristic-badge suggested-tag" data-query="prime only deals">Prime-only deals</a>
-      <a href="#" class="badge futuristic-badge suggested-tag" data-query="4 star appliances">4+ star appliances</a>
-    </div>
+<div class="my-3">
+  <span class="fw-semibold text-dark">Suggested:</span>
+  <a href="#" class="badge bg-primary text-white me-1 suggested-tag" data-query="wireless headphones under $50">wireless headphones under $50</a>
+  <a href="#" class="badge bg-primary text-white me-1 suggested-tag" data-query="prime only deals">Prime-only deals</a>
+  <a href="#" class="badge bg-primary text-white suggested-tag" data-query="4 star appliances">4+ star appliances</a>
+</div>
 
-    <p class="fst-italic fw-semibold mb-4 text-info" id="justSearched">
-      🛒 Just searched: <strong>"wireless headphones under $50"</strong>
-    </p>
-
-    <!-- CTA Button + Badge -->
-    <a class="btn futuristic-btn btn-lg fw-semibold me-2 mb-3" href="#amazon-search-form">
-      Start Searching Now
-    </a>
-    <span class="d-block d-sm-inline-block fw-semibold mb-3 text-white">
-      <span class="px-3 py-1 rounded-pill bg-light text-dark shadow-sm">🔓 No login required</span>
-    </span>
-  </div>
-</header>
-
-<!-- 💫 Modern Hero Styles -->
-<style>
-  .text-glow {
-    text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
-  }
-
-  .text-accent {
-    background: linear-gradient(90deg, #00f2fe, #4facfe);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 600;
-  }
-
-  .futuristic-btn {
-    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
-    color: #fff;
-    border: none;
-    box-shadow: 0 0 15px rgba(0, 213, 255, 0.4);
-    transition: all 0.3s ease-in-out;
-  }
-
-  .futuristic-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 213, 255, 0.6);
-  }
-
-  .futuristic-badge {
-    background: linear-gradient(90deg, #6a11cb, #2575fc);
-    color: #fff !important;
-    padding: 0.5em 0.9em;
-    border-radius: 2em;
-    font-size: 0.95rem;
-    box-shadow: 0 0 10px rgba(100, 100, 255, 0.3);
-    transition: transform 0.2s ease;
-  }
-
-  .futuristic-badge:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(100, 100, 255, 0.5);
-  }
-
-  @media (max-width: 576px) {
-    .futuristic-btn {
-      width: 100%;
-    }
-  }
-</style>
-
-<!-- 🔄 Just Searched Script (Unchanged) -->
 <script>
-  (function(){
-    const samples = [
-      "wireless headphones under $50",
-      "4★ kitchen gadgets",
-      "eco-friendly water bottle",
-      "gaming mouse lightning deal",
-      "Prime-only laptop deals",
-      "vegan protein powder 30% off"
-    ];
-    const el = document.getElementById('justSearched');
-    if(el && el.querySelector('strong')){
-      const q = samples[Math.floor(Math.random()*samples.length)];
-      el.querySelector('strong').textContent = '"' + q + '"';
-    }
-  })();
+  document.addEventListener('DOMContentLoaded', function () {
+    const tags = document.querySelectorAll('.suggested-tag');
+    const input = document.getElementById('mainSearchInput');
+    const form = document.getElementById('amazon-search-form');
+
+    tags.forEach(tag => {
+      tag.addEventListener('click', function (e) {
+        e.preventDefault();
+        const query = tag.getAttribute('data-query');
+        if (input) {
+          input.value = query;
+          input.focus();
+        }
+        if (form) {
+          form.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  });
 </script>
 
-    <!-- Icons -->
-<!-- Modern Icons with Tooltips -->
-<div class="text-center mb-4">
-  <i class="bi bi-shield-check text-success fs-1 me-3 icon-modern" data-bs-toggle="tooltip" data-bs-placement="top" title="Secure Protection"></i>
-  <i class="bi bi-robot text-warning fs-1 me-3 icon-modern" data-bs-toggle="tooltip" data-bs-placement="top" title="AI-Powered Search"></i>
-  <i class="bi bi-lock-fill text-success fs-1 me-3 icon-modern" data-bs-toggle="tooltip" data-bs-placement="top" title="Private & Safe"></i>
-  <i class="bi bi-cloud text-primary fs-1 icon-modern" data-bs-toggle="tooltip" data-bs-placement="top" title="Cloud-Based Tool"></i>
-</div>
+    <!-- Dynamic Query -->
+    <p class="fst-italic fw-semibold mb-4" id="justSearched">🛒 Just searched: <strong>"wireless headphones under $50"</strong></p>
+    <script>
+      (function(){
+        const samples = [
+          "wireless headphones under $50",
+          "4★ kitchen gadgets",
+          "eco-friendly water bottle",
+          "gaming mouse lightning deal",
+          "Prime-only laptop deals",
+          "vegan protein powder 30% off"
+        ];
+        const el = document.getElementById('justSearched');
+        if(el && el.querySelector('strong')){
+          const q = samples[Math.floor(Math.random()*samples.length)];
+          el.querySelector('strong').textContent = '"' + q + '"';
+        }
+      })();
+    </script>
 
+    <!-- CTA Button + Badge -->
+<a class="btn btn-primary btn-lg shadow-sm fw-semibold me-2 mb-3" href="#amazon-search-form">Start Searching Now</a>
+<span class="d-block d-sm-inline-block fw-semibold mb-3 text-dark">
+  <span class="px-3 py-1 rounded-pill bg-info text-dark">🔓 No login required</span>
+</span>
 
-   <!-- Attribution -->
-<div class="mt-4 text-center">
-  <div class="d-inline-block px-4 py-3 rounded-3 shadow-sm text-white attribution-glow">
-    🤖 Built with help from 
-    <strong style="color:#00d4ff;">ChatGPT</strong> — Free to use, no affiliation with Amazon
-  </div>
-</div>
-
-<!-- 💫 Attribution Style -->
-<style>
-  .attribution-glow {
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
-    border-left: 4px solid #00d4ff;
-    font-weight: 600;
-    font-size: 0.95rem;
-    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .attribution-glow:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
-  }
-</style>
-    <!-- YouTube Section -->
+<!-- YouTube Section -->
 <div class="container text-center my-5">
   <h2 class="h5 fw-bold mb-4">🎥 How to Use Deal Shopper Pro</h2>
 
@@ -490,28 +417,51 @@
     </div>
   </div>
 </div>
+
+
+
+
+    <!-- Icons -->
+<!-- Modern Icons with Tooltips -->
+<div class="text-center mb-4">
+  <i class="bi bi-shield-check text-success fs-1 me-3 icon-modern" data-bs-toggle="tooltip" data-bs-placement="top" title="Secure Protection"></i>
+  <i class="bi bi-robot text-warning fs-1 me-3 icon-modern" data-bs-toggle="tooltip" data-bs-placement="top" title="AI-Powered Search"></i>
+  <i class="bi bi-lock-fill text-success fs-1 me-3 icon-modern" data-bs-toggle="tooltip" data-bs-placement="top" title="Private & Safe"></i>
+  <i class="bi bi-cloud text-primary fs-1 icon-modern" data-bs-toggle="tooltip" data-bs-placement="top" title="Cloud-Based Tool"></i>
+</div>
+
+
+    <!-- Attribution -->
+    <div class="mt-3">
+      <span class="fw-semibold fs-6 d-inline-block px-3 py-2 border-start border-4 border-primary text-dark">
+        🤖 Built with help from <strong style="color:#0056b3;">ChatGPT</strong> — Free to use, no affiliation with Amazon
+      </span>
+    </div>
+  </div>
 </header>
 <!-- AMAZON SEARCH FORM -->
-<form class="bg-dark text-light rounded-4 shadow-lg p-4 border border-primary-subtle" id="amazon-search-form">
+<form id="amazon-search-form">
 <!-- STEP 1 -->
-<div class="container text-start mb-4" id="step1">
-<h2 class="fw-bold mb-3">🔍 ✅ Step 1: Start Your Product Search</h2>
-<p class="text-muted mb-3">Enter a keyword, ASIN, ISBN or UPC.</p>
-<div class="card bg-gradient border-0 shadow-sm p-3">
-<div class="row g-3">
-<div class="col-12">
-<div class="input-group">
-<button aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button">
+<div class="container text-start mb-4">
+  <h2 class="fw-bold mb-3">🔍 ✅ Step 1: Start Your Product Search</h2>
+  <p class="text-muted mb-3">Enter a keyword, ASIN, ISBN or UPC.</p>
+  <div class="card p-3">
+    <div class="row g-3">
+      <div class="col-12">
+        <div class="input-group">
+          <button aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button">
             🎤
           </button>
-<input aria-label="Main search input" autocomplete="off" class="form-control rounded-pill border-0 shadow-sm" id="mainSearchInput" name="q" placeholder="Example: wireless headphones, lightning deals" type="text"/>
+          <input aria-label="Main search input" autocomplete="off" class="form-control" id="mainSearchInput" name="q"
+            placeholder="Example: wireless headphones, lightning deals" type="text" >
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-</div>
+
 <!-- STEP 2 -->
-<div class="container text-start mb-4" id="step2">
+<div class="container text-start mb-4">
 <h2>
   💰
   ✅ Step 2: Set Your Price Range
@@ -519,13 +469,13 @@
 <p class="text-muted mb-3">
  Select your currency, then set a minimum and maximum price range.
  </p>
-<div class="card bg-gradient border-0 shadow-sm p-3">
+<div class="card p-3">
 <div class="row g-3 align-items-end">
 <div class="col-12 col-lg-2">
-<label class="form-label text-dark" for="currencySelect">
-  Currency
-</label>
-<select aria-label="Select currency" class="form-select rounded-pill border-0 shadow-sm" id="currencySelect" name="currency">
+<label class="form-label" for="currencySelect">
+     Currency
+    </label>
+<select aria-label="Select currency" class="form-select" id="currencySelect" name="currency">
 <option selected="" value="usd">
       USD ($)
      </option>
@@ -544,31 +494,31 @@
 </select>
 </div>
 <div class="col-12 col-lg-5">
-<label class="form-label text-dark" for="minPrice">
-  Minimum Price
-</label>
+<label class="form-label" for="minPrice">
+     Minimum Price
+    </label>
 <div class="input-group">
 <span class="input-group-text" id="minPriceAddon">
       $
      </span>
-<input aria-describedby="minPriceAddon" class="form-control rounded-pill border-0 shadow-sm" id="minPrice" name="min-price" placeholder="Minimum $" step="0.01" type="number"/>
+<input aria-describedby="minPriceAddon" class="form-control" id="minPrice" name="min-price" placeholder="Minimum $" step="0.01" type="number">
 </div>
 </div>
 <div class="col-12 col-lg-5">
-<label class="form-label text-dark" for="maxPrice">
-  Maximum Price
-</label>
+<label class="form-label" for="maxPrice">
+     Maximum Price
+    </label>
 <div class="input-group">
 <span class="input-group-text" id="maxPriceAddon">
       $
      </span>
-<input aria-describedby="maxPriceAddon" class="form-control rounded-pill border-0 shadow-sm" id="maxPrice" name="max-price" placeholder="Maximum $" step="0.01" type="number"/>
+<input aria-describedby="maxPriceAddon" class="form-control" id="maxPrice" name="max-price" placeholder="Maximum $" step="0.01" type="number">
 </div>
 </div></div>
 </div>
 </div>
 <!-- STEP 3 -->
-<div class="container text-start mb-4" id="step3">
+<div class="container text-start mb-4">
 <h2>
   ⭐
   ✅ Step 3: Refine by Discount, Rating &amp; and Sort Order
@@ -576,13 +526,13 @@
 <p class="text-muted mb-3">
   Select a % off,  minimum star rating and sort order.
  </p>
-<div class="card bg-gradient border-0 shadow-sm p-3">
+<div class="card p-3">
 <div class="row g-3">
 <div class="col-12 col-lg-4">
-<label class="form-label text-dark" for="percentOff">
-  % Off
-</label>
-<select aria-label="Select percentage off" class="form-select rounded-pill border-0 shadow-sm" id="percentOff" name="percent-off">
+<label class="form-label" for="percentOff">
+     % Off
+    </label>
+<select aria-label="Select percentage off" class="form-select" id="percentOff" name="percent-off">
 <option value="">
       Any
      </option>
@@ -613,10 +563,10 @@
 </select>
 </div>
 <div class="col-12 col-lg-4">
-<label class="form-label text-dark" for="minRating">
-  Customer Rating
-</label>
-<select aria-label="Select minimum customer rating" class="form-select rounded-pill border-0 shadow-sm" id="minRating" name="min-rating">
+<label class="form-label" for="minRating">
+     Customer Rating
+    </label>
+<select aria-label="Select minimum customer rating" class="form-select" id="minRating" name="min-rating">
 <option value="">
       Any
      </option>
@@ -638,10 +588,10 @@
 </select>
 </div>
 <div class="col-12 col-lg-4">
-<label class="form-label text-dark" for="sortOrder">
-  Sort By
-</label>
-<select aria-label="Select sort order" class="form-select rounded-pill border-0 shadow-sm" id="sortOrder" name="sort">
+<label class="form-label" for="sortOrder">
+     Sort By
+    </label>
+<select aria-label="Select sort order" class="form-select" id="sortOrder" name="sort">
 <option value="">
       Relevance
      </option>
@@ -663,7 +613,7 @@
 </div>
 </div>
 <!-- STEP 4 -->
-<div class="container text-start mb-4" id="step4">
+<section class="container text-start mb-4">
 <h2>
   🏷️
   ✅ Step 4: Filter by Brand
@@ -671,16 +621,16 @@
 <p class="text-muted mb-3">
   List brands to include (comma-separated).
  </p>
-<div class="card bg-gradient border-0 shadow-sm border-success shadow-sm mb-4 p-3">
+<div class="card border-success shadow-sm mb-4 p-3">
 <div class="row g-3">
 <div class="col-12 col-md-6">
-<label class="form-label text-dark" for="brandInclude">
-  Include Brands
-</label>
-<input aria-label="Include brands" class="form-control rounded-pill border-0 shadow-sm" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text"/>
+<label class="form-label" for="brandInclude">
+     Include Brands
+    </label>
+<input aria-label="Include brands" class="form-control" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text">
 <div class="form-check mt-2">
-<input aria-label="Match only these brands" class="form-check-input rounded-circle border-info" id="includeOnly" name="include-only" type="checkbox"/>
-<label class="form-check-label text-info" for="includeOnly">
+<input aria-label="Match only these brands" class="form-check-input" id="includeOnly" name="include-only" type="checkbox">
+<label class="form-check-label" for="includeOnly">
       Match only these brands
      </label>
 </div>
@@ -700,181 +650,183 @@
 <p class="text-muted mb-3">
   Prime‑eligible, Lightning Deals, Free Shipping, In Stock, Eco‑Friendly, Coupons, and more.
  </p>
-<div class="card bg-gradient border-0 shadow-sm mb-4 p-3">
+<div class="card mb-4 p-3">
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
 <div class="form-check">
-<input aria-label="Prime Only" class="form-check-input rounded-circle border-info" id="primeOnly" name="prime-only" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="primeOnly">
+<input aria-label="Prime Only" class="form-check-input" id="primeOnly" name="prime-only" type="checkbox">
+<label class="form-check-label" for="primeOnly">
      🤩 Prime Only
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Filter Amazon Lightning Deals" class="form-check-input rounded-circle border-info" id="lightningDeals" name="lightning-deals" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="lightningDeals">
+<input aria-label="Filter Amazon Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox">
+<label class="form-check-label" for="lightningDeals">
     ⚡ Lightning Deals
   </label>
 </div>
 <div class="form-check">
-<input aria-label="Today's Deals" class="form-check-input rounded-circle border-info" id="todaysDeals" name="todays-deals" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="todaysDeals">
+<input aria-label="Today's Deals" class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox">
+<label class="form-check-label" for="todaysDeals">
      🔥 Today's Deals
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Free Shipping" class="form-check-input rounded-circle border-info" id="freeShipping" name="free-shipping" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="freeShipping">
+<input aria-label="Free Shipping" class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox">
+<label class="form-check-label" for="freeShipping">
      🚚 Free Shipping
     </label>
 </div>
 <div class="form-check">
-<input aria-label="In Stock" class="form-check-input rounded-circle border-info" id="inStock" name="in-stock" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="inStock">📦 In Stock</label>
+<input aria-label="In Stock" class="form-check-input" id="inStock" name="in-stock" type="checkbox">
+<label class="form-check-label" for="inStock">📦 In Stock</label>
 </div>
 <div class="form-check">
-<input aria-label="Fulfilled by Amazon" class="form-check-input rounded-circle border-info" id="fbaOnly" name="fba-only" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="fbaOnly">📦 Fulfilled by Amazon (FBA)</label>
+<input aria-label="Fulfilled by Amazon" class="form-check-input" id="fbaOnly" name="fba-only" type="checkbox">
+<label class="form-check-label" for="fbaOnly">📦 Fulfilled by Amazon (FBA)</label>
 </div>
 <div class="form-check">
-<input aria-label="Coupons" class="form-check-input rounded-circle border-info" id="coupons" name="coupons" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="coupons">
+<input aria-label="Coupons" class="form-check-input" id="coupons" name="coupons" type="checkbox">
+<label class="form-check-label" for="coupons">
      🏷️ Coupons
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Subscribe &amp; Save" class="form-check-input rounded-circle border-info" id="subscribeSave" name="subscribe-save" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="subscribeSave">🔁 Subscribe &amp; Save</label>
+<input aria-label="Subscribe &amp; Save" class="form-check-input" id="subscribeSave" name="subscribe-save" type="checkbox">
+<label class="form-check-label" for="subscribeSave">🔁 Subscribe &amp; Save</label>
 </div>
 <div class="form-check">
-<input aria-label="Amazon Brands" class="form-check-input rounded-circle border-info" id="amazonBrands" name="amazon-brands" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="amazonBrands">🏷️ Amazon Brands</label>
+<input aria-label="Amazon Brands" class="form-check-input" id="amazonBrands" name="amazon-brands" type="checkbox">
+<label class="form-check-label" for="amazonBrands">🏷️ Amazon Brands</label>
 </div>
 <div class="form-check">
-<input aria-label="Eco-Friendly" class="form-check-input rounded-circle border-info" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="ecoFriendlyToggle">
+<input aria-label="Eco-Friendly" class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox">
+<label class="form-check-label" for="ecoFriendlyToggle">
      ♻️ Eco-Friendly
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Biodegradable" class="form-check-input rounded-circle border-info" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="biodegradablePackaging">
+<input aria-label="Biodegradable" class="form-check-input" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox">
+<label class="form-check-label" for="biodegradablePackaging">
      📦 Biodegradable
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Vegan" class="form-check-input rounded-circle border-info" id="veganProducts" name="vegan-products" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="veganProducts">
+<input aria-label="Vegan" class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox">
+<label class="form-check-label" for="veganProducts">
      🌱 Vegan
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Organic" class="form-check-input rounded-circle border-info" id="organicProducts" name="organic-products" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="organicProducts">
+<input aria-label="Organic" class="form-check-input" id="organicProducts" name="organic-products" type="checkbox">
+<label class="form-check-label" for="organicProducts">
      🌿 Organic
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Carbon-Neutral Delivery" class="form-check-input rounded-circle border-info" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="carbonNeutralDelivery">
+<input aria-label="Carbon-Neutral Delivery" class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox">
+<label class="form-check-label" for="carbonNeutralDelivery">
      🚴 Carbon-Neutral Delivery
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Cruelty-Free" class="form-check-input rounded-circle border-info" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="crueltyFreeToggle">
+<input aria-label="Cruelty-Free" class="form-check-input" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox">
+<label class="form-check-label" for="crueltyFreeToggle">
      🐰 Cruelty-Free
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Low EMF" class="form-check-input rounded-circle border-info" id="lowEmfDevices" name="low-emf-devices" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="lowEmfDevices">
+<input aria-label="Low EMF" class="form-check-input" id="lowEmfDevices" name="low-emf-devices" type="checkbox">
+<label class="form-check-label" for="lowEmfDevices">
      📶 Low EMF
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Allergy-Friendly" class="form-check-input rounded-circle border-info" id="allergyFriendly" name="allergy-friendly" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="allergyFriendly">
+<input aria-label="Allergy-Friendly" class="form-check-input" id="allergyFriendly" name="allergy-friendly" type="checkbox">
+<label class="form-check-label" for="allergyFriendly">
      🤧 Allergy-Friendly
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Warehouse / Refurbished" class="form-check-input rounded-circle border-info" id="warehouseRefurb" name="warehouse-refurb" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="warehouseRefurb">📦 Warehouse &amp; Refurbished</label>
+<input aria-label="Warehouse / Refurbished" class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox">
+<label class="form-check-label" for="warehouseRefurb">📦 Warehouse &amp; Refurbished</label>
 </div>
 <div class="form-check">
-<input aria-label="Gifts for Her" class="form-check-input rounded-circle border-info" id="giftsForHer" name="gifts-for-her" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="giftsForHer">
+<input aria-label="Gifts for Her" class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox">
+<label class="form-check-label" for="giftsForHer">
      🎀 Gifts for Her
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Gifts for Him" class="form-check-input rounded-circle border-info" id="giftsForHim" name="gifts-for-him" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="giftsForHim">
+<input aria-label="Gifts for Him" class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox">
+<label class="form-check-label" for="giftsForHim">
      👔 Gifts for Him
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Gifts for Dad" class="form-check-input rounded-circle border-info" id="giftsForDad" name="gifts-for-dad" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="giftsForDad">
+<input aria-label="Gifts for Dad" class="form-check-input" id="giftsForDad" name="gifts-for-dad" type="checkbox">
+<label class="form-check-label" for="giftsForDad">
      👨 Gifts for Dad
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Gifts for Mom" class="form-check-input rounded-circle border-info" id="giftsForMom" name="gifts-for-mom" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="giftsForMom">
+<input aria-label="Gifts for Mom" class="form-check-input" id="giftsForMom" name="gifts-for-mom" type="checkbox">
+<label class="form-check-label" for="giftsForMom">
      👩 Gifts for Mom
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Gifts for Kids" class="form-check-input rounded-circle border-info" id="giftsForKids" name="gifts-for-kids" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="giftsForKids">
+<input aria-label="Gifts for Kids" class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox">
+<label class="form-check-label" for="giftsForKids">
      🧒 Gifts for Kids
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Birthday Gifts" class="form-check-input rounded-circle border-info" id="birthdayGifts" name="birthday-gifts" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="birthdayGifts">
+<input aria-label="Birthday Gifts" class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox">
+<label class="form-check-label" for="birthdayGifts">
      🎂 Birthday Gifts
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Anniversary Gifts" class="form-check-input rounded-circle border-info" id="anniversaryGifts" name="anniversary-gifts" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="anniversaryGifts">
+<input aria-label="Anniversary Gifts" class="form-check-input" id="anniversaryGifts" name="anniversary-gifts" type="checkbox">
+<label class="form-check-label" for="anniversaryGifts">
      💝 Anniversary Gifts
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Holiday Gift Picks" class="form-check-input rounded-circle border-info" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="holidayGiftPicks">
+<input aria-label="Holiday Gift Picks" class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox">
+<label class="form-check-label" for="holidayGiftPicks">
      🎄 Holiday Gift Picks
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Small Business" class="form-check-input rounded-circle border-info" id="smallBusiness" name="small-business" type="checkbox"/>
-<label class="form-check-label text-info text-dark" for="smallBusiness">🏪 Small Business</label>
+<input aria-label="Small Business" class="form-check-input" id="smallBusiness" name="small-business" type="checkbox">
+<label class="form-check-label" for="smallBusiness">🏪 Small Business</label>
 </div>
 </div>
 </div>
 </section>
 <!-- ✅ Step 6: View Your Results -->
-<section class="container text-start mb-5 border-top border-secondary pt-4">
-<h2 class="text-primary-emphasis fw-bold">🚀 Step 6: View Your Results</h2>
-<p class="text-muted mb-3">
+<section class="container text-start mb-5">
+  <h2>🚀 Step 6: View Your Results</h2>
+  <p class="text-muted mb-3">
     You’re all set! Hit the button below to open the marketplace with your filters applied.
   </p>
-<div class="text-center">
-<button aria-label="View Filtered Results" class="btn btn-primary btn-lg w-100 pulse-glow" form="amazon-search-form" id="search-button" type="submit">
+
+  <div class="text-center">
+    <button aria-label="View Filtered Results" class="btn btn-primary btn-lg w-100 pulse-glow" form="amazon-search-form" id="search-button" type="submit">
       🔎 View Filtered Results
     </button>
-<!-- Warning Message -->
-<p class="mt-3 text-center fw-bold small" role="alert" style="color:#b3541e;">
+
+    <!-- Warning Message -->
+    <p class="mt-3 text-center fw-bold small" style="color:#b3541e;" role="alert">
       ⚠️ Too many filters may return no results.
     </p>
-</div>
-<p class="text-center small mt-4" style="color: #666;">
+  </div>
+
+  <p class="text-center small mt-4" style="color: #666;">
     Disclosure: As an Amazon Associate, we earn from qualifying purchases. This helps support our free tools—thank you!
   </p>
-</section></form>
-
+</section>
 
 
 <section class="container my-5" id="why-dsp-is-best">
