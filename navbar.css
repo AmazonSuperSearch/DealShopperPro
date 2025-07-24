@@ -1,0 +1,27 @@
+/* navbar.css – shared dark navbar styling */
+
+.navbar-custom {
+  background-color: #000 !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1030;
+}
+
+.navbar-custom .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: #FFD700 !important;
+}
+
+.navbar-brand.text-warning {
+  color: #FFD700 !important;
+}
+
+.navbar-custom * {
+  color: inherit;
+}
