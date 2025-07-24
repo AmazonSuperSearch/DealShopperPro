@@ -4,7 +4,7 @@
 .dark-section textarea.form-control {
   color: #fff !important;
   background-color: #2b2e38 !important;
-  border: none !important;
+  border: 1px solid #444 !important;
   border-radius: 12px !important;
   padding: 0.6rem 1rem !important;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5) !important;
@@ -50,11 +50,14 @@
 .bg-light .form-label,
 .bg-light label,
 .bg-light .form-text,
-.bg-l
+.bg-light .text-muted,
+.bg-light .form-check-label {
+  color: #212529 !important;
+}
 
-/* Fix the unique showcase box */
+/* ✅ Fix the unique showcase box */
 .example-showcase-card {
-  background-color: #f8f9fa; /* Soft light gray */
+  background-color: #f8f9fa;
   color: #212529;
   border-radius: 1rem;
   padding: 1.5rem;
@@ -73,4 +76,3 @@
   padding-left: 1.25rem;
   margin-top: 1rem;
 }
-
