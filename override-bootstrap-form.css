@@ -55,24 +55,47 @@
   color: #212529 !important;
 }
 
-/* ✅ Fix the unique showcase box */
 .example-showcase-card {
-  background-color: #f8f9fa;
-  color: #212529;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  background-color: #f8f9fa !important;
+  color: #212529 !important;
+  border: 2px solid #dee2e6 !important; /* 👈 visible border */
+  border-radius: 1rem !important;
+  padding: 1.5rem !important;
+  margin-bottom: 2rem !important;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.05) !important;
 }
 
 .example-showcase-card p,
 .example-showcase-card li {
   color: #212529 !important;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1rem !important;
+  line-height: 1.5 !important;
+}
+✅ To fix the visible border issue on Steps 1–4 input fields
+Append this CSS at the end of your custom file:
+
+css
+Copy
+Edit
+#step1 input.form-control,
+#step1 select.form-select,
+#step2 input.form-control,
+#step2 select.form-select,
+#step3 input.form-control,
+#step3 select.form-select,
+#step4 input.form-control,
+#step4 select.form-select {
+  border: 3px solid #bbb !important; /* 👈 thicker visible border */
+  background-color: #fff !important;
+  color: #212529 !important;
+  border-radius: 1rem !important;
+  padding: 0.6rem 1rem !important;
+  box-shadow: none !important;
 }
 
-.example-showcase-card ul {
-  padding-left: 1.25rem;
-  margin-top: 1rem;
+#step1 input::placeholder,
+#step2 input::placeholder,
+#step3 input::placeholder,
+#step4 input::placeholder {
+  color: #999 !important;
 }
