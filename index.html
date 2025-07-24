@@ -185,6 +185,20 @@
     text-decoration: underline;
     color: var(--banner-link-color);
   }
+    /* ✅ Make form boxes thicker */
+  .form-control,
+  .form-select {
+    border-width: 2px !important;
+    border-color: #444 !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-control:focus,
+  .form-select:focus {
+    border-width: 2px;
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  }
 </style>
   
   <script type="application/ld+json">
