@@ -1,4 +1,4 @@
-/* Scoped styling to apply only in dark sections */
+/* 🎨 Scoped styling for dark sections */
 .dark-section .form-control,
 .dark-section .form-select,
 .dark-section textarea.form-control {
@@ -27,24 +27,34 @@
 }
 
 .dark-section label,
-.dark-section .form-label {
+.dark-section .form-label,
+.dark-section .form-text,
+.dark-section .text-muted,
+.dark-section .form-check-label {
   color: #eee !important;
 }
-/* Force text-dark and label colors inside cards with light backgrounds */
+
+/* ✅ Styling for light cards or white background content */
 .card .form-label,
 .card label,
 .card .form-text,
-.card .text-muted {
-  color: #212529 !important; /* Bootstrap's standard dark text */
-}
-
-/* Optional: Also darken form-check-label if needed */
-.card .form-check-label {
-  color: #212529 !important;
-}
-
-/* And make sure headings inside cards stay dark */
+.card .text-muted,
+.card .form-check-label,
 .card h2, 
 .card p {
+  color: #212529 !important; /* Standard Bootstrap dark */
+}
+
+/* ✅ Ensure light backgrounds behave even without .card */
+.bg-white .form-label,
+.bg-white label,
+.bg-white .form-text,
+.bg-white .text-muted,
+.bg-white .form-check-label,
+.bg-light .form-label,
+.bg-light label,
+.bg-light .form-text,
+.bg-light .text-muted,
+.bg-light .form-check-label {
   color: #212529 !important;
 }
