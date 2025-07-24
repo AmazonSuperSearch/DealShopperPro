@@ -1,4 +1,4 @@
-/* navbar.css – Shared dark navbar styling */
+/* navbar.css – shared dark navbar styling */
 
 .navbar-custom {
   background-color: #000 !important;
@@ -8,62 +8,20 @@
   z-index: 1030;
 }
 
-/* Base nav link style */
 .navbar-custom .nav-link {
   color: #ffffff !important;
   font-weight: 500;
-  text-decoration: none;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-/* Hover and active state */
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link.active {
   color: #FFD700 !important;
-  font-weight: 600;
-  border-bottom: 2px solid #FFD700;
-  background-color: rgba(255, 215, 0, 0.15);
-  border-radius: 0.25rem;
-  padding: 0.4rem 0.75rem;
 }
 
-/* Focus state for accessibility */
-.navbar-custom .nav-link:focus {
-  outline: 2px solid #FFD700;
-  outline-offset: 2px;
-}
-
-/* Brand color override */
 .navbar-brand.text-warning {
   color: #FFD700 !important;
 }
 
-/* Inherit text color for all navbar children */
 .navbar-custom * {
   color: inherit;
-}
-
-/* Mobile toggle icon visibility */
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28 255, 255, 255, 0.8 %29)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-/* Ensure menu has same dark background when expanded */
-.navbar-collapse {
-  background-color: #000;
-}
-
-/* Responsive brand sizing */
-.navbar-brand {
-  font-size: 1.25rem;
-}
-
-@media (max-width: 576px) {
-  .navbar-brand {
-    font-size: 1rem;
-  }
 }
