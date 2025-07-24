@@ -6,14 +6,23 @@ document.addEventListener("DOMContentLoaded", function () {
       if (navContainer) {
         navContainer.innerHTML = html;
 
-        // Wait for browser to reflow with the inserted navbar
+        // Highlight current page in navbar
+        const currentPath = window.location.pathname;
+        const navLinks = navContainer.querySelectorAll("a.nav-link");
+        navLinks.forEach(link => {
+          if (link.getAttribute("href") === currentPath) {
+            link.classList.add("active");
+          }
+        });
+
+        // Adjust body padding for fixed navbar
         setTimeout(() => {
           const navbar = document.querySelector(".navbar");
           if (navbar) {
             const height = navbar.offsetHeight;
             document.body.style.paddingTop = height + "px";
           }
-        }, 100); // slight delay to ensure rendering
+        }, 100);
       }
     });
 });
