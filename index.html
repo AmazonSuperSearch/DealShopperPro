@@ -256,66 +256,109 @@
     left: 0.25em;
   }
 </style>
+<!-- ✅ Inter Font Hero Section Styling -->
 <style>
-/* ✅ Unique Search Power – Clean, Readable Styling */
-#unique-search-power {
-  font-family: "Segoe UI", Roboto, sans-serif;
-  color: #222;
-  line-height: 1.65;
-  font-size: 1.05rem;
-  padding: 1rem 0;
-}
+  /* Import Inter font (ensure it's also in your <head>) */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-#unique-search-power h2 {
-  font-size: 1.6rem;
-  font-weight: 800;
-  margin-bottom: 0.75rem;
-  color: #111;
-}
+  .hero-banner {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #fff;
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+  }
 
-#unique-search-power h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #333;
-}
+  .hero-heading {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: -0.015em;
+    margin-bottom: 0.75rem;
+  }
 
-/* Example Box */
-#unique-search-power .example-box {
-  background-color: #fefefe;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 1rem 1.25rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-}
+  .hero-tagline {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
 
-/* Emphasis Text */
-#unique-search-power em,
-#unique-search-power .quote-style {
-  font-style: italic;
-  color: #444;
-}
+  .hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    max-width: 720px;
+    margin: 0 auto 1.25rem;
+  }
 
-/* Lists */
-#unique-search-power ul {
-  padding-left: 1.4rem;
-  margin-bottom: 1rem;
-}
+  .text-muted {
+    color: #6c757d !important;
+  }
 
-#unique-search-power li {
-  margin-bottom: 0.4rem;
-}
+  /* ✅ Suggested Tags */
+  .suggested-tag {
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    color: #fff !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 0.4rem 0.85rem;
+    margin: 0.25rem;
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
 
-/* Icons */
-#unique-search-power i {
-  color: #e74c3c;
-  margin-right: 0.4rem;
-  font-size: 1.05rem;
-  vertical-align: middle;
-}
+  .suggested-tag:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #2980b9, #6dd5fa);
+  }
+
+  /* ✅ Just Searched */
+  #justSearched {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+
+  #justSearched strong {
+    color: #111;
+    font-weight: 600;
+  }
+
+  /* ✅ CTA Button */
+  .btn-primary {
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 0.75rem 1.6rem;
+    border-radius: 999px;
+    background-color: #0d6efd;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+  }
+
+  /* ✅ Optional: Pill Badge next to button */
+  .btn-badge {
+    background-color: #1dd1a1;
+    color: #000;
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
 </style>
+
 
   <script type="application/ld+json">
 {
