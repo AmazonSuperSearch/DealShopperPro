@@ -492,26 +492,24 @@
 </div>
 </header>
 <!-- AMAZON SEARCH FORM -->
-<form id="amazon-search-form" class="bg-dark text-light rounded-4 shadow-lg p-4 border border-primary-subtle">
+<form class="bg-dark text-light rounded-4 shadow-lg p-4 border border-primary-subtle" id="amazon-search-form">
 <!-- STEP 1 -->
 <div class="container text-start mb-4">
-  <h2 class="fw-bold mb-3">🔍 ✅ Step 1: Start Your Product Search</h2>
-  <p class="text-muted mb-3">Enter a keyword, ASIN, ISBN or UPC.</p>
-  <div class="card bg-gradient border-0 shadow-sm p-3">
-    <div class="row g-3">
-      <div class="col-12">
-        <div class="input-group">
-          <button class="btn-glow" aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button">
+<h2 class="fw-bold mb-3">🔍 ✅ Step 1: Start Your Product Search</h2>
+<p class="text-muted mb-3">Enter a keyword, ASIN, ISBN or UPC.</p>
+<div class="card bg-gradient border-0 shadow-sm p-3">
+<div class="row g-3">
+<div class="col-12">
+<div class="input-group">
+<button aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button">
             🎤
           </button>
-          <input aria-label="Main search input" autocomplete="off" class="form-control rounded-pill border-0 shadow-sm" id="mainSearchInput" name="q"
-            placeholder="Example: wireless headphones, lightning deals" type="text" >
-        </div>
-      </div>
-    </div>
-  </div>
+<input aria-label="Main search input" autocomplete="off" class="form-control rounded-pill border-0 shadow-sm" id="mainSearchInput" name="q" placeholder="Example: wireless headphones, lightning deals" type="text"/>
 </div>
-
+</div>
+</div>
+</div>
+</div>
 <!-- STEP 2 -->
 <div class="container text-start mb-4">
 <h2>
@@ -553,7 +551,7 @@
 <span class="input-group-text" id="minPriceAddon">
       $
      </span>
-<input aria-describedby="minPriceAddon" class="form-control rounded-pill border-0 shadow-sm" id="minPrice" name="min-price" placeholder="Minimum $" step="0.01" type="number">
+<input aria-describedby="minPriceAddon" class="form-control rounded-pill border-0 shadow-sm" id="minPrice" name="min-price" placeholder="Minimum $" step="0.01" type="number"/>
 </div>
 </div>
 <div class="col-12 col-lg-5">
@@ -564,7 +562,7 @@
 <span class="input-group-text" id="maxPriceAddon">
       $
      </span>
-<input aria-describedby="maxPriceAddon" class="form-control rounded-pill border-0 shadow-sm" id="maxPrice" name="max-price" placeholder="Maximum $" step="0.01" type="number">
+<input aria-describedby="maxPriceAddon" class="form-control rounded-pill border-0 shadow-sm" id="maxPrice" name="max-price" placeholder="Maximum $" step="0.01" type="number"/>
 </div>
 </div></div>
 </div>
@@ -679,9 +677,9 @@
 <label class="form-label" for="brandInclude">
      Include Brands
     </label>
-<input aria-label="Include brands" class="form-control rounded-pill border-0 shadow-sm" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text">
+<input aria-label="Include brands" class="form-control rounded-pill border-0 shadow-sm" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text"/>
 <div class="form-check mt-2">
-<input aria-label="Match only these brands" class="form-check-input rounded-circle border-info" id="includeOnly" name="include-only" type="checkbox">
+<input aria-label="Match only these brands" class="form-check-input rounded-circle border-info" id="includeOnly" name="include-only" type="checkbox"/>
 <label class="form-check-label text-info" for="includeOnly">
       Match only these brands
      </label>
@@ -705,180 +703,177 @@
 <div class="card bg-gradient border-0 shadow-sm mb-4 p-3">
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
 <div class="form-check">
-<input aria-label="Prime Only" class="form-check-input rounded-circle border-info" id="primeOnly" name="prime-only" type="checkbox">
+<input aria-label="Prime Only" class="form-check-input rounded-circle border-info" id="primeOnly" name="prime-only" type="checkbox"/>
 <label class="form-check-label text-info" for="primeOnly">
      🤩 Prime Only
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Filter Amazon Lightning Deals" class="form-check-input rounded-circle border-info" id="lightningDeals" name="lightning-deals" type="checkbox">
-<label class="form-check-label text-info" for="lightningDeals">
+<input aria-label="Filter Amazon Lightning Deals" class="form-check-input rounded-circle border-info" id="lightningDeals" name="lightning-deals" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="lightningDeals">
     ⚡ Lightning Deals
   </label>
 </div>
 <div class="form-check">
-<input aria-label="Today's Deals" class="form-check-input rounded-circle border-info" id="todaysDeals" name="todays-deals" type="checkbox">
-<label class="form-check-label text-info" for="todaysDeals">
+<input aria-label="Today's Deals" class="form-check-input rounded-circle border-info" id="todaysDeals" name="todays-deals" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="todaysDeals">
      🔥 Today's Deals
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Free Shipping" class="form-check-input rounded-circle border-info" id="freeShipping" name="free-shipping" type="checkbox">
-<label class="form-check-label text-info" for="freeShipping">
+<input aria-label="Free Shipping" class="form-check-input rounded-circle border-info" id="freeShipping" name="free-shipping" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="freeShipping">
      🚚 Free Shipping
     </label>
 </div>
 <div class="form-check">
-<input aria-label="In Stock" class="form-check-input rounded-circle border-info" id="inStock" name="in-stock" type="checkbox">
-<label class="form-check-label text-info" for="inStock">📦 In Stock</label>
+<input aria-label="In Stock" class="form-check-input rounded-circle border-info" id="inStock" name="in-stock" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="inStock">📦 In Stock</label>
 </div>
 <div class="form-check">
-<input aria-label="Fulfilled by Amazon" class="form-check-input rounded-circle border-info" id="fbaOnly" name="fba-only" type="checkbox">
-<label class="form-check-label text-info" for="fbaOnly">📦 Fulfilled by Amazon (FBA)</label>
+<input aria-label="Fulfilled by Amazon" class="form-check-input rounded-circle border-info" id="fbaOnly" name="fba-only" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="fbaOnly">📦 Fulfilled by Amazon (FBA)</label>
 </div>
 <div class="form-check">
-<input aria-label="Coupons" class="form-check-input rounded-circle border-info" id="coupons" name="coupons" type="checkbox">
-<label class="form-check-label text-info" for="coupons">
+<input aria-label="Coupons" class="form-check-input rounded-circle border-info" id="coupons" name="coupons" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="coupons">
      🏷️ Coupons
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Subscribe &amp; Save" class="form-check-input rounded-circle border-info" id="subscribeSave" name="subscribe-save" type="checkbox">
-<label class="form-check-label text-info" for="subscribeSave">🔁 Subscribe &amp; Save</label>
+<input aria-label="Subscribe &amp; Save" class="form-check-input rounded-circle border-info" id="subscribeSave" name="subscribe-save" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="subscribeSave">🔁 Subscribe &amp; Save</label>
 </div>
 <div class="form-check">
-<input aria-label="Amazon Brands" class="form-check-input rounded-circle border-info" id="amazonBrands" name="amazon-brands" type="checkbox">
-<label class="form-check-label text-info" for="amazonBrands">🏷️ Amazon Brands</label>
+<input aria-label="Amazon Brands" class="form-check-input rounded-circle border-info" id="amazonBrands" name="amazon-brands" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="amazonBrands">🏷️ Amazon Brands</label>
 </div>
 <div class="form-check">
-<input aria-label="Eco-Friendly" class="form-check-input rounded-circle border-info" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox">
-<label class="form-check-label text-info" for="ecoFriendlyToggle">
+<input aria-label="Eco-Friendly" class="form-check-input rounded-circle border-info" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="ecoFriendlyToggle">
      ♻️ Eco-Friendly
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Biodegradable" class="form-check-input rounded-circle border-info" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox">
-<label class="form-check-label text-info" for="biodegradablePackaging">
+<input aria-label="Biodegradable" class="form-check-input rounded-circle border-info" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="biodegradablePackaging">
      📦 Biodegradable
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Vegan" class="form-check-input rounded-circle border-info" id="veganProducts" name="vegan-products" type="checkbox">
-<label class="form-check-label text-info" for="veganProducts">
+<input aria-label="Vegan" class="form-check-input rounded-circle border-info" id="veganProducts" name="vegan-products" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="veganProducts">
      🌱 Vegan
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Organic" class="form-check-input rounded-circle border-info" id="organicProducts" name="organic-products" type="checkbox">
-<label class="form-check-label text-info" for="organicProducts">
+<input aria-label="Organic" class="form-check-input rounded-circle border-info" id="organicProducts" name="organic-products" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="organicProducts">
      🌿 Organic
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Carbon-Neutral Delivery" class="form-check-input rounded-circle border-info" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox">
-<label class="form-check-label text-info" for="carbonNeutralDelivery">
+<input aria-label="Carbon-Neutral Delivery" class="form-check-input rounded-circle border-info" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="carbonNeutralDelivery">
      🚴 Carbon-Neutral Delivery
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Cruelty-Free" class="form-check-input rounded-circle border-info" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox">
-<label class="form-check-label text-info" for="crueltyFreeToggle">
+<input aria-label="Cruelty-Free" class="form-check-input rounded-circle border-info" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="crueltyFreeToggle">
      🐰 Cruelty-Free
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Low EMF" class="form-check-input rounded-circle border-info" id="lowEmfDevices" name="low-emf-devices" type="checkbox">
-<label class="form-check-label text-info" for="lowEmfDevices">
+<input aria-label="Low EMF" class="form-check-input rounded-circle border-info" id="lowEmfDevices" name="low-emf-devices" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="lowEmfDevices">
      📶 Low EMF
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Allergy-Friendly" class="form-check-input rounded-circle border-info" id="allergyFriendly" name="allergy-friendly" type="checkbox">
-<label class="form-check-label text-info" for="allergyFriendly">
+<input aria-label="Allergy-Friendly" class="form-check-input rounded-circle border-info" id="allergyFriendly" name="allergy-friendly" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="allergyFriendly">
      🤧 Allergy-Friendly
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Warehouse / Refurbished" class="form-check-input rounded-circle border-info" id="warehouseRefurb" name="warehouse-refurb" type="checkbox">
-<label class="form-check-label text-info" for="warehouseRefurb">📦 Warehouse &amp; Refurbished</label>
+<input aria-label="Warehouse / Refurbished" class="form-check-input rounded-circle border-info" id="warehouseRefurb" name="warehouse-refurb" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="warehouseRefurb">📦 Warehouse &amp; Refurbished</label>
 </div>
 <div class="form-check">
-<input aria-label="Gifts for Her" class="form-check-input rounded-circle border-info" id="giftsForHer" name="gifts-for-her" type="checkbox">
-<label class="form-check-label text-info" for="giftsForHer">
+<input aria-label="Gifts for Her" class="form-check-input rounded-circle border-info" id="giftsForHer" name="gifts-for-her" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="giftsForHer">
      🎀 Gifts for Her
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Gifts for Him" class="form-check-input rounded-circle border-info" id="giftsForHim" name="gifts-for-him" type="checkbox">
-<label class="form-check-label text-info" for="giftsForHim">
+<input aria-label="Gifts for Him" class="form-check-input rounded-circle border-info" id="giftsForHim" name="gifts-for-him" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="giftsForHim">
      👔 Gifts for Him
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Gifts for Dad" class="form-check-input rounded-circle border-info" id="giftsForDad" name="gifts-for-dad" type="checkbox">
-<label class="form-check-label text-info" for="giftsForDad">
+<input aria-label="Gifts for Dad" class="form-check-input rounded-circle border-info" id="giftsForDad" name="gifts-for-dad" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="giftsForDad">
      👨 Gifts for Dad
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Gifts for Mom" class="form-check-input rounded-circle border-info" id="giftsForMom" name="gifts-for-mom" type="checkbox">
-<label class="form-check-label text-info" for="giftsForMom">
+<input aria-label="Gifts for Mom" class="form-check-input rounded-circle border-info" id="giftsForMom" name="gifts-for-mom" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="giftsForMom">
      👩 Gifts for Mom
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Gifts for Kids" class="form-check-input rounded-circle border-info" id="giftsForKids" name="gifts-for-kids" type="checkbox">
-<label class="form-check-label text-info" for="giftsForKids">
+<input aria-label="Gifts for Kids" class="form-check-input rounded-circle border-info" id="giftsForKids" name="gifts-for-kids" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="giftsForKids">
      🧒 Gifts for Kids
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Birthday Gifts" class="form-check-input rounded-circle border-info" id="birthdayGifts" name="birthday-gifts" type="checkbox">
-<label class="form-check-label text-info" for="birthdayGifts">
+<input aria-label="Birthday Gifts" class="form-check-input rounded-circle border-info" id="birthdayGifts" name="birthday-gifts" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="birthdayGifts">
      🎂 Birthday Gifts
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Anniversary Gifts" class="form-check-input rounded-circle border-info" id="anniversaryGifts" name="anniversary-gifts" type="checkbox">
-<label class="form-check-label text-info" for="anniversaryGifts">
+<input aria-label="Anniversary Gifts" class="form-check-input rounded-circle border-info" id="anniversaryGifts" name="anniversary-gifts" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="anniversaryGifts">
      💝 Anniversary Gifts
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Holiday Gift Picks" class="form-check-input rounded-circle border-info" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox">
-<label class="form-check-label text-info" for="holidayGiftPicks">
+<input aria-label="Holiday Gift Picks" class="form-check-input rounded-circle border-info" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="holidayGiftPicks">
      🎄 Holiday Gift Picks
     </label>
 </div>
 <div class="form-check">
-<input aria-label="Small Business" class="form-check-input rounded-circle border-info" id="smallBusiness" name="small-business" type="checkbox">
-<label class="form-check-label text-info" for="smallBusiness">🏪 Small Business</label>
+<input aria-label="Small Business" class="form-check-input rounded-circle border-info" id="smallBusiness" name="small-business" type="checkbox"/>
+<label class="form-check-label text-info text-dark" for="smallBusiness">🏪 Small Business</label>
 </div>
 </div>
 </div>
 </section>
 <!-- ✅ Step 6: View Your Results -->
 <section class="container text-start mb-5 border-top border-secondary pt-4">
-  <h2 class="text-primary-emphasis fw-bold">🚀 Step 6: View Your Results</h2>
-  <p class="text-muted mb-3">
+<h2 class="text-primary-emphasis fw-bold">🚀 Step 6: View Your Results</h2>
+<p class="text-muted mb-3">
     You’re all set! Hit the button below to open the marketplace with your filters applied.
   </p>
-
-  <div class="text-center">
-    <button class="btn-glow" aria-label="View Filtered Results" class="btn btn-primary btn-lg w-100 pulse-glow" form="amazon-search-form" id="search-button" type="submit">
+<div class="text-center">
+<button aria-label="View Filtered Results" class="btn btn-primary btn-lg w-100 pulse-glow" form="amazon-search-form" id="search-button" type="submit">
       🔎 View Filtered Results
     </button>
-
-    <!-- Warning Message -->
-    <p class="mt-3 text-center fw-bold small" style="color:#b3541e;" role="alert">
+<!-- Warning Message -->
+<p class="mt-3 text-center fw-bold small" role="alert" style="color:#b3541e;">
       ⚠️ Too many filters may return no results.
     </p>
-  </div>
-
-  <p class="text-center small mt-4" style="color: #666;">
+</div>
+<p class="text-center small mt-4" style="color: #666;">
     Disclosure: As an Amazon Associate, we earn from qualifying purchases. This helps support our free tools—thank you!
   </p>
-</section>
+</section></form>
 
 
 
