@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const placeholder = document.getElementById("navbar-placeholder");
   if (!placeholder) return;
