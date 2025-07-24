@@ -1,28 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const placeholder = document.getElementById("navbar-placeholder");
+  if (!placeholder) return;
+
   fetch("/navbar.html")
-    .then(response => response.text())
+    .then(res => res.ok ? res.text() : Promise.reject("Failed to load navbar"))
     .then(html => {
-      const navContainer = document.getElementById("navbar-placeholder");
-      if (navContainer) {
-        navContainer.innerHTML = html;
+      placeholder.innerHTML = html;
 
-        // Highlight current page in navbar
-        const currentPath = window.location.pathname;
-        const navLinks = navContainer.querySelectorAll("a.nav-link");
-        navLinks.forEach(link => {
-          if (link.getAttribute("href") === currentPath) {
-            link.classList.add("active");
-          }
-        });
+      // Highlight current page
+      const path = window.location.pathname.replace(/\/$/, "");
+      placeholder.querySelectorAll("a.nav-link").forEach(link => {
+        const href = link.getAttribute("href").replace(/\/$/, "");
+        if (href === path) {
+          link.classList.add("active");
+        }
+      });
 
-        // Adjust body padding for fixed navbar
-        setTimeout(() => {
-          const navbar = document.querySelector(".navbar");
-          if (navbar) {
-            const height = navbar.offsetHeight;
-            document.body.style.paddingTop = height + "px";
-          }
-        }, 100);
-      }
-    });
+      // Adjust body padding for fixed navbar after render
+      requestAnimationFrame(() => {
+        const navbar = document.querySelector(".navbar");
+        if (navbar) {
+          document.body.style.paddingTop = `${navbar.offsetHeight}px`;
+        }
+      });
+    })
+    .catch(err => console.error("Navbar load error:", err));
 });
+</script>
