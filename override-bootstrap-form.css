@@ -1,3 +1,4 @@
+/* Force Bootstrap override using higher specificity */
 body .form-control,
 body .form-select {
   border: none !important;
@@ -19,8 +20,8 @@ body .form-select option {
 }
 
 body .form-check-input:checked {
-  background-color: #0dd6fd !important;
-  border-color: #0dd6fd !important;
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
 }
 
 body label,
