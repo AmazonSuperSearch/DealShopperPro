@@ -1,9 +1,9 @@
-/* === Scoped Form Styling for Dark Sections Only === */
+/* Scoped styling to apply only in dark sections */
 .dark-section .form-control,
 .dark-section .form-select,
 .dark-section textarea.form-control {
-  color: #fff !important;                /* white text */
-  background-color: #2b2e38 !important;  /* dark background */
+  color: #fff !important;
+  background-color: #2b2e38 !important;
   border: none !important;
   border-radius: 12px !important;
   padding: 0.6rem 1rem !important;
@@ -22,8 +22,8 @@
 }
 
 .dark-section .form-check-input:checked {
-  background-color: #a0defd !important;
-  border-color: #a0defd !important;
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
 }
 
 .dark-section label,
