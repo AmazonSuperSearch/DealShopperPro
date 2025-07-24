@@ -22,6 +22,18 @@ document.addEventListener("DOMContentLoaded", () => {
         if (navbar) {
           document.body.style.paddingTop = `${navbar.offsetHeight}px`;
         }
+
+        // Fix hamburger toggle manually for injected navbar
+        const toggler = placeholder.querySelector('.navbar-toggler');
+        if (toggler) {
+          toggler.addEventListener('click', () => {
+            const targetId = toggler.getAttribute('data-bs-target');
+            const target = document.querySelector(targetId);
+            if (target && target.classList.contains('collapse')) {
+              target.classList.toggle('show');
+            }
+          });
+        }
       });
     })
     .catch(err => console.error("Navbar load error:", err));
