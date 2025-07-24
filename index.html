@@ -78,16 +78,11 @@
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"></noscript>
 
   <style>
-  /*─────────────────────────────────────────────────────────────────────────
-    Variables
-  ─────────────────────────────────────────────────────────────────────────*/
   :root {
     --heading-size: 1.5rem;
-
     --intro-max-width: 720px;
     --intro-text-size: 1.15rem;
     --intro-text-color: #333;
-
     --banner-bg: #FFF8E1;
     --banner-border: #FFECB3;
     --banner-radius: 12px;
@@ -100,7 +95,6 @@
     --banner-link-color: #0056b3;
   }
 
-  /* ✅ Navbar override — moved outside :root */
   .navbar-custom {
     background-color: #000000 !important;
     color: #ffffff !important;
@@ -116,17 +110,10 @@
     color: #FFD700 !important;
   }
 
-
-  /*─────────────────────────────────────────────────────────────────────────
-    Headings
-  ─────────────────────────────────────────────────────────────────────────*/
   h1 {
     font-size: var(--heading-size);
   }
 
-  /*─────────────────────────────────────────────────────────────────────────
-    Intro Section
-  ─────────────────────────────────────────────────────────────────────────*/
   .intro-section__container {
     max-width: var(--intro-max-width);
     margin: 0 auto;
@@ -144,9 +131,6 @@
     max-width: var(--intro-max-width);
   }
 
-  /*─────────────────────────────────────────────────────────────────────────
-    Privacy Banner
-  ─────────────────────────────────────────────────────────────────────────*/
   .privacy-banner {
     background-color: var(--banner-bg);
     border: 1px solid var(--banner-border);
@@ -185,7 +169,7 @@
     text-decoration: underline;
     color: var(--banner-link-color);
   }
-    /* ✅ Make form boxes thicker */
+
   .form-control,
   .form-select {
     border-width: 2px !important;
@@ -199,8 +183,8 @@
     border-color: #007bff;
     box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
   }
-    <!-- Paste this into the <head> or <style> section -->
-<style>
+
+  /* Modern icon styles */
   .icon-style {
     display: inline-flex;
     align-items: center;
@@ -219,46 +203,31 @@
     color: #fff !important;
   }
 
-  .icon-1 {
-    background-color: #e0f7fa;
-    color: #00796b;
-  }
-  .icon-1:hover {
-    background-color: #00796b;
-  }
+  .icon-1 { background-color: #e0f7fa; color: #00796b; }
+  .icon-1:hover { background-color: #00796b; }
 
-  .icon-2 {
-    background-color: #f3e5f5;
-    color: #6a1b9a;
-  }
-  .icon-2:hover {
-    background-color: #6a1b9a;
-  }
+  .icon-2 { background-color: #f3e5f5; color: #6a1b9a; }
+  .icon-2:hover { background-color: #6a1b9a; }
 
-  .icon-3 {
-    background-color: #e8f5e9;
-    color: #2e7d32;
-  }
-  .icon-3:hover {
-    background-color: #2e7d32;
-  }
+  .icon-3 { background-color: #e8f5e9; color: #2e7d32; }
+  .icon-3:hover { background-color: #2e7d32; }
 
-  .icon-4 {
-    background-color: #e3f2fd;
-    color: #1565c0;
-  }
-  .icon-4:hover {
-    background-color: #1565c0;
-  }
+  .icon-4 { background-color: #e3f2fd; color: #1565c0; }
+  .icon-4:hover { background-color: #1565c0; }
 
-  .icon-5 {
-    background-color: #fff3e0;
-    color: #ef6c00;
+  .icon-5 { background-color: #fff3e0; color: #ef6c00; }
+  .icon-5:hover { background-color: #ef6c00; }
+
+  .icon-modern {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
   }
-  .icon-5:hover {
-    background-color: #ef6c00;
+  .icon-modern:hover {
+    transform: scale(1.3);
+    filter: brightness(1.15);
   }
 </style>
+
 
   <script type="application/ld+json">
 {
@@ -452,12 +421,12 @@
 
 
     <!-- Icons -->
-<div>
-  <i class="bi bi-shield-fill-check icon-style icon-1" title="Security"></i>
-  <i class="bi bi-robot icon-style icon-2" title="AI"></i>
-  <i class="bi bi-lock-fill icon-style icon-3" title="Privacy Lock"></i>
-  <i class="bi bi-cloud-check-fill icon-style icon-4" title="Cloud Verified"></i>
-  <i class="bi bi-search-dollar icon-style icon-5" title="Deal Finder"></i>
+<!-- Modern Icons with Tooltips -->
+<div class="text-center mb-4">
+  <i class="bi bi-shield-check text-success fs-1 me-3 icon-modern" data-bs-toggle="tooltip" data-bs-placement="top" title="Secure Protection"></i>
+  <i class="bi bi-robot text-warning fs-1 me-3 icon-modern" data-bs-toggle="tooltip" data-bs-placement="top" title="AI-Powered Search"></i>
+  <i class="bi bi-lock-fill text-success fs-1 me-3 icon-modern" data-bs-toggle="tooltip" data-bs-placement="top" title="Private & Safe"></i>
+  <i class="bi bi-cloud text-primary fs-1 icon-modern" data-bs-toggle="tooltip" data-bs-placement="top" title="Cloud-Based Tool"></i>
 </div>
 
 
