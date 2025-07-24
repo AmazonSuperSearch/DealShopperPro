@@ -58,3 +58,27 @@
 .bg-light .form-check-label {
   color: #212529 !important;
 }
+/* Restore styling for input/select in Steps 1–4 only (cards on light background) */
+#step1 .form-control,
+#step1 .form-select,
+#step2 .form-control,
+#step2 .form-select,
+#step3 .form-control,
+#step3 .form-select,
+#step4 .form-control,
+#step4 .form-select {
+  border: 2px solid #ccc !important;
+  background-color: #fff !important;
+  color: #212529 !important;
+  border-radius: 1rem !important;
+  padding: 0.6rem 1rem !important;
+  box-shadow: none !important;
+}
+
+/* Restore placeholder styling for Steps 1–4 */
+#step1 .form-control::placeholder,
+#step2 .form-control::placeholder,
+#step3 .form-control::placeholder,
+#step4 .form-control::placeholder {
+  color: #999 !important;
+}
