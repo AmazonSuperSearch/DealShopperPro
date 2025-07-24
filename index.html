@@ -227,6 +227,35 @@
     filter: brightness(1.15);
   }
 </style>
+<style>
+  /* Make all checkboxes more visible */
+  input[type="checkbox"] {
+    width: 1.1em;
+    height: 1.1em;
+    border: 2px solid #888 !important;
+    border-radius: 0.25em;
+    background-color: #fff !important;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    position: relative;
+    margin-right: 0.5em;
+  }
+
+  input[type="checkbox"]:checked {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+  }
+
+  input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: white;
+    font-size: 0.75em;
+    position: absolute;
+    top: 0;
+    left: 0.25em;
+  }
+</style>
 
 
   <script type="application/ld+json">
