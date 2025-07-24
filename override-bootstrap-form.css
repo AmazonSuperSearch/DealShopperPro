@@ -30,3 +30,21 @@
 .dark-section .form-label {
   color: #eee !important;
 }
+/* Force text-dark and label colors inside cards with light backgrounds */
+.card .form-label,
+.card label,
+.card .form-text,
+.card .text-muted {
+  color: #212529 !important; /* Bootstrap's standard dark text */
+}
+
+/* Optional: Also darken form-check-label if needed */
+.card .form-check-label {
+  color: #212529 !important;
+}
+
+/* And make sure headings inside cards stay dark */
+.card h2, 
+.card p {
+  color: #212529 !important;
+}
