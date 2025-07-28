@@ -87,6 +87,11 @@ if (rating === '5') rh.push('p_72:1248884011'); // 5★ only
       'warehouse-refurb':'p_n_condition-type:2224371011',
       'lightning-deals': 'p_n_deal_type:23566065011' // ✅ now acts like a normal filter
     };
+    // 🔁 Map "Next-Day Delivery" to both Prime + Free Shipping
+if (data.get('next-day-delivery') === 'on') {
+  data.set('prime-only', 'on');
+  data.set('free-shipping', 'on');
+}
     Object.entries(rhMap).forEach(([field, code]) => pushRh(field, code));
 
     // 6) Price range
