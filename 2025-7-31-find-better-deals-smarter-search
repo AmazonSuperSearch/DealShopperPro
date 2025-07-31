@@ -4,20 +4,113 @@
   <meta charset="UTF-8" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <title>Smarter Amazon Search: Find Better Deals in Less Time</title>
-  <meta name="description" content="Use Deal Shopper Pro to filter Amazon by price, rating, Prime, coupons, and more. Discover a smarter way to shop with this advanced Amazon search tool." >
-  <link rel="canonical" href="https://www.dealshopperpro.com" >
-  <meta property="og:title" content="Smarter Amazon Search: Find Better Deals in Less Time" >
-  <meta property="og:description" content="Filter Amazon deals with advanced options like Prime-only, coupons, in-stock items, and price ranges. No login required. Use Deal Shopper Pro today." >
-  <meta property="og:url" content="https://www.dealshopperpro.com/article/smarter-amazon-search.html" >
-  <meta property="og:type" content="article" >
-  <meta property="og:image" content="https://www.dealshopperpro.com/logo.png" >
-  <meta name="twitter:card" content="summary_large_image" >
-  <meta name="twitter:title" content="Smarter Amazon Search: Find Better Deals in Less Time" >
-  <meta name="twitter:description" content="Use filters Amazon doesn’t give you. Try Deal Shopper Pro to search Amazon by discount, rating, shipping, and more — all in one place." >
-  <meta name="twitter:image" content="https://www.dealshopperpro.com/logo.png" >
+  <meta name="description" content="Use Deal Shopper Pro to filter Amazon by price, rating, Prime, coupons, and more. Discover a smarter way to shop with this advanced Amazon search tool.">
+  <link rel="canonical" href="https://www.dealshopperpro.com">
+  <meta property="og:title" content="Smarter Amazon Search: Find Better Deals in Less Time">
+  <meta property="og:description" content="Filter Amazon deals with advanced options like Prime-only, coupons, in-stock items, and price ranges. No login required. Use Deal Shopper Pro today.">
+  <meta property="og:url" content="https://www.dealshopperpro.com/article/smarter-amazon-search.html">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://www.dealshopperpro.com/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Smarter Amazon Search: Find Better Deals in Less Time">
+  <meta name="twitter:description" content="Use filters Amazon doesn’t give you. Try Deal Shopper Pro to search Amazon by discount, rating, shipping, and more — all in one place.">
+  <meta name="twitter:image" content="https://www.dealshopperpro.com/logo.png">
+
+  <!-- ✅ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Article", "WebPage"],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.dealshopperpro.com/article/smarter-amazon-search.html"
+    },
+    "headline": "Smarter Amazon Search: Find Better Deals in Less Time",
+    "description": "Use Deal Shopper Pro to filter Amazon by price, rating, Prime, coupons, and more. Discover a smarter way to shop with this advanced Amazon search tool.",
+    "author": {
+      "@type": "Organization",
+      "name": "Deal Shopper Pro",
+      "url": "https://www.dealshopperpro.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Deal Shopper Pro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.dealshopperpro.com/logo.png"
+      }
+    },
+    "image": "https://www.dealshopperpro.com/logo.png",
+    "datePublished": "2025-07-31",
+    "dateModified": "2025-07-31"
+  }
+  </script>
+
+  <!-- ✅ Styling -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9fb;
+      color: #1a1a1a;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    article {
+      max-width: 720px;
+      margin: 3rem auto;
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      color: #0056b3;
+    }
+
+    h2 {
+      margin-top: 2.2rem;
+      color: #003366;
+      font-size: 1.4rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    a {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    .cta-button {
+      margin-top: 2rem;
+      display: inline-block;
+      background-color: #0056b3;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #003d80;
+    }
+  </style>
 </head>
 <body>
-  <article style="max-width:720px;margin:auto;padding:2rem;font-family:sans-serif;line-height:1.6;">
+  <article>
     <h1>Smarter Amazon Search: Find Better Deals in Less Time</h1>
 
     <p>If you’ve ever tried to filter Amazon deals by rating, shipping speed, or discount percentage, you know how limited their tools are. Sponsored listings take over, filters reset, and sorting feels broken.</p>
@@ -41,8 +134,8 @@
     <h2>🚀 Start Saving Today</h2>
     <p>Whether you’re deal-hunting or gift shopping, <a href="https://www.dealshopperpro.com" target="_blank" rel="noopener">filter Amazon deals by price and rating</a> in seconds — and never scroll through junk results again.</p>
 
-    <div style="text-align:center;margin-top:2rem;">
-      <a href="https://www.dealshopperpro.com" style="padding:1rem 2rem;font-size:1.2rem;background:#0056b3;color:#fff;text-decoration:none;border-radius:8px;display:inline-block;">🔎 Use Deal Shopper Pro Now</a>
+    <div style="text-align:center;">
+      <a href="https://www.dealshopperpro.com" class="cta-button">🔎 Use Deal Shopper Pro Now</a>
     </div>
   </article>
 </body>
