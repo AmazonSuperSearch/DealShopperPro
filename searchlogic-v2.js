@@ -21,12 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
         q += (q.endsWith(' ') ? '' : ' ') + phrase;
       }
     };
+  
     
 keywordAppend('eco-friendly',             'eco friendly');
 keywordAppend('biodegradable-packaging',  'biodegradable packaging');
 keywordAppend('vegan-products',           'vegan');
 keywordAppend('organic-products',         'organic');
 keywordAppend('carbon-neutral-delivery',  'carbon-neutral delivery');
+keywordAppend('bogo-deals', 'buy one get one free');
 keywordAppend('filter-cruelty-free',      'cruelty free');
 keywordAppend('low-emf-devices',          'low emf');
 keywordAppend('allergy-friendly',         'allergy friendly');
@@ -120,3 +122,4 @@ if (data.get('next-day-delivery') === 'on') {
     window.open(url, '_blank');
   });
 });
+
