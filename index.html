@@ -561,7 +561,7 @@
 <form id="amazon-search-form">
 <!-- STEP 1 -->
 <div class="container text-start mb-4">
-  <h3 class="fw-bold mb-3">🔍 ✅ Step 1: Start Your Product Search</h3>
+  <h3 class="fw-bold mb-3">🔍 ✅ Step 1: Start Your Product Search on Amazon</h3>
   <p class="text-muted mb-1">
     Type a keyword, ASIN, ISBN, or UPC to find exactly what you're looking for.
   </p>
@@ -575,7 +575,7 @@
           <button aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button" title="Use voice to search">
             🎤
           </button>
-          <input aria-label="Search products by keyword or ID" autocomplete="off" class="form-control" id="mainSearchInput" name="q" placeholder="Example: bluetooth speaker, B08N5WRWNW" type="text">
+          <input aria-label="Search products by keyword or ID" autocomplete="off" class="form-control" id="mainSearchInput" name="q" placeholder="Search for Amazon products: wireless earbuds, yoga mats, ASINs, or UPCs" type="text">
         </div>
       </div>
     </div>
@@ -685,8 +685,8 @@
           aria-label="Enter comma-separated brands to include"
           placeholder="e.g. Sony, LG"
         />
-        <small class="form-text text-muted">
-          Only products from these brands will be included.
+        <small class="form-text text-muted small fw-semibold">
+          Filter Amazon results by brand — only show matching items from the brands you list.
         </small>
       </div>
     </div>
@@ -793,7 +793,7 @@
       aria-expanded="false"
       aria-controls="accordionGroup2"
     >
-      🎯🔥 Deals & Discounts – The Best Amazon Offers
+      🎯🔥 Deals & Discounts – Filter Amazon Deals and Discounts
     </button>
   </h2>
 
@@ -819,8 +819,8 @@
         <label class="form-check-label" for="todaysDeals">🔥 Today's Deals</label>
       </div>
 
-      <div class="form-check" data-tooltip="🔥🏷️ Only show items that have clippable coupons at checkout.">
-        <input class="form-check-input" type="checkbox" id="coupons" name="coupons" aria-label="Coupons" />
+      <div class="form-check" data-tooltip="🔥🏷️ Filter Amazon for deals with clippable coupons at checkout.">
+        <input class="form-check-input" type="checkbox" id="coupons" name="coupons" aria-label="Amazon coupon deals" />
         <label class="form-check-label" for="coupons">🏷️ Coupons</label>
       </div>
 
@@ -1005,12 +1005,6 @@
   </div>
  </div>
 </section>
-<script>
- function toggleAllCheckboxes(groupId, check) {
-    const container = document.getElementById(groupId);
-    container.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = check);
-  }
-</script>
 
 
 <!-- ✅ Step 6: View Your Results -->
