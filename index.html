@@ -665,23 +665,28 @@
   </div>
 </div>
 
-<!-- STEP 4 -->
+<!-- STEP 4: Filter by Brand -->
 <section class="container text-start mb-4">
   <h3 class="fw-bold mb-3">🏷️ ✅ Step 4: Filter by Brand</h3>
-  <p class="text-muted mb-2">
-    Enter brand names you want to include (comma-separated).
+
+  <p class="text-muted mb-3">
+    Enter brand names to include (comma-separated). Only results matching these brands will be shown.
   </p>
+
   <div class="card border-success shadow-sm mb-4 p-3">
     <div class="row g-3">
       <div class="col-12 col-md-6">
         <label class="form-label" for="brandInclude">Include Brands</label>
-        <input aria-label="Include brands" class="form-control" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text">
-        <div class="form-check mt-2">
-          <input aria-label="Match only these brands" class="form-check-input" id="includeOnly" name="include-only" type="checkbox">
-          <label class="form-check-label" for="includeOnly">Match only these brands</label>
-        </div>
+        <input
+          type="text"
+          class="form-control"
+          id="brandInclude"
+          name="brand-include"
+          aria-label="Enter comma-separated brands to include"
+          placeholder="e.g. Sony, LG"
+        />
         <small class="form-text text-muted">
-          Optional: Check this to match only the listed brands.
+          Only products from these brands will be included.
         </small>
       </div>
     </div>
