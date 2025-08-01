@@ -36,7 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
     keywordAppend('expiring-coupons',         'expiring coupon');
     keywordAppend('sns-with-coupon',          'subscribe and save coupon');
     keywordAppend('best-seller-deals',        'best seller deals');
-
+    keywordAppend('new-release', 'new release');
+    keywordAppend('amazon-pantry', 'amazon pantry');
+    keywordAppend('climate-pledge', 'climate pledge friendly');
+    keywordAppend('hidden-gem', 'hidden gem');
     keywordAppend('filter-cruelty-free',      'cruelty free');
     keywordAppend('low-emf-devices',          'low emf');
     keywordAppend('allergy-friendly',         'allergy friendly');
@@ -140,3 +143,4 @@ document.addEventListener('DOMContentLoaded', () => {
     window.open(url, '_blank');
   });
 });
+
