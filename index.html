@@ -203,8 +203,8 @@
   100% { box-shadow: 0 0 6px 2px orange; }
 }
 
-/* Apply glow to the label when checkbox is checked */
-.form-check-input:checked + .form-check-label {
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:checked + .form-check-label {
   animation: flame-glow 1.2s infinite alternate;
   border: 2px solid transparent;
   border-radius: 6px;
