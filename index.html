@@ -562,14 +562,12 @@
 <!-- STEP 1 -->
 <div class="container text-start mb-4">
   <h3 class="fw-bold mb-3">🔍 ✅ Step 1: Start Your Product Search</h3>
-
   <p class="text-muted mb-1">
-    Enter any keyword, ASIN, ISBN, or UPC to begin filtering Amazon results.
+    Type a keyword, ASIN, ISBN, or UPC to find exactly what you're looking for.
   </p>
   <p class="small text-danger fw-semibold mb-3">
-    Tip: Use descriptive keywords like “wireless earbuds” or “eco-friendly shampoo” to get better results.
+    Tip: Use specific keywords like “wireless earbuds” or “eco-friendly shampoo” to narrow results.
   </p>
-
   <div class="card p-3">
     <div class="row g-3">
       <div class="col-12">
@@ -577,198 +575,119 @@
           <button aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button" title="Use voice to search">
             🎤
           </button>
-          <input aria-label="Search products by keyword or ID" autocomplete="off"
-                 class="form-control" id="mainSearchInput" name="q"
-                 placeholder="Example: bluetooth speaker, B08N5WRWNW"
-                 type="text">
+          <input aria-label="Search products by keyword or ID" autocomplete="off" class="form-control" id="mainSearchInput" name="q" placeholder="Example: bluetooth speaker, B08N5WRWNW" type="text">
         </div>
       </div>
     </div>
   </div>
 </div>
 
-
 <!-- STEP 2 -->
 <div class="container text-start mb-4">
-<h3>
-  💰
-  ✅ Step 2: Set Your Price Range
- </h3>
-<p class="text-muted mb-3">
- Select your currency, then set a minimum and maximum price range.
- </p>
-<div class="card p-3">
-<div class="row g-3 align-items-end">
-<div class="col-12 col-lg-2">
-<label class="form-label" for="currencySelect">
-     Currency
-    </label>
-<select aria-label="Select currency" class="form-select" id="currencySelect" name="currency">
-<option selected="" value="usd">
-      USD ($)
-     </option>
-<option value="eur">
-      EUR (€)
-     </option>
-<option value="gbp">
-      GBP (£)
-     </option>
-<option value="jpy">
-      JPY (¥)
-     </option>
-<option value="inr">
-      INR (₹)
-     </option>
-</select>
+  <h3 class="fw-bold mb-3">💰 ✅ Step 2: Set Your Price Range</h3>
+  <p class="text-muted mb-2">
+    Choose your currency, then define a minimum and/or maximum price.
+  </p>
+  <div class="card p-3">
+    <div class="row g-3 align-items-end">
+      <div class="col-12 col-lg-2">
+        <label class="form-label" for="currencySelect">Currency</label>
+        <select aria-label="Select currency" class="form-select" id="currencySelect" name="currency">
+          <option selected value="usd">USD ($)</option>
+          <option value="eur">EUR (€)</option>
+          <option value="gbp">GBP (£)</option>
+          <option value="jpy">JPY (¥)</option>
+          <option value="inr">INR (₹)</option>
+        </select>
+      </div>
+      <div class="col-12 col-lg-5">
+        <label class="form-label" for="minPrice">Minimum Price</label>
+        <div class="input-group">
+          <span class="input-group-text" id="minPriceAddon">$</span>
+          <input aria-describedby="minPriceAddon" class="form-control" id="minPrice" name="min-price" placeholder="e.g. 10" step="0.01" type="number">
+        </div>
+      </div>
+      <div class="col-12 col-lg-5">
+        <label class="form-label" for="maxPrice">Maximum Price</label>
+        <div class="input-group">
+          <span class="input-group-text" id="maxPriceAddon">$</span>
+          <input aria-describedby="maxPriceAddon" class="form-control" id="maxPrice" name="max-price" placeholder="e.g. 100" step="0.01" type="number">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="col-12 col-lg-5">
-<label class="form-label" for="minPrice">
-     Minimum Price
-    </label>
-<div class="input-group">
-<span class="input-group-text" id="minPriceAddon">
-      $
-     </span>
-<input aria-describedby="minPriceAddon" class="form-control" id="minPrice" name="min-price" placeholder="Minimum $" step="0.01" type="number">
-</div>
-</div>
-<div class="col-12 col-lg-5">
-<label class="form-label" for="maxPrice">
-     Maximum Price
-    </label>
-<div class="input-group">
-<span class="input-group-text" id="maxPriceAddon">
-      $
-     </span>
-<input aria-describedby="maxPriceAddon" class="form-control" id="maxPrice" name="max-price" placeholder="Maximum $" step="0.01" type="number">
-</div>
-</div></div>
-</div>
-</div>
+
 <!-- STEP 3 -->
 <div class="container text-start mb-4">
-<h3>
-  ⭐
-  ✅ Step 3: Refine by Discount, Rating &amp; and Sort Order
- </h3>
-<p class="text-muted mb-3">
-  Select a % off,  minimum star rating and sort order.
- </p>
-<div class="card p-3">
-<div class="row g-3">
-<div class="col-12 col-lg-4">
-<label class="form-label" for="percentOff">
-     % Off
-    </label>
-<select aria-label="Select percentage off" class="form-select" id="percentOff" name="percent-off">
-<option value="">
-      Any
-     </option>
-<option value="10">
-      10% or more
-     </option>
-<option value="20">
-      20% or more
-     </option>
-<option value="30">
-      30% or more
-     </option>
-<option value="40">
-      40% or more
-     </option>
-<option value="50">
-      50% or more
-     </option>
-<option value="60">
-      60% or more
-     </option>
-<option value="70">
-      70% or more
-     </option>
-<option value="80">
-      80% or more
-     </option>
-</select>
+  <h3 class="fw-bold mb-3">⭐ ✅ Step 3: Refine by Discount, Rating & Sort Order</h3>
+  <p class="text-muted mb-2">
+    Filter by discount percentage, customer rating, and how results are sorted.
+  </p>
+  <div class="card p-3">
+    <div class="row g-3">
+      <div class="col-12 col-lg-4">
+        <label class="form-label" for="percentOff">% Off</label>
+        <select aria-label="Select percentage off" class="form-select" id="percentOff" name="percent-off">
+          <option value="">Any</option>
+          <option value="10">10% or more</option>
+          <option value="20">20% or more</option>
+          <option value="30">30% or more</option>
+          <option value="40">40% or more</option>
+          <option value="50">50% or more</option>
+          <option value="60">60% or more</option>
+          <option value="70">70% or more</option>
+          <option value="80">80% or more</option>
+        </select>
+      </div>
+      <div class="col-12 col-lg-4">
+        <label class="form-label" for="minRating">Customer Rating</label>
+        <select aria-label="Select minimum customer rating" class="form-select" id="minRating" name="min-rating">
+          <option value="">Any</option>
+          <option value="1">1★ & up</option>
+          <option value="2">2★ & up</option>
+          <option value="3">3★ & up</option>
+          <option value="4">4★ & up</option>
+          <option value="5">5★ & up</option>
+        </select>
+      </div>
+      <div class="col-12 col-lg-4">
+        <label class="form-label" for="sortOrder">Sort By</label>
+        <select aria-label="Select sort order" class="form-select" id="sortOrder" name="sort">
+          <option value="">Relevance</option>
+          <option value="price-asc-rank">Price: Low → High</option>
+          <option value="price-desc-rank">Price: High → Low</option>
+          <option value="review-rank">Avg. Customer Review</option>
+          <option value="date-desc-rank">Newest Arrivals</option>
+        </select>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="col-12 col-lg-4">
-<label class="form-label" for="minRating">
-     Customer Rating
-    </label>
-<select aria-label="Select minimum customer rating" class="form-select" id="minRating" name="min-rating">
-<option value="">
-      Any
-     </option>
-<option value="1">
-      1★ &amp; up
-     </option>
-<option value="2">
-      2★ &amp; up
-     </option>
-<option value="3">
-      3★ &amp; up
-     </option>
-<option value="4">
-      4★ &amp; up
-     </option>
-<option value="5">
-      5★ &amp; up
-     </option>
-</select>
-</div>
-<div class="col-12 col-lg-4">
-<label class="form-label" for="sortOrder">
-     Sort By
-    </label>
-<select aria-label="Select sort order" class="form-select" id="sortOrder" name="sort">
-<option value="">
-      Relevance
-     </option>
-<option value="price-asc-rank">
-      Price: Low → High
-     </option>
-<option value="price-desc-rank">
-      Price: High → Low
-     </option>
-<option value="review-rank">
-      Avg. Customer Review
-     </option>
-<option value="date-desc-rank">
-      Newest Arrivals
-     </option>
-</select>
-</div>
-</div>
-</div>
-</div>
+
 <!-- STEP 4 -->
 <section class="container text-start mb-4">
-<h3>
-  🏷️
-  ✅ Step 4: Filter by Brand
- </h3>
-<p class="text-muted mb-3">
-  List brands to include (comma-separated).
- </p>
-<div class="card border-success shadow-sm mb-4 p-3">
-<div class="row g-3">
-<div class="col-12 col-md-6">
-<label class="form-label" for="brandInclude">
-     Include Brands
-    </label>
-<input aria-label="Include brands" class="form-control" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text">
-<div class="form-check mt-2">
-<input aria-label="Match only these brands" class="form-check-input" id="includeOnly" name="include-only" type="checkbox">
-<label class="form-check-label" for="includeOnly">
-      Match only these brands
-     </label>
-</div>
-<small class="form-text text-muted">
-     Optional: “Match only these brands.”
-    </small>
-</div>
-</div>
-</div>
+  <h3 class="fw-bold mb-3">🏷️ ✅ Step 4: Filter by Brand</h3>
+  <p class="text-muted mb-2">
+    Enter brand names you want to include (comma-separated).
+  </p>
+  <div class="card border-success shadow-sm mb-4 p-3">
+    <div class="row g-3">
+      <div class="col-12 col-md-6">
+        <label class="form-label" for="brandInclude">Include Brands</label>
+        <input aria-label="Include brands" class="form-control" id="brandInclude" name="brand-include" placeholder="e.g. Sony, LG" type="text">
+        <div class="form-check mt-2">
+          <input aria-label="Match only these brands" class="form-check-input" id="includeOnly" name="include-only" type="checkbox">
+          <label class="form-check-label" for="includeOnly">Match only these brands</label>
+        </div>
+        <small class="form-text text-muted">
+          Optional: Check this to match only the listed brands.
+        </small>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- STEP 5 -->
 <style>
  /* ✅ Tooltip Styling */
