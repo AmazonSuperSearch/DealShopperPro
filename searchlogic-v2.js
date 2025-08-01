@@ -28,7 +28,18 @@ keywordAppend('biodegradable-packaging',  'biodegradable packaging');
 keywordAppend('vegan-products',           'vegan');
 keywordAppend('organic-products',         'organic');
 keywordAppend('carbon-neutral-delivery',  'carbon-neutral delivery');
-keywordAppend('bogo-deals', 'buy one get one free');
+keywordAppend('bogo-deals',               'buy one get one free');
+keywordAppend('stackable-coupons',        'stackable coupon');
+keywordAppend('price-drop-deals',         'price drop');
+keywordAppend('clearance-deals',          'clearance');
+keywordAppend('bulk-discounts',           'bulk discount');
+keywordAppend('limited-time-deals',       'limited time deal');
+keywordAppend('ends-soon-deals',          'ends soon');
+keywordAppend('under-25-deals',           'under 25 deals');
+keywordAppend('expiring-coupons',         'expiring coupon');
+keywordAppend('sns-with-coupon',          'subscribe and save coupon');
+keywordAppend('best-seller-deals',        'best seller deals');
+
 keywordAppend('filter-cruelty-free',      'cruelty free');
 keywordAppend('low-emf-devices',          'low emf');
 keywordAppend('allergy-friendly',         'allergy friendly');
@@ -122,4 +133,5 @@ if (data.get('next-day-delivery') === 'on') {
     window.open(url, '_blank');
   });
 });
+
 
