@@ -762,184 +762,187 @@
 </section>
 <!-- STEP 5 -->
 <section class="container text-start mb-4">
-<h3>
+ <h3>
   🎯
   ✅ Step 5: Extra Filters
  </h3>
-<p class="text-muted mb-3">
+ <p class="text-muted mb-3">
   Prime‑eligible, Lightning Deals, Free Shipping, In Stock, Eco‑Friendly, Coupons, and more.
  </p>
-<div class="card mb-4 p-3">
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-<div class="form-check">
-<input aria-label="Prime Only" class="form-check-input" id="primeOnly" name="prime-only" type="checkbox">
-<label class="form-check-label" for="primeOnly">
+ <div class="card mb-4 p-3">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+   <div class="form-check" title="Only show Amazon Prime-eligible products.">
+    <input aria-label="Prime Only" class="form-check-input" id="primeOnly" name="prime-only" type="checkbox"/>
+    <label class="form-check-label" for="primeOnly">
      🤩 Prime Only
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Filter Amazon Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox">
-<label class="form-check-label" for="lightningDeals">
-    ⚡ Lightning Deals
-  </label>
-</div>
-<div class="form-check">
-<input aria-label="Today's Deals" class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox">
-<label class="form-check-label" for="todaysDeals">
+   </div>
+   <div class="form-check" title="Show time-limited Lightning Deals only.">
+    <input aria-label="Filter Amazon Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox"/>
+    <label class="form-check-label" for="lightningDeals">
+     ⚡ Lightning Deals
+    </label>
+   </div>
+   <div class="form-check" title="View Amazon's Today's Deals page.">
+    <input aria-label="Today's Deals" class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox"/>
+    <label class="form-check-label" for="todaysDeals">
      🔥 Today's Deals
     </label>
-</div>
-  
-<div class="form-check">
-  <input aria-label="Free Shipping" class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox">
-  <label class="form-check-label" for="freeShipping">
-    🚚 Free Shipping
-  </label>
-</div>
-
-<div class="form-check">
-  <input aria-label="Next-Day Delivery" class="form-check-input" id="nextDayDelivery" name="next-day-delivery" type="checkbox">
-  <label class="form-check-label" for="nextDayDelivery">
-    🚀 Next-Day Delivery
-  </label>
-</div>
-
-<div class="form-check">
-  <input aria-label="In Stock" class="form-check-input" id="inStock" name="in-stock" type="checkbox">
-  <label class="form-check-label" for="inStock">
-    📦 In Stock
-  </label>
-</div>
-
-<div class="form-check">
-  <input aria-label="Fulfilled by Amazon" class="form-check-input" id="fbaOnly" name="fba-only" type="checkbox">
-  <label class="form-check-label" for="fbaOnly">
-    📦 Fulfilled by Amazon (FBA)
-  </label>
-</div>
-
-<div class="form-check">
-<input aria-label="Coupons" class="form-check-input" id="coupons" name="coupons" type="checkbox">
-<label class="form-check-label" for="coupons">
+   </div>
+   <div class="form-check" title="Filter for products with free shipping.">
+    <input aria-label="Free Shipping" class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox"/>
+    <label class="form-check-label" for="freeShipping">
+     🚚 Free Shipping
+    </label>
+   </div>
+   <div class="form-check" title="Only show items with next-day delivery.">
+    <input aria-label="Next-Day Delivery" class="form-check-input" id="nextDayDelivery" name="next-day-delivery" type="checkbox"/>
+    <label class="form-check-label" for="nextDayDelivery">
+     🚀 Next-Day Delivery
+    </label>
+   </div>
+   <div class="form-check" title="Show items currently in stock.">
+    <input aria-label="In Stock" class="form-check-input" id="inStock" name="in-stock" type="checkbox"/>
+    <label class="form-check-label" for="inStock">
+     📦 In Stock
+    </label>
+   </div>
+   <div class="form-check" title="Fulfilled by Amazon (FBA) products only.">
+    <input aria-label="Fulfilled by Amazon" class="form-check-input" id="fbaOnly" name="fba-only" type="checkbox"/>
+    <label class="form-check-label" for="fbaOnly">
+     📦 Fulfilled by Amazon (FBA)
+    </label>
+   </div>
+   <div class="form-check" title="Only show items that have clipable coupons.">
+    <input aria-label="Coupons" class="form-check-input" id="coupons" name="coupons" type="checkbox"/>
+    <label class="form-check-label" for="coupons">
      🏷️ Coupons
     </label>
-</div>
-  
-<div class="form-check">
-<input aria-label="Subscribe &amp; Save" class="form-check-input" id="subscribeSave" name="subscribe-save" type="checkbox">
-<label class="form-check-label" for="subscribeSave">🔁 Subscribe &amp; Save</label>
-</div>
-<div class="form-check">
-<input aria-label="Amazon Brands" class="form-check-input" id="amazonBrands" name="amazon-brands" type="checkbox">
-<label class="form-check-label" for="amazonBrands">🏷️ Amazon Brands</label>
-</div>
-<div class="form-check">
-<input aria-label="Eco-Friendly" class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox">
-<label class="form-check-label" for="ecoFriendlyToggle">
+   </div>
+   <div class="form-check" title="Products eligible for Subscribe &amp; Save discounts.">
+    <input aria-label="Subscribe &amp; Save" class="form-check-input" id="subscribeSave" name="subscribe-save" type="checkbox"/>
+    <label class="form-check-label" for="subscribeSave">
+     🔁 Subscribe &amp; Save
+    </label>
+   </div>
+   <div class="form-check" title="Show products from Amazon-owned brands.">
+    <input aria-label="Amazon Brands" class="form-check-input" id="amazonBrands" name="amazon-brands" type="checkbox"/>
+    <label class="form-check-label" for="amazonBrands">
+     🏷️ Amazon Brands
+    </label>
+   </div>
+   <div class="form-check" title="Only show eco-friendly products.">
+    <input aria-label="Eco-Friendly" class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox"/>
+    <label class="form-check-label" for="ecoFriendlyToggle">
      ♻️ Eco-Friendly
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Biodegradable" class="form-check-input" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox">
-<label class="form-check-label" for="biodegradablePackaging">
+   </div>
+   <div class="form-check" title="Only show biodegradable options.">
+    <input aria-label="Biodegradable" class="form-check-input" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox"/>
+    <label class="form-check-label" for="biodegradablePackaging">
      📦 Biodegradable
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Vegan" class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox">
-<label class="form-check-label" for="veganProducts">
+   </div>
+   <div class="form-check" title="Only vegan-friendly products.">
+    <input aria-label="Vegan" class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox"/>
+    <label class="form-check-label" for="veganProducts">
      🌱 Vegan
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Organic" class="form-check-input" id="organicProducts" name="organic-products" type="checkbox">
-<label class="form-check-label" for="organicProducts">
+   </div>
+   <div class="form-check" title="Only organic-certified items.">
+    <input aria-label="Organic" class="form-check-input" id="organicProducts" name="organic-products" type="checkbox"/>
+    <label class="form-check-label" for="organicProducts">
      🌿 Organic
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Carbon-Neutral Delivery" class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox">
-<label class="form-check-label" for="carbonNeutralDelivery">
+   </div>
+   <div class="form-check" title="Items with carbon-neutral delivery.">
+    <input aria-label="Carbon-Neutral Delivery" class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox"/>
+    <label class="form-check-label" for="carbonNeutralDelivery">
      🚴 Carbon-Neutral Delivery
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Cruelty-Free" class="form-check-input" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox">
-<label class="form-check-label" for="crueltyFreeToggle">
+   </div>
+   <div class="form-check" title="Products labeled cruelty-free.">
+    <input aria-label="Cruelty-Free" class="form-check-input" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox"/>
+    <label class="form-check-label" for="crueltyFreeToggle">
      🐰 Cruelty-Free
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Low EMF" class="form-check-input" id="lowEmfDevices" name="low-emf-devices" type="checkbox">
-<label class="form-check-label" for="lowEmfDevices">
+   </div>
+   <div class="form-check" title="Low EMF-certified electronics or devices.">
+    <input aria-label="Low EMF" class="form-check-input" id="lowEmfDevices" name="low-emf-devices" type="checkbox"/>
+    <label class="form-check-label" for="lowEmfDevices">
      📶 Low EMF
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Allergy-Friendly" class="form-check-input" id="allergyFriendly" name="allergy-friendly" type="checkbox">
-<label class="form-check-label" for="allergyFriendly">
+   </div>
+   <div class="form-check" title="Items safe for people with allergies.">
+    <input aria-label="Allergy-Friendly" class="form-check-input" id="allergyFriendly" name="allergy-friendly" type="checkbox"/>
+    <label class="form-check-label" for="allergyFriendly">
      🤧 Allergy-Friendly
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Warehouse / Refurbished" class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox">
-<label class="form-check-label" for="warehouseRefurb">📦 Warehouse &amp; Refurbished</label>
-</div>
-<div class="form-check">
-<input aria-label="Gifts for Her" class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox">
-<label class="form-check-label" for="giftsForHer">
+   </div>
+   <div class="form-check" title="Show warehouse and refurbished items.">
+    <input aria-label="Warehouse / Refurbished" class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox"/>
+    <label class="form-check-label" for="warehouseRefurb">
+     📦 Warehouse &amp; Refurbished
+    </label>
+   </div>
+   <div class="form-check" title="Gift ideas suitable for women.">
+    <input aria-label="Gifts for Her" class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox"/>
+    <label class="form-check-label" for="giftsForHer">
      🎀 Gifts for Her
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Gifts for Him" class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox">
-<label class="form-check-label" for="giftsForHim">
+   </div>
+   <div class="form-check" title="Gift ideas suitable for men.">
+    <input aria-label="Gifts for Him" class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox"/>
+    <label class="form-check-label" for="giftsForHim">
      👔 Gifts for Him
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Gifts for Dad" class="form-check-input" id="giftsForDad" name="gifts-for-dad" type="checkbox">
-<label class="form-check-label" for="giftsForDad">
+   </div>
+   <div class="form-check" title="Great gift picks for dads.">
+    <input aria-label="Gifts for Dad" class="form-check-input" id="giftsForDad" name="gifts-for-dad" type="checkbox"/>
+    <label class="form-check-label" for="giftsForDad">
      👨 Gifts for Dad
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Gifts for Mom" class="form-check-input" id="giftsForMom" name="gifts-for-mom" type="checkbox">
-<label class="form-check-label" for="giftsForMom">
+   </div>
+   <div class="form-check" title="Great gift picks for moms.">
+    <input aria-label="Gifts for Mom" class="form-check-input" id="giftsForMom" name="gifts-for-mom" type="checkbox"/>
+    <label class="form-check-label" for="giftsForMom">
      👩 Gifts for Mom
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Gifts for Kids" class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox">
-<label class="form-check-label" for="giftsForKids">
+   </div>
+   <div class="form-check" title="Gift ideas for kids of all ages.">
+    <input aria-label="Gifts for Kids" class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox"/>
+    <label class="form-check-label" for="giftsForKids">
      🧒 Gifts for Kids
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Birthday Gifts" class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox">
-<label class="form-check-label" for="birthdayGifts">
+   </div>
+   <div class="form-check" title="Perfect for birthday gift shopping.">
+    <input aria-label="Birthday Gifts" class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox"/>
+    <label class="form-check-label" for="birthdayGifts">
      🎂 Birthday Gifts
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Anniversary Gifts" class="form-check-input" id="anniversaryGifts" name="anniversary-gifts" type="checkbox">
-<label class="form-check-label" for="anniversaryGifts">
+   </div>
+   <div class="form-check" title="Curated anniversary gift selections.">
+    <input aria-label="Anniversary Gifts" class="form-check-input" id="anniversaryGifts" name="anniversary-gifts" type="checkbox"/>
+    <label class="form-check-label" for="anniversaryGifts">
      💝 Anniversary Gifts
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Holiday Gift Picks" class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox">
-<label class="form-check-label" for="holidayGiftPicks">
+   </div>
+   <div class="form-check" title="Holiday-themed gift deals.">
+    <input aria-label="Holiday Gift Picks" class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox"/>
+    <label class="form-check-label" for="holidayGiftPicks">
      🎄 Holiday Gift Picks
     </label>
-</div>
-<div class="form-check">
-<input aria-label="Small Business" class="form-check-input" id="smallBusiness" name="small-business" type="checkbox">
-<label class="form-check-label" for="smallBusiness">🏪 Small Business</label>
-</div>
-</div>
-</div>
+   </div>
+   <div class="form-check" title="Support products sold by small businesses.">
+    <input aria-label="Small Business" class="form-check-input" id="smallBusiness" name="small-business" type="checkbox"/>
+    <label class="form-check-label" for="smallBusiness">
+     🏪 Small Business
+    </label>
+   </div>
+  </div>
+ </div>
 </section>
+
 <!-- ✅ Step 6: View Your Results -->
 <section class="container text-start mb-5">
   <h3>🚀 Step 6: View Your Results</h3>
