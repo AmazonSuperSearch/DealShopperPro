@@ -1,5 +1,3 @@
-// searchlogic-v2.js
-
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
 
@@ -21,48 +19,46 @@ document.addEventListener('DOMContentLoaded', () => {
         q += (q.endsWith(' ') ? '' : ' ') + phrase;
       }
     };
-  
-    
-keywordAppend('eco-friendly',             'eco friendly');
-keywordAppend('biodegradable-packaging',  'biodegradable packaging');
-keywordAppend('vegan-products',           'vegan');
-keywordAppend('organic-products',         'organic');
-keywordAppend('carbon-neutral-delivery',  'carbon-neutral delivery');
-keywordAppend('bogo-deals',               'buy one get one free');
-keywordAppend('stackable-coupons',        'stackable coupon');
-keywordAppend('price-drop-deals',         'price drop');
-keywordAppend('clearance-deals',          'clearance');
-keywordAppend('bulk-discounts',           'bulk discount');
-keywordAppend('limited-time-deals',       'limited time deal');
-keywordAppend('ends-soon-deals',          'ends soon');
-keywordAppend('under-25-deals',           'under 25 deals');
-keywordAppend('expiring-coupons',         'expiring coupon');
-keywordAppend('sns-with-coupon',          'subscribe and save coupon');
-keywordAppend('best-seller-deals',        'best seller deals');
 
-keywordAppend('filter-cruelty-free',      'cruelty free');
-keywordAppend('low-emf-devices',          'low emf');
-keywordAppend('allergy-friendly',         'allergy friendly');
-keywordAppend('gifts-for-her',            'gifts for her');
-keywordAppend('gifts-for-mom',            'gifts for mom');
-keywordAppend('anniversary-gifts',        'anniversary gifts');
-keywordAppend('gifts-for-him',            'gifts for him');
-keywordAppend('gifts-for-kids',           'gifts for kids');
-keywordAppend('gifts-for-dad',            'gifts for dad');
-keywordAppend('birthday-gifts',           'birthday gifts');
-keywordAppend('holiday-gift-picks',       'holiday gift picks');
+    keywordAppend('eco-friendly',             'eco friendly');
+    keywordAppend('biodegradable-packaging',  'biodegradable packaging');
+    keywordAppend('vegan-products',           'vegan');
+    keywordAppend('organic-products',         'organic');
+    keywordAppend('carbon-neutral-delivery',  'carbon-neutral delivery');
+    keywordAppend('bogo-deals',               'buy one get one free');
+    keywordAppend('stackable-coupons',        'stackable coupon');
+    keywordAppend('price-drop-deals',         'price drop');
+    keywordAppend('clearance-deals',          'clearance');
+    keywordAppend('bulk-discounts',           'bulk discount');
+    keywordAppend('limited-time-deals',       'limited time deal');
+    keywordAppend('ends-soon-deals',          'ends soon');
+    keywordAppend('under-25-deals',           'under 25 deals');
+    keywordAppend('expiring-coupons',         'expiring coupon');
+    keywordAppend('sns-with-coupon',          'subscribe and save coupon');
+    keywordAppend('best-seller-deals',        'best seller deals');
 
+    keywordAppend('filter-cruelty-free',      'cruelty free');
+    keywordAppend('low-emf-devices',          'low emf');
+    keywordAppend('allergy-friendly',         'allergy friendly');
+    keywordAppend('gifts-for-her',            'gifts for her');
+    keywordAppend('gifts-for-mom',            'gifts for mom');
+    keywordAppend('anniversary-gifts',        'anniversary gifts');
+    keywordAppend('gifts-for-him',            'gifts for him');
+    keywordAppend('gifts-for-kids',           'gifts for kids');
+    keywordAppend('gifts-for-dad',            'gifts for dad');
+    keywordAppend('birthday-gifts',           'birthday gifts');
+    keywordAppend('holiday-gift-picks',       'holiday gift picks');
 
     // 3) % Off, Rating & Sort
     const pct = data.get('percent-off');
     if (pct) params.set('pct-off', pct);
 
     const rating = data.get('min-rating');
-    if (rating === '1') rh.push('p_72:1248879011'); // 1★ & up
-if (rating === '2') rh.push('p_72:1248880011'); // 2★ & up
-if (rating === '3') rh.push('p_72:1248882011'); // 3★ & up
-if (rating === '4') rh.push('p_72:1248883011'); // 4★ & up
-if (rating === '5') rh.push('p_72:1248884011'); // 5★ only
+    if (rating === '1') rh.push('p_72:1248879011');
+    if (rating === '2') rh.push('p_72:1248880011');
+    if (rating === '3') rh.push('p_72:1248882011');
+    if (rating === '4') rh.push('p_72:1248883011');
+    if (rating === '5') rh.push('p_72:1248884011');
 
     const sort = data.get('sort');
     if (sort) params.set('s', sort);
@@ -84,26 +80,26 @@ if (rating === '5') rh.push('p_72:1248884011'); // 5★ only
       validBrands.forEach(b => rh.push(`p_89:${encodeURIComponent(b)}`));
     }
 
-   // 5) Non-brand RH facets
-const pushRh = (field, code) => {
-  if (data.get(field) === 'on') rh.push(code);
-};
+    // 5) Non-brand RH facets
+    const pushRh = (field, code) => {
+      if (data.get(field) === 'on') rh.push(code);
+    };
 
-const rhMap = {
-  'prime-only':      'p_85:2470955011',
-  'free-shipping':   'p_76:1249177011',
-  'in-stock':        'p_n_availability:2661601011',
-  'coupons':         'p_n_feature_browse-bin:6779703011',
-  'fba-only':        'p_n_shipping_option-bin:3242350011',
-  'subscribe-save':  'p_n_is_sns_available:2619533011',
-  'small-business':  'p_n_cpf_eligible:5191495011',
-  'amazon-brands':   'p_n_feature_fourteen_browse-bin:18584192011',
-  'warehouse-refurb':'p_n_condition-type:2224371011',
-  'lightning-deals': 'p_n_deal_type:23566065011',
-  'outlet-deals':    'p_n_deal_type:493167011' // (optional addition from earlier)
-};
+    const rhMap = {
+      'prime-only':      'p_85:2470955011',
+      'free-shipping':   'p_76:1249177011',
+      'in-stock':        'p_n_availability:2661601011',
+      'coupons':         'p_n_feature_browse-bin:6779703011',
+      'fba-only':        'p_n_shipping_option-bin:3242350011',
+      'subscribe-save':  'p_n_is_sns_available:2619533011',
+      'small-business':  'p_n_cpf_eligible:5191495011',
+      'amazon-brands':   'p_n_feature_fourteen_browse-bin:18584192011',
+      'warehouse-refurb':'p_n_condition-type:2224371011',
+      'lightning-deals': 'p_n_deal_type:23566065011',
+      'outlet-deals':    'p_n_deal_type:493167011'
+    };
 
-Object.entries(rhMap).forEach(([field, code]) => pushRh(field, code));
+    Object.entries(rhMap).forEach(([field, code]) => pushRh(field, code));
 
     // 6) Price range
     const min = parseFloat(data.get('min-price') || 0);
@@ -128,9 +124,19 @@ Object.entries(rhMap).forEach(([field, code]) => pushRh(field, code));
     };
     const host = hostMap[data.get('currency')] || 'www.amazon.com';
     const url = `https://${host}/s?${params.toString()}`;
+
+    // ✅ Show "Opening..." toast
+    const toast = document.getElementById('searchToast');
+    if (toast) {
+      toast.style.display = 'block';
+      toast.style.opacity = '1';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.style.display = 'none', 500);
+      }, 2500);
+    }
+
+    // ✅ Open Amazon in new tab
     window.open(url, '_blank');
   });
 });
-
-
-
