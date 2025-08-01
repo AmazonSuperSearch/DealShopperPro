@@ -778,55 +778,60 @@
      </div>
     </div>
    </div>
-   <div class="accordion-item">
-    <h2 class="accordion-header" id="headingaccordionGroup2">
-     <button aria-controls="accordionGroup2" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup2" data-bs-toggle="collapse" type="button">
-      Deals &amp; Discounts
-     </button>
-    </h2>
-    <div aria-labelledby="headingaccordionGroup2" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup2">
-     <div class="accordion-body">
+  <div class="accordion-item border border-3 border-warning rounded shadow">
+  <h2 class="accordion-header" id="headingaccordionGroup2">
+    <button
+      type="button"
+      class="accordion-button collapsed sticky-top bg-warning text-dark fw-bold fs-5"
+      data-bs-toggle="collapse"
+      data-bs-target="#accordionGroup2"
+      aria-expanded="false"
+      aria-controls="accordionGroup2"
+    >
+      🎯🔥 Deals & Discounts – The Best Amazon Offers
+    </button>
+  </h2>
+
+  <div id="accordionGroup2" class="accordion-collapse collapse" aria-labelledby="headingaccordionGroup2" data-bs-parent="#filterAccordion">
+    <div class="accordion-body">
       <div class="px-3 py-2 text-end small text-muted">
-       <button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup2', false)" type="button">
-        Clear All
-       </button>
-       <button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup2', true)" type="button">
-        Select All
-       </button>
+        <button type="button" class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup2', false)">
+          Clear All
+        </button>
+        <button type="button" class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup2', true)">
+          Select All
+        </button>
       </div>
+
+      <!-- Filter checkboxes -->
       <div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
-       <input aria-label="Filter Amazon Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox"/>
-       <label class="form-check-label" for="lightningDeals">
-        ⚡ Lightning Deals
-       </label>
+        <input class="form-check-input" type="checkbox" id="lightningDeals" name="lightning-deals" aria-label="Filter Amazon Lightning Deals" />
+        <label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label>
       </div>
+
       <div class="form-check" data-tooltip="View Amazon's Today's Deals page.">
-       <input aria-label="Today's Deals" class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox"/>
-       <label class="form-check-label" for="todaysDeals">
-        🔥 Today's Deals
-       </label>
+        <input class="form-check-input" type="checkbox" id="todaysDeals" name="todays-deals" aria-label="Today's Deals" />
+        <label class="form-check-label" for="todaysDeals">🔥 Today's Deals</label>
       </div>
+
       <div class="form-check" data-tooltip="🔥🏷️ Only show items that have clippable coupons at checkout.">
-       <input aria-label="Coupons" class="form-check-input" id="coupons" name="coupons" type="checkbox"/>
-       <label class="form-check-label" for="coupons">
-        🏷️ Coupons
-       </label>
+        <input class="form-check-input" type="checkbox" id="coupons" name="coupons" aria-label="Coupons" />
+        <label class="form-check-label" for="coupons">🏷️ Coupons</label>
       </div>
-      <div class="form-check" data-tooltip="Products eligible for Subscribe &amp; Save discounts.">
-       <input aria-label="Subscribe &amp; Save" class="form-check-input" id="subscribeSave" name="subscribe-save" type="checkbox"/>
-       <label class="form-check-label" for="subscribeSave">
-        🔁 Subscribe &amp; Save
-       </label>
+
+      <div class="form-check" data-tooltip="Products eligible for Subscribe & Save discounts.">
+        <input class="form-check-input" type="checkbox" id="subscribeSave" name="subscribe-save" aria-label="Subscribe & Save" />
+        <label class="form-check-label" for="subscribeSave">🔁 Subscribe & Save</label>
       </div>
+
       <div class="form-check" data-tooltip="Show products from Amazon-owned brands.">
-       <input aria-label="Amazon Brands" class="form-check-input" id="amazonBrands" name="amazon-brands" type="checkbox"/>
-       <label class="form-check-label" for="amazonBrands">
-        🏷️ Amazon Brands
-       </label>
+        <input class="form-check-input" type="checkbox" id="amazonBrands" name="amazon-brands" aria-label="Amazon Brands" />
+        <label class="form-check-label" for="amazonBrands">🏷️ Amazon Brands</label>
       </div>
-     </div>
     </div>
-   </div>
+  </div>
+</div>
+
    <div class="accordion-item">
     <h2 class="accordion-header" id="headingaccordionGroup3">
      <button aria-controls="accordionGroup3" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup3" data-bs-toggle="collapse" type="button">
