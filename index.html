@@ -559,25 +559,34 @@
     <h2 class="text-center fw-bold my-4">How to Filter Amazon Deals in 6 Easy Steps</h2>
 <!-- AMAZON SEARCH FORM -->
 <form id="amazon-search-form">
-  <!-- STEP 1 -->
-  <div class="container text-start mb-4">
-    <h3 class="fw-bold mb-3">🔍 ✅ Step 1: Start Your Product Search</h3>
-    <p class="text-muted mb-1">Enter a keyword, ASIN, ISBN or UPC.</p>
-    <p class="fw-semibold small text-danger mb-3">
-    <div class="card p-3">
-      <div class="row g-3">
-        <div class="col-12">
-          <div class="input-group">
-            <button aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button">
-              🎤
-            </button>
-            <input aria-label="Main search input" autocomplete="off" class="form-control" id="mainSearchInput" name="q"
-              placeholder="Example: wireless headphones, lightning deals" type="text">
-          </div>
+<!-- STEP 1 -->
+<div class="container text-start mb-4">
+  <h3 class="fw-bold mb-3">🔍 ✅ Step 1: Start Your Product Search</h3>
+
+  <p class="text-muted mb-1">
+    Enter any keyword, ASIN, ISBN, or UPC to begin filtering Amazon results.
+  </p>
+  <p class="small text-danger fw-semibold mb-3">
+    Tip: Use descriptive keywords like “wireless earbuds” or “eco-friendly shampoo” to get better results.
+  </p>
+
+  <div class="card p-3">
+    <div class="row g-3">
+      <div class="col-12">
+        <div class="input-group">
+          <button aria-label="Activate voice search" class="btn btn-outline-secondary" id="voiceSearchBtn" type="button" title="Use voice to search">
+            🎤
+          </button>
+          <input aria-label="Search products by keyword or ID" autocomplete="off"
+                 class="form-control" id="mainSearchInput" name="q"
+                 placeholder="Example: bluetooth speaker, B08N5WRWNW"
+                 type="text">
         </div>
       </div>
     </div>
   </div>
+</div>
+
 
 <!-- STEP 2 -->
 <div class="container text-start mb-4">
