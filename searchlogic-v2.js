@@ -84,28 +84,26 @@ if (rating === '5') rh.push('p_72:1248884011'); // 5★ only
       validBrands.forEach(b => rh.push(`p_89:${encodeURIComponent(b)}`));
     }
 
-    // 5) Non-brand RH facets
-    const pushRh = (field, code) => {
-      if (data.get(field) === 'on') rh.push(code);
-    };
-    const rhMap = {
-      'prime-only':      'p_85:2470955011',
-      'free-shipping':   'p_76:1249177011',
-      'in-stock':        'p_n_availability:2661601011',
-      'coupons':         'p_n_feature_browse-bin:6779703011',
-      'fba-only':        'p_n_shipping_option-bin:3242350011',
-      'subscribe-save':  'p_n_is_sns_available:2619533011',
-      'small-business':  'p_n_cpf_eligible:5191495011',
-      'amazon-brands':   'p_n_feature_fourteen_browse-bin:18584192011',
-      'warehouse-refurb':'p_n_condition-type:2224371011',
-      'lightning-deals': 'p_n_deal_type:23566065011' // ✅ now acts like a normal filter
-    };
-    // 🔁 Map "Next-Day Delivery" to both Prime + Free Shipping
-if (data.get('next-day-delivery') === 'on') {
-  data.set('prime-only', 'on');
-  data.set('free-shipping', 'on');
-}
-    Object.entries(rhMap).forEach(([field, code]) => pushRh(field, code));
+   // 5) Non-brand RH facets
+const pushRh = (field, code) => {
+  if (data.get(field) === 'on') rh.push(code);
+};
+
+const rhMap = {
+  'prime-only':      'p_85:2470955011',
+  'free-shipping':   'p_76:1249177011',
+  'in-stock':        'p_n_availability:2661601011',
+  'coupons':         'p_n_feature_browse-bin:6779703011',
+  'fba-only':        'p_n_shipping_option-bin:3242350011',
+  'subscribe-save':  'p_n_is_sns_available:2619533011',
+  'small-business':  'p_n_cpf_eligible:5191495011',
+  'amazon-brands':   'p_n_feature_fourteen_browse-bin:18584192011',
+  'warehouse-refurb':'p_n_condition-type:2224371011',
+  'lightning-deals': 'p_n_deal_type:23566065011',
+  'outlet-deals':    'p_n_deal_type:493167011' // (optional addition from earlier)
+};
+
+Object.entries(rhMap).forEach(([field, code]) => pushRh(field, code));
 
     // 6) Price range
     const min = parseFloat(data.get('min-price') || 0);
@@ -133,5 +131,6 @@ if (data.get('next-day-delivery') === 'on') {
     window.open(url, '_blank');
   });
 });
+
 
 
