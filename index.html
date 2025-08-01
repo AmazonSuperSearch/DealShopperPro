@@ -1155,5 +1155,78 @@
     });
   });
 </script>
+  <style>
+  /* Highlight effect for checkbox flash */
+  .flash-highlight {
+    background-color: #fff3cd;
+    transition: background-color 0.8s ease;
+  }
+
+  /* Toast container */
+  #toast {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #212529;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 9999;
+    font-size: 0.9rem;
+  }
+
+  #toast.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+</style>
+
+<!-- Toast element -->
+<div id="toast"></div>
+
+<script>
+function toggleAllCheckboxes(containerId, shouldCheck) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const checkboxes = container.querySelectorAll('input[type="checkbox"]');
+  let changedCount = 0;
+
+  checkboxes.forEach(cb => {
+    if (!cb.disabled) {
+      if (cb.checked !== shouldCheck) {
+        cb.checked = shouldCheck;
+        changedCount++;
+
+        // Flash highlight on parent form-check
+        const parent = cb.closest('.form-check');
+        if (parent) {
+          parent.classList.add('flash-highlight');
+          setTimeout(() => {
+            parent.classList.remove('flash-highlight');
+          }, 800);
+        }
+      }
+    }
+  });
+
+  if (changedCount > 0) {
+    showToast(shouldCheck ? '✅ Selected All Filters' : '❌ Cleared All Filters');
+  }
+}
+
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2500);
+}
+</script>
+
 </body>
 </html>
