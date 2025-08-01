@@ -99,18 +99,18 @@
     max-width: var(--intro-max-width);
   }
 
-  .privacy-banner {
-    background-color: var(--banner-bg);
-    border: 1px solid var(--banner-border);
-    border-radius: var(--banner-radius);
-    padding: var(--banner-padding-vertical) var(--banner-padding-horizontal);
-    margin: 2rem auto;
-    max-width: 850px;
-    box-shadow: 0 2px 6px var(--banner-shadow);
-    display: flex;
-    align-items: flex-start;
-    gap: var(--banner-gap);
-  }
+ .privacy-banner {
+  background-color: var(--banner-bg);
+  /* border: 1px solid var(--banner-border); */ /* 🔧 removed yellow border */
+  border-radius: var(--banner-radius);
+  padding: var(--banner-padding-vertical) var(--banner-padding-horizontal);
+  margin: 2rem auto;
+  max-width: 850px;
+  box-shadow: 0 2px 6px var(--banner-shadow);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--banner-gap);
+}
 
   .privacy-banner__graphic {
     flex-shrink: 0;
@@ -196,6 +196,21 @@
   }
 </style>
 <style>
+  /* 🔥 Animated flame-glow effect */
+@keyframes flame-glow {
+  0%   { box-shadow: 0 0 6px 2px orange; }
+  50%  { box-shadow: 0 0 12px 4px red; }
+  100% { box-shadow: 0 0 6px 2px orange; }
+}
+
+/* Apply glow to the label when checkbox is checked */
+.form-check-input:checked + .form-check-label {
+  animation: flame-glow 1.2s infinite alternate;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
   /* Make all checkboxes more visible */
   input[type="checkbox"] {
     width: 1.1em;
