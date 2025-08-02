@@ -106,7 +106,6 @@ keywordAppend('global-shipping',      'amazon global shipping');
 keywordAppend('subscribe-save',       'subscribe and save');
 keywordAppend('pickup-available',     'amazon pickup location');
 keywordAppend('ships-from-amazon',    'ships from Amazon');
-keywordAppend('back-in-stock',        'back in stock');
 
 
 
@@ -201,6 +200,7 @@ keywordAppend('back-in-stock',        'back in stock');
     window.open(url, '_blank');
   });
 });
+
 
 
 
