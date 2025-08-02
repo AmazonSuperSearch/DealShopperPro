@@ -106,6 +106,24 @@ keywordAppend('global-shipping',      'amazon global shipping');
 keywordAppend('subscribe-save',       'subscribe and save');
 keywordAppend('pickup-available',     'amazon pickup location');
 keywordAppend('ships-from-amazon',    'ships from Amazon');
+keywordAppend('recyclable-packaging', 'recyclable packaging');
+keywordAppend('plastic-free', 'plastic free');
+keywordAppend('minimal-packaging', 'minimal packaging');
+keywordAppend('sustainably-sourced', 'sustainably sourced');
+keywordAppend('rechargeable-batteries', 'rechargeable batteries');
+keywordAppend('no-microplastics', 'no microplastics');
+keywordAppend('bee-friendly', 'bee friendly');
+keywordAppend('fair-trade', 'fair trade');
+keywordAppend('ethically-made', 'ethically made');
+keywordAppend('no-animal-testing', 'no animal testing');
+keywordAppend('made-in-usa', 'made in usa');
+keywordAppend('palm-oil-free', 'palm oil free');
+keywordAppend('climate-neutral-certified', 'climate neutral certified');
+keywordAppend('low-carbon-footprint', 'low carbon footprint');
+keywordAppend('reusable-products', 'reusable products');
+keywordAppend('compostable-materials', 'compostable materials');
+keywordAppend('energy-efficient', 'energy efficient');
+
 
 
 
@@ -200,6 +218,7 @@ keywordAppend('ships-from-amazon',    'ships from Amazon');
     window.open(url, '_blank');
   });
 });
+
 
 
 
