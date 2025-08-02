@@ -79,6 +79,27 @@ document.addEventListener('DOMContentLoaded', () => {
     keywordAppend('exclude-sponsored',        'exclude sponsored');
     keywordAppend('recurring-deals',          'recurring deals');
     keywordAppend('back-in-stock',            'back in stock');
+    keywordAppend('free-with-subscription',     'free with subscription');
+keywordAppend('digital-coupons',            'digital coupons');
+keywordAppend('instant-coupons',            'instant coupons');
+keywordAppend('hidden-deals',               'hidden deals');
+keywordAppend('buy-2-get-1',                'buy 2 get 1 free');
+keywordAppend('closeout-sales',             'closeout sales');
+keywordAppend('surprise-deals',             'surprise deals');
+keywordAppend('daily-deal-rotation',        'daily deal rotation');
+keywordAppend('free-shipping-deals',        'free shipping deals');
+keywordAppend('subscribe-save-bundles',     'subscribe and save bundles');
+keywordAppend('over-50-off',                'over 50 percent off');
+keywordAppend('multi-pack-savings',         'multi-pack savings');
+keywordAppend('budget-friendly-picks',      'budget friendly picks');
+keywordAppend('unadvertised-discounts',     'unadvertised discounts');
+keywordAppend('clearance-countdown',        'clearance countdown');
+keywordAppend('just-dropped-deals',         'just dropped deals');
+keywordAppend('bundle-and-save',            'bundle and save');
+keywordAppend('deal-of-the-day',            'deal of the day');
+keywordAppend('rare-discounts',             'rare discounts');
+keywordAppend('invitation-only-deals',      'invitation only deals');
+
 
     // 3) % Off, Rating & Sort
     const pct = data.get('percent-off');
@@ -171,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.open(url, '_blank');
   });
 });
+
 
 
 
