@@ -688,1130 +688,791 @@ input[type="checkbox"]:checked + .form-check-label {
 </section>
 <!-- STEP 5 -->
 <section class="container text-start mb-4">
-<h3>
-<h3>
+ <h3>
   🎯
   ✅ Step 5: Extra Filters
-   <div class="accordion-item">
-</div></h3>
-<p class="text-muted mb-3">
-<button aria-controls="accordionGroup1" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup1" data-bs-toggle="collapse" type="button">
-<h2 class="accordion-header" id="headingaccordionGroup1">
-<div class="accordion" id="filterAccordion">
+ </h3>
+ <p class="text-muted mb-3">
   Prime‑eligible, Lightning Deals, Free Shipping, In Stock, Eco‑Friendly, Coupons, and more.
+ </p>
  <div class="card mb-4 p-3">
-<div aria-labelledby="headingaccordionGroup1" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup1">
-<div class="form-check"><input aria-label="Prime Only" class="form-check-input" id="prime-only" name="prime-only" type="checkbox"/><label class="form-check-label" for="prime-only">Prime Only</label></div><div class="form-check"><input aria-label="Free Shipping" class="form-check-input" id="free-shipping" name="free-shipping" type="checkbox"/><label class="form-check-label" for="free-shipping">Free Shipping</label></div><div class="form-check"><input aria-label="In Stock" class="form-check-input" id="in-stock" name="in-stock" type="checkbox"/><label class="form-check-label" for="in-stock">In Stock</label></div><div class="form-check"><input aria-label="Amazon Fresh" class="form-check-input" id="amazon-fresh" name="amazon-fresh" type="checkbox"/><label class="form-check-label" for="amazon-fresh">Amazon Fresh</label></div><div class="form-check"><input aria-label="Amazon Pantry" class="form-check-input" id="pantry" name="pantry" type="checkbox"/><label class="form-check-label" for="pantry">Amazon Pantry</label></div><div class="form-check"><input aria-label="Available at Local Store" class="form-check-input" id="local-store" name="local-store" type="checkbox"/><label class="form-check-label" for="local-store">Available at Local Store</label></div><div class="form-check"><input aria-label="Warehouse Deals / Refurbished" class="form-check-input" id="warehouseRefurb" name="warehouseRefurb" type="checkbox"/><label class="form-check-label" for="warehouseRefurb">Warehouse Deals / Refurbished</label></div><div class="form-check"><input aria-label="Back in Stock" class="form-check-input" id="back-in-stock" name="back-in-stock" type="checkbox"/><label class="form-check-label" for="back-in-stock">Back in Stock</label></div></div></div></div></h2></button></p>
-<div class="card mb-4 p-3">
-<div class="accordion" id="filterAccordion">
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingaccordionGroup1">
-<button aria-controls="accordionGroup1" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup1" data-bs-toggle="collapse" type="button">
+  <div class="accordion" id="filterAccordion">
+   <div class="accordion-item">
+    <h2 class="accordion-header" id="headingaccordionGroup1">
+     <button aria-controls="accordionGroup1" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup1" data-bs-toggle="collapse" type="button">
       Shipping &amp; Availability
      </button>
-<button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup1', true)" type="button">
-</button></h2>
-<div aria-labelledby="headingaccordionGroup1" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup1">
-<div class="form-check" data-tooltip="Filter for products with free shipping.">
-<button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup1', false)" type="button">
-<div class="accordion-body">
-<div class="accordion-body">
-<div class="px-3 py-2 text-end small text-muted">
-<div class="px-3 py-2 text-end small text-muted">
-
-<button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup1', false)" type="button">
+    </h2>
+    <div aria-labelledby="headingaccordionGroup1" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup1">
+     <div class="accordion-body">
+      <div class="px-3 py-2 text-end small text-muted">
+       <button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup1', false)" type="button">
         Clear All
-       <label class="form-check-label" for="freeShipping">
-</label></button>
-<button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup1', true)" type="button">
-<div class="form-check" data-tooltip="Fulfilled by Amazon (FBA) products only.">
+       </button>
+       <button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup1', true)" type="button">
         Select All
-       </div></button>
-<label class="form-check-label" for="primeOnly">
-<div class="form-check" data-tooltip="Only show Amazon Prime-eligible products.">
-</div>
-<div class="form-check" data-tooltip="Only show Amazon Prime-eligible products.">
-<input aria-label="Prime Only" class="form-check-input" id="primeOnly" name="prime-only" type="checkbox"/>
-<label class="form-check-label" for="primeOnly">
+       </button>
+      </div>
+      <div class="form-check" data-tooltip="Only show Amazon Prime-eligible products.">
+       <input aria-label="Prime Only" class="form-check-input" id="primeOnly" name="prime-only" type="checkbox"/>
+       <label class="form-check-label" for="primeOnly">
         🤩 Prime Only
        </label>
-<div class="form-check" data-tooltip="Only show products that ship from the United States.">
-</div>
-<div class="form-check" data-tooltip="Filter for products with free shipping.">
-<input aria-label="Free Shipping" class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox"/>
-<label class="form-check-label" for="inStock">
-<input aria-label="Arrives Tomorrow" class="form-check-input" id="arrivesTomorrow" name="arrives-tomorrow" type="checkbox">
-<label class="form-check-label" for="fbaOnly">
-<label class="form-check-label" for="freeShipping">
-<div class="form-check" data-tooltip="Show items currently in stock.">
+      </div>
+      <div class="form-check" data-tooltip="Filter for products with free shipping.">
+       <input aria-label="Free Shipping" class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox"/>
+       <label class="form-check-label" for="freeShipping">
         🚚 Free Shipping
-       <input aria-label="Ships from United States" class="form-check-input" id="shipsFromUS" name="ships-from-us" type="checkbox"/>
-<input aria-label="Same-Day Delivery" class="form-check-input" id="sameDay" name="same-day" type="checkbox"/>
-</div></label>
-</label></input></label></div>
-<div class="form-check" data-tooltip="Show items currently in stock.">
-<input aria-label="In Stock" class="form-check-input" id="inStock" name="in-stock" type="checkbox"/>
-<div class="form-check" data-tooltip="Only include items with same-day delivery available.">
-<label class="form-check-label" for="inStock">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Show items currently in stock.">
+       <input aria-label="In Stock" class="form-check-input" id="inStock" name="in-stock" type="checkbox"/>
+       <label class="form-check-label" for="inStock">
         📦 In Stock
-       <label class="form-check-label" for="shipsFromUS">
-</label>
-</label></div>
-<div class="form-check" data-tooltip="Fulfilled by Amazon (FBA) products only.">
-<input aria-label="Fulfilled by Amazon" class="form-check-input" id="fbaOnly" name="fba-only" type="checkbox"/>
-<label class="form-check-label" for="fbaOnly">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Fulfilled by Amazon (FBA) products only.">
+       <input aria-label="Fulfilled by Amazon" class="form-check-input" id="fbaOnly" name="fba-only" type="checkbox"/>
+       <label class="form-check-label" for="fbaOnly">
         📦 Fulfilled by Amazon (FBA)
-      <div class="form-check" data-tooltip="Show items available for pickup at Amazon Locker or Hub.">
-<div class="form-check" data-tooltip="Filter for products with next-day delivery.">
-<label class="form-check-label" for="globalShipping">
-</label>
-</div>
-<div class="form-check" data-tooltip="Only show products that ship from the United States.">
-<input aria-label="Ships from United States" class="form-check-input" id="shipsFromUS" name="ships-from-us" type="checkbox"/>
-<label class="form-check-label" for="shipsFromUS">
-<label class="form-check-label" for="arrivesTomorrow">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Only show products that ship from the United States.">
+       <input aria-label="Ships from United States" class="form-check-input" id="shipsFromUS" name="ships-from-us" type="checkbox"/>
+       <label class="form-check-label" for="shipsFromUS">
         🇺🇸 Ships from United States
        </label>
-</label></div>
-<div class="form-check" data-tooltip="Filter for products with next-day delivery.">
-<input aria-label="Arrives Tomorrow" class="form-check-input" id="arrivesTomorrow" name="arrives-tomorrow" type="checkbox"/>
-<label class="form-check-label" for="arrivesTomorrow">
-<div class="form-check" data-tooltip="Include items eligible for international shipping.">
+      </div>
+      <div class="form-check" data-tooltip="Filter for products with next-day delivery.">
+       <input aria-label="Arrives Tomorrow" class="form-check-input" id="arrivesTomorrow" name="arrives-tomorrow" type="checkbox"/>
+       <label class="form-check-label" for="arrivesTomorrow">
         🚀 Arrives Tomorrow
-       <input aria-label="Ships from Amazon Warehouse" class="form-check-input" id="shipsFromAmazon" name="ships-from-amazon" type="checkbox"/>
-<input aria-label="Back in Stock" class="form-check-input" id="backInStock" name="back-in-stock" type="checkbox"/>
-<label class="form-check-label" for="sameDay">
-<input aria-label="Amazon Pickup Location" class="form-check-input" id="pickupAvailable" name="pickup-available" type="checkbox"/>
-<label class="form-check-label" for="pickupAvailable">
-</label>
-</label></div>
-<div class="form-check" data-tooltip="Only include items with same-day delivery available.">
-<input aria-label="Amazon Global Shipping" class="form-check-input" id="globalShipping" name="global-shipping" type="checkbox"/>
-<input aria-label="Same-Day Delivery" class="form-check-input" id="sameDay" name="same-day" type="checkbox"/>
-<label class="form-check-label" for="sameDay">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Only include items with same-day delivery available.">
+       <input aria-label="Same-Day Delivery" class="form-check-input" id="sameDay" name="same-day" type="checkbox"/>
+       <label class="form-check-label" for="sameDay">
         ⚡ Same-Day Delivery
        </label>
-</div>
-<div class="form-check" data-tooltip="Include items eligible for international shipping.">
-<input aria-label="Amazon Global Shipping" class="form-check-input" id="globalShipping" name="global-shipping" type="checkbox"/>
-<label class="form-check-label" for="globalShipping">
+      </div>
+      <div class="form-check" data-tooltip="Include items eligible for international shipping.">
+       <input aria-label="Amazon Global Shipping" class="form-check-input" id="globalShipping" name="global-shipping" type="checkbox"/>
+       <label class="form-check-label" for="globalShipping">
         🌍 Amazon Global Shipping
        </label>
-</div>
-<label class="form-check-label" for="shipsFromAmazon">
-<label class="form-check-label" for="backInStock">
-<div class="form-check" data-tooltip="Show items available for pickup at Amazon Locker or Hub.">
-<button aria-controls="accordionGroup2" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup2" data-bs-toggle="collapse" type="button">
-<input aria-label="Amazon Pickup Location" class="form-check-input" id="pickupAvailable" name="pickup-available" type="checkbox"/>
-<label class="form-check-label" for="lightningDeals">
-<div class="form-check" data-tooltip="Filter recently restocked products.">
-<label class="form-check-label" for="pickupAvailable">
+      </div>
+      <div class="form-check" data-tooltip="Show items available for pickup at Amazon Locker or Hub.">
+       <input aria-label="Amazon Pickup Location" class="form-check-input" id="pickupAvailable" name="pickup-available" type="checkbox"/>
+       <label class="form-check-label" for="pickupAvailable">
         🏬 Amazon Pickup Location
+       </label>
+      </div>
       <div class="form-check" data-tooltip="Only include items shipped directly from Amazon.">
-<button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup2', true)" type="button">
-</button></div></label>
-</div>
-<div class="form-check" data-tooltip="Only include items shipped directly from Amazon.">
-<input aria-label="Ships from Amazon Warehouse" class="form-check-input" id="shipsFromAmazon" name="ships-from-amazon" type="checkbox"/>
-<div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
-<label class="form-check-label" for="shipsFromAmazon">
+       <input aria-label="Ships from Amazon Warehouse" class="form-check-input" id="shipsFromAmazon" name="ships-from-amazon" type="checkbox"/>
+       <label class="form-check-label" for="shipsFromAmazon">
         🏠 Ships from Amazon
        </label>
-</div>
-<div class="form-check" data-tooltip="Filter recently restocked products.">
-<div class="form-check" data-tooltip="🔥🏷️ Filter Amazon for deals with clippable coupons at checkout.">
-<div aria-labelledby="headingaccordionGroup2" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup2">
-<input aria-label="Back in Stock" class="form-check-input" id="backInStock" name="back-in-stock" type="checkbox"/>
-<label class="form-check-label" for="backInStock">
-<button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup2', false)" type="button">
+      </div>
+      <div class="form-check" data-tooltip="Filter recently restocked products.">
+       <input aria-label="Back in Stock" class="form-check-input" id="backInStock" name="back-in-stock" type="checkbox"/>
+       <label class="form-check-label" for="backInStock">
         📦 Back in Stock
-       </button></label>
-</div>
-<div class="accordion-item border-bottom">
-<label class="form-check-label" for="todaysDeals">
-<h2 class="accordion-header" id="headingaccordionGroup2">
-<label class="form-check-label" for="bestSellerDeals">
-</label></h2></label></div>
-<label class="form-check-label" for="subscribeSave">
-</label></div>
-</div>
-<div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingaccordionGroup2">
-<button aria-controls="accordionGroup2" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup2" data-bs-toggle="collapse" type="button">
+       </label>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item border-bottom">
+    <h2 class="accordion-header" id="headingaccordionGroup2">
+     <button aria-controls="accordionGroup2" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup2" data-bs-toggle="collapse" type="button">
       🎯🔥 Deals &amp; Discounts
      </button>
-</h2>
-<div aria-labelledby="headingaccordionGroup2" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup2">
-<div class="form-check" data-tooltip="Promos like buy one get one free.">
-<div class="accordion-body">
-<div class="form-check" data-tooltip="View Amazon's Today's Deals page.">
-<div class="px-3 py-2 text-end small text-muted">
-<label class="form-check-label" for="coupons">
-<button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup2', false)" type="button">
+    </h2>
+    <div aria-labelledby="headingaccordionGroup2" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup2">
+     <div class="accordion-body">
+      <div class="px-3 py-2 text-end small text-muted">
+       <button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup2', false)" type="button">
         Clear All
-      <div class="form-check" data-tooltip="Clearance items from the Amazon Outlet section.">
-<label class="form-check-label" for="stackableCoupons">
-</label></div></button>
-<button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup2', true)" type="button">
+       </button>
+       <button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup2', true)" type="button">
         Select All
        </button>
-<!-- Filter checkboxes -->
-</label></div>
-<!-- Filter checkboxes -->
-<div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
-<input aria-label="Filter Amazon Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox"/>
-<label class="form-check-label" for="outletDeals">
-<label class="form-check-label" for="lightningDeals">
-<div class="form-check" data-tooltip="Find top-selling items with discounts.">
-<div class="form-check" data-tooltip="Discounts on bulk quantity purchases.">
+      </div>
+      <!-- Filter checkboxes -->
+      <div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
+       <input aria-label="Filter Amazon Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox">
+        <label class="form-check-label" for="lightningDeals">
          ⚡ Lightning Deals
-        </div></div></label>
-</label></div>
-<label class="form-check-label" for="bogoDeals">
-<div class="form-check" data-tooltip="View Amazon's Today's Deals page.">
-<input aria-label="Today's Deals" class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox"/>
-<label class="form-check-label" for="todaysDeals">
+        </label>
+       </input>
+      </div>
+      <div class="form-check" data-tooltip="View Amazon's Today's Deals page.">
+       <input aria-label="Today's Deals" class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox">
+        <label class="form-check-label" for="todaysDeals">
          🔥 Today's Deals
-       <label class="form-check-label" for="under25Deals">
-</label>
-<div class="form-check" data-tooltip="Products eligible for Subscribe &amp; Save discounts.">
-</div>
-<label class="form-check-label" for="endsSoonDeals">
-<div class="form-check" data-tooltip="🔥🏷️ Filter Amazon for deals with clippable coupons at checkout.">
-<input aria-label="Amazon coupon deals" class="form-check-input" id="coupons" name="coupons" type="checkbox"/>
-<label class="form-check-label" for="coupons">
+        </label>
+       </input>
+      </div>
+      <div class="form-check" data-tooltip="🔥🏷️ Filter Amazon for deals with clippable coupons at checkout.">
+       <input aria-label="Amazon coupon deals" class="form-check-input" id="coupons" name="coupons" type="checkbox">
+        <label class="form-check-label" for="coupons">
          🏷️ Coupons
         </label>
-</div>
-<div class="form-check" data-tooltip="Products eligible for Subscribe &amp; Save discounts.">
-<input aria-label="Subscribe &amp; Save" class="form-check-input" id="subscribeSave" name="subscribe-save" type="checkbox"/>
-<div class="form-check" data-tooltip="Coupons that are about to expire.">
-<label class="form-check-label" for="subscribeSave">
+       </input>
+      </div>
+      <div class="form-check" data-tooltip="Products eligible for Subscribe &amp; Save discounts.">
+       <input aria-label="Subscribe &amp; Save" class="form-check-input" id="subscribeSave" name="subscribe-save" type="checkbox">
+        <label class="form-check-label" for="subscribeSave">
          🔁 Subscribe &amp; Save
         </label>
-</div>
-<div class="form-check" data-tooltip="Clearance items from the Amazon Outlet section.">
-<input aria-label="Amazon Outlet Deals" class="form-check-input" id="outletDeals" name="outlet-deals" type="checkbox"/>
-<label class="form-check-label" for="outletDeals">
+       </input>
+      </div>
+      <div class="form-check" data-tooltip="Clearance items from the Amazon Outlet section.">
+       <input aria-label="Amazon Outlet Deals" class="form-check-input" id="outletDeals" name="outlet-deals" type="checkbox">
+        <label class="form-check-label" for="outletDeals">
          🛍️ Amazon Outlet Deals
-       <input aria-label="Amazon Brands" class="form-check-input" id="amazon-brands" name="amazon-brands" type="checkbox"/>
-<label class="form-check-label" for="bulkDiscounts">
-</label>
-</label></div>
-<div class="form-check" data-tooltip="Find top-selling items with discounts.">
-<input aria-label="Best Seller Deals" class="form-check-input" id="bestSellerDeals" name="best-seller-deals" type="checkbox"/>
-<div class="form-check" data-tooltip="Products with both Subscribe &amp; Save and coupons.">
-<label class="form-check-label" for="bestSellerDeals">
+        </label>
+       </input>
+      </div>
+      <div class="form-check" data-tooltip="Find top-selling items with discounts.">
+       <input aria-label="Best Seller Deals" class="form-check-input" id="bestSellerDeals" name="best-seller-deals" type="checkbox">
+        <label class="form-check-label" for="bestSellerDeals">
          🥇 Best Seller Deals
         </label>
-</div>
-<div class="form-check" data-tooltip="Promos like buy one get one free.">
-<input aria-label="Buy One Get One" class="form-check-input" id="bogoDeals" name="bogo-deals" type="checkbox"/>
-<label class="form-check-label" for="bogoDeals">
+       </input>
+      </div>
+      <div class="form-check" data-tooltip="Promos like buy one get one free.">
+       <input aria-label="Buy One Get One" class="form-check-input" id="bogoDeals" name="bogo-deals" type="checkbox">
+        <label class="form-check-label" for="bogoDeals">
          🎫 Buy One Get One (BOGO)
         </label>
-<div class="form-check" data-tooltip="Deals that are about to expire.">
-<div class="form-check" data-tooltip="Deals with short time limits or countdowns.">
-</div>
-<div class="form-check" data-tooltip="Items with multiple overlapping discounts.">
-<div class="form-check" data-tooltip="Items with multiple overlapping discounts.">
-<input aria-label="Ends Soon Deals" class="form-check-input" id="endsSoonDeals" name="ends-soon-deals" type="checkbox"/>
-<input aria-label="Under $25 Deals" class="form-check-input" id="under25Deals" name="under-25-deals" type="checkbox"/>
-<label class="form-check-label" for="amazon-brands">
-<input aria-label="Stackable Coupons" class="form-check-input" id="stackableCoupons" name="stackable-coupons" type="checkbox"/>
-<label class="form-check-label" for="expiringCoupons">
-<label class="form-check-label" for="stackableCoupons">
-<input aria-label="Expiring Coupons" class="form-check-input" id="expiringCoupons" name="expiring-coupons" type="checkbox"/>
-<div class="form-check" data-tooltip="Find the lowest recorded price on items.">
-<input aria-label="Free Trials" class="form-check-input" id="freeTrials" name="free-trials" type="checkbox"/>
-<input aria-label="Lowest Price" class="form-check-input" id="lowestPrice" name="lowest-price" type="checkbox"/>
+       </input>
+      </div>
+      <div class="form-check" data-tooltip="Items with multiple overlapping discounts.">
+       <input aria-label="Stackable Coupons" class="form-check-input" id="stackableCoupons" name="stackable-coupons" type="checkbox">
+        <label class="form-check-label" for="stackableCoupons">
          🧾 Stackable Coupons
-      <div class="form-check" data-tooltip="Extra-discounted clearance or overstock items.">
-</div></div></label>
-<input aria-label="Limited Quantity Deals" class="form-check-input" id="limitedQuantityDeals" name="limited-quantity-deals" type="checkbox"/>
-<label class="form-check-label" for="clearanceDeals">
-<label class="form-check-label" for="priceDropDeals">
-</label></label></label></label></div>
-<label class="form-check-label" for="limitedTimeDeals">
-<div class="form-check" data-tooltip="Items showing recent price drops.">
-<div class="form-check" data-tooltip="Items showing recent price drops.">
-<input aria-label="Price Drop Deals" class="form-check-input" id="priceDropDeals" name="price-drop-deals" type="checkbox"/>
-<label class="form-check-label" for="priceDropDeals">
+        </label>
+       </input>
+      </div>
+      <div class="form-check" data-tooltip="Items showing recent price drops.">
+       <input aria-label="Price Drop Deals" class="form-check-input" id="priceDropDeals" name="price-drop-deals" type="checkbox">
+        <label class="form-check-label" for="priceDropDeals">
          📉 Price Drop Deals
         </label>
-</div>
-<label class="form-check-label" for="extraDiscountCodes">
-<div class="form-check" data-tooltip="Extra-discounted clearance or overstock items.">
-<input aria-label="Clearance Deals" class="form-check-input" id="clearanceDeals" name="clearance-deals" type="checkbox"/>
-<label class="form-check-label" for="clearanceDeals">
+       </input>
+      </div>
+      <div class="form-check" data-tooltip="Extra-discounted clearance or overstock items.">
+       <input aria-label="Clearance Deals" class="form-check-input" id="clearanceDeals" name="clearance-deals" type="checkbox">
+        <label class="form-check-label" for="clearanceDeals">
          🛒 Clearance Deals
         </label>
-<label class="form-check-label" for="lowestPrice">
-</label></div>
-<div class="form-check" data-tooltip="Discounts on bulk quantity purchases.">
-<input aria-label="Bulk Discounts" class="form-check-input" id="bulkDiscounts" name="bulk-discounts" type="checkbox"/>
-<div class="form-check" data-tooltip="Great deals under $25.">
-<label class="form-check-label" for="bulkDiscounts">
-<div class="form-check" data-tooltip="Combine multiple coupons for max savings.">
-<input aria-label="Buy More Save More" class="form-check-input" id="buyMoreSaveMore" name="buy-more-save-more" type="checkbox"/>
+       </input>
+      </div>
+      <div class="form-check" data-tooltip="Discounts on bulk quantity purchases.">
+       <input aria-label="Bulk Discounts" class="form-check-input" id="bulkDiscounts" name="bulk-discounts" type="checkbox">
+        <label class="form-check-label" for="bulkDiscounts">
          🧺 Bulk Discounts
-        </div></label>
-<input aria-label="Limited-Time Deals" class="form-check-input" id="limitedTimeDeals" name="limited-time-deals" type="checkbox"/>
-<div class="form-check" data-tooltip="Deep discounts on refurbished products.">
-</div>
-<label class="form-check-label" for="warehouseDeals">
-<input aria-label="Subscribe &amp; Save + Coupon" class="form-check-input" id="snsWithCoupon" name="sns-with-coupon" type="checkbox"/>
-<label class="form-check-label" for="freeTrials">
-<div class="form-check" data-tooltip="Deals with short time limits or countdowns.">
-<input aria-label="Limited-Time Deals" class="form-check-input" id="limitedTimeDeals" name="limited-time-deals" type="checkbox"/>
-<label class="form-check-label" for="limitedTimeDeals">
+        </label>
+       </input>
+      </div>
+      <div class="form-check" data-tooltip="Deals with short time limits or countdowns.">
+       <input aria-label="Limited-Time Deals" class="form-check-input" id="limitedTimeDeals" name="limited-time-deals" type="checkbox"/>
+       <label class="form-check-label" for="limitedTimeDeals">
         💥 Limited-Time Deals
        </label>
-<div class="form-check" data-tooltip="Stacks both Lightning Deal and Coupon discounts.">
-<input aria-label="Refurbished Deals" class="form-check-input" id="refurbishedDeals" name="refurbished-deals" type="checkbox"/>
-</div>
-<div class="form-check" data-tooltip="Deals that are about to expire.">
-<input aria-label="Ends Soon Deals" class="form-check-input" id="endsSoonDeals" name="ends-soon-deals" type="checkbox"/>
-<label class="form-check-label" for="endsSoonDeals">
-<div class="form-check" data-tooltip="Products sold under Amazon-owned brand names.">
-<div class="form-check" data-tooltip="Deals offering an additional promo code or discount.">
+      </div>
+      <div class="form-check" data-tooltip="Deals that are about to expire.">
+       <input aria-label="Ends Soon Deals" class="form-check-input" id="endsSoonDeals" name="ends-soon-deals" type="checkbox"/>
+       <label class="form-check-label" for="endsSoonDeals">
         ⏱️ Ends Soon
-       </div></div></label>
-</div>
-<div class="form-check" data-tooltip="Great deals under $25.">
-<label class="form-check-label" for="snsWithCoupon">
-<label class="form-check-label" for="couponStacking">
-<input aria-label="Under $25 Deals" class="form-check-input" id="under25Deals" name="under-25-deals" type="checkbox"/>
-<label class="form-check-label" for="under25Deals">
-<div class="form-check" data-tooltip="Products with free trials or test periods.">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Great deals under $25.">
+       <input aria-label="Under $25 Deals" class="form-check-input" id="under25Deals" name="under-25-deals" type="checkbox"/>
+       <label class="form-check-label" for="under25Deals">
         🪙 Under $25 Deals
-       </div></label>
-<input aria-label="Trending Deals" class="form-check-input" id="trendingDeals" name="trending-deals" type="checkbox"/>
-<input aria-label="Warehouse Deals" class="form-check-input" id="warehouseDeals" name="warehouse-deals" type="checkbox"/>
-</label></label></div>
-<div class="form-check" data-tooltip="Coupons that are about to expire.">
-<div class="form-check" data-tooltip="Deals with limited quantity remaining.">
-<input aria-label="Expiring Coupons" class="form-check-input" id="expiringCoupons" name="expiring-coupons" type="checkbox"/>
-<label class="form-check-label" for="expiringCoupons">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Coupons that are about to expire.">
+       <input aria-label="Expiring Coupons" class="form-check-input" id="expiringCoupons" name="expiring-coupons" type="checkbox"/>
+       <label class="form-check-label" for="expiringCoupons">
         🛑 Expiring Coupons
        </label>
-</div>
-<div class="form-check" data-tooltip="Products with both Subscribe &amp; Save and coupons.">
-<input aria-label="Subscribe &amp; Save + Coupon" class="form-check-input" id="snsWithCoupon" name="sns-with-coupon" type="checkbox"/>
-<input aria-label="Extra Discount Codes" class="form-check-input" id="extraDiscountCodes" name="extra-discount-codes" type="checkbox"/>
-<label class="form-check-label" for="snsWithCoupon">
+      </div>
+      <div class="form-check" data-tooltip="Products with both Subscribe &amp; Save and coupons.">
+       <input aria-label="Subscribe &amp; Save + Coupon" class="form-check-input" id="snsWithCoupon" name="sns-with-coupon" type="checkbox"/>
+       <label class="form-check-label" for="snsWithCoupon">
         🔂 Subscribe &amp; Save + Coupon
-      <div class="form-check" data-tooltip="Short-term deals that expire quickly.">
-</div></label>
-<input aria-label="Flash Sales" class="form-check-input" id="flashSales" name="flash-sales" type="checkbox"/>
-</div>
-<div class="form-check" data-tooltip="Products sold under Amazon-owned brand names.">
-<input aria-label="Amazon Brands" class="form-check-input" id="amazon-brands" name="amazon-brands" type="checkbox"/>
-<label class="form-check-label" for="buyMoreSaveMore">
-<label class="form-check-label" for="amazon-brands">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Products sold under Amazon-owned brand names.">
+       <input aria-label="Amazon Brands" class="form-check-input" id="amazon-brands" name="amazon-brands" type="checkbox"/>
+       <label class="form-check-label" for="amazon-brands">
         🏷️ Amazon Brands
        </label>
-</label></div>
-<label class="form-check-label" for="openBoxDeals">
-<div class="form-check" data-tooltip="Products with free trials or test periods.">
-<input aria-label="Free Trials" class="form-check-input" id="freeTrials" name="free-trials" type="checkbox"/>
-<input aria-label="Exclude Sponsored Listings" class="form-check-input" id="excludeSponsored" name="exclude-sponsored" type="checkbox"/>
-<input aria-label="Coupon Stacking" class="form-check-input" id="couponStacking" name="coupon-stacking" type="checkbox"/>
-<label class="form-check-label" for="topRatedDeals">
-<label class="form-check-label" for="freeTrials">
+      </div>
+      <div class="form-check" data-tooltip="Products with free trials or test periods.">
+       <input aria-label="Free Trials" class="form-check-input" id="freeTrials" name="free-trials" type="checkbox"/>
+       <label class="form-check-label" for="freeTrials">
         🧪 Free Trials
-      <div class="form-check" data-tooltip="Used or returned items with discounts.">
-</div></label>
-<div class="form-check" data-tooltip="Items offering Amazon or third-party cashback rewards.">
-</div>
-<div class="form-check" data-tooltip="Deals offering an additional promo code or discount.">
-<input aria-label="Extra Discount Codes" class="form-check-input" id="extraDiscountCodes" name="extra-discount-codes" type="checkbox"/>
-<label class="form-check-label" for="refurbishedDeals">
-<label class="form-check-label" for="extraDiscountCodes">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Deals offering an additional promo code or discount.">
+       <input aria-label="Extra Discount Codes" class="form-check-input" id="extraDiscountCodes" name="extra-discount-codes" type="checkbox"/>
+       <label class="form-check-label" for="extraDiscountCodes">
         💸 Extra Discount Codes
-       <label class="form-check-label" for="amazonPromoCodes">
-</label>
-<label class="form-check-label" for="limitedQuantityDeals">
-</label></label></label></div>
-<div class="form-check" data-tooltip="Combine multiple coupons for max savings.">
-<input aria-label="Coupon Stacking" class="form-check-input" id="couponStacking" name="coupon-stacking" type="checkbox"/>
-<label class="form-check-label" for="couponStacking">
-<label class="form-check-label" for="excludeSponsored">
-<button aria-controls="accordionGroup3" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup3" data-bs-toggle="collapse" type="button">
-<div class="form-check" data-tooltip="Amazon Warehouse open-box and returned item deals.">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Combine multiple coupons for max savings.">
+       <input aria-label="Coupon Stacking" class="form-check-input" id="couponStacking" name="coupon-stacking" type="checkbox"/>
+       <label class="form-check-label" for="couponStacking">
         📚 Coupon Stacking
-       </div></button></label>
-<div aria-labelledby="headingaccordionGroup3" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup3">
-</div>
-<h2 class="accordion-header" id="headingaccordionGroup3">
-<label class="form-check-label" for="cashbackDeals">
-<div class="form-check" data-tooltip="Hides Amazon’s sponsored or ad-based listings.">
-<div class="form-check" data-tooltip="Find the lowest recorded price on items.">
-<input aria-label="Lowest Price" class="form-check-input" id="lowestPrice" name="lowest-price" type="checkbox"/>
-<label class="form-check-label" for="lowestPrice">
-<label class="form-check-label" for="ecoFriendlyToggle">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Find the lowest recorded price on items.">
+       <input aria-label="Lowest Price" class="form-check-input" id="lowestPrice" name="lowest-price" type="checkbox"/>
+       <label class="form-check-label" for="lowestPrice">
         📉 Lowest Price
-       <label class="form-check-label" for="recurringDeals">
-</label>
-</label></label></div>
-<div class="form-check" data-tooltip="Deals with limited quantity remaining.">
-<input aria-label="Biodegradable" class="form-check-input" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox"/>
-<label class="form-check-label" for="trendingDeals">
-<input aria-label="Limited Quantity Deals" class="form-check-input" id="limitedQuantityDeals" name="limited-quantity-deals" type="checkbox"/>
-<label class="form-check-label" for="flashSales">
-<button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup3', false)" type="button">
-<label class="form-check-label" for="limitedQuantityDeals">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Deals with limited quantity remaining.">
+       <input aria-label="Limited Quantity Deals" class="form-check-input" id="limitedQuantityDeals" name="limited-quantity-deals" type="checkbox"/>
+       <label class="form-check-label" for="limitedQuantityDeals">
         ⏳ Limited Quantity
        </label>
-<label class="form-check-label" for="veganProducts">
-</label></button></label></label></div>
-<div class="form-check" data-tooltip="Discounts that increase when you purchase more units.">
-<div class="form-check" data-tooltip="Amazon Warehouse open-box and returned item deals.">
-<div class="form-check" data-tooltip="Deals on products rated 4.5 stars or higher.">
-<input aria-label="Warehouse Deals" class="form-check-input" id="warehouseDeals" name="warehouse-deals" type="checkbox"/>
-<input aria-label="Eco-Friendly" class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox"/>
-<label class="form-check-label" for="warehouseDeals">
+      </div>
+      <div class="form-check" data-tooltip="Amazon Warehouse open-box and returned item deals.">
+       <input aria-label="Warehouse Deals" class="form-check-input" id="warehouseDeals" name="warehouse-deals" type="checkbox"/>
+       <label class="form-check-label" for="warehouseDeals">
         🏚️ Warehouse Deals
        </label>
-<div class="form-check" data-tooltip="Items added to Amazon’s deal feed within the last 24 hours.">
-<div class="form-check" data-tooltip="Only show biodegradable options.">
-<input aria-label="Back in Stock Deals" class="form-check-input" id="backInStockDeals" name="back-in-stock-deals" type="checkbox"/>
-<label class="form-check-label" for="lightningCoupon">
-</label></div>
-<input aria-label="Top Rated Deals" class="form-check-input" id="topRatedDeals" name="top-rated-deals" type="checkbox"/>
-<div class="form-check" data-tooltip="Low EMF-certified electronics or devices.">
-<input aria-label="Amazon Promo Codes" class="form-check-input" id="amazonPromoCodes" name="amazon-promo-codes" type="checkbox"/>
-<div class="form-check" data-tooltip="Deep discounts on refurbished products.">
-<input aria-label="Refurbished Deals" class="form-check-input" id="refurbishedDeals" name="refurbished-deals" type="checkbox"/>
-<input aria-label="Allergy-Friendly" class="form-check-input" id="allergyFriendly" name="allergy-friendly" type="checkbox"/>
-<label class="form-check-label" for="crueltyFreeToggle">
-<label class="form-check-label" for="refurbishedDeals">
+      </div>
+      <div class="form-check" data-tooltip="Deep discounts on refurbished products.">
+       <input aria-label="Refurbished Deals" class="form-check-input" id="refurbishedDeals" name="refurbished-deals" type="checkbox"/>
+       <label class="form-check-label" for="refurbishedDeals">
         🔧 Refurbished Deals
        </label>
-<div class="form-check" data-tooltip="Deals that come back on a regular cycle (monthly, seasonal, etc.).">
-<label class="form-check-label" for="hourlyUpdatedDeals">
-<label class="form-check-label" for="carbonNeutralDelivery">
-</label></label></div>
-<div class="form-check" data-tooltip="Short-term deals that expire quickly.">
-<input aria-label="Hourly Updated Deals" class="form-check-input" id="hourlyUpdatedDeals" name="hourly-updated-deals" type="checkbox"/>
-<div class="form-check" data-tooltip="Only show eco-friendly products.">
-<input aria-label="Cashback Deals" class="form-check-input" id="cashbackDeals" name="cashback-deals" type="checkbox"/>
-<input aria-label="Flash Sales" class="form-check-input" id="flashSales" name="flash-sales" type="checkbox"/>
-<label class="form-check-label" for="flashSales">
+      </div>
+      <div class="form-check" data-tooltip="Short-term deals that expire quickly.">
+       <input aria-label="Flash Sales" class="form-check-input" id="flashSales" name="flash-sales" type="checkbox"/>
+       <label class="form-check-label" for="flashSales">
         ⚡ Flash Sales
        </label>
-</div>
-<div class="form-check" data-tooltip="Deals on products rated 4.5 stars or higher.">
-<input aria-label="Lightning Deal and Coupon" class="form-check-input" id="lightningCoupon" name="lightning-coupon" type="checkbox"/>
-<input aria-label="Top Rated Deals" class="form-check-input" id="topRatedDeals" name="top-rated-deals" type="checkbox"/>
-<label class="form-check-label" for="topRatedDeals">
+      </div>
+      <div class="form-check" data-tooltip="Deals on products rated 4.5 stars or higher.">
+       <input aria-label="Top Rated Deals" class="form-check-input" id="topRatedDeals" name="top-rated-deals" type="checkbox"/>
+       <label class="form-check-label" for="topRatedDeals">
         🌟 Top Rated Deals
-       <input aria-label="Open Box Deals" class="form-check-input" id="openBoxDeals" name="open-box-deals" type="checkbox"/>
-<div class="form-check" data-tooltip="Products labeled cruelty-free.">
-<div class="form-check" data-tooltip="Products updated hourly by Amazon with price or deal changes.">
-</div></div></label>
-</div>
-<div class="form-check" data-tooltip="Discounts that increase when you purchase more units.">
-<input aria-label="Buy More Save More" class="form-check-input" id="buyMoreSaveMore" name="buy-more-save-more" type="checkbox"/>
-<label class="form-check-label" for="buyMoreSaveMore">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Discounts that increase when you purchase more units.">
+       <input aria-label="Buy More Save More" class="form-check-input" id="buyMoreSaveMore" name="buy-more-save-more" type="checkbox"/>
+       <label class="form-check-label" for="buyMoreSaveMore">
         🎁 Buy More, Save More
-      <div class="form-check" data-tooltip="Products eligible for extra promo code savings at checkout.">
-</div></label>
-</div>
-<div class="form-check" data-tooltip="Items offering Amazon or third-party cashback rewards.">
-<input aria-label="Cashback Deals" class="form-check-input" id="cashbackDeals" name="cashback-deals" type="checkbox"/>
-<label class="form-check-label" for="cashbackDeals">
-<div class="form-check" data-tooltip="Deals currently trending or gaining popularity.">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Items offering Amazon or third-party cashback rewards.">
+       <input aria-label="Cashback Deals" class="form-check-input" id="cashbackDeals" name="cashback-deals" type="checkbox"/>
+       <label class="form-check-label" for="cashbackDeals">
         💳 Cashback Eligible
-       </div></label>
-<input aria-label="Carbon-Neutral Delivery" class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox"/>
-</div>
-<div class="form-check" data-tooltip="Filter for: Recyclable Packaging.">
-<div class="form-check" data-tooltip="Stacks both Lightning Deal and Coupon discounts.">
-<div class="form-check" data-tooltip="Filter for: Plastic-Free.">
-<input aria-label="Lightning Deal and Coupon" class="form-check-input" id="lightningCoupon" name="lightning-coupon" type="checkbox"/>
-<label class="form-check-label" for="lightningCoupon">
-<div class="form-check" data-tooltip="Only organic-certified items.">
-<input aria-label="New Deals Today" class="form-check-input" id="newDealsToday" name="new-deals-today" type="checkbox"/>
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Stacks both Lightning Deal and Coupon discounts.">
+       <input aria-label="Lightning Deal and Coupon" class="form-check-input" id="lightningCoupon" name="lightning-coupon" type="checkbox"/>
+       <label class="form-check-label" for="lightningCoupon">
         💡 Lightning + Coupon
-       <input class="form-check-input" id="no-animal-testing" type="checkbox"/>
-</div></label>
-</div>
-<div class="form-check" data-tooltip="Filter for: No Microplastics.">
-<div class="form-check" data-tooltip="Items recently restocked and discounted.">
-<div class="form-check" data-tooltip="Products eligible for extra promo code savings at checkout.">
-<input aria-label="Amazon Promo Codes" class="form-check-input" id="amazonPromoCodes" name="amazon-promo-codes" type="checkbox"/>
-<input aria-label="Recurring Deals" class="form-check-input" id="recurringDeals" name="recurring-deals" type="checkbox"/>
-<label class="form-check-label" for="amazonPromoCodes">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Products eligible for extra promo code savings at checkout.">
+       <input aria-label="Amazon Promo Codes" class="form-check-input" id="amazonPromoCodes" name="amazon-promo-codes" type="checkbox"/>
+       <label class="form-check-label" for="amazonPromoCodes">
         🏷️ Amazon Promo Codes
        </label>
-</div>
-<button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup3', true)" type="button">
-<input class="form-check-input" id="bee-friendly" type="checkbox"/>
-<div class="form-check" data-tooltip="Deals currently trending or gaining popularity.">
-<input aria-label="Trending Deals" class="form-check-input" id="trendingDeals" name="trending-deals" type="checkbox"/>
-<label class="form-check-label" for="trendingDeals">
+      </div>
+      <div class="form-check" data-tooltip="Deals currently trending or gaining popularity.">
+       <input aria-label="Trending Deals" class="form-check-input" id="trendingDeals" name="trending-deals" type="checkbox"/>
+       <label class="form-check-label" for="trendingDeals">
         📊 Trending Deals
        </label>
-</div>
-<label class="form-check-label" for="newDealsToday">
-<label class="form-check-label" for="backInStockDeals">
-<label class="form-check-label" for="made-in-usa">
-<label class="form-check-label" for="no-animal-testing">
-<div class="form-check" data-tooltip="Items added to Amazon’s deal feed within the last 24 hours.">
-<input aria-label="Low EMF" class="form-check-input" id="lowEmfDevices" name="low-emf-devices" type="checkbox"/>
-<input aria-label="New Deals Today" class="form-check-input" id="newDealsToday" name="new-deals-today" type="checkbox"/>
-<label class="form-check-label" for="climate-neutral-certified">
-<label class="form-check-label" for="newDealsToday">
-<div class="form-check" data-tooltip="Filter for: Sustainably Sourced.">
-<label class="form-check-label" for="organicProducts">
+      </div>
+      <div class="form-check" data-tooltip="Items added to Amazon’s deal feed within the last 24 hours.">
+       <input aria-label="New Deals Today" class="form-check-input" id="newDealsToday" name="new-deals-today" type="checkbox"/>
+       <label class="form-check-label" for="newDealsToday">
         🆕 New Deals Today
        </label>
-<label class="form-check-label" for="reusable-products">
-</label></div>
-<div class="form-check" data-tooltip="Products updated hourly by Amazon with price or deal changes.">
-<input aria-label="Hourly Updated Deals" class="form-check-input" id="hourlyUpdatedDeals" name="hourly-updated-deals" type="checkbox"/>
-<label class="form-check-label" for="compostable-materials">
-<label class="form-check-label" for="hourlyUpdatedDeals">
+      </div>
+      <div class="form-check" data-tooltip="Products updated hourly by Amazon with price or deal changes.">
+       <input aria-label="Hourly Updated Deals" class="form-check-input" id="hourlyUpdatedDeals" name="hourly-updated-deals" type="checkbox"/>
+       <label class="form-check-label" for="hourlyUpdatedDeals">
         🕒 Hourly Updated
        </label>
-<label class="form-check-label" for="palm-oil-free">
-</label></label></div>
-<div class="form-check" data-tooltip="Hides Amazon’s sponsored or ad-based listings.">
-<input aria-label="Exclude Sponsored Listings" class="form-check-input" id="excludeSponsored" name="exclude-sponsored" type="checkbox"/>
-<label class="form-check-label" for="excludeSponsored">
+      </div>
+      <div class="form-check" data-tooltip="Hides Amazon’s sponsored or ad-based listings.">
+       <input aria-label="Exclude Sponsored Listings" class="form-check-input" id="excludeSponsored" name="exclude-sponsored" type="checkbox"/>
+       <label class="form-check-label" for="excludeSponsored">
         🚫 Exclude Sponsored
        </label>
-<label class="form-check-label" for="recyclable-packaging">
-<input class="form-check-input" id="sustainably-sourced" type="checkbox"/>
-</label></div>
-<div class="form-check" data-tooltip="Filter for: Fair Trade.">
-<div class="form-check" data-tooltip="Used or returned items with discounts.">
-<div class="form-check" data-tooltip="Items safe for people with allergies.">
-<input class="form-check-input" id="fair-trade" type="checkbox"/>
-<input aria-label="Open Box Deals" class="form-check-input" id="openBoxDeals" name="open-box-deals" type="checkbox"/>
-<label class="form-check-label" for="openBoxDeals">
+      </div>
+      <div class="form-check" data-tooltip="Used or returned items with discounts.">
+       <input aria-label="Open Box Deals" class="form-check-input" id="openBoxDeals" name="open-box-deals" type="checkbox"/>
+       <label class="form-check-label" for="openBoxDeals">
         📦 Open Box Deals
-      <div class="form-check" data-tooltip="Filter for: Rechargeable Batteries.">
-</div></label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Climate Neutral Certified.">
-<div class="form-check" data-tooltip="Items with carbon-neutral delivery.">
-<div class="form-check" data-tooltip="Deals that come back on a regular cycle (monthly, seasonal, etc.).">
-<div class="form-check" data-tooltip="Filter for: Compostable Materials.">
-<input aria-label="Recurring Deals" class="form-check-input" id="recurringDeals" name="recurring-deals" type="checkbox"/>
-<div class="form-check" data-tooltip="Filter for: Reusable Products.">
-<label class="form-check-label" for="recurringDeals">
-<label class="form-check-label" for="low-carbon-footprint">
-<label class="form-check-label" for="sustainably-sourced">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Deals that come back on a regular cycle (monthly, seasonal, etc.).">
+       <input aria-label="Recurring Deals" class="form-check-input" id="recurringDeals" name="recurring-deals" type="checkbox"/>
+       <label class="form-check-label" for="recurringDeals">
         🔄 Recurring Deals
        </label>
-</label></label></div>
-<div class="form-check" data-tooltip="Filter for: No Animal Testing.">
-<div class="form-check" data-tooltip="Items recently restocked and discounted.">
-<input aria-label="Back in Stock Deals" class="form-check-input" id="backInStockDeals" name="back-in-stock-deals" type="checkbox"/>
-<label class="form-check-label" for="backInStockDeals">
+      </div>
+      <div class="form-check" data-tooltip="Items recently restocked and discounted.">
+       <input aria-label="Back in Stock Deals" class="form-check-input" id="backInStockDeals" name="back-in-stock-deals" type="checkbox"/>
+       <label class="form-check-label" for="backInStockDeals">
         📦 Back in Stock Deals
-       <label class="form-check-label" for="energy-efficient">
-</label>
-<button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup4', true)" type="button">
-</button></label></div>
-<label class="form-check-label" for="minimal-packaging">
-<label class="form-check-label" for="fair-trade">
-<label class="form-check-label" for="allergyFriendly">
-</label></label></label></div>
-<label class="form-check-label" for="outlet-deals">
-</label></div>
-<input aria-label="Organic" class="form-check-input" id="organicProducts" name="organic-products" type="checkbox"/>
-</div>
-<input class="form-check-input" id="minimal-packaging" type="checkbox"/>
-<div class="accordion-item">
-<label class="form-check-label" for="biodegradablePackaging">
-<h2 class="accordion-header" id="headingaccordionGroup3">
-<div class="form-check" data-tooltip="Filter for: Made in USA.">
-<button aria-controls="accordionGroup3" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup3" data-bs-toggle="collapse" type="button">
+       </label>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header" id="headingaccordionGroup3">
+     <button aria-controls="accordionGroup3" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup3" data-bs-toggle="collapse" type="button">
       Eco &amp; Ethical
      </button>
-</div></h2>
-<div class="form-check" data-tooltip="Only vegan-friendly products.">
-<div aria-labelledby="headingaccordionGroup3" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup3">
-<div class="accordion-body">
-<div class="px-3 py-2 text-end small text-muted">
-<div class="form-check" data-tooltip="Filter for: Ethically Made.">
-<button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup3', false)" type="button">
+    </h2>
+    <div aria-labelledby="headingaccordionGroup3" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup3">
+     <div class="accordion-body">
+      <div class="px-3 py-2 text-end small text-muted">
+       <button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup3', false)" type="button">
         Clear All
        </button>
-<button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup3', true)" type="button">
+       <button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup3', true)" type="button">
         Select All
        </button>
-</div>
-<div class="form-check" data-tooltip="Only show eco-friendly products.">
-<input aria-label="Eco-Friendly" class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox"/>
-<label class="form-check-label" for="ecoFriendlyToggle">
+      </div>
+      <div class="form-check" data-tooltip="Only show eco-friendly products.">
+       <input aria-label="Eco-Friendly" class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox"/>
+       <label class="form-check-label" for="ecoFriendlyToggle">
         ♻️ Eco-Friendly
        </label>
-</div>
-<div class="form-check" data-tooltip="Only show biodegradable options.">
-<div aria-labelledby="headingaccordionGroup4" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup4">
-<input aria-label="Biodegradable" class="form-check-input" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox"/>
-<label class="form-check-label" for="biodegradablePackaging">
-<div class="form-check" data-tooltip="Filter for: Outlet Deals.">
-<div class="form-check" data-tooltip="Filter for: Bee-Friendly.">
+      </div>
+      <div class="form-check" data-tooltip="Only show biodegradable options.">
+       <input aria-label="Biodegradable" class="form-check-input" id="biodegradablePackaging" name="biodegradable-packaging" type="checkbox"/>
+       <label class="form-check-label" for="biodegradablePackaging">
         📦 Biodegradable
-       <input aria-label="Cruelty-Free" class="form-check-input" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox"/>
-</div></div></label>
-<label class="form-check-label" for="ethically-made">
-<input aria-label="Vegan" class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox"/>
-</label></div>
-<label class="form-check-label" for="plastic-free">
-<div class="form-check" data-tooltip="Filter for: New This Month.">
-<div class="form-check" data-tooltip="Only vegan-friendly products.">
-<input aria-label="Vegan" class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox"/>
-<label class="form-check-label" for="veganProducts">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Only vegan-friendly products.">
+       <input aria-label="Vegan" class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox"/>
+       <label class="form-check-label" for="veganProducts">
         🌱 Vegan
        </label>
-</div>
-<div class="form-check" data-tooltip="Only organic-certified items.">
-<input aria-label="Organic" class="form-check-input" id="organicProducts" name="organic-products" type="checkbox"/>
-<input class="form-check-input" id="no-microplastics" type="checkbox"/>
-<label class="form-check-label" for="organicProducts">
+      </div>
+      <div class="form-check" data-tooltip="Only organic-certified items.">
+       <input aria-label="Organic" class="form-check-input" id="organicProducts" name="organic-products" type="checkbox"/>
+       <label class="form-check-label" for="organicProducts">
         🌿 Organic
-       <label class="form-check-label" for="budget-essentials">
-<input class="form-check-input" id="recyclable-packaging" type="checkbox"/>
-<input aria-label="Warehouse / Refurbished" class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox"/>
-</label>
-<div class="form-check" data-tooltip="Filter for: Minimal Packaging.">
-</div>
-<div class="form-check" data-tooltip="Items with carbon-neutral delivery.">
-<label class="form-check-label" for="lowEmfDevices">
-<label class="form-check-label" for="rechargeable-batteries">
-<input aria-label="Carbon-Neutral Delivery" class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox"/>
-<label class="form-check-label" for="carbonNeutralDelivery">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Items with carbon-neutral delivery.">
+       <input aria-label="Carbon-Neutral Delivery" class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox"/>
+       <label class="form-check-label" for="carbonNeutralDelivery">
         🚴 Carbon-Neutral Delivery
        </label>
-</label></label></div>
-<div class="form-check" data-tooltip="Products labeled cruelty-free.">
-<label class="form-check-label" for="amazon-pantry">
-<input class="form-check-input" id="rechargeable-batteries" type="checkbox"/>
-<input aria-label="Cruelty-Free" class="form-check-input" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox"/>
-<input class="form-check-input" id="ethically-made" type="checkbox"/>
-<label class="form-check-label" for="crueltyFreeToggle">
+      </div>
+      <div class="form-check" data-tooltip="Products labeled cruelty-free.">
+       <input aria-label="Cruelty-Free" class="form-check-input" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox"/>
+       <label class="form-check-label" for="crueltyFreeToggle">
         🐰 Cruelty-Free
        </label>
-<div class="form-check" data-tooltip="Filter for: Low Carbon Footprint.">
-</div>
-<div class="form-check" data-tooltip="Low EMF-certified electronics or devices.">
-<input aria-label="Low EMF" class="form-check-input" id="lowEmfDevices" name="low-emf-devices" type="checkbox"/>
-<div class="form-check" data-tooltip="Filter for: Budget Essentials.">
-<div class="form-check" data-tooltip="Filter for: Problem Solvers.">
-<label class="form-check-label" for="lowEmfDevices">
+      </div>
+      <div class="form-check" data-tooltip="Low EMF-certified electronics or devices.">
+       <input aria-label="Low EMF" class="form-check-input" id="lowEmfDevices" name="low-emf-devices" type="checkbox"/>
+       <label class="form-check-label" for="lowEmfDevices">
         📶 Low EMF
        </label>
-</div>
-<label class="form-check-label" for="luxury-picks">
-<div class="form-check" data-tooltip="Items safe for people with allergies.">
-<div class="form-check" data-tooltip="Filter for: Climate Pledge Picks.">
-<div class="form-check" data-tooltip="Filter for: Trending Now.">
-<input aria-label="Allergy-Friendly" class="form-check-input" id="allergyFriendly" name="allergy-friendly" type="checkbox"/>
-<label class="form-check-label" for="allergyFriendly">
+      </div>
+      <div class="form-check" data-tooltip="Items safe for people with allergies.">
+       <input aria-label="Allergy-Friendly" class="form-check-input" id="allergyFriendly" name="allergy-friendly" type="checkbox"/>
+       <label class="form-check-label" for="allergyFriendly">
         🤧 Allergy-Friendly
-     <button aria-controls="accordionGroup4" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup4" data-bs-toggle="collapse" type="button">
-<input aria-label="Small Business" class="form-check-input" id="smallBusiness" name="small-business" type="checkbox"/>
-</button></label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Recyclable Packaging.">
-<input class="form-check-input" id="recyclable-packaging" type="checkbox"/>
-<label class="form-check-label" for="recyclable-packaging">
-<label class="form-check-label" for="new-this-month">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Recyclable Packaging.">
+       <input class="form-check-input" id="recyclable-packaging" type="checkbox"/>
+       <label class="form-check-label" for="recyclable-packaging">
         ♻️ Recyclable Packaging
-       <label class="form-check-label" for="bee-friendly">
-<button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup4', false)" type="button">
-</button></label>
-<input class="form-check-input" id="plastic-free" type="checkbox"/>
-<div class="form-check" data-tooltip="Filter for: Neurodiverse-Friendly.">
-</div>
-<div class="form-check" data-tooltip="Filter for: Plastic-Free.">
-<input class="form-check-input" id="plastic-free" type="checkbox"/>
-<label class="form-check-label" for="plastic-free">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Plastic-Free.">
+       <input class="form-check-input" id="plastic-free" type="checkbox"/>
+       <label class="form-check-label" for="plastic-free">
         🧼 Plastic-Free
        </label>
-</div>
-<label class="form-check-label" for="back-in-stock">
-<div class="form-check" data-tooltip="Filter for: Minimal Packaging.">
-<input class="form-check-input" id="minimal-packaging" type="checkbox"/>
-<label class="form-check-label" for="minimal-packaging">
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Minimal Packaging.">
+       <input class="form-check-input" id="minimal-packaging" type="checkbox"/>
+       <label class="form-check-label" for="minimal-packaging">
         📦 Minimal Packaging
        </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Sustainably Sourced.">
-<input class="form-check-input" id="sustainably-sourced" type="checkbox"/>
-<label class="form-check-label" for="sustainably-sourced">
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Sustainably Sourced.">
+       <input class="form-check-input" id="sustainably-sourced" type="checkbox"/>
+       <label class="form-check-label" for="sustainably-sourced">
         🌱 Sustainably Sourced
        </label>
-<label class="form-check-label" for="no-microplastics">
-</label></div>
-<div class="form-check" data-tooltip="Filter for: Rechargeable Batteries.">
-<input class="form-check-input" id="rechargeable-batteries" type="checkbox"/>
-<label class="form-check-label" for="rechargeable-batteries">
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Rechargeable Batteries.">
+       <input class="form-check-input" id="rechargeable-batteries" type="checkbox"/>
+       <label class="form-check-label" for="rechargeable-batteries">
         🔋 Rechargeable Batteries
        </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: No Microplastics.">
-<input class="form-check-input" id="no-microplastics" type="checkbox"/>
-<label class="form-check-label" for="no-microplastics">
-<div class="form-check" data-tooltip="Filter for: Sample Size.">
-<div class="form-check" data-tooltip="Filter for: Subscription Deals.">
-<input class="form-check-input" id="reusable-products" type="checkbox"/>
-<input class="form-check-input" id="new-release" name="new-release" type="checkbox"/>
-<input class="form-check-input" id="new-this-month" type="checkbox"/>
-<input aria-label="Gifts for Dad" class="form-check-input" id="giftsForDad" name="gifts-for-dad" type="checkbox"/>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: No Microplastics.">
+       <input class="form-check-input" id="no-microplastics" type="checkbox"/>
+       <label class="form-check-label" for="no-microplastics">
         🚫 No Microplastics
-       <input class="form-check-input" id="low-carbon-footprint" type="checkbox"/>
-</div></div></label>
-<input class="form-check-input" id="palm-oil-free" type="checkbox"/>
-</div>
-<label class="form-check-label" for="trending-now">
-<div class="form-check" data-tooltip="Filter for: Bee-Friendly.">
-<input class="form-check-input" id="luxury-picks" type="checkbox"/>
-<input class="form-check-input" id="bee-friendly" type="checkbox"/>
-<input class="form-check-input" id="made-in-usa" type="checkbox"/>
-<label class="form-check-label" for="bee-friendly">
-<input class="form-check-input" id="outlet-deals" name="outlet-deals" type="checkbox"/>
-<div class="form-check" data-tooltip="Filter for: Just Released.">
-<input class="form-check-input" id="compostable-materials" type="checkbox"/>
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Bee-Friendly.">
+       <input class="form-check-input" id="bee-friendly" type="checkbox"/>
+       <label class="form-check-label" for="bee-friendly">
         🐝 Bee-Friendly
-       </div></label>
-</div>
-<label class="form-check-label" for="hidden-gem">
-<input class="form-check-input" id="budget-essentials" type="checkbox"/>
-<div class="form-check" data-tooltip="Filter for: Energy Efficient.">
-<div class="form-check" data-tooltip="Filter for: Fair Trade.">
-<label class="form-check-label" for="limited-quantity-left">
-<input class="form-check-input" id="fair-trade" type="checkbox"/>
-<div class="form-check" data-tooltip="Filter for: Palm Oil Free.">
-<label class="form-check-label" for="fair-trade">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Fair Trade.">
+       <input class="form-check-input" id="fair-trade" type="checkbox"/>
+       <label class="form-check-label" for="fair-trade">
         🧵 Fair Trade
-      <div class="form-check" data-tooltip="Filter for: Refillable Products.">
-<div class="form-check" data-tooltip="Gift ideas suitable for women.">
-</div></div></label>
-<div class="form-check" data-tooltip="Filter for: Back in Stock.">
-<label class="form-check-label" for="climate-pledge">
-</label></div>
-<div class="form-check" data-tooltip="Filter for: Ethically Made.">
-<input class="form-check-input" id="hidden-gem" name="hidden-gem" type="checkbox"/>
-<input class="form-check-input" id="ethically-made" type="checkbox"/>
-<label class="form-check-label" for="ethically-made">
-<label class="form-check-label" for="woman-owned">
-<input class="form-check-input" id="climate-neutral-certified" type="checkbox"/>
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Ethically Made.">
+       <input class="form-check-input" id="ethically-made" type="checkbox"/>
+       <label class="form-check-label" for="ethically-made">
         🏭 Ethically Made
-       <input class="form-check-input" id="energy-efficient" type="checkbox"/>
-<label class="form-check-label" for="refillable-products">
-</label>
-</label></label></div>
-<div class="form-check" data-tooltip="Filter for: No Animal Testing.">
-<input class="form-check-input" id="no-animal-testing" type="checkbox"/>
-<label class="form-check-label" for="no-animal-testing">
-<input class="form-check-input" id="multi-pack-savings" type="checkbox"/>
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: No Animal Testing.">
+       <input class="form-check-input" id="no-animal-testing" type="checkbox"/>
+       <label class="form-check-label" for="no-animal-testing">
         🚫 No Animal Testing
        </label>
-<div class="form-check" data-tooltip="Support products sold by small businesses.">
-</div>
-<div class="form-check" data-tooltip="Filter for: Made in USA.">
-<input class="form-check-input" id="made-in-usa" type="checkbox"/>
-<input class="form-check-input" id="trending-now" type="checkbox"/>
-<div class="form-check" data-tooltip="Filter for: Amazon Pantry Items.">
-<label class="form-check-label" for="made-in-usa">
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Made in USA.">
+       <input class="form-check-input" id="made-in-usa" type="checkbox"/>
+       <label class="form-check-label" for="made-in-usa">
         🇺🇸 Made in USA
        </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Palm Oil Free.">
-<input class="form-check-input" id="palm-oil-free" type="checkbox"/>
-<label class="form-check-label" for="palm-oil-free">
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Palm Oil Free.">
+       <input class="form-check-input" id="palm-oil-free" type="checkbox"/>
+       <label class="form-check-label" for="palm-oil-free">
         🧼 Palm Oil Free
-       <button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup5', true)" type="button">
-</button></label>
-<input class="form-check-input" id="climate-pledge" name="climate-pledge" type="checkbox"/>
-</div>
-<div class="form-check" data-tooltip="Filter for: Climate Neutral Certified.">
-<input class="form-check-input" id="climate-neutral-certified" type="checkbox"/>
-<label class="form-check-label" for="luxuryGifts">
-<label class="form-check-label" for="climate-neutral-certified">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Climate Neutral Certified.">
+       <input class="form-check-input" id="climate-neutral-certified" type="checkbox"/>
+       <label class="form-check-label" for="climate-neutral-certified">
         🌍 Climate Neutral Certified
-    <h2 class="accordion-header" id="headingaccordionGroup4">
-</h2></label>
-<input class="form-check-input" id="woman-owned" type="checkbox"/>
-</label></div>
-<div class="form-check" data-tooltip="Filter for: Low Carbon Footprint.">
-<input class="form-check-input" id="low-carbon-footprint" type="checkbox"/>
-<label class="form-check-label" for="low-carbon-footprint">
-<div class="form-check" data-tooltip="Show warehouse and refurbished items.">
-<div class="form-check" data-tooltip="Filter for: Limited Quantity Left.">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Low Carbon Footprint.">
+       <input class="form-check-input" id="low-carbon-footprint" type="checkbox"/>
+       <label class="form-check-label" for="low-carbon-footprint">
         ⛽ Low Carbon Footprint
-      <div class="form-check" data-tooltip="Great gift picks for moms.">
-</div></div></div></label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Reusable Products.">
-<input class="form-check-input" id="reusable-products" type="checkbox"/>
-<input class="form-check-input" id="clever-gadgets" type="checkbox"/>
-<label class="form-check-label" for="reusable-products">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Reusable Products.">
+       <input class="form-check-input" id="reusable-products" type="checkbox"/>
+       <label class="form-check-label" for="reusable-products">
         🛍️ Reusable Products
        </label>
-</div>
-<div class="form-check" data-tooltip="Perfect for birthday gift shopping.">
-<div class="form-check" data-tooltip="Filter for: Compostable Materials.">
-<input class="form-check-input" id="compostable-materials" type="checkbox"/>
-<label class="form-check-label" for="compostable-materials">
-<label class="form-check-label" for="giftForTeens">
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Compostable Materials.">
+       <input class="form-check-input" id="compostable-materials" type="checkbox"/>
+       <label class="form-check-label" for="compostable-materials">
         🧺 Compostable Materials
        </label>
-</label></div>
-<div class="form-check" data-tooltip="Filter for: Energy Efficient.">
-<input class="form-check-input" id="energy-efficient" type="checkbox"/>
-<input aria-label="Gifts for Her" class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox"/>
-<label class="form-check-label" for="energy-efficient">
-<div class="form-check" data-tooltip="Filter for: Hidden Gem Finds.">
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Energy Efficient.">
+       <input class="form-check-input" id="energy-efficient" type="checkbox"/>
+       <label class="form-check-label" for="energy-efficient">
         🔋 Energy Efficient
-      <div class="form-check" data-tooltip="Filter for: Woman-Owned.">
-</div></div></label>
-</div>
-<label class="form-check-label" for="multi-pack-savings">
-</label></div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingaccordionGroup4">
-<button aria-controls="accordionGroup4" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup4" data-bs-toggle="collapse" type="button">
+       </label>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header" id="headingaccordionGroup4">
+     <button aria-controls="accordionGroup4" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup4" data-bs-toggle="collapse" type="button">
       Special Categories
      </button>
-<div class="form-check" data-tooltip="Appreciation gifts for teachers.">
-<label class="form-check-label" for="funnyGifts">
-</label></div></h2>
-<button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup5', false)" type="button">
-<input class="form-check-input" id="refillable-products" type="checkbox"/>
-<div aria-labelledby="headingaccordionGroup4" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup4">
-<div class="accordion-body">
-<div class="px-3 py-2 text-end small text-muted">
-<button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup4', false)" type="button">
-<label class="form-check-label" for="sample-size">
-<button aria-controls="accordionGroup5" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup5" data-bs-toggle="collapse" type="button">
-        Clear All
-      <div class="form-check" data-tooltip="Filter for: Multi-Pack Savings.">
-</div></button>
-<input class="form-check-input" id="funnyGifts" name="giftIdeas" type="checkbox" value="funny+gag+gifts"/>
-<button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup4', true)" type="button">
-<input class="form-check-input" id="teacherGifts" name="giftIdeas" type="checkbox" value="gifts+for+teachers"/>
-        Select All
-       <label class="form-check-label" for="warehouseRefurb">
-</label></button>
-</label></button></div>
-<div class="form-check" data-tooltip="Show warehouse and refurbished items.">
-<input aria-label="Warehouse / Refurbished" class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox"/>
-<label class="form-check-label" for="warehouseRefurb">
-        📦 Warehouse &amp; Refurbished
-       <input class="form-check-input" id="amazon-pantry" name="amazon-pantry" type="checkbox"/>
-<label class="form-check-label" for="coworkerGifts">
-<label class="form-check-label" for="giftsForHer">
-<label class="form-check-label" for="subscribe-and-save-deals">
-</label>
-</label></label></label></div>
-<div class="form-check" data-tooltip="Gift ideas for teens and young adults.">
-<div class="form-check" data-tooltip="Filter for: Outlet Deals.">
-<input class="form-check-input" id="outlet-deals" name="outlet-deals" type="checkbox"/>
-<label class="form-check-label" for="outlet-deals">
-<label class="form-check-label" for="new-release">
-        🏷️ Outlet Deals
-       </label>
-<input class="form-check-input" id="giftForGrandparents" name="giftIdeas" type="checkbox" value="gift+ideas+for+grandparents"/>
-</label></div>
-<div class="form-check" data-tooltip="Filter for: Just Released.">
-<input class="form-check-input" id="new-release" name="new-release" type="checkbox"/>
-<div class="form-check" data-tooltip="Filter for: Luxury Picks.">
-<label class="form-check-label" for="new-release">
-        🆕 Just Released
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Amazon Pantry Items.">
-<label class="form-check-label" for="neurodiverse-friendly">
-<input class="form-check-input" id="amazon-pantry" name="amazon-pantry" type="checkbox"/>
-<label class="form-check-label" for="amazon-pantry">
-        🧃 Amazon Pantry Items
-       <label class="form-check-label" for="smallBusiness">
-</label>
-</label></label></div>
-<div class="form-check" data-tooltip="Filter for: Climate Pledge Picks.">
-<input class="form-check-input" id="climate-pledge" name="climate-pledge" type="checkbox"/>
-<input class="form-check-input" id="luxuryGifts" name="giftIdeas" type="checkbox" value="luxury+gift+ideas"/>
-<label class="form-check-label" for="climate-pledge">
-        ♻️ Climate Pledge Picks
-       <label class="form-check-label" for="birthdayGifts">
-<input class="form-check-input" id="giftUnder25" name="giftIdeas" type="checkbox" value="gifts+under+25+dollars"/>
-</label>
-<input aria-label="Anniversary Gifts" class="form-check-input" id="anniversaryGifts" name="anniversary-gifts" type="checkbox"/>
-</label></div>
-<div class="form-check" data-tooltip="Filter for: Hidden Gem Finds.">
-<input class="form-check-input" id="hidden-gem" name="hidden-gem" type="checkbox"/>
-<input class="form-check-input" id="back-in-stock" type="checkbox"/>
-<label class="form-check-label" for="giftsForKids">
-<label class="form-check-label" for="hidden-gem">
-        🔍 Hidden Gem Finds
-       </label>
-</label></div>
-<div class="form-check" data-tooltip="Support products sold by small businesses.">
-<label class="form-check-label" for="minority-owned">
-<div class="form-check" data-tooltip="Filter for: Minority-Owned.">
-<h2 class="accordion-header" id="headingaccordionGroup5">
-<label class="form-check-label" for="giftsForDad">
-<input aria-label="Gifts for Him" class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox"/>
-<div class="form-check" data-tooltip="Holiday-themed gift deals.">
-<input aria-label="Small Business" class="form-check-input" id="smallBusiness" name="small-business" type="checkbox"/>
-<div class="form-check" data-tooltip="Light-hearted and funny gift ideas.">
-<label class="form-check-label" for="smallBusiness">
-        🏪 Small Business
-       </label>
-<div class="form-check" data-tooltip="Gift ideas suitable for men.">
-</div>
-<div class="form-check" data-tooltip="Filter for: Trending Now.">
-<input class="form-check-input" id="trending-now" type="checkbox"/>
-<label class="form-check-label" for="trending-now">
-<label class="form-check-label" for="clever-gadgets">
-        📈 Trending Now
-       </label>
-<label class="form-check-label" for="lastMinuteGifts">
-</label></label></div>
-<div class="form-check" data-tooltip="Filter for: Back in Stock.">
-<input class="form-check-input" id="back-in-stock" type="checkbox"/>
-<label class="form-check-label" for="back-in-stock">
-        🕘 Back in Stock
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: New This Month.">
-<input class="form-check-input" id="new-this-month" type="checkbox"/>
-<label class="form-check-label" for="new-this-month">
-        📆 New This Month
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Problem Solvers.">
-<input class="form-check-input" id="clever-gadgets" type="checkbox"/>
-<input class="form-check-input" id="limited-quantity-left" type="checkbox"/>
-<label class="form-check-label" for="clever-gadgets">
-        🧠 Problem Solvers
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Luxury Picks.">
-<input class="form-check-input" id="luxury-picks" type="checkbox"/>
-<input class="form-check-input" id="neurodiverse-friendly" type="checkbox"/>
-<label class="form-check-label" for="luxury-picks">
-        💎 Luxury Picks
-       <input class="form-check-input" id="subscribe-and-save-deals" type="checkbox"/>
-</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Budget Essentials.">
-<input class="form-check-input" id="budget-essentials" type="checkbox"/>
-<label class="form-check-label" for="budget-essentials">
-        🪙 Budget Essentials
-      <div class="form-check" data-tooltip="Great gift picks for dads.">
-</div></label>
-<div aria-labelledby="headingaccordionGroup5" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup5">
-</div>
-<label class="form-check-label" for="teacherGifts">
-<div class="form-check" data-tooltip="Filter for: Limited Quantity Left.">
-<input class="form-check-input" id="limited-quantity-left" type="checkbox"/>
-<label class="form-check-label" for="limited-quantity-left">
-        ⏳ Limited Quantity Left
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Made in USA.">
-<input class="form-check-input" id="made-in-usa" type="checkbox"/>
-<input aria-label="Gifts for Mom" class="form-check-input" id="giftsForMom" name="gifts-for-mom" type="checkbox"/>
-<div class="form-check" data-tooltip="Curated anniversary gift selections.">
-<label class="form-check-label" for="made-in-usa">
-        🇺🇸 Made in USA
-       <input class="form-check-input" id="minority-owned" type="checkbox"/>
-</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Woman-Owned.">
-<div class="form-check" data-tooltip="Gift ideas for kids of all ages.">
-<input class="form-check-input" id="woman-owned" type="checkbox"/>
-<label class="form-check-label" for="woman-owned">
-        💜 Woman-Owned
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Minority-Owned.">
-<input class="form-check-input" id="minority-owned" type="checkbox"/>
-<label class="form-check-label" for="minority-owned">
-        🧑‍🔬 Minority-Owned
-       </label>
-</div>
-<input class="form-check-input" id="giftForTeens" name="giftIdeas" type="checkbox" value="gift+ideas+for+teens"/>
-<div class="form-check" data-tooltip="Filter for: Neurodiverse-Friendly.">
-<input class="form-check-input" id="neurodiverse-friendly" type="checkbox"/>
-<label class="form-check-label" for="neurodiverse-friendly">
-<input class="form-check-input" id="coworkerGifts" name="giftIdeas" type="checkbox" value="gifts+for+coworkers"/>
-        🧠 Neurodiverse-Friendly
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Multi-Pack Savings.">
-<input class="form-check-input" id="multi-pack-savings" type="checkbox"/>
-<label class="form-check-label" for="multi-pack-savings">
-<label class="form-check-label" for="giftsForHim">
-        📦 Multi-Pack Savings
-       <input aria-label="Birthday Gifts" class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox"/>
-</label>
-<label class="form-check-label" for="giftForGrandparents">
-</label></label></div>
-<div class="form-check" data-tooltip="Filter for: Refillable Products.">
-<input class="form-check-input" id="refillable-products" type="checkbox"/>
-<label class="form-check-label" for="refillable-products">
-<input class="form-check-input" id="sample-size" type="checkbox"/>
-        ♻️ Refillable Products
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Sample Size.">
-<input class="form-check-input" id="sample-size" type="checkbox"/>
-<label class="form-check-label" for="sample-size">
-        🧃 Sample Size
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Subscription Deals.">
-<input class="form-check-input" id="subscribe-and-save-deals" type="checkbox"/>
-<label class="form-check-label" for="subscribe-and-save-deals">
-        ⏲️ Subscription Deals
-       </label>
-</div>
-</div>
-</div>
-<label class="form-check-label" for="giftsForMom">
-</label></label></div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingaccordionGroup5">
-<input aria-label="Holiday Gift Picks" class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox"/>
-<button aria-controls="accordionGroup5" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup5" data-bs-toggle="collapse" type="button">
-      Gift Ideas
-     </button>
-</h2>
-<div aria-labelledby="headingaccordionGroup5" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup5">
-<div class="accordion-body">
-<div class="px-3 py-2 text-end small text-muted">
-<div class="form-check" data-tooltip="Thoughtful gifts for grandparents.">
-<button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup5', false)" type="button">
+    </h2>
+    <div aria-labelledby="headingaccordionGroup4" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup4">
+     <div class="accordion-body">
+      <div class="px-3 py-2 text-end small text-muted">
+       <button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup4', false)" type="button">
         Clear All
        </button>
-<button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup5', true)" type="button">
+       <button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup4', true)" type="button">
         Select All
-       <label class="form-check-label" for="giftUnder25">
-<div class="form-check" data-tooltip="Elegant and luxurious gift options.">
-</div></label></button>
-</div>
-<div class="form-check" data-tooltip="Gift ideas suitable for women.">
-<input aria-label="Gifts for Her" class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox"/>
-<label class="form-check-label" for="giftsForHer">
+       </button>
+      </div>
+      <div class="form-check" data-tooltip="Show warehouse and refurbished items.">
+       <input aria-label="Warehouse / Refurbished" class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox"/>
+       <label class="form-check-label" for="warehouseRefurb">
+        📦 Warehouse &amp; Refurbished
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Outlet Deals.">
+       <input class="form-check-input" id="outlet-deals" name="outlet-deals" type="checkbox"/>
+       <label class="form-check-label" for="outlet-deals">
+        🏷️ Outlet Deals
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Just Released.">
+       <input class="form-check-input" id="new-release" name="new-release" type="checkbox"/>
+       <label class="form-check-label" for="new-release">
+        🆕 Just Released
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Amazon Pantry Items.">
+       <input class="form-check-input" id="amazon-pantry" name="amazon-pantry" type="checkbox"/>
+       <label class="form-check-label" for="amazon-pantry">
+        🧃 Amazon Pantry Items
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Climate Pledge Picks.">
+       <input class="form-check-input" id="climate-pledge" name="climate-pledge" type="checkbox"/>
+       <label class="form-check-label" for="climate-pledge">
+        ♻️ Climate Pledge Picks
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Hidden Gem Finds.">
+       <input class="form-check-input" id="hidden-gem" name="hidden-gem" type="checkbox"/>
+       <label class="form-check-label" for="hidden-gem">
+        🔍 Hidden Gem Finds
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Support products sold by small businesses.">
+       <input aria-label="Small Business" class="form-check-input" id="smallBusiness" name="small-business" type="checkbox"/>
+       <label class="form-check-label" for="smallBusiness">
+        🏪 Small Business
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Trending Now.">
+       <input class="form-check-input" id="trending-now" type="checkbox"/>
+       <label class="form-check-label" for="trending-now">
+        📈 Trending Now
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Back in Stock.">
+       <input class="form-check-input" id="back-in-stock" type="checkbox"/>
+       <label class="form-check-label" for="back-in-stock">
+        🕘 Back in Stock
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: New This Month.">
+       <input class="form-check-input" id="new-this-month" type="checkbox"/>
+       <label class="form-check-label" for="new-this-month">
+        📆 New This Month
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Problem Solvers.">
+       <input class="form-check-input" id="clever-gadgets" type="checkbox"/>
+       <label class="form-check-label" for="clever-gadgets">
+        🧠 Problem Solvers
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Luxury Picks.">
+       <input class="form-check-input" id="luxury-picks" type="checkbox"/>
+       <label class="form-check-label" for="luxury-picks">
+        💎 Luxury Picks
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Budget Essentials.">
+       <input class="form-check-input" id="budget-essentials" type="checkbox"/>
+       <label class="form-check-label" for="budget-essentials">
+        🪙 Budget Essentials
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Limited Quantity Left.">
+       <input class="form-check-input" id="limited-quantity-left" type="checkbox"/>
+       <label class="form-check-label" for="limited-quantity-left">
+        ⏳ Limited Quantity Left
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Made in USA.">
+       <input class="form-check-input" id="made-in-usa" type="checkbox"/>
+       <label class="form-check-label" for="made-in-usa">
+        🇺🇸 Made in USA
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Woman-Owned.">
+       <input class="form-check-input" id="woman-owned" type="checkbox"/>
+       <label class="form-check-label" for="woman-owned">
+        💜 Woman-Owned
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Minority-Owned.">
+       <input class="form-check-input" id="minority-owned" type="checkbox"/>
+       <label class="form-check-label" for="minority-owned">
+        🧑‍🔬 Minority-Owned
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Neurodiverse-Friendly.">
+       <input class="form-check-input" id="neurodiverse-friendly" type="checkbox"/>
+       <label class="form-check-label" for="neurodiverse-friendly">
+        🧠 Neurodiverse-Friendly
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Multi-Pack Savings.">
+       <input class="form-check-input" id="multi-pack-savings" type="checkbox"/>
+       <label class="form-check-label" for="multi-pack-savings">
+        📦 Multi-Pack Savings
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Refillable Products.">
+       <input class="form-check-input" id="refillable-products" type="checkbox"/>
+       <label class="form-check-label" for="refillable-products">
+        ♻️ Refillable Products
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Sample Size.">
+       <input class="form-check-input" id="sample-size" type="checkbox"/>
+       <label class="form-check-label" for="sample-size">
+        🧃 Sample Size
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Filter for: Subscription Deals.">
+       <input class="form-check-input" id="subscribe-and-save-deals" type="checkbox"/>
+       <label class="form-check-label" for="subscribe-and-save-deals">
+        ⏲️ Subscription Deals
+       </label>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header" id="headingaccordionGroup5">
+     <button aria-controls="accordionGroup5" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup5" data-bs-toggle="collapse" type="button">
+      Gift Ideas
+     </button>
+    </h2>
+    <div aria-labelledby="headingaccordionGroup5" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="accordionGroup5">
+     <div class="accordion-body">
+      <div class="px-3 py-2 text-end small text-muted">
+       <button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup5', false)" type="button">
+        Clear All
+       </button>
+       <button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup5', true)" type="button">
+        Select All
+       </button>
+      </div>
+      <div class="form-check" data-tooltip="Gift ideas suitable for women.">
+       <input aria-label="Gifts for Her" class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox"/>
+       <label class="form-check-label" for="giftsForHer">
         🎀 Gifts for Her
-      <div class="form-check" data-tooltip="Office-friendly gifts for coworkers.">
-</div></label>
-</div>
-<input aria-label="Gifts for Kids" class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox"/>
-<div class="form-check" data-tooltip="Gift ideas suitable for men.">
-<input class="form-check-input" id="lastMinuteGifts" name="giftIdeas" type="checkbox" value="last+minute+gifts"/>
-<input aria-label="Gifts for Him" class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox"/>
-<label class="form-check-label" for="giftsForHim">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Gift ideas suitable for men.">
+       <input aria-label="Gifts for Him" class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox"/>
+       <label class="form-check-label" for="giftsForHim">
         👔 Gifts for Him
        </label>
-</div>
-<div class="form-check" data-tooltip="Great gift picks for dads.">
-<input aria-label="Gifts for Dad" class="form-check-input" id="giftsForDad" name="gifts-for-dad" type="checkbox"/>
-<label class="form-check-label" for="giftsForDad">
+      </div>
+      <div class="form-check" data-tooltip="Great gift picks for dads.">
+       <input aria-label="Gifts for Dad" class="form-check-input" id="giftsForDad" name="gifts-for-dad" type="checkbox"/>
+       <label class="form-check-label" for="giftsForDad">
         👨 Gifts for Dad
-       <label class="form-check-label" for="anniversaryGifts">
-</label>
-</label></div>
-<div class="form-check" data-tooltip="Great gift picks for moms.">
-<input aria-label="Gifts for Mom" class="form-check-input" id="giftsForMom" name="gifts-for-mom" type="checkbox"/>
-<label class="form-check-label" for="giftsForMom">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Great gift picks for moms.">
+       <input aria-label="Gifts for Mom" class="form-check-input" id="giftsForMom" name="gifts-for-mom" type="checkbox"/>
+       <label class="form-check-label" for="giftsForMom">
         👩 Gifts for Mom
        </label>
-</div>
-<div class="form-check" data-tooltip="Gift ideas for kids of all ages.">
-<input aria-label="Gifts for Kids" class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox"/>
-<div class="form-check" data-tooltip="Affordable gifts under $25.">
-<label class="form-check-label" for="giftsForKids">
+      </div>
+      <div class="form-check" data-tooltip="Gift ideas for kids of all ages.">
+       <input aria-label="Gifts for Kids" class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox"/>
+       <label class="form-check-label" for="giftsForKids">
         🧒 Gifts for Kids
-       <label class="form-check-label" for="holidayGiftPicks">
-</label>
-</label></div>
-<div class="form-check" data-tooltip="Perfect for birthday gift shopping.">
-<input aria-label="Birthday Gifts" class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox"/>
-<label class="form-check-label" for="birthdayGifts">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Perfect for birthday gift shopping.">
+       <input aria-label="Birthday Gifts" class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox"/>
+       <label class="form-check-label" for="birthdayGifts">
         🎂 Birthday Gifts
        </label>
-</div>
-<div class="form-check" data-tooltip="Curated anniversary gift selections.">
-<input aria-label="Anniversary Gifts" class="form-check-input" id="anniversaryGifts" name="anniversary-gifts" type="checkbox"/>
-<label class="form-check-label" for="anniversaryGifts">
+      </div>
+      <div class="form-check" data-tooltip="Curated anniversary gift selections.">
+       <input aria-label="Anniversary Gifts" class="form-check-input" id="anniversaryGifts" name="anniversary-gifts" type="checkbox"/>
+       <label class="form-check-label" for="anniversaryGifts">
         💝 Anniversary Gifts
        </label>
-</div>
-<div class="form-check" data-tooltip="Holiday-themed gift deals.">
-<input aria-label="Holiday Gift Picks" class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox"/>
-<label class="form-check-label" for="holidayGiftPicks">
+      </div>
+      <div class="form-check" data-tooltip="Holiday-themed gift deals.">
+       <input aria-label="Holiday Gift Picks" class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox"/>
+       <label class="form-check-label" for="holidayGiftPicks">
         🎄 Holiday Gift Picks
        </label>
-</div>
-<div class="form-check" data-tooltip="Gift ideas for teens and young adults.">
-<input class="form-check-input" id="giftForTeens" name="giftIdeas" type="checkbox" value="gift+ideas+for+teens"/>
-<label class="form-check-label" for="giftForTeens">
+      </div>
+      <div class="form-check" data-tooltip="Gift ideas for teens and young adults.">
+       <input class="form-check-input" id="giftForTeens" name="giftIdeas" type="checkbox" value="gift+ideas+for+teens"/>
+       <label class="form-check-label" for="giftForTeens">
         🧢 Gifts for Teens
        </label>
-</div>
-<div class="form-check" data-tooltip="Thoughtful gifts for grandparents.">
-<input class="form-check-input" id="giftForGrandparents" name="giftIdeas" type="checkbox" value="gift+ideas+for+grandparents"/>
-<label class="form-check-label" for="giftForGrandparents">
+      </div>
+      <div class="form-check" data-tooltip="Thoughtful gifts for grandparents.">
+       <input class="form-check-input" id="giftForGrandparents" name="giftIdeas" type="checkbox" value="gift+ideas+for+grandparents"/>
+       <label class="form-check-label" for="giftForGrandparents">
         🧓 Gifts for Grandparents
        </label>
-</div>
-<div class="form-check" data-tooltip="Affordable gifts under $25.">
-<input class="form-check-input" id="giftUnder25" name="giftIdeas" type="checkbox" value="gifts+under+25+dollars"/>
-<label class="form-check-label" for="giftUnder25">
+      </div>
+      <div class="form-check" data-tooltip="Affordable gifts under $25.">
+       <input class="form-check-input" id="giftUnder25" name="giftIdeas" type="checkbox" value="gifts+under+25+dollars"/>
+       <label class="form-check-label" for="giftUnder25">
         💵 Gifts Under $25
        </label>
-</div>
-<div class="form-check" data-tooltip="Light-hearted and funny gift ideas.">
-<input class="form-check-input" id="funnyGifts" name="giftIdeas" type="checkbox" value="funny+gag+gifts"/>
-<label class="form-check-label" for="funnyGifts">
-<div class="form-check" data-tooltip="Quick gifts for last-minute shoppers.">
+      </div>
+      <div class="form-check" data-tooltip="Light-hearted and funny gift ideas.">
+       <input class="form-check-input" id="funnyGifts" name="giftIdeas" type="checkbox" value="funny+gag+gifts"/>
+       <label class="form-check-label" for="funnyGifts">
         🤣 Funny &amp; Gag Gifts
-       </div></label>
-</div>
-<div class="form-check" data-tooltip="Elegant and luxurious gift options.">
-<input class="form-check-input" id="luxuryGifts" name="giftIdeas" type="checkbox" value="luxury+gift+ideas"/>
-<label class="form-check-label" for="luxuryGifts">
+       </label>
+      </div>
+      <div class="form-check" data-tooltip="Elegant and luxurious gift options.">
+       <input class="form-check-input" id="luxuryGifts" name="giftIdeas" type="checkbox" value="luxury+gift+ideas"/>
+       <label class="form-check-label" for="luxuryGifts">
         💎 Luxury Gift Ideas
        </label>
-</div>
-<div class="form-check" data-tooltip="Quick gifts for last-minute shoppers.">
-<input class="form-check-input" id="lastMinuteGifts" name="giftIdeas" type="checkbox" value="last+minute+gifts"/>
-<label class="form-check-label" for="lastMinuteGifts">
+      </div>
+      <div class="form-check" data-tooltip="Quick gifts for last-minute shoppers.">
+       <input class="form-check-input" id="lastMinuteGifts" name="giftIdeas" type="checkbox" value="last+minute+gifts"/>
+       <label class="form-check-label" for="lastMinuteGifts">
         ⏰ Last-Minute Gifts
        </label>
-</div>
-<div class="form-check" data-tooltip="Appreciation gifts for teachers.">
-<input class="form-check-input" id="teacherGifts" name="giftIdeas" type="checkbox" value="gifts+for+teachers"/>
-<label class="form-check-label" for="teacherGifts">
+      </div>
+      <div class="form-check" data-tooltip="Appreciation gifts for teachers.">
+       <input class="form-check-input" id="teacherGifts" name="giftIdeas" type="checkbox" value="gifts+for+teachers"/>
+       <label class="form-check-label" for="teacherGifts">
         📚 Gifts for Teachers
        </label>
-</div>
-<div class="form-check" data-tooltip="Office-friendly gifts for coworkers.">
-<input class="form-check-input" id="coworkerGifts" name="giftIdeas" type="checkbox" value="gifts+for+coworkers"/>
-<label class="form-check-label" for="coworkerGifts">
+      </div>
+      <div class="form-check" data-tooltip="Office-friendly gifts for coworkers.">
+       <input class="form-check-input" id="coworkerGifts" name="giftIdeas" type="checkbox" value="gifts+for+coworkers"/>
+       <label class="form-check-label" for="coworkerGifts">
         🏢 Gifts for Coworkers
        </label>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div></div></label></h2></div></label></div></div></div></div></div></button></div></div></label></div></div></label></label></label></label></label></div></div></div></label></div></div></label></div></label></div></div></label></div></div></div></div></div></label></div></div></div></div></div></label></label></div></label></label></label></label></button></div></div></div></div></div></label></div></div></div></div></div></div></div></label></h2></label></div></label></div></label></div></div></label></label></div></div></label></div></label></div></div></div></div></div></label></label></div></label></div></div></div></div></div></div></label></button></div></label></label></label></div></div></label></div></div></div></label></div></div></div></div></button></div></div></div></div></div></h3></section>
-<!-- ✅ Step 6: View Your Results -->
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section><!-- ✅ Step 6: View Your Results -->
 <section class="container text-start mb-5">
 <h3>🚀 Step 6: View Your Results</h3>
 <p class="text-muted mb-3">
