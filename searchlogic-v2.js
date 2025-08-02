@@ -51,6 +51,15 @@ document.addEventListener('DOMContentLoaded', () => {
     keywordAppend('gifts-for-dad',            'gifts for dad');
     keywordAppend('birthday-gifts',           'birthday gifts');
     keywordAppend('holiday-gift-picks',       'holiday gift picks');
+    keywordAppend('gifts-for-teens',        'gift ideas for teens');
+    keywordAppend('gifts-for-grandparents', 'gift ideas for grandparents');
+    keywordAppend('gifts-under-25',         'gifts under 25 dollars');
+    keywordAppend('funny-gag-gifts',        'funny gag gifts');
+    keywordAppend('luxury-gift-ideas',      'luxury gift ideas');
+    keywordAppend('last-minute-gifts',      'last minute gifts');
+    keywordAppend('gifts-for-teachers',     'gifts for teachers');
+    keywordAppend('gifts-for-coworkers',    'gifts for coworkers');
+
 
     // 3) % Off, Rating & Sort
     const pct = data.get('percent-off');
@@ -143,4 +152,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.open(url, '_blank');
   });
 });
+
 
