@@ -393,6 +393,13 @@ input[type="checkbox"]:checked + .form-check-label {
         "@type": "Thing",
         "name": "Amazon Deals"
       },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "xpath": [
+          "/html/head/title",
+          "/html/body//h1"
+        ]
+      },
       "hasPart": [
         {
           "@type": "WebPage",
@@ -430,14 +437,7 @@ input[type="checkbox"]:checked + .form-check-label {
           "name": "About",
           "description": "Learn more about Deal Shopper Pro and its mission."
         }
-      ],
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "xpath": [
-          "/html/head/title",
-          "/html/body//h1"
-        ]
-      }
+      ]
     },
     {
       "@type": "SoftwareApplication",
@@ -445,10 +445,21 @@ input[type="checkbox"]:checked + .form-check-label {
       "name": "Deal Shopper Pro",
       "operatingSystem": "All",
       "applicationCategory": "ShoppingApplication",
+      "description": "An advanced Amazon search tool to find Prime-only deals, Lightning Deals, coupon codes, and hidden discounts fast.",
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "129"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.dealshopperpro.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     },
     {
@@ -465,7 +476,13 @@ input[type="checkbox"]:checked + .form-check-label {
         "https://medium.com/@dealshopperpro",
         "https://pinterest.com/dealshopperpro",
         "https://dealshopperpro.tumblr.com"
-      ]
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "url": "https://www.dealshopperpro.com/help.html",
+        "availableLanguage": ["English"]
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -494,6 +511,7 @@ input[type="checkbox"]:checked + .form-check-label {
   ]
 }
 </script>
+
 
 
 </head>
