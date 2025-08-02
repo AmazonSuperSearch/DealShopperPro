@@ -69,7 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
     keywordAppend('refurbished-deals',        'refurbished deal');
     keywordAppend('flash-sales',              'flash sale');
     keywordAppend('top-rated-deals',          'top rated deals');
-
+    keywordAppend('buy-more-save-more',       'buy more save more');
+    keywordAppend('cashback-deals',           'cashback');
+    keywordAppend('lightning-coupon',         'lightning deal with coupon');
+    keywordAppend('promo-codes',              'amazon promo codes');
+    keywordAppend('trending-deals',           'trending deals');
+    keywordAppend('new-deals-today',          'new deals today');
+    keywordAppend('hourly-updated-deals',     'hourly updated deals');
+    keywordAppend('exclude-sponsored',        'exclude sponsored');
+    keywordAppend('recurring-deals',          'recurring deals');
+    keywordAppend('back-in-stock',            'back in stock');
 
     // 3) % Off, Rating & Sort
     const pct = data.get('percent-off');
@@ -162,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.open(url, '_blank');
   });
 });
+
 
 
 
