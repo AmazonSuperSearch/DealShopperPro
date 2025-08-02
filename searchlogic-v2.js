@@ -99,6 +99,15 @@ keywordAppend('bundle-and-save',            'bundle and save');
 keywordAppend('deal-of-the-day',            'deal of the day');
 keywordAppend('rare-discounts',             'rare discounts');
 keywordAppend('invitation-only-deals',      'invitation only deals');
+keywordAppend('ships-from-us',        'ships from United States');
+keywordAppend('arrives-tomorrow',     'arrives tomorrow');
+keywordAppend('same-day',             'same-day delivery');
+keywordAppend('global-shipping',      'amazon global shipping');
+keywordAppend('subscribe-save',       'subscribe and save');
+keywordAppend('pickup-available',     'amazon pickup location');
+keywordAppend('ships-from-amazon',    'ships from Amazon');
+keywordAppend('back-in-stock',        'back in stock');
+
 
 
     // 3) % Off, Rating & Sort
@@ -192,6 +201,7 @@ keywordAppend('invitation-only-deals',      'invitation only deals');
     window.open(url, '_blank');
   });
 });
+
 
 
 
