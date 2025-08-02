@@ -59,6 +59,16 @@ document.addEventListener('DOMContentLoaded', () => {
     keywordAppend('last-minute-gifts',      'last minute gifts');
     keywordAppend('gifts-for-teachers',     'gifts for teachers');
     keywordAppend('gifts-for-coworkers',    'gifts for coworkers');
+    keywordAppend('free-trials',              'free trial');
+    keywordAppend('extra-discount-codes',     'extra discount code');
+    keywordAppend('coupon-stacking',          'coupon stacking');
+    keywordAppend('lowest-price',             'lowest price');
+    keywordAppend('limited-quantity-deals',   'limited quantity deal');
+    keywordAppend('warehouse-deals',          'warehouse deal');
+    keywordAppend('open-box-deals',           'open box deal');
+    keywordAppend('refurbished-deals',        'refurbished deal');
+    keywordAppend('flash-sales',              'flash sale');
+    keywordAppend('top-rated-deals',          'top rated deals');
 
 
     // 3) % Off, Rating & Sort
@@ -152,5 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.open(url, '_blank');
   });
 });
+
 
 
