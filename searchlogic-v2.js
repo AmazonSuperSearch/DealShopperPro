@@ -123,7 +123,21 @@ keywordAppend('low-carbon-footprint', 'low carbon footprint');
 keywordAppend('reusable-products', 'reusable products');
 keywordAppend('compostable-materials', 'compostable materials');
 keywordAppend('energy-efficient', 'energy efficient');
-
+keywordAppend('trending-now', 'trending deals');
+keywordAppend('back-in-stock', 'back in stock');
+keywordAppend('new-this-month', 'new releases this month');
+keywordAppend('clever-gadgets', 'clever gadgets');
+keywordAppend('luxury-picks', 'premium product');
+keywordAppend('budget-essentials', 'under $10 essentials');
+keywordAppend('limited-quantity-left', 'only left in stock');
+keywordAppend('made-in-usa', 'made in usa');
+keywordAppend('woman-owned', 'woman owned business');
+keywordAppend('minority-owned', 'black owned business');
+keywordAppend('neurodiverse-friendly', 'autism-friendly');
+keywordAppend('multi-pack-savings', 'multi-pack savings');
+keywordAppend('refillable-products', 'refillable');
+keywordAppend('sample-size', 'sample size');
+keywordAppend('subscribe-and-save-deals', 'subscribe and save');
 
 
 
@@ -218,6 +232,7 @@ keywordAppend('energy-efficient', 'energy efficient');
     window.open(url, '_blank');
   });
 });
+
 
 
 
