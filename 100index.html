@@ -2,89 +2,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deal Shopper Pro – Smarter Amazon Filters</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" />
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Deal Shopper Pro – Advanced Amazon Filters</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" >
   <style>
-    body { font-family: system-ui, sans-serif; background: #fff; }
+    body { font-family: system-ui, sans-serif; }
     .accordion-button::after { transform: scale(1.5); }
     .hero { background: #f8f9fa; padding: 3rem 1rem; text-align: center; }
     .hero h1 { font-size: 2rem; font-weight: bold; margin-bottom: 1rem; }
     .hero p { max-width: 720px; margin: 0 auto 1.25rem; font-size: 1.1rem; color: #333; }
     .sticky-cta { position: sticky; bottom: 0; background: #fff; padding: 1rem; border-top: 1px solid #ddd; text-align: center; z-index: 1000; }
+    .form-check { margin-bottom: 0.5rem; }
   </style>
 </head>
 <body>
 
-  <section class="hero">
-    <h1>Find the Best Amazon Deals in Seconds</h1>
-    <p>Use smarter filters to unlock Prime-only items, coupons, Lightning Deals, and hidden discounts — no login needed.</p>
-    <a href="#accordionSearch" class="btn btn-primary btn-lg">🔎 Start Your Deal Search</a>
-  </section>
+<section class="hero">
+  <h1>Find the Best Amazon Deals in Seconds</h1>
+  <p>Use smarter filters to unlock Prime-only items, coupons, Lightning Deals, and hidden discounts — no login needed.</p>
+  <a href="#accordionSearch" class="btn btn-primary btn-lg">🔎 Start Your Deal Search</a>
+</section>
 
-  <main class="container py-4">
-    <form id="amazon-search-form">
-      <div class="accordion" id="accordionSearch">
+<main class="container py-4">
+  <form id="amazon-search-form">
+    <div class="accordion" id="accordionSearch">
 
-        <!-- Step 1 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingStep1">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep1" aria-expanded="true" aria-controls="collapseStep1">
-              🔍 Step 1: What are you looking for?
-            </button>
-          </h2>
-          <div id="collapseStep1" class="accordion-collapse collapse show" aria-labelledby="headingStep1" data-bs-parent="#accordionSearch">
-            <div class="accordion-body">
-              <input class="form-control" name="q" type="text" placeholder="e.g. wireless earbuds, yoga mat, Sony TV" required>
-            </div>
+      <!-- Step 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingStep1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep1" aria-expanded="true" aria-controls="collapseStep1">
+            🔍 Step 1: What are you looking for?
+          </button>
+        </h2>
+        <div id="collapseStep1" class="accordion-collapse collapse show" aria-labelledby="headingStep1" data-bs-parent="#accordionSearch">
+          <div class="accordion-body">
+            <input class="form-control" name="q" type="text" placeholder="e.g. bluetooth earbuds, camping chair" required>
           </div>
         </div>
+      </div>
 
-        <!-- Step 2 -->
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingStep2">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep2" aria-expanded="false" aria-controls="collapseStep2">
-              💰 Step 2: Price & Deal Type
-            </button>
-          </h2>
-          <div id="collapseStep2" class="accordion-collapse collapse" aria-labelledby="headingStep2" data-bs-parent="#accordionSearch">
-            <div class="accordion-body">
-              <div class="row g-3 mb-3">
-                <div class="col-md-4">
-                  <label>Currency</label>
-                  <select class="form-select" name="currency">
-                    <option value="USD">USD ($)</option>
-                    <option value="EUR">EUR (€)</option>
-                  </select>
-                </div>
-                <div class="col-md-4">
-                  <label>Min Price</label>
-                  <input type="number" class="form-control" name="min-price" placeholder="e.g. 10">
-                </div>
-                <div class="col-md-4">
-                  <label>Max Price</label>
-                  <input type="number" class="form-control" name="max-price" placeholder="e.g. 100">
-                </div>
+      <!-- Step 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingStep2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep2" aria-expanded="false" aria-controls="collapseStep2">
+            💰 Step 2: Price & Deal Type
+          </button>
+        </h2>
+        <div id="collapseStep2" class="accordion-collapse collapse" aria-labelledby="headingStep2" data-bs-parent="#accordionSearch">
+          <div class="accordion-body">
+            <div class="row g-3 mb-3">
+              <div class="col-md-4">
+                <label>Currency</label>
+                <select class="form-select" name="currency">
+                  <option value="USD">USD ($)</option>
+                  <option value="EUR">EUR (€)</option>
+                </select>
               </div>
-              <div class="form-check"><input class="form-check-input" type="checkbox" name="prime" id="primeOnly"><label class="form-check-label" for="primeOnly">✅ Prime‑Only</label></div>
-              <div class="form-check"><input class="form-check-input" type="checkbox" name="lightning" id="lightningDeals"><label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label></div>
-              <div class="form-check"><input class="form-check-input" type="checkbox" name="coupon" id="coupons"><label class="form-check-label" for="coupons">🏷️ Coupons</label></div>
+              <div class="col-md-4">
+                <label>Min Price</label>
+                <input type="number" class="form-control" name="min-price" placeholder="e.g. 10">
+              </div>
+              <div class="col-md-4">
+                <label>Max Price</label>
+                <input type="number" class="form-control" name="max-price" placeholder="e.g. 100">
+              </div>
             </div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" name="prime"><label class="form-check-label">✅ Prime-Only</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" name="lightning"><label class="form-check-label">⚡ Lightning Deals</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" name="coupon"><label class="form-check-label">🏷️ Coupons</label></div>
           </div>
         </div>
-
-        <!-- Additional steps will be appended here -->
-
       </div>
 
-      <!-- Sticky CTA -->
-      <div class="sticky-cta mt-4">
-        <button type="submit" class="btn btn-success btn-lg">🔍 Search Amazon Deals Now</button>
-      </div>
-    </form>
-  </main>
+      <!-- Step 3-6 to be added dynamically in next steps -->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    </div>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta mt-4">
+      <button type="submit" class="btn btn-success btn-lg">🔍 Search Amazon Deals Now</button>
+    </div>
+  </form>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
