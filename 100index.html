@@ -564,57 +564,58 @@ input[type="checkbox"]:checked + .form-check-label {
   </p>
 </section>
 
-      <!-- Step 1: Product Search -->
+      <!-- Step 1 -->
       <div class="accordion-item border-bottom">
         <h2 class="accordion-header" id="headingStep1">
-          <button class="accordion-button bg-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep1" aria-expanded="true" aria-controls="collapseStep1">
+          <button class="accordion-button bg-white text-dark fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep1" aria-expanded="false" aria-controls="collapseStep1">
             🔍 Step 1: Start Your Product Search
           </button>
         </h2>
         <div id="collapseStep1" class="accordion-collapse collapse show" aria-labelledby="headingStep1" data-bs-parent="#filterAccordion">
           <div class="accordion-body">
-            <div class="input-group mb-3">
-              <button class="btn btn-outline-secondary" type="button" id="voiceSearchBtn" title="Use voice to search">🎤</button>
-              <input type="text" id="mainSearchInput" name="q" class="form-control" placeholder="Search Amazon: ASIN, ISBN, UPC, or keyword">
+            <div class="input-group">
+              <span class="input-group-text">🔎</span>
+              <input type="text" id="mainSearchInput" name="q" class="form-control" placeholder="Search Amazon: ASIN, ISBN, UPC, or keyword" aria-label="Search products">
             </div>
           </div>
         </div>
       </div>
-<div class="accordion-item border rounded mb-3">
-  <h2 class="accordion-header" id="headingStep2">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep2" aria-expanded="false" aria-controls="collapseStep2">
-      💰 Step 2: Set Your Price Range
-    </button>
-  </h2>
-  <div id="collapseStep2" class="accordion-collapse collapse" aria-labelledby="headingStep2" data-bs-parent="#filterAccordion">
-    <div class="accordion-body">
-      <p class="text-muted mb-2">Choose your currency, then define a minimum and/or maximum price.</p>
-      <div class="row g-3 align-items-end">
-        <div class="col-12 col-lg-2">
-          <label class="form-label" for="currencySelect">Currency</label>
-          <select class="form-select" id="currencySelect" name="currency" aria-label="Select currency">
-            <option value="usd" selected>USD ($)</option>
-            <option value="eur">EUR (€)</option>
-            <option value="gbp">GBP (£)</option>
-            <option value="jpy">JPY (¥)</option>
-            <option value="inr">INR (₹)</option>
-          </select>
-        </div>
-        <div class="col-12 col-lg-5">
-          <label class="form-label" for="minPrice">Minimum Price</label>
-          <div class="input-group">
-            <span class="input-group-text" id="minPriceAddon">$</span>
-            <input type="number" class="form-control" id="minPrice" name="min-price" placeholder="e.g. 10" step="0.01" aria-describedby="minPriceAddon">
-          </div>
-        </div>
-        <div class="col-12 col-lg-5">
-          <label class="form-label" for="maxPrice">Maximum Price</label>
-          <div class="input-group">
-            <span class="input-group-text" id="maxPriceAddon">$</span>
-            <input type="number" class="form-control" id="maxPrice" name="max-price" placeholder="e.g. 100" step="0.01" aria-describedby="maxPriceAddon">
+
+      <!-- Step 2 -->
+      <div class="accordion-item border-bottom">
+        <h2 class="accordion-header" id="headingStep2">
+          <button class="accordion-button collapsed bg-white text-dark fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep2" aria-expanded="false" aria-controls="collapseStep2">
+            💰 Step 2: Set Your Price Range
+          </button>
+        </h2>
+        <div id="collapseStep2" class="accordion-collapse collapse" aria-labelledby="headingStep2" data-bs-parent="#filterAccordion">
+          <div class="accordion-body">
+            <div class="row g-3 align-items-end">
+              <div class="col-md-4">
+                <label for="currencySelect" class="form-label">Currency</label>
+                <select class="form-select" name="currency" id="currencySelect">
+                  <option value="usd" selected>USD ($)</option>
+                  <option value="eur">EUR (€)</option>
+                  <option value="gbp">GBP (£)</option>
+                  <option value="jpy">JPY (¥)</option>
+                  <option value="inr">INR (₹)</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="minPrice" class="form-label">Min Price</label>
+                <div class="input-group">
+                  <span class="input-group-text">$</span>
+                  <input type="number" step="0.01" name="min-price" id="minPrice" class="form-control" placeholder="e.g. 10">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label for="maxPrice" class="form-label">Max Price</label>
+                <div class="input-group">
+                  <span class="input-group-text">$</span>
+                  <input type="number" step="0.01" name="max-price" id="maxPrice" class="form-control" placeholder="e.g. 100">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
