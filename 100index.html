@@ -545,3 +545,42 @@ input[type="checkbox"]:checked + .form-check-label {
           </div>
         </div>
       </div>
+<!-- Step 2: Price Range -->
+<div class="accordion-item border-bottom">
+  <h2 class="accordion-header" id="headingStep2">
+    <button class="accordion-button collapsed bg-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep2" aria-expanded="false" aria-controls="collapseStep2">
+      💰 Step 2: Set Your Price Range
+    </button>
+  </h2>
+  <div id="collapseStep2" class="accordion-collapse collapse" aria-labelledby="headingStep2" data-bs-parent="#filterAccordion">
+    <div class="accordion-body">
+      <p class="text-muted mb-3">Choose your currency, then define a minimum and/or maximum price.</p>
+      <div class="row g-3 align-items-end">
+        <div class="col-12 col-lg-2">
+          <label class="form-label" for="currencySelect">Currency</label>
+          <select class="form-select" id="currencySelect" name="currency" aria-label="Select currency">
+            <option selected value="usd">USD ($)</option>
+            <option value="eur">EUR (€)</option>
+            <option value="gbp">GBP (£)</option>
+            <option value="jpy">JPY (¥)</option>
+            <option value="inr">INR (₹)</option>
+          </select>
+        </div>
+        <div class="col-12 col-lg-5">
+          <label class="form-label" for="minPrice">Minimum Price</label>
+          <div class="input-group">
+            <span class="input-group-text" id="minPriceAddon">$</span>
+            <input type="number" class="form-control" id="minPrice" name="min-price" placeholder="e.g. 10" step="0.01" aria-describedby="minPriceAddon">
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <label class="form-label" for="maxPrice">Maximum Price</label>
+          <div class="input-group">
+            <span class="input-group-text" id="maxPriceAddon">$</span>
+            <input type="number" class="form-control" id="maxPrice" name="max-price" placeholder="e.g. 100" step="0.01" aria-describedby="maxPriceAddon">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
