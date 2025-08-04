@@ -619,3 +619,127 @@ input[type="checkbox"]:checked + .form-check-label {
           </div>
         </div>
       </div>
+
+<!-- STEP 3 -->
+<div class="accordion-item border-bottom">
+  <h2 class="accordion-header" id="headingStep3">
+    <button class="accordion-button collapsed bg-white text-dark fw-bold small shadow-sm px-3 py-2"
+      type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep3"
+      aria-expanded="false" aria-controls="collapseStep3">
+      ⭐ ✅ Step 3: Refine by Discount, Rating & Sort Order
+    </button>
+  </h2>
+  <div id="collapseStep3" class="accordion-collapse collapse" aria-labelledby="headingStep3" data-bs-parent="#filterAccordion">
+    <div class="accordion-body">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label for="discount" class="form-label">Discount</label>
+          <select class="form-select" name="pct-off" id="discount">
+            <option value="">Any</option>
+            <option value="10">10% off or more</option>
+            <option value="25">25% off or more</option>
+            <option value="50">50% off or more</option>
+            <option value="70">70% off or more</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="minStars" class="form-label">Minimum Rating</label>
+          <select class="form-select" name="min-rating" id="minStars">
+            <option value="">Any</option>
+            <option value="1">1★ & up</option>
+            <option value="2">2★ & up</option>
+            <option value="3">3★ & up</option>
+            <option value="4">4★ & up</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="sortBy" class="form-label">Sort Order</label>
+          <select class="form-select" name="sort" id="sortBy">
+            <option value="">Relevance</option>
+            <option value="price-asc-rank">Price: Low to High</option>
+            <option value="price-desc-rank">Price: High to Low</option>
+            <option value="review-rank">Customer Reviews</option>
+            <option value="date-desc-rank">Newest Arrivals</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 4 -->
+<div class="accordion-item border-bottom">
+  <h2 class="accordion-header" id="headingStep4">
+    <button class="accordion-button collapsed bg-white text-dark fw-bold small shadow-sm px-3 py-2"
+      type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep4"
+      aria-expanded="false" aria-controls="collapseStep4">
+      🏷️ ✅ Step 4: Filter by Brand
+    </button>
+  </h2>
+  <div id="collapseStep4" class="accordion-collapse collapse" aria-labelledby="headingStep4" data-bs-parent="#filterAccordion">
+    <div class="accordion-body">
+      <div class="mb-3">
+        <label for="brandFilter" class="form-label">Brand(s) to include</label>
+        <input type="text" class="form-control" name="brand" id="brandFilter" placeholder="e.g. Nike, Samsung, LEGO">
+        <small class="text-muted">Separate multiple brands with commas.</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 5 -->
+<div class="accordion-item border-bottom">
+  <h2 class="accordion-header" id="headingStep5">
+    <button class="accordion-button collapsed bg-white text-dark fw-bold small shadow-sm px-3 py-2"
+      type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep5"
+      aria-expanded="false" aria-controls="collapseStep5">
+      🎯 ✅ Step 5: Extra Filters
+    </button>
+  </h2>
+  <div id="collapseStep5" class="accordion-collapse collapse" aria-labelledby="headingStep5" data-bs-parent="#filterAccordion">
+    <div class="accordion-body">
+      <p class="small text-muted mb-3">Prime, Lightning Deals, Coupons, Free Shipping, In Stock, Eco, and more.</p>
+      <div class="row">
+        <div class="col-12">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="primeOnly" name="prime-only">
+            <label class="form-check-label" for="primeOnly">Prime Eligible</label>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="lightningDeals" name="lightning-deals">
+            <label class="form-check-label" for="lightningDeals">Lightning Deals</label>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="couponAvailable" name="has-coupon">
+            <label class="form-check-label" for="couponAvailable">Show Only with Coupons</label>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="freeShipping" name="free-shipping">
+            <label class="form-check-label" for="freeShipping">Free Shipping</label>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="inStock" name="in-stock">
+            <label class="form-check-label" for="inStock">Only Show In Stock</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STEP 6 -->
+<div class="accordion-item border-bottom">
+  <h2 class="accordion-header" id="headingStep6">
+    <button class="accordion-button collapsed bg-white text-dark fw-bold small shadow-sm px-3 py-2"
+      type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep6"
+      aria-expanded="false" aria-controls="collapseStep6">
+      ✅ Step 6: View Results
+    </button>
+  </h2>
+  <div id="collapseStep6" class="accordion-collapse collapse" aria-labelledby="headingStep6" data-bs-parent="#filterAccordion">
+    <div class="accordion-body">
+      <p class="mb-3">When you're ready, click below to view your Amazon search results based on all selected filters.</p>
+      <button type="submit" class="btn btn-success btn-lg">🔍 Search Amazon Now</button>
+    </div>
+  </div>
+</div>
