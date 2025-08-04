@@ -545,21 +545,20 @@ input[type="checkbox"]:checked + .form-check-label {
           </div>
         </div>
       </div>
-<!-- Step 2: Price Range -->
-<div class="accordion-item border-bottom">
+<div class="accordion-item border rounded mb-3">
   <h2 class="accordion-header" id="headingStep2">
-    <button class="accordion-button collapsed bg-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep2" aria-expanded="false" aria-controls="collapseStep2">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep2" aria-expanded="false" aria-controls="collapseStep2">
       💰 Step 2: Set Your Price Range
     </button>
   </h2>
   <div id="collapseStep2" class="accordion-collapse collapse" aria-labelledby="headingStep2" data-bs-parent="#filterAccordion">
     <div class="accordion-body">
-      <p class="text-muted mb-3">Choose your currency, then define a minimum and/or maximum price.</p>
+      <p class="text-muted mb-2">Choose your currency, then define a minimum and/or maximum price.</p>
       <div class="row g-3 align-items-end">
         <div class="col-12 col-lg-2">
           <label class="form-label" for="currencySelect">Currency</label>
           <select class="form-select" id="currencySelect" name="currency" aria-label="Select currency">
-            <option selected value="usd">USD ($)</option>
+            <option value="usd" selected>USD ($)</option>
             <option value="eur">EUR (€)</option>
             <option value="gbp">GBP (£)</option>
             <option value="jpy">JPY (¥)</option>
