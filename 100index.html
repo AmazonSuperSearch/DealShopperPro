@@ -513,98 +513,11 @@ input[type="checkbox"]:checked + .form-check-label {
 </head>
 <body>
 <main>
-<div id="navbar-placeholder"></div>
-<script defer="" src="/navbar-loader.js"></script>
-<!-- ✅ Hero Section -->
-<header class="hero-banner py-5 text-center">
-<div class="container">
-<h1 class="hero-heading fw-bold mb-3">Best Amazon Filter Tool – Advanced Amazon Search for Faster Results</h1>
-<p class="hero-tagline lead mb-2">⚡ Smarter Amazon Deal Searching — No Login Required</p>
-<p class="hero-subtitle">Search Amazon using powerful filters for lightning deals, price range, Prime eligibility, ratings, discounts, and hidden coupons—all in one place.</p>
-<p class="text-muted mx-auto" style="max-width: 720px;">
-  Whether you're looking for Amazon Lightning Deals, Prime-only discounts, or products under a budget, <strong>Deal Shopper Pro</strong> helps you <strong>find Amazon deals fast</strong>, <strong>filter results in real time</strong>, and <strong>shop smarter</strong>.
-</p>
-<!-- Suggested Tags -->
-<div class="my-3">
-<span class="fw-semibold text-dark">Suggested:</span>
-<a class="badge bg-primary text-white me-1 suggested-tag" data-query="wireless headphones under $50" href="#">wireless headphones under $50</a>
-<a class="badge bg-primary text-white me-1 suggested-tag" data-query="prime only deals" href="#">Prime-only deals</a>
-<a class="badge bg-primary text-white suggested-tag" data-query="4 star appliances" href="#">4+ star appliances</a>
-</div>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const tags = document.querySelectorAll('.suggested-tag');
-    const input = document.getElementById('mainSearchInput');
-    const form = document.getElementById('amazon-search-form');
 
-    tags.forEach(tag => {
-      tag.addEventListener('click', function (e) {
-        e.preventDefault();
-        const query = tag.getAttribute('data-query');
-        if (input) {
-          input.value = query;
-          input.focus();
-        }
-        if (form) {
-          form.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-  });
-</script>
-<!-- Dynamic Query -->
-<p class="fst-italic fw-semibold mb-4" id="justSearched">🛒 Just searched: <strong>"wireless headphones under $50"</strong></p>
-<script>
-      (function(){
-        const samples = [
-          "wireless headphones under $50",
-          "4★ kitchen gadgets",
-          "eco-friendly water bottle",
-          "gaming mouse lightning deal",
-          "Prime-only laptop deals",
-          "vegan protein powder 30% off"
-        ];
-        const el = document.getElementById('justSearched');
-        if(el && el.querySelector('strong')){
-          const q = samples[Math.floor(Math.random()*samples.length)];
-          el.querySelector('strong').textContent = '"' + q + '"';
-        }
-      })();
-    </script>
-<!-- CTA Button + Badge -->
-<a class="btn btn-primary btn-lg shadow-sm fw-semibold me-2 mb-3" href="#amazon-search-form">Start Searching Now</a>
-<span class="d-block d-sm-inline-block fw-semibold mb-3 text-dark">
-<span class="px-3 py-1 rounded-pill bg-info text-dark">🔓 No login required</span>
-</span>
-<!-- YouTube Section -->
-<div class="container text-center my-5">
-<h2 class="h5 fw-bold mb-4">🎥 How to Use Deal Shopper Pro</h2>
-<div class="d-flex justify-content-center">
-<div class="ratio ratio-16x9" style="max-width: 720px; width: 100%;">
-<lite-youtube loading="lazy" playlabel="Play: How to Use Deal Shopper Pro to Filter Amazon Deals" style="background-image: url('https://i.ytimg.com/vi/LvXJhglomy4/hqdefault.jpg'); background-position: center; background-size: cover; display: block;" videoid="7XayFBHsFsI">
-</lite-youtube>
-</div>
-</div>
-</div>
-<!-- Modern Icons with Tooltips -->
-<div class="text-center mb-4">
-<i class="bi bi-shield-check text-success fs-1 me-3 icon-modern" data-bs-placement="top" data-bs-toggle="tooltip" title="Secure Protection"></i>
-<i class="bi bi-robot text-warning fs-1 me-3 icon-modern" data-bs-placement="top" data-bs-toggle="tooltip" title="AI-Powered Search"></i>
-<i class="bi bi-lock-fill text-success fs-1 me-3 icon-modern" data-bs-placement="top" data-bs-toggle="tooltip" title="Private &amp; Safe"></i>
-<i class="bi bi-cloud text-primary fs-1 icon-modern" data-bs-placement="top" data-bs-toggle="tooltip" title="Cloud-Based Tool"></i>
-</div>
-<!-- Attribution -->
-<div class="mt-3">
-<span class="fw-semibold fs-6 d-inline-block px-3 py-2 border-start border-4 border-primary text-dark">
-        🤖 Built with help from <strong style="color:#0056b3;">ChatGPT</strong> — Free to use, no affiliation with Amazon
-      </span>
-</div>
-</div>
-<p class="text-muted small mt-4">
-<strong>Note:</strong> DealShopperPro.com is not affiliated with any browser extensions, adware, or Shopify apps with similar names. This is a browser-based Amazon search tool — no logins, no downloads, no tracking.
-</p>
-</header>
-<h2 class="text-center fw-bold my-4">How to Filter Amazon Deals in 6 Easy Steps</h2>
+
+<!-- ✅ Hero Section -->
+
+
 <!-- AMAZON SEARCH FORM -->
 <form id="amazon-search-form">
 <!-- STEP 1 -->
@@ -738,10 +651,10 @@ input[type="checkbox"]:checked + .form-check-label {
   Prime‑eligible, Lightning Deals, Free Shipping, In Stock, Eco‑Friendly, Coupons, and more.
  </p>
 <div class="card mb-4 p-3">
-<div class="accordion" id="filterAccordion">
-<div class="accordion-item">
+<div class="accordion my-5 shadow-sm rounded border" id="filterAccordion">
+<div class="accordion-item border-bottom">
 <h2 class="accordion-header" id="headingaccordionGroup1">
-<button aria-controls="accordionGroup1" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup1" data-bs-toggle="collapse" type="button">
+<button aria-controls="accordionGroup1" aria-expanded="false" class="accordion-button collapsed bg-white text-dark fw-bold small shadow-sm px-3 py-2" data-bs-target="#accordionGroup1" data-bs-toggle="collapse" type="button">
       Shipping &amp; Availability
      </button>
 </h2>
@@ -826,7 +739,7 @@ input[type="checkbox"]:checked + .form-check-label {
 </div>
 <div class="accordion-item border-bottom">
 <h2 class="accordion-header" id="headingaccordionGroup2">
-<button aria-controls="accordionGroup2" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup2" data-bs-toggle="collapse" type="button">
+<button aria-controls="accordionGroup2" aria-expanded="false" class="accordion-button collapsed bg-white text-dark fw-bold small shadow-sm px-3 py-2" data-bs-target="#accordionGroup2" data-bs-toggle="collapse" type="button">
       🎯🔥 Deals &amp; Discounts
      </button>
 </h2>
@@ -1066,9 +979,9 @@ input[type="checkbox"]:checked + .form-check-label {
 </div>
 </div>
 </div>
-<div class="accordion-item">
+<div class="accordion-item border-bottom">
 <h2 class="accordion-header" id="headingaccordionGroup3">
-<button aria-controls="accordionGroup3" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup3" data-bs-toggle="collapse" type="button">
+<button aria-controls="accordionGroup3" aria-expanded="false" class="accordion-button collapsed bg-white text-dark fw-bold small shadow-sm px-3 py-2" data-bs-target="#accordionGroup3" data-bs-toggle="collapse" type="button">
       Eco &amp; Ethical
      </button>
 </h2>
@@ -1235,9 +1148,9 @@ input[type="checkbox"]:checked + .form-check-label {
 </div>
 </div>
 </div>
-<div class="accordion-item">
+<div class="accordion-item border-bottom">
 <h2 class="accordion-header" id="headingaccordionGroup4">
-<button aria-controls="accordionGroup4" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup4" data-bs-toggle="collapse" type="button">
+<button aria-controls="accordionGroup4" aria-expanded="false" class="accordion-button collapsed bg-white text-dark fw-bold small shadow-sm px-3 py-2" data-bs-target="#accordionGroup4" data-bs-toggle="collapse" type="button">
       Special Categories
      </button>
 </h2>
@@ -1386,9 +1299,9 @@ input[type="checkbox"]:checked + .form-check-label {
 </div>
 </div>
 </div>
-<div class="accordion-item">
+<div class="accordion-item border-bottom">
 <h2 class="accordion-header" id="headingaccordionGroup5">
-<button aria-controls="accordionGroup5" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup5" data-bs-toggle="collapse" type="button">
+<button aria-controls="accordionGroup5" aria-expanded="false" class="accordion-button collapsed bg-white text-dark fw-bold small shadow-sm px-3 py-2" data-bs-target="#accordionGroup5" data-bs-toggle="collapse" type="button">
       Gift Ideas
      </button>
 </h2>
@@ -1645,43 +1558,7 @@ input[type="checkbox"]:checked + .form-check-label {
 </p>
 </section>
 </section></form>
-<div class="container my-5">
-<div class="card p-4 shadow-sm mx-auto text-center" style="max-width: 700px; border: 2px solid #ccc; border-radius: 12px;">
-<h4 class="mb-3">
-       🛡️ Your Privacy &amp; Next Steps
-      </h4>
-<p>
-       We
-       <strong>
-        never collect or store personal data
-       </strong>
-       —period. There’s
-       <strong>
-        no login
-       </strong>
-       ,
-       <strong>
-        no tracking cookies
-       </strong>
-       , and
-       <strong>
-        no sign-ups
-       </strong>
-       . All searches run client-side and redirect securely to Amazon.
-      </p>
-<p>
-       Want to learn more? Visit our
-       <a class="fw-semibold" href="help.html#about-amazon-super-search">
-        Help page
-       </a>
-       for step-by-step tutorials, or check out our
-       <a class="fw-semibold" href="media.html">
-        Media page
-       </a>
-       for video demos and user testimonials.
-      </p>
-</div>
-</div>
+
 <div class="text-center my-4">
 <h2 class="h5">📲 Share with Friends</h2>
 <p class="text-muted">Send this to someone who needs smarter Amazon filters:</p>
