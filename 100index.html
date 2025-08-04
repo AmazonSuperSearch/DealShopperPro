@@ -517,3 +517,31 @@ input[type="checkbox"]:checked + .form-check-label {
 
 
 </head>
+  
+<body>
+<main>
+<div id="navbar-placeholder"></div>
+<script defer src="/navbar-loader.js"></script>
+
+<!-- Accordion-Style Amazon Search Tool -->
+<section class="container py-4">
+  <h2 class="text-center fw-bold mb-4">🔎 Advanced Amazon Deal Finder</h2>
+  <form id="amazon-search-form">
+    <div class="accordion" id="filterAccordion">
+
+      <!-- Step 1: Product Search -->
+      <div class="accordion-item border-bottom">
+        <h2 class="accordion-header" id="headingStep1">
+          <button class="accordion-button bg-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep1" aria-expanded="true" aria-controls="collapseStep1">
+            🔍 Step 1: Start Your Product Search
+          </button>
+        </h2>
+        <div id="collapseStep1" class="accordion-collapse collapse show" aria-labelledby="headingStep1" data-bs-parent="#filterAccordion">
+          <div class="accordion-body">
+            <div class="input-group mb-3">
+              <button class="btn btn-outline-secondary" type="button" id="voiceSearchBtn" title="Use voice to search">🎤</button>
+              <input type="text" id="mainSearchInput" name="q" class="form-control" placeholder="Search Amazon: ASIN, ISBN, UPC, or keyword">
+            </div>
+          </div>
+        </div>
+      </div>
