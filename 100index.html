@@ -1497,30 +1497,33 @@ input[type="checkbox"]:checked + .form-check-label {
  </div>
 </div>
 </div>
- <!-- Redundant CTA below accordion -->
-<div class="text-center my-4">
- <button type="submit" form="amazon-search-form" class="btn btn-success fw-bold">
-  🔎 Search Amazon Now
-</button>
-</div>
 
-<!-- STEP 6: View Results -->
-<div class="accordion-item border-bottom">
-  <h2 class="accordion-header" id="headingStep6">
-    <button class="accordion-button collapsed bg-white fw-bold" type="button"
-      data-bs-toggle="collapse" data-bs-target="#collapseStep6" aria-expanded="false" aria-controls="collapseStep6">
-      📊 ✅ Step 6: View Results on Amazon
-    </button>
-  </h2>
-  <div id="collapseStep6" class="accordion-collapse collapse" aria-labelledby="headingStep6" data-bs-parent="#stepAccordion">
-    <div class="accordion-body">
-      <p class="text-muted">After setting your filters, click below to see matching results on Amazon.</p>
-      <button type="submit" form="amazon-search-form" class="btn btn-success fw-bold">
-  🔎 Search Amazon Now
-</button>
+
+  <!-- STEP 6: View Results -->
+  <div class="accordion-item border-bottom">
+    <h2 class="accordion-header" id="headingStep6">
+      <button class="accordion-button collapsed bg-white fw-bold" type="button"
+        data-bs-toggle="collapse" data-bs-target="#collapseStep6" aria-expanded="false" aria-controls="collapseStep6">
+        📊 ✅ Step 6: View Results on Amazon
+      </button>
+    </h2>
+    <div id="collapseStep6" class="accordion-collapse collapse" aria-labelledby="headingStep6" data-bs-parent="#stepAccordion">
+      <div class="accordion-body">
+        <p class="text-muted">After setting your filters, click below to see matching results on Amazon.</p>
+        <button type="submit" class="btn btn-success fw-bold">
+          🔎 Search Amazon Now
+        </button>
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- ✅ Redundant CTA BELOW, also INSIDE form -->
+  <div class="text-center my-4">
+    <button type="submit" class="btn btn-success fw-bold">
+      🔎 Search Amazon Now
+    </button>
+  </div>
+
 </form>
 
 
