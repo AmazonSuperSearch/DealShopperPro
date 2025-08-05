@@ -348,33 +348,42 @@
 <div class="accordion-item border-bottom">
   <h2 class="accordion-header" id="headingStep5">
     <button class="accordion-button collapsed bg-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep5" aria-expanded="false" aria-controls="collapseStep5">
-     🔥 ✅ Step 5: Extra Filters & Deals, Deals, Deals! 
-    </button>
-  </h2>
-  <div id="collapseStep5" class="accordion-collapse collapse" aria-labelledby="headingStep5" data-bs-parent="#filterAccordion">
-    <div class="accordion-body">
-      <p class="text-muted mb-3">
-        Prime‑eligible, Lightning Deals, Free Shipping, In Stock, Eco‑Friendly, Coupons, and more.
-      </p>
- <div class="card mb-4 p-3">
-  <div class="accordion" id="filterAccordion">
-   <div class="accordion-item">
-    <h2 class="accordion-header" id="headingaccordionGroup1">
-     <button aria-controls="accordionGroup1" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup1" data-bs-toggle="collapse" type="button">
-      Shipping &amp; Availability
-     </button>
-    </h2>
-    <div aria-labelledby="headingaccordionGroup1" class="accordion-collapse collapse" id="accordionGroup1">
+    🔥 ✅ Step 5: Extra Filters & Deals, Deals, Deals!
+  </button>
+</h2>
 
-     <div class="accordion-body">
-      <div class="px-3 py-2 text-end small text-muted">
-       <button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup1', false)" type="button">
-        Clear All
-       </button>
-       <button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup1', true)" type="button">
-        Select All
-       </button>
-      </div>
+<!-- ✅ Step 5 Content -->
+<div id="collapseStep5" class="accordion-collapse collapse" aria-labelledby="headingStep5" data-bs-parent="#filterAccordion">
+  <div class="accordion-body">
+    <p class="text-muted mb-3">
+      Prime‑eligible, Lightning Deals, Free Shipping, In Stock, Eco‑Friendly, Coupons, and more.
+    </p>
+
+    <div class="card mb-4 p-3">
+      <div class="accordion" id="filterAccordion-step5">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingShipping">
+            <button 
+              class="accordion-button collapsed sticky-top bg-white"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseShipping"
+              aria-expanded="false"
+              aria-controls="collapseShipping">
+              🚚 Shipping & Availability
+            </button>
+          </h2>
+
+          <div id="collapseShipping" class="accordion-collapse collapse" aria-labelledby="headingShipping" data-bs-parent="#filterAccordion-step5">
+            <div class="accordion-body">
+              <div class="px-3 py-2 text-end small text-muted">
+                <button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('collapseShipping', false)" type="button">
+                  Clear All
+                </button>
+                <button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('collapseShipping', true)" type="button">
+                  Select All
+                </button>
+              </div>
       <div class="form-check" data-tooltip="Only show Amazon Prime-eligible products.">
        <input aria-label="Prime Only" class="form-check-input" id="primeOnly" name="prime-only" type="checkbox">
        <label class="form-check-label" for="primeOnly">
