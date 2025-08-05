@@ -21,21 +21,23 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <!-- ✅ Navbar (custom styles) -->
-<link rel="stylesheet" href="/navbar.css">
+  <link rel="stylesheet" href="/navbar.css">
 
-  <!-- ✅ WebPage structured data -->
+  <!-- ✅ WebPage structured data with publisher and @id -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.dealshopperpro.com/privacy.html",
+    "@id": "https://www.dealshopperpro.com/privacy.html#webpage",
     "url": "https://www.dealshopperpro.com/privacy.html",
     "name": "Privacy Policy | Deal Shopper Pro",
     "description": "Read Deal Shopper Pro’s privacy policy to learn how we collect, store, and use data (we don’t track or store your searches).",
     "inLanguage": "en-US",
     "mainEntityOfPage": "https://www.dealshopperpro.com/privacy.html",
-     "dateModified": "2025-07-14"
+    "dateModified": "2025-07-14",
+    "publisher": {
+      "@id": "https://www.dealshopperpro.com/#organization"
+    }
   }
   </script>
 
@@ -60,53 +62,54 @@
     ]
   }
   </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Does Deal Shopper Pro store my searches?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. All filters run locally in your browser. We don’t store or track search queries."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Deal Shopper Pro use cookies?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No, we do not set cookies. However, Amazon may set cookies if you click an affiliate link."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Deal Shopper Pro sell my data?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. We do not sell or share any personal data, and we don’t collect any in the first place."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I contact Deal Shopper Pro about privacy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can email us at privacy@dealshopperpro.com or visit our Contact page."
-      }
-    }
-  ]
-}
-</script>
 
+  <!-- ✅ FAQ structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does Deal Shopper Pro store my searches?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All filters run locally in your browser. We don’t store or track search queries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Deal Shopper Pro use cookies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, we do not set cookies. However, Amazon may set cookies if you click an affiliate link."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Deal Shopper Pro sell my data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. We do not sell or share any personal data, and we don’t collect any in the first place."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact Deal Shopper Pro about privacy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can email us at privacy@dealshopperpro.com or visit our Contact page."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
 <div id="navbar-placeholder"></div>
-  <script src="/navbar-loader.js" defer></script>
+<script src="/navbar-loader.js" defer></script>
 
 <main class="container my-5" aria-label="Main content">
   <h1 class="mb-4">Privacy Policy</h1>
@@ -172,14 +175,16 @@
     <p><strong>© 2025 Deal Shopper Pro</strong></p>
   </div>
 
-  <!-- ✅ Organization structured data -->
+  <!-- ✅ Organization structured data with @id and language -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://www.dealshopperpro.com/#organization",
     "name": "Deal Shopper Pro",
     "url": "https://www.dealshopperpro.com",
     "logo": "https://www.dealshopperpro.com/thumbnail.png",
+    "inLanguage": "en",
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Customer Support",
@@ -192,7 +197,4 @@
 </footer>
 
 <!-- ✅ Bootstrap JS (deferred) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-
-</body>
-</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.
