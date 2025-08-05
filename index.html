@@ -302,19 +302,33 @@
 </div>
 <!-- STEP 4: Filter by Brand -->
 <div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingStep4">
-<button aria-controls="collapseStep4" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep4" data-bs-toggle="collapse" type="button">
+  <h2 class="accordion-header" id="headingStep4">
+    <button aria-controls="collapseStep4" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep4" data-bs-toggle="collapse" type="button">
       🏷️ ✅ Step 4: Filter by Brand
     </button>
-</h2>
-<div aria-labelledby="headingStep4" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="collapseStep4">
-<div class="accordion-body">
-<label class="form-label" for="brandFilter">Brand(s) to include</label>
-<input class="form-control" id="brandFilter" name="brand" placeholder="e.g. Nike, Samsung, Apple" type="text">
-<p class="form-text text-muted">You can enter multiple brands separated by commas.</p>
+  </h2>
+  <div aria-labelledby="headingStep4" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="collapseStep4">
+    <div class="accordion-body">
+      <label class="form-label" for="brand-include">Brand(s) to include</label>
+      <input
+        type="text"
+        class="form-control"
+        id="brand-include"
+        name="brand-include"
+        placeholder="e.g. Nike, Samsung, Apple"
+      >
+      <p class="form-text text-muted">You can enter multiple brands separated by commas.</p>
+
+      <div class="form-check mt-2">
+        <input class="form-check-input" type="checkbox" id="include-only" name="include-only">
+        <label class="form-check-label small" for="include-only">
+          Only include results from these brands
+        </label>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
+
 <!-- STEP 5: Extra Filters -->
 <div class="accordion-item border-bottom">
 <h2 class="accordion-header" id="headingStep5">
