@@ -1680,11 +1680,73 @@ input[type="checkbox"]:checked + .form-check-label {
   <p class="mt-4 text-muted">We don’t store or track your searches. We just get you to the deals.</p>
   <a href="/best-deals-today.html" class="btn btn-outline-success">✅ Show Me Today’s Best Deals</a>
 </section>
-
+<div class="text-center my-4">
+<h2 class="h5">📲 Share with Friends</h2>
+<p class="text-muted">Send this to someone who needs smarter Amazon filters:</p>
+<div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+<!-- WhatsApp -->
+<a class="btn btn-success" href="https://wa.me/?text=https://www.dealshopperpro.com" target="_blank">WhatsApp</a>
+<!-- Messenger -->
+<a class="btn btn-primary" href="fb-messenger://share?link=https://www.dealshopperpro.com" target="_blank">Messenger</a>
+<!-- SMS -->
+<a class="btn btn-secondary" href="sms:?body=Check%20out%20this%20free%20Amazon%20deal%20filter:%20https://www.dealshopperpro.com" target="_blank">Text Message</a>
+<!-- Twitter -->
+<a class="btn btn-info" href="https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here:%20https://www.dealshopperpro.com" target="_blank">Twitter / X</a>
+<!-- Facebook -->
+<a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com" target="_blank">Facebook</a>
+<!-- Copy Link -->
+<button class="btn btn-dark" data-link="https://www.dealshopperpro.com" id="copyLinkBtn2">Copy Page Link</button>
+</div>
+</div>
+<script>
+  document.getElementById("copyLinkBtn").addEventListener("click", function () {
+    const pageUrl = this.getAttribute("data-link") || window.location.href;
+    navigator.clipboard.writeText(pageUrl).then(() => {
+      this.textContent = "Copied!";
+      setTimeout(() => {
+        this.textContent = "Copy Page Link";
+      }, 2000);
+    }).catch(err => {
+      console.error("Copy failed:", err);
+      alert("Failed to copy link.");
+    });
+  });
+</script>
 <!-- Footer remains untouched -->
 </main>
-<div id="footer-placeholder"></div>
-<script defer src="/footer-loader.js"></script>
+  <!-- ——————————— SITE-WIDE FOOTER ——————————— -->
+<footer>
+<div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
+<p>
+<strong>Disclaimer:</strong>
+  Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries.<br>
+<strong>As an Amazon Associate I earn from qualifying purchases.</strong><br>
+<small>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</small>
+</p>
+<p>
+      Discover top Amazon deals with advanced filters for Lightning Deals, Prime-eligible items, in-stock products, and hidden coupons.
+    </p>
+<!-- 🔥 HOT section -->
+<p class="mb-1 fw-bold text-danger" style="font-size: 1rem;">Featured</p>
+<p class="fw-semibold" style="font-size: 1rem;">
+  🔥 <a href="https://www.dealshopperpro.com/index.html">Advanced Amazon Search Tool</a><br>
+  🔥 <a href="https://www.dealshopperpro.com/lightning-deals.html">Find Lightning Deals on Amazon</a>
+</p>
+<p>
+<a href="https://www.dealshopperpro.com/contact.html">Contact Us</a> |
+      <a href="https://www.dealshopperpro.com/about.html">About Deal Shopper Pro</a> |
+      <a href="https://www.dealshopperpro.com/help.html">Help Guide</a> |
+      <a href="https://www.dealshopperpro.com/media.html">Articles &amp; Videos</a> |
+      <a href="https://www.dealshopperpro.com/sitemap.html">Sitemap</a> |
+      <a class="text-primary fw-semibold" href="https://www.facebook.com/share/g/1C1BARo5YJ/" rel="noopener noreferrer" target="_blank">💬 Facebook Group</a> |
+      <a href="https://www.dealshopperpro.com/privacy.html">Privacy Policy</a> |
+      <a href="https://www.dealshopperpro.com/terms.html">Terms of Use</a>
+</p>
+<p>
+<strong>© 2025 Deal Shopper Pro. All rights reserved.</strong>
+</p>
+</div>
+</footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 
   <!-- Lite YouTube Embed -->
