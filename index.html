@@ -1257,9 +1257,19 @@
   <p class="text-muted mb-4">
     Find Prime-only discounts, Lightning Deals, hidden coupons, and more with a single search.
   </p>
-  <a class="btn btn-lg btn-success shadow-sm" href="#amazon-search-form" aria-label="Start your smart Amazon deal search">
-    🔎 Find Amazon Deals Now
-  </a>
+  <a class="btn btn-lg btn-success shadow-sm" href="#headingStep1" onclick="openStep1()" aria-label="Start your smart Amazon deal search">
+  🔎 Find Amazon Deals Now
+</a>
+
+<script>
+  function openStep1() {
+    const step1 = document.getElementById('collapseStep1');
+    if (!step1.classList.contains('show')) {
+      new bootstrap.Collapse(step1, { toggle: true });
+    }
+  }
+</script>
+
 </section>
 
 <!-- 💬 Social Proof -->
