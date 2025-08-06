@@ -35,8 +35,6 @@
       0 0 10px #ff0000,
       0 0 15px #b22222;
     animation: fire-glow 1.25s infinite alternate;
-
-    /* ✅ Proper centering */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -66,108 +64,109 @@
 </style>
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.2.1/src/lite-yt-embed.js"></script>
-<script defer="" src="/js/searchlogic-v2.js"></script>
+<script defer src="/js/searchlogic-v2.js"></script>
 <!-- Structured Data -->
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.dealshopperpro.com/#website",
-        "url": "https://www.dealshopperpro.com",
-        "name": "Deal Shopper Pro",
-        "description": "Advanced Amazon deal search with filters for Prime, coupons, Lightning Deals, and more.",
-        "publisher": {
-          "@id": "https://www.dealshopperpro.com/#organization"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.dealshopperpro.com/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-  "@type": "WebPage",
-  "@id": "https://www.dealshopperpro.com/#webpage",
-  "url": "https://www.dealshopperpro.com",
-  "name": "Advanced Amazon Search | Deal Shopper Pro",
-  "description": "Find the best Amazon deals using our smart 6-step filter system. Discover Prime-only offers, coupons, Lightning Deals, and more.",
-  "isPartOf": {
-    "@id": "https://www.dealshopperpro.com/#website"
-  },
-  "about": {
-    "@id": "https://www.dealshopperpro.com/#software"
-  },
-  "breadcrumb": {
-    "@id": "https://www.dealshopperpro.com/#breadcrumb"
-  },
-  "mainEntityOfPage": {
-    "@id": "https://www.dealshopperpro.com/"
-  },
-  "dateModified": "2025-08-04",
-  "hasPart": [
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@id": "https://www.dealshopperpro.com/#software"
+      "@type": "WebSite",
+      "@id": "https://www.dealshopperpro.com/#website",
+      "url": "https://www.dealshopperpro.com",
+      "name": "Deal Shopper Pro",
+      "description": "Advanced Amazon deal search with filters for Prime, coupons, Lightning Deals, and more.",
+      "publisher": {
+        "@id": "https://www.dealshopperpro.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.dealshopperpro.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     },
     {
-      "@type": "FAQPage",
-      "url": "https://www.dealshopperpro.com/"
+      "@type": "WebPage",
+      "@id": "https://www.dealshopperpro.com/#webpage",
+      "url": "https://www.dealshopperpro.com",
+      "name": "Advanced Amazon Search | Deal Shopper Pro",
+      "description": "Find the best Amazon deals using our smart 6-step filter system. Discover Prime-only offers, coupons, Lightning Deals, and more.",
+      "isPartOf": {
+        "@id": "https://www.dealshopperpro.com/#website"
+      },
+      "about": {
+        "@id": "https://www.dealshopperpro.com/#software"
+      },
+      "breadcrumb": {
+        "@id": "https://www.dealshopperpro.com/#breadcrumb"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://www.dealshopperpro.com/"
+      },
+      "dateModified": "2025-08-04",
+      "hasPart": [
+        {
+          "@id": "https://www.dealshopperpro.com/#software"
+        },
+        {
+          "@type": "FAQPage",
+          "url": "https://www.dealshopperpro.com/"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dealshopperpro.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dealshopperpro.com/"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.dealshopperpro.com/#software",
+      "name": "Deal Shopper Pro",
+      "operatingSystem": "All",
+      "applicationCategory": "ShoppingApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Web-based Amazon search tool with smart filters for Prime, coupons, and Lightning Deals.",
+      "license": "https://www.dealshopperpro.com/terms.html",
+      "termsOfService": "https://www.dealshopperpro.com/terms.html"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.dealshopperpro.com/#organization",
+      "name": "Deal Shopper Pro",
+      "url": "https://www.dealshopperpro.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.dealshopperpro.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.facebook.com/share/g/1C1BARo5YJ/",
+        "https://www.pinterest.com/dealshopperpro/",
+        "https://dealshopperpro.medium.com/",
+        "https://dealshopperpro.blogspot.com/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "url": "https://www.dealshopperpro.com/help.html"
+      }
     }
   ]
-},
+}
+</script>
 
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.dealshopperpro.com/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.dealshopperpro.com/"
-          }
-        ]
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://www.dealshopperpro.com/#software",
-        "name": "Deal Shopper Pro",
-        "operatingSystem": "All",
-        "applicationCategory": "ShoppingApplication",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "description": "Web-based Amazon search tool with smart filters for Prime, coupons, and Lightning Deals.",
-        "license": "https://www.dealshopperpro.com/terms.html",
-        "termsOfService": "https://www.dealshopperpro.com/terms.html"
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://www.dealshopperpro.com/#organization",
-        "name": "Deal Shopper Pro",
-        "url": "https://www.dealshopperpro.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.dealshopperpro.com/logo.png"
-        },
-        "sameAs": [
-          "https://www.facebook.com/share/g/1C1BARo5YJ/",
-          "https://www.pinterest.com/dealshopperpro/",
-          "https://dealshopperpro.medium.com/",
-          "https://dealshopperpro.blogspot.com/"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "Customer Support",
-          "url": "https://www.dealshopperpro.com/help.html"
-        }
-      }
-    ]
-  }
-  </script>
+<!-- Merged and optimized FAQPage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -175,32 +174,49 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How do I find Prime-only deals on Amazon fast?",
+      "name": "What is Deal Shopper Pro?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use the “Extra Filters” step and check the “Prime Only” box to instantly find Prime-eligible products."
+        "text": "Deal Shopper Pro is a free Amazon deal search tool that helps you filter by price, rating, Prime, coupons, and more."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I combine multiple filters like rating, brand, and coupons?",
+      "name": "How do I find Prime‑only deals on Amazon fast?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — the 6-step system lets you combine as many filters as you want, including rating, brand, price range, coupons, and more."
+        "text": "Use the ‘Extra Filters’ section and check the ‘Prime Only’ box. Then submit your search to open Prime‑eligible deals directly on Amazon."
       }
     },
     {
       "@type": "Question",
-      "name": "Will this work on mobile and desktop?",
+      "name": "Can I search by price range, rating, and brand all at once?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — Deal Shopper Pro works on all devices with a mobile-friendly, responsive layout."
+        "text": "Yes. Use the 6‑step guided search form to combine multiple filters including price, brand, ratings, and special deals like Lightning Deals or coupons."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this site show hidden deals or coupons?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our advanced filters can reveal hidden discounts like coupons, Lightning Deals, Subscribe & Save deals, and limited‑time offers that don’t show up in standard Amazon searches."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Deal Shopper Pro affiliated with Amazon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Deal Shopper Pro is an independent site that uses the Amazon Associates API to help users find products more efficiently. We are not affiliated with or endorsed by Amazon."
       }
     }
   ]
 }
 </script>
 </head>
+
 <body>
 <main>
 <div id="navbar-placeholder"></div>
