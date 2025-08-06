@@ -242,39 +242,46 @@
 <div data-bs-toggle="tooltip" title="AI-Enhanced Filters"><i class="bi bi-cpu text-warning"></i></div>
 </div>
 <!-- 📺 Demo: How to Filter Lightning Deals on Amazon in 30 Seconds -->
-<div class="container mb-5">
-<h2 class="fw-bold text-center mb-3">🎥 Watch: How to Filter Lightning Deals on Amazon in 30 Seconds</h2>
-<div class="ratio ratio-16x9">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube.com/embed/wpj1l1XUunw" style="border: none;" title="How to Filter Lightning Deals on Amazon in 30 Seconds">
-</iframe>
-</div>
-<p class="text-muted small text-center mt-2">
+<section class="container mb-5 text-center">
+  <h2 class="fw-bold text-center mb-3">🎥 Watch: How to Filter Lightning Deals on Amazon in 30 Seconds</h2>
+  <div class="ratio ratio-16x9">
+    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+            src="https://www.youtube.com/embed/wpj1l1XUunw"
+            style="border: none;"
+            title="How to Filter Lightning Deals on Amazon in 30 Seconds">
+    </iframe>
+  </div>
+  <p class="text-muted small text-center mt-2">
     This quick demo shows how to instantly find Lightning Deals using Deal Shopper Pro.
     <br>
-<em>Deal Shopper Pro is an independent tool and is not affiliated with Amazon.</em>
-</p>
-</div>
-<!-- Attribution Note -->
-<p class="text-muted small mt-4">
+    <em>Deal Shopper Pro is an independent tool and is not affiliated with Amazon.</em>
+  </p>
+  <p class="text-muted small mt-4">
     🤖 Built with help from <strong>ChatGPT</strong> — Free to use, no Amazon affiliation.
   </p>
 </section>
-<!-- 🛍️ 6-Step Deal Finder Headline -->
-<div class="container text-center mb-4 mt-4">
-<h2 class="h5 fw-bold">🛍️ Find the Best Amazon Deals in 6 Easy Steps</h2>
-<p class="text-muted mb-2">
+
+<!-- ✅ Accordion Section -->
+<section class="container my-5 text-center">
+  <h2 class="h5 fw-bold mb-2">📦 Find the Best Amazon Deals in 6 Easy Steps</h2>
+  <p class="text-muted small mb-4">
     Use as many filters as you like — Prime, Lightning Deals, brand, rating, coupons, and more — to uncover exactly what you want.
   </p>
-</div>
-<!-- Step 1 -->
-<div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingStep1">
-<button aria-controls="collapseStep1" aria-expanded="false" class="accordion-button bg-white text-dark fw-bold collapsed" data-bs-target="#collapseStep1" data-bs-toggle="collapse" type="button">
-            🔍 ✅ Step 1: Start Your Product Search
-          </button>
-</h2>
-<div aria-labelledby="headingStep1" class="accordion-collapse collapse show" data-bs-parent="#filterAccordion" id="collapseStep1">
-<div class="accordion-body">
+
+  <div class="accordion mx-auto" id="searchAccordion" style="max-width: 900px;">
+    
+    <!-- ✅ Step 1 Accordion -->
+    <div class="accordion-item border-bottom">
+      <h2 class="accordion-header" id="headingStep1">
+        <button class="accordion-button bg-white fw-bold" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseStep1" aria-expanded="true" aria-controls="collapseStep1">
+          🔍 ✅ Step 1: Start Your Product Search
+        </button>
+      </h2>
+      <div id="collapseStep1" class="accordion-collapse collapse show" aria-labelledby="headingStep1" data-bs-parent="#searchAccordion">
+        <div class="accordion-body">
 <div class="input-group">
 <span class="input-group-text">🔎</span>
 <input aria-label="Search products" class="form-control" id="mainSearchInput" name="q" placeholder="Search Amazon: ASIN, ISBN, UPC, or keyword" type="text">
