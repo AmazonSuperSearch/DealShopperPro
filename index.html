@@ -1194,57 +1194,63 @@
 </div>
 <!-- ✅ Redundant CTA BELOW, also INSIDE form -->
 <div class="text-center my-4">
-<button class="btn btn-success fw-bold" type="submit">
-      🔎 Search Amazon Now
-    </button>
+  <button class="btn btn-success fw-bold" type="submit" aria-label="Search Amazon Deals Now">
+    🔎 Search Amazon Now
+  </button>
 </div>
 </div>
 </div>
 </form>
+
 <!-- 🚫 Amazon Search Problems — Solved -->
 <section class="container my-5">
-<h2 class="text-center fw-bold mb-4">
+  <h2 class="text-center fw-bold mb-4 text-danger-emphasis">
     ❌ Why Amazon Filters Fail — And What You Can Do Instead
   </h2>
-<div class="row g-4">
-<!-- Problem 1 -->
-<div class="col-md-4">
-<div class="card h-100 shadow-sm border-danger-subtle">
-<div class="card-body">
-<h5 class="card-title text-danger">Amazon filters don’t work right</h5>
-<p class="text-muted small mb-2">They often show sponsored or irrelevant results, wasting your time.</p>
-<hr>
-<h6 class="text-success fw-bold mb-1">✅ Your Solution:</h6>
-<p class="mb-0">Use precision filters for Prime-only, in-stock, discounted, or coupon-backed items — instantly.</p>
-</div>
-</div>
-</div>
-<!-- Problem 2 -->
-<div class="col-md-4">
-<div class="card h-100 shadow-sm border-warning-subtle">
-<div class="card-body">
-<h5 class="card-title text-warning">You miss deals before they expire</h5>
-<p class="text-muted small mb-2">Lightning Deals, BOGO offers, and coupons disappear before you find them.</p>
-<hr>
-<h6 class="text-success fw-bold mb-1">✅ Your Solution:</h6>
-<p class="mb-0">Spot live, time-sensitive deals faster — no need to refresh Amazon pages manually.</p>
-</div>
-</div>
-</div>
-<!-- Problem 3 -->
-<div class="col-md-4">
-<div class="card h-100 shadow-sm border-info-subtle">
-<div class="card-body">
-<h5 class="card-title text-primary">It’s hard to find exactly what you want</h5>
-<p class="text-muted small mb-2">You can’t combine filters like Prime, brand, coupon, and rating in Amazon search.</p>
-<hr>
-<h6 class="text-success fw-bold mb-1">✅ Your Solution:</h6>
-<p class="mb-0">Our guided form lets you stack advanced filters for hyper-specific results — in seconds.</p>
-</div>
-</div>
-</div>
-</div>
+  <div class="row g-4">
+
+    <!-- Problem 1 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-danger-subtle">
+        <div class="card-body">
+          <h5 class="card-title text-danger">Amazon filters don’t work right</h5>
+          <p class="text-muted small mb-2">They often show sponsored or irrelevant results, wasting your time.</p>
+          <hr>
+          <h6 class="text-success fw-bold mb-1">✅ Your Solution:</h6>
+          <p class="mb-0">Use precision filters for Prime-only, in-stock, discounted, or coupon-backed items — instantly.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Problem 2 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-warning-subtle">
+        <div class="card-body">
+          <h5 class="card-title text-warning">You miss deals before they expire</h5>
+          <p class="text-muted small mb-2">Lightning Deals, BOGO offers, and coupons disappear before you find them.</p>
+          <hr>
+          <h6 class="text-success fw-bold mb-1">✅ Your Solution:</h6>
+          <p class="mb-0">Spot live, time-sensitive deals faster — no need to refresh Amazon pages manually.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Problem 3 -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-info-subtle">
+        <div class="card-body">
+          <h5 class="card-title text-primary">It’s hard to find exactly what you want</h5>
+          <p class="text-muted small mb-2">You can’t combine filters like Prime, brand, coupon, and rating in Amazon search.</p>
+          <hr>
+          <h6 class="text-success fw-bold mb-1">✅ Your Solution:</h6>
+          <p class="mb-0">Our guided form lets you stack advanced filters for hyper-specific results — in seconds.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
+
 <!-- 📢 Call to Action: Smart Search -->
 <section class="container my-5 text-center">
   <h2 class="fw-bold mb-3">🎯 Find Amazon Deals Faster — Filter by Prime, Coupons & More</h2>
@@ -1292,16 +1298,31 @@
 </section>
 <!-- 🎥 Demo Promo Fallback -->
 <section class="container text-center my-5">
-<h2 class="h5 fw-bold mb-4">🎥 Watch How It Works</h2>
-<div class="d-flex justify-content-center">
-<div class="ratio ratio-16x9" style="max-width: 720px; width: 100%;">
-<iframe allowfullscreen="" loading="lazy" src="https://www.youtube.com/embed/7XayFBHsFsI" style="width: 100%; height: 100%; border: none; border-radius: 8px;" title="Amazon Deal Filter Demo"></iframe>
-</div>
-</div>
-<p class="mt-3">
-<a class="btn btn-outline-primary" href="/media.html" role="button">📺 More Demos</a>
-</p>
+  <h2 class="h5 fw-bold text-center mb-3">
+    <i class="bi bi-play-circle"></i> Watch How It Works
+  </h2>
+  <p class="text-muted small mb-4">
+    See how to filter Amazon deals by <strong>Prime</strong>, <strong>coupons</strong>, <strong>rating</strong>, and more — in seconds.
+  </p>
+  <div class="d-flex justify-content-center">
+    <div class="ratio ratio-16x9" style="max-width: 720px; width: 100%;">
+      <iframe
+        allowfullscreen
+        loading="lazy"
+        src="https://www.youtube.com/embed/7XayFBHsFsI"
+        style="width: 100%; height: 100%; border: none; border-radius: 8px;"
+        title="Amazon Deal Filter Demo"
+      ></iframe>
+    </div>
+  </div>
+  <p class="mt-3">
+    <a class="btn btn-outline-primary" href="/media.html" role="button">📺 More Demos</a>
+  </p>
+  <p class="text-muted small mt-2">
+    ⚡ Deal Shopper Pro is not affiliated with Amazon. Demo shown for educational purposes.
+  </p>
 </section>
+
 <!-- 📢 Exit CTA -->
 <section class="container text-center my-5 p-4 bg-light border rounded shadow-sm">
 <h2 class="fw-bold mb-4">🚪 Don’t Leave Without Trying This</h2>
