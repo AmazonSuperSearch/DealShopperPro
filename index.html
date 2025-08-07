@@ -53,6 +53,30 @@
 }
 
 </style>
+ <style>
+[data-tooltip] {
+  position: relative;
+  cursor: help;
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%;
+  left: 0;
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+[data-tooltip]:hover::after {
+  opacity: 1;
+}
+</style>
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.2.1/src/lite-yt-embed.js"></script>
 <script defer src="/js/searchlogic-v2.js"></script>
@@ -337,70 +361,88 @@
 </div>
 </div>
 </div>
-<!-- STEP 3: Sort, Rating & Discount -->
+<!-- ✅ Accordion Section: Deals & Discounts -->
 <div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingStep3">
-<button aria-controls="collapseStep3" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep3" data-bs-toggle="collapse" type="button">
-      🎯 ✅ Step 3: Sort, Rating &amp; Discount Filters
+  <h2 class="accordion-header" id="headingaccordionGroup2">
+    <button aria-controls="accordionGroup2" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup2" data-bs-toggle="collapse" type="button">
+      🎯🔥 Deals & Discounts
     </button>
-</h2>
-<div aria-labelledby="headingStep3" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="collapseStep3">
-<div class="accordion-body">
-<div class="row g-3">
-<div class="col-md-4">
-<label class="form-label" for="sortOrder">Sort Results</label>
-<select class="form-select" id="sortOrder" name="sort">
-<option value="relevance">Relevance</option>
-<option value="price-asc-rank">Price: Low to High</option>
-<option value="price-desc-rank">Price: High to Low</option>
-<option value="review-rank">Customer Reviews</option>
-<option value="date-desc-rank">Newest Arrivals</option>
-</select>
+  </h2>
+  <div aria-labelledby="headingaccordionGroup2" class="accordion-collapse collapse" id="accordionGroup2">
+    <div class="accordion-body">
+      <fieldset>
+        <legend class="h6">🎯🔥 Deals & Discounts</legend>
+        <div class="px-3 py-2 text-end small text-muted">
+          <button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup2', false)" type="button">
+            Clear All
+          </button>
+          <button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup2', true)" type="button">
+            Select All
+          </button>
+        </div>
+        <div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
+          <input aria-label="Filter Amazon Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox">
+          <label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label>
+        </div>
+        <div class="form-check" data-tooltip="🔥🏷️ Filter Amazon for deals with clippable coupons at checkout.">
+          <input aria-label="Amazon coupon deals" class="form-check-input" id="coupons" name="coupons" type="checkbox">
+          <label class="form-check-label" for="coupons">🏷️ Coupons</label>
+        </div>
+        <div class="form-check" data-tooltip="Clearance items from the Amazon Outlet section.">
+          <input aria-label="Amazon Outlet Deals" class="form-check-input" id="outletDeals" name="outlet-deals" type="checkbox">
+          <label class="form-check-label" for="outletDeals">🛍️ Amazon Outlet Deals</label>
+        </div>
+        <div class="form-check" data-tooltip="Find top-selling items with discounts.">
+          <input aria-label="Best Seller Deals" class="form-check-input" id="bestSellerDeals" name="best-seller-deals" type="checkbox">
+          <label class="form-check-label" for="bestSellerDeals">🥇 Best Seller Deals</label>
+        </div>
+        <div class="form-check" data-tooltip="Extra-discounted clearance or overstock items.">
+          <input aria-label="Clearance Deals" class="form-check-input" id="clearanceDeals" name="clearance-deals" type="checkbox">
+          <label class="form-check-label" for="clearanceDeals">🛒 Clearance Deals</label>
+        </div>
+        <div class="form-check" data-tooltip="Deals with short time limits or countdowns.">
+          <input aria-label="Limited-Time Deals" class="form-check-input" id="limitedTimeDeals" name="limited-time-deals" type="checkbox">
+          <label class="form-check-label" for="limitedTimeDeals">💥 Limited-Time Deals</label>
+        </div>
+        <div class="form-check" data-tooltip="Deals that are about to expire.">
+          <input aria-label="Ends Soon Deals" class="form-check-input" id="endsSoonDeals" name="ends-soon-deals" type="checkbox">
+          <label class="form-check-label" for="endsSoonDeals">⏱️ Ends Soon</label>
+        </div>
+        <div class="form-check" data-tooltip="Great deals under $25.">
+          <input aria-label="Under $25 Deals" class="form-check-input" id="under25Deals" name="under-25-deals" type="checkbox">
+          <label class="form-check-label" for="under25Deals">🪙 Under $25 Deals</label>
+        </div>
+      </fieldset>
+    </div>
+  </div>
 </div>
-<div class="col-md-4">
-<label class="form-label" for="minRating">Minimum Rating</label>
-<select class="form-select" id="minRating" name="min-rating">
-<option value="">Any</option>
-<option value="4">4 stars &amp; up</option>
-<option value="3">3 stars &amp; up</option>
-<option value="2">2 stars &amp; up</option>
-</select>
-</div>
-<div class="col-md-4">
-<label class="form-label" for="minDiscount">Minimum Discount</label>
-<select class="form-select" id="minDiscount" name="min-discount">
-<option value="">Any</option>
-<option value="5">5%+</option>
-<option value="10">10%+</option>
-<option value="25">25%+</option>
-<option value="50">50%+</option>
-</select>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- STEP 4: Filter by Brand -->
+
+<!-- ✅ STEP 4: Filter by Brand -->
 <div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingStep4">
-<button aria-controls="collapseStep4" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep4" data-bs-toggle="collapse" type="button">
+  <h2 class="accordion-header" id="headingStep4">
+    <button aria-controls="collapseStep4" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep4" data-bs-toggle="collapse" type="button">
       🏷️ ✅ Step 4: Filter by Brand
     </button>
-</h2>
-<div aria-labelledby="headingStep4" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="collapseStep4">
-<div class="accordion-body">
-<label class="form-label" for="brand-include">Brand(s) to include</label>
-<input class="form-control" id="brand-include" name="brand-include" placeholder="e.g. Nike, Samsung, Apple" type="text">
-<p class="form-text text-muted">You can enter multiple brands separated by commas.</p>
-<div class="form-check mt-2">
-<input class="form-check-input" id="include-only" name="include-only" type="checkbox">
-<label class="form-check-label small" for="include-only">
-          Only include results from these brands
-        </label>
+  </h2>
+  <div id="collapseStep4" class="accordion-collapse collapse" aria-labelledby="headingStep4" data-bs-parent="#filterAccordion">
+    <div class="accordion-body">
+      <fieldset>
+        <legend class="h6">🏷️ Filter by Brand</legend>
+        <label class="form-label" for="brand-include">Brand(s) to include</label>
+        <input class="form-control" id="brand-include" name="brand-include" placeholder="e.g. Nike, Samsung, Apple" type="text">
+        <p class="form-text text-muted">You can enter multiple brands separated by commas.</p>
+        <div class="form-check mt-2">
+          <input class="form-check-input" id="include-only" name="include-only" type="checkbox">
+          <label class="form-check-label small" for="include-only">
+            Only include results from these brands
+          </label>
+        </div>
+      </fieldset>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
+
+
 <!-- STEP 5: Extra Filters -->
 <div class="accordion-item border-bottom">
 <h2 class="accordion-header" id="headingStep5">
