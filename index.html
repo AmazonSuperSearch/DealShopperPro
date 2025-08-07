@@ -466,132 +466,110 @@
 </div>
 </div>
 <div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingaccordionGroup2">
-<button aria-controls="accordionGroup2" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup2" data-bs-toggle="collapse" type="button">
+  <h2 class="accordion-header" id="headingaccordionGroup2">
+    <button class="accordion-button collapsed sticky-top bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGroup2" aria-expanded="false" aria-controls="accordionGroup2">
       🎯🔥 Deals &amp; Discounts
-     </button>
-</h2>
-<div aria-labelledby="headingaccordionGroup2" class="accordion-collapse collapse" id="accordionGroup2">
-<div class="accordion-body">
-<div class="px-3 py-2 text-end small text-muted">
-<button class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup2', false)" type="button">
-        Clear All
-       </button>
-<button class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup2', true)" type="button">
-        Select All
-       </button>
-</div>
-<!-- Filter checkboxes -->
-<div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
-<input aria-label="Filter Amazon Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox">
-<label class="form-check-label" for="lightningDeals">
-         ⚡ Lightning Deals
-        </label>
-</div>
-<div class="form-check" data-tooltip="View Amazon's Today's Deals page.">
-<input aria-label="Today's Deals" class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox">
-<label class="form-check-label" for="todaysDeals">
-         🔥 Today's Deals
-        </label>
-</div>
-<div class="form-check" data-tooltip="🔥🏷️ Filter Amazon for deals with clippable coupons at checkout.">
-<input aria-label="Amazon coupon deals" class="form-check-input" id="coupons" name="coupons" type="checkbox">
-<label class="form-check-label" for="coupons">
-         🏷️ Coupons
-        </label>
-</div>
-</div>
-<div class="form-check" data-tooltip="Clearance items from the Amazon Outlet section.">
-<input aria-label="Amazon Outlet Deals" class="form-check-input" id="outletDeals" name="outlet-deals" type="checkbox">
-<label class="form-check-label" for="outletDeals">
-         🛍️ Amazon Outlet Deals
-        </label>
-</div>
-<div class="form-check" data-tooltip="Find top-selling items with discounts.">
-<input aria-label="Best Seller Deals" class="form-check-input" id="bestSellerDeals" name="best-seller-deals" type="checkbox">
-<label class="form-check-label" for="bestSellerDeals">
-         🥇 Best Seller Deals
-        </label>
-</div>
-<div class="form-check" data-tooltip="Promos like buy one get one free.">
-<input aria-label="Buy One Get One" class="form-check-input" id="bogoDeals" name="bogo-deals" type="checkbox">
-<label class="form-check-label" for="bogoDeals">
-         🎫 Buy One Get One (BOGO)
-        </label>
-</div>
-<div class="form-check" data-tooltip="Extra-discounted clearance or overstock items.">
-<input aria-label="Clearance Deals" class="form-check-input" id="clearanceDeals" name="clearance-deals" type="checkbox">
-<label class="form-check-label" for="clearanceDeals">
-         🛒 Clearance Deals
-        </label>
-</div>
-<div class="form-check" data-tooltip="Deals with short time limits or countdowns.">
-<input aria-label="Limited-Time Deals" class="form-check-input" id="limitedTimeDeals" name="limited-time-deals" type="checkbox">
-<label class="form-check-label" for="limitedTimeDeals">
-        💥 Limited-Time Deals
-       </label>
-</div>
-<div class="form-check" data-tooltip="Deals that are about to expire.">
-<input aria-label="Ends Soon Deals" class="form-check-input" id="endsSoonDeals" name="ends-soon-deals" type="checkbox">
-<label class="form-check-label" for="endsSoonDeals">
-        ⏱️ Ends Soon
-       </label>
-</div>
-<div class="form-check" data-tooltip="Great deals under $25.">
-<input aria-label="Under $25 Deals" class="form-check-input" id="under25Deals" name="under-25-deals" type="checkbox">
-<label class="form-check-label" for="under25Deals">
-        🪙 Under $25 Deals
-       </label>
-</div>
-<div class="form-check" data-tooltip="Coupons that are about to expire.">
-<input aria-label="Expiring Coupons" class="form-check-input" id="expiringCoupons" name="expiring-coupons" type="checkbox">
-<label class="form-check-label" for="expiringCoupons">
-        🛑 Expiring Coupons
-       </label>
-</div>
-<div class="form-check" data-tooltip="Products sold under Amazon-owned brand names.">
-<input aria-label="Amazon Brands" class="form-check-input" id="amazon-brands" name="amazon-brands" type="checkbox">
-<label class="form-check-label" for="amazon-brands">
-        🏷️ Amazon Brands
-       </label>
-</div>
-<div class="form-check" data-tooltip="Find the lowest recorded price on items.">
-<input aria-label="Lowest Price" class="form-check-input" id="lowestPrice" name="lowest-price" type="checkbox">
-<label class="form-check-label" for="lowestPrice">
-        📉 Lowest Price
-       </label>
-</div>
-</div>
-<div class="form-check" data-tooltip="Short-term deals that expire quickly.">
-<input aria-label="Flash Sales" class="form-check-input" id="flashSales" name="flash-sales" type="checkbox">
-<label class="form-check-label" for="flashSales">
-        ⚡ Flash Sales
-       </label>
-</div>
-<div class="form-check" data-tooltip="Deals currently trending or gaining popularity.">
-<input aria-label="Trending Deals" class="form-check-input" id="trendingDeals" name="trending-deals" type="checkbox">
-<label class="form-check-label" for="trendingDeals">
-        📊 Trending Deals
-       </label>
-</div>
-<div class="form-check" data-tooltip="Items added to Amazon’s deal feed within the last 24 hours.">
-<input aria-label="New Deals Today" class="form-check-input" id="newDealsToday" name="new-deals-today" type="checkbox">
-<label class="form-check-label" for="newDealsToday">
-        🆕 New Deals Today
-       </label>
-</div>
-<div class="form-check" data-tooltip="Used or returned items with discounts.">
-<input aria-label="Open Box Deals" class="form-check-input" id="openBoxDeals" name="open-box-deals" type="checkbox">
-<label class="form-check-label" for="openBoxDeals">
-        📦 Open Box Deals
-       </label>
-</div>
-<div class="form-check" data-tooltip="Items recently restocked and discounted.">
-<input aria-label="Back in Stock Deals" class="form-check-input" id="backInStockDeals" name="back-in-stock-deals" type="checkbox">
-<label class="form-check-label" for="backInStockDeals">
-        📦 Back in Stock Deals
-       </label>
-</div>
+    </button>
+  </h2>
+  <div id="accordionGroup2" class="accordion-collapse collapse" aria-labelledby="headingaccordionGroup2">
+    <div class="accordion-body">
+
+      <!-- Clear/Select Buttons -->
+      <div class="px-3 py-2 text-end small text-muted">
+        <button type="button" class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup2', false)">Clear All</button>
+        <button type="button" class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup2', true)">Select All</button>
+      </div>
+
+      <!-- ✅ All Checkboxes Below -->
+      <div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
+        <input class="form-check-input" type="checkbox" id="lightningDeals" name="lightning-deals" aria-label="Filter Amazon Lightning Deals">
+        <label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label>
+      </div>
+
+      <div class="form-check" data-tooltip="View Amazon's Today's Deals page.">
+        <input class="form-check-input" type="checkbox" id="todaysDeals" name="todays-deals" aria-label="Today's Deals">
+        <label class="form-check-label" for="todaysDeals">🔥 Today's Deals</label>
+      </div>
+
+      <div class="form-check" data-tooltip="🔥🏷️ Filter Amazon for deals with clippable coupons at checkout.">
+        <input class="form-check-input" type="checkbox" id="coupons" name="coupons" aria-label="Amazon coupon deals">
+        <label class="form-check-label" for="coupons">🏷️ Coupons</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Clearance items from the Amazon Outlet section.">
+        <input class="form-check-input" type="checkbox" id="outletDeals" name="outlet-deals" aria-label="Amazon Outlet Deals">
+        <label class="form-check-label" for="outletDeals">🛍️ Amazon Outlet Deals</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Find top-selling items with discounts.">
+        <input class="form-check-input" type="checkbox" id="bestSellerDeals" name="best-seller-deals" aria-label="Best Seller Deals">
+        <label class="form-check-label" for="bestSellerDeals">🥇 Best Seller Deals</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Promos like buy one get one free.">
+        <input class="form-check-input" type="checkbox" id="bogoDeals" name="bogo-deals" aria-label="Buy One Get One">
+        <label class="form-check-label" for="bogoDeals">🎫 Buy One Get One (BOGO)</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Extra-discounted clearance or overstock items.">
+        <input class="form-check-input" type="checkbox" id="clearanceDeals" name="clearance-deals" aria-label="Clearance Deals">
+        <label class="form-check-label" for="clearanceDeals">🛒 Clearance Deals</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Deals with short time limits or countdowns.">
+        <input class="form-check-input" type="checkbox" id="limitedTimeDeals" name="limited-time-deals" aria-label="Limited-Time Deals">
+        <label class="form-check-label" for="limitedTimeDeals">💥 Limited-Time Deals</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Deals that are about to expire.">
+        <input class="form-check-input" type="checkbox" id="endsSoonDeals" name="ends-soon-deals" aria-label="Ends Soon Deals">
+        <label class="form-check-label" for="endsSoonDeals">⏱️ Ends Soon</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Great deals under $25.">
+        <input class="form-check-input" type="checkbox" id="under25Deals" name="under-25-deals" aria-label="Under $25 Deals">
+        <label class="form-check-label" for="under25Deals">🪙 Under $25 Deals</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Coupons that are about to expire.">
+        <input class="form-check-input" type="checkbox" id="expiringCoupons" name="expiring-coupons" aria-label="Expiring Coupons">
+        <label class="form-check-label" for="expiringCoupons">🛑 Expiring Coupons</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Products sold under Amazon-owned brand names.">
+        <input class="form-check-input" type="checkbox" id="amazon-brands" name="amazon-brands" aria-label="Amazon Brands">
+        <label class="form-check-label" for="amazon-brands">🏷️ Amazon Brands</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Find the lowest recorded price on items.">
+        <input class="form-check-input" type="checkbox" id="lowestPrice" name="lowest-price" aria-label="Lowest Price">
+        <label class="form-check-label" for="lowestPrice">📉 Lowest Price</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Short-term deals that expire quickly.">
+        <input class="form-check-input" type="checkbox" id="flashSales" name="flash-sales" aria-label="Flash Sales">
+        <label class="form-check-label" for="flashSales">⚡ Flash Sales</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Deals currently trending or gaining popularity.">
+        <input class="form-check-input" type="checkbox" id="trendingDeals" name="trending-deals" aria-label="Trending Deals">
+        <label class="form-check-label" for="trendingDeals">📊 Trending Deals</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Items added to Amazon’s deal feed within the last 24 hours.">
+        <input class="form-check-input" type="checkbox" id="newDealsToday" name="new-deals-today" aria-label="New Deals Today">
+        <label class="form-check-label" for="newDealsToday">🆕 New Deals Today</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Used or returned items with discounts.">
+        <input class="form-check-input" type="checkbox" id="openBoxDeals" name="open-box-deals" aria-label="Open Box Deals">
+        <label class="form-check-label" for="openBoxDeals">📦 Open Box Deals</label>
+      </div>
+
+      <div class="form-check" data-tooltip="Items recently restocked and discounted.">
+        <input class="form-check-input" type="checkbox" id="backInStockDeals" name="back-in-stock-deals" aria-label="Back in Stock Deals">
+        <label class="form-check-label" for="backInStockDeals">📦 Back in Stock Deals</label>
+      </div>
 </div>
 </div>
 </div>
