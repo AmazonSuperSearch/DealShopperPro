@@ -103,7 +103,38 @@
     📧 <a href="mailto:drdizzle613@proton.me">drdizzle613@proton.me</a><br>
     📍 Grew up in Pennsylvania (Birth–2011) → Fort Myers Beach, FL (2011–2023) → Rebuilding in Pennsylvania (2023–Present)</p>
   </main>
-
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const copyBtn = document.getElementById("copyLinkBtn");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", function () {
+        const link = copyBtn.getAttribute("data-link");
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(link).then(() => {
+            copyBtn.innerText = "✅ Link Copied!";
+            setTimeout(() => {
+              copyBtn.innerText = "Copy Page Link";
+            }, 2000);
+          });
+        } else {
+          const textArea = document.createElement("textarea");
+          textArea.value = link;
+          textArea.style.position = "fixed";
+          textArea.style.left = "-999999px";
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          document.execCommand("copy");
+          textArea.remove();
+          copyBtn.innerText = "✅ Link Copied!";
+          setTimeout(() => {
+            copyBtn.innerText = "Copy Page Link";
+          }, 2000);
+        }
+      });
+    }
+  });
+</script>
   <div id="footer-placeholder"></div>
   <script src="/footer-loader.js" defer></script>
 </body>
