@@ -61,6 +61,14 @@ keywordAppend('multi-pack-savings',       'multi-pack savings');
 keywordAppend('limited-quantity-deals',   'limited quantity deal');
 keywordAppend('extra-discount-codes',     'extra discount code');
     keywordAppend('cruelty-free', 'cruelty free');
+    keywordAppend('recyclable-packaging', 'recyclable packaging');
+    keywordAppend('plastic-free', 'plastic free');
+keywordAppend('minimal-packaging', 'minimal packaging');
+    keywordAppend('no-microplastics', 'no microplastics');
+    keywordAppend('made-in-usa', 'made in USA');
+
+
+
 
 
 
@@ -117,7 +125,7 @@ keywordAppend('extra-discount-codes',     'extra discount code');
   'no-microplastics': 'p_n_feature_four_browse-bin:24040811011',
      'under-25': 'p_36:-2500',
      'biodegradable': 'p_n_feature_twenty_browse-bin:12741577011',
-
+'fair-trade': 'p_n_feature_seven_browse-bin:21246940011',
 };
 
 
@@ -162,6 +170,7 @@ keywordAppend('extra-discount-codes',     'extra discount code');
     window.open(url, '_blank');
   });
 });
+
 
 
 
