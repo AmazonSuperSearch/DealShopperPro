@@ -60,6 +60,7 @@ keywordAppend('sample-size',              'sample size');
 keywordAppend('multi-pack-savings',       'multi-pack savings');
 keywordAppend('limited-quantity-deals',   'limited quantity deal');
 keywordAppend('extra-discount-codes',     'extra discount code');
+    keywordAppend('cruelty-free', 'cruelty free');
 
 
 
@@ -161,6 +162,7 @@ keywordAppend('extra-discount-codes',     'extra discount code');
     window.open(url, '_blank');
   });
 });
+
 
 
 
