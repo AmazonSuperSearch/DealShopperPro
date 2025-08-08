@@ -1,129 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="index, follow">
-  <title>I Lost Everything — Then Built a Free Tool to Help Millions Shop Smarter on Amazon | Deal Shopper Pro</title>
-  <meta name="description" content="Duane Romualdo lost everything to Hurricane Ian, survived a sophisticated cyberattack, and rebuilt his life by creating DealShopperPro.com — a free AI-assisted Amazon deal finder. This is his story.">
+  <title>I Lost Everything—Then Built a Free Tool to Help Millions Shop Smarter on Amazon</title>
+  <meta name="description" content="After surviving a coma and Hurricane Ian, I used AI to build DealShopperPro.com with no budget. Read my full story.">
   <link rel="canonical" href="https://www.dealshopperpro.com/my-story.html">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
-  <meta name="theme-color" content="#ffffff">
+  <!-- Favicon -->
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png">
+<link href="/favicon-64x64.png" rel="icon" sizes="64x64" type="image/png">
+<link href="/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/favicon-512x512.png" rel="icon" sizes="512x512" type="image/png">
+<link href="/favicon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/site.webmanifest" rel="manifest">
+ <!-- 🔁 Replace with this enhanced Open Graph + Twitter metadata -->
+<meta property="og:title" content="I Lost Everything — Then Built DealShopperPro.com with AI" />
+<meta property="og:description" content="From coma and catastrophe to coding a solution that helps others. Read the inspiring true story of how I used AI to rebuild my life." />
+<meta property="og:image" content="https://www.dealshopperpro.com/images/my-story-preview.jpg" />
+<meta property="og:url" content="https://www.dealshopperpro.com/my-story.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Deal Shopper Pro" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="I Lost Everything — Then Built a Free Tool to Help Millions Shop Smarter on Amazon">
-  <meta property="og:description" content="After losing his home to Hurricane Ian and enduring a sophisticated cyberattack, Duane Romualdo rebuilt by creating DealShopperPro.com — a free Amazon deal finder built with AI.">
-  <meta property="og:url" content="https://www.dealshopperpro.com/my-story.html">
-  <meta property="og:image" content="https://www.dealshopperpro.com/og-image.png">
-  <meta property="og:site_name" content="Deal Shopper Pro">
-  <meta property="article:published_time" content="2025-08-08T12:00:00-04:00">
-  <meta property="article:modified_time" content="2025-08-08T12:00:00-04:00">
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="I Lost Everything — Then Built DealShopperPro.com with AI" />
+<meta name="twitter:description" content="True story of losing everything and rebuilding with AI. Discover how I created a free tool to help people find Amazon deals fast." />
+<meta name="twitter:image" content="https://www.dealshopperpro.com/images/my-story-preview.jpg" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="I Lost Everything — Then Built a Free Tool to Help Millions Shop Smarter on Amazon">
-  <meta name="twitter:description" content="After Hurricane Ian and a devastating cyberattack, Duane Romualdo built DealShopperPro.com to help people search Amazon better.">
-  <meta name="twitter:image" content="https://www.dealshopperpro.com/og-image.png">
 
-  <!-- Structured Data: Article -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": 'I Lost Everything — Then Built a Free Tool to Help Millions Shop Smarter on Amazon',
-    "description": "After losing his home to Hurricane Ian and enduring a sophisticated cyberattack, Duane Romualdo rebuilt by creating DealShopperPro.com — a free Amazon deal finder built with AI.",
-    "mainEntityOfPage": {"@type": "WebPage","@id": "https://www.dealshopperpro.com/my-story.html"},
-    "image": "https://www.dealshopperpro.com/og-image.png",
-    "datePublished": "2025-08-08T12:00:00-04:00",
-    "dateModified": "2025-08-08T12:00:00-04:00",
-    "author": {"@type":"Person","name":"Duane Romualdo","email":"drdizzle613@proton.me","description":"Hurricane survivor. Cyberattack victim. Solo builder. Amazon deal hunter."},
-    "publisher": {"@type": "Organization","name": "Deal Shopper Pro","logo": {"@type":"ImageObject","url":"https://www.dealshopperpro.com/favicon-64x64.png"}}
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/navbar.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+      padding-top: 60px;
+    }
+    .container {
+      max-width: 800px;
+    }
+    h1, h2 {
+      font-weight: bold;
+    }
+    .section-title {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+    blockquote {
+      border-left: 4px solid #007bff;
+      padding-left: 1rem;
+      color: #555;
+      font-style: italic;
+    }
+  </style>
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.dealshopperpro.com/my-story.html",
+  "url": "https://www.dealshopperpro.com/my-story.html",
+  "name": "I Lost Everything—Then Built a Free Tool to Help Millions Shop Smarter on Amazon",
+  "description": "After surviving a coma and Hurricane Ian, Duane Romualdo used AI to build DealShopperPro.com from scratch with no budget. Read his story of resilience and innovation.",
+  "breadcrumb": {
+    "@id": "https://www.dealshopperpro.com/my-story.html#breadcrumb"
   }
-  </script>
+}
+</script>
 
-  <!-- Structured Data: Breadcrumbs -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem","position": 1,"name": "Home","item": "https://www.dealshopperpro.com/"},
-      {"@type": "ListItem","position": 2,"name": "My Story","item": "https://www.dealshopperpro.com/my-story.html"}
-    ]
-  }
-  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://www.dealshopperpro.com/my-story.html#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.dealshopperpro.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "My Story",
+      "item": "https://www.dealshopperpro.com/my-story.html"
+    }
+  ]
+}
+</script>
 
-  <!-- Structured Data: Person (author card) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.dealshopperpro.com/my-story.html"
+  },
+  "headline": "I Lost Everything—Then Built a Free Tool to Help Millions Shop Smarter on Amazon",
+  "description": "After surviving a coma and Hurricane Ian, Duane Romualdo used AI and ChatGPT to build DealShopperPro.com from scratch with no funding or team.",
+  "image": "https://www.dealshopperpro.com/og-image.png",
+  "author": {
     "@type": "Person",
     "name": "Duane Romualdo",
-    "email": "drdizzle613@proton.me",
-    "description": "Hurricane survivor. Cyberattack victim. Solo builder. Amazon deal hunter.",
-    "homeLocation": "Pennsylvania, USA"
-  }
-  </script>
+    "url": "https://www.dealshopperpro.com/my-story.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Deal Shopper Pro",
+    "url": "https://www.dealshopperpro.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.dealshopperpro.com/logo.png"
+    }
+  },
+  "datePublished": "2025-08-06",
+  "dateModified": "2025-08-06"
+}
+</script>
 
-  <!-- Minimal safe styles; no Bootstrap link to avoid conflicts -->
-  <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; line-height: 1.65; }
-    main { padding-top: 4rem; }
-    article { max-width: 840px; margin: 0 auto; padding: 0 1rem; }
-    .dateline { color: #6c757d; font-size: 0.95rem; }
-    .share a { text-decoration: none; }
-    p { margin: 0 0 1rem 0; }
-  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Duane Romualdo",
+  "jobTitle": "Founder of Deal Shopper Pro",
+  "url": "https://www.dealshopperpro.com/my-story.html",
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Hard Knocks & AI"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/duane-romualdo",
+    "https://twitter.com/yourhandle"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.dealshopperpro.com/#organization",
+  "name": "Deal Shopper Pro",
+  "url": "https://www.dealshopperpro.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.dealshopperpro.com/logo.png"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Support",
+    "url": "https://www.dealshopperpro.com/contact.html"
+  },
+  "sameAs": [
+    "https://www.facebook.com/share/g/1C1BARo5YJ/",
+    "https://www.linkedin.com/in/duane-romualdo"
+  ]
+}
+</script>
+
 </head>
 <body>
-  <!-- Universal Navbar Placeholder -->
   <div id="navbar-placeholder"></div>
   <script src="/navbar-loader.js" defer></script>
 
-  <main>
-    <article>
-      <header class="mt-4 mb-3">
-        <p class="dateline">Published <time datetime="2025-08-08">August 8, 2025</time></p>
-      </header>
+ <main class="container bg-white p-4 shadow rounded my-5">
+  <h1 class="mb-3">I Lost Everything—Then Built a Free Tool to Help Millions Shop Smarter on Amazon</h1>
+  <p class="text-muted">By Duane Romualdo | Creator of DealShopperPro.com</p>
 
-      <section>
-        <p>I Lost Everything — Then Built a Free Tool to Help Millions Shop Smarter on Amazon<br>By Duane Romualdo | Creator of DealShopperPro.com</p>
-        <p>There are moments in life that change everything.<br>For me, it happened more than once.</p>
-        <p>At 15, I lost my father to cancer.</p>
-        <p>At 19, I fell into a coma — and woke up completely paralyzed on the left side of my body. It wasn’t permanent, but the road to recovery was brutal. Every day, I pushed myself — from wheelchair to walker, from walker to walking again. I forced my body to fight, even when it resisted.<br>Today, I’m proud of how far I’ve come. But the truth is, I’ll never be 100%. My left side is still weaker, slower, less coordinated. And that’s okay — I keep moving forward.</p>
-        <p>Just when I thought things were finally getting better, Hurricane Ian struck on September 28, 2022, destroying my home and everything I owned in Fort Myers Beach, Florida.</p>
-        <p>The Nightmare After the Storm<br>At a time when I was already at rock bottom, I finally received compensation from FEMA.<br>But right after that, I got hacked — and that’s when things got really crazy.</p>
-        <p>The hackers cloned my SIM card, breached my phone, and infiltrated my computer’s BIOS — so deep that traditional virus scans couldn’t detect anything. The signs were subtle at first: slower boot times, strange new apps, and unexplained spikes in data usage.</p>
-        <p>I went through eight different phones trying to escape it. I factory-reset my devices countless times, flashed new firmware on my Android phones, reset passwords, used VPNs and firewalls, installed endpoint security — but no matter what I did, the hackers were still there. They hijacked multiple Facebook accounts, took over several Google accounts, and forced me to close my bank account three different times.</p>
-        <p>My devices became unpredictable: antivirus protections would be disabled, normal apps would gain elevated permissions, and suspicious programs would appear out of nowhere. Some web pages even displayed disturbing content. People didn’t believe me. They thought I was exaggerating or imagining things. They told me it was impossible. But it was real — and it was terrifying.</p>
-        <p>The worst part? I was suddenly unable to prove who I was to FEMA, which meant I couldn’t get housing or any other assistance.</p>
-        <p>I felt isolated, disoriented, and hopeless.<br>But somehow, I kept going.</p>
-        <p>In 2023, I relocated to Pennsylvania with no home, no resources, and no clear path forward. But I did have one thing: relentless determination to make something work online.</p>
-        <p>I became obsessed with AI — not the hype, but the real potential. I had no team. No budget. Just an idea… and ChatGPT.</p>
-        <p>The Problem That Sparked Everything<br>Amazon is where we all shop — but have you ever tried to find the exact product you need?<br>The filters barely work. You can’t sort by Prime-only + coupon + price range + rating + color + discount. You can’t even easily find Lightning Deals or brand-specific sales without digging through pages of junk.</p>
-        <p>I kept thinking: Why is it so hard to search Amazon properly?</p>
-        <p>So I built the solution.</p>
-        <p>What I Created — With No Money and No Code Team<br>DealShopperPro.com is the tool I wish existed. It&#x27;s a free Amazon deal-finder that lets anyone filter products with precision:</p>
-        <p>✅ Only want Prime-eligible items? Easy.<br>✅ Looking for Lightning Deals under $25 with free shipping? One click.<br>✅ Need a specific brand, size, rating, or coupon combo? Done.</p>
-        <p>The site uses Amazon’s public affiliate structure, meaning I earn a small commission if someone buys through it — but it costs users nothing. No logins. No popups. No gimmicks. Just powerful search.<br>And it works — even on mobile.</p>
-        <p>Built With AI. Run By One Person. Helping Thousands.<br>This wasn’t built in Silicon Valley. I didn’t raise VC money.<br>I sat down, opened ChatGPT, and asked questions like:</p>
-        <p>“How do I create a search URL for Amazon’s affiliate program?”</p>
-        <p>“How do I make an accordion-style UI with JavaScript filters?”</p>
-        <p>“How do I structure this for SEO and mobile usability?”</p>
-        <p>And together, we built it.</p>
-        <p>Why I’m Sharing This Now<br>Because I know I’m not the only one who has started from nothing.<br>I know what it’s like to be overlooked. To feel invisible. To have talent and ideas, but no platform.</p>
-        <p>Yes, I created a tool that helps people save money. But I also created a symbol of what’s possible with no budget, no safety net, and no quit in you.</p>
-        <p>Want to See What I Built?<br>Try it here: https://www.dealshopperpro.com</p>
-        <p>If you’re a journalist, creator, or someone who believes in second chances — I’d love to talk. I built something real. I just need help getting it seen.</p>
-        <p>Written by Duane Romualdo<br>Hurricane survivor. Cyberattack victim. Solo builder. Amazon deal hunter.<br>📧 drdizzle613@proton.me<br>📍 Grew up in Pennsylvania (Birth–2011) → Fort Myers Beach, FL (2011–2023) → Rebuilding in Pennsylvania (2023–Present)</p>
-        <p></p>
-      </section>
+  <p>There are moments in life that change everything. For me, it happened more than once.</p>
 
-       <!-- ——————————— SITE-WIDE FOOTER ——————————— -->
+  <p>At 15, I lost my father to cancer.</p>
+
+  <p>At 19, I fell into a coma — and woke up completely paralyzed on the left side of my body.
+It wasn’t permanent, but the road to recovery was brutal. Every day, I pushed myself — from wheelchair to walker, from walker to walking again. I forced my body to fight, even when it resisted.<br>
+  Today, I’m proud of how far I’ve come. But the truth is, I’ll never be 100%. My left side is still weaker, slower, less coordinated. And that’s okay — I keep moving forward.</p>
+    Just when I thought things were finally getting better, Hurricane Ian struck on September 28, 2022, destroying my home and everything I owned in Fort Myers Beach, Florida.</p>
+
+
+  <p>I rebuilt each time. But after the hurricane, starting over wasn’t just emotional — it was physical, financial, and digital. In 2023, I relocated to Pennsylvania with no home, no resources, and no clear path forward.</p>
+
+  <p>But I did have one thing: relentless determination to make something work online.</p>
+
+  <p>I became obsessed with AI — not the hype, but the real potential. I had no team. No budget. Just an idea… and ChatGPT.</p>
+    <h2 class="section-title">The Problem That Sparked Everything</h2>
+    <p>Amazon is where we all shop — but have you ever tried to find the exact product you need?<br>
+    The filters barely work. You can’t sort by Prime-only + coupon + price range + rating + color + discount. You can’t even easily find Lightning Deals or brand-specific sales without digging through pages of junk.</p>
+
+    <p>I kept thinking: <em>Why is it so hard to search Amazon properly?</em></p>
+    <p>So I built the solution.</p>
+
+    <h2 class="section-title">What I Created — With No Money and No Code Team</h2>
+    <p><a href="https://www.dealshopperpro.com" target="_blank">DealShopperPro.com</a> is the tool I wish existed. It's a free Amazon deal-finder that lets anyone filter products with precision:</p>
+    <ul>
+      <li>✅ Only want Prime-eligible items? Easy.</li>
+      <li>✅ Looking for Lightning Deals under $25 with free shipping? One click.</li>
+      <li>✅ Need a specific brand, size, rating, or coupon combo? Done.</li>
+    </ul>
+    <p>The site uses Amazon’s public affiliate structure, meaning I earn a small commission if someone buys through it — but it costs users nothing. No logins. No popups. No gimmicks. Just powerful search.</p>
+    <p>And it works — even on mobile.</p>
+
+    <h2 class="section-title">Built With AI. Run By One Person. Helping Thousands.</h2>
+    <p>This wasn’t built in Silicon Valley. I didn’t raise VC money.<br>
+    I sat down, opened ChatGPT, and asked questions like:</p>
+    <blockquote>
+      “How do I create a search URL for Amazon’s affiliate program?”<br>
+      “How do I make an accordion-style UI with JavaScript filters?”<br>
+      “How do I structure this for SEO and mobile usability?”
+    </blockquote>
+    <p>And together, we built it.</p>
+
+    <h2 class="section-title">Why I’m Sharing This Now</h2>
+    <p>Because I know I’m not the only one who has started from nothing.<br>
+    I know what it’s like to be overlooked. To feel invisible. To have talent and ideas, but no platform.</p>
+
+    <p>And I believe stories like mine — real, raw, human — deserve to be heard.</p>
+    <p>Yes, I created a tool that helps people save money. But I also created a symbol of what’s possible with no budget, no safety net, and no quit in you.</p>
+
+    <h2 class="section-title">Want to See What I Built?</h2>
+    <p>Try it here: <a href="https://www.dealshopperpro.com" target="_blank">https://www.dealshopperpro.com</a></p>
+    <p>If you’re a journalist, creator, or someone who believes in second chances — I’d love to talk. I built something real. I just need help getting it seen.</p>
+    <hr>
+    <p><strong>Written by Duane Romualdo</strong><br>
+    Hurricane survivor. Solo builder. Amazon deal hunter.<br>
+    📧 <a href="mailto:drdizzle613@proton.me">drdizzle613@proton.me</a><br>
+    📍 Grew up in Pennsylvania (Birth–2011) → Fort Myers Beach, FL (2011–2023) → Rebuilding in Pennsylvania (2023–Present)</p>
+  </main>
+ <!-- Feature This Story Block -->
+<section class="bg-light border-top py-4 text-center">
+  <div class="container">
+    <h2 class="h5 fw-bold mb-3">🎤 Want to Feature This Story?</h2>
+    <p>If you're a journalist, podcaster, or media outlet — let's talk. My story is real, timely, and AI-powered.</p>
+    <p>
+      📧 <a href="mailto:drdizzle613@proton.me" class="fw-semibold">drdizzle613@proton.me</a>
+    </p>
+  </div>
+</section>
+
+<!-- Separator with light spacing -->
+<div class="my-3"></div>
+
+<!-- Share It Block for /my-story.html -->
+<section class="text-center">
+  <div class="container">
+    <h2 class="h5">📲 Inspired? Share It</h2>
+    <p class="text-muted">Help this story reach someone who needs to hear it. It could change everything for them.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+
+      <!-- WhatsApp -->
+      <a class="btn btn-success" href="https://wa.me/?text=This%20story%20is%20incredible.%20He%20lost%20everything%20and%20rebuilt%20using%20AI:%20https://www.dealshopperpro.com/my-story.html" target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+
+      <!-- Messenger -->
+      <a class="btn btn-primary" href="fb-messenger://share?link=https://www.dealshopperpro.com/my-story.html" target="_blank" rel="noopener noreferrer">
+        Messenger
+      </a>
+
+      <!-- SMS -->
+      <a class="btn btn-secondary" href="sms:?body=You%20have%20to%20read%20this%20true%20story%20about%20rebuilding%20a%20life%20and%20launching%20a%20business%20with%20AI:%20https://www.dealshopperpro.com/my-story.html" target="_blank" rel="noopener noreferrer">
+        Text Message
+      </a>
+
+      <!-- Twitter / X -->
+      <a class="btn btn-info" href="https://twitter.com/intent/tweet?text=I%20just%20read%20this%20inspiring%20story%20of%20starting%20over%20with%20AI%20after%20losing%20everything.%20Check%20it%20out:%20https://www.dealshopperpro.com/my-story.html" target="_blank" rel="noopener noreferrer">
+        Twitter / X
+      </a>
+
+      <!-- Facebook -->
+      <a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com/my-story.html" target="_blank" rel="noopener noreferrer">
+        Facebook
+      </a>
+
+      <!-- Copy Link -->
+      <button aria-label="Copy page link to clipboard" class="btn btn-dark" data-link="https://www.dealshopperpro.com/my-story.html" id="copyLinkBtn" type="button">
+        Copy Page Link
+      </button>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ——————————— SITE-WIDE FOOTER ——————————— -->
 <footer>
 <div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
 <p>
