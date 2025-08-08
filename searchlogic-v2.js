@@ -13,12 +13,62 @@ document.addEventListener('DOMContentLoaded', () => {
     let q = (data.get('q') || '').trim();
     if (!q) return alert('Please enter a search term.');
 
-    // 2) Keyword-based filters
-    const keywordAppend = (id, phrase) => {
-      if (data.get(id) === 'on') {
-        q += (q.endsWith(' ') ? '' : ' ') + phrase;
-      }
-    };
+   // 2) Keyword-based filters
+const keywordAppend = (id, phrase) => {
+  if (data.get(id) === 'on') {
+    q += (q.endsWith(' ') ? '' : ' ') + phrase;
+  }
+};
+
+// Filters without rh codes
+keywordAppend('back-in-stock',           'back in stock');
+keywordAppend('best-seller-deals',       'best seller deals');
+keywordAppend('birthday-gifts',          'birthday gifts');
+keywordAppend('bogo-deals',              'buy one get one free');
+keywordAppend('budget-essentials',       'budget essentials');
+keywordAppend('budget-friendly-picks',   'budget friendly picks');
+keywordAppend('buy-more-save-more',      'buy more save more');
+keywordAppend('carbon-neutral',          'carbon neutral delivery');
+keywordAppend('clearance-countdown',     'clearance countdown');
+keywordAppend('clearance-deals',         'clearance');
+keywordAppend('coupon-stacking',         'coupon stacking');
+keywordAppend('daily-deal-rotation',     'daily deal rotation');
+keywordAppend('deal-of-the-day',         'deal of the day');
+keywordAppend('eco-friendly',            'eco friendly');
+keywordAppend('ends-soon-deals',         'ends soon');
+keywordAppend('extra-discount-codes',    'extra discount code');
+keywordAppend('flash-sales',             'flash sale');
+keywordAppend('free-shipping-deals',     'free shipping deals');
+keywordAppend('free-with-subscription',  'free with subscription');
+keywordAppend('funny-gag-gifts',         'funny gag gifts');
+keywordAppend('gifts-for-her',           'gifts for her');
+keywordAppend('gifts-for-him',           'gifts for him');
+keywordAppend('gifts-for-kids',          'gifts for kids');
+keywordAppend('gifts-under-25',          'gifts under 25');
+keywordAppend('hidden-deals',            'hidden deals');
+keywordAppend('holiday-gift-picks',      'holiday gift picks');
+keywordAppend('holiday-gifts',           'holiday gifts');
+keywordAppend('just-dropped-deals',      'just dropped deals');
+keywordAppend('last-minute-gifts',       'last minute gifts');
+keywordAppend('lightning-coupon',        'lightning deal with coupon');
+keywordAppend('limited-quantity-deals',  'limited quantity deal');
+keywordAppend('limited-quantity-left',   'limited quantity left');
+keywordAppend('minimal-packaging',       'minimal packaging');
+keywordAppend('multi-pack-savings',      'multi-pack savings');
+keywordAppend('new-release',             'new release');
+keywordAppend('organic-products',        'organic');
+keywordAppend('over-50-off',             'over 50% off');
+keywordAppend('plastic-free',            'plastic free');
+keywordAppend('price-drop-deals',        'price drop');
+keywordAppend('promo-codes',             'amazon promo codes');
+keywordAppend('rechargeable-batteries',  'rechargeable batteries');
+keywordAppend('recyclable-packaging',    'recyclable packaging');
+keywordAppend('sample-size',             'sample size');
+keywordAppend('sns-with-coupon',         'subscribe and save coupon');
+keywordAppend('subscribe-and-save-deals','subscribe and save');
+keywordAppend('top-rated-deals',         'top rated deals');
+keywordAppend('trending-deals',          'trending deals');
+keywordAppend('vegan-products',          'vegan');
 
 
     // 3) % Off, Rating & Sort
@@ -56,39 +106,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const pushRh = (field, code) => {
       if (data.get(field) === 'on') rh.push(code);
     };
-    
-  const rhMap = {
-  'min-rating': 'p_72:1248882011',
-  'under-25': 'p_36:-2500',
-  'lightning-deals': 'p_n_deal_type:23566065011',
-  'outlet-deals': 'p_n_deal_type:493167011',
-  'prime-only': 'p_85:2470955011',
-  'fba-only': 'p_n_shipping_option-bin:3242350011',
-  'free-shipping': 'p_76:1249177011',
-  'in-stock': 'p_n_availability:2661601011',
-  'coupons': 'p_n_feature_browse-bin:6779703011',
-  'subscribe-save': 'p_n_is_sns_available:2619533011',
-  'sns-coupon': 'p_n_feature_browse-bin:6779703011,p_n_is_sns_available:2619533011',
-  'small-business': 'p_n_cpf_eligible:5191495011',
-  'climate-pledge': 'p_n_cpf_eligible:5191495011',
-  'amazon-brands': 'p_n_feature_fourteen_browse-bin:18584192011',
-  'warehouse-deals': 'p_n_condition-type:6461716011',
-  'refurbished-deals': 'p_n_condition-type:1269692011',
-  'biodegradable': 'p_n_feature_twenty_browse-bin:12741577011',
-  'no-microplastics': 'p_n_feature_four_browse-bin:24040811011',
-  'fair-trade': 'p_n_feature_seven_browse-bin:21246940011',
-  'cruelty-free': 'p_n_feature_eight_browse-bin:22801363011',
-  'paraben-free': 'p_n_feature_nine_browse-bin:23847964011',
-  'sulfate-free': 'p_n_feature_ten_browse-bin:23847965011',
-  'alcohol-free': 'p_n_feature_seventeen_browse-bin:23847966011',
-  'fragrance-free': 'p_n_feature_eighteen_browse-bin:2661619011',
-  'hypoallergenic': 'p_n_feature_three_browse-bin:6202592011',
-  'non-gmo': 'p_n_feature_five_browse-bin:3012491011',
-  'gluten-free': 'p_n_feature_six_browse-bin:3012492011',
-  'made-in-usa': 'p_n_feature_twenty_browse-bin:22427944011',
-  'gift-wrap': 'p_n_feature_browse-bin:10012400011',
-  'new-arrivals': 'p_n_date:1249037011'
+
+ const rhMap = {
+  'prime-only':         'p_85:2470955011',
+  'free-shipping':      'p_76:1249177011',
+  'in-stock':           'p_n_availability:2661601011',
+  'coupons':            'p_n_feature_browse-bin:6779703011',
+  'fba-only':           'p_n_shipping_option-bin:3242350011',
+  'subscribe-save':     'p_n_is_sns_available:2619533011',
+  'small-business':     'p_n_cpf_eligible:5191495011',
+  'amazon-brands':      'p_n_feature_fourteen_browse-bin:18584192011',
+  'warehouse-deals':    'p_n_condition-type:6461716011',
+  'refurbished-deals':  'p_n_condition-type:1269692011',
+  'lightning-deals':    'p_n_deal_type:23566065011',
+  'outlet-deals':       'p_n_deal_type:493167011',
+  'fair-trade':         'p_n_feature_seven_browse-bin:21246940011',
+  'biodegradable':      'p_n_feature_twenty_browse-bin:12741577011',
+  'no-microplastics':   'p_n_feature_four_browse-bin:24040811011',
+  'under-25':           'p_36:-2500',
+  'climate-pledge':     'p_n_cpf_eligible:5191495011'
 };
+
 
 
     Object.entries(rhMap).forEach(([field, code]) => pushRh(field, code));
