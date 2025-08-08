@@ -503,13 +503,7 @@
         <button type="button" class="btn btn-sm btn-outline-secondary me-2" onclick="toggleAllCheckboxes('accordionGroup2', false)">Clear All</button>
         <button type="button" class="btn btn-sm btn-outline-success" onclick="toggleAllCheckboxes('accordionGroup2', true)">Select All</button>
       </div>
-
-      <!-- ✅ All Checkboxes Below -->
-      <div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
-        <input class="form-check-input" type="checkbox" id="lightningDeals" name="lightning-deals" aria-label="Filter Amazon Lightning Deals">
-        <label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label>
-      </div>
-
+      
       <div class="form-check" data-tooltip="View Amazon's Today's Deals page.">
         <input class="form-check-input" type="checkbox" id="todaysDeals" name="todays-deals" aria-label="Today's Deals">
         <label class="form-check-label" for="todaysDeals">🔥 Today's Deals</label>
@@ -545,45 +539,25 @@
         <label class="form-check-label" for="limitedTimeDeals">💥 Limited-Time Deals</label>
       </div>
 
-      <div class="form-check" data-tooltip="Deals that are about to expire.">
-        <input class="form-check-input" type="checkbox" id="endsSoonDeals" name="ends-soon-deals" aria-label="Ends Soon Deals">
-        <label class="form-check-label" for="endsSoonDeals">⏱️ Ends Soon</label>
-      </div>
+    <div class="form-check" data-tooltip="Filter for deals under $25">
+  <input class="form-check-input" id="under-25" name="under-25" type="checkbox">
+  <label class="form-check-label" for="under-25">
+    💸 Under $25
+  </label>
+</div>
 
-      <div class="form-check" data-tooltip="Great deals under $25.">
-        <input class="form-check-input" type="checkbox" id="under25Deals" name="under-25-deals" aria-label="Under $25 Deals">
-        <label class="form-check-label" for="under25Deals">🪙 Under $25 Deals</label>
-      </div>
-
-      <div class="form-check" data-tooltip="Coupons that are about to expire.">
-        <input class="form-check-input" type="checkbox" id="expiringCoupons" name="expiring-coupons" aria-label="Expiring Coupons">
-        <label class="form-check-label" for="expiringCoupons">🛑 Expiring Coupons</label>
-      </div>
 
       <div class="form-check" data-tooltip="Products sold under Amazon-owned brand names.">
         <input class="form-check-input" type="checkbox" id="amazon-brands" name="amazon-brands" aria-label="Amazon Brands">
         <label class="form-check-label" for="amazon-brands">🏷️ Amazon Brands</label>
-      </div>
-
-      <div class="form-check" data-tooltip="Find the lowest recorded price on items.">
-        <input class="form-check-input" type="checkbox" id="lowestPrice" name="lowest-price" aria-label="Lowest Price">
-        <label class="form-check-label" for="lowestPrice">📉 Lowest Price</label>
-      </div>
+      </div
 
       <div class="form-check" data-tooltip="Short-term deals that expire quickly.">
         <input class="form-check-input" type="checkbox" id="flashSales" name="flash-sales" aria-label="Flash Sales">
         <label class="form-check-label" for="flashSales">⚡ Flash Sales</label>
       </div>
 
-      <div class="form-check" data-tooltip="Deals currently trending or gaining popularity.">
-        <input class="form-check-input" type="checkbox" id="trendingDeals" name="trending-deals" aria-label="Trending Deals">
-        <label class="form-check-label" for="trendingDeals">📊 Trending Deals</label>
-      </div>
-
-      <div class="form-check" data-tooltip="Items added to Amazon’s deal feed within the last 24 hours.">
-        <input class="form-check-input" type="checkbox" id="newDealsToday" name="new-deals-today" aria-label="New Deals Today">
-        <label class="form-check-label" for="newDealsToday">🆕 New Deals Today</label>
-      </div>
+    
 
       <div class="form-check" data-tooltip="Used or returned items with discounts.">
         <input class="form-check-input" type="checkbox" id="openBoxDeals" name="open-box-deals" aria-label="Open Box Deals">
@@ -619,12 +593,13 @@
         ♻️ Eco-Friendly
        </label>
 </div>
-<div class="form-check" data-tooltip="Filter for: Biodegradable.">
-  <input class="form-check-input" id="biodegradable" name="biodegradable" type="checkbox">
+<div class="form-check" data-tooltip="Filter for: Biodegradable products only.">
+  <input class="form-check-input" id="biodegradable" type="checkbox" name="biodegradable">
   <label class="form-check-label" for="biodegradable">
-    🌱 Biodegradable
+    🌿 Biodegradable
   </label>
 </div>
+
 <div class="form-check" data-tooltip="Only vegan-friendly products.">
 <input aria-label="Vegan" class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox">
 <label class="form-check-label" for="veganProducts">
@@ -655,29 +630,23 @@
         ♻️ Recyclable Packaging
        </label>
 </div>
-<div class="form-check" data-tooltip="Filter for: Plastic-Free.">
-<input class="form-check-input" id="plastic-free" type="checkbox">
-<label class="form-check-label" for="plastic-free">
-        🧼 Plastic-Free
-       </label>
+<div class="form-check" data-tooltip="Filter for: Plastic-Free">
+  <input class="form-check-input" id="plastic-free" type="checkbox" name="plastic-free">
+  <label class="form-check-label" for="plastic-free">🌱 Plastic-Free</label>
+</div>
+
 </div>
 <div class="form-check" data-tooltip="Filter for: Minimal Packaging.">
-<input class="form-check-input" id="minimal-packaging" type="checkbox">
-<label class="form-check-label" for="minimal-packaging">
-        📦 Minimal Packaging
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Rechargeable Batteries.">
-<input class="form-check-input" id="rechargeable-batteries" type="checkbox">
-<label class="form-check-label" for="rechargeable-batteries">
-        🔋 Rechargeable Batteries
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: No Microplastics.">
-  <input class="form-check-input" id="no-microplastics" name="no-microplastics" type="checkbox">
-  <label class="form-check-label" for="no-microplastics">
-    🚫 Microplastics
+  <input class="form-check-input" type="checkbox" id="minimal-packaging" name="minimal-packaging">
+  <label class="form-check-label" for="minimal-packaging">
+    📦 Minimal Packaging
   </label>
+</div>
+
+
+<div class="form-check" data-tooltip="Filter for: No Microplastics.">
+  <input class="form-check-input" id="no-microplastics" type="checkbox">
+  <label class="form-check-label" for="no-microplastics">🚫 Microplastics</label>
 </div>
 
 <div class="form-check" data-tooltip="Filter for: Fair Trade.">
@@ -686,11 +655,12 @@
     🧵 Fair Trade
   </label>
 </div>
-<div class="form-check" data-tooltip="Filter for: Made in USA.">
-<input class="form-check-input" id="made-in-usa" type="checkbox">
-<label class="form-check-label" for="made-in-usa">
-        🇺🇸 Made in USA
-       </label>
+
+<div class="form-check" data-tooltip="Filter for: Made in USA">
+  <input class="form-check-input" id="made-in-usa" type="checkbox" name="made-in-usa">
+  <label class="form-check-label" for="made-in-usa">🇺🇸 Made in USA</label>
+</div>
+
 </div>
 </div>
 </div>
