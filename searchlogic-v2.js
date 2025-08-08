@@ -113,7 +113,9 @@ keywordAppend('extra-discount-codes',     'extra discount code');
   'outlet-deals':     'p_n_deal_type:493167011',
   'fair-trade':       'p_n_feature_seven_browse-bin:21246940011',
   'biodegradable':    'p_n_feature_four_browse-bin:22407761011',
-  'no-microplastics': 'p_n_feature_four_browse-bin:24040811011'
+  'no-microplastics': 'p_n_feature_four_browse-bin:24040811011',
+     'under-25': 'p_36:-2500',
+
 };
 
 
@@ -158,6 +160,7 @@ keywordAppend('extra-discount-codes',     'extra discount code');
     window.open(url, '_blank');
   });
 });
+
 
 
 
