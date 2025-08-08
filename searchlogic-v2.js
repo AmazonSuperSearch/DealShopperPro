@@ -112,7 +112,8 @@ keywordAppend('extra-discount-codes',     'extra discount code');
   'lightning-deals':  'p_n_deal_type:23566065011',
   'outlet-deals':     'p_n_deal_type:493167011',
   'fair-trade':       'p_n_feature_seven_browse-bin:21246940011',
-  'biodegradable':    'p_n_feature_four_browse-bin:22407761011' // ✅ New line
+  'biodegradable':    'p_n_feature_four_browse-bin:22407761011',
+  'no-microplastics': 'p_n_feature_four_browse-bin:24040811011'
 };
 
 
@@ -157,6 +158,7 @@ keywordAppend('extra-discount-codes',     'extra discount code');
     window.open(url, '_blank');
   });
 });
+
 
 
 
