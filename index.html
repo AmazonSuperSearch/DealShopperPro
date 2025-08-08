@@ -681,35 +681,41 @@
         Select All
        </button>
 </div>
-<div class="form-check" data-tooltip="Show warehouse and refurbished items.">
-<input aria-label="Warehouse / Refurbished" class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox">
-<label class="form-check-label" for="warehouseRefurb">
-        📦 Warehouse &amp; Refurbished
-       </label>
+<!-- Warehouse Deals -->
+<div class="form-check" data-tooltip="Amazon Warehouse open-box items.">
+  <input class="form-check-input" id="warehouse-deals" type="checkbox" />
+  <label class="form-check-label" for="warehouse-deals">📦 Warehouse Deals</label>
 </div>
+
+<!-- Refurbished Deals -->
+<div class="form-check" data-tooltip="Amazon Certified Refurbished items.">
+  <input class="form-check-input" id="refurbished-deals" type="checkbox" />
+  <label class="form-check-label" for="refurbished-deals">♻️ Refurbished Deals</label>
+</div>
+ 
 <div class="form-check" data-tooltip="Filter for: Outlet Deals.">
 <input class="form-check-input" id="outlet-deals" name="outlet-deals" type="checkbox">
 <label class="form-check-label" for="outlet-deals">
         🏷️ Outlet Deals
        </label>
 </div>
-<div class="form-check" data-tooltip="Filter for: Just Released.">
-<input class="form-check-input" id="new-release" name="new-release" type="checkbox">
-<label class="form-check-label" for="new-release">
-        🆕 Just Released
-       </label>
+<div class="form-check" data-tooltip="Filter for: New Release products.">
+  <input class="form-check-input" id="new-release" type="checkbox" name="new-release">
+  <label class="form-check-label" for="new-release">🆕 New Releases</label>
 </div>
-<div class="form-check" data-tooltip="Filter for: Climate Pledge Picks.">
-<input class="form-check-input" id="climate-pledge" name="climate-pledge" type="checkbox">
-<label class="form-check-label" for="climate-pledge">
-        ♻️ Climate Pledge Picks
-       </label>
+
+<div class="form-check" data-tooltip="Amazon Climate Pledge Friendly items.">
+  <input class="form-check-input" id="climate-pledge" type="checkbox" name="climate-pledge">
+  <label class="form-check-label" for="climate-pledge">🌎 Climate Pledge Picks</label>
 </div>
+
 <div class="form-check" data-tooltip="Support products sold by small businesses.">
-<input aria-label="Small Business" class="form-check-input" id="smallBusiness" name="small-business" type="checkbox">
-<label class="form-check-label" for="smallBusiness">
-        🏪 Small Business
-       </label>
+  <input aria-label="Small Business" class="form-check-input" id="smallBusiness" name="small-business" type="checkbox">
+  <label class="form-check-label" for="smallBusiness">
+    🏪 Small Business
+  </label>
+</div>
+
 </div>
 <div class="form-check" data-tooltip="Filter for: Trending Now.">
 <input class="form-check-input" id="trending-now" type="checkbox">
@@ -717,23 +723,27 @@
         📈 Trending Now
        </label>
 </div>
-<div class="form-check" data-tooltip="Filter for: Back in Stock.">
-<input class="form-check-input" id="back-in-stock" type="checkbox">
-<label class="form-check-label" for="back-in-stock">
-        🕘 Back in Stock
-       </label>
+<div class="form-check" data-tooltip="Try finding recently restocked items.">
+  <input class="form-check-input" id="back-in-stock" name="back-in-stock" type="checkbox">
+  <label class="form-check-label" for="back-in-stock">🔄 Back in Stock</label>
+</div>
+
 </div>
 <div class="form-check" data-tooltip="Filter for: Budget Essentials.">
-<input class="form-check-input" id="budget-essentials" type="checkbox">
-<label class="form-check-label" for="budget-essentials">
-        🪙 Budget Essentials
-       </label>
+  <input class="form-check-input" id="budget-essentials" type="checkbox" name="budget-essentials">
+  <label class="form-check-label" for="budget-essentials">
+    🪙 Budget Essentials
+  </label>
 </div>
+
+
 <div class="form-check" data-tooltip="Filter for: Limited Quantity Left.">
-<input class="form-check-input" id="limited-quantity-left" type="checkbox">
-<label class="form-check-label" for="limited-quantity-left">
-        ⏳ Limited Quantity Left
-       </label>
+  <input class="form-check-input" id="limited-quantity-left" type="checkbox" name="limited-quantity-left">
+  <label class="form-check-label" for="limited-quantity-left">
+    ⏳ Limited Quantity Left
+  </label>
+</div>
+
 </div>
 </div>
 </div>
@@ -754,53 +764,47 @@
         Select All
        </button>
 </div>
-<div class="form-check" data-tooltip="Gift ideas suitable for women.">
-<input aria-label="Gifts for Her" class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox">
-<label class="form-check-label" for="giftsForHer">
-        🎀 Gifts for Her
-       </label>
+<div class="form-check" data-tooltip="Filter for: Gifts for Her.">
+  <input class="form-check-input" id="gifts-for-her" type="checkbox" name="gifts-for-her">
+  <label class="form-check-label" for="gifts-for-her">
+    🎁 Gifts for Her
+  </label>
 </div>
-<div class="form-check" data-tooltip="Gift ideas suitable for men.">
-<input aria-label="Gifts for Him" class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox">
-<label class="form-check-label" for="giftsForHim">
-        👔 Gifts for Him
-       </label>
+<div class="form-check" data-tooltip="Filter for: Gifts for Him.">
+  <input class="form-check-input" id="gifts-for-him" type="checkbox" name="gifts-for-him">
+  <label class="form-check-label" for="gifts-for-him">👔 Gifts for Him</label>
 </div>
-<div class="form-check" data-tooltip="Gift ideas for kids of all ages.">
-<input aria-label="Gifts for Kids" class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox">
-<label class="form-check-label" for="giftsForKids">
-        🧒 Gifts for Kids
-       </label>
+
+<div class="form-check" data-tooltip="Filter for: Gifts for Kids.">
+  <input class="form-check-input" id="gifts-for-kids" type="checkbox" name="gifts-for-kids">
+  <label class="form-check-label" for="gifts-for-kids">🧒 Gifts for Kids</label>
 </div>
-<div class="form-check" data-tooltip="Perfect for birthday gift shopping.">
-<input aria-label="Birthday Gifts" class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox">
-<label class="form-check-label" for="birthdayGifts">
-        🎂 Birthday Gifts
-       </label>
+
+<div class="form-check" data-tooltip="Filter for: Birthday Gifts.">
+  <input class="form-check-input" id="birthday-gifts" type="checkbox" name="birthday-gifts">
+  <label class="form-check-label" for="birthday-gifts">🎂 Birthday Gifts</label>
 </div>
-<div class="form-check" data-tooltip="Holiday-themed gift deals.">
-<input aria-label="Holiday Gift Picks" class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox">
-<label class="form-check-label" for="holidayGiftPicks">
-        🎄 Holiday Gift Picks
-       </label>
+
+<div class="form-check" data-tooltip="Filter for: Holiday Gift Picks.">
+  <input class="form-check-input" id="holiday-gifts" type="checkbox" name="holiday-gifts">
+  <label class="form-check-label" for="holiday-gifts">🎄 Holiday Gift Picks</label>
 </div>
-<div class="form-check" data-tooltip="Affordable gifts under $25.">
-<input class="form-check-input" id="giftUnder25" name="giftIdeas" type="checkbox" value="gifts+under+25+dollars">
-<label class="form-check-label" for="giftUnder25">
-        💵 Gifts Under $25
-       </label>
+
+<div class="form-check" data-tooltip="Filter for: Gifts Under $25.">
+  <input class="form-check-input" id="gifts-under-25" type="checkbox" name="gifts-under-25">
+  <label class="form-check-label" for="gifts-under-25">💵 Gifts Under $25</label>
 </div>
-<div class="form-check" data-tooltip="Light-hearted and funny gift ideas.">
-<input class="form-check-input" id="funnyGifts" name="giftIdeas" type="checkbox" value="funny+gag+gifts">
-<label class="form-check-label" for="funnyGifts">
-        🤣 Funny &amp; Gag Gifts
-       </label>
+
+<div class="form-check" data-tooltip="Filter for: Funny & Gag Gifts.">
+  <input class="form-check-input" id="funny-gag-gifts" type="checkbox" name="funny-gag-gifts">
+  <label class="form-check-label" for="funny-gag-gifts">🤣 Funny & Gag Gifts</label>
 </div>
-<div class="form-check" data-tooltip="Quick gifts for last-minute shoppers.">
-<input class="form-check-input" id="lastMinuteGifts" name="giftIdeas" type="checkbox" value="last+minute+gifts">
-<label class="form-check-label" for="lastMinuteGifts">
-        ⏰ Last-Minute Gifts
-       </label>
+
+<div class="form-check" data-tooltip="Filter for: Last-Minute Gifts.">
+  <input class="form-check-input" id="last-minute-gifts" type="checkbox" name="last-minute-gifts">
+  <label class="form-check-label" for="last-minute-gifts">⏰ Last-Minute Gifts</label>
+</div>
+
 </div>
 </div>
 </div>
