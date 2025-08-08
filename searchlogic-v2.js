@@ -99,19 +99,22 @@ keywordAppend('extra-discount-codes',     'extra discount code');
       if (data.get(field) === 'on') rh.push(code);
     };
 
-    const rhMap = {
-      'prime-only':      'p_85:2470955011',
-      'free-shipping':   'p_76:1249177011',
-      'in-stock':        'p_n_availability:2661601011',
-      'coupons':         'p_n_feature_browse-bin:6779703011',
-      'fba-only':        'p_n_shipping_option-bin:3242350011',
-      'subscribe-save':  'p_n_is_sns_available:2619533011',
-      'small-business':  'p_n_cpf_eligible:5191495011',
-      'amazon-brands':   'p_n_feature_fourteen_browse-bin:18584192011',
-      'warehouse-refurb':'p_n_condition-type:2224371011',
-      'lightning-deals': 'p_n_deal_type:23566065011',
-      'outlet-deals':    'p_n_deal_type:493167011'
-    };
+   const rhMap = {
+  'prime-only':       'p_85:2470955011',
+  'free-shipping':    'p_76:1249177011',
+  'in-stock':         'p_n_availability:2661601011',
+  'coupons':          'p_n_feature_browse-bin:6779703011',
+  'fba-only':         'p_n_shipping_option-bin:3242350011',
+  'subscribe-save':   'p_n_is_sns_available:2619533011',
+  'small-business':   'p_n_cpf_eligible:5191495011',
+  'amazon-brands':    'p_n_feature_fourteen_browse-bin:18584192011',
+  'warehouse-refurb': 'p_n_condition-type:2224371011',
+  'lightning-deals':  'p_n_deal_type:23566065011',
+  'outlet-deals':     'p_n_deal_type:493167011',
+  'fair-trade':       'p_n_feature_seven_browse-bin:21246940011',
+  'biodegradable':    'p_n_feature_four_browse-bin:22407761011' // ✅ New line
+};
+
 
     Object.entries(rhMap).forEach(([field, code]) => pushRh(field, code));
 
@@ -154,6 +157,7 @@ keywordAppend('extra-discount-codes',     'extra discount code');
     window.open(url, '_blank');
   });
 });
+
 
 
 
