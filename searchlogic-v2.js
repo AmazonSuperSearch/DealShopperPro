@@ -25,8 +25,6 @@ keywordAppend('vegan-products',           'vegan');
 keywordAppend('organic-products',         'organic');
 keywordAppend('subscribe-save',           'subscribe and save');
 keywordAppend('sns-with-coupon',          'subscribe and save coupon');
-keywordAppend('refurbished-deals',        'refurbished deal');
-keywordAppend('warehouse-deals',          'warehouse deal');
 keywordAppend('open-box-deals',           'open box deal');
 keywordAppend('free-shipping-deals',      'free shipping deals');
 keywordAppend('prime-only',               'prime');
@@ -38,8 +36,8 @@ keywordAppend('clearance-deals',          'clearance');
 keywordAppend('deal-of-the-day',          'deal of the day');
 keywordAppend('best-seller-deals',        'best seller deals');
 keywordAppend('new-release',              'new release');
-keywordAppend('back-in-stock',            'back in stock');
-keywordAppend('over-50-off',              'over 50 percent off');
+
+
 
 // ⚠️ Moderately Effective - partial impact or indirect relevance
 keywordAppend('eco-friendly',             'eco friendly');
@@ -66,6 +64,41 @@ keywordAppend('extra-discount-codes',     'extra discount code');
 keywordAppend('minimal-packaging', 'minimal packaging');
     keywordAppend('no-microplastics', 'no microplastics');
     keywordAppend('made-in-usa', 'made in USA');
+    keywordAppend('new-release', 'new release');
+    keywordAppend('small-business', 'small business');
+keywordAppend('back-in-stock', 'back in stock');
+    keywordAppend('budget-essentials', 'budget essentials');
+    keywordAppend('limited-quantity-left', 'limited quantity deal');
+    keywordAppend('gifts-for-her', 'gifts for her');
+keywordAppend('gifts-for-him',        'gifts for him');
+keywordAppend('gifts-for-kids',       'gifts for kids');
+keywordAppend('birthday-gifts',       'birthday gifts');
+keywordAppend('holiday-gifts',        'holiday gift picks');
+keywordAppend('gifts-under-25',       'gifts under 25');
+keywordAppend('funny-gag-gifts',      'funny gifts');
+keywordAppend('last-minute-gifts',    'last minute gifts');
+    keywordAppend('fair-trade',              'fair trade');
+keywordAppend('carbon-neutral',          'carbon neutral delivery');
+keywordAppend('cruelty-free',            'cruelty free');
+keywordAppend('recyclable-packaging',    'recyclable packaging');
+keywordAppend('plastic-free',            'plastic free');
+keywordAppend('minimal-packaging',       'minimal packaging');
+keywordAppend('rechargeable-batteries',  'rechargeable batteries');
+keywordAppend('no-microplastics',        'no microplastics');
+keywordAppend('made-in-usa',             'made in usa');
+keywordAppend('back-in-stock',           'back in stock');
+keywordAppend('budget-essentials',       'budget essentials');
+keywordAppend('limited-quantity-left',   'limited quantity left');
+keywordAppend('gifts-for-her',           'gifts for her');
+keywordAppend('gifts-for-him',           'gifts for him');
+keywordAppend('gifts-for-kids',          'gifts for kids');
+keywordAppend('birthday-gifts',          'birthday gifts');
+keywordAppend('holiday-gift-picks',      'holiday gift picks');
+keywordAppend('gifts-under-25',          'gifts under 25');
+keywordAppend('funny-gag-gifts',         'funny gag gifts');
+keywordAppend('last-minute-gifts',       'last minute gifts');
+
+
 
 
 
@@ -117,7 +150,8 @@ keywordAppend('minimal-packaging', 'minimal packaging');
   'subscribe-save':   'p_n_is_sns_available:2619533011',
   'small-business':   'p_n_cpf_eligible:5191495011',
   'amazon-brands':    'p_n_feature_fourteen_browse-bin:18584192011',
-  'warehouse-refurb': 'p_n_condition-type:2224371011',
+  'warehouse-deals':   'p_n_condition-type:6461716011'
+  'refurbished-deals': 'p_n_condition-type:1269692011', 
   'lightning-deals':  'p_n_deal_type:23566065011',
   'outlet-deals':     'p_n_deal_type:493167011',
   'fair-trade':       'p_n_feature_seven_browse-bin:21246940011',
@@ -126,6 +160,8 @@ keywordAppend('minimal-packaging', 'minimal packaging');
      'under-25': 'p_36:-2500',
      'biodegradable': 'p_n_feature_twenty_browse-bin:12741577011',
 'fair-trade': 'p_n_feature_seven_browse-bin:21246940011',
+      'climate-pledge': 'p_n_cpf_eligible:5191495011',
+   
 };
 
 
@@ -170,6 +206,7 @@ keywordAppend('minimal-packaging', 'minimal packaging');
     window.open(url, '_blank');
   });
 });
+
 
 
 
