@@ -98,6 +98,30 @@
   [data-tooltip]:hover::after {
     opacity: 1;
   }
+  /* Darker checkbox borders */
+.form-check-input[type="checkbox"] {
+  border-color: #555;       /* darker border */
+  background-color: #fff;   /* keep white inside unless checked */
+}
+
+/* Slightly darker box when unchecked hover */
+.form-check-input[type="checkbox"]:hover {
+  border-color: #333;
+}
+
+/* Darker container around each option */
+.form-check {
+  background-color: #f8f9fa;  /* light gray background */
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+}
+
+/* Highlight on hover */
+.form-check:hover {
+  background-color: #e9ecef;  /* slightly darker gray */
+}
 </style>
   <link rel="stylesheet" href="/navbar.css">
 <!-- Scripts --><!-- Structured Data -->
