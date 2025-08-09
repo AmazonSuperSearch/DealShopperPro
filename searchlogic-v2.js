@@ -31,8 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'limited-time-deals': 'limited time deals',
       'ends-soon-deals': 'ends soon deals',
       'under-25-deals': 'under $25',
-      'expiring-coupons': 'expiring coupons',
-      'amazon-brands': 'Amazon brand',
+      'expiring-coupons': 'expiring coupons',  // <-- fixed missing comma
       'lowest-price': 'lowest price',
       'flash-sales': 'flash sale',
       'trending-deals': 'trending deals',
@@ -96,10 +95,36 @@ document.addEventListener('DOMContentLoaded', () => {
     // Apply all keyword fallbacks that are toggled on
     Object.entries(keywordAppendMap).forEach(([id, phrase]) => keywordAppend(id, phrase));
 
+    // --- helpers: clamp to 5..95, step 5, and map to facet code
+    function normalizePercentStep(value) {
+      let n = parseInt(value, 10);
+      if (Number.isNaN(n)) return null;
+      n = Math.round(n / 5) * 5;
+      if (n < 5) n = 5;
+      if (n > 95) n = 95;
+      return n;
+    }
+
+    // TODO: Fill with VERIFIED facet IDs for your marketplace (.com codes)
+    // Keys are 5,10,15,...,95; values like "p_n_pct-off-with-tax:XXXXXXXX"
+    const PCT_TO_RH = {
+      // 5:  'p_n_pct-off-with-tax:________',
+      // 10: 'p_n_pct-off-with-tax:________',
+      // 15: 'p_n_pct-off-with-tax:________',
+      // ...
+      // 95: 'p_n_pct-off-with-tax:________',
+    };
+
+    function percentOffToRh(pct) {
+      const n = normalizePercentStep(pct);
+      if (!n) return null;
+      return PCT_TO_RH[n] || null;
+    }
+
     // 3) % Off, Rating & Sort
-    const pct = data.get('percent-off');
-    // NOTE: Amazon doesn't use a "pct-off" URL param. Leave this for now.
-    // When ready, map `pct` (5..95) to verified `p_n_pct-off-with-tax:XXXXXXXX` RH codes and push to `rh`.
+    const pct = data.get('min-discount'); // from your <select name="min-discount">
+    const pctRh = percentOffToRh(pct);
+    if (pctRh) rh.push(pctRh);
 
     const rating = data.get('min-rating');
     if (rating === '1') rh.push('p_72:1248879011');
@@ -176,13 +201,14 @@ document.addEventListener('DOMContentLoaded', () => {
       rh.push(`p_36:${lower}-${upper}`);
     }
 
+    // Tidy query
+    q = q.replace(/\s+/g, ' ').trim();
+
     // 7) Final URL
-    // de-dupe rh
     if (rh.length) {
-      rh = [...new Set(rh)];
+      rh = [...new Set(rh)]; // de-dupe
       params.set('rh', rh.join(','));
     }
-
     params.set('k', q);
     params.set('tag', 'dealshopperpr-20');
 
@@ -207,8 +233,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 2500);
     }
 
-    // ✅ Open Amazon in new tab
-    window.open(url, '_blank');
+    // ✅ Open Amazon in new tab (with fallback if blocked)
+    const win = window.open(url, '_blank');
+    if (!win) location.href = url;
   });
 });
 </script>
