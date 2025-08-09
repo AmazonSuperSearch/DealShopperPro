@@ -1066,50 +1066,128 @@
 
 <!-- ✅ Testimonials / Trust / Exit Intent Section -->
 <section class="container my-5 text-center">
-<h2 class="fw-bold mb-4">💬 Trusted by Real Users</h2>
-<blockquote class="blockquote">
-<p class="mb-0">“I found a Prime‑only laptop with $200 off in seconds. Amazon search never showed me that!”</p>
-<footer class="blockquote-footer mt-2">Verified User</footer>
-</blockquote>
-<p class="mt-4 text-muted">We don’t store or track your searches. We just get you to the deals.</p>
-<a class="btn btn-outline-success mt-3 shadow-sm" href="/best-deals-today.html">✅ Show Me Today’s Best Deals</a>
-</div>
-<div class="text-center my-4">
-<h2 class="h5">📲 Share with Friends</h2>
-<p class="text-muted">Send this to someone who needs smarter Amazon filters:</p>
-<div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
-<!-- WhatsApp -->
-<a class="btn btn-success" href="https://wa.me/?text=https://www.dealshopperpro.com" target="_blank">WhatsApp</a>
-<!-- Messenger -->
-<a class="btn btn-primary" href="fb-messenger://share?link=https://www.dealshopperpro.com" target="_blank">Messenger</a>
-<!-- SMS -->
-<a class="btn btn-secondary" href="sms:?body=Check%20out%20this%20free%20Amazon%20deal%20filter:%20https://www.dealshopperpro.com" target="_blank">Text Message</a>
-<!-- Twitter -->
-<a class="btn btn-info" href="https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here:%20https://www.dealshopperpro.com" target="_blank">Twitter / X</a>
-<!-- Facebook -->
-<a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com" target="_blank">Facebook</a>
-<!-- Copy Link -->
-<button class="btn btn-dark" data-link="https://www.dealshopperpro.com" id="copyLinkBtn">Copy Page Link</button>
+  <h2 class="fw-bold mb-4">💬 Trusted by Real Users</h2>
+  <blockquote class="blockquote">
+    <p class="mb-0">“I found a Prime-only laptop with $200 off in seconds. Amazon search never showed me that!”</p>
+    <footer class="blockquote-footer mt-2">Verified User</footer>
+  </blockquote>
+  <p class="mt-4 text-muted">We don’t store or track your searches. We just get you to the deals.</p>
+  <a class="btn btn-outline-success mt-3 shadow-sm" href="/best-deals-today.html">✅ Show Me Today’s Best Deals</a>
+</section> <!-- 👈 close the section, not a div -->
 
+<div class="text-center my-4">
+  <h2 class="h5">📲 Share with Friends</h2>
+  <p class="text-muted">Send this to someone who needs smarter Amazon filters:</p>
+  <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+    <!-- WhatsApp -->
+    <a class="btn btn-success" 
+       href="https://wa.me/?text=Check%20out%20this%20free%20Amazon%20deal%20filter%3A%20https%3A%2F%2Fwww.dealshopperpro.com" 
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Share on WhatsApp">
+       WhatsApp
+    </a>
+
+    <!-- Messenger with fallback -->
+    <a class="btn btn-primary"
+       href="#"
+       onclick="shareMessenger(event)"
+       aria-label="Share on Messenger">
+       Messenger
+    </a>
+
+    <!-- SMS with fallback -->
+    <a class="btn btn-secondary"
+       href="#"
+       onclick="shareSMS(event)"
+       aria-label="Send via SMS">
+       Text Message
+    </a>
+
+    <!-- Twitter / X -->
+    <a class="btn btn-info" 
+       href="https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here%3A%20https%3A%2F%2Fwww.dealshopperpro.com"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Share on Twitter or X">
+       Twitter / X
+    </a>
+
+    <!-- Facebook -->
+    <a class="btn btn-primary"
+       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dealshopperpro.com"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Share on Facebook">
+       Facebook
+    </a>
+
+    <!-- Copy Link -->
+    <button class="btn btn-dark" 
+            id="copyLinkBtn" 
+            data-link="https://www.dealshopperpro.com"
+            aria-label="Copy page link">
+      Copy Page Link
+    </button>
+  </div>
 </div>
-</div>
+
 <script>
-  document.getElementById("copyLinkBtn").addEventListener("click", function () {
-    const pageUrl = this.getAttribute("data-link") || window.location.href;
-    navigator.clipboard.writeText(pageUrl).then(() => {
-      this.textContent = "Copied!";
-      setTimeout(() => {
-        this.textContent = "Copy Page Link";
-      }, 2000);
-    }).catch(err => {
-      console.error("Copy failed:", err);
-      alert("Failed to copy link.");
-    });
+function isMobile() {
+  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+}
+
+function shareMessenger(e) {
+  e.preventDefault();
+  const url = encodeURIComponent('https://www.dealshopperpro.com');
+  if (isMobile()) {
+    window.location.href = `fb-messenger://share?link=${url}`;
+  } else {
+    window.open(
+      `https://www.facebook.com/dialog/send?link=${url}&app_id=YOUR_APP_ID&redirect_uri=${url}`,
+      '_blank',
+      'noopener,noreferrer'
+    );
+  }
+}
+
+function shareSMS(e) {
+  e.preventDefault();
+  const message = encodeURIComponent('Check out this free Amazon deal filter: https://www.dealshopperpro.com');
+  if (isMobile()) {
+    window.location.href = `sms:?body=${message}`;
+  } else {
+    alert('SMS sharing is only available on mobile. Copy this message:\n\n' + decodeURIComponent(message));
+  }
+}
+
+// Single Copy Link handler (keep just this one)
+document.getElementById('copyLinkBtn').addEventListener('click', function () {
+  const pageUrl = this.getAttribute('data-link') || window.location.href;
+  navigator.clipboard.writeText(pageUrl).then(() => {
+    this.textContent = 'Copied!';
+    setTimeout(() => { this.textContent = 'Copy Page Link'; }, 2000);
+  }).catch(err => {
+    console.error('Copy failed:', err);
+    alert('Failed to copy link.');
   });
+});
 </script>
-</main>
+
 <!-- ——————————— SITE-WIDE FOOTER ——————————— -->
 <footer>
+  <div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
+    ...
+    <p>
+      <a href="https://www.dealshopperpro.com/contact.html">Contact Us</a> |
+      <a href="https://www.dealshopperpro.com/about.html">About Deal Shopper Pro</a> |
+      <a href="https://www.dealshopperpro.com/help.html">Help Guide</a> |
+      <a href="https://www.dealshopperpro.com/media.html">Articles &amp; Videos</a> |
+      <a href="https://www.dealshopperpro.com/sitemap.html">Sitemap</a> |
+      <a class="text-primary fw-semibold" href="https://www.facebook.com/share/g/1C1BARo5YJ/" rel="noopener noreferrer" target="_blank">💬 Facebook Group</a> |
+      <a href="https://www.dealshopperpro.com/privacy.html">Privacy Policy</a> |
+      <a href="https://www.dealshopperpro.com/terms.html">Terms of Use</a>
+    </p>
+    ...
+  </div>
+</footer>
 <div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
 <p>
 <strong>Disclaimer:</strong>
