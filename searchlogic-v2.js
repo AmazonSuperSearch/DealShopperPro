@@ -1,4 +1,3 @@
-<script>
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
   if (!form) return;
@@ -238,4 +237,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!win) location.href = url;
   });
 });
-</script>
+
