@@ -396,8 +396,8 @@
 </select>
 </div>
 <div class="col-md-4">
-<label class="form-label" for="minDiscount">Minimum Discount</label>
-<select id="min-discount" name="min-discount" class="form-select">
+  <label class="form-label" for="min-discount">Minimum Discount</label>
+  <select id="min-discount" name="min-discount" class="form-select">
   <option value="">Any</option>
   <option value="5">5%+</option>
   <option value="10">10%+</option>
@@ -860,33 +860,42 @@
 </div>
 </div>
  
-<!-- STEP 6: View Results -->
+<!-- STEP 6: View Results (INSIDE the same accordion & form) -->
 <div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingStep6">
-<button class="btn btn-success fw-bold" type="submit" form="amazon-search-form">
-  🔎 Search Amazon Now
-</button>
-</h2>
-<div class="accordion-collapse collapse" id="collapseStep6"
-     data-bs-parent="#filterAccordion" aria-labelledby="headingStep6">
-<div class="accordion-body">
-<p class="text-muted">After setting your filters, click below to see matching results on Amazon.</p>
-<button class="btn btn-success fw-bold" type="submit" form="amazon-search-form">
-  🔎 Search Amazon Now
-</button>
+  <h2 class="accordion-header" id="headingStep6">
+    <button class="accordion-button collapsed bg-white fw-bold"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseStep6"
+            aria-expanded="false"
+            aria-controls="collapseStep6">
+      📊 ✅ Step 6: View Results on Amazon
+    </button>
+  </h2>
+  <div id="collapseStep6" class="accordion-collapse collapse"
+       aria-labelledby="headingStep6" data-bs-parent="#filterAccordion">
+    <div class="accordion-body">
+      <p class="text-muted">
+        After setting your filters, click below to see matching results on Amazon.
+      </p>
+      <button class="btn btn-success fw-bold" type="submit">
+        🔎 Search Amazon Now
+      </button>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-<!-- ✅ Redundant CTA BELOW, also INSIDE form -->
+
+<!-- Final CTA inside the form as well -->
 <div class="text-center my-4">
   <button class="btn btn-success fw-bold" type="submit" aria-label="Search Amazon Deals Now">
     🔎 Search Amazon Now
   </button>
 </div>
-</div>
-</div>
-</form>
-
+</div><!-- close .accordion -->
+</form><!-- ✅ close the form here -->
+</div><!-- .col-lg-10 -->
+</div><!-- .row -->
+</section><!-- .container py-4 -->
 <!-- 🚫 Amazon Search Problems — Solved -->
 <section class="container my-5">
   <h2 class="text-center fw-bold mb-4 text-danger-emphasis">
@@ -1051,10 +1060,9 @@
 <script defer="" src="/navbar-loader.js"></script>
 
 <!-- ✅ 6-Step Guided Search Section -->
-<section id="guided-search" class="container mt-4">
-  <!-- Accordion placeholder (inserted earlier externally) -->
+<div id="guided-search" class="container mt-4">
   <div id="searchAccordionContainer"></div>
-</section>
+</div>
 
 <!-- ✅ Testimonials / Trust / Exit Intent Section -->
 <section class="container my-5 text-center">
@@ -1099,8 +1107,7 @@
     });
   });
 </script>
-<!-- Footer remains untouched -->
-</section>
+</main>
 <!-- ——————————— SITE-WIDE FOOTER ——————————— -->
 <footer>
 <div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
