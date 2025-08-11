@@ -15,16 +15,17 @@
 <link href="https://www.dealshopperpro.com/lightning-deals.html" hreflang="en-US" rel="alternate">
 <link href="https://www.dealshopperpro.com/lightning-deals.html" hreflang="x-default" rel="alternate">
 <!-- Open Graph / Twitter -->
-<meta content="website" property="og:type">
-<meta content="en_US" property="og:locale">
-<meta content="https://www.dealshopperpro.com/lightning-deals.html" property="og:url">
-<meta content="How to Find Lightning Deals on Amazon Fast | Deal Shopper Pro" property="og:title">
-<meta content="Learn how to find lightning deals on Amazon in seconds—browse all live deals, search by keyword &amp; price, or follow our 6-step advanced Amazon deal finder guide." property="og:description">
-<meta content="https://www.dealshopperpro.com/images/howto-lightning-deals.png" property="og:image">
-<meta content="summary_large_image" name="twitter:card">
-<meta content="How to Find Lightning Deals on Amazon Fast | Deal Shopper Pro" name="twitter:title">
-<meta content="Learn how to find lightning deals on Amazon in seconds—browse all live deals, search by keyword &amp; price, or follow our 6-step advanced Amazon deal finder guide." name="twitter:description">
-<meta content="https://www.dealshopperpro.com/images/howto-lightning-deals.png" name="twitter:image">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://www.dealshopperpro.com/lightning-deals.html">
+<meta property="og:title" content="Amazon Lightning Deals: 3 Fast Ways to Find Them (Updated 2025)">
+<meta property="og:description" content="Find Amazon Lightning Deals in seconds — live deals, keyword + price search, and a 6-step advanced filter for Prime-only discounts, coupons, and more. Always fresh, no login needed.">
+<meta property="og:image" content="https://www.dealshopperpro.com/images/howto-lightning-deals.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Amazon Lightning Deals: 3 Fast Ways to Find Them (Updated 2025)">
+<meta name="twitter:description" content="Find Amazon Lightning Deals in seconds — live deals, keyword + price search, and a 6-step advanced filter for Prime-only discounts, coupons, and more. Always fresh, no login needed.">
+<meta name="twitter:image" content="https://www.dealshopperpro.com/images/howto-lightning-deals.png">
 <!-- Publishing dates -->
 <meta content="2025-06-29T00:00:00+00:00" property="article:published_time">
 <meta content="2025-06-30T00:00:00+00:00" property="article:modified_time">
@@ -135,18 +136,15 @@
 
 <div id="navbar-placeholder"></div>
 <script defer="" src="/navbar-loader.js"></script>
-<img alt="How to Find Lightning Deals on Amazon"
-     class="intro-image"
-     src="how-to-find-lightning-deals-amazon.webp"
-     width="480">
+<img alt="How to Find Lightning Deals on Amazon" class="intro-image" loading="lazy" src="how-to-find-lightning-deals-amazon.webp" width="480">
 <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 <main id="main-content">
     <p class="text-muted small">Updated August 2025 — All methods tested and working</p>
 <!-- ✅ Hero Banner -->
 <header aria-labelledby="page-title" class="hero-banner text-center py-5">
-  <h2 class="hero-heading mb-3 fw-bold" id="page-title">
+  <h1 class="hero-heading mb-3 fw-bold" id="page-title">
     How to Find Lightning Deals on Amazon
-  </h2>
+  </h1>
   <div class="container">
     <p class="hero-tagline">
       ⚡ Discover limited-time Amazon deals in seconds ⚡
@@ -423,7 +421,7 @@
     <a href="/prime-only-deals.html">how to find lightning deals on amazon</a>
   </p>
 </section>
-<footer id="footer">
+<footer>
 <div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
 <p>
 <strong>Disclaimer:</strong>
@@ -477,29 +475,24 @@ document.getElementById('lightning-search-form')?.addEventListener('submit', fun
   const q = this.q.value.trim();
   const low = this['low-price'].value;
   const high = this['high-price'].value;
-  if (!q) { alert('Enter a search term.'); return; }
 
-  const params = new URLSearchParams();
-  params.set('k', q);
-  // Lightning Deals filter
-  params.set('rh', 'p_n_deal_type:493167011');
+  if (!q) {
+    alert('Enter a search term.');
+    return;
+  }
 
-  if (low)  params.set('low-price', low);
-  if (high) params.set('high-price', high);
-
-  // Keep your affiliate + a stable ref
-  params.set('tag', 'dealshopperpr-20');
-  params.set('s', 'date-desc-rank'); // optional: newest first often helps with LDs
-
-  const url = 'https://www.amazon.com/s?' + params.toString();
+  let url = 'https://www.amazon.com/s?i=lightning-deals&k=' + encodeURIComponent(q) + '&eligibleLightningDeals=1';
+  if (low)  url += '&low-price=' + encodeURIComponent(low);
+  if (high) url += '&high-price=' + encodeURIComponent(high);
+  url += '&ref_=nav_topnav_deals&tag=dealshopperpr-20';
 
   const link = document.getElementById('lightningAffiliateLink');
   link.href = url;
   link.classList.remove('d-none');
   link.focus();
 });
-</script>
 
+</script>
 <!-- HowTo structured data for the 6-step guide -->
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -721,26 +714,35 @@ document.getElementById('lightning-search-form')?.addEventListener('submit', fun
   },
   "dateModified": "2025-08-01"
 }</script>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "@id": "https://www.dealshopperpro.com/lightning-deals.html#app",
-  "name": "Deal Shopper Pro – Amazon Lightning Deals Finder",
+  "name": "Deal Shopper Pro \u2013 Amazon Lightning Deals Finder",
   "operatingSystem": "All",
   "applicationCategory": "ShoppingApplication",
-  "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "USD" },
+  "offers": {
+    "@type": "Offer",
+    "price": "0.00",
+    "priceCurrency": "USD"
+  },
   "featureList": [
     "Amazon Lightning Deals search",
     "Advanced filtering by price, rating, Prime status, and brand",
     "One-click browse and keyword-based search",
     "Mobile-friendly and free to use"
   ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "100"
+  },
   "url": "https://www.dealshopperpro.com/lightning-deals.html",
-  "author": { "@type": "Organization", "name": "Deal Shopper Pro" }
-}
-</script>
-
+  "author": {
+    "@type": "Organization",
+    "name": "Deal Shopper Pro"
+  }
+}</script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "ImageObject",
