@@ -485,24 +485,33 @@ document.getElementById('lightning-search-form')?.addEventListener('submit', fun
   const q = this.q.value.trim();
   const low = this['low-price'].value;
   const high = this['high-price'].value;
-
-  if (!q) {
-    alert('Enter a search term.');
-    return;
+  if (!q) { 
+    alert('Enter a search term.'); 
+    return; 
   }
 
-  let url = 'https://www.amazon.com/s?i=lightning-deals&k=' + encodeURIComponent(q) + '&eligibleLightningDeals=1';
-  if (low)  url += '&low-price=' + encodeURIComponent(low);
-  if (high) url += '&high-price=' + encodeURIComponent(high);
-  url += '&ref_=nav_topnav_deals&tag=dealshopperpr-20';
+  const params = new URLSearchParams();
+  params.set('k', q);
+
+  // ✅ Correct Lightning Deals RH filter
+  params.set('rh', 'p_n_deal_type:23566065011');
+
+  if (low)  params.set('low-price', low);
+  if (high) params.set('high-price', high);
+
+  // Keep your affiliate + stable ref
+  params.set('tag', 'dealshopperpr-20');
+  params.set('s', 'date-desc-rank'); // newest first often helps with LDs
+
+  const url = 'https://www.amazon.com/s?' + params.toString();
 
   const link = document.getElementById('lightningAffiliateLink');
   link.href = url;
   link.classList.remove('d-none');
   link.focus();
 });
-
 </script>
+
 <!-- HowTo structured data for the 6-step guide -->
 <script type="application/ld+json">{
   "@context": "https://schema.org",
