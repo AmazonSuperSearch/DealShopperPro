@@ -6,8 +6,10 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <meta content="index, follow" name="robots">
-<title>How to Find Amazon Lightning Deals Fast (2025 Guide) | Deal Shopper Pro</title>
-<meta content="Learn how to find Amazon Lightning Deals fast — use our one-click deal viewer, keyword + price search, or 6-step advanced filter. Find Prime lightning deals instantly with no login." name="description">
+<title>Amazon Lightning Deals: 3 Fast Ways to Find Them (Updated 2025)</title>
+<meta name="description" content="Find Amazon Lightning Deals in seconds — live deals, keyword + price search, and a 6-step advanced filter for Prime-only discounts, coupons, and more. Always fresh, no login needed.">
+
+
 <!-- Canonical & hreflang -->
 <link href="https://www.dealshopperpro.com/lightning-deals.html" rel="canonical">
 <link href="https://www.dealshopperpro.com/lightning-deals.html" hreflang="en-US" rel="alternate">
@@ -127,16 +129,24 @@
 </noscript>
 </head>
 <body>
+    <h1 class="mb-3 fw-bold">
+  Amazon Lightning Deals: 3 Fast Ways to Find Them in 2025
+</h1>
+
 <div id="navbar-placeholder"></div>
 <script defer="" src="/navbar-loader.js"></script>
-<img alt="How to Find Lightning Deals on Amazon" class="intro-image" loading="lazy" src="how-to-find-lightning-deals-amazon.webp" width="480">
+<img alt="How to Find Lightning Deals on Amazon"
+     class="intro-image"
+     src="how-to-find-lightning-deals-amazon.webp"
+     width="480">
 <a class="visually-hidden-focusable" href="#main-content">Skip to main content</a>
 <main id="main-content">
+    <p class="text-muted small">Updated August 2025 — All methods tested and working</p>
 <!-- ✅ Hero Banner -->
 <header aria-labelledby="page-title" class="hero-banner text-center py-5">
-  <h1 class="hero-heading mb-3 fw-bold" id="page-title">
+  <h2 class="hero-heading mb-3 fw-bold" id="page-title">
     How to Find Lightning Deals on Amazon
-  </h1>
+  </h2>
   <div class="container">
     <p class="hero-tagline">
       ⚡ Discover limited-time Amazon deals in seconds ⚡
@@ -405,7 +415,15 @@
 </div>
 </div></div></section>
 </main>
-<footer>
+    <section class="container my-4">
+  <p class="small text-muted mb-1">Related guides:</p>
+  <p>
+    <a href="/lightning-deals.html">amazon lightning deals</a> ·
+    <a href="/best-deals-today.html">best amazon lightning deals today</a> ·
+    <a href="/prime-only-deals.html">how to find lightning deals on amazon</a>
+  </p>
+</section>
+<footer id="footer">
 <div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
 <p>
 <strong>Disclaimer:</strong>
@@ -459,24 +477,29 @@ document.getElementById('lightning-search-form')?.addEventListener('submit', fun
   const q = this.q.value.trim();
   const low = this['low-price'].value;
   const high = this['high-price'].value;
+  if (!q) { alert('Enter a search term.'); return; }
 
-  if (!q) {
-    alert('Enter a search term.');
-    return;
-  }
+  const params = new URLSearchParams();
+  params.set('k', q);
+  // Lightning Deals filter
+  params.set('rh', 'p_n_deal_type:493167011');
 
-  let url = 'https://www.amazon.com/s?i=lightning-deals&k=' + encodeURIComponent(q) + '&eligibleLightningDeals=1';
-  if (low)  url += '&low-price=' + encodeURIComponent(low);
-  if (high) url += '&high-price=' + encodeURIComponent(high);
-  url += '&ref_=nav_topnav_deals&tag=dealshopperpr-20';
+  if (low)  params.set('low-price', low);
+  if (high) params.set('high-price', high);
+
+  // Keep your affiliate + a stable ref
+  params.set('tag', 'dealshopperpr-20');
+  params.set('s', 'date-desc-rank'); // optional: newest first often helps with LDs
+
+  const url = 'https://www.amazon.com/s?' + params.toString();
 
   const link = document.getElementById('lightningAffiliateLink');
   link.href = url;
   link.classList.remove('d-none');
   link.focus();
 });
-
 </script>
+
 <!-- HowTo structured data for the 6-step guide -->
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -698,35 +721,26 @@ document.getElementById('lightning-search-form')?.addEventListener('submit', fun
   },
   "dateModified": "2025-08-01"
 }</script>
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "@id": "https://www.dealshopperpro.com/lightning-deals.html#app",
-  "name": "Deal Shopper Pro \u2013 Amazon Lightning Deals Finder",
+  "name": "Deal Shopper Pro – Amazon Lightning Deals Finder",
   "operatingSystem": "All",
   "applicationCategory": "ShoppingApplication",
-  "offers": {
-    "@type": "Offer",
-    "price": "0.00",
-    "priceCurrency": "USD"
-  },
+  "offers": { "@type": "Offer", "price": "0.00", "priceCurrency": "USD" },
   "featureList": [
     "Amazon Lightning Deals search",
     "Advanced filtering by price, rating, Prime status, and brand",
     "One-click browse and keyword-based search",
     "Mobile-friendly and free to use"
   ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "100"
-  },
   "url": "https://www.dealshopperpro.com/lightning-deals.html",
-  "author": {
-    "@type": "Organization",
-    "name": "Deal Shopper Pro"
-  }
-}</script>
+  "author": { "@type": "Organization", "name": "Deal Shopper Pro" }
+}
+</script>
+
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "ImageObject",
