@@ -82,6 +82,16 @@
       overflow: hidden; clip: rect(0 0 0 0);
       border: 0;
     }
+    .visually-hidden-focusable:active,
+.visually-hidden-focusable:focus {
+  position: static !important;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+
      /* Video placeholder focus outline */
   .youtube-lite:focus {
     outline: 2px solid #007bff;
