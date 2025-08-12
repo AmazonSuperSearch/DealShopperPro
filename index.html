@@ -7,13 +7,15 @@
 <meta content="index, follow" name="robots">
 <title>Advanced Amazon Search | Deal Shopper Pro</title>
 <meta name="description" content="Use our advanced Amazon search tool with unique filters for Lightning Deals, Prime-only offers, hidden coupons, and more — find the best deals in seconds.">
-  <meta property="og:type" content="website">
+
+<!-- Open Graph / Twitter (single, deduped) -->
+<meta property="og:type" content="website">
 <meta property="og:title" content="Advanced Amazon Search | Deal Shopper Pro">
 <meta property="og:description" content="Find Prime-only offers, Lightning Deals, and hidden coupons fast with smart filters.">
 <meta property="og:url" content="https://www.dealshopperpro.com/">
 <meta property="og:image" content="https://www.dealshopperpro.com/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="keywords" content="advanced Amazon search, Amazon filters, Amazon deal finder, Prime-only deals, Amazon coupons, Amazon Lightning Deals, filter Amazon by seller, best Amazon deals today, Amazon promo codes, Amazon gift ideas, eco-friendly products on Amazon">
+
 <link rel="canonical" href="https://www.dealshopperpro.com/">
 
 <!-- Favicon -->
@@ -29,15 +31,22 @@
 <!-- Bootstrap CSS (match your JS version) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 <link href="/navbar.css" rel="stylesheet">
+
+<!-- Preconnects (deduped) -->
 <link rel="preconnect" href="https://www.youtube-nocookie.com">
 <link rel="preconnect" href="https://i.ytimg.com">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
 <style>
   /* Bootstrap primary override */
   :root {
     --bs-primary: #66b2ff;
     --bs-primary-rgb: 102, 178, 255;
+    --bs-focus-ring-color: rgba(102,178,255,.4);
   }
-:root { --bs-focus-ring-color: rgba(102,178,255,.4); }
+
   /* Glow pulse text effect */
   .glow-pulse {
     font-weight: 800;
@@ -68,19 +77,11 @@
   }
 
   /* Improve hover/active contrast for primary buttons */
-  .btn-primary:hover {
-    filter: brightness(0.92);
-  }
-  .btn-primary:active,
-  .btn-primary:focus {
-    filter: brightness(0.88);
-  }
+  .btn-primary:hover { filter: brightness(0.92); }
+  .btn-primary:active, .btn-primary:focus { filter: brightness(0.88); }
 
   /* Tooltip styling */
-  [data-tooltip] {
-    position: relative;
-    cursor: help;
-  }
+  [data-tooltip] { position: relative; cursor: help; }
   [data-tooltip]::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -96,846 +97,628 @@
     pointer-events: none;
     transition: opacity 0.2s;
   }
-  [data-tooltip]:hover::after {
-    opacity: 1;
-  }
+  [data-tooltip]:hover::after { opacity: 1; }
+
   /* Darker checkbox borders */
-.form-check-input[type="checkbox"] {
-  border-color: #555;       /* darker border */
-  background-color: #fff;   /* keep white inside unless checked */
-}
-
-/* Slightly darker box when unchecked hover */
-.form-check-input[type="checkbox"]:hover {
-  border-color: #333;
-}
-
+  .form-check-input[type="checkbox"] {
+    border-color: #555;
+    background-color: #fff;
+  }
+  .form-check-input[type="checkbox"]:hover { border-color: #333; }
   .form-check-input[type="checkbox"]:checked {
-  background-color: var(--bs-primary); /* or #0d6efd for Bootstrap blue */
-  border-color: var(--bs-primary);
-}
-  
-/* Darker container around each option */
-.form-check {
-  background-color: #f8f9fa;  /* light gray background */
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  margin-bottom: 5px;
-}
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+  }
 
-/* Highlight on hover */
-.form-check:hover {
-  background-color: #e9ecef;  /* slightly darker gray */
-}
+  /* Darker container around each option */
+  .form-check {
+    background-color: #f8f9fa;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+  }
+  .form-check:hover { background-color: #e9ecef; }
 </style>
-  <link rel="stylesheet" href="/navbar.css">
-<!-- Scripts --><!-- Structured Data -->
+
+<!-- Structured Data -->
+<!-- ===== Added Structured Data: Drop-in Improvements ===== -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://www.dealshopperpro.com/#website",
-      "url": "https://www.dealshopperpro.com",
-      "name": "Deal Shopper Pro",
-      "description": "Advanced Amazon deal search with filters for Prime, coupons, Lightning Deals, and more.",
-      "publisher": {
-        "@id": "https://www.dealshopperpro.com/#organization"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.dealshopperpro.com/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },{
-  "@type": "WebPage",
-  "@id": "https://www.dealshopperpro.com/#webpage",
-  "url": "https://www.dealshopperpro.com",
-  "name": "Advanced Amazon Search | Deal Shopper Pro",
-  "description": "Find the best Amazon deals using our smart 6-step filter system. Discover Prime-only offers, coupons, Lightning Deals, and more.",
-  "isPartOf": {
-    "@id": "https://www.dealshopperpro.com/#website"
-  },
-  "about": {
-    "@id": "https://www.dealshopperpro.com/#software"
-  },
-  "breadcrumb": {
-    "@id": "https://www.dealshopperpro.com/#breadcrumb"
-  },
-  "mainEntityOfPage": {
-    "@id": "https://www.dealshopperpro.com/"
-  },
-  "dateModified": "2025-08-04",
-  "hasPart": [
-    {
-      "@id": "https://www.dealshopperpro.com/#software"
-    }
-  ]
-}
-,
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.dealshopperpro.com/#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.dealshopperpro.com/"
-        }
-      ]
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://www.dealshopperpro.com/#software",
-      "name": "Deal Shopper Pro",
-      "operatingSystem": "All",
-      "applicationCategory": "ShoppingApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "description": "Web-based Amazon search tool with smart filters for Prime, coupons, and Lightning Deals.",
-      "license": "https://www.dealshopperpro.com/terms.html",
-      "termsOfService": "https://www.dealshopperpro.com/terms.html"
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://www.dealshopperpro.com/#organization",
-      "name": "Deal Shopper Pro",
-      "url": "https://www.dealshopperpro.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.dealshopperpro.com/logo.png"
-      },
-      "sameAs": [
-        "https://www.facebook.com/share/g/1C1BARo5YJ/",
-        "https://www.pinterest.com/dealshopperpro/",
-        "https://dealshopperpro.medium.com/",
-        "https://dealshopperpro.blogspot.com/"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "Customer Support",
-        "url": "https://www.dealshopperpro.com/help.html"
-      }
-    }
-  ]
-}
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.dealshopperpro.com/#website","url":"https://www.dealshopperpro.com","name":"Deal Shopper Pro","description":"Advanced Amazon deal search with filters for Prime, coupons, Lightning Deals, and more.","inLanguage":"en-US","publisher":{"@id":"https://www.dealshopperpro.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.dealshopperpro.com/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.dealshopperpro.com/#webpage","url":"https://www.dealshopperpro.com","name":"Advanced Amazon Search | Deal Shopper Pro","inLanguage":"en-US","description":"Find the best Amazon deals using our smart 6-step filter system. Discover Prime-only offers, coupons, Lightning Deals, and more.","isPartOf":{"@id":"https://www.dealshopperpro.com/#website"},"about":{"@id":"https://www.dealshopperpro.com/#software"},"breadcrumb":{"@id":"https://www.dealshopperpro.com/#breadcrumb"},"mainEntityOfPage":{"@id":"https://www.dealshopperpro.com/"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/og-image.jpg","width":1200,"height":630},"dateModified":"2025-08-12","hasPart":[{"@id":"https://www.dealshopperpro.com/#software"}]},{"@type":"BreadcrumbList","@id":"https://www.dealshopperpro.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dealshopperpro.com/"},{"@type":"ListItem","position":2,"name":"Advanced Amazon Search","item":"https://www.dealshopperpro.com/"}]},{"@type":"SoftwareApplication","@id":"https://www.dealshopperpro.com/#software","name":"Deal Shopper Pro","applicationCategory":"WebApplication","operatingSystem":"Web","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.dealshopperpro.com","description":"Web-based Amazon search tool with smart filters for Prime, coupons, and Lightning Deals.","license":"https://www.dealshopperpro.com/terms.html","termsOfService":"https://www.dealshopperpro.com/terms.html"},{"@type":"Organization","@id":"https://www.dealshopperpro.com/#organization","name":"Deal Shopper Pro","url":"https://www.dealshopperpro.com","logo":{"@type":"ImageObject","@id":"https://www.dealshopperpro.com/#logo","url":"https://www.dealshopperpro.com/logo.png","width":512,"height":512},"sameAs":["https://www.pinterest.com/dealshopperpro/","https://dealshopperpro.medium.com/","https://dealshopperpro.blogspot.com/"],"contactPoint":{"@type":"ContactPoint","contactType":"Customer Support","url":"https://www.dealshopperpro.com/help.html","availableLanguage":["en"],"areaServed":"US"}},{"@type":"FAQPage","@id":"https://www.dealshopperpro.com/#faq","mainEntity":[{"@type":"Question","name":"What is Deal Shopper Pro?","acceptedAnswer":{"@type":"Answer","text":"Deal Shopper Pro is a free Amazon deal search tool that helps you filter by price, rating, Prime, coupons, and more."}},{"@type":"Question","name":"How do I find Prime‑only deals on Amazon fast?","acceptedAnswer":{"@type":"Answer","text":"Use the ‘Extra Filters’ section and check the ‘Prime Only’ box. Then submit your search to open Prime‑eligible deals directly on Amazon."}},{"@type":"Question","name":"Can I search by price range, rating, and brand all at once?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the 6‑step guided search form to combine multiple filters including price, brand, ratings, and special deals like Lightning Deals or coupons."}},{"@type":"Question","name":"Does this site show hidden deals or coupons?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our advanced filters can reveal hidden discounts like coupons, Lightning Deals, Subscribe & Save deals, and limited‑time offers that don’t show up in standard Amazon searches."}},{"@type":"Question","name":"Is Deal Shopper Pro affiliated with Amazon?","acceptedAnswer":{"@type":"Answer","text":"No. Deal Shopper Pro is an independent site that uses the Amazon Associates API to help users find products more efficiently. We are not affiliated with or endorsed by Amazon."}}]},{"@type":"FAQPage","@id":"https://www.dealshopperpro.com/#faq","mainEntity":[{"@type":"Question","name":"How does Deal Shopper Pro work?","acceptedAnswer":{"@type":"Answer","text":"Deal Shopper Pro uses a custom 6-step filter system to search Amazon, helping you find Prime-only offers, coupons, Lightning Deals, and more."}},{"@type":"Question","name":"Is Deal Shopper Pro free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is completely free to use."}},{"@type":"Question","name":"Do you store my Amazon search history?","acceptedAnswer":{"@type":"Answer","text":"No, we do not track, store, or share your Amazon search history."}}]}]}
 </script>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is Deal Shopper Pro?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Deal Shopper Pro is a free Amazon deal search tool that helps you filter by price, rating, Prime, coupons, and more."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I find Prime‑only deals on Amazon fast?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Use the ‘Extra Filters’ section and check the ‘Prime Only’ box. Then submit your search to open Prime‑eligible deals directly on Amazon."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I search by price range, rating, and brand all at once?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Use the 6‑step guided search form to combine multiple filters including price, brand, ratings, and special deals like Lightning Deals or coupons."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does this site show hidden deals or coupons?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Our advanced filters can reveal hidden discounts like coupons, Lightning Deals, Subscribe & Save deals, and limited‑time offers that don’t show up in standard Amazon searches."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Deal Shopper Pro affiliated with Amazon?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Deal Shopper Pro is an independent site that uses the Amazon Associates API to help users find products more efficiently. We are not affiliated with or endorsed by Amazon."
-      }
-    }
-  ]
-}
-</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Advanced Amazon Search | Deal Shopper Pro">
-<meta property="og:description" content="Find Prime-only offers, Lightning Deals, and hidden coupons fast.">
-<meta property="og:url" content="https://www.dealshopperpro.com/">
-<meta property="og:image" content="https://www.dealshopperpro.com/og-image.jpg">
-<meta name="twitter:card" content="summary_large_image">
-
-<link rel="preconnect" href="https://www.youtube-nocookie.com">
-<link rel="preconnect" href="https://i.ytimg.com">
-
-  <style>
-    :root {
-      --bs-primary: #66b2ff;
-      --bs-primary-rgb: 102, 178, 255;
-    }
-  </style>
-
 </head>
 
 <body>
 <main>
-<div id="navbar-placeholder"></div><!-- Accordion-Style Amazon Search Tool -->
- <!-- Search Tool -->
-  <section class="container py-4">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <h1 class="glow-pulse text-center my-4">Advanced Amazon Deal Finder</h1>
-<form id="amazon-search-form">
-<div class="accordion" id="filterAccordion">
-<!-- Accordion content continues here -->
-<!-- 🔍 Above-the-Fold: Hero Section (Replaced Layout) -->
-<section class="container py-5 text-center">
-<h2 class="fw-bold display-5 mb-3">Tired of Missing Hidden Amazon Deals?</h2>
+<div id="navbar-placeholder"></div>
+<!-- Visible Breadcrumbs (match JSON-LD) -->
+<nav aria-label="breadcrumb" class="container mt-3">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Advanced Amazon Search</li>
+  </ol>
+</nav>
 
-<p class="lead text-muted text-center mb-2">
-  Discover Prime‑Only offers, hidden discounts, and coupon‑stacked deals — fast.
-</p>
 
-<ul class="list-unstyled text-center text-muted small mb-4">
-  <li>🔍 Smart filters for price, rating, brand, shipping & more</li>
-  <li>⚡ Real Amazon results — no signup, no extensions</li>
-  <li>✅ Built for shoppers, not sellers</li>
-</ul>
+<!-- Accordion-Style Amazon Search Tool -->
+<section class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <h1 class="glow-pulse text-center my-4">Advanced Amazon Deal Finder</h1>
 
-<!-- CTA + Trust Badge -->
-<div class="d-grid gap-2 d-sm-inline-flex justify-content-sm-center align-items-center mb-4">
-<a class="btn btn-primary btn-lg px-4 me-sm-3 shadow-sm" href="#headingStep1">
-    🔎 Try the Smart Amazon Search Now
-  </a>
-<span class="px-3 py-2 bg-info text-dark rounded-pill fw-semibold">
-    🔓 No signup required
-  </span>
-</div>
-<!-- Trust Icons -->
-<div class="d-flex justify-content-center gap-4 mb-4 fs-3 text-muted">
-<div data-bs-toggle="tooltip" title="Secure Protection"><i class="bi bi-shield-lock text-success"></i></div>
-<div data-bs-toggle="tooltip" title="Private – No Tracking"><i class="bi bi-incognito text-dark"></i></div>
-<div data-bs-toggle="tooltip" title="Cloud-Based Search"><i class="bi bi-cloud text-primary"></i></div>
-<div data-bs-toggle="tooltip" title="AI-Enhanced Filters"><i class="bi bi-cpu text-warning"></i></div>
-</div>
-<!-- 📺 Demo: How to Filter Lightning Deals on Amazon in 30 Seconds -->
-<div class="container mb-5">
-<h2 class="fw-bold text-center mb-3">🎥 Watch: How to Filter Lightning Deals on Amazon in 30 Seconds</h2>
-<div class="ratio ratio-16x9">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" src="https://www.youtube-nocookie.com/embed/wpj1l1XUunw" referrerpolicy="strict-origin-when-cross-origin" style="border: none;" title="How to Filter Lightning Deals on Amazon in 30 Seconds">
-</iframe>
-</div>
-<p class="text-muted small text-center mt-2">
-    This quick demo shows how to instantly find Lightning Deals using Deal Shopper Pro.
-    <br>
-<em>Deal Shopper Pro is an independent tool and is not affiliated with Amazon.</em>
-</p>
-</div>
-<!-- Attribution Note -->
-<p class="text-muted small mt-4">
-    🤖 Built with help from <strong>ChatGPT</strong> — Free to use, no Amazon affiliation.
-  </p>
-</section>
-<!-- 🛍️ 6-Step Deal Finder Headline -->
-<section class="container text-center my-5">
+      <form id="amazon-search-form">
+        <div class="accordion" id="filterAccordion">
 
-  <h2 id="how-to-find-the-best-amazon-deals" class="h4 fw-bold text-primary mb-2">
-    🛍️ How to Find the Best Amazon Deals in 6 Easy Steps
-  </h2>
+          <!-- 🔍 Above-the-Fold: Hero Section (Replaced Layout) -->
+          <section class="container py-5 text-center">
+            <h2 class="fw-bold display-5 mb-3">Tired of Missing Hidden Amazon Deals?</h2>
+            <p class="lead text-muted text-center mb-2">
+              Discover Prime‑Only offers, hidden discounts, and coupon‑stacked deals — fast.
+            </p>
+            <ul class="list-unstyled text-center text-muted small mb-4">
+              <li>🔍 Smart filters for price, rating, brand, shipping & more</li>
+              <li>⚡ Real Amazon results — no signup, no extensions</li>
+              <li>✅ Built for shoppers, not sellers</li>
+            </ul>
+            <div class="d-grid gap-2 d-sm-inline-flex justify-content-sm-center align-items-center mb-4">
+              <a class="btn btn-primary btn-lg px-4 me-sm-3 shadow-sm" href="#headingStep1">
+                🔎 Try the Smart Amazon Search Now
+              </a>
+              <span class="px-3 py-2 bg-info text-dark rounded-pill fw-semibold">🔓 No signup required</span>
+            </div>
+            <div class="d-flex justify-content-center gap-4 mb-4 fs-3 text-muted">
+              <div data-bs-toggle="tooltip" title="Secure Protection"><i class="bi bi-shield-lock text-success"></i></div>
+              <div data-bs-toggle="tooltip" title="Private – No Tracking"><i class="bi bi-incognito text-dark"></i></div>
+              <div data-bs-toggle="tooltip" title="Cloud-Based Search"><i class="bi bi-cloud text-primary"></i></div>
+              <div data-bs-toggle="tooltip" title="AI-Enhanced Filters"><i class="bi bi-cpu text-warning"></i></div>
+            </div>
+            <div class="container mb-5">
+              <h2 class="fw-bold text-center mb-3">🎥 Watch: How to Filter Lightning Deals on Amazon in 30 Seconds</h2>
+              <div class="ratio ratio-16x9">
+                <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"
+                        src="https://www.youtube-nocookie.com/embed/wpj1l1XUunw"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        style="border: none;"
+                        title="How to Filter Lightning Deals on Amazon in 30 Seconds"></iframe>
+              </div>
+              <p class="text-muted small text-center mt-2">
+                This quick demo shows how to instantly find Lightning Deals using Deal Shopper Pro.<br>
+                <em>Deal Shopper Pro is an independent tool and is not affiliated with Amazon.</em>
+              </p>
+            </div>
+            <p class="text-muted small mt-4">🤖 Built with help from <strong>ChatGPT</strong> — Free to use, no Amazon affiliation.</p>
+          </section>
 
-  <p class="text-muted mb-2">
-    Use as many filters as you like — <strong>Prime</strong>, <strong>Lightning Deals</strong>, brand, rating, coupons, and more — to uncover exactly what you want.
-  </p>
+          <!-- 🛍️ 6-Step Deal Finder Headline -->
+          <section class="container text-center my-5">
+            <h2 id="how-to-find-the-best-amazon-deals" class="h4 fw-bold text-primary mb-2">
+              🛍️ How to Find the Best Amazon Deals in 6 Easy Steps
+            </h2>
+            <p class="text-muted mb-2">
+              Use as many filters as you like — <strong>Prime</strong>, <strong>Lightning Deals</strong>, brand, rating, coupons, and more — to uncover exactly what you want.
+            </p>
+            <div class="text-success small fw-semibold mt-2">✅ Real Amazon search • No extensions • No signup</div>
+          </section>
 
-  <div class="text-success small fw-semibold mt-2">
-    ✅ Real Amazon search • No extensions • No signup
-</div>
-</section>
+          <!-- Step 1 -->
+          <div class="accordion-item border-bottom">
+            <h2 class="accordion-header" id="headingStep1">
+              <button aria-controls="collapseStep1" aria-expanded="false" class="accordion-button bg-white text-dark fw-bold collapsed" data-bs-target="#collapseStep1" data-bs-toggle="collapse" type="button">
+                🔍 ✅ Step 1: Start Your Product Search
+              </button>
+            </h2>
+            <div aria-labelledby="headingStep1" class="accordion-collapse collapse show" data-bs-parent="#filterAccordion" id="collapseStep1">
+              <div class="accordion-body">
+                <div class="input-group">
+                  <span class="input-group-text">🔎</span>
+                  <input aria-label="Search products" class="form-control" id="mainSearchInput" name="q" placeholder="Search Amazon: ASIN, ISBN, UPC, or keyword" type="text">
+                </div>
+              </div>
+            </div>
+          </div>
 
-<!-- Step 1 -->
-<div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingStep1">
-<button aria-controls="collapseStep1" aria-expanded="false" class="accordion-button bg-white text-dark fw-bold collapsed" data-bs-target="#collapseStep1" data-bs-toggle="collapse" type="button">
-            🔍 ✅ Step 1: Start Your Product Search
-          </button>
-</h2>
-<div aria-labelledby="headingStep1" class="accordion-collapse collapse show" data-bs-parent="#filterAccordion" id="collapseStep1">
-<div class="accordion-body">
-<div class="input-group">
-<span class="input-group-text">🔎</span>
-<input aria-label="Search products" class="form-control" id="mainSearchInput" name="q" placeholder="Search Amazon: ASIN, ISBN, UPC, or keyword" type="text">
-</div>
-</div>
-</div>
-</div>
-<!-- Step 2 -->
-<div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingStep2">
-<button aria-controls="collapseStep2" aria-expanded="false" class="accordion-button collapsed bg-white text-dark fw-bold" data-bs-target="#collapseStep2" data-bs-toggle="collapse" type="button">
-            💰 ✅ Step 2: Set Your Price Range
-          </button>
-</h2>
-<div aria-labelledby="headingStep2" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="collapseStep2">
-<div class="accordion-body">
-<div class="row g-3 align-items-end">
-<div class="col-md-4">
-<label class="form-label" for="currencySelect">Currency</label>
-<select class="form-select" id="currencySelect" name="currency">
-<option selected="" value="usd">USD ($)</option>
-<option value="eur">EUR (€)</option>
-<option value="gbp">GBP (£)</option>
-<option value="jpy">JPY (¥)</option>
-<option value="inr">INR (₹)</option>
-</select>
-</div>
-<div class="col-md-4">
-<label class="form-label" for="minPrice">Min Price</label>
-<div class="input-group">
-<span class="input-group-text">$</span>
-<input class="form-control" id="minPrice" name="min-price" placeholder="e.g. 10" step="0.01" type="number">
-</div>
-</div>
-<div class="col-md-4">
-<label class="form-label" for="maxPrice">Max Price</label>
-<div class="input-group">
-<span class="input-group-text">$</span>
-<input class="form-control" id="maxPrice" name="max-price" placeholder="e.g. 100" step="0.01" type="number">
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- STEP 3: Sort, Rating & Discount -->
-<div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingStep3">
-<button aria-controls="collapseStep3" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep3" data-bs-toggle="collapse" type="button">
-      🎯 ✅ Step 3: Sort, Rating &amp; Discount Filters
-    </button>
-</h2>
-<div aria-labelledby="headingStep3" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="collapseStep3">
-<div class="accordion-body">
-<div class="row g-3">
-<div class="col-md-4">
-<label class="form-label" for="sortOrder">Sort Results</label>
-<select class="form-select" id="sortOrder" name="sort">
-<option value="relevance">Relevance</option>
-<option value="price-asc-rank">Price: Low to High</option>
-<option value="price-desc-rank">Price: High to Low</option>
-<option value="review-rank">Customer Reviews</option>
-<option value="date-desc-rank">Newest Arrivals</option>
-</select>
-</div>
-<div class="col-md-4">
-<label class="form-label" for="minRating">Minimum Rating</label>
-<select class="form-select" id="minRating" name="min-rating">
-<option value="">Any</option>
-<option value="4">4 stars &amp; up</option>
-<option value="3">3 stars &amp; up</option>
-<option value="2">2 stars &amp; up</option>
-</select>
-</div>
-<div class="col-md-4">
-  <label class="form-label" for="min-discount">Minimum Discount</label>
-  <select id="min-discount" name="min-discount" class="form-select">
-  <option value="">Any</option>
-  <option value="5">5%+</option>
-  <option value="10">10%+</option>
-  <option value="15">15%+</option>
-  <option value="20">20%+</option>
-  <option value="25">25%+</option>
-  <option value="30">30%+</option>
-  <option value="35">35%+</option>
-  <option value="40">40%+</option>
-  <option value="45">45%+</option>
-  <option value="50">50%+</option>
-  <option value="55">55%+</option>
-  <option value="60">60%+</option>
-  <option value="65">65%+</option>
-  <option value="70">70%+</option>
-  <option value="75">75%+</option>
-  <option value="80">80%+</option>
-  <option value="85">85%+</option>
-  <option value="90">90%+</option>
-  <option value="95">95%+</option>
-</select>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- STEP 4: Filter by Brand -->
-<div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingStep4">
-<button aria-controls="collapseStep4" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep4" data-bs-toggle="collapse" type="button">
-      🏷️ ✅ Step 4: Filter by Brand
-    </button>
-</h2>
-<div aria-labelledby="headingStep4" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="collapseStep4">
-<div class="accordion-body">
-<label class="form-label" for="brand-include">Brand(s) to include</label>
-<input class="form-control" id="brand-include" name="brand-include" placeholder="e.g. Nike, Samsung, Apple" type="text">
-<p class="form-text text-muted">You can enter multiple brands separated by commas.</p>
-<div class="form-check mt-2">
-<input class="form-check-input" id="include-only" name="include-only" type="checkbox">
-<label class="form-check-label small" for="include-only">
-          Only include results from these brands
-        </label>
-</div>
-</div>
-</div>
-</div>
-<!-- STEP 5: Extra Filters -->
-<div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingStep5">
-<button aria-controls="collapseStep5" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep5" data-bs-toggle="collapse" type="button">
-    🔥 ✅ Step 5: Extra Filters &amp; Deals, Deals, Deals!
-  </button>
-</h2>
-<!-- ✅ Step 5 Content -->
-<div aria-labelledby="headingStep5" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="collapseStep5">
-<div class="accordion-body">
-<p class="text-muted mb-3">
-      Prime‑eligible, Lightning Deals, Free Shipping, In Stock, Eco‑Friendly, Coupons, and more.
-    </p>
-<div class="card mb-4 p-3">
-<div class="accordion" id="filterAccordion-step5">
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingShipping">
-<button aria-controls="collapseShipping" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#collapseShipping" data-bs-toggle="collapse" type="button">
-              🚚 Shipping &amp; Availability
-            </button>
-</h2>
-<div aria-labelledby="headingShipping" class="accordion-collapse collapse" data-bs-parent="#filterAccordion-step5" id="collapseShipping">
-<div class="accordion-body">
+          <!-- Step 2 -->
+          <div class="accordion-item border-bottom">
+            <h2 class="accordion-header" id="headingStep2">
+              <button aria-controls="collapseStep2" aria-expanded="false" class="accordion-button collapsed bg-white text-dark fw-bold" data-bs-target="#collapseStep2" data-bs-toggle="collapse" type="button">
+                💰 ✅ Step 2: Set Your Price Range
+              </button>
+            </h2>
+            <div aria-labelledby="headingStep2" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="collapseStep2">
+              <div class="accordion-body">
+                <div class="row g-3 align-items-end">
+                  <div class="col-md-4">
+                    <label class="form-label" for="currencySelect">Currency</label>
+                    <select class="form-select" id="currencySelect" name="currency">
+                      <option selected value="usd">USD ($)</option>
+                      <option value="eur">EUR (€)</option>
+                      <option value="gbp">GBP (£)</option>
+                      <option value="jpy">JPY (¥)</option>
+                      <option value="inr">INR (₹)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label" for="minPrice">Min Price</label>
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input class="form-control" id="minPrice" name="min-price" placeholder="e.g. 10" step="0.01" type="number">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label" for="maxPrice">Max Price</label>
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <input class="form-control" id="maxPrice" name="max-price" placeholder="e.g. 100" step="0.01" type="number">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-<div class="form-check" data-tooltip="Only show Amazon Prime-eligible products.">
-<input aria-label="Prime Only" class="form-check-input" id="primeOnly" name="prime-only" type="checkbox">
-<label class="form-check-label" for="primeOnly">
-        🤩 Prime Only
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for products with free shipping.">
-<input aria-label="Free Shipping" class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox">
-<label class="form-check-label" for="freeShipping">
-        🚚 Free Shipping
-       </label>
-</div>
-<div class="form-check" data-tooltip="Show items currently in stock.">
-<input aria-label="In Stock" class="form-check-input" id="inStock" name="in-stock" type="checkbox">
-<label class="form-check-label" for="inStock">
-        📦 In Stock
-       </label>
-</div>
-<div class="form-check" data-tooltip="Fulfilled by Amazon (FBA) products only.">
-<input aria-label="Fulfilled by Amazon" class="form-check-input" id="fbaOnly" name="fba-only" type="checkbox">
-<label class="form-check-label" for="fbaOnly">
-        📦 Fulfilled by Amazon (FBA)
-       </label>
-</div>
-<div class="form-check" data-tooltip="Only show products that ship from the United States.">
-<input aria-label="Ships from United States" class="form-check-input" id="shipsFromUS" name="ships-from-us" type="checkbox">
-<label class="form-check-label" for="shipsFromUS">
-        🇺🇸 Ships from United States
-       </label>
-</div>
-</div>
-</div>
-</div>
-<div class="accordion-item border-bottom">
-  <h2 class="accordion-header" id="headingaccordionGroup2">
-    <button class="accordion-button collapsed sticky-top bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGroup2" aria-expanded="false" aria-controls="accordionGroup2">
-      🎯🔥 Deals &amp; Discounts
-    </button>
-  </h2>
-  <div id="accordionGroup2" class="accordion-collapse collapse" aria-labelledby="headingaccordionGroup2">
-    <div class="accordion-body">
+          <!-- STEP 3: Sort, Rating & Discount -->
+          <div class="accordion-item border-bottom">
+            <h2 class="accordion-header" id="headingStep3">
+              <button aria-controls="collapseStep3" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep3" data-bs-toggle="collapse" type="button">
+                🎯 ✅ Step 3: Sort, Rating &amp; Discount Filters
+              </button>
+            </h2>
+            <div aria-labelledby="headingStep3" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="collapseStep3">
+              <div class="accordion-body">
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <label class="form-label" for="sortOrder">Sort Results</label>
+                    <select class="form-select" id="sortOrder" name="sort">
+                      <option value="relevance">Relevance</option>
+                      <option value="price-asc-rank">Price: Low to High</option>
+                      <option value="price-desc-rank">Price: High to Low</option>
+                      <option value="review-rank">Customer Reviews</option>
+                      <option value="date-desc-rank">Newest Arrivals</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label" for="minRating">Minimum Rating</label>
+                    <select class="form-select" id="minRating" name="min-rating">
+                      <option value="">Any</option>
+                      <option value="4">4 stars &amp; up</option>
+                      <option value="3">3 stars &amp; up</option>
+                      <option value="2">2 stars &amp; up</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label" for="min-discount">Minimum Discount</label>
+                    <select id="min-discount" name="min-discount" class="form-select">
+                      <option value="">Any</option>
+                      <option value="5">5%+</option>
+                      <option value="10">10%+</option>
+                      <option value="15">15%+</option>
+                      <option value="20">20%+</option>
+                      <option value="25">25%+</option>
+                      <option value="30">30%+</option>
+                      <option value="35">35%+</option>
+                      <option value="40">40%+</option>
+                      <option value="45">45%+</option>
+                      <option value="50">50%+</option>
+                      <option value="55">55%+</option>
+                      <option value="60">60%+</option>
+                      <option value="65">65%+</option>
+                      <option value="70">70%+</option>
+                      <option value="75">75%+</option>
+                      <option value="80">80%+</option>
+                      <option value="85">85%+</option>
+                      <option value="90">90%+</option>
+                      <option value="95">95%+</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      
+          <!-- STEP 4: Filter by Brand -->
+          <div class="accordion-item border-bottom">
+            <h2 class="accordion-header" id="headingStep4">
+              <button aria-controls="collapseStep4" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep4" data-bs-toggle="collapse" type="button">
+                🏷️ ✅ Step 4: Filter by Brand
+              </button>
+            </h2>
+            <div aria-labelledby="headingStep4" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="collapseStep4">
+              <div class="accordion-body">
+                <label class="form-label" for="brand-include">Brand(s) to include</label>
+                <input class="form-control" id="brand-include" name="brand-include" placeholder="e.g. Nike, Samsung, Apple" type="text">
+                <p class="form-text text-muted">You can enter multiple brands separated by commas.</p>
+                <div class="form-check mt-2">
+                  <input class="form-check-input" id="include-only" name="include-only" type="checkbox">
+                  <label class="form-check-label small" for="include-only">Only include results from these brands</label>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <!-- ✅ All Checkboxes Below -->
-      <div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
-        <input class="form-check-input" type="checkbox" id="lightningDeals" name="lightning-deals" aria-label="Filter Amazon Lightning Deals">
-        <label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label>
-      </div>
+          <!-- STEP 5: Extra Filters -->
+          <div class="accordion-item border-bottom">
+            <h2 class="accordion-header" id="headingStep5">
+              <button aria-controls="collapseStep5" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep5" data-bs-toggle="collapse" type="button">
+                🔥 ✅ Step 5: Extra Filters &amp; Deals, Deals, Deals!
+              </button>
+            </h2>
 
-      <div class="form-check" data-tooltip="View Amazon's Today's Deals page.">
-        <input class="form-check-input" type="checkbox" id="todaysDeals" name="todays-deals" aria-label="Today's Deals">
-        <label class="form-check-label" for="todaysDeals">🔥 Today's Deals</label>
-      </div>
+            <div aria-labelledby="headingStep5" class="accordion-collapse collapse" data-bs-parent="#filterAccordion" id="collapseStep5">
+              <div class="accordion-body">
+                <p class="text-muted mb-3">Prime‑eligible, Lightning Deals, Free Shipping, In Stock, Eco‑Friendly, Coupons, and more.</p>
 
-      <div class="form-check" data-tooltip="🔥🏷️ Filter Amazon for deals with clippable coupons at checkout.">
-        <input class="form-check-input" type="checkbox" id="coupons" name="coupons" aria-label="Amazon coupon deals">
-        <label class="form-check-label" for="coupons">🏷️ Coupons</label>
-      </div>
+                <div class="card mb-4 p-3">
+                  <div class="accordion" id="filterAccordion-step5">
 
-      <div class="form-check" data-tooltip="Clearance items from the Amazon Outlet section.">
-        <input class="form-check-input" type="checkbox" id="outletDeals" name="outlet-deals" aria-label="Amazon Outlet Deals">
-        <label class="form-check-label" for="outletDeals">🛍️ Amazon Outlet Deals</label>
-      </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingShipping">
+                        <button aria-controls="collapseShipping" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#collapseShipping" data-bs-toggle="collapse" type="button">
+                          🚚 Shipping &amp; Availability
+                        </button>
+                      </h2>
+                      <div aria-labelledby="headingShipping" class="accordion-collapse collapse" data-bs-parent="#filterAccordion-step5" id="collapseShipping">
+                        <div class="accordion-body">
 
-      <div class="form-check" data-tooltip="Find top-selling items with discounts.">
-        <input class="form-check-input" type="checkbox" id="bestSellerDeals" name="best-seller-deals" aria-label="Best Seller Deals">
-        <label class="form-check-label" for="bestSellerDeals">🥇 Best Seller Deals</label>
-      </div>
+                          <div class="form-check" data-tooltip="Only show Amazon Prime-eligible products.">
+                            <input aria-label="Prime Only" class="form-check-input" id="primeOnly" name="prime-only" type="checkbox">
+                            <label class="form-check-label" for="primeOnly">🤩 Prime Only</label>
+                          </div>
 
-      <div class="form-check" data-tooltip="Promos like buy one get one free.">
-        <input class="form-check-input" type="checkbox" id="bogoDeals" name="bogo-deals" aria-label="Buy One Get One">
-        <label class="form-check-label" for="bogoDeals">🎫 Buy One Get One (BOGO)</label>
-      </div>
+                          <div class="form-check" data-tooltip="Filter for products with free shipping.">
+                            <input aria-label="Free Shipping" class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox">
+                            <label class="form-check-label" for="freeShipping">🚚 Free Shipping</label>
+                          </div>
 
-      <div class="form-check" data-tooltip="Extra-discounted clearance or overstock items.">
-        <input class="form-check-input" type="checkbox" id="clearanceDeals" name="clearance-deals" aria-label="Clearance Deals">
-        <label class="form-check-label" for="clearanceDeals">🛒 Clearance Deals</label>
-      </div>
+                          <div class="form-check" data-tooltip="Show items currently in stock.">
+                            <input aria-label="In Stock" class="form-check-input" id="inStock" name="in-stock" type="checkbox">
+                            <label class="form-check-label" for="inStock">📦 In Stock</label>
+                          </div>
 
-      <div class="form-check" data-tooltip="Deals with short time limits or countdowns.">
-        <input class="form-check-input" type="checkbox" id="limitedTimeDeals" name="limited-time-deals" aria-label="Limited-Time Deals">
-        <label class="form-check-label" for="limitedTimeDeals">💥 Limited-Time Deals</label>
-      </div>
+                          <div class="form-check" data-tooltip="Fulfilled by Amazon (FBA) products only.">
+                            <input aria-label="Fulfilled by Amazon" class="form-check-input" id="fbaOnly" name="fba-only" type="checkbox">
+                            <label class="form-check-label" for="fbaOnly">📦 Fulfilled by Amazon (FBA)</label>
+                          </div>
 
-      <div class="form-check" data-tooltip="Deals that are about to expire.">
-        <input class="form-check-input" type="checkbox" id="endsSoonDeals" name="ends-soon-deals" aria-label="Ends Soon Deals">
-        <label class="form-check-label" for="endsSoonDeals">⏱️ Ends Soon</label>
-      </div>
+                          <div class="form-check" data-tooltip="Only show products that ship from the United States.">
+                            <input aria-label="Ships from United States" class="form-check-input" id="shipsFromUS" name="ships-from-us" type="checkbox">
+                            <label class="form-check-label" for="shipsFromUS">🇺🇸 Ships from United States</label>
+                          </div>
 
-      <div class="form-check" data-tooltip="Great deals under $25.">
-        <input class="form-check-input" type="checkbox" id="under25Deals" name="under-25-deals" aria-label="Under $25 Deals">
-        <label class="form-check-label" for="under25Deals">🪙 Under $25 Deals</label>
-      </div>
+                        </div>
+                      </div>
+                    </div>
 
-      <div class="form-check" data-tooltip="Coupons that are about to expire.">
-        <input class="form-check-input" type="checkbox" id="expiringCoupons" name="expiring-coupons" aria-label="Expiring Coupons">
-        <label class="form-check-label" for="expiringCoupons">🛑 Expiring Coupons</label>
-      </div>
+                    <div class="accordion-item border-bottom">
+                      <h2 class="accordion-header" id="headingaccordionGroup2">
+                        <button class="accordion-button collapsed sticky-top bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGroup2" aria-expanded="false" aria-controls="accordionGroup2">
+                          🎯🔥 Deals &amp; Discounts
+                        </button>
+                      </h2>
+                      <div id="accordionGroup2" class="accordion-collapse collapse" aria-labelledby="headingaccordionGroup2">
+                        <div class="accordion-body">
 
-      <div class="form-check" data-tooltip="Products sold under Amazon-owned brand names.">
-        <input class="form-check-input" type="checkbox" id="amazon-brands" name="amazon-brands" aria-label="Amazon Brands">
-        <label class="form-check-label" for="amazon-brands">🏷️ Amazon Brands</label>
-      </div>
+                          <div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
+                            <input class="form-check-input" type="checkbox" id="lightningDeals" name="lightning-deals" aria-label="Filter Amazon Lightning Deals">
+                            <label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label>
+                          </div>
 
-      <div class="form-check" data-tooltip="Find the lowest recorded price on items.">
-        <input class="form-check-input" type="checkbox" id="lowestPrice" name="lowest-price" aria-label="Lowest Price">
-        <label class="form-check-label" for="lowestPrice">📉 Lowest Price</label>
-      </div>
+                          <div class="form-check" data-tooltip="View Amazon's Today's Deals page.">
+                            <input class="form-check-input" type="checkbox" id="todaysDeals" name="todays-deals" aria-label="Today's Deals">
+                            <label class="form-check-label" for="todaysDeals">🔥 Today's Deals</label>
+                          </div>
 
-      <div class="form-check" data-tooltip="Short-term deals that expire quickly.">
-        <input class="form-check-input" type="checkbox" id="flashSales" name="flash-sales" aria-label="Flash Sales">
-        <label class="form-check-label" for="flashSales">⚡ Flash Sales</label>
-      </div>
+                          <div class="form-check" data-tooltip="🔥🏷️ Filter Amazon for deals with clippable coupons at checkout.">
+                            <input class="form-check-input" type="checkbox" id="coupons" name="coupons" aria-label="Amazon coupon deals">
+                            <label class="form-check-label" for="coupons">🏷️ Coupons</label>
+                          </div>
 
-      <div class="form-check" data-tooltip="Deals currently trending or gaining popularity.">
-        <input class="form-check-input" type="checkbox" id="trendingDeals" name="trending-deals" aria-label="Trending Deals">
-        <label class="form-check-label" for="trendingDeals">📊 Trending Deals</label>
-      </div>
+                          <div class="form-check" data-tooltip="Clearance items from the Amazon Outlet section.">
+                            <input class="form-check-input" type="checkbox" id="outletDeals" name="outlet-deals" aria-label="Amazon Outlet Deals">
+                            <label class="form-check-label" for="outletDeals">🛍️ Amazon Outlet Deals</label>
+                          </div>
 
-      <div class="form-check" data-tooltip="Items added to Amazon’s deal feed within the last 24 hours.">
-        <input class="form-check-input" type="checkbox" id="newDealsToday" name="new-deals-today" aria-label="New Deals Today">
-        <label class="form-check-label" for="newDealsToday">🆕 New Deals Today</label>
-      </div>
+                          <div class="form-check" data-tooltip="Find top-selling items with discounts.">
+                            <input class="form-check-input" type="checkbox" id="bestSellerDeals" name="best-seller-deals" aria-label="Best Seller Deals">
+                            <label class="form-check-label" for="bestSellerDeals">🥇 Best Seller Deals</label>
+                          </div>
 
-      <div class="form-check" data-tooltip="Used or returned items with discounts.">
-        <input class="form-check-input" type="checkbox" id="openBoxDeals" name="open-box-deals" aria-label="Open Box Deals">
-        <label class="form-check-label" for="openBoxDeals">📦 Open Box Deals</label>
-      </div>
+                          <div class="form-check" data-tooltip="Promos like buy one get one free.">
+                            <input class="form-check-input" type="checkbox" id="bogoDeals" name="bogo-deals" aria-label="Buy One Get One">
+                            <label class="form-check-label" for="bogoDeals">🎫 Buy One Get One (BOGO)</label>
+                          </div>
 
-      <div class="form-check" data-tooltip="Items recently restocked and discounted.">
-        <input class="form-check-input" type="checkbox" id="backInStockDeals" name="back-in-stock-deals" aria-label="Back in Stock Deals">
-        <label class="form-check-label" for="backInStockDeals">📦 Back in Stock Deals</label>
-      </div>
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingaccordionGroup3">
-<button aria-controls="accordionGroup3" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup3" data-bs-toggle="collapse" type="button">
-      Eco &amp; Ethical
-     </button>
-</h2>
-<div aria-labelledby="headingaccordionGroup3" class="accordion-collapse collapse" id="accordionGroup3">
-<div class="accordion-body">
+                          <div class="form-check" data-tooltip="Extra-discounted clearance or overstock items.">
+                            <input class="form-check-input" type="checkbox" id="clearanceDeals" name="clearance-deals" aria-label="Clearance Deals">
+                            <label class="form-check-label" for="clearanceDeals">🛒 Clearance Deals</label>
+                          </div>
 
-<div class="form-check" data-tooltip="Only show eco-friendly products.">
-<input aria-label="Eco-Friendly" class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox">
-<label class="form-check-label" for="ecoFriendlyToggle">
-        ♻️ Eco-Friendly
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Biodegradable.">
-  <input class="form-check-input" id="biodegradable" name="biodegradable" type="checkbox">
-  <label class="form-check-label" for="biodegradable">
-    🌱 Biodegradable
-  </label>
-</div>
-<div class="form-check" data-tooltip="Only vegan-friendly products.">
-<input aria-label="Vegan" class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox">
-<label class="form-check-label" for="veganProducts">
-        🌱 Vegan
-       </label>
-</div>
-<div class="form-check" data-tooltip="Only organic-certified items.">
-<input aria-label="Organic" class="form-check-input" id="organicProducts" name="organic-products" type="checkbox">
-<label class="form-check-label" for="organicProducts">
-        🌿 Organic
-       </label>
-</div>
-<div class="form-check" data-tooltip="Items with carbon-neutral delivery.">
-<input aria-label="Carbon-Neutral Delivery" class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox">
-<label class="form-check-label" for="carbonNeutralDelivery">
-        🚴 Carbon-Neutral Delivery
-       </label>
-</div>
-<div class="form-check" data-tooltip="Products labeled cruelty-free.">
-<input aria-label="Cruelty-Free" class="form-check-input" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox">
-<label class="form-check-label" for="crueltyFreeToggle">
-        🐰 Cruelty-Free
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Recyclable Packaging.">
-<input class="form-check-input" id="recyclable-packaging" type="checkbox">
-<label class="form-check-label" for="recyclable-packaging">
-        ♻️ Recyclable Packaging
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Plastic-Free.">
-<input class="form-check-input" id="plastic-free" type="checkbox">
-<label class="form-check-label" for="plastic-free">
-        🧼 Plastic-Free
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Minimal Packaging.">
-<input class="form-check-input" id="minimal-packaging" type="checkbox">
-<label class="form-check-label" for="minimal-packaging">
-        📦 Minimal Packaging
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Rechargeable Batteries.">
-<input class="form-check-input" id="rechargeable-batteries" type="checkbox">
-<label class="form-check-label" for="rechargeable-batteries">
-        🔋 Rechargeable Batteries
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: No Microplastics.">
-  <input class="form-check-input" id="no-microplastics" name="no-microplastics" type="checkbox">
-  <label class="form-check-label" for="no-microplastics">
-    🚫 Microplastics
-  </label>
-</div>
+                          <div class="form-check" data-tooltip="Deals with short time limits or countdowns.">
+                            <input class="form-check-input" type="checkbox" id="limitedTimeDeals" name="limited-time-deals" aria-label="Limited-Time Deals">
+                            <label class="form-check-label" for="limitedTimeDeals">💥 Limited-Time Deals</label>
+                          </div>
 
-<div class="form-check" data-tooltip="Filter for: Fair Trade.">
-  <input class="form-check-input" id="fair-trade" name="fair-trade" type="checkbox">
-  <label class="form-check-label" for="fair-trade">
-    🧵 Fair Trade
-  </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Made in USA.">
-<input class="form-check-input" id="made-in-usa" type="checkbox">
-<label class="form-check-label" for="made-in-usa">
-        🇺🇸 Made in USA
-       </label>
-</div>
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingaccordionGroup4">
-<button aria-controls="accordionGroup4" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup4" data-bs-toggle="collapse" type="button">
-      Special Categories
-     </button>
-</h2>
-<div aria-labelledby="headingaccordionGroup4" class="accordion-collapse collapse" id="accordionGroup4">
-<div class="accordion-body">
+                          <div class="form-check" data-tooltip="Deals that are about to expire.">
+                            <input class="form-check-input" type="checkbox" id="endsSoonDeals" name="ends-soon-deals" aria-label="Ends Soon Deals">
+                            <label class="form-check-label" for="endsSoonDeals">⏱️ Ends Soon</label>
+                          </div>
 
-<div class="form-check" data-tooltip="Show warehouse and refurbished items.">
-<input aria-label="Warehouse / Refurbished" class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox">
-<label class="form-check-label" for="warehouseRefurb">
-        📦 Warehouse &amp; Refurbished
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Outlet Deals.">
-<input class="form-check-input" id="outlet-deals" name="outlet-deals" type="checkbox">
-<label class="form-check-label" for="outlet-deals">
-        🏷️ Outlet Deals
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Just Released.">
-<input class="form-check-input" id="new-release" name="new-release" type="checkbox">
-<label class="form-check-label" for="new-release">
-        🆕 Just Released
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Climate Pledge Picks.">
-<input class="form-check-input" id="climate-pledge" name="climate-pledge" type="checkbox">
-<label class="form-check-label" for="climate-pledge">
-        ♻️ Climate Pledge Picks
-       </label>
-</div>
-<div class="form-check" data-tooltip="Support products sold by small businesses.">
-<input aria-label="Small Business" class="form-check-input" id="smallBusiness" name="small-business" type="checkbox">
-<label class="form-check-label" for="smallBusiness">
-        🏪 Small Business
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Trending Now.">
-<input class="form-check-input" id="trending-now" type="checkbox">
-<label class="form-check-label" for="trending-now">
-        📈 Trending Now
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Back in Stock.">
-<input class="form-check-input" id="back-in-stock" type="checkbox">
-<label class="form-check-label" for="back-in-stock">
-        🕘 Back in Stock
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Budget Essentials.">
-<input class="form-check-input" id="budget-essentials" type="checkbox">
-<label class="form-check-label" for="budget-essentials">
-        🪙 Budget Essentials
-       </label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Limited Quantity Left.">
-<input class="form-check-input" id="limited-quantity-left" type="checkbox">
-<label class="form-check-label" for="limited-quantity-left">
-        ⏳ Limited Quantity Left
-       </label>
-</div>
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingaccordionGroup5">
-<button aria-controls="accordionGroup5" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup5" data-bs-toggle="collapse" type="button">
-      Gift Ideas
-     </button>
-</h2>
-<div aria-labelledby="headingaccordionGroup5" class="accordion-collapse collapse" id="accordionGroup5">
-<div class="accordion-body">
+                          <div class="form-check" data-tooltip="Great deals under $25.">
+                            <input class="form-check-input" type="checkbox" id="under25Deals" name="under-25-deals" aria-label="Under $25 Deals">
+                            <label class="form-check-label" for="under25Deals">🪙 Under $25 Deals</label>
+                          </div>
 
-<div class="form-check" data-tooltip="Gift ideas suitable for women.">
-<input aria-label="Gifts for Her" class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox">
-<label class="form-check-label" for="giftsForHer">
-        🎀 Gifts for Her
-       </label>
-</div>
-<div class="form-check" data-tooltip="Gift ideas suitable for men.">
-<input aria-label="Gifts for Him" class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox">
-<label class="form-check-label" for="giftsForHim">
-        👔 Gifts for Him
-       </label>
-</div>
-<div class="form-check" data-tooltip="Gift ideas for kids of all ages.">
-<input aria-label="Gifts for Kids" class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox">
-<label class="form-check-label" for="giftsForKids">
-        🧒 Gifts for Kids
-       </label>
-</div>
-<div class="form-check" data-tooltip="Perfect for birthday gift shopping.">
-<input aria-label="Birthday Gifts" class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox">
-<label class="form-check-label" for="birthdayGifts">
-        🎂 Birthday Gifts
-       </label>
-</div>
-<div class="form-check" data-tooltip="Holiday-themed gift deals.">
-<input aria-label="Holiday Gift Picks" class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox">
-<label class="form-check-label" for="holidayGiftPicks">
-        🎄 Holiday Gift Picks
-       </label>
-</div>
-<div class="form-check" data-tooltip="Affordable gifts under $25.">
-<input class="form-check-input" id="giftUnder25" name="giftIdeas" type="checkbox" value="gifts+under+25+dollars">
-<label class="form-check-label" for="giftUnder25">
-        💵 Gifts Under $25
-       </label>
-</div>
-<div class="form-check" data-tooltip="Light-hearted and funny gift ideas.">
-<input class="form-check-input" id="funnyGifts" name="giftIdeas" type="checkbox" value="funny+gag+gifts">
-<label class="form-check-label" for="funnyGifts">
-        🤣 Funny &amp; Gag Gifts
-       </label>
-</div>
-<div class="form-check" data-tooltip="Quick gifts for last-minute shoppers.">
-<input class="form-check-input" id="lastMinuteGifts" name="giftIdeas" type="checkbox" value="last+minute+gifts">
-<label class="form-check-label" for="lastMinuteGifts">
-        ⏰ Last-Minute Gifts
-       </label>
-</div>
-  </div> <!-- /.accordion-body (Gift Ideas) -->
-  </div>   <!-- /#accordionGroup5.collapse -->
-</div>     <!-- /.accordion-item (Gift Ideas) -->
+                          <div class="form-check" data-tooltip="Coupons that are about to expire.">
+                            <input class="form-check-input" type="checkbox" id="expiringCoupons" name="expiring-coupons" aria-label="Expiring Coupons">
+                            <label class="form-check-label" for="expiringCoupons">🛑 Expiring Coupons</label>
+                          </div>
 
-</div>     <!-- ✅ CLOSES the inner #filterAccordion-step5 -->
-</div>     <!-- ✅ CLOSES the wrapping .card mb-4 p-3 -->
+                          <div class="form-check" data-tooltip="Products sold under Amazon-owned brand names.">
+                            <input class="form-check-input" type="checkbox" id="amazon-brands" name="amazon-brands" aria-label="Amazon Brands">
+                            <label class="form-check-label" for="amazon-brands">🏷️ Amazon Brands</label>
+                          </div>
 
-</div>     <!-- /.accordion-body for Step 5 -->
-</div>     <!-- /#collapseStep5 -->
-</div>     <!-- /.accordion-item for Step 5 -->
- 
-<!-- STEP 6: View Results (INSIDE the same accordion & form) -->
-<div class="accordion-item border-bottom">
-  <h2 class="accordion-header" id="headingStep6">
-    <button class="accordion-button collapsed bg-white fw-bold"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseStep6"
-            aria-expanded="false"
-            aria-controls="collapseStep6">
-      📊 ✅ Step 6: View Results on Amazon
-    </button>
-  </h2>
-  <div id="collapseStep6" class="accordion-collapse collapse"
-       aria-labelledby="headingStep6" data-bs-parent="#filterAccordion">
-    <div class="accordion-body">
-      <p class="text-muted">
-        After setting your filters, click below to see matching results on Amazon.
-      </p>
-      <button class="btn btn-success fw-bold" type="submit" aria-label="Search Amazon Now — Step 6">
-        🔎 Search Amazon Now
-      </button>
-    </div>
-  </div>
-</div>
+                          <div class="form-check" data-tooltip="Find the lowest recorded price on items.">
+                            <input class="form-check-input" type="checkbox" id="lowestPrice" name="lowest-price" aria-label="Lowest Price">
+                            <label class="form-check-label" for="lowestPrice">📉 Lowest Price</label>
+                          </div>
 
-<!-- Final CTA inside the form as well -->
-<div class="text-center my-4">
-  <button class="btn btn-success fw-bold" type="submit" aria-label="Search Amazon Deals Now">
-    🔎 Search Amazon Now
-  </button>
-</div>
-</div><!-- close .accordion -->
-</form><!-- ✅ close the form here -->
-</div><!-- .col-lg-10 -->
-</div><!-- .row -->
-</section><!-- .container py-4 -->
+                          <div class="form-check" data-tooltip="Short-term deals that expire quickly.">
+                            <input class="form-check-input" type="checkbox" id="flashSales" name="flash-sales" aria-label="Flash Sales">
+                            <label class="form-check-label" for="flashSales">⚡ Flash Sales</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Deals currently trending or gaining popularity.">
+                            <input class="form-check-input" type="checkbox" id="trendingDeals" name="trending-deals" aria-label="Trending Deals">
+                            <label class="form-check-label" for="trendingDeals">📊 Trending Deals</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Items added to Amazon’s deal feed within the last 24 hours.">
+                            <input class="form-check-input" type="checkbox" id="newDealsToday" name="new-deals-today" aria-label="New Deals Today">
+                            <label class="form-check-label" for="newDealsToday">🆕 New Deals Today</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Used or returned items with discounts.">
+                            <input class="form-check-input" type="checkbox" id="openBoxDeals" name="open-box-deals" aria-label="Open Box Deals">
+                            <label class="form-check-label" for="openBoxDeals">📦 Open Box Deals</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Items recently restocked and discounted.">
+                            <input class="form-check-input" type="checkbox" id="backInStockDeals" name="back-in-stock-deals" aria-label="Back in Stock Deals">
+                            <label class="form-check-label" for="backInStockDeals">📦 Back in Stock Deals</label>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingaccordionGroup3">
+                        <button aria-controls="accordionGroup3" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup3" data-bs-toggle="collapse" type="button">
+                          Eco &amp; Ethical
+                        </button>
+                      </h2>
+                      <div aria-labelledby="headingaccordionGroup3" class="accordion-collapse collapse" id="accordionGroup3">
+                        <div class="accordion-body">
+
+                          <div class="form-check" data-tooltip="Only show eco-friendly products.">
+                            <input aria-label="Eco-Friendly" class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox">
+                            <label class="form-check-label" for="ecoFriendlyToggle">♻️ Eco-Friendly</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Biodegradable.">
+                            <input class="form-check-input" id="biodegradable" name="biodegradable" type="checkbox">
+                            <label class="form-check-label" for="biodegradable">🌱 Biodegradable</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Only vegan-friendly products.">
+                            <input aria-label="Vegan" class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox">
+                            <label class="form-check-label" for="veganProducts">🌱 Vegan</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Only organic-certified items.">
+                            <input aria-label="Organic" class="form-check-input" id="organicProducts" name="organic-products" type="checkbox">
+                            <label class="form-check-label" for="organicProducts">🌿 Organic</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Items with carbon-neutral delivery.">
+                            <input aria-label="Carbon-Neutral Delivery" class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox">
+                            <label class="form-check-label" for="carbonNeutralDelivery">🚴 Carbon-Neutral Delivery</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Products labeled cruelty-free.">
+                            <input aria-label="Cruelty-Free" class="form-check-input" id="crueltyFreeToggle" name="filter-cruelty-free" type="checkbox">
+                            <label class="form-check-label" for="crueltyFreeToggle">🐰 Cruelty-Free</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Recyclable Packaging.">
+                            <input class="form-check-input" id="recyclable-packaging" name="recyclable-packaging" type="checkbox">
+                            <label class="form-check-label" for="recyclable-packaging">♻️ Recyclable Packaging</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Plastic-Free.">
+                            <input class="form-check-input" id="plastic-free" name="plastic-free" type="checkbox">
+                            <label class="form-check-label" for="plastic-free">🧼 Plastic-Free</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Minimal Packaging.">
+                            <input class="form-check-input" id="minimal-packaging" name="minimal-packaging" type="checkbox">
+                            <label class="form-check-label" for="minimal-packaging">📦 Minimal Packaging</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Rechargeable Batteries.">
+                            <input class="form-check-input" id="rechargeable-batteries" name="rechargeable-batteries" type="checkbox">
+                            <label class="form-check-label" for="rechargeable-batteries">🔋 Rechargeable Batteries</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: No Microplastics.">
+                            <input class="form-check-input" id="no-microplastics" name="no-microplastics" type="checkbox">
+                            <label class="form-check-label" for="no-microplastics">🚫 Microplastics</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Fair Trade.">
+                            <input class="form-check-input" id="fair-trade" name="fair-trade" type="checkbox">
+                            <label class="form-check-label" for="fair-trade">🧵 Fair Trade</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Made in USA.">
+                            <input class="form-check-input" id="made-in-usa" name="made-in-usa" type="checkbox">
+                            <label class="form-check-label" for="made-in-usa">🇺🇸 Made in USA</label>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingaccordionGroup4">
+                        <button aria-controls="accordionGroup4" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup4" data-bs-toggle="collapse" type="button">
+                          Special Categories
+                        </button>
+                      </h2>
+                      <div aria-labelledby="headingaccordionGroup4" class="accordion-collapse collapse" id="accordionGroup4">
+                        <div class="accordion-body">
+
+                          <div class="form-check" data-tooltip="Show warehouse and refurbished items.">
+                            <input aria-label="Warehouse / Refurbished" class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox">
+                            <label class="form-check-label" for="warehouseRefurb">📦 Warehouse &amp; Refurbished</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Outlet Deals.">
+                            <input class="form-check-input" id="outlet-deals" name="outlet-deals" type="checkbox">
+                            <label class="form-check-label" for="outlet-deals">🏷️ Outlet Deals</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Just Released.">
+                            <input class="form-check-input" id="new-release" name="new-release" type="checkbox">
+                            <label class="form-check-label" for="new-release">🆕 Just Released</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Climate Pledge Picks.">
+                            <input class="form-check-input" id="climate-pledge" name="climate-pledge" type="checkbox">
+                            <label class="form-check-label" for="climate-pledge">♻️ Climate Pledge Picks</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Support products sold by small businesses.">
+                            <input aria-label="Small Business" class="form-check-input" id="smallBusiness" name="small-business" type="checkbox">
+                            <label class="form-check-label" for="smallBusiness">🏪 Small Business</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Trending Now.">
+                            <input class="form-check-input" id="trending-now" name="trending-now" type="checkbox">
+                            <label class="form-check-label" for="trending-now">📈 Trending Now</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Back in Stock.">
+                            <input class="form-check-input" id="back-in-stock" name="back-in-stock" type="checkbox">
+                            <label class="form-check-label" for="back-in-stock">🕘 Back in Stock</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Budget Essentials.">
+                            <input class="form-check-input" id="budget-essentials" name="budget-essentials" type="checkbox">
+                            <label class="form-check-label" for="budget-essentials">🪙 Budget Essentials</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Filter for: Limited Quantity Left.">
+                            <input class="form-check-input" id="limited-quantity-left" name="limited-quantity-left" type="checkbox">
+                            <label class="form-check-label" for="limited-quantity-left">⏳ Limited Quantity Left</label>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingaccordionGroup5">
+                        <button aria-controls="accordionGroup5" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup5" data-bs-toggle="collapse" type="button">
+                          Gift Ideas
+                        </button>
+                      </h2>
+                      <div aria-labelledby="headingaccordionGroup5" class="accordion-collapse collapse" id="accordionGroup5">
+                        <div class="accordion-body">
+
+                          <div class="form-check" data-tooltip="Gift ideas suitable for women.">
+                            <input aria-label="Gifts for Her" class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox">
+                            <label class="form-check-label" for="giftsForHer">🎀 Gifts for Her</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Gift ideas suitable for men.">
+                            <input aria-label="Gifts for Him" class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox">
+                            <label class="form-check-label" for="giftsForHim">👔 Gifts for Him</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Gift ideas for kids of all ages.">
+                            <input aria-label="Gifts for Kids" class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox">
+                            <label class="form-check-label" for="giftsForKids">🧒 Gifts for Kids</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Perfect for birthday gift shopping.">
+                            <input aria-label="Birthday Gifts" class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox">
+                            <label class="form-check-label" for="birthdayGifts">🎂 Birthday Gifts</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Holiday-themed gift deals.">
+                            <input aria-label="Holiday Gift Picks" class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox">
+                            <label class="form-check-label" for="holidayGiftPicks">🎄 Holiday Gift Picks</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Affordable gifts under $25.">
+                            <input class="form-check-input" id="giftUnder25" name="giftIdeas" type="checkbox" value="gifts+under+25+dollars">
+                            <label class="form-check-label" for="giftUnder25">💵 Gifts Under $25</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Light-hearted and funny gift ideas.">
+                            <input class="form-check-input" id="funnyGifts" name="giftIdeas" type="checkbox" value="funny+gag+gifts">
+                            <label class="form-check-label" for="funnyGifts">🤣 Funny &amp; Gag Gifts</label>
+                          </div>
+
+                          <div class="form-check" data-tooltip="Quick gifts for last-minute shoppers.">
+                            <input class="form-check-input" id="lastMinuteGifts" name="giftIdeas" type="checkbox" value="last+minute+gifts">
+                            <label class="form-check-label" for="lastMinuteGifts">⏰ Last-Minute Gifts</label>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div> <!-- /#filterAccordion-step5 -->
+                </div>   <!-- /.card -->
+
+              </div> <!-- /.accordion-body for Step 5 -->
+            </div>   <!-- /#collapseStep5 -->
+          </div>     <!-- /.accordion-item for Step 5 -->
+
+          <!-- STEP 6: View Results -->
+          <div class="accordion-item border-bottom">
+            <h2 class="accordion-header" id="headingStep6">
+              <button class="accordion-button collapsed bg-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep6" aria-expanded="false" aria-controls="collapseStep6">
+                📊 ✅ Step 6: View Results on Amazon
+              </button>
+            </h2>
+            <div id="collapseStep6" class="accordion-collapse collapse" aria-labelledby="headingStep6" data-bs-parent="#filterAccordion">
+              <div class="accordion-body">
+                <p class="text-muted">After setting your filters, click below to see matching results on Amazon.</p>
+                <button class="btn btn-success fw-bold" type="submit" aria-label="Search Amazon Now — Step 6">🔎 Search Amazon Now</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Final CTA inside the form as well -->
+          <div class="text-center my-4">
+            <button class="btn btn-success fw-bold" type="submit" aria-label="Search Amazon Deals Now">🔎 Search Amazon Now</button>
+          </div>
+
+        </div><!-- /.accordion -->
+      </form><!-- /#amazon-search-form -->
+
+    </div><!-- /.col-lg-10 -->
+  </div><!-- /.row -->
+</section><!-- /.container py-4 -->
 
 <!-- 🚫 Amazon Search Problems — Solved -->
 <section class="container my-5">
-  <h2 class="text-center fw-bold mb-4 text-danger-emphasis">
-    ❌ Why Amazon Filters Fail — And What You Can Do Instead
-  </h2>
+  <h2 class="text-center fw-bold mb-4 text-danger-emphasis">❌ Why Amazon Filters Fail — And What You Can Do Instead</h2>
   <div class="row g-4">
-
-    <!-- Problem 1 -->
     <div class="col-md-4">
       <div class="card h-100 shadow-sm border-danger-subtle">
         <div class="card-body">
@@ -947,8 +730,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Problem 2 -->
     <div class="col-md-4">
       <div class="card h-100 shadow-sm border-warning-subtle">
         <div class="card-body">
@@ -960,8 +741,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Problem 3 -->
     <div class="col-md-4">
       <div class="card h-100 shadow-sm border-info-subtle">
         <div class="card-body">
@@ -973,37 +752,28 @@
         </div>
       </div>
     </div>
-
   </div>
-</section><!-- .container my-5 -->
+</section>
 
 <!-- 📢 Call to Action: Smart Search -->
 <section class="container my-5 text-center">
   <h2 class="fw-bold mb-3">🎯 Find Amazon Deals Faster — Filter by Prime, Coupons & More</h2>
-  <p class="text-muted mb-4">
-    Find Prime-only discounts, Lightning Deals, hidden coupons, and more with a single search.
-  </p>
-  <a class="btn btn-lg btn-success shadow-sm" href="#headingStep1" onclick="openStep1()" aria-label="Start your smart Amazon deal search">
-  🔎 Find Amazon Deals Now
-</a>
+  <p class="text-muted mb-4">Find Prime-only discounts, Lightning Deals, hidden coupons, and more with a single search.</p>
+  <a class="btn btn-lg btn-success shadow-sm" href="#headingStep1" onclick="openStep1()" aria-label="Start your smart Amazon deal search">🔎 Find Amazon Deals Now</a>
+</section>
 
 <script>
   function openStep1() {
     const step1 = document.getElementById('collapseStep1');
-    if (!step1.classList.contains('show')) {
+    if (step1 && !step1.classList.contains('show')) {
       new bootstrap.Collapse(step1, { toggle: true });
     }
   }
 </script>
 
-</section>
-
-
 <!-- ✅ Trust Signals -->
 <section class="container my-5 text-center">
-  <h2 class="h5 fw-bold mb-4">
-    🛡️ Trusted. Secure. Compliant.
-  </h2>
+  <h2 class="h5 fw-bold mb-4">🛡️ Trusted. Secure. Compliant.</h2>
   <div class="row justify-content-center gy-3">
     <div class="col-6 col-md-4">
       <div class="card border-0 shadow-sm h-100">
@@ -1037,43 +807,28 @@
 
 <!-- 🎥 Demo Promo Fallback -->
 <section class="container text-center my-5">
-  <h2 class="h5 fw-bold text-center mb-3">
-    <i class="bi bi-play-circle"></i> Watch How It Works
-  </h2>
-  <p class="text-muted small mb-4">
-    See how to filter Amazon deals by <strong>Prime</strong>, <strong>coupons</strong>, <strong>rating</strong>, and more — in seconds.
-  </p>
+  <h2 class="h5 fw-bold text-center mb-3"><i class="bi bi-play-circle"></i> Watch How It Works</h2>
+  <p class="text-muted small mb-4">See how to filter Amazon deals by <strong>Prime</strong>, <strong>coupons</strong>, <strong>rating</strong>, and more — in seconds.</p>
   <div class="d-flex justify-content-center">
     <div class="ratio ratio-16x9" style="max-width: 720px; width: 100%;">
-      <iframe
-        allowfullscreen
-        loading="lazy"
-        src="https://www.youtube-nocookie.com/embed/7XayFBHsFsI" referrerpolicy="strict-origin-when-cross-origin"
-        style="width: 100%; height: 100%; border: none; border-radius: 8px;"
-        title="Amazon Deal Filter Demo"
-      ></iframe>
+      <iframe allowfullscreen loading="lazy"
+              src="https://www.youtube-nocookie.com/embed/7XayFBHsFsI"
+              referrerpolicy="strict-origin-when-cross-origin"
+              style="width: 100%; height: 100%; border: none; border-radius: 8px;"
+              title="Amazon Deal Filter Demo"></iframe>
     </div>
   </div>
-  <p class="mt-3">
-    <a class="btn btn-outline-primary" href="/media.html" role="button">📺 More Demos</a>
-  </p>
-  <p class="text-muted small mt-2">
-    ⚡ Deal Shopper Pro is not affiliated with Amazon. Demo shown for educational purposes.
-  </p>
+  <p class="mt-3"><a class="btn btn-outline-primary" href="/media.html" role="button">📺 More Demos</a></p>
+  <p class="text-muted small mt-2">⚡ Deal Shopper Pro is not affiliated with Amazon. Demo shown for educational purposes.</p>
 </section>
 
 <!-- 📢 Exit CTA -->
 <section class="container text-center my-5 p-4 bg-light border border-danger-subtle rounded-4 shadow-sm">
   <h2 class="fw-bold mb-2 text-danger-emphasis">🚪 Don’t Leave Without Trying This</h2>
   <h3 class="fw-semibold mb-3 text-dark">Before You Go...</h3>
-  <p class="text-muted lead mb-4">
-    See <strong>today’s best Amazon deals</strong> — no login, 100% free, updated hourly.
-  </p>
-  <a class="btn btn-danger btn-lg fw-bold px-4 py-2 shadow" href="/best-deals-today.html" aria-label="View Today\'s Best Amazon Deals">
-    🔥 View Today’s Best Deals
-  </a>
+  <p class="text-muted lead mb-4">See <strong>today’s best Amazon deals</strong> — no login, 100% free, updated hourly.</p>
+  <a class="btn btn-danger btn-lg fw-bold px-4 py-2 shadow" href="/best-deals-today.html" aria-label="View Today's Best Amazon Deals">🔥 View Today’s Best Deals</a>
 </section>
-
 
 <!-- ✅ 6-Step Guided Search Section -->
 <div id="guided-search" class="container mt-4">
@@ -1083,7 +838,6 @@
 <!-- ✅ Testimonials / Trust / Exit Intent Section -->
 <section class="container my-5 text-center">
   <h2 class="fw-bold mb-4">💬 Trusted by Real Users</h2>
-
   <p class="mt-4 text-muted">We don’t store or track your searches. We just get you to the deals.</p>
   <a class="btn btn-outline-success mt-3 shadow-sm" href="/best-deals-today.html">✅ Show Me Today’s Best Deals</a>
 </section>
@@ -1092,53 +846,12 @@
   <h2 class="h5">📲 Share with Friends</h2>
   <p class="text-muted">Send this to someone who needs smarter Amazon filters:</p>
   <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
-    <!-- WhatsApp -->
-    <a class="btn btn-success" 
-       href="https://wa.me/?text=Check%20out%20this%20free%20Amazon%20deal%20filter%3A%20https%3A%2F%2Fwww.dealshopperpro.com" 
-       target="_blank" rel="noopener noreferrer"
-       aria-label="Share on WhatsApp">
-       WhatsApp
-    </a>
-
-    <!-- Messenger with fallback -->
-    <a class="btn btn-primary"
-       href="#"
-       onclick="shareMessenger(event)"
-       aria-label="Share on Messenger">
-       Messenger
-    </a>
-
-    <!-- SMS with fallback -->
-    <a class="btn btn-secondary"
-       href="#"
-       onclick="shareSMS(event)"
-       aria-label="Send via SMS">
-       Text Message
-    </a>
-
-    <!-- Twitter / X -->
-    <a class="btn btn-info" 
-       href="https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here%3A%20https%3A%2F%2Fwww.dealshopperpro.com"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="Share on Twitter or X">
-       Twitter / X
-    </a>
-
-    <!-- Facebook -->
-    <a class="btn btn-primary"
-       href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dealshopperpro.com"
-       target="_blank" rel="noopener noreferrer"
-       aria-label="Share on Facebook">
-       Facebook
-    </a>
-
-    <!-- Copy Link -->
-    <button class="btn btn-dark" 
-            id="copyLinkBtn" 
-            data-link="https://www.dealshopperpro.com"
-            aria-label="Copy page link">
-      Copy Page Link
-    </button>
+    <a class="btn btn-success" href="https://wa.me/?text=Check%20out%20this%20free%20Amazon%20deal%20filter%3A%20https%3A%2F%2Fwww.dealshopperpro.com" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp">WhatsApp</a>
+    <a class="btn btn-primary" href="#" onclick="shareMessenger(event)" aria-label="Share on Messenger">Messenger</a>
+    <a class="btn btn-secondary" href="#" onclick="shareSMS(event)" aria-label="Send via SMS">Text Message</a>
+    <a class="btn btn-info" href="https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here%3A%20https%3A%2F%2Fwww.dealshopperpro.com" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter or X">Twitter / X</a>
+    <a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dealshopperpro.com" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">Facebook</a>
+    <button class="btn btn-dark" id="copyLinkBtn" data-link="https://www.dealshopperpro.com" aria-label="Copy page link">Copy Page Link</button>
   </div>
 </div>
 
@@ -1146,7 +859,6 @@
 function isMobile() {
   return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 }
-
 function shareMessenger(e) {
   e.preventDefault();
   const url = encodeURIComponent('https://www.dealshopperpro.com');
@@ -1160,7 +872,6 @@ function shareMessenger(e) {
     );
   }
 }
-
 function shareSMS(e) {
   e.preventDefault();
   const message = encodeURIComponent('Check out this free Amazon deal filter: https://www.dealshopperpro.com');
@@ -1170,8 +881,6 @@ function shareSMS(e) {
     alert('SMS sharing is only available on mobile. Copy this message:\n\n' + decodeURIComponent(message));
   }
 }
-
-// Single Copy Link handler (keep just this one)
 document.getElementById('copyLinkBtn').addEventListener('click', function () {
   const pageUrl = this.getAttribute('data-link') || window.location.href;
   navigator.clipboard.writeText(pageUrl).then(() => {
@@ -1185,6 +894,7 @@ document.getElementById('copyLinkBtn').addEventListener('click', function () {
 </script>
 
 </main>
+
 <!-- ——————————— SITE-WIDE FOOTER ——————————— -->
 <footer>
   <div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
@@ -1207,27 +917,102 @@ document.getElementById('copyLinkBtn').addEventListener('click', function () {
     <p>
       Discover top Amazon deals with advanced filters for Lightning Deals, Prime-eligible items, in-stock products, and hidden coupons.
     </p>
-    <!-- 🔥 HOT section -->
     <p class="mb-1 fw-bold text-danger" style="font-size: 1rem;">Featured</p>
     <p class="fw-semibold" style="font-size: 1rem;">
       🔥 <a href="https://www.dealshopperpro.com/index.html">Advanced Amazon Search Tool</a><br>
       🔥 <a href="https://www.dealshopperpro.com/lightning-deals.html">How To Find Lightning Deals On Amazon</a>
     </p>
-    <p>
-      <strong>© 2025 Deal Shopper Pro. All rights reserved.</strong>
-    </p>
+    <p><strong>© 2025 Deal Shopper Pro. All rights reserved.</strong></p>
   </div>
-</footer>
-<script defer="" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script defer="" src="/navbar-loader.js"></script>
-<script defer="" src="/searchlogic-v2.js?v=1"></script>
-<script>
-  document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    .forEach(el => new bootstrap.Tooltip(el));
-</script>
 
+<!-- ======== On-Page FAQ (matches JSON-LD) ======== -->
+<section id="faq" class="container my-5">
+  <h2 class="fw-bold text-center mb-4">Frequently Asked Questions</h2>
+
+  <div class="accordion" id="faqAccordion">
+    <!-- Q1 -->
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faq-q1">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a1" aria-expanded="true" aria-controls="faq-a1">
+          What is Deal Shopper Pro?
+        </button>
+      </h3>
+      <div id="faq-a1" class="accordion-collapse collapse show" aria-labelledby="faq-q1" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Deal Shopper Pro is a free Amazon deal search tool that helps you filter by price, rating, Prime, coupons, and more.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faq-q2">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a2" aria-expanded="false" aria-controls="faq-a2">
+          How do I find Prime&#8209;only deals on Amazon fast?
+        </button>
+      </h3>
+      <div id="faq-a2" class="accordion-collapse collapse" aria-labelledby="faq-q2" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Use the &lsquo;Extra Filters&rsquo; section and check the &lsquo;Prime Only&rsquo; box. Then submit your search to open Prime&#8209;eligible deals directly on Amazon.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faq-q3">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a3" aria-expanded="false" aria-controls="faq-a3">
+          Can I search by price range, rating, and brand all at once?
+        </button>
+      </h3>
+      <div id="faq-a3" class="accordion-collapse collapse" aria-labelledby="faq-q3" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes. Use the 6&#8209;step guided search form to combine multiple filters including price, brand, ratings, and special deals like Lightning Deals or coupons.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faq-q4">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a4" aria-expanded="false" aria-controls="faq-a4">
+          Does this site show hidden deals or coupons?
+        </button>
+      </h3>
+      <div id="faq-a4" class="accordion-collapse collapse" aria-labelledby="faq-q4" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes. Our advanced filters can reveal hidden discounts like coupons, Lightning Deals, Subscribe &amp; Save deals, and limited&#8209;time offers that don&rsquo;t show up in standard Amazon searches.
+        </div>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="accordion-item">
+      <h3 class="accordion-header" id="faq-q5">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a5" aria-expanded="false" aria-controls="faq-a5">
+          Is Deal Shopper Pro affiliated with Amazon?
+        </button>
+      </h3>
+      <div id="faq-a5" class="accordion-collapse collapse" aria-labelledby="faq-q5" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          No. Deal Shopper Pro is an independent site that uses the Amazon Associates API to help users find products more efficiently. We are not affiliated with or endorsed by Amazon.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</footer>
+
+<!-- JS (Bootstrap, Navbar, Search Logic) -->
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="/navbar-loader.js"></script>
+<script defer src="/searchlogic-v2.js?v=1"></script>
+
+<!-- Bootstrap tooltips init (single, deduped) -->
 <script>
   document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
 </script>
+
 </body>
 </html>
