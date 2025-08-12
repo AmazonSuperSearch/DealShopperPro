@@ -132,8 +132,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rating === '4') rh.push('p_72:1248883011');
     if (rating === '5') rh.push('p_72:1248884011');
 
-    const sort = data.get('sort');
-    if (sort) params.set('s', sort);
+    // ✅ Updated sort handling
+const sort = (data.get('sort') || '').trim();
+if (sort && sort !== 'relevance') params.set('s', sort);
 
     // 4) Brand filters
     let raw = data.get('brand-include') || '';
@@ -237,3 +238,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!win) location.href = url;
   });
 });
+
