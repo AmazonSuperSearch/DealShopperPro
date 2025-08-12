@@ -2,62 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('amazon-search-form');
   if (!form) return;
 
-      // === Boolean Query Helper ===============================================
-    // Supports: -exclude, "exact phrase", and OR between terms.
-    // - Collapses extra spaces outside quotes
-    // - Normalizes "OR" spacing/casing
-    // - Attaches '-' to the next token (e.g., "- kids" -> "-kids")
-    const normalizeBooleanQuery = (input) => {
-      if (!input) return "";
-      const s = String(input);
-      let outTokens = [];
-      let buf = "";
-      let inQuotes = false;
-
-      const flush = () => {
-        if (buf.length) {
-          outTokens.push(buf);
-          buf = "";
-        }
-      };
-
-      for (let i = 0; i < s.length; i++) {
-        const ch = s[i];
-        if (ch === '"') {
-          // toggle quotes and include the quote in the buffer
-          inQuotes = !inQuotes;
-          buf += ch;
-          continue;
-        }
-        if (!inQuotes && /\s/.test(ch)) {
-          // space outside quotes => token boundary
-          flush();
-          continue;
-        }
-        buf += ch;
-      }
-      flush();
-
-      // Attach lone '-' tokens to the following token: ['-','kids'] -> ['-kids']
-      let merged = [];
-      for (let i = 0; i < outTokens.length; i++) {
-        const tok = outTokens[i];
-        if (tok === '-' && i + 1 < outTokens.length) {
-          merged.push('-' + outTokens[i + 1]);
-          i++; // skip next
-        } else {
-          merged.push(tok);
-        }
-      }
-
-      // Normalize OR: keep uppercase OR as a separate token
-      merged = merged.map(t => t === 'or' ? 'OR' : t);
-
-      // Rejoin with single spaces
-      return merged.join(' ').replace(/\s+OR\s+/g, ' OR ').trim();
-    };
-    // =========================================================================
-
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
@@ -68,16 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1) Base query
     let q = (data.get('q') || '').trim();
-    // ✅ Enable Boolean-like syntax in Step 1
-    q = normalizeBooleanQuery(q);
     if (!q) return alert('Please enter a search term.');
 
     // 2) Keyword-based filters (fallbacks without RH codes)
     const keywordAppend = (id, phrase) => {
       if (data.get(id) === 'on') {
-        const needsQuotes = /\s/.test(phrase) && !/^".*"$/.test(phrase);
-        const safePhrase = needsQuotes ? `"${phrase}"` : phrase;
-        q += (q.endsWith(' ') ? '' : ' ') + safePhrase;
+        q += (q.endsWith(' ') ? '' : ' ') + phrase;
       }
     };
 
