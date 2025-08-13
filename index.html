@@ -131,6 +131,12 @@
 @media (prefers-reduced-motion: reduce) {
   .glow-pulse { animation: none; }
 }
+
+  /* Accessibility: ensure readable contrasts */
+  .card .text-warning { color: #664d03 !important; } /* warning-emphasis */
+  .card .text-primary { color: #0b5ed7 !important; } /* deeper primary */
+  /* Ensure hero title meets contrast */
+  .glow-pulse { color: #212529 !important; text-shadow: none !important; }
 </style>
 <!-- Structured Data -->
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.dealshopperpro.com/#organization","name":"Deal Shopper Pro","url":"https://www.dealshopperpro.com","logo":{"@type":"ImageObject","@id":"https://www.dealshopperpro.com/#logo","url":"https://www.dealshopperpro.com/logo.png","width":512,"height":512},"sameAs":["https://www.pinterest.com/dealshopperpro/","https://dealshopperpro.medium.com/","https://dealshopperpro.blogspot.com/"],"contactPoint":{"@type":"ContactPoint","contactType":"Customer Support","url":"https://www.dealshopperpro.com/help.html","availableLanguage":["en"],"areaServed":"US"}},{"@type":"WebSite","@id":"https://www.dealshopperpro.com/#website","url":"https://www.dealshopperpro.com","name":"Deal Shopper Pro","description":"Advanced Amazon deal search with filters for Prime, coupons, Lightning Deals, and more.","inLanguage":"en-US","publisher":{"@id":"https://www.dealshopperpro.com/#organization"}},{"@type":"ImageObject","@id":"https://www.dealshopperpro.com/#primaryimage","url":"https://www.dealshopperpro.com/og-image.jpg","width":1200,"height":630},{"@type":"WebPage","@id":"https://www.dealshopperpro.com/#webpage","url":"https://www.dealshopperpro.com/","name":"Advanced Amazon Search — Deal Finder | Deal Shopper Pro","inLanguage":"en-US","description":"Find the best Amazon deals using our smart 6-step filter system. Discover Prime-only offers, coupons, Lightning Deals, and more.","isPartOf":{"@id":"https://www.dealshopperpro.com/#website"},"breadcrumb":{"@id":"https://www.dealshopperpro.com/#breadcrumb"},"primaryImageOfPage":{"@id":"https://www.dealshopperpro.com/#primaryimage"},"mainEntityOfPage":"https://www.dealshopperpro.com/","datePublished":"2025-08-01","dateModified":"2025-08-12"},{"@type":"BreadcrumbList","@id":"https://www.dealshopperpro.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dealshopperpro.com/"},{"@type":"ListItem","position":2,"name":"Advanced Amazon Search","item":"https://www.dealshopperpro.com/#headingStep1"}]},{"@type":"SoftwareApplication","@id":"https://www.dealshopperpro.com/#software","name":"Deal Shopper Pro","applicationCategory":"WebApplication","operatingSystem":"Web","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.dealshopperpro.com","description":"Web-based Amazon search tool with smart filters for Prime, coupons, and Lightning Deals.","license":"https://www.dealshopperpro.com/terms.html","termsOfService":"https://www.dealshopperpro.com/terms.html"},{"@type":"FAQPage","@id":"https://www.dealshopperpro.com/#faq","mainEntity":[{"@type":"Question","name":"What is Deal Shopper Pro?","acceptedAnswer":{"@type":"Answer","text":"Deal Shopper Pro is a free Amazon deal search tool that helps you filter by price, rating, Prime, coupons, and more."}},{"@type":"Question","name":"How do I find Prime-only deals on Amazon fast?","acceptedAnswer":{"@type":"Answer","text":"Use the ‘Extra Filters’ section and check the ‘Prime Only’ box. Then submit your search to open Prime-eligible deals directly on Amazon."}},{"@type":"Question","name":"Can I search by price range, rating, and brand all at once?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the 6-step guided search form to combine multiple filters including price, brand, ratings, and special deals like Lightning Deals or coupons."}},{"@type":"Question","name":"Does this site show hidden deals or coupons?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our advanced filters can reveal hidden discounts like coupons, Lightning Deals, Subscribe & Save deals, and limited-time offers that don’t show up in standard Amazon searches."}},{"@type":"Question","name":"Is Deal Shopper Pro affiliated with Amazon?","acceptedAnswer":{"@type":"Answer","text":"No. Deal Shopper Pro is an independent site that uses the Amazon Associates API to help users find products more efficiently. We are not affiliated with or endorsed by Amazon."}},{"@type":"Question","name":"How does Deal Shopper Pro work?","acceptedAnswer":{"@type":"Answer","text":"Deal Shopper Pro uses a custom 6-step filter system to search Amazon, helping you find Prime-only offers, coupons, Lightning Deals, and more."}},{"@type":"Question","name":"Is Deal Shopper Pro free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is completely free to use."}},{"@type":"Question","name":"Do you store my Amazon search history?","acceptedAnswer":{"@type":"Answer","text":"No, we do not track, store, or share your Amazon search history."}}],"inLanguage":"en-US"}]}</script>
@@ -170,10 +176,10 @@
 <span class="px-3 py-2 bg-info text-dark rounded-pill fw-semibold">🔓 No signup required</span>
 </div>
 <div class="d-flex justify-content-center gap-4 mb-4 fs-3 text-muted">
-<div data-bs-toggle="tooltip" title="Secure Protection"><i class="bi bi-shield-lock text-success"></i></div>
-<div data-bs-toggle="tooltip" title="Private – No Tracking"><i class="bi bi-incognito text-dark"></i></div>
-<div data-bs-toggle="tooltip" title="Cloud-Based Search"><i class="bi bi-cloud text-primary"></i></div>
-<div data-bs-toggle="tooltip" title="AI-Enhanced Filters"><i class="bi bi-cpu text-warning"></i></div>
+<div data-bs-toggle="tooltip" title="Secure Protection"><i aria-hidden="true" class="bi bi-shield-lock text-success"></i></div>
+<div data-bs-toggle="tooltip" title="Private – No Tracking"><i aria-hidden="true" class="bi bi-incognito text-dark"></i></div>
+<div data-bs-toggle="tooltip" title="Cloud-Based Search"><i aria-hidden="true" class="bi bi-cloud text-primary"></i></div>
+<div data-bs-toggle="tooltip" title="AI-Enhanced Filters"><i aria-hidden="true" class="bi bi-cpu text-warning"></i></div>
 </div>
 <div class="container mb-5">
 <h2 class="fw-bold text-center mb-3">🎥 Watch: How to Filter Lightning Deals on Amazon in 30 Seconds</h2>
@@ -637,7 +643,7 @@
 <div class="col-md-4">
 <div class="card h-100 shadow-sm border-danger-subtle">
 <div class="card-body">
-<h5 class="card-title text-danger">Amazon filters don’t work right</h5>
+<h3 class="card-title fs-5 text-danger-emphasis">Amazon filters don’t work right</h3>
 <p class="text-muted small mb-2">They often show sponsored or irrelevant results, wasting your time.</p>
 <hr/>
 <h6 class="text-success fw-bold mb-1">✅ Your Solution:</h6>
@@ -648,7 +654,7 @@
 <div class="col-md-4">
 <div class="card h-100 shadow-sm border-warning-subtle">
 <div class="card-body">
-<h5 class="card-title text-warning">You miss deals before they expire</h5>
+<h3 class="card-title fs-5 text-warning-emphasis">You miss deals before they expire</h3>
 <p class="text-muted small mb-2">Lightning Deals, BOGO offers, and coupons disappear before you find them.</p>
 <hr/>
 <h6 class="text-success fw-bold mb-1">✅ Your Solution:</h6>
@@ -659,7 +665,7 @@
 <div class="col-md-4">
 <div class="card h-100 shadow-sm border-info-subtle">
 <div class="card-body">
-<h5 class="card-title text-primary">It’s hard to find exactly what you want</h5>
+<h3 class="card-title fs-5 text-primary-emphasis">It’s hard to find exactly what you want</h3>
 <p class="text-muted small mb-2">You can’t combine filters like Prime, brand, coupon, and rating in Amazon search.</p>
 <hr/>
 <h6 class="text-success fw-bold mb-1">✅ Your Solution:</h6>
@@ -691,7 +697,7 @@
 <div class="card border-0 shadow-sm h-100">
 <div class="card-body">
 <div class="display-6 mb-2">🔒</div>
-<h5 class="card-title fw-semibold">Secure &amp; Private</h5>
+<h3 class="card-title fs-5 fw-semibold">Secure &amp; Private</h3>
 <p class="text-muted small mb-0">No tracking, no personal data collected.</p>
 </div>
 </div>
@@ -700,7 +706,7 @@
 <div class="card border-0 shadow-sm h-100">
 <div class="card-body">
 <div class="display-6 mb-2">✅</div>
-<h5 class="card-title fw-semibold">No Signup Required</h5>
+<h3 class="card-title fs-5 fw-semibold">No Signup Required</h3>
 <p class="text-muted small mb-0">Start searching instantly — no account needed.</p>
 </div>
 </div>
@@ -709,7 +715,7 @@
 <div class="card border-0 shadow-sm h-100">
 <div class="card-body">
 <div class="display-6 mb-2">🛍️</div>
-<h5 class="card-title fw-semibold">Amazon Compliant</h5>
+<h3 class="card-title fs-5 fw-semibold">Amazon Compliant</h3>
 <p class="text-muted small mb-0">Built 100% within Amazon’s affiliate policies.</p>
 </div>
 </div>
