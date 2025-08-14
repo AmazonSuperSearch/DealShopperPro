@@ -53,6 +53,19 @@
   <!-- Icons -->
   <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"></noscript>
+  <!-- Icons font preload + swap -->
+  <link rel="preload"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2"
+        as="font" type="font/woff2" crossorigin>
+  <style>
+  @font-face{
+    font-family:"bootstrap-icons";
+    src:url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff") format("woff");
+    font-weight:400; font-style:normal; font-display:swap;
+  }
+  </style>
+
   
   <style>
     /* Bootstrap primary override */
@@ -135,10 +148,7 @@
 <div class="row justify-content-center">
 <div class="col-lg-10">
 <h1 class="glow-pulse text-center my-4">Advanced Amazon Search — Deal Finder</h1>
-<form id="amazon-search-form" method="get" novalidate>
-<div class="accordion" id="filterAccordion">
-<!-- 🔍 Above-the-Fold: Hero Section (Replaced Layout) -->
-<section class="container py-5 text-center">
+<section class="py-5 text-center">
 <h2 class="fw-bold display-5 mb-3">Tired of Missing Hidden Amazon Deals?</h2>
 <p class="lead text-muted text-center mb-2">
               Discover Prime‑Only offers, hidden discounts, and coupon‑stacked deals — fast.
@@ -185,6 +195,10 @@
 </p>
 <p class="text-muted small mt-4">🤖 Built with help from <strong>ChatGPT</strong> — Free to use, no Amazon affiliation.</p>
 </section>
+
+<form id="amazon-search-form" method="get" novalidate>
+<div class="accordion" id="filterAccordion">
+
 
 <!-- 🛍️ 6-Step Deal Finder Headline -->
 <section class="container text-center my-5">
@@ -367,23 +381,23 @@
 <div aria-labelledby="headingShipping" class="accordion-collapse collapse" data-bs-parent="#filterAccordion-step5" id="collapseShipping">
 <div class="accordion-body">
 <div class="form-check" data-tooltip="Only show Amazon Prime-eligible products.">
-<input aria-label="Prime Only" class="form-check-input" id="primeOnly" name="prime-only" type="checkbox"/>
+<input class="form-check-input" id="primeOnly" name="prime-only" type="checkbox"/>
 <label class="form-check-label" for="primeOnly">🤩 Prime Only</label>
 </div>
 <div class="form-check" data-tooltip="Filter for products with free shipping.">
-<input aria-label="Free Shipping" class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox"/>
+<input class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox"/>
 <label class="form-check-label" for="freeShipping">🚚 Free Shipping</label>
 </div>
 <div class="form-check" data-tooltip="Show items currently in stock.">
-<input aria-label="In Stock" class="form-check-input" id="inStock" name="in-stock" type="checkbox"/>
+<input class="form-check-input" id="inStock" name="in-stock" type="checkbox"/>
 <label class="form-check-label" for="inStock">📦 In Stock</label>
 </div>
 <div class="form-check" data-tooltip="Fulfilled by Amazon (FBA) products only.">
-<input aria-label="Fulfilled by Amazon" class="form-check-input" id="fbaOnly" name="fba-only" type="checkbox"/>
+<input class="form-check-input" id="fbaOnly" name="fba-only" type="checkbox"/>
 <label class="form-check-label" for="fbaOnly">📦 Fulfilled by Amazon (FBA)</label>
 </div>
 <div class="form-check" data-tooltip="Only show products that ship from the United States.">
-<input aria-label="Ships from United States" class="form-check-input" id="shipsFromUS" name="ships-from-us" type="checkbox"/>
+<input class="form-check-input" id="shipsFromUS" name="ships-from-us" type="checkbox"/>
 <label class="form-check-label" for="shipsFromUS">🇺🇸 Ships from United States</label>
 </div>
 </div>
@@ -395,78 +409,78 @@
                           🎯🔥 Deals &amp; Discounts
                         </button>
 </h2>
-<div aria-labelledby="headingaccordionGroup2" class="accordion-collapse collapse" id="accordionGroup2">
+<div aria-labelledby="headingaccordionGroup2" class="accordion-collapse collapse" id="accordionGroup2" data-bs-parent="#filterAccordion-step5">
 <div class="accordion-body">
 <div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
-<input aria-label="Filter Amazon Lightning Deals" class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox"/>
+<input class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox"/>
 <label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label>
 </div>
 <div class="form-check" data-tooltip="View Amazon's Today's Deals page.">
-<input aria-label="Today's Deals" class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox"/>
+<input class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox"/>
 <label class="form-check-label" for="todaysDeals">🔥 Today's Deals</label>
 </div>
 <div class="form-check" data-tooltip="🔥🏷️ Filter Amazon for deals with clippable coupons at checkout.">
-<input aria-label="Amazon coupon deals" class="form-check-input" id="coupons" name="coupons" type="checkbox"/>
+<input class="form-check-input" id="coupons" name="coupons" type="checkbox"/>
 <label class="form-check-label" for="coupons">🏷️ Coupons</label>
 </div>
 <div class="form-check" data-tooltip="Clearance items from the Amazon Outlet section.">
-<input aria-label="Amazon Outlet Deals" class="form-check-input" id="outletDeals" name="outlet-deals" type="checkbox"/>
+<input class="form-check-input" id="outletDeals" name="outlet-deals" type="checkbox"/>
 <label class="form-check-label" for="outletDeals">🛍️ Amazon Outlet Deals</label>
 </div>
 <div class="form-check" data-tooltip="Find top-selling items with discounts.">
-<input aria-label="Best Seller Deals" class="form-check-input" id="bestSellerDeals" name="best-seller-deals" type="checkbox"/>
+<input class="form-check-input" id="bestSellerDeals" name="best-seller-deals" type="checkbox"/>
 <label class="form-check-label" for="bestSellerDeals">🥇 Best Seller Deals</label>
 </div>
 <div class="form-check" data-tooltip="Promos like buy one get one free.">
-<input aria-label="Buy One Get One" class="form-check-input" id="bogoDeals" name="bogo-deals" type="checkbox"/>
+<input class="form-check-input" id="bogoDeals" name="bogo-deals" type="checkbox"/>
 <label class="form-check-label" for="bogoDeals">🎫 Buy One Get One (BOGO)</label>
 </div>
 <div class="form-check" data-tooltip="Extra-discounted clearance or overstock items.">
-<input aria-label="Clearance Deals" class="form-check-input" id="clearanceDeals" name="clearance-deals" type="checkbox"/>
+<input class="form-check-input" id="clearanceDeals" name="clearance-deals" type="checkbox"/>
 <label class="form-check-label" for="clearanceDeals">🛒 Clearance Deals</label>
 </div>
 <div class="form-check" data-tooltip="Deals with short time limits or countdowns.">
-<input aria-label="Limited-Time Deals" class="form-check-input" id="limitedTimeDeals" name="limited-time-deals" type="checkbox"/>
+<input class="form-check-input" id="limitedTimeDeals" name="limited-time-deals" type="checkbox"/>
 <label class="form-check-label" for="limitedTimeDeals">💥 Limited-Time Deals</label>
 </div>
 <div class="form-check" data-tooltip="Deals that are about to expire.">
-<input aria-label="Ends Soon Deals" class="form-check-input" id="endsSoonDeals" name="ends-soon-deals" type="checkbox"/>
+<input class="form-check-input" id="endsSoonDeals" name="ends-soon-deals" type="checkbox"/>
 <label class="form-check-label" for="endsSoonDeals">⏱️ Ends Soon</label>
 </div>
 <div class="form-check" data-tooltip="Great deals under $25.">
-<input aria-label="Under $25 Deals" class="form-check-input" id="under25Deals" name="under-25-deals" type="checkbox"/>
+<input class="form-check-input" id="under25Deals" name="under-25-deals" type="checkbox"/>
 <label class="form-check-label" for="under25Deals">🪙 Under $25 Deals</label>
 </div>
 <div class="form-check" data-tooltip="Coupons that are about to expire.">
-<input aria-label="Expiring Coupons" class="form-check-input" id="expiringCoupons" name="expiring-coupons" type="checkbox"/>
+<input class="form-check-input" id="expiringCoupons" name="expiring-coupons" type="checkbox"/>
 <label class="form-check-label" for="expiringCoupons">🛑 Expiring Coupons</label>
 </div>
 <div class="form-check" data-tooltip="Products sold under Amazon-owned brand names.">
-<input aria-label="Amazon Brands" class="form-check-input" id="amazon-brands" name="amazon-brands" type="checkbox"/>
+<input class="form-check-input" id="amazon-brands" name="amazon-brands" type="checkbox"/>
 <label class="form-check-label" for="amazon-brands">🏷️ Amazon Brands</label>
 </div>
 <div class="form-check" data-tooltip="Find the lowest recorded price on items.">
-<input aria-label="Lowest Price" class="form-check-input" id="lowestPrice" name="lowest-price" type="checkbox"/>
+<input class="form-check-input" id="lowestPrice" name="lowest-price" type="checkbox"/>
 <label class="form-check-label" for="lowestPrice">📉 Lowest Price</label>
 </div>
 <div class="form-check" data-tooltip="Short-term deals that expire quickly.">
-<input aria-label="Flash Sales" class="form-check-input" id="flashSales" name="flash-sales" type="checkbox"/>
+<input class="form-check-input" id="flashSales" name="flash-sales" type="checkbox"/>
 <label class="form-check-label" for="flashSales">⚡ Flash Sales</label>
 </div>
 <div class="form-check" data-tooltip="Deals currently trending or gaining popularity.">
-<input aria-label="Trending Deals" class="form-check-input" id="trendingDeals" name="trending-deals" type="checkbox"/>
+<input class="form-check-input" id="trendingDeals" name="trending-deals" type="checkbox"/>
 <label class="form-check-label" for="trendingDeals">📊 Trending Deals</label>
 </div>
 <div class="form-check" data-tooltip="Items added to Amazon’s deal feed within the last 24 hours.">
-<input aria-label="New Deals Today" class="form-check-input" id="newDealsToday" name="new-deals-today" type="checkbox"/>
+<input class="form-check-input" id="newDealsToday" name="new-deals-today" type="checkbox"/>
 <label class="form-check-label" for="newDealsToday">🆕 New Deals Today</label>
 </div>
 <div class="form-check" data-tooltip="Used or returned items with discounts.">
-<input aria-label="Open Box Deals" class="form-check-input" id="openBoxDeals" name="open-box-deals" type="checkbox"/>
+<input class="form-check-input" id="openBoxDeals" name="open-box-deals" type="checkbox"/>
 <label class="form-check-label" for="openBoxDeals">📦 Open Box Deals</label>
 </div>
 <div class="form-check" data-tooltip="Items recently restocked and discounted.">
-<input aria-label="Back in Stock Deals" class="form-check-input" id="backInStockDeals" name="back-in-stock-deals" type="checkbox"/>
+<input class="form-check-input" id="backInStockDeals" name="back-in-stock-deals" type="checkbox"/>
 <label class="form-check-label" for="backInStockDeals">📦 Back in Stock Deals</label>
 </div>
 </div>
@@ -478,10 +492,10 @@
                           Eco &amp; Ethical
                         </button>
 </h2>
-<div aria-labelledby="headingaccordionGroup3" class="accordion-collapse collapse" id="accordionGroup3">
+<div aria-labelledby="headingaccordionGroup3" class="accordion-collapse collapse" id="accordionGroup3" data-bs-parent="#filterAccordion-step5">
 <div class="accordion-body">
 <div class="form-check" data-tooltip="Only show eco-friendly products.">
-<input aria-label="Eco-Friendly" class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox"/>
+<input class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox"/>
 <label class="form-check-label" for="ecoFriendlyToggle">♻️ Eco-Friendly</label>
 </div>
 <div class="form-check" data-tooltip="Filter for: Biodegradable.">
@@ -489,19 +503,19 @@
 <label class="form-check-label" for="biodegradable">🌱 Biodegradable</label>
 </div>
 <div class="form-check" data-tooltip="Only vegan-friendly products.">
-<input aria-label="Vegan" class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox"/>
+<input class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox"/>
 <label class="form-check-label" for="veganProducts">🌱 Vegan</label>
 </div>
 <div class="form-check" data-tooltip="Only organic-certified items.">
-<input aria-label="Organic" class="form-check-input" id="organicProducts" name="organic-products" type="checkbox"/>
+<input class="form-check-input" id="organicProducts" name="organic-products" type="checkbox"/>
 <label class="form-check-label" for="organicProducts">🌿 Organic</label>
 </div>
 <div class="form-check" data-tooltip="Items with carbon-neutral delivery.">
-<input aria-label="Carbon-Neutral Delivery" class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox"/>
+<input class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox"/>
 <label class="form-check-label" for="carbonNeutralDelivery">🚴 Carbon-Neutral Delivery</label>
 </div>
 <div class="form-check" data-tooltip="Products labeled cruelty-free.">
-<input aria-label="Cruelty-Free" class="form-check-input" id="crueltyFreeToggle" name="cruelty-free" type="checkbox"/>
+<input class="form-check-input" id="crueltyFreeToggle" name="cruelty-free" type="checkbox"/>
 <label class="form-check-label" for="crueltyFreeToggle">🐰 Cruelty-Free</label>
 </div>
 <div class="form-check" data-tooltip="Filter for: Recyclable Packaging.">
@@ -541,10 +555,10 @@
                           Special Categories
                         </button>
 </h2>
-<div aria-labelledby="headingaccordionGroup4" class="accordion-collapse collapse" id="accordionGroup4">
+<div aria-labelledby="headingaccordionGroup4" class="accordion-collapse collapse" id="accordionGroup4" data-bs-parent="#filterAccordion-step5">
 <div class="accordion-body">
 <div class="form-check" data-tooltip="Show warehouse and refurbished items.">
-<input aria-label="Warehouse / Refurbished" class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox"/>
+<input class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox"/>
 <label class="form-check-label" for="warehouseRefurb">📦 Warehouse &amp; Refurbished</label>
 </div>
 <div class="form-check" data-tooltip="Filter for: Just Released.">
@@ -556,7 +570,7 @@
 <label class="form-check-label" for="climate-pledge">♻️ Climate Pledge Picks</label>
 </div>
 <div class="form-check" data-tooltip="Support products sold by small businesses.">
-<input aria-label="Small Business" class="form-check-input" id="smallBusiness" name="small-business" type="checkbox"/>
+<input class="form-check-input" id="smallBusiness" name="small-business" type="checkbox"/>
 <label class="form-check-label" for="smallBusiness">🏪 Small Business</label>
 </div>
 <div class="form-check" data-tooltip="Filter for: Trending Now.">
@@ -584,26 +598,26 @@
                           Gift Ideas
                         </button>
 </h2>
-<div aria-labelledby="headingaccordionGroup5" class="accordion-collapse collapse" id="accordionGroup5">
+<div aria-labelledby="headingaccordionGroup5" class="accordion-collapse collapse" id="accordionGroup5" data-bs-parent="#filterAccordion-step5">
 <div class="accordion-body">
 <div class="form-check" data-tooltip="Gift ideas suitable for women.">
-<input aria-label="Gifts for Her" class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox"/>
+<input class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox"/>
 <label class="form-check-label" for="giftsForHer">🎀 Gifts for Her</label>
 </div>
 <div class="form-check" data-tooltip="Gift ideas suitable for men.">
-<input aria-label="Gifts for Him" class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox"/>
+<input class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox"/>
 <label class="form-check-label" for="giftsForHim">👔 Gifts for Him</label>
 </div>
 <div class="form-check" data-tooltip="Gift ideas for kids of all ages.">
-<input aria-label="Gifts for Kids" class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox"/>
+<input class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox"/>
 <label class="form-check-label" for="giftsForKids">🧒 Gifts for Kids</label>
 </div>
 <div class="form-check" data-tooltip="Perfect for birthday gift shopping.">
-<input aria-label="Birthday Gifts" class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox"/>
+<input class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox"/>
 <label class="form-check-label" for="birthdayGifts">🎂 Birthday Gifts</label>
 </div>
 <div class="form-check" data-tooltip="Holiday-themed gift deals.">
-<input aria-label="Holiday Gift Picks" class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox"/>
+<input class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox"/>
 <label class="form-check-label" for="holidayGiftPicks">🎄 Holiday Gift Picks</label>
 </div>
 <div class="form-check" data-tooltip="Affordable gifts under $25.">
@@ -641,7 +655,7 @@
 </div>
 <!-- Final CTA inside the form as well -->
 <div class="text-center my-4">
-<button aria-label="Search Amazon Deals Now" class="btn btn-success fw-bold" type="submit">🔎 Search Amazon Now</button>
+<button class="btn btn-success fw-bold" type="submit">🔎 Search Amazon Now</button>
 </div>
 </div><!-- /.accordion -->
 </form><div aria-live="polite" class="visually-hidden" id="search-status"></div><!-- /#amazon-search-form -->
@@ -691,7 +705,7 @@
 <section class="container my-5 text-center">
 <h2 class="fw-bold mb-3">🎯 Find Amazon Deals Faster — Filter by Prime, Coupons &amp; More</h2>
 <p class="text-muted mb-4">Find Prime-only discounts, Lightning Deals, hidden coupons, and more with a single search.</p>
-<a aria-label="Start your smart Amazon deal search" class="btn btn-lg btn-success shadow-sm" href="#headingStep1" onclick="openStep1()">🔎 Find Amazon Deals Now</a>
+<a class="btn btn-lg btn-success shadow-sm" href="#headingStep1" onclick="openStep1()">🔎 Find Amazon Deals Now</a>
 </section>
 <script>
   function openStep1() {
@@ -931,63 +945,90 @@ document.getElementById('copyLinkBtn').addEventListener('click', function () {
 <!-- JS (Bootstrap, Navbar, Search Logic) -->
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script defer src="/navbar-loader.js"></script>
-<script defer src="/searchlogic-v2.js?v=1"></script>
-<!-- Bootstrap tooltips + submit status (safe, scoped) -->
+<script defer src="/searchlogic-v2.js"></script>
+
+  
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+/* App init — single entry, idempotent */
+(function init() {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init, { once: true });
+    return;
+  }
+
+  // 1) Tooltips (safe, deduped) + auto-disconnect observer
   function initTooltips(root = document) {
     if (!window.bootstrap || typeof bootstrap.Tooltip !== 'function') return;
-    root.querySelectorAll('[data-bs-toggle="tooltip"]:not([data-has-tooltip])')
-      .forEach(el => {
-        new bootstrap.Tooltip(el);
-        el.setAttribute('data-has-tooltip', '');
-      });
+    root.querySelectorAll('[data-bs-toggle="tooltip"]:not([data-has-tooltip])').forEach(el => {
+      new bootstrap.Tooltip(el);
+      el.setAttribute('data-has-tooltip', '');
+    });
   }
   initTooltips();
-  window.addEventListener('load', () => initTooltips());
-  const mount = document.getElementById('navbar-placeholder') || document.body;
-  const observer = new MutationObserver(muts => {
-    for (const m of muts) {
-      if (m.addedNodes && m.addedNodes.length) initTooltips(m.target instanceof Element ? m.target : document);
-    }
+  const tooltipObserver = new MutationObserver(muts => {
+    for (const m of muts) if (m.addedNodes && m.addedNodes.length) initTooltips();
   });
-  observer.observe(mount, { childList: true, subtree: true });
-  const form = document.getElementById('amazon-search-form');
-  const statusEl = document.getElementById('search-status');
-  if (form && statusEl) {
+  tooltipObserver.observe(document.documentElement, { childList: true, subtree: true });
+  setTimeout(() => { try { tooltipObserver.disconnect(); } catch(e){} }, 5000);
+
+  // 2) Accordion button ↔ panel state sync (initial + live)
+  document.querySelectorAll('.accordion-collapse[id]').forEach(panel => {
+    const btn = document.querySelector(`[data-bs-target="#${panel.id}"]`);
+    if (!btn) return;
+    const open = panel.classList.contains('show');
+    btn.classList.toggle('collapsed', !open);
+    btn.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('show.bs.collapse', e => {
+    const btn = document.querySelector(`[data-bs-target="#${e.target.id}"]`);
+    if (btn) { btn.classList.remove('collapsed'); btn.setAttribute('aria-expanded','true'); }
+  });
+  document.addEventListener('hide.bs.collapse', e => {
+    const btn = document.querySelector(`[data-bs-target="#${e.target.id}"]`);
+    if (btn) { btn.classList.add('collapsed'); btn.setAttribute('aria-expanded','false'); }
+  });
+
+  // 3) Lite YouTube (click-to-load)
+  (function initLiteYouTube() {
+    const blocks = document.querySelectorAll('.yt-lite:not([data-yt-initialized])');
+    blocks.forEach(el => {
+      const id = el.dataset.id;
+      if (!id) return;
+      el.dataset.ytInitialized = 'true';
+      const title = el.dataset.title || 'YouTube video';
+      el.style.backgroundImage = `url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;
+      const btn = document.createElement('button');
+      btn.className = 'yt-play';
+      btn.setAttribute('aria-label', `Play video: ${title}`);
+      el.appendChild(btn);
+      el.addEventListener('click', () => {
+        if (el.classList.contains('activated')) return;
+        el.classList.add('activated');
+        const iframe = document.createElement('iframe');
+        iframe.title = title;
+        iframe.loading = 'lazy';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&modestbranding=1&rel=0`;
+        el.innerHTML = '';
+        el.appendChild(iframe);
+      });
+    });
+  })();
+
+  // 4) Submit status announcer (a11y)
+  (function initSubmitStatus() {
+    const form = document.getElementById('amazon-search-form');
+    const statusEl = document.getElementById('search-status');
+    if (!form || !statusEl) return;
     form.addEventListener('submit', () => {
       statusEl.textContent = 'Opening Amazon results…';
       setTimeout(() => { statusEl.textContent = ''; }, 4000);
     });
-  }
-});
+  })();
+})();
 </script>
-  <script>
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.yt-lite').forEach(el => {
-    const id = el.dataset.id;
-    const title = el.dataset.title || 'YouTube video';
-    el.style.backgroundImage = `url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;
-    const btn = document.createElement('button');
-    btn.className = 'yt-play';
-    btn.setAttribute('aria-label', `Play video: ${title}`);
-    el.appendChild(btn);
-    el.addEventListener('click', () => {
-      if (el.classList.contains('activated')) return;
-      el.classList.add('activated');
-      const iframe = document.createElement('iframe');
-      iframe.title = title;
-      iframe.loading = 'lazy';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-      iframe.allowFullscreen = true;
-      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
-      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&modestbranding=1&rel=0`;
-      el.innerHTML = '';
-      el.appendChild(iframe);
-    });
-  });
-});
-</script>
-<script defer src="/app.js"></script>
+
 </body>
 </html>
