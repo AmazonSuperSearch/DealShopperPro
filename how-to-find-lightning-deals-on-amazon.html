@@ -61,20 +61,36 @@
     </div>
   </header>
 
-  <main class="container my-5">
-    <section class="mb-5">
-      <div class="row g-4">
-        <div class="col-lg-8">
-          <p>Lightning Deals move fast — and the best ones rarely show up at the top of a normal search. The simplest way to cut through the noise is to apply the right filters in one pass. That’s what <strong>Deal Shopper Pro</strong> does: you set your criteria once, and it opens Amazon with results that match exactly.</p>
+ <main class="container my-5">
+  <section class="mb-5">
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <p>Lightning Deals move fast — and the best ones rarely show up at the top of a normal search. The simplest way to cut through the noise is to apply the right filters in one pass. That’s what <strong>Deal Shopper Pro</strong> does: you set your criteria once, and it opens Amazon with results that match exactly.</p>
 
-          <div class="alert alert-primary" role="alert">
-            Prefer a shortcut? Try these quick entries on the homepage:
-            <div class="mt-2 d-flex flex-wrap gap-2">
-              <a class="badge rounded-pill bg-primary" href="/">Lightning Deals + 30% off</a>
-              <a class="badge rounded-pill bg-primary" href="/">Prime‑only Lightning Deals</a>
-              <a class="badge rounded-pill bg-primary" href="/">Lightning Deals with coupons</a>
-            </div>
+        <div class="alert alert-primary" role="alert">
+          <strong>Shortcut:</strong> open Deal Shopper Pro with filters pre-selected:
+          <div class="mt-2 d-flex flex-wrap gap-2">
+            <!-- Lightning Deals + 30% -->
+            <a class="badge rounded-pill bg-primary"
+               href="/?lightning=1&min_discount=30#headingStep1">
+              Lightning Deals + 30% off
+            </a>
+            <!-- Prime-only Lightning Deals -->
+            <a class="badge rounded-pill bg-primary"
+               href="/?lightning=1&prime=1#headingStep1">
+              Prime-only Lightning Deals
+            </a>
+            <!-- Lightning Deals with coupons -->
+            <a class="badge rounded-pill bg-primary"
+               href="/?lightning=1&coupons=1#headingStep1">
+              Lightning Deals with coupons
+            </a>
           </div>
+          <div class="form-text mt-2">
+            Tip: add a keyword by appending <code>&q=coffee+maker</code> to the URL.
+          </div>
+        </div>
+
 
           <!-- HowTo Steps -->
           <h2 id="howto" class="h3 fw-bold mb-3">Step‑by‑Step: Filter Lightning Deals the Smart Way</h2>
