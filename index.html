@@ -1262,6 +1262,35 @@ const dspShare = (() => {
   });
 })();
 </script>
+<!-- === Accordion expand/collapse sound (final) === -->
+<script>
+(function () {
+  const snd = document.getElementById('accordion-sound');
+  if (!snd) return;
+
+  // Prime once on first interaction (satisfies autoplay policies)
+  let primed = false;
+  const prime = () => {
+    if (primed) return; primed = true;
+    try {
+      snd.muted = true;
+      snd.play().then(() => {
+        snd.pause(); snd.currentTime = 0; snd.muted = false;
+      }).catch(() => { snd.muted = false; });
+    } catch(_) {}
+    window.removeEventListener('pointerdown', prime, true);
+    window.removeEventListener('keydown', prime, true);
+  };
+  window.addEventListener('pointerdown', prime, true);
+  window.addEventListener('keydown', prime, true);
+
+  const play = () => { try { snd.currentTime = 0; snd.play().catch(() => {}); } catch(_) {} };
+
+  // Start-of-action events (gesture-safe)
+  document.addEventListener('show.bs.collapse', play);  // expanding
+  document.addEventListener('hide.bs.collapse', play);  // collapsing
+})();
+</script>
 
 
 </body>
