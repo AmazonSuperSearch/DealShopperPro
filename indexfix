@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="#66b2ff" name="theme-color">
+<meta content="index, follow, max-image-preview:large" name="robots">
+<title>Advanced Amazon Search — Deal Finder | Deal Shopper Pro</title>
+<meta content="Use our advanced Amazon search tool with unique filters for Lightning Deals, Prime-only offers, hidden coupons, and more — find the best deals in seconds." name="description">
+<!-- Open Graph / Twitter (single, deduped) -->
+<meta content="website" property="og:type">
+<meta content="Advanced Amazon Search — Deal Finder | Deal Shopper Pro" property="og:title">
+<meta content="Find Prime-only offers, Lightning Deals, and hidden coupons fast with smart filters." property="og:description">
+<meta content="https://www.dealshopperpro.com/" property="og:url">
+<meta content="https://www.dealshopperpro.com/og-image.jpg" property="og:image">
+<meta content="en_US" property="og:locale">
+<meta content="Deal Shopper Pro" property="og:site_name">
+<meta content="1200" property="og:image:width">
+<meta content="630" property="og:image:height">
+<meta content="Advanced Amazon Search — Deal Finder" property="og:image:alt">
+<meta content="summary_large_image" name="twitter:card">
+<meta content="Advanced Amazon Search — Deal Finder | Deal Shopper Pro" name="twitter:title">
+<meta content="Find Prime-only offers, Lightning Deals, and hidden coupons fast with smart filters." name="twitter:description">
+<meta content="https://www.dealshopperpro.com/og-image.jpg" name="twitter:image">
+<meta content="Advanced Amazon Search — Deal Finder" name="twitter:image:alt">
+<!-- <meta name="twitter:site" content="@YourHandle"> -->
+<link href="https://www.dealshopperpro.com/" rel="canonical">
+<!-- Favicon -->
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png">
+<link href="/favicon-64x64.png" rel="icon" sizes="64x64" type="image/png">
+<link href="/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/favicon-512x512.png" rel="icon" sizes="512x512" type="image/png">
+<link href="/favicon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/site.webmanifest" rel="manifest">
+<!-- Preconnects -->
+<link crossorigin="" href="https://cdn.jsdelivr.net" rel="preconnect">
+<link href="https://www.youtube-nocookie.com" rel="preconnect">
+<link href="https://i.ytimg.com" rel="preconnect">
+<!-- CSS -->
+<link as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" onload="this.rel='stylesheet'" rel="preload">
+<noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
+<style> /* navbar.css – shared dark navbar styling */ .navbar-custom{background:#000!important;padding:.5rem 0;box-shadow:0 1px 4px rgba(0,0,0,.1);z-index:1030} .navbar-custom .nav-link{color:#fff!important;font-weight:500} .navbar-custom .nav-link:hover,.navbar-custom .nav-link.active{color:#FFD700!important} .navbar-brand.text-warning{color:#FFD700!important} .navbar-custom *{color:inherit} .navbar-toggler-icon{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")!important;background-repeat:no-repeat;background-size:contain;width:30px;height:30px} </style>
+<!-- Icons -->
+<link as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" onload="this.rel='stylesheet'" rel="preload">
+<noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"></noscript>
+<!-- Icons font preload + swap -->
+<link as="font" crossorigin="" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2" rel="preload" type="font/woff2">
+<style>
+  @font-face{
+    font-family:"bootstrap-icons";
+    src:url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff") format("woff");
+    font-weight:400; font-style:normal; font-display:swap;
+  }
+  </style>
+<style>
+    /* Bootstrap primary override */
+    :root {
+      --bs-primary: #66b2ff;
+      --bs-primary-rgb: 102, 178, 255;
+      --bs-focus-ring-color: rgba(102,178,255,.4);
+    }
+
+    /* Glow pulse text effect */
+    .glow-pulse {
+      font-weight: 800;
+      font-size: 2rem;
+      color: #ff5e00;
+      text-align: center;
+      animation: glowPulse 2.5s ease-in-out infinite;
+      text-shadow: 0 0 2px #ff5e00, 0 0 4px #ff7518, 0 0 6px #ff8c42;
+    }
+    @keyframes glowPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+    /* Accessibility safety net (keeps audits green) */
+    @media (prefers-reduced-motion: reduce) { .glow-pulse { animation: none; } }
+
+    /* Improve hover/active contrast for primary buttons */
+    .btn-primary:hover { filter: brightness(0.92); }
+    .btn-primary:active, .btn-primary:focus { filter: brightness(0.88); }
+
+    /* Darker checkbox borders *//* Darker checkbox borders */
+    .form-check-input[type="checkbox"] { border-color: #555; background-color:#fff; }
+    .form-check-input[type="checkbox"]:hover { border-color: #333; }
+    .form-check-input[type="checkbox"]:checked { background-color: var(--bs-primary); border-color: var(--bs-primary); }
+
+    /* Darker container around each option */
+    .form-check {
+      background-color:#f8f9fa; padding:6px 10px; border-radius:6px; border:1px solid #ddd; margin-bottom:5px;
+    }
+    .form-check:hover { background-color:#e9ecef; }
+
+    /* Lite YouTube CSS (eliminates cookie warning until user clicks) */
+    .yt-lite { position:relative; display:block; background:#000; aspect-ratio:16/9; border-radius:.75rem; overflow:hidden; background-position:center; background-size:cover; cursor:pointer; }
+    .yt-lite > .yt-play { position:absolute; inset:0; display:grid; place-items:center; border:0; background:transparent; }
+    .yt-lite > .yt-play::before {
+      content:""; width:68px; height:48px;
+      background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 48'><path fill='%23f00' d='M66.5 7.0c-0.7-2.6-2.7-4.6-5.3-5.3C55.9 0 34 0 34 0s-21.9 0-27.2 1.7c-2.6.7-4.6 2.7-5.3 5.3C0 12.3 0 24 0 24s0 11.7 1.5 17.0c.7 2.6 2.7 4.6 5.3 5.3C12.1 48 34 48 34 48s21.9 0 27.2-1.7c2.6-.7 4.6-2.7 5.3-5.3C68 35.7 68 24 68 24s0-11.7-1.5-17.0z'><path fill='%23fff' d='M45 24L27 14v20z'></svg>") center/contain no-repeat;
+    }
+    .yt-lite.activated > .yt-play { display:none; }
+  /* Make all borders in Steps 1–6 thicker */
+.accordion-item,
+.accordion-body,
+.form-check,
+input,
+select {
+  border-width: 3px !important;
+}
+
+
+  </style>
+  <!-- ✅ Sticky Mobile Share Bar (shows after the user starts using the form) -->
+<style>
+  #dsp-share-bar { transform: translateY(100%); transition: transform .25s ease; }
+  #dsp-share-bar.show { transform: translateY(0); }
+</style>
+<!-- Structured Data -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.dealshopperpro.com/#organization","name":"Deal Shopper Pro","url":"https://www.dealshopperpro.com","logo":{"@type":"ImageObject","@id":"https://www.dealshopperpro.com/#logo","url":"https://www.dealshopperpro.com/logo.png","width":512,"height":512},"sameAs":["https://www.pinterest.com/dealshopperpro/","https://dealshopperpro.medium.com/","https://dealshopperpro.blogspot.com/"],"contactPoint":{"@type":"ContactPoint","contactType":"Customer Support","url":"https://www.dealshopperpro.com/help.html","availableLanguage":["en"],"areaServed":"US"}},{"@type":"WebSite","@id":"https://www.dealshopperpro.com/#website","url":"https://www.dealshopperpro.com","name":"Deal Shopper Pro","description":"Advanced Amazon deal search with filters for Prime, coupons, Lightning Deals, and more.","inLanguage":"en-US","publisher":{"@id":"https://www.dealshopperpro.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.dealshopperpro.com/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.dealshopperpro.com/#primaryimage","url":"https://www.dealshopperpro.com/og-image.jpg","width":1200,"height":630},{"@type":"WebPage","@id":"https://www.dealshopperpro.com/#webpage","url":"https://www.dealshopperpro.com/","name":"Advanced Amazon Search — Deal Finder | Deal Shopper Pro","inLanguage":"en-US","description":"Find the best Amazon deals using our smart 6-step filter system. Discover Prime-only offers, coupons, Lightning Deals, and more.","isPartOf":{"@id":"https://www.dealshopperpro.com/#website"},"breadcrumb":{"@id":"https://www.dealshopperpro.com/#breadcrumb"},"primaryImageOfPage":{"@id":"https://www.dealshopperpro.com/#primaryimage"},"mainEntityOfPage":"https://www.dealshopperpro.com/","datePublished":"2025-08-01","dateModified":"2025-08-12","about":[{"@type":"Thing","name":"Amazon deals"},{"@type":"Thing","name":"Lightning Deals"},{"@type":"Thing","name":"Prime-only deals"},{"@type":"Thing","name":"Amazon coupons"},{"@type":"Thing","name":"Deal filtering"}],"audience":{"@type":"Audience","audienceType":"Amazon shoppers"}},{"@type":"BreadcrumbList","@id":"https://www.dealshopperpro.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dealshopperpro.com/"},{"@type":"ListItem","position":2,"name":"Advanced Amazon Search","item":"https://www.dealshopperpro.com/#headingStep1"}]},{"@type":"SoftwareApplication","@id":"https://www.dealshopperpro.com/#software","name":"Deal Shopper Pro","applicationCategory":"WebApplication","operatingSystem":"Web","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.dealshopperpro.com","description":"Web-based Amazon search tool with smart filters for Prime, coupons, and Lightning Deals.","license":"https://www.dealshopperpro.com/terms.html","termsOfService":"https://www.dealshopperpro.com/terms.html"},{"@type":"FAQPage","@id":"https://www.dealshopperpro.com/#faq","mainEntity":[{"@type":"Question","name":"What is Deal Shopper Pro?","acceptedAnswer":{"@type":"Answer","text":"Deal Shopper Pro is a free Amazon deal search tool that helps you filter by price, rating, Prime, coupons, and more."}},{"@type":"Question","name":"How do I find Prime-only deals on Amazon fast?","acceptedAnswer":{"@type":"Answer","text":"Use the ‘Extra Filters’ section and check the ‘Prime Only’ box. Then submit your search to open Prime-eligible deals directly on Amazon."}},{"@type":"Question","name":"Can I search by price range, rating, and brand all at once?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the 6-step guided search form to combine multiple filters including price, brand, ratings, and special deals like Lightning Deals or coupons."}},{"@type":"Question","name":"Does this site show hidden deals or coupons?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our advanced filters can reveal hidden discounts like coupons, Lightning Deals, Subscribe & Save deals, and limited-time offers that don’t show up in standard Amazon searches."}},{"@type":"Question","name":"Is Deal Shopper Pro affiliated with Amazon?","acceptedAnswer":{"@type":"Answer","text":"No. Deal Shopper Pro is an independent site that uses the Amazon Associates API to help users find products more efficiently. We are not affiliated with or endorsed by Amazon."}},{"@type":"Question","name":"How does Deal Shopper Pro work?","acceptedAnswer":{"@type":"Answer","text":"Deal Shopper Pro uses a custom 6-step filter system to search Amazon, helping you find Prime-only offers, coupons, Lightning Deals, and more."}},{"@type":"Question","name":"Is Deal Shopper Pro free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is completely free to use."}},{"@type":"Question","name":"Do you store my Amazon search history?","acceptedAnswer":{"@type":"Answer","text":"No, we do not track, store, or share your Amazon search history."}}],"inLanguage":"en-US"}]}</script>
+<link rel="preload" as="audio" href="/click.mp3">
+<link rel="preload" as="audio" href="/expand.mp3">
+</head>
+<body>
+<main>
+<div id="navbar-placeholder"></div>
+<!-- Visible Breadcrumbs (match JSON-LD) -->
+<nav aria-label="breadcrumb" class="container mt-3">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li aria-current="page" class="breadcrumb-item active">Advanced Amazon Search</li>
+</ol>
+</nav>
+<!-- Accordion-Style Amazon Search Tool -->
+<section class="container py-4">
+<div class="row justify-content-center">
+<div class="col-lg-10">
+<h1 class="glow-pulse text-center my-4">Amazon Deal Finder — Advanced Amazon Search &amp; Coupon Finder</h1>
+<section class="py-5 text-center">
+<h2 class="fw-bold display-5 mb-3">Amazon Deal Finder — Stop Missing Hidden Deals &amp; Coupons</h2>
+<p class="lead text-muted text-center mb-2">
+              Discover Prime‑Only offers, hidden discounts, and coupon‑stacked deals — fast.
+            </p>
+<ul class="list-unstyled text-center text-muted small mb-4">
+<li>🔍 Smart filters for price, rating, brand, shipping &amp; more</li>
+<li>⚡ Real Amazon results — no signup, no extensions</li>
+<li>✅ Built for shoppers, not sellers</li>
+</ul>
+<div class="d-grid gap-2 d-sm-inline-flex justify-content-sm-center align-items-center mb-4">
+<a class="btn btn-primary btn-lg px-4 me-sm-3 shadow-sm" href="#headingStep1">
+                🔎 Try the Smart Amazon Search Now
+              </a>
+<span class="px-3 py-2 bg-info text-dark rounded-pill fw-semibold">🔓 No signup required</span>
+</div>
+<div class="d-flex justify-content-center gap-4 mb-4 fs-3 text-muted">
+<div data-bs-toggle="tooltip" title="Secure Protection"><i aria-hidden="true" class="bi bi-shield-lock text-success"></i></div>
+<div data-bs-toggle="tooltip" title="Private – No Tracking"><i aria-hidden="true" class="bi bi-incognito text-dark"></i></div>
+<div data-bs-toggle="tooltip" title="Cloud-Based Search"><i aria-hidden="true" class="bi bi-cloud text-primary"></i></div>
+<div data-bs-toggle="tooltip" title="AI-Enhanced Filters"><i aria-hidden="true" class="bi bi-cpu text-warning"></i></div>
+</div>
+<div class="mb-5">
+<h2 class="fw-bold text-center mb-3">🎥 Watch: How to Filter Lightning Deals on Amazon in 30 Seconds</h2>
+<!-- Lite YouTube embed -->
+<div class="yt-lite rounded-3 shadow-sm" data-id="wpj1l1XUunw" data-title="How to Filter Lightning Deals on Amazon in 30 Seconds"></div>
+<!-- No-JS fallback -->
+<noscript>
+<a href="https://www.youtube.com/watch?v=wpj1l1XUunw" rel="noopener" target="_blank">
+      Watch on YouTube
+    </a>
+</noscript>
+</div>
+<p class="text-muted small text-center mt-2">
+  This quick demo shows how to instantly find Lightning Deals using Deal Shopper Pro.<br>
+<em>Deal Shopper Pro is an independent tool and is not affiliated with Amazon.</em>
+</p>
+<p class="text-muted small mt-4">🤖 Built with help from <strong>ChatGPT</strong> — Free to use, no Amazon affiliation.</p>
+</section>
+<form id="amazon-search-form" method="get" novalidate="">
+<div class="accordion" id="filterAccordion">
+<!-- 🛍️ 6-Step Deal Finder Headline -->
+<section class="text-center my-5">
+<h2 class="h4 fw-bold text-primary-emphasis mb-2" id="how-to-find-the-best-amazon-deals">Advanced Amazon Search — 6 Steps to Find Deals &amp; Coupons</h2>
+<p class="text-muted mb-2">
+    Use as many filters as you like — <strong>Prime</strong>, <strong>Lightning Deals</strong>, brand, rating, coupons, and more — to uncover exactly what you want.
+  </p>
+<div class="text-success small fw-semibold mt-2">✅ Real Amazon search • No extensions • No signup</div>
+</section>
+<!-- Step 1 -->
+<div class="accordion-item border-bottom">
+<h2 class="accordion-header" id="headingStep1">
+<button aria-controls="collapseStep1" aria-expanded="true" class="accordion-button bg-white text-dark fw-bold" data-bs-target="#collapseStep1" data-bs-toggle="collapse" type="button">
+      🔍 ✅ Step 1: Start Your Product Search
+    </button>
+</h2>
+<div aria-labelledby="headingStep1" class="accordion-collapse collapse show" id="collapseStep1">
+<div class="accordion-body">
+<div class="input-group">
+<span class="input-group-text">🔎</span>
+<input aria-label="Search products" autocomplete="off" class="form-control" id="mainSearchInput" name="q" placeholder="Search Amazon: Keyword, ASIN, ISBN, or UPC" type="text">
+</div>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="accordion-item border-bottom">
+<h2 class="accordion-header" id="headingStep2">
+<button aria-controls="collapseStep2" aria-expanded="false" class="accordion-button collapsed bg-white text-dark fw-bold" data-bs-target="#collapseStep2" data-bs-toggle="collapse" type="button">
+                💰 ✅ Step 2: Set Your Price Range
+              </button>
+</h2>
+<div aria-labelledby="headingStep2" class="accordion-collapse collapse" id="collapseStep2">
+<div class="accordion-body">
+<div class="row g-3 align-items-end">
+<div class="col-md-4">
+<label class="form-label" for="currencySelect">Currency</label>
+<select class="form-select" id="currencySelect" name="currency">
+<option selected="" value="usd">USD ($)</option>
+<option value="eur">EUR (€)</option>
+<option value="gbp">GBP (£)</option>
+<option value="jpy">JPY (¥)</option>
+<option value="inr">INR (₹)</option>
+</select>
+</div>
+<div class="col-md-4">
+<label class="form-label" for="minPrice">Min Price</label>
+<div class="input-group">
+<span class="input-group-text">$</span>
+<input class="form-control" id="minPrice" name="min-price" placeholder="e.g. 10" step="0.01" type="number">
+</div>
+</div>
+<div class="col-md-4">
+<label class="form-label" for="maxPrice">Max Price</label>
+<div class="input-group">
+<span class="input-group-text">$</span>
+<input class="form-control" id="maxPrice" name="max-price" placeholder="e.g. 100" step="0.01" type="number">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 3: Sort, Rating & Discount -->
+<div class="accordion-item border-bottom">
+<h2 class="accordion-header" id="headingStep3">
+<button aria-controls="collapseStep3" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep3" data-bs-toggle="collapse" type="button">
+                🎯 ✅ Step 3: Sort, Rating &amp; Discount Filters
+              </button>
+</h2>
+<div aria-labelledby="headingStep3" class="accordion-collapse collapse" id="collapseStep3">
+<div class="accordion-body">
+<div class="row g-3">
+<div class="col-md-4">
+<label class="form-label" for="sortOrder">Sort Results</label>
+<select class="form-select" id="sortOrder" name="sort">
+<option value="relevance">Relevance</option>
+<option value="price-asc-rank">Price: Low to High</option>
+<option value="price-desc-rank">Price: High to Low</option>
+<option value="review-rank">Customer Reviews</option>
+<option value="date-desc-rank">Newest Arrivals</option>
+</select>
+</div>
+<div class="col-md-4">
+  <label class="form-label" for="minRating">Minimum Rating</label>
+  <select class="form-select" id="minRating" name="min-rating" aria-label="Minimum product rating">
+    <option value="">Any</option>
+    <option value="1">1 star &amp; up</option>
+    <option value="2">2 stars &amp; up</option>
+    <option value="3">3 stars &amp; up</option>
+    <option value="4">4 stars &amp; up</option>
+    <option value="5">5 stars only</option>
+  </select>
+</div>
+
+<div class="col-md-4">
+<label class="form-label" for="min-discount">Minimum Discount</label>
+<select class="form-select" id="min-discount" name="min-discount">
+<option value="">Any</option>
+<option value="5">5%+</option>
+<option value="10">10%+</option>
+<option value="15">15%+</option>
+<option value="20">20%+</option>
+<option value="25">25%+</option>
+<option value="30">30%+</option>
+<option value="35">35%+</option>
+<option value="40">40%+</option>
+<option value="45">45%+</option>
+<option value="50">50%+</option>
+<option value="55">55%+</option>
+<option value="60">60%+</option>
+<option value="65">65%+</option>
+<option value="70">70%+</option>
+<option value="75">75%+</option>
+<option value="80">80%+</option>
+<option value="85">85%+</option>
+<option value="90">90%+</option>
+<option value="95">95%+</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 4: Filter by Brand -->
+<div class="accordion-item border-bottom">
+<h2 class="accordion-header" id="headingStep4">
+<button aria-controls="collapseStep4" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep4" data-bs-toggle="collapse" type="button">
+                🏷️ ✅ Step 4: Filter by Brand
+              </button>
+</h2>
+<div aria-labelledby="headingStep4" class="accordion-collapse collapse" id="collapseStep4">
+<div class="accordion-body">
+<label class="form-label" for="brand-include">Brand(s) to include</label>
+<input class="form-control" id="brand-include" name="brand-include" placeholder="e.g. Nike, Samsung, Apple" type="text">
+<p class="form-text text-muted">You can enter multiple brands separated by commas.</p>
+<div class="form-check mt-2">
+<input class="form-check-input" id="include-only" name="include-only" type="checkbox">
+<label class="form-check-label small" for="include-only">Only include results from these brands</label>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 5: Extra Filters -->
+<div class="accordion-item border-bottom">
+  <h2 class="accordion-header" id="headingStep5">
+    <button class="accordion-button collapsed bg-white fw-bold" type="button"
+            data-bs-toggle="collapse" data-bs-target="#collapseStep5"
+            aria-expanded="false" aria-controls="collapseStep5">
+      🔥 ✅ Step 5: Extra Filters &amp; Deals, Deals, Deals!
+    </button>
+  </h2>
+
+  <div id="collapseStep5" class="accordion-collapse collapse" aria-labelledby="headingStep5">
+    <div class="accordion-body">
+      <p class="text-muted mb-3">Prime-eligible, Lightning Deals, Free Shipping, In Stock, Eco-Friendly, Coupons, and more.</p>
+
+      <div class="card mb-4 p-3">
+        <div class="accordion" id="filterAccordion-step5">
+
+          <!-- ========================= -->
+          <!-- 🚚 Shipping & Availability -->
+          <!-- ========================= -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingShipping">
+              <button class="accordion-button collapsed sticky-top bg-white" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapseShipping"
+                      aria-expanded="false" aria-controls="collapseShipping">
+                🚚 Shipping &amp; Availability
+              </button>
+            </h2>
+            <div id="collapseShipping" class="accordion-collapse collapse" aria-labelledby="headingShipping">
+              <div class="accordion-body">
+
+                <!-- ✅ Reliable -->
+                <div class="mb-3">
+                  <div class="form-check" data-tooltip="Only show Amazon Prime-eligible products.">
+                    <input class="form-check-input" id="primeOnly" name="prime-only" type="checkbox">
+                    <label class="form-check-label" for="primeOnly">🤩 Prime Only</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for products with free shipping.">
+                    <input class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox">
+                    <label class="form-check-label" for="freeShipping">🚚 Free Shipping</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Show items currently in stock.">
+                    <input class="form-check-input" id="inStock" name="in-stock" type="checkbox">
+                    <label class="form-check-label" for="inStock">📦 In Stock</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Fulfilled by Amazon (FBA) products only.">
+                    <input class="form-check-input" id="fbaOnly" name="fba-only" type="checkbox">
+                    <label class="form-check-label" for="fbaOnly">📦 Fulfilled by Amazon (FBA)</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Only show products that ship from the United States.">
+                    <input class="form-check-input" id="shipsFromUS" name="ships-from-us" type="checkbox">
+                    <label class="form-check-label" for="shipsFromUS">🇺🇸 Ships from United States</label>
+                  </div>
+                </div>
+
+                <!-- (No experimental in this group) -->
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ===================== -->
+          <!-- 🎯🔥 Deals & Discounts -->
+          <!-- ===================== -->
+          <div class="accordion-item border-bottom">
+            <h2 class="accordion-header" id="headingaccordionGroup2">
+              <button class="accordion-button collapsed sticky-top bg-white" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#accordionGroup2"
+                      aria-expanded="false" aria-controls="accordionGroup2">
+                🎯🔥 Deals &amp; Discounts
+              </button>
+            </h2>
+            <div id="accordionGroup2" class="accordion-collapse collapse" aria-labelledby="headingaccordionGroup2">
+              <div class="accordion-body">
+
+                <!-- ✅ Reliable -->
+                <div class="mb-3">
+                  <div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
+                    <input class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox">
+                    <label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="🔥🏷️ Filter Amazon for deals with clippable coupons at checkout.">
+                    <input class="form-check-input" id="coupons" name="coupons" type="checkbox">
+                    <label class="form-check-label" for="coupons">🏷️ Coupons</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Clearance items from the Amazon Outlet section.">
+                    <input class="form-check-input" id="outletDeals" name="outlet-deals" type="checkbox">
+                    <label class="form-check-label" for="outletDeals">🛍️ Amazon Outlet Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Products sold under Amazon-owned brand names.">
+                    <input class="form-check-input" id="amazon-brands" name="amazon-brands" type="checkbox">
+                    <label class="form-check-label" for="amazon-brands">🏷️ Amazon Brands</label>
+                  </div>
+                </div>
+
+                <!-- Divider -->
+                <hr class="my-2">
+                <p class="text-muted small mb-2">⚠️ <strong>Experimental</strong> – may not be 100% reliable</p>
+
+                <!-- ⚠️ Experimental -->
+                <div>
+                  <div class="form-check" data-tooltip="View Amazon's Today's Deals page.">
+                    <input class="form-check-input experimental" id="todaysDeals" name="todays-deals" type="checkbox">
+                    <label class="form-check-label" for="todaysDeals">🔥 Today's Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Find top-selling items with discounts.">
+                    <input class="form-check-input experimental" id="bestSellerDeals" name="best-seller-deals" type="checkbox">
+                    <label class="form-check-label" for="bestSellerDeals">🥇 Best Seller Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Promos like buy one get one free.">
+                    <input class="form-check-input experimental" id="bogoDeals" name="bogo-deals" type="checkbox">
+                    <label class="form-check-label" for="bogoDeals">🎫 Buy One Get One (BOGO)</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Extra-discounted clearance or overstock items.">
+                    <input class="form-check-input experimental" id="clearanceDeals" name="clearance-deals" type="checkbox">
+                    <label class="form-check-label" for="clearanceDeals">🛒 Clearance Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Deals with short time limits or countdowns.">
+                    <input class="form-check-input experimental" id="limitedTimeDeals" name="limited-time-deals" type="checkbox">
+                    <label class="form-check-label" for="limitedTimeDeals">💥 Limited-Time Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Deals that are about to expire.">
+                    <input class="form-check-input experimental" id="endsSoonDeals" name="ends-soon-deals" type="checkbox">
+                    <label class="form-check-label" for="endsSoonDeals">⏱️ Ends Soon</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Great deals under $25.">
+                    <input class="form-check-input experimental" id="under25Deals" name="under-25-deals" type="checkbox">
+                    <label class="form-check-label" for="under25Deals">🪙 Under $25 Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Coupons that are about to expire.">
+                    <input class="form-check-input experimental" id="expiringCoupons" name="expiring-coupons" type="checkbox">
+                    <label class="form-check-label" for="expiringCoupons">🛑 Expiring Coupons</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Find the lowest recorded price on items.">
+                    <input class="form-check-input experimental" id="lowestPrice" name="lowest-price" type="checkbox">
+                    <label class="form-check-label" for="lowestPrice">📉 Lowest Price</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Short-term deals that expire quickly.">
+                    <input class="form-check-input experimental" id="flashSales" name="flash-sales" type="checkbox">
+                    <label class="form-check-label" for="flashSales">⚡ Flash Sales</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Deals currently trending or gaining popularity.">
+                    <input class="form-check-input experimental" id="trendingDeals" name="trending-deals" type="checkbox">
+                    <label class="form-check-label" for="trendingDeals">📊 Trending Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Items added to Amazon’s deal feed within the last 24 hours.">
+                    <input class="form-check-input experimental" id="newDealsToday" name="new-deals-today" type="checkbox">
+                    <label class="form-check-label" for="newDealsToday">🆕 New Deals Today</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Used or returned items with discounts.">
+                    <input class="form-check-input experimental" id="openBoxDeals" name="open-box-deals" type="checkbox">
+                    <label class="form-check-label" for="openBoxDeals">📦 Open Box Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Items recently restocked and discounted.">
+                    <input class="form-check-input experimental" id="backInStockDeals" name="back-in-stock-deals" type="checkbox">
+                    <label class="form-check-label" for="backInStockDeals">📦 Back in Stock Deals</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ============== -->
+          <!-- Eco & Ethical  -->
+          <!-- ============== -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingaccordionGroup3">
+              <button class="accordion-button collapsed sticky-top bg-white" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#accordionGroup3"
+                      aria-expanded="false" aria-controls="accordionGroup3">
+                Eco &amp; Ethical
+              </button>
+            </h2>
+            <div id="accordionGroup3" class="accordion-collapse collapse" aria-labelledby="headingaccordionGroup3">
+              <div class="accordion-body">
+
+                <!-- ✅ Reliable -->
+                <div class="mb-3">
+                  <div class="form-check" data-tooltip="Only show eco-friendly products.">
+                    <input class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox">
+                    <label class="form-check-label" for="ecoFriendlyToggle">♻️ Eco-Friendly</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Biodegradable.">
+                    <input class="form-check-input" id="biodegradable" name="biodegradable" type="checkbox">
+                    <label class="form-check-label" for="biodegradable">🌱 Biodegradable</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Only vegan-friendly products.">
+                    <input class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox">
+                    <label class="form-check-label" for="veganProducts">🌱 Vegan</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Only organic-certified items.">
+                    <input class="form-check-input" id="organicProducts" name="organic-products" type="checkbox">
+                    <label class="form-check-label" for="organicProducts">🌿 Organic</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Products labeled cruelty-free.">
+                    <input class="form-check-input" id="crueltyFreeToggle" name="cruelty-free" type="checkbox">
+                    <label class="form-check-label" for="crueltyFreeToggle">🐰 Cruelty-Free</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: No Microplastics.">
+                    <input class="form-check-input" id="no-microplastics" name="no-microplastics" type="checkbox">
+                    <label class="form-check-label" for="no-microplastics">🚫 Microplastics</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Fair Trade.">
+                    <input class="form-check-input" id="fair-trade" name="fair-trade" type="checkbox">
+                    <label class="form-check-label" for="fair-trade">🧵 Fair Trade</label>
+                  </div>
+                </div>
+
+                <!-- Divider -->
+                <hr class="my-2">
+                <p class="text-muted small mb-2">⚠️ <strong>Experimental</strong> – may not be 100% reliable</p>
+
+                <!-- ⚠️ Experimental -->
+                <div>
+                  <div class="form-check" data-tooltip="Items with carbon-neutral delivery.">
+                    <input class="form-check-input experimental" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox">
+                    <label class="form-check-label" for="carbonNeutralDelivery">🚴 Carbon-Neutral Delivery</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Recyclable Packaging.">
+                    <input class="form-check-input experimental" id="recyclable-packaging" name="recyclable-packaging" type="checkbox">
+                    <label class="form-check-label" for="recyclable-packaging">♻️ Recyclable Packaging</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Plastic-Free.">
+                    <input class="form-check-input experimental" id="plastic-free" name="plastic-free" type="checkbox">
+                    <label class="form-check-label" for="plastic-free">🧼 Plastic-Free</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Minimal Packaging.">
+                    <input class="form-check-input experimental" id="minimal-packaging" name="minimal-packaging" type="checkbox">
+                    <label class="form-check-label" for="minimal-packaging">📦 Minimal Packaging</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Rechargeable Batteries.">
+                    <input class="form-check-input experimental" id="rechargeable-batteries" name="rechargeable-batteries" type="checkbox">
+                    <label class="form-check-label" for="rechargeable-batteries">🔋 Rechargeable Batteries</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Made in USA.">
+                    <input class="form-check-input experimental" id="made-in-usa" name="made-in-usa" type="checkbox">
+                    <label class="form-check-label" for="made-in-usa">🇺🇸 Made in USA</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= -->
+          <!-- Special Categories -->
+          <!-- ================= -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingaccordionGroup4">
+              <button class="accordion-button collapsed sticky-top bg-white" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#accordionGroup4"
+                      aria-expanded="false" aria-controls="accordionGroup4">
+                Special Categories
+              </button>
+            </h2>
+            <div id="accordionGroup4" class="accordion-collapse collapse" aria-labelledby="headingaccordionGroup4">
+              <div class="accordion-body">
+
+                <!-- ✅ Reliable -->
+                <div class="mb-3">
+                  <div class="form-check" data-tooltip="Filter for: Climate Pledge Picks">
+                    <input class="form-check-input" id="climate-pledge" name="climate-pledge" type="checkbox">
+                    <label class="form-check-label" for="climate-pledge">♻️ Climate Pledge Picks</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Support products sold by small businesses.">
+                    <input class="form-check-input" id="smallBusiness" name="small-business" type="checkbox">
+                    <label class="form-check-label" for="smallBusiness">🏪 Small Business</label>
+                  </div>
+                </div>
+
+                <!-- Divider -->
+                <hr class="my-2">
+                <p class="text-muted small mb-2">⚠️ <strong>Experimental</strong> – may not be 100% reliable</p>
+
+                <!-- ⚠️ Experimental -->
+                <div>
+                  <div class="form-check" data-tooltip="Show warehouse and refurbished items.">
+                    <input class="form-check-input experimental" id="warehouseRefurb" name="warehouse-refurb" type="checkbox">
+                    <label class="form-check-label" for="warehouseRefurb">📦 Warehouse &amp; Refurbished</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Just Released.">
+                    <input class="form-check-input experimental" id="new-release" name="new-release" type="checkbox">
+                    <label class="form-check-label" for="new-release">🆕 Just Released</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Trending Now.">
+                    <input class="form-check-input experimental" id="trending-now" name="trending-now" type="checkbox">
+                    <label class="form-check-label" for="trending-now">📈 Trending Now</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Back in Stock.">
+                    <input class="form-check-input experimental" id="back-in-stock" name="back-in-stock" type="checkbox">
+                    <label class="form-check-label" for="back-in-stock">🕘 Back in Stock</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Budget Essentials.">
+                    <input class="form-check-input experimental" id="budget-essentials" name="budget-essentials" type="checkbox">
+                    <label class="form-check-label" for="budget-essentials">🪙 Budget Essentials</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Limited Quantity Left.">
+                    <input class="form-check-input experimental" id="limited-quantity-left" name="limited-quantity-left" type="checkbox">
+                    <label class="form-check-label" for="limited-quantity-left">⏳ Limited Quantity Left</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ========== -->
+          <!-- Gift Ideas -->
+          <!-- ========== -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingaccordionGroup5">
+              <button class="accordion-button collapsed sticky-top bg-white" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#accordionGroup5"
+                      aria-expanded="false" aria-controls="accordionGroup5">
+                Gift Ideas
+              </button>
+            </h2>
+            <div id="accordionGroup5" class="accordion-collapse collapse" aria-labelledby="headingaccordionGroup5">
+              <div class="accordion-body">
+
+                <!-- ⚠️ Experimental (all keyword-based) -->
+                <div>
+                  <div class="form-check" data-tooltip="Gift ideas suitable for women.">
+                    <input class="form-check-input experimental" id="giftsForHer" name="gifts-for-her" type="checkbox">
+                    <label class="form-check-label" for="giftsForHer">🎀 Gifts for Her</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Gift ideas suitable for men.">
+                    <input class="form-check-input experimental" id="giftsForHim" name="gifts-for-him" type="checkbox">
+                    <label class="form-check-label" for="giftsForHim">👔 Gifts for Him</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Gift ideas for kids of all ages.">
+                    <input class="form-check-input experimental" id="giftsForKids" name="gifts-for-kids" type="checkbox">
+                    <label class="form-check-label" for="giftsForKids">🧒 Gifts for Kids</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Perfect for birthday gift shopping.">
+                    <input class="form-check-input experimental" id="birthdayGifts" name="birthday-gifts" type="checkbox">
+                    <label class="form-check-label" for="birthdayGifts">🎂 Birthday Gifts</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Holiday-themed gift deals.">
+                    <input class="form-check-input experimental" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox">
+                    <label class="form-check-label" for="holidayGiftPicks">🎄 Holiday Gift Picks</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Affordable gifts under $25.">
+                    <input class="form-check-input experimental" id="giftUnder25" name="giftUnder25" type="checkbox" value="gifts+under+25+dollars">
+                    <label class="form-check-label" for="giftUnder25">💵 Gifts Under $25</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Light-hearted and funny gift ideas.">
+                    <input class="form-check-input experimental" id="funnyGifts" name="funnyGifts" type="checkbox" value="funny+gag+gifts">
+                    <label class="form-check-label" for="funnyGifts">🤣 Funny &amp; Gag Gifts</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Quick gifts for last-minute shoppers.">
+                    <input class="form-check-input experimental" id="lastMinuteGifts" name="lastMinuteGifts" type="checkbox" value="last+minute+gifts">
+                    <label class="form-check-label" for="lastMinuteGifts">⏰ Last-Minute Gifts</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- /#filterAccordion-step5 -->
+      </div> <!-- /.card -->
+    </div> <!-- /.accordion-body -->
+  </div> <!-- /#collapseStep5 -->
+</div> <!-- /.accordion-item -->
+
+<!-- STEP 6: View Results -->
+<div class="accordion-item border-bottom">
+<h2 class="accordion-header" id="headingStep6">
+<button aria-controls="collapseStep6" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep6" data-bs-toggle="collapse" type="button">
+                📊 ✅ Step 6: View Results on Amazon
+              </button>
+</h2>
+<div aria-labelledby="headingStep6" class="accordion-collapse collapse" id="collapseStep6">
+<div class="accordion-body">
+<p class="text-muted">You are ready! Click the "Search Amazon Now" button below to see matching results on Amazon.</p>
+</div>
+</div>
+</div>
+<!-- Final CTA inside the form as well -->
+<div class="text-center my-4">
+<button class="btn btn-success fw-bold" type="submit">🔎 Search Amazon Now</button>
+<!-- Warning Message -->
+<p class="mt-3 fw-bold small" role="alert" style="color:#b3541e;">
+    ⚠️ Too many filters may return no results.
+  </p>
+</div>
+</div><!-- /.accordion -->
+</form><div aria-live="polite" class="visually-hidden" id="search-status"></div><!-- /#amazon-search-form -->
+</div><!-- /.col-lg-10 -->
+</div><!-- /.row -->
+</section><!-- /.container py-4 -->
+<!-- 🚫 Amazon Search Problems — Solved -->
+<section class="container my-5">
+<h2 class="text-center fw-bold mb-4 text-danger-emphasis">❌ Amazon Filters Not Working? — Try Our Advanced Amazon Search &amp; Coupon Finder</h2>
+<div class="row g-4">
+<div class="col-md-4">
+<div class="card h-100 shadow-sm border-danger-subtle">
+<div class="card-body">
+<h3 class="card-title fs-5 text-danger-emphasis">Amazon filters don’t work right</h3>
+<p class="text-muted small mb-2">They often show sponsored or irrelevant results, wasting your time.</p>
+<hr>
+<h6 class="text-success fw-bold mb-1">✅ Your Solution:</h6>
+<p class="mb-0">Use precision filters for Prime-only, in-stock, discounted, or coupon-backed items — instantly.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card h-100 shadow-sm border-warning-subtle">
+<div class="card-body">
+<h3 class="card-title fs-5 text-warning-emphasis">You miss deals before they expire</h3>
+<p class="text-muted small mb-2">Lightning Deals, BOGO offers, and coupons disappear before you find them.</p>
+<hr>
+<h6 class="text-success fw-bold mb-1">✅ Your Solution:</h6>
+<p class="mb-0">Spot live, time-sensitive deals faster — no need to refresh Amazon pages manually.</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card h-100 shadow-sm border-info-subtle">
+<div class="card-body">
+<h3 class="card-title fs-5 text-primary-emphasis">It’s hard to find exactly what you want</h3>
+<p class="text-muted small mb-2">You can’t combine filters like Prime, brand, coupon, and rating in Amazon search.</p>
+<hr>
+<h6 class="text-success fw-bold mb-1">✅ Your Solution:</h6>
+<p class="mb-0">Our guided form lets you stack advanced filters for hyper-specific results — in seconds.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 📢 Call to Action: Smart Search -->
+<section class="container my-5 text-center">
+<h2 class="fw-bold mb-3">🎯 Amazon Coupon Finder — Filter by Prime, Deals &amp; More</h2>
+<p class="text-muted mb-4">Find Prime-only discounts, Lightning Deals, hidden coupons, and more with a single search.</p>
+<a class="btn btn-lg btn-success shadow-sm" href="#headingStep1" onclick="openStep1()">🔎 Find Amazon Deals Now</a>
+</section>
+<script>
+  function openStep1() {
+    const step1 = document.getElementById('collapseStep1');
+    if (step1 && !step1.classList.contains('show')) {
+      new bootstrap.Collapse(step1, { toggle: true });
+    }
+  }
+</script>
+<!-- ✅ Trust Signals -->
+<section class="container my-5 text-center">
+<h2 class="h5 fw-bold mb-4">🛡️ Trusted. Secure. Compliant.</h2>
+<div class="row justify-content-center gy-3">
+<div class="col-6 col-md-4">
+<div class="card border-0 shadow-sm h-100">
+<div class="card-body">
+<div class="display-6 mb-2">🔒</div>
+<h3 class="card-title fs-5 fw-semibold">Secure &amp; Private</h3>
+<p class="text-muted small mb-0">No tracking, no personal data collected.</p>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="card border-0 shadow-sm h-100">
+<div class="card-body">
+<div class="display-6 mb-2">✅</div>
+<h3 class="card-title fs-5 fw-semibold">No Signup Required</h3>
+<p class="text-muted small mb-0">Start searching instantly — no account needed.</p>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4">
+<div class="card border-0 shadow-sm h-100">
+<div class="card-body">
+<div class="display-6 mb-2">🛍️</div>
+<h3 class="card-title fs-5 fw-semibold">Amazon Compliant</h3>
+<p class="text-muted small mb-0">Built 100% within Amazon’s affiliate policies.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 🎥 Demo Promo -->
+<section class="container text-center my-5">
+<h2 class="fw-bold text-center mb-3 fs-5"><i aria-hidden="true" class="bi bi-play-circle"></i> Watch: Advanced Amazon Search &amp; Coupon Finder</h2>
+<p class="text-muted small mb-4">
+    See how to filter Amazon deals by <strong>Prime</strong>, <strong>coupons</strong>, <strong>rating</strong>, and more — in seconds.
+  </p>
+<div class="d-flex justify-content-center">
+<div class="yt-lite rounded-3 shadow-sm" data-id="7XayFBHsFsI" data-title="Amazon Deal Filter Demo" style="max-width: 720px; width: 100%;">
+</div>
+</div>
+<!-- No-JS fallback -->
+<noscript>
+<a href="https://www.youtube.com/watch?v=7XayFBHsFsI" rel="noopener" target="_blank">
+      Watch on YouTube
+    </a>
+</noscript>
+<p class="mt-3">
+<a class="btn btn-outline-primary" href="/media.html" role="button">📺 More Demos</a>
+</p>
+<p class="text-muted small mt-2">
+    ⚡ Deal Shopper Pro is not affiliated with Amazon. Demo shown for educational purposes.
+  </p>
+</section>
+<!-- 📢 Exit CTA -->
+<section class="container text-center my-5 p-4 bg-light border border-danger-subtle rounded-4 shadow-sm">
+<h2 class="fw-bold mb-2 text-danger-emphasis">🚪 Don’t Leave Without Trying This</h2>
+<h3 class="fw-semibold mb-3 text-dark">Before You Go...</h3>
+<p class="text-muted lead mb-4">See <strong>today’s best Amazon deals</strong> — no login, 100% free, updated hourly.</p>
+<a class="btn btn-danger btn-lg fw-bold px-4 py-2 shadow" href="/best-deals-today.html">🔥 View Today’s Best Deals</a>
+</section>
+<!-- ✅ 6-Step Guided Search Section -->
+<div class="container mt-4" id="guided-search">
+<div id="searchAccordionContainer"></div>
+</div>
+<!-- ✅ Testimonials / Trust / Exit Intent Section -->
+<section class="container my-5 text-center">
+<h2 class="fw-bold mb-4">💬 Trusted by Amazon Shoppers Using Our Deal &amp; Coupon Finder</h2>
+<p class="mt-4 text-muted">We don’t store or track your searches. We just get you to the deals.</p>
+<a class="btn btn-outline-success mt-3 shadow-sm" href="/best-deals-today.html">✅ Show Me Today’s Best Deals</a>
+</section>
+<div class="text-center my-4">
+<h2 class="h5">📲 Share with Friends</h2>
+<p class="text-muted">Send this to someone who needs smarter Amazon filters:</p>
+<div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+<a aria-label="Share on WhatsApp" class="btn btn-success" href="https://wa.me/?text=Check%20out%20this%20free%20Amazon%20deal%20filter%3A%20https%3A%2F%2Fwww.dealshopperpro.com" rel="noopener noreferrer" target="_blank">WhatsApp</a>
+<a aria-label="Share on Messenger" class="btn btn-primary" href="#" onclick="shareMessenger(event)">Messenger</a>
+<a aria-label="Send via SMS" class="btn btn-secondary" href="#" onclick="shareSMS(event)">Text Message</a>
+<a aria-label="Share on Twitter or X" class="btn btn-info" href="https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here%3A%20https%3A%2F%2Fwww.dealshopperpro.com" rel="noopener noreferrer" target="_blank">Twitter / X</a>
+<a aria-label="Share on Facebook" class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dealshopperpro.com" rel="noopener noreferrer" target="_blank">Facebook</a>
+<button class="btn btn-dark" data-link="https://www.dealshopperpro.com" id="copyLinkBtn" type="button">
+  Copy Page Link
+</button>
+</div>
+</div>
+<script>
+function isMobile() {
+  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+}
+function shareMessenger(e){
+  if (e) e.preventDefault();
+  const url = encodeURIComponent(window.location.href);
+  window.open(
+    `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+    '_blank','noopener,noreferrer'
+  );
+}
+function shareSMS(e) {
+  e.preventDefault();
+  const message = encodeURIComponent('Check out this free Amazon deal filter: https://www.dealshopperpro.com');
+  if (isMobile()) {
+    window.location.href = `sms:?body=${message}`;
+  } else {
+    alert('SMS sharing is only available on mobile. Copy this message:\n\n' + decodeURIComponent(message));
+  }
+}
+document.getElementById('copyLinkBtn').addEventListener('click', function () {
+  const pageUrl = this.getAttribute('data-link') || window.location.href;
+  navigator.clipboard.writeText(pageUrl).then(() => {
+    this.textContent = 'Copied!';
+    setTimeout(() => { this.textContent = 'Copy Page Link'; }, 2000);
+  }).catch(err => {
+    console.error('Copy failed:', err);
+    alert('Failed to copy link.');
+  });
+});
+</script>
+<!-- ======== On-Page FAQ (matches JSON-LD) ======== -->
+<section class="container my-5" id="faq">
+<h2 class="fw-bold text-center mb-4">Frequently Asked Questions</h2>
+<div class="accordion" id="faqAccordion">
+<!-- Q1 -->
+<div class="accordion-item">
+<h3 class="accordion-header" id="faq-q1">
+<button aria-controls="faq-a1" aria-expanded="true" class="accordion-button" data-bs-target="#faq-a1" data-bs-toggle="collapse" type="button">What is Deal Shopper Pro Amazon deal finder?</button>
+</h3>
+<div aria-labelledby="faq-q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="faq-a1">
+<div class="accordion-body">
+          Deal Shopper Pro is a free Amazon deal search tool that helps you filter by price, rating, Prime, coupons, and more.
+        </div>
+</div>
+</div>
+<!-- Q2 -->
+<div class="accordion-item">
+<h3 class="accordion-header" id="faq-q2">
+<button aria-controls="faq-a2" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#faq-a2" data-bs-toggle="collapse" type="button">
+          How do I find Prime‑only deals on Amazon fast?
+        </button>
+</h3>
+<div aria-labelledby="faq-q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq-a2">
+<div class="accordion-body">
+          Use the ‘Extra Filters’ section and check the ‘Prime Only’ box. Then submit your search to open Prime‑eligible deals directly on Amazon.
+        </div>
+</div>
+</div>
+<!-- Q3 -->
+<div class="accordion-item">
+<h3 class="accordion-header" id="faq-q3">
+<button aria-controls="faq-a3" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#faq-a3" data-bs-toggle="collapse" type="button">How does the advanced Amazon search work?</button>
+</h3>
+<div aria-labelledby="faq-q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq-a3">
+<div class="accordion-body">
+          Yes. Use the 6‑step guided search form to combine multiple filters including price, brand, ratings, and special deals like Lightning Deals or coupons.
+        </div>
+</div>
+</div>
+<!-- Q4 -->
+<div class="accordion-item">
+<h3 class="accordion-header" id="faq-q4">
+<button aria-controls="faq-a4" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#faq-a4" data-bs-toggle="collapse" type="button">Does the Amazon coupon finder work with all Amazon coupons?</button>
+</h3>
+<div aria-labelledby="faq-q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq-a4">
+<div class="accordion-body">
+          Yes. Our advanced filters can reveal hidden discounts like coupons, Lightning Deals, Subscribe &amp; Save deals, and limited‑time offers that don’t show up in standard Amazon searches.
+        </div>
+</div>
+</div>
+<!-- Q5 -->
+<div class="accordion-item">
+<h3 class="accordion-header" id="faq-q5">
+<button aria-controls="faq-a5" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#faq-a5" data-bs-toggle="collapse" type="button">What is Deal Shopper Pro Amazon deal finder?</button>
+</h3>
+<div aria-labelledby="faq-q5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq-a5">
+<div class="accordion-body">
+          No. Deal Shopper Pro is an independent site that uses the Amazon Associates API to help users find products more efficiently. We are not affiliated with or endorsed by Amazon.
+        </div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ——————————— SITE-WIDE FOOTER ——————————— -->
+<footer>
+<div class="footer-container" style="text-align: center; padding: 2rem; font-size: 0.9rem; color: #555;">
+<p>
+<a href="https://www.dealshopperpro.com/contact.html">Contact Us</a> |
+      <a href="https://www.dealshopperpro.com/about.html">About Deal Shopper Pro</a> |
+      <a href="https://www.dealshopperpro.com/help.html">Help Guide</a> |
+      <a href="https://www.dealshopperpro.com/media.html">Articles &amp; Videos</a> |
+      <a href="https://www.dealshopperpro.com/sitemap.html">Sitemap</a> |
+      <a class="text-primary fw-semibold" href="https://www.facebook.com/share/g/1C1BARo5YJ/" rel="noopener noreferrer" target="_blank">💬 Facebook Group</a> |
+      <a href="https://www.dealshopperpro.com/privacy.html">Privacy Policy</a> |
+      <a href="https://www.dealshopperpro.com/terms.html">Terms of Use</a>
+</p>
+<p>
+<strong>Disclaimer:</strong>
+      Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries.<br>
+<strong>As an Amazon Associate I earn from qualifying purchases.</strong><br>
+<small>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</small>
+</p>
+<p>
+      Discover top Amazon deals with advanced filters for Lightning Deals, Prime-eligible items, in-stock products, and hidden coupons.
+    </p>
+<p class="mb-1 fw-bold text-danger" style="font-size: 1rem;">Featured</p>
+<p class="fw-semibold" style="font-size: 1rem;">
+      🔥 <a href="https://www.dealshopperpro.com/index.html">Advanced Amazon Search Tool</a><br>
+      🔥 <a href="https://www.dealshopperpro.com/lightning-deals.html">How To Find Lightning Deals On Amazon</a>
+</p>
+<p><strong>© 2025 Deal Shopper Pro. All rights reserved.</strong></p>
+</div>
+</footer>
+<!-- JS (Bootstrap, Navbar, Search Logic) -->
+<script defer="" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script defer="" src="/navbar-loader.js"></script>
+<script defer="" src="/searchlogic-v2.js"></script>
+<script>
+/* App init — single entry, idempotent */
+(function init() {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init, { once: true });
+    return;
+  }
+
+  // 1) Tooltips (safe, deduped) + auto-disconnect observer
+  function initTooltips(root = document) {
+    if (!window.bootstrap || typeof bootstrap.Tooltip !== 'function') return;
+    root.querySelectorAll('[data-bs-toggle="tooltip"]:not([data-has-tooltip])').forEach(el => {
+      new bootstrap.Tooltip(el, { container: 'body', boundary: 'window', placement: 'auto' });
+      el.setAttribute('data-has-tooltip', '');
+    });
+  }
+  initTooltips();
+  // Migrate [data-tooltip] to Bootstrap tooltips (no markup edits needed)
+  (function migrateDataTooltips() {
+    document.querySelectorAll('[data-tooltip]').forEach(el => {
+      if (!el.hasAttribute('title')) {
+        el.setAttribute('title', el.getAttribute('data-tooltip'));
+      }
+      el.setAttribute('data-bs-toggle', 'tooltip');
+      el.setAttribute('data-tooltip-migrated', '');
+    });
+    if (window.bootstrap && typeof bootstrap.Tooltip === 'function') {
+      document.querySelectorAll('[data-bs-toggle="tooltip"]:not([data-has-tooltip])').forEach(el => {
+        new bootstrap.Tooltip(el, { container: 'body', boundary: 'window', placement: 'auto' });
+        el.setAttribute('data-has-tooltip', '');
+      });
+    }
+  })();
+
+  const tooltipObserver = new MutationObserver(muts => {
+    for (const m of muts) if (m.addedNodes && m.addedNodes.length) initTooltips();
+  });
+  tooltipObserver.observe(document.documentElement, { childList: true, subtree: true });
+  setTimeout(() => { try { tooltipObserver.disconnect(); } catch(e){} }, 5000);
+
+  // 2) Accordion button ↔ panel state sync (initial + live)
+  document.querySelectorAll('.accordion-collapse[id]').forEach(panel => {
+    const btn = document.querySelector(`[data-bs-target="#${panel.id}"]`);
+    if (!btn) return;
+    const open = panel.classList.contains('show');
+    btn.classList.toggle('collapsed', !open);
+    btn.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('show.bs.collapse', e => {
+    const btn = document.querySelector(`[data-bs-target="#${e.target.id}"]`);
+    if (btn) { btn.classList.remove('collapsed'); btn.setAttribute('aria-expanded','true'); }
+  });
+  document.addEventListener('hide.bs.collapse', e => {
+    const btn = document.querySelector(`[data-bs-target="#${e.target.id}"]`);
+    if (btn) { btn.classList.add('collapsed'); btn.setAttribute('aria-expanded','false'); }
+  });
+
+  // 3) Lite YouTube (click-to-load)
+  (function initLiteYouTube() {
+    const blocks = document.querySelectorAll('.yt-lite:not([data-yt-initialized])');
+    blocks.forEach(el => {
+      const id = el.dataset.id;
+      if (!id) return;
+      el.dataset.ytInitialized = 'true';
+      const title = el.dataset.title || 'YouTube video';
+      el.style.backgroundImage = `url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;
+      const btn = document.createElement('button');
+      btn.className = 'yt-play';
+      btn.setAttribute('aria-label', `Play video: ${title}`);
+      el.appendChild(btn);
+      el.addEventListener('click', () => {
+        if (el.classList.contains('activated')) return;
+        el.classList.add('activated');
+        const iframe = document.createElement('iframe');
+        iframe.title = title;
+        iframe.loading = 'lazy';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&modestbranding=1&rel=0`;
+        el.innerHTML = '';
+        el.appendChild(iframe);
+      });
+    });
+  })();
+
+  // 4) Submit status announcer (a11y)
+  (function initSubmitStatus() {
+    const form = document.getElementById('amazon-search-form');
+    const statusEl = document.getElementById('search-status');
+    if (!form || !statusEl) return;
+    form.addEventListener('submit', () => {
+      statusEl.textContent = 'Opening Amazon results…';
+      setTimeout(() => { statusEl.textContent = ''; }, 4000);
+    });
+  })();
+})();
+</script>
+  <!-- ✅ Share Modal (appears after user clicks Search Amazon Now) -->
+<div class="modal fade" id="shareWinModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow">
+      <div class="modal-body text-center p-4">
+        <div class="fs-2 mb-2">🎉</div>
+        <h5 class="fw-bold mb-2">Found better deals?</h5>
+        <p class="text-muted mb-3">Share this exact setup with someone who loves a bargain.</p>
+        <div class="d-flex justify-content-center gap-2 flex-wrap">
+          <button class="btn btn-success" onclick="dspShare.web()">Share</button>
+          <button class="btn btn-outline-secondary" onclick="dspShare.copy()">Copy Link</button>
+        </div>
+        <button type="button" class="btn btn-link mt-2" data-bs-dismiss="modal">Not now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="dsp-share-bar" class="d-md-none position-fixed bottom-0 start-0 end-0 bg-light border-top py-2" style="z-index:1030;">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span class="small text-muted">Share this setup</span>
+    <div class="d-flex gap-2">
+      <a class="btn btn-success btn-sm" href="#" onclick="dspShare.whatsapp(event)">WhatsApp</a>
+      <a class="btn btn-secondary btn-sm" href="#" onclick="dspShare.sms(event)">SMS</a>
+      <button class="btn btn-outline-dark btn-sm" onclick="dspShare.copy()">Copy</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ====== Deal Shopper Pro — Sharing Helpers ====== */
+/* Reads the live form values, builds a prefilled deep link + UTM, and shares it. */
+const dspShare = (() => {
+  const $ = (id) => document.getElementById(id);
+
+  function getStateFromForm() {
+    // IDs from your index.html
+    const qEl   = $('mainSearchInput');
+    const mdEl  = $('min-discount');
+    const lEl   = $('lightningDeals');
+    const pEl   = $('primeOnly');
+    const cEl   = $('coupons');
+    return {
+      q: (qEl?.value || '').trim(),
+      min_discount: mdEl?.value || '',
+      lightning: lEl?.checked ? '1' : '',
+      prime: pEl?.checked ? '1' : '',
+      coupons: cEl?.checked ? '1' : ''
+    };
+  }
+
+  function shareId() {
+    const k = 'dsp_share_id';
+    let v = localStorage.getItem(k);
+    if (!v) { v = Math.random().toString(36).slice(2,10); localStorage.setItem(k, v); }
+    return v;
+  }
+
+  function buildUrl(channel='generic') {
+    const s = getStateFromForm();
+    const u = new URL('https://www.dealshopperpro.com/');
+    if (s.q)              u.searchParams.set('q', s.q);
+    if (s.min_discount)   u.searchParams.set('min_discount', s.min_discount);
+    if (s.lightning==='1')u.searchParams.set('lightning', '1');
+    if (s.prime==='1')    u.searchParams.set('prime', '1');
+    if (s.coupons==='1')  u.searchParams.set('coupons', '1');
+    u.hash = 'headingStep1';
+    // tracking
+    u.searchParams.set('utm_source','share');
+    u.searchParams.set('utm_medium', channel);
+    u.searchParams.set('utm_campaign','dsp_share');
+    u.searchParams.set('s', shareId());
+    return u.toString();
+  }
+
+  function message() {
+    const s = getStateFromForm();
+    const bits = [];
+    if (s.min_discount) bits.push(`${s.min_discount}%+`);
+    if (s.lightning==='1') bits.push('Lightning');
+    if (s.prime==='1') bits.push('Prime');
+    if (s.coupons==='1') bits.push('Coupons');
+    const stack = bits.join(' • ') || 'Smart filters';
+    const what  = s.q ? ` for “${s.q}”` : '';
+    return `I’m finding better Amazon deals by stacking filters (${stack})${what}. Try this setup:`;
+  }
+
+  async function web() {
+    const url = buildUrl('webshare');
+    const text = `${message()} ${url}`;
+    if (navigator.share) {
+      try { await navigator.share({ title: 'Deal Shopper Pro', text, url }); } catch {}
+    } else {
+      copy(url);
+      alert('Link copied — paste it anywhere to share.');
+    }
+    bumpShareCount();
+  }
+
+  function whatsapp(e){ if(e) e.preventDefault();
+    window.open(`https://wa.me/?text=${encodeURIComponent(message()+' '+buildUrl('whatsapp'))}`,'_blank','noopener');
+    bumpShareCount();
+  }
+
+  function sms(e){ if(e) e.preventDefault();
+    const body = encodeURIComponent(message()+' '+buildUrl('sms'));
+    location.href = `sms:?body=${body}`;
+    bumpShareCount();
+  }
+
+  function messenger(e){ if(e) e.preventDefault();
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(buildUrl('messenger'))}`,'_blank','noopener');
+    bumpShareCount();
+  }
+
+  function copy(custom){
+    const text = custom || buildUrl('copy');
+    navigator.clipboard.writeText(text).then(() => {
+      // optional: toast could go here
+    });
+    bumpShareCount();
+  }
+
+  function bumpShareCount() {
+    const k = 'dsp_share_count';
+    const n = (parseInt(localStorage.getItem(k)||'0',10) + 1);
+    localStorage.setItem(k, n);
+  }
+
+  return { web, whatsapp, sms, messenger, copy, buildUrl };
+})();
+
+/* ====== Gentle Triggers ====== */
+(() => {
+  const form = document.getElementById('amazon-search-form');
+  const bar  = document.getElementById('dsp-share-bar');
+  const firstUseKey = 'dsp_shown_share_bar';
+
+  // 1) Show sticky bar after first interaction with the form (mobile only).
+  const revealBar = () => {
+    if (!bar) return;
+    if (window.matchMedia('(max-width: 767.98px)').matches) {
+      bar.classList.add('show');
+      localStorage.setItem(firstUseKey, '1');
+    }
+    // Remove listeners after showing once
+    ['input','change'].forEach(evt => form?.removeEventListener(evt, revealBar));
+  };
+  if (!localStorage.getItem(firstUseKey)) {
+    ['input','change'].forEach(evt => form?.addEventListener(evt, revealBar, { passive:true }));
+  }
+
+  // 2) After submit, show the share modal (nudge after a "win")
+  form?.addEventListener('submit', () => {
+    setTimeout(() => {
+      const el = document.getElementById('shareWinModal');
+      if (el && window.bootstrap) new bootstrap.Modal(el, { backdrop:'static' }).show();
+    }, 700);
+  });
+})();
+</script>
+
+<!-- Just before </body> -->
+<audio id="click-sound" src="/click.mp3" preload="auto"></audio>
+<audio id="accordion-sound" src="/expand.mp3" preload="auto"></audio>
+
+<!-- === Checkbox click sound (ONLY checkboxes) === -->
+<script>
+(function () {
+  const clickSound = document.getElementById('click-sound');
+  function playClick() {
+    try { clickSound.currentTime = 0; clickSound.play(); } catch (_) {}
+  }
+  // Use 'change' so it also fires for label clicks & keyboard toggles
+  document.addEventListener('change', (e) => {
+    if (e.target && e.target.matches('input[type="checkbox"]')) playClick();
+  });
+})();
+</script>
+<!-- === Accordion expand/collapse sound (safe, minimal) === -->
+<script>
+(() => {
+  const snd = document.getElementById('accordion-sound');
+  if (!snd) return;
+
+  // Prime once (no capture, won’t interfere with toggling)
+  const prime = () => {
+    try {
+      snd.muted = true;
+      snd.play().then(() => { snd.pause(); snd.currentTime = 0; snd.muted = false; })
+                .catch(() => { snd.muted = false; });
+    } catch (_) {}
+  };
+  window.addEventListener('pointerdown', prime, { once: true });
+  window.addEventListener('keydown',     prime, { once: true });
+
+  const play = () => { try { snd.currentTime = 0; snd.play().catch(()=>{}); } catch (_) {} };
+
+  // Start-of-action events (gesture-safe, won’t block collapse)
+  document.addEventListener('show.bs.collapse', play);
+  document.addEventListener('hide.bs.collapse', play);
+})();
+</script>
+
+
+</body>
+</html>
