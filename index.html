@@ -1248,25 +1248,19 @@ const dspShare = (() => {
 <audio id="click-sound" src="/click.mp3" preload="auto"></audio>
 <audio id="accordion-sound" src="/expand.mp3" preload="auto"></audio>
 
+<!-- === Checkbox click sound (ONLY checkboxes) === -->
 <script>
-  // === Checkbox click sound (ONLY checkboxes) ===
-  (function () {
-    const clickSound = document.getElementById('click-sound');
-
-    function playClick() {
-      try {
-        clickSound.currentTime = 0;
-        clickSound.play();
-      } catch (_) {}
-    }
-
-    // Use 'change' so it also fires for label clicks & keyboard toggles
-    document.addEventListener('change', (e) => {
-      if (e.target && e.target.matches('input[type="checkbox"]')) {
-        playClick();
-      }
-    });
-  })();
+(function () {
+  const clickSound = document.getElementById('click-sound');
+  function playClick() {
+    try { clickSound.currentTime = 0; clickSound.play(); } catch (_) {}
+  }
+  // Use 'change' so it also fires for label clicks & keyboard toggles
+  document.addEventListener('change', (e) => {
+    if (e.target && e.target.matches('input[type="checkbox"]')) playClick();
+  });
+})();
+</script>
 
 <!-- === Accordion expand/collapse sound (patched) === -->
 <script>
@@ -1275,15 +1269,11 @@ const dspShare = (() => {
   if (!snd) return;
 
   let primed = false;
-
-  // Prime once on first user interaction (unblocks autoplay on iOS/Chrome)
   const prime = () => {
     if (primed) return; primed = true;
     try {
       snd.muted = true;
-      snd.play().then(() => {
-        snd.pause(); snd.currentTime = 0; snd.muted = false;
-      }).catch(()=>{});
+      snd.play().then(() => { snd.pause(); snd.currentTime = 0; snd.muted = false; }).catch(()=>{});
     } catch(_) {}
     window.removeEventListener('pointerdown', prime, true);
     window.removeEventListener('keydown', prime, true);
@@ -1296,9 +1286,9 @@ const dspShare = (() => {
   };
 
   // Fire at start (gesture-safe) and end (fallback) of expand/collapse
-  document.addEventListener('show.bs.collapse', play);   // begin expand
-  document.addEventListener('hide.bs.collapse', play);   // begin collapse
-  document.addEventListener('shown.bs.collapse', play);  // end expand
+  document.addEventListener('show.bs.collapse',   play); // begin expand
+  document.addEventListener('hide.bs.collapse',   play); // begin collapse
+  document.addEventListener('shown.bs.collapse',  play); // end expand
   document.addEventListener('hidden.bs.collapse', play); // end collapse
 })();
 </script>
