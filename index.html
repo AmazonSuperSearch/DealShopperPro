@@ -1268,21 +1268,39 @@ const dspShare = (() => {
     });
   })();
 
-  // === Accordion expand/collapse sound ===
-  (function () {
-    const expandSound = document.getElementById('accordion-sound');
+<!-- === Accordion expand/collapse sound (patched) === -->
+<script>
+(function () {
+  const snd = document.getElementById('accordion-sound');
+  if (!snd) return;
 
-    function playExpand() {
-      try {
-        expandSound.currentTime = 0;
-        expandSound.play();
-      } catch (_) {}
-    }
+  let primed = false;
 
-    // Requires Bootstrap’s JS to be loaded
-    document.addEventListener('shown.bs.collapse', playExpand);   // expand
-    document.addEventListener('hidden.bs.collapse', playExpand);  // collapse
-  })();
+  // Prime once on first user interaction (unblocks autoplay on iOS/Chrome)
+  const prime = () => {
+    if (primed) return; primed = true;
+    try {
+      snd.muted = true;
+      snd.play().then(() => {
+        snd.pause(); snd.currentTime = 0; snd.muted = false;
+      }).catch(()=>{});
+    } catch(_) {}
+    window.removeEventListener('pointerdown', prime, true);
+    window.removeEventListener('keydown', prime, true);
+  };
+  window.addEventListener('pointerdown', prime, true);
+  window.addEventListener('keydown', prime, true);
+
+  const play = () => {
+    try { snd.currentTime = 0; snd.play().catch(()=>{}); } catch(_) {}
+  };
+
+  // Fire at start (gesture-safe) and end (fallback) of expand/collapse
+  document.addEventListener('show.bs.collapse', play);   // begin expand
+  document.addEventListener('hide.bs.collapse', play);   // begin collapse
+  document.addEventListener('shown.bs.collapse', play);  // end expand
+  document.addEventListener('hidden.bs.collapse', play); // end collapse
+})();
 </script>
 
 
