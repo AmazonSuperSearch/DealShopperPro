@@ -7,33 +7,39 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(html => {
       placeholder.innerHTML = html;
 
-      // Highlight current page
-      const path = window.location.pathname.replace(/\/$/, "");
-      placeholder.querySelectorAll("a.nav-link").forEach(link => {
-        const href = link.getAttribute("href").replace(/\/$/, "");
-        if (href === path) {
+      // ---- Active link highlighting (handles "/" vs "/index.html")
+      const current = location.pathname.replace(/\/$/, "") || "/index.html";
+      placeholder.querySelectorAll("a.nav-link[href]").forEach(link => {
+        const href = (link.getAttribute("href") || "").replace(/\/$/, "");
+        if (href === current || (current === "/index.html" && (href === "/" || href.endsWith("/index.html")))) {
           link.classList.add("active");
+          link.setAttribute("aria-current", "page");
         }
       });
 
-      // Adjust body padding for fixed navbar after render
-      requestAnimationFrame(() => {
-        const navbar = document.querySelector(".navbar");
-        if (navbar) {
-          document.body.style.paddingTop = `${navbar.offsetHeight}px`;
-        }
+      // ---- Initialize Bootstrap Collapse on injected navbar
+      const toggler = placeholder.querySelector(".navbar-toggler");
+      const targetSel = toggler?.getAttribute("data-bs-target");
+      const target = targetSel ? document.querySelector(targetSel) : null;
 
-        // Fix hamburger toggle manually for injected navbar
-        const toggler = placeholder.querySelector('.navbar-toggler');
-        if (toggler) {
-          toggler.addEventListener('click', () => {
-            const targetId = toggler.getAttribute('data-bs-target');
-            const target = document.querySelector(targetId);
-            if (target && target.classList.contains('collapse')) {
-              target.classList.toggle('show');
-            }
+      if (toggler && target) {
+        // If Bootstrap is available, use it; otherwise simple fallback
+        if (window.bootstrap?.Collapse) {
+          new bootstrap.Collapse(target, { toggle: false });
+          toggler.addEventListener("click", () => {
+            const inst = bootstrap.Collapse.getOrCreateInstance(target, { toggle: false });
+            target.classList.contains("show") ? inst.hide() : inst.show();
           });
+        } else {
+          toggler.addEventListener("click", () => target.classList.toggle("show"));
         }
+      }
+
+      // ---- OPTIONAL: Tooltips on demand (idle)
+      (window.requestIdleCallback || ((fn)=>setTimeout(fn,0)))(() => {
+        placeholder.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+          try { window.bootstrap && new bootstrap.Tooltip(el); } catch {}
+        });
       });
     })
     .catch(err => console.error("Navbar load error:", err));
