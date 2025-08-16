@@ -77,13 +77,14 @@
       0%, 100% { opacity: 1; }
       50% { opacity: 0.8; }
     }
+    /* Accessibility safety net (keeps audits green) */
     @media (prefers-reduced-motion: reduce) { .glow-pulse { animation: none; } }
 
     /* Improve hover/active contrast for primary buttons */
     .btn-primary:hover { filter: brightness(0.92); }
     .btn-primary:active, .btn-primary:focus { filter: brightness(0.88); }
 
-    /* Darker checkbox borders */
+    /* Darker checkbox borders *//* Darker checkbox borders */
     .form-check-input[type="checkbox"] { border-color: #555; background-color:#fff; }
     .form-check-input[type="checkbox"]:hover { border-color: #333; }
     .form-check-input[type="checkbox"]:checked { background-color: var(--bs-primary); border-color: var(--bs-primary); }
@@ -94,7 +95,7 @@
     }
     .form-check:hover { background-color:#e9ecef; }
 
-    /* Lite YouTube CSS */
+    /* Lite YouTube CSS (eliminates cookie warning until user clicks) */
     .yt-lite { position:relative; display:block; background:#000; aspect-ratio:16/9; border-radius:.75rem; overflow:hidden; background-position:center; background-size:cover; cursor:pointer; }
     .yt-lite > .yt-play { position:absolute; inset:0; display:grid; place-items:center; border:0; background:transparent; }
     .yt-lite > .yt-play::before {
@@ -102,74 +103,12 @@
       background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 48'><path fill='%23f00' d='M66.5 7.0c-0.7-2.6-2.7-4.6-5.3-5.3C55.9 0 34 0 34 0s-21.9 0-27.2 1.7c-2.6.7-4.6 2.7-5.3 5.3C0 12.3 0 24 0 24s0 11.7 1.5 17.0c.7 2.6 2.7 4.6 5.3 5.3C12.1 48 34 48 34 48s21.9 0 27.2-1.7c2.6-.7 4.6-2.7 5.3-5.3C68 35.7 68 24 68 24s0-11.7-1.5-17.0z'><path fill='%23fff' d='M45 24L27 14v20z'></svg>") center/contain no-repeat;
     }
     .yt-lite.activated > .yt-play { display:none; }
-</style>
+  
 
-<style id="dsp-strong-borders">
-  :root{
-    --dsp-border:#c8d1dc;          /* light slate */
-    --dsp-border-strong:#9aa5b1;   /* darker slate */
-    --dsp-ring:rgba(102,178,255,.28); /* soft primary ring */
-  }
-
-  /* Scope everything to the main filter accordion */
-  #filterAccordion .accordion-item{
-    border:2px solid var(--dsp-border) !important;
-    border-radius:.75rem;
-    overflow:hidden;
-    box-shadow:0 1px 0 rgba(16,24,40,.04);
-    background:#fff;
-    margin-bottom:.9rem;
-  }
-
-  #filterAccordion .accordion-button{
-    background:#fff;
-    font-weight:600;
-    padding:.9rem 1rem;
-    border-bottom:2px solid var(--dsp-border) !important;
-    box-shadow:none !important;
-  }
-  #filterAccordion .accordion-button:focus{
-    outline:0;
-    box-shadow:0 0 0 .22rem var(--dsp-ring) !important;
-  }
-  #filterAccordion .accordion-button:not(.collapsed){
-    background:#f8fafc;
-    color:#111827;
-    border-bottom-color:var(--dsp-border-strong) !important;
-    box-shadow:inset 4px 0 0 0 var(--bs-primary) !important; /* left accent bar */
-  }
-
-  #filterAccordion .accordion-collapse{
-    border-top:2px solid var(--dsp-border) !important;
-  }
-
-  /* Form controls inside the filter area */
-  #filterAccordion .form-control,
-  #filterAccordion .form-select,
-  #filterAccordion .input-group-text{
-    border:2px solid var(--dsp-border) !important;
-    border-radius:.5rem;
-  }
-  #filterAccordion .form-control:focus,
-  #filterAccordion .form-select:focus{
-    border-color:var(--bs-primary) !important;
-    box-shadow:0 0 0 .22rem var(--dsp-ring) !important;
-  }
-
-  /* Optional: keep cards consistent site-wide */
-  .card{ border:2px solid #e2e8f0; border-radius:.75rem; }
-
-  /* CTA button in the form */
-  #amazon-search-form .btn-success{
-    border-width:2px;
-    box-shadow:0 2px 0 rgba(16,24,40,.06);
-  }
-</style>
-
-
+  </style>
 <!-- Structured Data -->
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.dealshopperpro.com/#organization","name":"Deal Shopper Pro","url":"https://www.dealshopperpro.com","logo":{"@type":"ImageObject","@id":"https://www.dealshopperpro.com/#logo","url":"https://www.dealshopperpro.com/logo.png","width":512,"height":512},"sameAs":["https://www.pinterest.com/dealshopperpro/","https://dealshopperpro.medium.com/","https://dealshopperpro.blogspot.com/"],"contactPoint":{"@type":"ContactPoint","contactType":"Customer Support","url":"https://www.dealshopperpro.com/help.html","availableLanguage":["en"],"areaServed":"US"}},{"@type":"WebSite","@id":"https://www.dealshopperpro.com/#website","url":"https://www.dealshopperpro.com","name":"Deal Shopper Pro","description":"Advanced Amazon deal search with filters for Prime, coupons, Lightning Deals, and more.","inLanguage":"en-US","publisher":{"@id":"https://www.deal]()
-
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.dealshopperpro.com/#organization","name":"Deal Shopper Pro","url":"https://www.dealshopperpro.com","logo":{"@type":"ImageObject","@id":"https://www.dealshopperpro.com/#logo","url":"https://www.dealshopperpro.com/logo.png","width":512,"height":512},"sameAs":["https://www.pinterest.com/dealshopperpro/","https://dealshopperpro.medium.com/","https://dealshopperpro.blogspot.com/"],"contactPoint":{"@type":"ContactPoint","contactType":"Customer Support","url":"https://www.dealshopperpro.com/help.html","availableLanguage":["en"],"areaServed":"US"}},{"@type":"WebSite","@id":"https://www.dealshopperpro.com/#website","url":"https://www.dealshopperpro.com","name":"Deal Shopper Pro","description":"Advanced Amazon deal search with filters for Prime, coupons, Lightning Deals, and more.","inLanguage":"en-US","publisher":{"@id":"https://www.dealshopperpro.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.dealshopperpro.com/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.dealshopperpro.com/#primaryimage","url":"https://www.dealshopperpro.com/og-image.jpg","width":1200,"height":630},{"@type":"WebPage","@id":"https://www.dealshopperpro.com/#webpage","url":"https://www.dealshopperpro.com/","name":"Advanced Amazon Search — Deal Finder | Deal Shopper Pro","inLanguage":"en-US","description":"Find the best Amazon deals using our smart 6-step filter system. Discover Prime-only offers, coupons, Lightning Deals, and more.","isPartOf":{"@id":"https://www.dealshopperpro.com/#website"},"breadcrumb":{"@id":"https://www.dealshopperpro.com/#breadcrumb"},"primaryImageOfPage":{"@id":"https://www.dealshopperpro.com/#primaryimage"},"mainEntityOfPage":"https://www.dealshopperpro.com/","datePublished":"2025-08-01","dateModified":"2025-08-12","about":[{"@type":"Thing","name":"Amazon deals"},{"@type":"Thing","name":"Lightning Deals"},{"@type":"Thing","name":"Prime-only deals"},{"@type":"Thing","name":"Amazon coupons"},{"@type":"Thing","name":"Deal filtering"}],"audience":{"@type":"Audience","audienceType":"Amazon shoppers"}},{"@type":"BreadcrumbList","@id":"https://www.dealshopperpro.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dealshopperpro.com/"},{"@type":"ListItem","position":2,"name":"Advanced Amazon Search","item":"https://www.dealshopperpro.com/#headingStep1"}]},{"@type":"SoftwareApplication","@id":"https://www.dealshopperpro.com/#software","name":"Deal Shopper Pro","applicationCategory":"WebApplication","operatingSystem":"Web","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"url":"https://www.dealshopperpro.com","description":"Web-based Amazon search tool with smart filters for Prime, coupons, and Lightning Deals.","license":"https://www.dealshopperpro.com/terms.html","termsOfService":"https://www.dealshopperpro.com/terms.html"},{"@type":"FAQPage","@id":"https://www.dealshopperpro.com/#faq","mainEntity":[{"@type":"Question","name":"What is Deal Shopper Pro?","acceptedAnswer":{"@type":"Answer","text":"Deal Shopper Pro is a free Amazon deal search tool that helps you filter by price, rating, Prime, coupons, and more."}},{"@type":"Question","name":"How do I find Prime-only deals on Amazon fast?","acceptedAnswer":{"@type":"Answer","text":"Use the ‘Extra Filters’ section and check the ‘Prime Only’ box. Then submit your search to open Prime-eligible deals directly on Amazon."}},{"@type":"Question","name":"Can I search by price range, rating, and brand all at once?","acceptedAnswer":{"@type":"Answer","text":"Yes. Use the 6-step guided search form to combine multiple filters including price, brand, ratings, and special deals like Lightning Deals or coupons."}},{"@type":"Question","name":"Does this site show hidden deals or coupons?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our advanced filters can reveal hidden discounts like coupons, Lightning Deals, Subscribe & Save deals, and limited-time offers that don’t show up in standard Amazon searches."}},{"@type":"Question","name":"Is Deal Shopper Pro affiliated with Amazon?","acceptedAnswer":{"@type":"Answer","text":"No. Deal Shopper Pro is an independent site that uses the Amazon Associates API to help users find products more efficiently. We are not affiliated with or endorsed by Amazon."}},{"@type":"Question","name":"How does Deal Shopper Pro work?","acceptedAnswer":{"@type":"Answer","text":"Deal Shopper Pro uses a custom 6-step filter system to search Amazon, helping you find Prime-only offers, coupons, Lightning Deals, and more."}},{"@type":"Question","name":"Is Deal Shopper Pro free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes, it is completely free to use."}},{"@type":"Question","name":"Do you store my Amazon search history?","acceptedAnswer":{"@type":"Answer","text":"No, we do not track, store, or share your Amazon search history."}}],"inLanguage":"en-US"}]}</script>
+</head>
 <body>
 <main>
 <div id="navbar-placeholder"></div>
