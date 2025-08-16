@@ -1149,51 +1149,31 @@ const dspShare = (() => {
   });
 })();
 </script>
+<!-- Just before </body> -->
 <audio id="click-sound" src="/click.mp3" preload="auto"></audio>
-
-<script>
-  const clickSound = document.getElementById('click-sound');
-
-  function playClick() {
-    try {
-      clickSound.currentTime = 0; // restart if still playing
-      clickSound.play();
-    } catch (e) {
-      // ignored if browser blocks before first interaction
-    }
-  }
-
-  // Only play when a checkbox is clicked
-  document.addEventListener('click', (e) => {
-    if (e.target.matches('input[type="checkbox"]')) {
-      playClick();
-    }
-  });
-</script>
-<audio id="click-sound" src="/click.mp3" preload="auto"></audio>
-
-<script>
-  const clickSound = document.getElementById('click-sound');
-
-  function playClick() {
-    try {
-      clickSound.currentTime = 0; // restart if still playing
-      clickSound.play();
-    } catch (e) {
-      // ignored if browser blocks before first interaction
-    }
-  }
-
-  // Only play when a checkbox is clicked
-  document.addEventListener('click', (e) => {
-    if (e.target.matches('input[type="checkbox"]')) {
-      playClick();
-    }
-  });
-</script>
 <audio id="accordion-sound" src="/expand.mp3" preload="auto"></audio>
 
 <script>
+  // === Checkbox click sound (ONLY checkboxes) ===
+  (function () {
+    const clickSound = document.getElementById('click-sound');
+
+    function playClick() {
+      try {
+        clickSound.currentTime = 0;
+        clickSound.play();
+      } catch (_) {}
+    }
+
+    // Use 'change' so it also fires for label clicks & keyboard toggles
+    document.addEventListener('change', (e) => {
+      if (e.target && e.target.matches('input[type="checkbox"]')) {
+        playClick();
+      }
+    });
+  })();
+
+  // === Accordion expand/collapse sound ===
   (function () {
     const expandSound = document.getElementById('accordion-sound');
 
@@ -1201,16 +1181,15 @@ const dspShare = (() => {
       try {
         expandSound.currentTime = 0;
         expandSound.play();
-      } catch (e) {
-        // ignored if browser blocks until first interaction
-      }
+      } catch (_) {}
     }
 
-    // Bootstrap accordion events
-    document.addEventListener('shown.bs.collapse', playExpand);   // fires on expand
-    document.addEventListener('hidden.bs.collapse', playExpand);  // fires on collapse
+    // Requires Bootstrap’s JS to be loaded
+    document.addEventListener('shown.bs.collapse', playExpand);   // expand
+    document.addEventListener('hidden.bs.collapse', playExpand);  // collapse
   })();
 </script>
+
 
 </body>
 </html>
