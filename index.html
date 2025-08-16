@@ -113,7 +113,15 @@ input,
 select {
   border-width: 3px !important;
 }
+ /* Footer link contrast fix */
+  .footer-container a.text-primary {
+    color: #004080 !important; /* darker blue for strong contrast */
+    font-weight: 600; /* bolder for readability */
+  }
 
+  .footer-container a.text-primary:hover {
+    color: #00264d !important; /* even darker blue on hover */
+  }
 
   </style>
   <!-- ✅ Sticky Mobile Share Bar (shows after the user starts using the form) -->
