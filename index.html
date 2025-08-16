@@ -66,14 +66,15 @@
     }
 
     /* Glow pulse text effect */
-    .glow-pulse {
-      font-weight: 800;
-      font-size: 2rem;
-      color: #ff5e00;
-      text-align: center;
-      animation: glowPulse 2.5s ease-in-out infinite;
-      text-shadow: 0 0 2px #ff5e00, 0 0 4px #ff7518, 0 0 6px #ff8c42;
-    }
+   .glow-pulse {
+  font-weight: 800;
+  font-size: 2rem;
+  color: #cc4400; /* darker orange for better contrast */
+  text-align: center;
+  animation: glowPulse 2.5s ease-in-out infinite;
+  text-shadow: 0 0 2px #000, 0 0 4px #ff5e00, 0 0 6px #ff7518;
+}
+
     @keyframes glowPulse {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.8; }
