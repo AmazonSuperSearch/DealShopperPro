@@ -978,5 +978,172 @@ document.getElementById('copyLinkBtn').addEventListener('click', function () {
   })();
 })();
 </script>
+  <!-- ✅ Share Modal (appears after user clicks Search Amazon Now) -->
+<div class="modal fade" id="shareWinModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow">
+      <div class="modal-body text-center p-4">
+        <div class="fs-2 mb-2">🎉</div>
+        <h5 class="fw-bold mb-2">Found better deals?</h5>
+        <p class="text-muted mb-3">Share this exact setup with someone who loves a bargain.</p>
+        <div class="d-flex justify-content-center gap-2 flex-wrap">
+          <button class="btn btn-success" onclick="dspShare.web()">Share</button>
+          <button class="btn btn-outline-secondary" onclick="dspShare.copy()">Copy Link</button>
+        </div>
+        <button type="button" class="btn btn-link mt-2" data-bs-dismiss="modal">Not now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Sticky Mobile Share Bar (shows after the user starts using the form) -->
+<style>
+  #dsp-share-bar { transform: translateY(100%); transition: transform .25s ease; }
+  #dsp-share-bar.show { transform: translateY(0); }
+</style>
+<div id="dsp-share-bar" class="d-md-none position-fixed bottom-0 start-0 end-0 bg-light border-top py-2" style="z-index:1030;">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span class="small text-muted">Share this setup</span>
+    <div class="d-flex gap-2">
+      <a class="btn btn-success btn-sm" href="#" onclick="dspShare.whatsapp(event)">WhatsApp</a>
+      <a class="btn btn-secondary btn-sm" href="#" onclick="dspShare.sms(event)">SMS</a>
+      <button class="btn btn-outline-dark btn-sm" onclick="dspShare.copy()">Copy</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ====== Deal Shopper Pro — Sharing Helpers ====== */
+/* Reads the live form values, builds a prefilled deep link + UTM, and shares it. */
+const dspShare = (() => {
+  const $ = (id) => document.getElementById(id);
+
+  function getStateFromForm() {
+    // IDs from your index.html
+    const qEl   = $('mainSearchInput');
+    const mdEl  = $('min-discount');
+    const lEl   = $('lightningDeals');
+    const pEl   = $('primeOnly');
+    const cEl   = $('coupons');
+    return {
+      q: (qEl?.value || '').trim(),
+      min_discount: mdEl?.value || '',
+      lightning: lEl?.checked ? '1' : '',
+      prime: pEl?.checked ? '1' : '',
+      coupons: cEl?.checked ? '1' : ''
+    };
+  }
+
+  function shareId() {
+    const k = 'dsp_share_id';
+    let v = localStorage.getItem(k);
+    if (!v) { v = Math.random().toString(36).slice(2,10); localStorage.setItem(k, v); }
+    return v;
+  }
+
+  function buildUrl(channel='generic') {
+    const s = getStateFromForm();
+    const u = new URL('https://www.dealshopperpro.com/');
+    if (s.q)              u.searchParams.set('q', s.q);
+    if (s.min_discount)   u.searchParams.set('min_discount', s.min_discount);
+    if (s.lightning==='1')u.searchParams.set('lightning', '1');
+    if (s.prime==='1')    u.searchParams.set('prime', '1');
+    if (s.coupons==='1')  u.searchParams.set('coupons', '1');
+    u.hash = 'headingStep1';
+    // tracking
+    u.searchParams.set('utm_source','share');
+    u.searchParams.set('utm_medium', channel);
+    u.searchParams.set('utm_campaign','dsp_share');
+    u.searchParams.set('s', shareId());
+    return u.toString();
+  }
+
+  function message() {
+    const s = getStateFromForm();
+    const bits = [];
+    if (s.min_discount) bits.push(`${s.min_discount}%+`);
+    if (s.lightning==='1') bits.push('Lightning');
+    if (s.prime==='1') bits.push('Prime');
+    if (s.coupons==='1') bits.push('Coupons');
+    const stack = bits.join(' • ') || 'Smart filters';
+    const what  = s.q ? ` for “${s.q}”` : '';
+    return `I’m finding better Amazon deals by stacking filters (${stack})${what}. Try this setup:`;
+  }
+
+  async function web() {
+    const url = buildUrl('webshare');
+    const text = `${message()} ${url}`;
+    if (navigator.share) {
+      try { await navigator.share({ title: 'Deal Shopper Pro', text, url }); } catch {}
+    } else {
+      copy(url);
+      alert('Link copied — paste it anywhere to share.');
+    }
+    bumpShareCount();
+  }
+
+  function whatsapp(e){ if(e) e.preventDefault();
+    window.open(`https://wa.me/?text=${encodeURIComponent(message()+' '+buildUrl('whatsapp'))}`,'_blank','noopener');
+    bumpShareCount();
+  }
+
+  function sms(e){ if(e) e.preventDefault();
+    const body = encodeURIComponent(message()+' '+buildUrl('sms'));
+    location.href = `sms:?body=${body}`;
+    bumpShareCount();
+  }
+
+  function messenger(e){ if(e) e.preventDefault();
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(buildUrl('messenger'))}`,'_blank','noopener');
+    bumpShareCount();
+  }
+
+  function copy(custom){
+    const text = custom || buildUrl('copy');
+    navigator.clipboard.writeText(text).then(() => {
+      // optional: toast could go here
+    });
+    bumpShareCount();
+  }
+
+  function bumpShareCount() {
+    const k = 'dsp_share_count';
+    const n = (parseInt(localStorage.getItem(k)||'0',10) + 1);
+    localStorage.setItem(k, n);
+  }
+
+  return { web, whatsapp, sms, messenger, copy, buildUrl };
+})();
+
+/* ====== Gentle Triggers ====== */
+(() => {
+  const form = document.getElementById('amazon-search-form');
+  const bar  = document.getElementById('dsp-share-bar');
+  const firstUseKey = 'dsp_shown_share_bar';
+
+  // 1) Show sticky bar after first interaction with the form (mobile only).
+  const revealBar = () => {
+    if (!bar) return;
+    if (window.matchMedia('(max-width: 767.98px)').matches) {
+      bar.classList.add('show');
+      localStorage.setItem(firstUseKey, '1');
+    }
+    // Remove listeners after showing once
+    ['input','change'].forEach(evt => form?.removeEventListener(evt, revealBar));
+  };
+  if (!localStorage.getItem(firstUseKey)) {
+    ['input','change'].forEach(evt => form?.addEventListener(evt, revealBar, { passive:true }));
+  }
+
+  // 2) After submit, show the share modal (nudge after a "win")
+  form?.addEventListener('submit', () => {
+    setTimeout(() => {
+      const el = document.getElementById('shareWinModal');
+      if (el && window.bootstrap) new bootstrap.Modal(el, { backdrop:'static' }).show();
+    }, 700);
+  });
+})();
+</script>
+
 </body>
 </html>
