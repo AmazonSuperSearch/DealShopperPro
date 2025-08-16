@@ -1262,33 +1262,28 @@ const dspShare = (() => {
   });
 })();
 </script>
-<!-- === Accordion expand/collapse sound (final) === -->
+<!-- === Accordion expand/collapse sound (safe, minimal) === -->
 <script>
-(function () {
+(() => {
   const snd = document.getElementById('accordion-sound');
   if (!snd) return;
 
-  // Prime once on first interaction (satisfies autoplay policies)
-  let primed = false;
+  // Prime once (no capture, won’t interfere with toggling)
   const prime = () => {
-    if (primed) return; primed = true;
     try {
       snd.muted = true;
-      snd.play().then(() => {
-        snd.pause(); snd.currentTime = 0; snd.muted = false;
-      }).catch(() => { snd.muted = false; });
-    } catch(_) {}
-    window.removeEventListener('pointerdown', prime, true);
-    window.removeEventListener('keydown', prime, true);
+      snd.play().then(() => { snd.pause(); snd.currentTime = 0; snd.muted = false; })
+                .catch(() => { snd.muted = false; });
+    } catch (_) {}
   };
-  window.addEventListener('pointerdown', prime, true);
-  window.addEventListener('keydown', prime, true);
+  window.addEventListener('pointerdown', prime, { once: true });
+  window.addEventListener('keydown',     prime, { once: true });
 
-  const play = () => { try { snd.currentTime = 0; snd.play().catch(() => {}); } catch(_) {} };
+  const play = () => { try { snd.currentTime = 0; snd.play().catch(()=>{}); } catch (_) {} };
 
-  // Start-of-action events (gesture-safe)
-  document.addEventListener('show.bs.collapse', play);  // expanding
-  document.addEventListener('hide.bs.collapse', play);  // collapsing
+  // Start-of-action events (gesture-safe, won’t block collapse)
+  document.addEventListener('show.bs.collapse', play);
+  document.addEventListener('hide.bs.collapse', play);
 })();
 </script>
 
