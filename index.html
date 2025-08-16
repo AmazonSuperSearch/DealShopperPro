@@ -311,284 +311,371 @@
 </div>
 <!-- STEP 5: Extra Filters -->
 <div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingStep5">
-<button aria-controls="collapseStep5" aria-expanded="false" class="accordion-button collapsed bg-white fw-bold" data-bs-target="#collapseStep5" data-bs-toggle="collapse" type="button">
-                🔥 ✅ Step 5: Extra Filters &amp; Deals, Deals, Deals!
+  <h2 class="accordion-header" id="headingStep5">
+    <button class="accordion-button collapsed bg-white fw-bold" type="button"
+            data-bs-toggle="collapse" data-bs-target="#collapseStep5"
+            aria-expanded="false" aria-controls="collapseStep5">
+      🔥 ✅ Step 5: Extra Filters &amp; Deals, Deals, Deals!
+    </button>
+  </h2>
+
+  <div id="collapseStep5" class="accordion-collapse collapse" aria-labelledby="headingStep5">
+    <div class="accordion-body">
+      <p class="text-muted mb-3">Prime-eligible, Lightning Deals, Free Shipping, In Stock, Eco-Friendly, Coupons, and more.</p>
+
+      <div class="card mb-4 p-3">
+        <div class="accordion" id="filterAccordion-step5">
+
+          <!-- ========================= -->
+          <!-- 🚚 Shipping & Availability -->
+          <!-- ========================= -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingShipping">
+              <button class="accordion-button collapsed sticky-top bg-white" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#collapseShipping"
+                      aria-expanded="false" aria-controls="collapseShipping">
+                🚚 Shipping &amp; Availability
               </button>
-</h2>
-<div aria-labelledby="headingStep5" class="accordion-collapse collapse" id="collapseStep5">
-<div class="accordion-body">
-<p class="text-muted mb-3">Prime‑eligible, Lightning Deals, Free Shipping, In Stock, Eco‑Friendly, Coupons, and more.</p>
-<div class="card mb-4 p-3">
-<div class="accordion" id="filterAccordion-step5">
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingShipping">
-<button aria-controls="collapseShipping" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#collapseShipping" data-bs-toggle="collapse" type="button">
-                          🚚 Shipping &amp; Availability
-                        </button>
-</h2>
-<div aria-labelledby="headingShipping" class="accordion-collapse collapse" id="collapseShipping">
-<div class="accordion-body">
-<div class="form-check" data-tooltip="Only show Amazon Prime-eligible products.">
-<input class="form-check-input" id="primeOnly" name="prime-only" type="checkbox">
-<label class="form-check-label" for="primeOnly">🤩 Prime Only</label>
-</div>
-<div class="form-check" data-tooltip="Filter for products with free shipping.">
-<input class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox">
-<label class="form-check-label" for="freeShipping">🚚 Free Shipping</label>
-</div>
-<div class="form-check" data-tooltip="Show items currently in stock.">
-<input class="form-check-input" id="inStock" name="in-stock" type="checkbox">
-<label class="form-check-label" for="inStock">📦 In Stock</label>
-</div>
-<div class="form-check" data-tooltip="Fulfilled by Amazon (FBA) products only.">
-<input class="form-check-input" id="fbaOnly" name="fba-only" type="checkbox">
-<label class="form-check-label" for="fbaOnly">📦 Fulfilled by Amazon (FBA)</label>
-</div>
-<div class="form-check" data-tooltip="Only show products that ship from the United States.">
-<input class="form-check-input" id="shipsFromUS" name="ships-from-us" type="checkbox">
-<label class="form-check-label" for="shipsFromUS">🇺🇸 Ships from United States</label>
-</div>
-</div>
-</div>
-</div>
-<div class="accordion-item border-bottom">
-<h2 class="accordion-header" id="headingaccordionGroup2">
-<button aria-controls="accordionGroup2" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup2" data-bs-toggle="collapse" type="button">
-                          🎯🔥 Deals &amp; Discounts
-                        </button>
-</h2>
-<div aria-labelledby="headingaccordionGroup2" class="accordion-collapse collapse" id="accordionGroup2">
-<div class="accordion-body">
-<div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
-<input class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox">
-<label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label>
-</div>
-<div class="form-check" data-tooltip="View Amazon's Today's Deals page.">
-<input class="form-check-input" id="todaysDeals" name="todays-deals" type="checkbox">
-<label class="form-check-label" for="todaysDeals">🔥 Today's Deals</label>
-</div>
-<div class="form-check" data-tooltip="🔥🏷️ Filter Amazon for deals with clippable coupons at checkout.">
-<input class="form-check-input" id="coupons" name="coupons" type="checkbox">
-<label class="form-check-label" for="coupons">🏷️ Coupons</label>
-</div>
-<div class="form-check" data-tooltip="Clearance items from the Amazon Outlet section.">
-<input class="form-check-input" id="outletDeals" name="outlet-deals" type="checkbox">
-<label class="form-check-label" for="outletDeals">🛍️ Amazon Outlet Deals</label>
-</div>
-<div class="form-check" data-tooltip="Find top-selling items with discounts.">
-<input class="form-check-input" id="bestSellerDeals" name="best-seller-deals" type="checkbox">
-<label class="form-check-label" for="bestSellerDeals">🥇 Best Seller Deals</label>
-</div>
-<div class="form-check" data-tooltip="Promos like buy one get one free.">
-<input class="form-check-input" id="bogoDeals" name="bogo-deals" type="checkbox">
-<label class="form-check-label" for="bogoDeals">🎫 Buy One Get One (BOGO)</label>
-</div>
-<div class="form-check" data-tooltip="Extra-discounted clearance or overstock items.">
-<input class="form-check-input" id="clearanceDeals" name="clearance-deals" type="checkbox">
-<label class="form-check-label" for="clearanceDeals">🛒 Clearance Deals</label>
-</div>
-<div class="form-check" data-tooltip="Deals with short time limits or countdowns.">
-<input class="form-check-input" id="limitedTimeDeals" name="limited-time-deals" type="checkbox">
-<label class="form-check-label" for="limitedTimeDeals">💥 Limited-Time Deals</label>
-</div>
-<div class="form-check" data-tooltip="Deals that are about to expire.">
-<input class="form-check-input" id="endsSoonDeals" name="ends-soon-deals" type="checkbox">
-<label class="form-check-label" for="endsSoonDeals">⏱️ Ends Soon</label>
-</div>
-<div class="form-check" data-tooltip="Great deals under $25.">
-<input class="form-check-input" id="under25Deals" name="under-25-deals" type="checkbox">
-<label class="form-check-label" for="under25Deals">🪙 Under $25 Deals</label>
-</div>
-<div class="form-check" data-tooltip="Coupons that are about to expire.">
-<input class="form-check-input" id="expiringCoupons" name="expiring-coupons" type="checkbox">
-<label class="form-check-label" for="expiringCoupons">🛑 Expiring Coupons</label>
-</div>
-<div class="form-check" data-tooltip="Products sold under Amazon-owned brand names.">
-<input class="form-check-input" id="amazon-brands" name="amazon-brands" type="checkbox">
-<label class="form-check-label" for="amazon-brands">🏷️ Amazon Brands</label>
-</div>
-<div class="form-check" data-tooltip="Find the lowest recorded price on items.">
-<input class="form-check-input" id="lowestPrice" name="lowest-price" type="checkbox">
-<label class="form-check-label" for="lowestPrice">📉 Lowest Price</label>
-</div>
-<div class="form-check" data-tooltip="Short-term deals that expire quickly.">
-<input class="form-check-input" id="flashSales" name="flash-sales" type="checkbox">
-<label class="form-check-label" for="flashSales">⚡ Flash Sales</label>
-</div>
-<div class="form-check" data-tooltip="Deals currently trending or gaining popularity.">
-<input class="form-check-input" id="trendingDeals" name="trending-deals" type="checkbox">
-<label class="form-check-label" for="trendingDeals">📊 Trending Deals</label>
-</div>
-<div class="form-check" data-tooltip="Items added to Amazon’s deal feed within the last 24 hours.">
-<input class="form-check-input" id="newDealsToday" name="new-deals-today" type="checkbox">
-<label class="form-check-label" for="newDealsToday">🆕 New Deals Today</label>
-</div>
-<div class="form-check" data-tooltip="Used or returned items with discounts.">
-<input class="form-check-input" id="openBoxDeals" name="open-box-deals" type="checkbox">
-<label class="form-check-label" for="openBoxDeals">📦 Open Box Deals</label>
-</div>
-<div class="form-check" data-tooltip="Items recently restocked and discounted.">
-<input class="form-check-input" id="backInStockDeals" name="back-in-stock-deals" type="checkbox">
-<label class="form-check-label" for="backInStockDeals">📦 Back in Stock Deals</label>
-</div>
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingaccordionGroup3">
-<button aria-controls="accordionGroup3" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup3" data-bs-toggle="collapse" type="button">
-                          Eco &amp; Ethical
-                        </button>
-</h2>
-<div aria-labelledby="headingaccordionGroup3" class="accordion-collapse collapse" id="accordionGroup3">
-<div class="accordion-body">
-<div class="form-check" data-tooltip="Only show eco-friendly products.">
-<input class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox">
-<label class="form-check-label" for="ecoFriendlyToggle">♻️ Eco-Friendly</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Biodegradable.">
-<input class="form-check-input" id="biodegradable" name="biodegradable" type="checkbox">
-<label class="form-check-label" for="biodegradable">🌱 Biodegradable</label>
-</div>
-<div class="form-check" data-tooltip="Only vegan-friendly products.">
-<input class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox">
-<label class="form-check-label" for="veganProducts">🌱 Vegan</label>
-</div>
-<div class="form-check" data-tooltip="Only organic-certified items.">
-<input class="form-check-input" id="organicProducts" name="organic-products" type="checkbox">
-<label class="form-check-label" for="organicProducts">🌿 Organic</label>
-</div>
-<div class="form-check" data-tooltip="Items with carbon-neutral delivery.">
-<input class="form-check-input" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox">
-<label class="form-check-label" for="carbonNeutralDelivery">🚴 Carbon-Neutral Delivery</label>
-</div>
-<div class="form-check" data-tooltip="Products labeled cruelty-free.">
-<input class="form-check-input" id="crueltyFreeToggle" name="cruelty-free" type="checkbox">
-<label class="form-check-label" for="crueltyFreeToggle">🐰 Cruelty-Free</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Recyclable Packaging.">
-<input class="form-check-input" id="recyclable-packaging" name="recyclable-packaging" type="checkbox">
-<label class="form-check-label" for="recyclable-packaging">♻️ Recyclable Packaging</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Plastic-Free.">
-<input class="form-check-input" id="plastic-free" name="plastic-free" type="checkbox">
-<label class="form-check-label" for="plastic-free">🧼 Plastic-Free</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Minimal Packaging.">
-<input class="form-check-input" id="minimal-packaging" name="minimal-packaging" type="checkbox">
-<label class="form-check-label" for="minimal-packaging">📦 Minimal Packaging</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Rechargeable Batteries.">
-<input class="form-check-input" id="rechargeable-batteries" name="rechargeable-batteries" type="checkbox">
-<label class="form-check-label" for="rechargeable-batteries">🔋 Rechargeable Batteries</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: No Microplastics.">
-<input class="form-check-input" id="no-microplastics" name="no-microplastics" type="checkbox">
-<label class="form-check-label" for="no-microplastics">🚫 Microplastics</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Fair Trade.">
-<input class="form-check-input" id="fair-trade" name="fair-trade" type="checkbox">
-<label class="form-check-label" for="fair-trade">🧵 Fair Trade</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Made in USA.">
-<input class="form-check-input" id="made-in-usa" name="made-in-usa" type="checkbox">
-<label class="form-check-label" for="made-in-usa">🇺🇸 Made in USA</label>
-</div>
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingaccordionGroup4">
-<button aria-controls="accordionGroup4" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup4" data-bs-toggle="collapse" type="button">
-                          Special Categories
-                        </button>
-</h2>
-<div aria-labelledby="headingaccordionGroup4" class="accordion-collapse collapse" id="accordionGroup4">
-<div class="accordion-body">
-<div class="form-check" data-tooltip="Show warehouse and refurbished items.">
-<input class="form-check-input" id="warehouseRefurb" name="warehouse-refurb" type="checkbox">
-<label class="form-check-label" for="warehouseRefurb">📦 Warehouse &amp; Refurbished</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Just Released.">
-<input class="form-check-input" id="new-release" name="new-release" type="checkbox">
-<label class="form-check-label" for="new-release">🆕 Just Released</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Climate Pledge Picks.">
-<input class="form-check-input" id="climate-pledge" name="climate-pledge" type="checkbox">
-<label class="form-check-label" for="climate-pledge">♻️ Climate Pledge Picks</label>
-</div>
-<div class="form-check" data-tooltip="Support products sold by small businesses.">
-<input class="form-check-input" id="smallBusiness" name="small-business" type="checkbox">
-<label class="form-check-label" for="smallBusiness">🏪 Small Business</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Trending Now.">
-<input class="form-check-input" id="trending-now" name="trending-now" type="checkbox">
-<label class="form-check-label" for="trending-now">📈 Trending Now</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Back in Stock.">
-<input class="form-check-input" id="back-in-stock" name="back-in-stock" type="checkbox">
-<label class="form-check-label" for="back-in-stock">🕘 Back in Stock</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Budget Essentials.">
-<input class="form-check-input" id="budget-essentials" name="budget-essentials" type="checkbox">
-<label class="form-check-label" for="budget-essentials">🪙 Budget Essentials</label>
-</div>
-<div class="form-check" data-tooltip="Filter for: Limited Quantity Left.">
-<input class="form-check-input" id="limited-quantity-left" name="limited-quantity-left" type="checkbox">
-<label class="form-check-label" for="limited-quantity-left">⏳ Limited Quantity Left</label>
-</div>
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingaccordionGroup5">
-<button aria-controls="accordionGroup5" aria-expanded="false" class="accordion-button collapsed sticky-top bg-white" data-bs-target="#accordionGroup5" data-bs-toggle="collapse" type="button">
-                          Gift Ideas
-                        </button>
-</h2>
-<div aria-labelledby="headingaccordionGroup5" class="accordion-collapse collapse" id="accordionGroup5">
-<div class="accordion-body">
-<div class="form-check" data-tooltip="Gift ideas suitable for women.">
-<input class="form-check-input" id="giftsForHer" name="gifts-for-her" type="checkbox">
-<label class="form-check-label" for="giftsForHer">🎀 Gifts for Her</label>
-</div>
-<div class="form-check" data-tooltip="Gift ideas suitable for men.">
-<input class="form-check-input" id="giftsForHim" name="gifts-for-him" type="checkbox">
-<label class="form-check-label" for="giftsForHim">👔 Gifts for Him</label>
-</div>
-<div class="form-check" data-tooltip="Gift ideas for kids of all ages.">
-<input class="form-check-input" id="giftsForKids" name="gifts-for-kids" type="checkbox">
-<label class="form-check-label" for="giftsForKids">🧒 Gifts for Kids</label>
-</div>
-<div class="form-check" data-tooltip="Perfect for birthday gift shopping.">
-<input class="form-check-input" id="birthdayGifts" name="birthday-gifts" type="checkbox">
-<label class="form-check-label" for="birthdayGifts">🎂 Birthday Gifts</label>
-</div>
-<div class="form-check" data-tooltip="Holiday-themed gift deals.">
-<input class="form-check-input" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox">
-<label class="form-check-label" for="holidayGiftPicks">🎄 Holiday Gift Picks</label>
-</div>
-<div class="form-check" data-tooltip="Affordable gifts under $25.">
-<input class="form-check-input" id="giftUnder25" name="giftUnder25" type="checkbox" value="gifts+under+25+dollars">
-<label class="form-check-label" for="giftUnder25">💵 Gifts Under $25</label>
-</div>
-<div class="form-check" data-tooltip="Light-hearted and funny gift ideas.">
-<input class="form-check-input" id="funnyGifts" name="funnyGifts" type="checkbox" value="funny+gag+gifts">
-<label class="form-check-label" for="funnyGifts">🤣 Funny &amp; Gag Gifts</label>
-</div>
-<div class="form-check" data-tooltip="Quick gifts for last-minute shoppers.">
-<input class="form-check-input" id="lastMinuteGifts" name="lastMinuteGifts" type="checkbox" value="last+minute+gifts">
-<label class="form-check-label" for="lastMinuteGifts">⏰ Last-Minute Gifts</label>
-</div>
-</div>
-</div>
-</div>
-</div> <!-- /#filterAccordion-step5 -->
-</div> <!-- /.card -->
-</div> <!-- /.accordion-body for Step 5 -->
-</div> <!-- /#collapseStep5 -->
-</div> <!-- /.accordion-item for Step 5 -->
+            </h2>
+            <div id="collapseShipping" class="accordion-collapse collapse" aria-labelledby="headingShipping">
+              <div class="accordion-body">
+
+                <!-- ✅ Reliable -->
+                <div class="mb-3">
+                  <div class="form-check" data-tooltip="Only show Amazon Prime-eligible products.">
+                    <input class="form-check-input" id="primeOnly" name="prime-only" type="checkbox">
+                    <label class="form-check-label" for="primeOnly">🤩 Prime Only</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for products with free shipping.">
+                    <input class="form-check-input" id="freeShipping" name="free-shipping" type="checkbox">
+                    <label class="form-check-label" for="freeShipping">🚚 Free Shipping</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Show items currently in stock.">
+                    <input class="form-check-input" id="inStock" name="in-stock" type="checkbox">
+                    <label class="form-check-label" for="inStock">📦 In Stock</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Fulfilled by Amazon (FBA) products only.">
+                    <input class="form-check-input" id="fbaOnly" name="fba-only" type="checkbox">
+                    <label class="form-check-label" for="fbaOnly">📦 Fulfilled by Amazon (FBA)</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Only show products that ship from the United States.">
+                    <input class="form-check-input" id="shipsFromUS" name="ships-from-us" type="checkbox">
+                    <label class="form-check-label" for="shipsFromUS">🇺🇸 Ships from United States</label>
+                  </div>
+                </div>
+
+                <!-- (No experimental in this group) -->
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ===================== -->
+          <!-- 🎯🔥 Deals & Discounts -->
+          <!-- ===================== -->
+          <div class="accordion-item border-bottom">
+            <h2 class="accordion-header" id="headingaccordionGroup2">
+              <button class="accordion-button collapsed sticky-top bg-white" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#accordionGroup2"
+                      aria-expanded="false" aria-controls="accordionGroup2">
+                🎯🔥 Deals &amp; Discounts
+              </button>
+            </h2>
+            <div id="accordionGroup2" class="accordion-collapse collapse" aria-labelledby="headingaccordionGroup2">
+              <div class="accordion-body">
+
+                <!-- ✅ Reliable -->
+                <div class="mb-3">
+                  <div class="form-check" data-tooltip="Show time-limited Lightning Deals only.">
+                    <input class="form-check-input" id="lightningDeals" name="lightning-deals" type="checkbox">
+                    <label class="form-check-label" for="lightningDeals">⚡ Lightning Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="🔥🏷️ Filter Amazon for deals with clippable coupons at checkout.">
+                    <input class="form-check-input" id="coupons" name="coupons" type="checkbox">
+                    <label class="form-check-label" for="coupons">🏷️ Coupons</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Clearance items from the Amazon Outlet section.">
+                    <input class="form-check-input" id="outletDeals" name="outlet-deals" type="checkbox">
+                    <label class="form-check-label" for="outletDeals">🛍️ Amazon Outlet Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Products sold under Amazon-owned brand names.">
+                    <input class="form-check-input" id="amazon-brands" name="amazon-brands" type="checkbox">
+                    <label class="form-check-label" for="amazon-brands">🏷️ Amazon Brands</label>
+                  </div>
+                </div>
+
+                <!-- Divider -->
+                <hr class="my-2">
+                <p class="text-muted small mb-2">⚠️ <strong>Experimental</strong> – may not be 100% reliable</p>
+
+                <!-- ⚠️ Experimental -->
+                <div>
+                  <div class="form-check" data-tooltip="View Amazon's Today's Deals page.">
+                    <input class="form-check-input experimental" id="todaysDeals" name="todays-deals" type="checkbox">
+                    <label class="form-check-label" for="todaysDeals">🔥 Today's Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Find top-selling items with discounts.">
+                    <input class="form-check-input experimental" id="bestSellerDeals" name="best-seller-deals" type="checkbox">
+                    <label class="form-check-label" for="bestSellerDeals">🥇 Best Seller Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Promos like buy one get one free.">
+                    <input class="form-check-input experimental" id="bogoDeals" name="bogo-deals" type="checkbox">
+                    <label class="form-check-label" for="bogoDeals">🎫 Buy One Get One (BOGO)</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Extra-discounted clearance or overstock items.">
+                    <input class="form-check-input experimental" id="clearanceDeals" name="clearance-deals" type="checkbox">
+                    <label class="form-check-label" for="clearanceDeals">🛒 Clearance Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Deals with short time limits or countdowns.">
+                    <input class="form-check-input experimental" id="limitedTimeDeals" name="limited-time-deals" type="checkbox">
+                    <label class="form-check-label" for="limitedTimeDeals">💥 Limited-Time Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Deals that are about to expire.">
+                    <input class="form-check-input experimental" id="endsSoonDeals" name="ends-soon-deals" type="checkbox">
+                    <label class="form-check-label" for="endsSoonDeals">⏱️ Ends Soon</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Great deals under $25.">
+                    <input class="form-check-input experimental" id="under25Deals" name="under-25-deals" type="checkbox">
+                    <label class="form-check-label" for="under25Deals">🪙 Under $25 Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Coupons that are about to expire.">
+                    <input class="form-check-input experimental" id="expiringCoupons" name="expiring-coupons" type="checkbox">
+                    <label class="form-check-label" for="expiringCoupons">🛑 Expiring Coupons</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Find the lowest recorded price on items.">
+                    <input class="form-check-input experimental" id="lowestPrice" name="lowest-price" type="checkbox">
+                    <label class="form-check-label" for="lowestPrice">📉 Lowest Price</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Short-term deals that expire quickly.">
+                    <input class="form-check-input experimental" id="flashSales" name="flash-sales" type="checkbox">
+                    <label class="form-check-label" for="flashSales">⚡ Flash Sales</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Deals currently trending or gaining popularity.">
+                    <input class="form-check-input experimental" id="trendingDeals" name="trending-deals" type="checkbox">
+                    <label class="form-check-label" for="trendingDeals">📊 Trending Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Items added to Amazon’s deal feed within the last 24 hours.">
+                    <input class="form-check-input experimental" id="newDealsToday" name="new-deals-today" type="checkbox">
+                    <label class="form-check-label" for="newDealsToday">🆕 New Deals Today</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Used or returned items with discounts.">
+                    <input class="form-check-input experimental" id="openBoxDeals" name="open-box-deals" type="checkbox">
+                    <label class="form-check-label" for="openBoxDeals">📦 Open Box Deals</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Items recently restocked and discounted.">
+                    <input class="form-check-input experimental" id="backInStockDeals" name="back-in-stock-deals" type="checkbox">
+                    <label class="form-check-label" for="backInStockDeals">📦 Back in Stock Deals</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ============== -->
+          <!-- Eco & Ethical  -->
+          <!-- ============== -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingaccordionGroup3">
+              <button class="accordion-button collapsed sticky-top bg-white" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#accordionGroup3"
+                      aria-expanded="false" aria-controls="accordionGroup3">
+                Eco &amp; Ethical
+              </button>
+            </h2>
+            <div id="accordionGroup3" class="accordion-collapse collapse" aria-labelledby="headingaccordionGroup3">
+              <div class="accordion-body">
+
+                <!-- ✅ Reliable -->
+                <div class="mb-3">
+                  <div class="form-check" data-tooltip="Only show eco-friendly products.">
+                    <input class="form-check-input" id="ecoFriendlyToggle" name="eco-friendly" type="checkbox">
+                    <label class="form-check-label" for="ecoFriendlyToggle">♻️ Eco-Friendly</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Biodegradable.">
+                    <input class="form-check-input" id="biodegradable" name="biodegradable" type="checkbox">
+                    <label class="form-check-label" for="biodegradable">🌱 Biodegradable</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Only vegan-friendly products.">
+                    <input class="form-check-input" id="veganProducts" name="vegan-products" type="checkbox">
+                    <label class="form-check-label" for="veganProducts">🌱 Vegan</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Only organic-certified items.">
+                    <input class="form-check-input" id="organicProducts" name="organic-products" type="checkbox">
+                    <label class="form-check-label" for="organicProducts">🌿 Organic</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Products labeled cruelty-free.">
+                    <input class="form-check-input" id="crueltyFreeToggle" name="cruelty-free" type="checkbox">
+                    <label class="form-check-label" for="crueltyFreeToggle">🐰 Cruelty-Free</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: No Microplastics.">
+                    <input class="form-check-input" id="no-microplastics" name="no-microplastics" type="checkbox">
+                    <label class="form-check-label" for="no-microplastics">🚫 Microplastics</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Fair Trade.">
+                    <input class="form-check-input" id="fair-trade" name="fair-trade" type="checkbox">
+                    <label class="form-check-label" for="fair-trade">🧵 Fair Trade</label>
+                  </div>
+                </div>
+
+                <!-- Divider -->
+                <hr class="my-2">
+                <p class="text-muted small mb-2">⚠️ <strong>Experimental</strong> – may not be 100% reliable</p>
+
+                <!-- ⚠️ Experimental -->
+                <div>
+                  <div class="form-check" data-tooltip="Items with carbon-neutral delivery.">
+                    <input class="form-check-input experimental" id="carbonNeutralDelivery" name="carbon-neutral-delivery" type="checkbox">
+                    <label class="form-check-label" for="carbonNeutralDelivery">🚴 Carbon-Neutral Delivery</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Recyclable Packaging.">
+                    <input class="form-check-input experimental" id="recyclable-packaging" name="recyclable-packaging" type="checkbox">
+                    <label class="form-check-label" for="recyclable-packaging">♻️ Recyclable Packaging</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Plastic-Free.">
+                    <input class="form-check-input experimental" id="plastic-free" name="plastic-free" type="checkbox">
+                    <label class="form-check-label" for="plastic-free">🧼 Plastic-Free</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Minimal Packaging.">
+                    <input class="form-check-input experimental" id="minimal-packaging" name="minimal-packaging" type="checkbox">
+                    <label class="form-check-label" for="minimal-packaging">📦 Minimal Packaging</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Rechargeable Batteries.">
+                    <input class="form-check-input experimental" id="rechargeable-batteries" name="rechargeable-batteries" type="checkbox">
+                    <label class="form-check-label" for="rechargeable-batteries">🔋 Rechargeable Batteries</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Made in USA.">
+                    <input class="form-check-input experimental" id="made-in-usa" name="made-in-usa" type="checkbox">
+                    <label class="form-check-label" for="made-in-usa">🇺🇸 Made in USA</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= -->
+          <!-- Special Categories -->
+          <!-- ================= -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingaccordionGroup4">
+              <button class="accordion-button collapsed sticky-top bg-white" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#accordionGroup4"
+                      aria-expanded="false" aria-controls="accordionGroup4">
+                Special Categories
+              </button>
+            </h2>
+            <div id="accordionGroup4" class="accordion-collapse collapse" aria-labelledby="headingaccordionGroup4">
+              <div class="accordion-body">
+
+                <!-- ✅ Reliable -->
+                <div class="mb-3">
+                  <div class="form-check" data-tooltip="Filter for: Climate Pledge Picks">
+                    <input class="form-check-input" id="climate-pledge" name="climate-pledge" type="checkbox">
+                    <label class="form-check-label" for="climate-pledge">♻️ Climate Pledge Picks</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Support products sold by small businesses.">
+                    <input class="form-check-input" id="smallBusiness" name="small-business" type="checkbox">
+                    <label class="form-check-label" for="smallBusiness">🏪 Small Business</label>
+                  </div>
+                </div>
+
+                <!-- Divider -->
+                <hr class="my-2">
+                <p class="text-muted small mb-2">⚠️ <strong>Experimental</strong> – may not be 100% reliable</p>
+
+                <!-- ⚠️ Experimental -->
+                <div>
+                  <div class="form-check" data-tooltip="Show warehouse and refurbished items.">
+                    <input class="form-check-input experimental" id="warehouseRefurb" name="warehouse-refurb" type="checkbox">
+                    <label class="form-check-label" for="warehouseRefurb">📦 Warehouse &amp; Refurbished</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Just Released.">
+                    <input class="form-check-input experimental" id="new-release" name="new-release" type="checkbox">
+                    <label class="form-check-label" for="new-release">🆕 Just Released</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Trending Now.">
+                    <input class="form-check-input experimental" id="trending-now" name="trending-now" type="checkbox">
+                    <label class="form-check-label" for="trending-now">📈 Trending Now</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Back in Stock.">
+                    <input class="form-check-input experimental" id="back-in-stock" name="back-in-stock" type="checkbox">
+                    <label class="form-check-label" for="back-in-stock">🕘 Back in Stock</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Budget Essentials.">
+                    <input class="form-check-input experimental" id="budget-essentials" name="budget-essentials" type="checkbox">
+                    <label class="form-check-label" for="budget-essentials">🪙 Budget Essentials</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Filter for: Limited Quantity Left.">
+                    <input class="form-check-input experimental" id="limited-quantity-left" name="limited-quantity-left" type="checkbox">
+                    <label class="form-check-label" for="limited-quantity-left">⏳ Limited Quantity Left</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- ========== -->
+          <!-- Gift Ideas -->
+          <!-- ========== -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingaccordionGroup5">
+              <button class="accordion-button collapsed sticky-top bg-white" type="button"
+                      data-bs-toggle="collapse" data-bs-target="#accordionGroup5"
+                      aria-expanded="false" aria-controls="accordionGroup5">
+                Gift Ideas
+              </button>
+            </h2>
+            <div id="accordionGroup5" class="accordion-collapse collapse" aria-labelledby="headingaccordionGroup5">
+              <div class="accordion-body">
+
+                <!-- ⚠️ Experimental (all keyword-based) -->
+                <div>
+                  <div class="form-check" data-tooltip="Gift ideas suitable for women.">
+                    <input class="form-check-input experimental" id="giftsForHer" name="gifts-for-her" type="checkbox">
+                    <label class="form-check-label" for="giftsForHer">🎀 Gifts for Her</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Gift ideas suitable for men.">
+                    <input class="form-check-input experimental" id="giftsForHim" name="gifts-for-him" type="checkbox">
+                    <label class="form-check-label" for="giftsForHim">👔 Gifts for Him</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Gift ideas for kids of all ages.">
+                    <input class="form-check-input experimental" id="giftsForKids" name="gifts-for-kids" type="checkbox">
+                    <label class="form-check-label" for="giftsForKids">🧒 Gifts for Kids</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Perfect for birthday gift shopping.">
+                    <input class="form-check-input experimental" id="birthdayGifts" name="birthday-gifts" type="checkbox">
+                    <label class="form-check-label" for="birthdayGifts">🎂 Birthday Gifts</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Holiday-themed gift deals.">
+                    <input class="form-check-input experimental" id="holidayGiftPicks" name="holiday-gift-picks" type="checkbox">
+                    <label class="form-check-label" for="holidayGiftPicks">🎄 Holiday Gift Picks</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Affordable gifts under $25.">
+                    <input class="form-check-input experimental" id="giftUnder25" name="giftUnder25" type="checkbox" value="gifts+under+25+dollars">
+                    <label class="form-check-label" for="giftUnder25">💵 Gifts Under $25</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Light-hearted and funny gift ideas.">
+                    <input class="form-check-input experimental" id="funnyGifts" name="funnyGifts" type="checkbox" value="funny+gag+gifts">
+                    <label class="form-check-label" for="funnyGifts">🤣 Funny &amp; Gag Gifts</label>
+                  </div>
+                  <div class="form-check" data-tooltip="Quick gifts for last-minute shoppers.">
+                    <input class="form-check-input experimental" id="lastMinuteGifts" name="lastMinuteGifts" type="checkbox" value="last+minute+gifts">
+                    <label class="form-check-label" for="lastMinuteGifts">⏰ Last-Minute Gifts</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- /#filterAccordion-step5 -->
+      </div> <!-- /.card -->
+    </div> <!-- /.accordion-body -->
+  </div> <!-- /#collapseStep5 -->
+</div> <!-- /.accordion-item -->
+
 <!-- STEP 6: View Results -->
 <div class="accordion-item border-bottom">
 <h2 class="accordion-header" id="headingStep6">
