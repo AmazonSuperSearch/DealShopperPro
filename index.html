@@ -248,14 +248,17 @@
 </select>
 </div>
 <div class="col-md-4">
-<label class="form-label" for="minRating">Minimum Rating</label>
-<select class="form-select" id="minRating" name="min-rating">
-<option value="">Any</option>
-<option value="4">4 stars &amp; up</option>
-<option value="3">3 stars &amp; up</option>
-<option value="2">2 stars &amp; up</option>
-</select>
+  <label class="form-label" for="minRating">Minimum Rating</label>
+  <select class="form-select" id="minRating" name="min-rating" aria-label="Minimum product rating">
+    <option value="">Any</option>
+    <option value="1">1 star &amp; up</option>
+    <option value="2">2 stars &amp; up</option>
+    <option value="3">3 stars &amp; up</option>
+    <option value="4">4 stars &amp; up</option>
+    <option value="5">5 stars only</option>
+  </select>
 </div>
+
 <div class="col-md-4">
 <label class="form-label" for="min-discount">Minimum Discount</label>
 <select class="form-select" id="min-discount" name="min-discount">
