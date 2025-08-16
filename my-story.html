@@ -167,11 +167,18 @@
 <section class="my-5">
   <div class="card border-0 shadow-sm">
     <div class="card-body d-flex align-items-center">
-      <img
-        src="/assets/img/duane-romualdo.jpg"
-        alt="Duane Romualdo"
-        class="rounded-circle me-3 shadow-sm"
-        width="80" height="80" loading="lazy" decoding="async">
+      <picture class="me-3 d-inline-block">
+        <!-- Modern formats first (optional) -->
+        <source srcset="/assets/img/duane-romualdo.avif" type="image/avif">
+        <source srcset="/assets/img/duane-romualdo.webp" type="image/webp">
+        <!-- Fallback .jpg/.jpeg -->
+        <img
+          src="/assets/img/duane-romualdo.jpg"
+          alt="Duane Romualdo"
+          class="rounded-circle shadow-sm"
+          width="80" height="80" loading="lazy" decoding="async"
+          onerror="this.onerror=null; this.src='/assets/img/duane-romualdo.jpeg';">
+      </picture>
       <div>
         <h3 class="h6 mb-1">About the author</h3>
         <p class="mb-2 text-muted small">
