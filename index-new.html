@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="#66b2ff" name="theme-color">
+<meta content="index, follow, max-image-preview:large" name="robots">
+<title>Advanced Amazon Search – Deal Finder | Deal Shopper Pro</title>
+<meta content="Use our advanced Amazon search tool with unique filters for Lightning Deals, Prime-only offers, hidden coupons, and more – find the best deals in seconds." name="description">
+
+<!-- Open Graph / Twitter -->
+<meta content="website" property="og:type">
+<meta content="Advanced Amazon Search – Deal Finder | Deal Shopper Pro" property="og:title">
+<meta content="Find Prime-only offers, Lightning Deals, and hidden coupons fast with smart filters." property="og:description">
+<meta content="https://www.dealshopperpro.com/" property="og:url">
+<meta content="https://www.dealshopperpro.com/og-image.jpg" property="og:image">
+<meta content="en_US" property="og:locale">
+<meta content="Deal Shopper Pro" property="og:site_name">
+<meta content="1200" property="og:image:width">
+<meta content="630" property="og:image:height">
+<meta content="Advanced Amazon Search – Deal Finder" property="og:image:alt">
+<meta content="summary_large_image" name="twitter:card">
+<meta content="Advanced Amazon Search – Deal Finder | Deal Shopper Pro" name="twitter:title">
+<meta content="Find Prime-only offers, Lightning Deals, and hidden coupons fast with smart filters." name="twitter:description">
+<meta content="https://www.dealshopperpro.com/og-image.jpg" name="twitter:image">
+<meta content="Advanced Amazon Search – Deal Finder" name="twitter:image:alt">
+
+<link href="https://www.dealshopperpro.com/" rel="canonical">
+
+<!-- Favicon -->
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/favicon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/site.webmanifest" rel="manifest">
+
+<!-- Security -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://www.youtube-nocookie.com https://i.ytimg.com; img-src 'self' https: data:;">
+
+<!-- Preconnects -->
+<link crossorigin="" href="https://cdn.jsdelivr.net" rel="preconnect">
+<link href="https://www.youtube-nocookie.com" rel="preconnect">
+<link href="https://i.ytimg.com" rel="preconnect">
+
+<!-- Critical CSS - Inline for performance -->
+<style>
+  /* Critical styles for above-the-fold content */
+  :root {
+    --bs-primary: #66b2ff;
+    --bs-primary-rgb: 102, 178, 255;
+    --bs-focus-ring-color: rgba(102,178,255,.4);
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 3rem;
+    --text-muted: #495057; /* Improved contrast */
+  }
+
+  body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; }
+  
+  /* Navbar - Critical */
+  .navbar-custom {
+    background: #000 !important;
+    padding: var(--space-sm) 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+    z-index: 1030;
+  }
+  .navbar-custom .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    min-height: 44px; /* Touch target */
+    display: flex;
+    align-items: center;
+  }
+  .navbar-custom .nav-link:hover,
+  .navbar-custom .nav-link.active { color: #FFD700 !important; }
+  .navbar-brand.text-warning { color: #FFD700 !important; }
+
+  /* Hero Section - Critical */
+  .hero-title {
+    font-weight: 800;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #cc4400;
+    text-align: center;
+    background: linear-gradient(45deg, #cc4400, #ff5e00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: var(--space-lg) 0;
+  }
+
+  /* Buttons - Critical */
+  .btn {
+    min-height: 44px;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--bs-focus-ring-color);
+  }
+  .btn-primary { background: var(--bs-primary); border-color: var(--bs-primary); }
+  .btn-primary:hover { filter: brightness(0.92); }
+
+  /* Form Controls - Critical */
+  .form-control, .form-select {
+    min-height: 44px;
+    border: 2px solid #ced4da;
+    border-radius: 6px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  .form-control:focus, .form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 3px rgba(102, 178, 255, 0.25);
+  }
+
+  /* Checkboxes - Improved accessibility */
+  .form-check {
+    background-color: #f8f9fa;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 6px;
+    border: 2px solid #ddd;
+    margin-bottom: var(--space-xs);
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .form-check:hover { background-color: #e9ecef; }
+  .form-check-input {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #495057;
+    margin-right: var(--space-sm);
+    flex-shrink: 0;
+  }
+  .form-check-input:checked {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+  }
+  .form-check-input:focus {
+    box-shadow: 0 0 0 3px rgba(102, 178, 255, 0.25);
+  }
+
+  /* Text improvements */
+  .text-muted { color: var(--text-muted) !important; }
+  
+  /* Loading state */
+  .loading .btn {
+    position: relative;
+    color: transparent;
+  }
+  .loading .btn::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s ease-in-out infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  /* Skip to content link */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--bs-primary);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 2000;
+  }
+  .skip-link:focus { top: 6px; }
+</style>
+
+<!-- Non-critical CSS -->
+<link as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" onload="this.rel='stylesheet'" rel="preload">
+<noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
+
+<!-- Icons -->
+<link as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" onload="this.rel='stylesheet'" rel="preload">
+<noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"></noscript>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Deal Shopper Pro",
+  "url": "https://www.dealshopperpro.com",
+  "description": "Advanced Amazon deal search with filters for Prime, coupons, Lightning Deals, and more.",
+  "applicationCategory": "Shopping",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": ["Prime filtering", "Lightning Deals", "Coupon search", "Price filtering", "Rating filtering"],
+  "permissions": "No registration required"
+}
+</script>
+
+<!-- Preload critical resources -->
+<link rel="preload" as="audio" href="/click.mp3">
+<link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</head>
+
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<main id="main-content">
+<div id="navbar-placeholder"></div>
+
+<!-- Breadcrumbs -->
+<nav aria-label="breadcrumb" class="container mt-3">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li aria-current="page" class="breadcrumb-item active">Advanced Amazon Search</li>
+</ol>
+</nav>
+
+<!-- Hero Section -->
+<section class="container py-4" role="banner">
+<div class="row justify-content-center">
+<div class="col-lg-10">
+<h1 class="hero-title">Amazon Deal Finder – Advanced Search & Coupon Finder</h1>
+
+<div class="text-center py-4">
+<h2 class="fw-bold display-6 mb-3">Stop Missing Hidden Deals & Coupons</h2>
+<p class="lead mb-3" style="color: var(--text-muted);">
+  Discover Prime-only offers, hidden discounts, and coupon-stacked deals – fast.
+</p>
+
+<ul class="list-unstyled text-center mb-4" style="color: var(--text-muted);">
+<li>🔍 Smart filters for price, rating, brand, shipping & more</li>
+<li>⚡ Real Amazon results – no signup, no extensions</li>
+<li>✅ Built for shoppers, not sellers</li>
+</ul>
+
+<div class="d-grid gap-2 d-sm-inline-flex justify-content-sm-center align-items-center mb-4">
+<a class="btn btn-primary btn-lg px-4 me-sm-3 shadow-sm" href="#search-form" aria-describedby="search-description">
+  🔎 Try the Smart Amazon Search Now
+</a>
+<span id="search-description" class="px-3 py-2 bg-info text-dark rounded-pill fw-semibold">🔓 No signup required</span>
+</div>
+
+<!-- Trust indicators -->
+<div class="d-flex justify-content-center gap-4 mb-4 fs-3" role="group" aria-label="Trust indicators">
+<div class="text-success" title="Secure Protection" aria-label="Secure Protection">
+  <i class="bi bi-shield-lock" aria-hidden="true"></i>
+  <span class="visually-hidden">Secure Protection</span>
+</div>
+<div class="text-dark" title="Private – No Tracking" aria-label="Private – No Tracking">
+  <i class="bi bi-incognito" aria-hidden="true"></i>
+  <span class="visually-hidden">Private – No Tracking</span>
+</div>
+<div class="text-primary" title="Cloud-Based Search" aria-label="Cloud-Based Search">
+  <i class="bi bi-cloud" aria-hidden="true"></i>
+  <span class="visually-hidden">Cloud-Based Search</span>
+</div>
+</div>
+
+<!-- Video Demo -->
+<div class="mb-5">
+<h3 class="fw-bold text-center mb-3">🎥 Watch: How to Filter Lightning Deals on Amazon in 30 Seconds</h3>
+<div class="yt-lite rounded-3 shadow-sm mx-auto" style="max-width: 560px;" data-id="wpj1l1XUunw" data-title="How to Filter Lightning Deals on Amazon in 30 Seconds">
+  <noscript>
+    <a href="https://www.youtube.com/watch?v=wpj1l1XUunw" target="_blank" rel="noopener">
+      Watch on YouTube
+    </a>
+  </noscript>
+</div>
+<p class="text-center mt-2" style="color: var(--text-muted); font-size: 0.875rem;">
+  This quick demo shows how to instantly find Lightning Deals using Deal Shopper Pro.<br>
+  <em>Deal Shopper Pro is an independent tool and is not affiliated with Amazon.</em>
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Search Form Section -->
+<section class="container py-4">
+<div class="row justify-content-center">
+<div class="col-lg-10">
+
+<!-- Form Introduction -->
+<div class="text-center my-5">
+<h2 class="h3 fw-bold text-primary mb-3">Advanced Amazon Search – 3 Simple Steps</h2>
+<p class="mb-3" style="color: var(--text-muted);">
+  Use smart filters for <strong>Prime</strong>, <strong>Lightning Deals</strong>, brand, rating, coupons, and more.
+</p>
+<div class="text-success small fw-semibold">✅ Real Amazon search • No extensions • No signup</div>
+</div>
+
+<form id="amazon-search-form" method="get" novalidate aria-label="Amazon deal search form">
+<div class="accordion" id="filterAccordion">
+
+<!-- Step 1: Search -->
+<div class="accordion-item">
+<h3 class="accordion-header" id="headingStep1">
+<button 
+  class="accordion-button bg-white text-dark fw-bold" 
+  type="button" 
+  data-bs-toggle="collapse" 
+  data-bs-target="#collapseStep1" 
+  aria-expanded="true" 
+  aria-controls="collapseStep1"
+  id="step1-button">
+  🔍 Step 1: What are you looking for?
+</button>
+</h3>
+<div id="collapseStep1" class="accordion-collapse collapse show" aria-labelledby="headingStep1">
+<div class="accordion-body">
+<fieldset>
+<legend class="visually-hidden">Product Search</legend>
+<label for="mainSearchInput" class="form-label">Search for products</label>
+<div class="input-group">
+<span class="input-group-text" aria-hidden="true">🔎</span>
+<input 
+  type="text" 
+  class="form-control" 
+  id="mainSearchInput" 
+  name="q" 
+  placeholder="Enter keyword, ASIN, ISBN, or UPC" 
+  autocomplete="off"
+  aria-describedby="search-help">
+</div>
+<div id="search-help" class="form-text">Enter any product name, brand, or Amazon identifier</div>
+</fieldset>
+</div>
+</div>
+</div>
+
+<!-- Step 2: Filters -->
+<div class="accordion-item">
+<h3 class="accordion-header" id="headingStep2">
+<button 
+  class="accordion-button collapsed bg-white text-dark fw-bold" 
+  type="button" 
+  data-bs-toggle="collapse" 
+  data-bs-target="#collapseStep2" 
+  aria-expanded="false" 
+  aria-controls="collapseStep2">
+  🎯 Step 2: Set Your Filters
+</button>
+</h3>
+<div id="collapseStep2" class="accordion-collapse collapse" aria-labelledby="headingStep2">
+<div class="accordion-body">
+
+<!-- Price Range -->
+<fieldset class="mb-4">
+<legend class="h6 fw-bold">💰 Price Range</legend>
+<div class="row g-3">
+<div class="col-md-6">
+<label for="minPrice" class="form-label">Minimum Price</label>
+<div class="input-group">
+<span class="input-group-text">$</span>
+<input type="number" class="form-control" id="minPrice" name="min-price" placeholder="0" min="0" step="0.01">
+</div>
+</div>
+<div class="col-md-6">
+<label for="maxPrice" class="form-label">Maximum Price</label>
+<div class="input-group">
+<span class="input-group-text">$</span>
+<input type="number" class="form-control" id="maxPrice" name="max-price" placeholder="1000" min="0" step="0.01">
+</div>
+</div>
+</div>
+</fieldset>
+
+<!-- Sort & Rating -->
+<fieldset class="mb-4">
+<legend class="h6 fw-bold">⭐ Sort & Rating</legend>
+<div class="row g-3">
+<div class="col-md-6">
+<label for="sortOrder" class="form-label">Sort Results</label>
+<select class="form-select" id="sortOrder" name="sort">
+<option value="relevance">Best Match</option>
+<option value="price-asc-rank">Price: Low to High</option>
+<option value="price-desc-rank">Price: High to Low</option>
+<option value="review-rank">Highest Rated</option>
+<option value="date-desc-rank">Newest</option>
+</select>
+</div>
+<div class="col-md-6">
+<label for="minRating" class="form-label">Minimum Rating</label>
+<select class="form-select" id="minRating" name="min-rating">
+<option value="">Any Rating</option>
+<option value="4">4+ stars</option>
+<option value="3">3+ stars</option>
+<option value="2">2+ stars</option>
+</select>
+</div>
+</div>
+</fieldset>
+
+<!-- Popular Filters -->
+<fieldset>
+<legend class="h6 fw-bold">🔥 Popular Filters</legend>
+<div class="row g-2">
+<div class="col-md-6">
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="primeOnly" name="prime-only">
+<label class="form-check-label fw-semibold" for="primeOnly">
+🤩 Prime Only
+</label>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="lightningDeals" name="lightning-deals">
+<label class="form-check-label fw-semibold" for="lightningDeals">
+⚡ Lightning Deals
+</label>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="coupons" name="coupons">
+<label class="form-check-label fw-semibold" for="coupons">
+🏷️ Coupons Available
+</label>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-check">
+<input class="form-check-input" type="checkbox" id="freeShipping" name="free-shipping">
+<label class="form-check-label fw-semibold" for="freeShipping">
+🚚 Free Shipping
+</label>
+</div>
+</div>
+</div>
+</fieldset>
+
+</div>
+</div>
+</div>
+
+<!-- Step 3: Search -->
+<div class="accordion-item">
+<h3 class="accordion-header" id="headingStep3">
+<button 
+  class="accordion-button collapsed bg-white text-dark fw-bold" 
+  type="button" 
+  data-bs-toggle="collapse" 
+  data-bs-target="#collapseStep3" 
+  aria-expanded="false" 
+  aria-controls="collapseStep3">
+  📊 Step 3: View Results
+</button>
+</h3>
+<div id="collapseStep3" class="accordion-collapse collapse" aria-labelledby="headingStep3">
+<div class="accordion-body text-center">
+<p class="mb-4" style="color: var(--text-muted);">Ready to find deals? Click the button below to search Amazon with your filters.</p>
+<button type="submit" class="btn btn-success btn-lg fw-bold px-4 py-3" id="search-button">
+<span class="button-text">🔎 Search Amazon Now</span>
+</button>
+<p class="mt-3 small fw-bold text-warning" role="alert">
+⚠️ Using many filters may return fewer results
+</p>
+</div>
+</div>
+</div>
+
+</div> <!-- accordion -->
+
+<!-- Form Status for Screen Readers -->
+<div id="search-status" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+
+</form>
+</div>
+</div>
+</section>
+
+<!-- Problem/Solution Section -->
+<section class="container my-5">
+<h2 class="text-center fw-bold mb-4 text-danger">❌ Amazon Search Problems – Solved</h2>
+<div class="row g-4">
+<div class="col-md-4">
+<article class="card h-100 shadow-sm">
+<div class="card-body">
+<h3 class="card-title h5 text-danger">Filters don't work right</h3>
+<p style="color: var(--text-muted); font-size: 0.9rem;" class="mb-3">Amazon shows sponsored results that don't match your filters</p>
+<hr>
+<h4 class="h6 text-success fw-bold mb-2">✅ Our Solution:</h4>
+<p class="mb-0">Precision filters that actually work – find exactly what you want</p>
+</div>
+</article>
+</div>
+<div class="col-md-4">
+<article class="card h-100 shadow-sm">
+<div class="card-body">
+<h3 class="card-title h5 text-warning-emphasis">Miss deals before they expire</h3>
+<p style="color: var(--text-muted); font-size: 0.9rem;" class="mb-3">Lightning Deals disappear before you find them</p>
+<hr>
+<h4 class="h6 text-success fw-bold mb-2">✅ Our Solution:</h4>
+<p class="mb-0">Spot time-sensitive deals faster with smart filtering</p>
+</div>
+</article>
+</div>
+<div class="col-md-4">
+<article class="card h-100 shadow-sm">
+<div class="card-body">
+<h3 class="card-title h5 text-primary">Hard to find specific deals</h3>
+<p style="color: var(--text-muted); font-size: 0.9rem;" class="mb-3">Can't combine Prime + brand + coupon filters on Amazon</p>
+<hr>
+<h4 class="h6 text-success fw-bold mb-2">✅ Our Solution:</h4>
+<p class="mb-0">Stack multiple advanced filters for hyper-specific results</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- FAQ Section -->
+<section class="container my-5">
+<h2 class="fw-bold text-center mb-4">Frequently Asked Questions</h2>
+<div class="accordion" id="faqAccordion">
+<div class="accordion-item">
+<h3 class="accordion-header" id="faq1">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1-content" aria-expanded="true" aria-controls="faq1-content">
+What is Deal Shopper Pro?
+</button>
+</h3>
+<div id="faq1-content" class="accordion-collapse collapse show" aria-labelledby="faq1">
+<div class="accordion-body">
+Deal Shopper Pro is a free Amazon search tool that helps you filter deals by price, rating, Prime eligibility, coupons, and more. It's completely free and requires no signup.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h3 class="accordion-header" id="faq2">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content" aria-expanded="false" aria-controls="faq2-content">
+How do I find Prime-only deals fast?
+</button>
+</h3>
+<div id="faq2-content" class="accordion-collapse collapse" aria-labelledby="faq2">
+<div class="accordion-body">
+Simply check the "Prime Only" box in Step 2, then click "Search Amazon Now". You'll be taken directly to Prime-eligible deals on Amazon.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h3 class="accordion-header" id="faq3">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3-content" aria-expanded="false" aria-controls="faq3-content">
+Is this affiliated with Amazon?
+</button>
+</h3>
+<div id="faq3-content" class="accordion-collapse collapse" aria-labelledby="faq3">
+<div class="accordion-body">
+No, Deal Shopper Pro is an independent tool. We use Amazon's search system to help you find deals more efficiently, but we're not affiliated with or endorsed by Amazon.
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-light py-4 mt-5">
+<div class="container text-center">
+<p class="mb-2">
+<a href="/contact.html">Contact</a> • 
+<a href="/about.html">About</a> • 
+<a href="/help.html">Help</a> • 
+<a href="/privacy.html">Privacy</a> • 
+<a href="/terms.html">Terms</a>
+</p>
+<p class="small mb-2" style="color: var(--text-muted);">
+<strong>Disclaimer:</strong> Deal Shopper Pro is independent and not affiliated with Amazon.<br>
+<strong>As an Amazon Associate I earn from qualifying purchases.</strong>
+</p>
+<p class="fw-bold mb-0">© 2025 Deal Shopper Pro. All rights reserved.</p>
+</div>
+</footer>
+
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+<script>
+// Enhanced Application JavaScript
+(function() {
+  'use strict';
+  
+  // Wait for DOM to be ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+  
+  function init() {
+    initTooltips();
+    initFormHandling();
+    initAccessibility();
+    initYouTubeEmbeds();
+    initPerformanceMonitoring();
+  }
+  
+  // Initialize Bootstrap tooltips
+  function initTooltips() {
+    if (!window.bootstrap?.Tooltip) return;
+    
+    document.querySelectorAll('[title]:not([data-bs-toggle="tooltip"])').forEach(el => {
+      el.setAttribute('data-bs-toggle', 'tooltip');
+      new bootstrap.Tooltip(el, {
+        container: 'body',
+        boundary: 'window',
+        placement: 'auto'
+      });
+    });
+  }
+  
+  // Enhanced form handling
+  function initFormHandling() {
+    const form = document.getElementById('amazon-search-form');
+    const submitButton = document.getElementById('search-button');
+    const statusEl = document.getElementById('search-status');
+    
+    if (!form) return;
+    
+    // Form submission
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Add loading state
+      submitButton.classList.add('loading');
+      submitButton.disabled = true;
+      statusEl.textContent = 'Preparing your Amazon search...';
+      
+      // Get form data and build Amazon URL
+      const formData = new FormData(form);
+      const amazonUrl = buildAmazonUrl(formData);
+      
+      // Save user preferences
+      savePreferences(formData);
+      
+      // Open Amazon in new tab
+      setTimeout(() => {
+        window.open(amazonUrl, '_blank', 'noopener,noreferrer');
+        
+        // Reset button state
+        submitButton.classList.remove('loading');
+        submitButton.disabled = false;
+        statusEl.textContent = 'Search completed! Check your new tab for results.';
+        
+        // Clear status after 3 seconds
+        setTimeout(() => {
+          statusEl.textContent = '';
+        }, 3000);
+      }, 500);
+    });
+    
+    // Auto-save form state
+    const inputs = form.querySelectorAll('input, select');
+    inputs.forEach(input => {
+      input.addEventListener('change', debounce(() => {
+        savePreferences(new FormData(form));
+      }, 1000));
+    });
+    
+    // Load saved preferences
+    loadPreferences(form);
+  }
+  
+  // Build Amazon search URL
+  function buildAmazonUrl(formData) {
+    const baseUrl = 'https://www.amazon.com/s';
+    const params = new URLSearchParams();
+    
+    // Basic search
+    const query = formData.get('q');
+    if (query) params.set('k', query);
+    
+    // Price range
+    const minPrice = formData.get('min-price');
+    const maxPrice = formData.get('max-price');
+    if (minPrice) params.set('low-price', minPrice);
+    if (maxPrice) params.set('high-price', maxPrice);
+    
+    // Sort order
+    const sort = formData.get('sort');
+    if (sort && sort !== 'relevance') params.set('s', sort);
+    
+    // Rating filter
+    const minRating = formData.get('min-rating');
+    if (minRating) params.set('rh', `p_72:${minRating}STAR`);
+    
+    // Prime only
+    if (formData.get('prime-only')) {
+      params.set('rh', params.get('rh') ? params.get('rh') + ',p_85:2470955011' : 'p_85:2470955011');
+    }
+    
+    // Free shipping
+    if (formData.get('free-shipping')) {
+      params.set('rh', params.get('rh') ? params.get('rh') + ',p_76:419122011' : 'p_76:419122011');
+    }
+    
+    // Lightning deals
+    if (formData.get('lightning-deals')) {
+      params.set('rh', params.get('rh') ? params.get('rh') + ',p_36:1253503011' : 'p_36:1253503011');
+    }
+    
+    // Coupons
+    if (formData.get('coupons')) {
+      params.set('rh', params.get('rh') ? params.get('rh') + ',p_n_deal_type:14940974011' : 'p_n_deal_type:14940974011');
+    }
+    
+    // Add affiliate tag
+    params.set('tag', 'dealshopperpro-20');
+    
+    return `${baseUrl}?${params.toString()}`;
+  }
+  
+  // Save user preferences to localStorage
+  function savePreferences(formData) {
+    try {
+      const prefs = {};
+      for (const [key, value] of formData.entries()) {
+        if (value) prefs[key] = value;
+      }
+      localStorage.setItem('dsp_preferences', JSON.stringify(prefs));
+    } catch (e) {
+      console.warn('Could not save preferences:', e);
+    }
+  }
+  
+  // Load saved preferences
+  function loadPreferences(form) {
+    try {
+      const saved = localStorage.getItem('dsp_preferences');
+      if (!saved) return;
+      
+      const prefs = JSON.parse(saved);
+      Object.entries(prefs).forEach(([key, value]) => {
+        const input = form.querySelector(`[name="${key}"]`);
+        if (input) {
+          if (input.type === 'checkbox') {
+            input.checked = value === 'on';
+          } else {
+            input.value = value;
+          }
+        }
+      });
+    } catch (e) {
+      console.warn('Could not load preferences:', e);
+    }
+  }
+  
+  // Accessibility enhancements
+  function initAccessibility() {
+    // Keyboard navigation for accordions
+    document.querySelectorAll('.accordion-button').forEach(button => {
+      button.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          button.click();
+        }
+      });
+    });
+    
+    // Focus management for form steps
+    document.addEventListener('shown.bs.collapse', function(e) {
+      const firstInput = e.target.querySelector('input, select, textarea, button');
+      if (firstInput) {
+        setTimeout(() => firstInput.focus(), 100);
+      }
+    });
+    
+    // Enhanced error handling for form inputs
+    const form = document.getElementById('amazon-search-form');
+    if (form) {
+      form.addEventListener('invalid', function(e) {
+        e.preventDefault();
+        const input = e.target;
+        const errorMsg = input.validationMessage;
+        
+        // Create or update error message
+        let errorEl = document.getElementById(`${input.id}-error`);
+        if (!errorEl) {
+          errorEl = document.createElement('div');
+          errorEl.id = `${input.id}-error`;
+          errorEl.className = 'invalid-feedback d-block';
+          errorEl.setAttribute('aria-live', 'polite');
+          input.parentNode.appendChild(errorEl);
+        }
+        
+        errorEl.textContent = errorMsg;
+        input.classList.add('is-invalid');
+        input.setAttribute('aria-describedby', errorEl.id);
+        
+        // Focus the invalid input
+        input.focus();
+      }, true);
+      
+      // Clear errors on valid input
+      form.addEventListener('input', function(e) {
+        const input = e.target;
+        if (input.validity.valid && input.classList.contains('is-invalid')) {
+          input.classList.remove('is-invalid');
+          const errorEl = document.getElementById(`${input.id}-error`);
+          if (errorEl) errorEl.remove();
+        }
+      });
+    }
+  }
+  
+  // Enhanced YouTube embed with lazy loading
+  function initYouTubeEmbeds() {
+    const embeds = document.querySelectorAll('.yt-lite:not([data-initialized])');
+    
+    // Intersection Observer for lazy loading
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setupYouTubeEmbed(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '50px 0px',
+        threshold: 0.1
+      });
+      
+      embeds.forEach(embed => observer.observe(embed));
+    } else {
+      // Fallback for older browsers
+      embeds.forEach(setupYouTubeEmbed);
+    }
+    
+    function setupYouTubeEmbed(embed) {
+      const videoId = embed.dataset.id;
+      const title = embed.dataset.title || 'YouTube video';
+      
+      if (!videoId) return;
+      
+      embed.setAttribute('data-initialized', 'true');
+      embed.style.backgroundImage = `url(https://i.ytimg.com/vi/${videoId}/hqdefault.jpg)`;
+      
+      // Create play button
+      const playButton = document.createElement('button');
+      playButton.className = 'yt-play position-absolute top-50 start-50 translate-middle btn btn-link p-0 border-0';
+      playButton.innerHTML = `
+        <svg width="68" height="48" viewBox="0 0 68 48" aria-hidden="true">
+          <path fill="#f00" d="M66.5 7.0c-0.7-2.6-2.7-4.6-5.3-5.3C55.9 0 34 0 34 0s-21.9 0-27.2 1.7c-2.6.7-4.6 2.7-5.3 5.3C0 12.3 0 24 0 24s0 11.7 1.5 17.0c.7 2.6 2.7 4.6 5.3 5.3C12.1 48 34 48 34 48s21.9 0 27.2-1.7c2.6-.7 4.6-2.7 5.3-5.3C68 35.7 68 24 68 24s0-11.7-1.5-17.0z"/>
+          <path fill="#fff" d="M45 24L27 14v20z"/>
+        </svg>
+        <span class="visually-hidden">Play video: ${title}</span>
+      `;
+      
+      embed.appendChild(playButton);
+      
+      // Handle click to load iframe
+      playButton.addEventListener('click', function() {
+        if (embed.classList.contains('loaded')) return;
+        
+        embed.classList.add('loaded');
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+        iframe.title = title;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.className = 'w-100 h-100 position-absolute top-0 start-0';
+        iframe.style.border = 'none';
+        
+        embed.innerHTML = '';
+        embed.appendChild(iframe);
+      });
+    }
+  }
+  
+  // Performance monitoring
+  function initPerformanceMonitoring() {
+    // Core Web Vitals monitoring
+    if ('PerformanceObserver' in window) {
+      // Largest Contentful Paint
+      new PerformanceObserver((entryList) => {
+        const entries = entryList.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        // You could send this data to analytics
+        console.log('LCP:', lastEntry.startTime);
+      }).observe({entryTypes: ['largest-contentful-paint']});
+      
+      // First Input Delay
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          console.log('FID:', entry.processingStart - entry.startTime);
+        }
+      }).observe({entryTypes: ['first-input']});
+    }
+    
+    // Page load performance
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const perf = performance.getEntriesByType('navigation')[0];
+        const loadTime = perf.loadEventEnd - perf.loadEventStart;
+        console.log('Page load time:', loadTime, 'ms');
+        
+        // Track JavaScript errors
+        window.addEventListener('error', (e) => {
+          console.error('JavaScript error:', e.error);
+          // You could send this to error tracking service
+        });
+        
+        // Track unhandled promise rejections
+        window.addEventListener('unhandledrejection', (e) => {
+          console.error('Unhandled promise rejection:', e.reason);
+        });
+      }, 0);
+    });
+  }
+  
+  // Utility function for debouncing
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+  
+  // Enhanced audio feedback
+  function initAudioFeedback() {
+    // Preload audio files
+    const clickSound = new Audio('/click.mp3');
+    const expandSound = new Audio('/expand.mp3');
+    
+    // Set up audio with error handling
+    [clickSound, expandSound].forEach(audio => {
+      audio.preload = 'auto';
+      audio.volume = 0.1; // Subtle volume
+      audio.addEventListener('error', () => {
+        console.warn('Could not load audio file');
+      });
+    });
+    
+    // Play click sound for checkboxes
+    document.addEventListener('change', (e) => {
+      if (e.target.type === 'checkbox') {
+        playSound(clickSound);
+      }
+    });
+    
+    // Play expand sound for accordions
+    document.addEventListener('shown.bs.collapse', () => {
+      playSound(expandSound);
+    });
+    
+    function playSound(audio) {
+      if (audio.readyState >= 2) { // Can play through
+        audio.currentTime = 0;
+        audio.play().catch(() => {
+          // Silently fail if audio can't play (user hasn't interacted yet)
+        });
+      }
+    }
+  }
+  
+  // Initialize audio after user interaction
+  let audioInitialized = false;
+  document.addEventListener('click', () => {
+    if (!audioInitialized) {
+      initAudioFeedback();
+      audioInitialized = true;
+    }
+  }, { once: true });
+  
+})();
+
+// Additional CSS for YouTube embeds
+const additionalStyles = `
+<style>
+.yt-lite {
+  position: relative;
+  display: block;
+  background-color: #000;
+  aspect-ratio: 16/9;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.yt-lite:hover {
+  transform: scale(1.02);
+}
+
+.yt-lite.loaded {
+  cursor: default;
+}
+
+.yt-play svg {
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  transition: transform 0.2s ease;
+}
+
+.yt-play:hover svg {
+  transform: scale(1.1);
+}
+
+.yt-play:focus {
+  outline: 3px solid var(--bs-focus-ring-color);
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .yt-lite,
+  .yt-play svg,
+  .btn {
+    transition: none;
+    transform: none;
+  }
+  
+  .hero-title {
+    animation: none;
+    background: #cc4400;
+    -webkit-text-fill-color: initial;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .form-check {
+    border-width: 3px;
+  }
+  
+  .btn {
+    border-width: 3px;
+  }
+  
+  .form-control:focus,
+  .form-select:focus {
+    border-width: 3px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-muted: #adb5bd;
+  }
+  
+  .form-check {
+    background-color: #495057;
+    border-color: #6c757d;
+  }
+  
+  .card {
+    background-color: #2d3748;
+    border-color: #4a5568;
+  }
+}
+
+/* Print styles */
+@media print {
+  .yt-lite,
+  .btn,
+  #navbar-placeholder,
+  footer {
+    display: none !important;
+  }
+  
+  .accordion-collapse {
+    display: block !important;
+  }
+  
+  .accordion-button::after {
+    display: none;
+  }
+}
+</style>`;
+
+// Inject additional styles
+if (document.head) {
+  document.head.insertAdjacentHTML('beforeend', additionalStyles);
+} else {
+  document.addEventListener('DOMContentLoaded', () => {
+    document.head.insertAdjacentHTML('beforeend', additionalStyles);
+  });
+}
+</script>
+
+</body>
+</html>
