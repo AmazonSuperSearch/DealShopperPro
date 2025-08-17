@@ -4,28 +4,114 @@
     <a class="navbar-brand fw-bold text-warning" href="/">
       ⚡ Deal Shopper Pro
     </a>
-
-    <!-- FIXED: Added missing aria attributes -->
+    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
+    
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="/how-it-works.html">How It Works</a></li>
-        <li class="nav-item"><a class="nav-link" href="/lightning-deals.html">Lightning Deals</a></li>
-        <li class="nav-item"><a class="nav-link" href="/prime-only-deals.html">Prime‑Only Deals</a></li>
-        <li class="nav-item"><a class="nav-link" href="/find-prime-only-lightning-deals.html">Find Prime‑Only Lightning Deals</a></li>
-        <li class="nav-item"><a class="nav-link" href="/best-deals-today.html">Best Deals Today</a></li>
-        <li class="nav-item"><a class="nav-link" href="/help.html">Help</a></li>
-        <li class="nav-item"><a class="nav-link" href="/media.html">Media</a></li>
-        <li class="nav-item"><a class="nav-link" href="/press.html">Press</a></li>
-        <li class="nav-item"><a class="nav-link" href="/sitemap.html">Sitemap</a></li>
-        <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="/my-story.html">My Story</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">
+            <i class="bi bi-house-fill me-1"></i>
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/how-it-works.html">
+            <i class="bi bi-question-circle me-1"></i>
+            How It Works
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/lightning-deals.html">
+            <i class="bi bi-lightning-charge-fill me-1"></i>
+            Lightning Deals
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/prime-only-deals.html">
+            <i class="bi bi-star-fill me-1"></i>
+            Prime‑Only Deals
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/find-prime-only-lightning-deals.html">
+            <i class="bi bi-lightning-fill me-1"></i>
+            Find Prime‑Only Lightning Deals
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link position-relative" href="/best-deals-today.html">
+            <i class="bi bi-fire me-1"></i>
+            Best Deals Today
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              Hot
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/help.html">
+            <i class="bi bi-question-diamond me-1"></i>
+            Help
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/media.html">
+            <i class="bi bi-play-circle me-1"></i>
+            Media
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/press.html">
+            <i class="bi bi-newspaper me-1"></i>
+            Press
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sitemap.html">
+            <i class="bi bi-diagram-3 me-1"></i>
+            Sitemap
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact.html">
+            <i class="bi bi-envelope me-1"></i>
+            Contact
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/my-story.html">
+            <i class="bi bi-person-heart me-1"></i>
+            My Story
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<style>
+/* Hot badge animation */
+.nav-link .badge {
+  animation: pulse 2s infinite;
+  font-size: 0.6rem;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Icons for better visual hierarchy */
+.navbar-custom .nav-link i {
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.navbar-custom .nav-link:hover i {
+  transform: scale(1.1);
+  opacity: 1;
+}
+</style>
