@@ -1,34 +1,232 @@
-/* navbar.css – shared dark navbar styling */
+/* navbar.css – Bold Modern navbar styling */
 
 .navbar-custom {
-  background-color: #000 !important;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 2px 8px rgba(255, 215, 0, 0.1);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   z-index: 1030;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 215, 0, 0.05) 50%, 
+    transparent 100%);
+  pointer-events: none;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.navbar-custom .navbar-brand {
+  color: #FFD700 !important;
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-shadow: 
+    0 0 10px rgba(255, 215, 0, 0.6),
+    0 2px 4px rgba(0, 0, 0, 0.8);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 2s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.navbar-custom .navbar-brand:hover {
+  transform: scale(1.1) rotate(2deg);
+  filter: brightness(1.2);
+  text-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.8),
+    0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
 .navbar-custom .nav-link {
-  color: #ffffff !important;
-  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem !important;
+  margin: 0 0.2rem;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid transparent;
 }
 
-.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    transparent, 
+    rgba(255, 215, 0, 0.3), 
+    transparent
+  );
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-custom .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
+}
+
+.navbar-custom .nav-link:hover {
+  color: #FFD700 !important;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 25px rgba(255, 215, 0, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.navbar-custom .nav-link:hover::before {
+  left: 100%;
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 80%;
+}
+
 .navbar-custom .nav-link.active {
   color: #FFD700 !important;
+  background: linear-gradient(135deg, 
+    rgba(255, 215, 0, 0.15), 
+    rgba(255, 165, 0, 0.1));
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  box-shadow: 
+    inset 0 2px 8px rgba(255, 215, 0, 0.2),
+    0 4px 15px rgba(255, 215, 0, 0.15);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
 }
 
-.navbar-brand.text-warning {
-  color: #FFD700 !important;
+.navbar-custom .nav-link.active::after {
+  width: 90%;
+  height: 3px;
+  background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
 }
 
-.navbar-custom * {
-  color: inherit;
+.navbar-toggler {
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 12px;
+  padding: 0.4rem 0.6rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 215, 0, 0.05);
+  backdrop-filter: blur(10px);
 }
+
+.navbar-toggler:hover {
+  border-color: rgba(255, 215, 0, 0.6);
+  background: rgba(255, 215, 0, 0.1);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 
+    0 0 0 3px rgba(255, 215, 0, 0.3),
+    0 4px 15px rgba(255, 215, 0, 0.2);
+  outline: none;
+}
+
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 30 30'%3E%3Cpath stroke='%23FFD700' stroke-width='3' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  transform: rotate(180deg);
+  filter: brightness(1.2);
+}
+
+/* Mobile specific enhancements */
+@media (max-width: 991.98px) {
+  .navbar-custom .navbar-collapse {
+    background: linear-gradient(135deg, 
+      rgba(0, 0, 0, 0.95), 
+      rgba(26, 26, 46, 0.95));
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.6),
+      0 4px 12px rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+  }
+  
+  .navbar-custom .nav-link {
+    margin: 0.3rem 0;
+    text-align: center;
+  }
+  
+  .navbar-custom .nav-link:hover {
+    transform: translateX(8px) scale(1.02);
+  }
+}
+
+/* Scroll effect enhancement */
+.navbar-custom.scrolled {
+  background: linear-gradient(135deg, 
+    rgba(0, 0, 0, 0.98) 0%, 
+    rgba(26, 26, 46, 0.98) 50%, 
+    rgba(22, 33, 62, 0.98) 100%) !important;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.6),
+    0 4px 16px rgba(255, 215, 0, 0.15);
+}
+
+/* Pulsing effect for brand when page loads */
+@keyframes brandPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.navbar-custom .navbar-brand {
+  animation: brandPulse 2s ease-in-out infinite;
+}
+
+.navbar-custom .navbar-brand:hover {
+  animation: none;
 }
