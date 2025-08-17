@@ -1,0 +1,158 @@
+{/* Header */}
+        <div className="text-center py-12">
+          <div className="inline-block p-8 bg-gradient-to-br from-orange-50 to-blue-50 rounded-2xl shadow-xl">
+            <Search className="w-16 h-16 text-orange-500 mx-auto mb-4" />
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent mb-2">
+              Amazon Advanced Search
+            </h1>
+            <p className="text-gray-600">Find exactly what you're looking for</p>
+          </div>
+        </div>
+
+        {/* Search Form */}
+        <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8 mb-8">
+          <form onSubmit={handleSearch} className="space-y-6">
+            {/* Main Search */}
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Search Terms</label>
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  value={searchTerms}
+                  onChange={(e) => setSearchTerms(e.target.value)}
+                  placeholder="Enter keywords, product name, or ASIN..."
+                  className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none text-lg"
+                />
+              </div>
+            </div>
+
+            {/* Advanced Filters Grid */}
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Category */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Category</label>
+                <select 
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                  className="w-full p-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none"
+                >
+                  <option value="">All Categories</option>
+                  <option value="electronics">Electronics</option>
+                  <option value="clothing">Clothing & Accessories</option>
+                  <option value="home">Home & Kitchen</option>
+                  <option value="books">Books</option>
+                  <option value="sports">Sports & Outdoors</option>
+                  <option value="beauty">Beauty & Personal Care</option>
+                  <option value="toys">Toys & Games</option>
+                  <option value="automotive">Automotive</option>
+                </select>
+              </div>
+
+              {/* Brand */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Brand</label>
+                <input
+                  type="text"
+                  value={brand}
+                  onChange={(e) => setBrand(e.target.value)}
+                  placeholder="e.g., Apple, Nike, Samsung..."
+                  className="w-full p-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none"
+                />
+              </div>
+
+              {/* Price Range */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Price Range</label>
+                <div className="flex space-x-2">
+                  <div className="relative flex-1">
+                    <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                    <input
+                      type="number"
+                      value={minPrice}
+                      onChange={(e) => setMinPrice(e.target.value)}
+                      placeholder="Min"
+                      className="w-full pl-8 pr-3 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none"
+                    />
+                  </div>
+                  <div className="relative flex-1">
+                    <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                    <input
+                      type="number"
+                      value={maxPrice}
+                      onChange={(e) => setMaxPrice(e.target.value)}
+                      placeholder="Max"
+                      className="w-full pl-8 pr-3 py-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Rating */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Minimum Rating</label>
+                <div className="flex items-center space-x-2">
+                  <Star className="text-yellow-400 w-5 h-5" />
+                  <select 
+                    value={minRating}
+                    onChange={(e) => setMinRating(e.target.value)}
+                    className="flex-1 p-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none"
+                  >
+                    <option value="">Any Rating</option>
+                    <option value="4">4+ Stars</option>
+                    <option value="3">3+ Stars</option>
+                    <option value="2">2+ Stars</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            {/* Additional Options */}
+            <div className="space-y-4">
+              <div className="flex flex-wrap gap-4">
+                <label className="flex items-center space-x-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={primeOnly}
+                    onChange={(e) => setPrimeOnly(e.target.checked)}
+                    className="w-4 h-4 text-orange-600 border-2 border-gray-300 rounded focus:ring-orange-500"
+                  />
+                  <span className="text-sm font-medium text-gray-700">Prime Only</span>
+                </label>
+                <label className="flex items-center space-x-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={freeShipping}
+                    onChange={(e) => setFreeShipping(e.target.checked)}
+                    className="w-4 h-4 text-orange-600 border-2 border-gray-300 rounded focus:ring-orange-500"
+                  />
+                  <span className="text-sm font-medium text-gray-700">Free Shipping</span>
+                </label>
+              </div>
+
+              {/* Sort By */}
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Sort By</label>
+                <select 
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="w-full md:w-64 p-3 border-2 border-gray-200 rounded-xl focus:border-orange-400 focus:outline-none"
+                >
+                  <option value="relevance">Relevance</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Customer Rating</option>
+                  <option value="newest">Newest Arrivals</option>
+                </select>
+              </div>
+            </div>
+
+            {/* Search Button */}
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              🔍 Search Amazon
+            </button>
+          </form>
+        </div>
