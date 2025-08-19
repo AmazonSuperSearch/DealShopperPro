@@ -1555,6 +1555,16 @@ body {
     <h2 class="text-center fw-bold mb-4">Frequently Asked Questions</h2>
     
     <div class="accordion-item-mobile">
+      <button class="accordion-header-mobile" onclick="toggleAccordion('faq0')">
+        <span>Do I need to complete all 6 steps?</span>
+        <i class="bi bi-chevron-down" id="faq0-icon"></i>
+      </button>
+      <div class="accordion-body-mobile d-none" id="faq0-body">
+        No! Only Step 1 is required - you can search Amazon immediately after entering what you're looking for. Steps 2-6 are optional filters to help you find better deals. For example, if you just want Lightning Deals on electronics, simply enter "electronics" in Step 1 and check "Lightning Deals" in Step 5 - you're done!
+      </div>
+    </div>
+    
+    <div class="accordion-item-mobile">
       <button class="accordion-header-mobile" onclick="toggleAccordion('faq1')">
         <span>What is Deal Shopper Pro?</span>
         <i class="bi bi-chevron-down" id="faq1-icon"></i>
@@ -1787,8 +1797,8 @@ body {
 
       // Mobile menu toggle
       window.toggleMobileMenu = function() {
-        // Implement mobile menu if needed
-        console.log('Mobile menu toggled');
+        // This is now handled by Bootstrap's navbar collapse functionality
+        console.log('Mobile menu handled by Bootstrap');
       };
 
       // Accordion functionality
