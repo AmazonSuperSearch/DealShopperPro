@@ -1018,6 +1018,38 @@ body {
     background: #1f2937;
   }
 }
+  /* === Fix FAQ/Step header contrast in all themes === */
+.accordion-header-mobile,
+.step-header-mobile {
+  color: #111827;              /* force dark text on light header */
+}
+
+.accordion-header-mobile i,
+.step-header-mobile i {
+  color: #111827;              /* make the chevron/icons visible too */
+}
+
+/* If you visually mark open state, keep strong contrast on brand bg */
+.accordion-header-mobile.expanded,
+.step-header-mobile.expanded {
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  color: #ffffff;
+}
+.accordion-header-mobile.expanded i,
+.step-header-mobile.expanded i { color: #ffffff; }
+
+/* === Dark mode override: give headers a dark background so white text is readable === */
+@media (prefers-color-scheme: dark) {
+  .accordion-header-mobile,
+  .step-header-mobile {
+    background: #111827;       /* dark header in dark mode */
+    color: #f9fafb;            /* readable on dark background */
+    border-color: #374151;
+  }
+  .accordion-header-mobile i,
+  .step-header-mobile i { color: #f9fafb; }
+}
+
 </style>
 
   <script type="application/ld+json">
