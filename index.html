@@ -506,8 +506,13 @@ body {
 
 .checkbox-card-mobile.checked {
   border-color: var(--primary-color) !important;
-  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(99, 102, 241, 0.05)) !important;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(99, 102, 241, 0.03)) !important;
   box-shadow: var(--card-shadow-hover) !important;
+}
+
+.checkbox-card-mobile.checked .checkbox-label-mobile {
+  color: #1f2937 !important;
+  font-weight: 600;
 }
 
 .checkbox-label-mobile {
@@ -1229,64 +1234,64 @@ body {
               More Deal Types
             </div>
             <div class="checkbox-grid-mobile">
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('todaysDeals')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="todaysDeals" name="todays-deals" type="checkbox">
                 <span class="experimental-badge-mobile">NEW</span>
                 <label class="checkbox-label-mobile" for="todaysDeals">
-                  <input class="checkbox-input-mobile" id="todaysDeals" name="todays-deals" type="checkbox">
                   <i class="bi bi-fire me-2"></i>
                   Today's Deals
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('outletDeals')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="outletDeals" name="outlet-deals" type="checkbox">
                 <label class="checkbox-label-mobile" for="outletDeals">
-                  <input class="checkbox-input-mobile" id="outletDeals" name="outlet-deals" type="checkbox">
                   <i class="bi bi-shop me-2"></i>
                   Outlet Deals
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('bestSellerDeals')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="bestSellerDeals" name="best-seller-deals" type="checkbox">
                 <span class="experimental-badge-mobile">HOT</span>
                 <label class="checkbox-label-mobile" for="bestSellerDeals">
-                  <input class="checkbox-input-mobile" id="bestSellerDeals" name="best-seller-deals" type="checkbox">
                   <i class="bi bi-trophy me-2"></i>
                   Best Sellers
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('clearanceDeals')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="clearanceDeals" name="clearance-deals" type="checkbox">
                 <label class="checkbox-label-mobile" for="clearanceDeals">
-                  <input class="checkbox-input-mobile" id="clearanceDeals" name="clearance-deals" type="checkbox">
                   <i class="bi bi-cart-dash me-2"></i>
                   Clearance
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('bogoDeals')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="bogoDeals" name="bogo-deals" type="checkbox">
                 <span class="experimental-badge-mobile">BETA</span>
                 <label class="checkbox-label-mobile" for="bogoDeals">
-                  <input class="checkbox-input-mobile" id="bogoDeals" name="bogo-deals" type="checkbox">
                   <i class="bi bi-plus-circle me-2"></i>
                   Buy One Get One
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('limitedTimeDeals')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="limitedTimeDeals" name="limited-time-deals" type="checkbox">
                 <span class="experimental-badge-mobile">BETA</span>
                 <label class="checkbox-label-mobile" for="limitedTimeDeals">
-                  <input class="checkbox-input-mobile" id="limitedTimeDeals" name="limited-time-deals" type="checkbox">
                   <i class="bi bi-clock me-2"></i>
                   Limited-Time
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('flashSales')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="flashSales" name="flash-sales" type="checkbox">
                 <span class="experimental-badge-mobile">BETA</span>
                 <label class="checkbox-label-mobile" for="flashSales">
-                  <input class="checkbox-input-mobile" id="flashSales" name="flash-sales" type="checkbox">
                   <i class="bi bi-lightning me-2"></i>
                   Flash Sales
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('under25Deals')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="under25Deals" name="under-25-deals" type="checkbox">
                 <span class="experimental-badge-mobile">BETA</span>
                 <label class="checkbox-label-mobile" for="under25Deals">
-                  <input class="checkbox-input-mobile" id="under25Deals" name="under-25-deals" type="checkbox">
                   <i class="bi bi-piggy-bank me-2"></i>
                   Under $25
                 </label>
@@ -1301,31 +1306,31 @@ body {
               Shipping & Availability
             </div>
             <div class="checkbox-grid-mobile">
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('inStock')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="inStock" name="in-stock" type="checkbox">
                 <label class="checkbox-label-mobile" for="inStock">
-                  <input class="checkbox-input-mobile" id="inStock" name="in-stock" type="checkbox">
                   <i class="bi bi-box-seam me-2"></i>
                   In Stock
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('fbaOnly')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="fbaOnly" name="fba-only" type="checkbox">
                 <label class="checkbox-label-mobile" for="fbaOnly">
-                  <input class="checkbox-input-mobile" id="fbaOnly" name="fba-only" type="checkbox">
                   <i class="bi bi-box me-2"></i>
                   Fulfilled by Amazon
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('shipsFromUS')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="shipsFromUS" name="ships-from-us" type="checkbox">
                 <label class="checkbox-label-mobile" for="shipsFromUS">
-                  <input class="checkbox-input-mobile" id="shipsFromUS" name="ships-from-us" type="checkbox">
                   <i class="bi bi-flag-usa me-2"></i>
                   Ships from US
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('nextDayShipping')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="nextDayShipping" name="next-day-shipping" type="checkbox">
                 <span class="experimental-badge-mobile">BETA</span>
                 <label class="checkbox-label-mobile" for="nextDayShipping">
-                  <input class="checkbox-input-mobile" id="nextDayShipping" name="next-day-shipping" type="checkbox">
                   <i class="bi bi-rocket-takeoff me-2"></i>
                   Next-Day Shipping
                 </label>
@@ -1340,60 +1345,60 @@ body {
               Eco-Friendly & Ethical
             </div>
             <div class="checkbox-grid-mobile">
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('climatePledge')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="climatePledge" name="climate-pledge" type="checkbox">
                 <label class="checkbox-label-mobile" for="climatePledge">
-                  <input class="checkbox-input-mobile" id="climatePledge" name="climate-pledge" type="checkbox">
                   <i class="bi bi-globe-americas me-2"></i>
                   Climate Pledge
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('smallBusiness')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="smallBusiness" name="small-business" type="checkbox">
                 <label class="checkbox-label-mobile" for="smallBusiness">
-                  <input class="checkbox-input-mobile" id="smallBusiness" name="small-business" type="checkbox">
                   <i class="bi bi-shop-window me-2"></i>
                   Small Business
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('ecoFriendly')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="ecoFriendly" name="eco-friendly" type="checkbox">
                 <label class="checkbox-label-mobile" for="ecoFriendly">
-                  <input class="checkbox-input-mobile" id="ecoFriendly" name="eco-friendly" type="checkbox">
                   <i class="bi bi-recycle me-2"></i>
                   Eco-Friendly
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('organicProducts')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="organicProducts" name="organic-products" type="checkbox">
                 <label class="checkbox-label-mobile" for="organicProducts">
-                  <input class="checkbox-input-mobile" id="organicProducts" name="organic-products" type="checkbox">
                   <i class="bi bi-flower2 me-2"></i>
                   Organic
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('veganProducts')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="veganProducts" name="vegan-products" type="checkbox">
                 <label class="checkbox-label-mobile" for="veganProducts">
-                  <input class="checkbox-input-mobile" id="veganProducts" name="vegan-products" type="checkbox">
                   <i class="bi bi-heart-fill text-success me-2"></i>
                   Vegan
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('crueltyFree')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="crueltyFree" name="cruelty-free" type="checkbox">
                 <label class="checkbox-label-mobile" for="crueltyFree">
-                  <input class="checkbox-input-mobile" id="crueltyFree" name="cruelty-free" type="checkbox">
                   <i class="bi bi-shield-heart me-2"></i>
                   Cruelty-Free
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('fairTrade')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="fairTrade" name="fair-trade" type="checkbox">
                 <span class="experimental-badge-mobile">BETA</span>
                 <label class="checkbox-label-mobile" for="fairTrade">
-                  <input class="checkbox-input-mobile" id="fairTrade" name="fair-trade" type="checkbox">
                   <i class="bi bi-handshake me-2"></i>
                   Fair Trade
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('madeInUSA')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="madeInUSA" name="made-in-usa" type="checkbox">
                 <span class="experimental-badge-mobile">BETA</span>
                 <label class="checkbox-label-mobile" for="madeInUSA">
-                  <input class="checkbox-input-mobile" id="madeInUSA" name="made-in-usa" type="checkbox">
                   <i class="bi bi-flag-usa me-2"></i>
                   Made in USA
                 </label>
