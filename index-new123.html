@@ -4,376 +4,586 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 <meta content="#4f46e5" name="theme-color">
-<meta content="index, follow, max-image-preview:large" name="robots">
-<title>Advanced Amazon Search – Deal Finder | Deal Shopper Pro</title>
-<meta content="Use our advanced Amazon search tool with unique filters for Lightning Deals, Prime-only offers, hidden coupons, and more – find the best deals in seconds." name="description">
+<title>Amazon Deal Finder - Mobile Optimized</title>
+<meta content="Find Prime deals, Lightning Deals, and hidden coupons on Amazon with our mobile-optimized search tool." name="description">
 
-<!-- Bootstrap CSS -->
+<!-- CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
 <style>
+/* Mobile-First Variables */
 :root {
-  --bs-primary: #4f46e5;
-  --bs-primary-rgb: 79, 70, 229;
-  --bs-secondary: #6366f1;
-  --bs-success: #059669;
-  --bs-info: #0891b2;
-  --bs-warning: #d97706;
-  --bs-danger: #dc2626;
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-success: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --border-radius: 16px;
+  --primary-color: #4f46e5;
+  --accent-gold: #FFD700;
+  --success-color: #059669;
+  --warning-color: #f59e0b;
+  --danger-color: #dc2626;
+  --dark-bg: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%);
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
 }
 
-/* Modern navbar */
-.navbar-modern {
-  background: linear-gradient(135deg, rgba(79, 70, 229, 0.95) 0%, rgba(99, 102, 241, 0.95) 100%);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  padding: 1rem 0;
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
 }
 
-.navbar-modern .navbar-brand {
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: white !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #f9fafb;
 }
 
-.navbar-modern .nav-link {
-  color: rgba(255, 255, 255, 0.9) !important;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  padding: 0.5rem 1rem !important;
-  margin: 0 0.25rem;
+/* Mobile-Optimized Navbar */
+.navbar-mobile {
+  background: var(--dark-bg) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  padding: var(--spacing-xs) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
 }
 
-.navbar-modern .nav-link:hover {
-  color: white !important;
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-1px);
+.navbar-brand-mobile {
+  color: var(--accent-gold) !important;
+  font-weight: 800;
+  font-size: 1.25rem;
+  text-decoration: none;
 }
 
-/* Hero section */
-.hero-section {
+.nav-menu-btn {
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xs);
+  color: var(--accent-gold);
+}
+
+/* Hero Section - Mobile Optimized */
+.hero-mobile {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  padding: 4rem 0;
-  position: relative;
-  overflow: hidden;
+  padding: var(--spacing-lg) var(--spacing-sm);
+  text-align: center;
 }
 
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-  opacity: 0.3;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.glow-text {
+.hero-title {
+  font-size: 2rem;
   font-weight: 800;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-  background: linear-gradient(45deg, #fff, #e0e7ff);
+  margin-bottom: var(--spacing-sm);
+  background: linear-gradient(45deg, #FFD700, #FFA500);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Modern cards */
-.modern-card {
-  border: none;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-lg);
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-}
-
-.modern-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-xl);
-}
-
-/* Accordion improvements */
-.accordion-modern {
-  border: none;
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
-.accordion-modern .accordion-item {
-  border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.accordion-modern .accordion-button {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  border: none;
-  padding: 1.5rem;
-  font-weight: 600;
+.hero-subtitle {
   font-size: 1.1rem;
-  border-radius: 0;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.95;
+}
+
+/* Mobile Trust Badges */
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-md) 0;
+}
+
+.trust-badge {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--primary-color);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Mobile-First Form Design */
+.search-container {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  margin: var(--spacing-md) var(--spacing-sm);
+  overflow: hidden;
+}
+
+.step-card-mobile {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.step-header-mobile {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: var(--spacing-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  text-align: left;
   transition: all 0.3s ease;
 }
 
-.accordion-modern .accordion-button:not(.collapsed) {
-  background: var(--gradient-primary);
+.step-header-mobile:not(.collapsed) {
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
   color: white;
-  box-shadow: none;
 }
 
-.accordion-modern .accordion-button:focus {
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+.step-number-mobile {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--success-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.875rem;
+  flex-shrink: 0;
 }
 
-.accordion-modern .accordion-body {
-  padding: 2rem;
+.step-body-mobile {
+  padding: var(--spacing-md);
   background: white;
 }
 
-/* Form controls */
-.form-control-modern, .form-select-modern {
-  border: 2px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 0.75rem 1rem;
+/* Mobile Form Controls */
+.form-control-mobile {
+  border: 2px solid #d1d5db;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm);
   font-size: 1rem;
   transition: all 0.3s ease;
-  background: white;
+  width: 100%;
+  margin-bottom: var(--spacing-sm);
 }
 
-.form-control-modern:focus, .form-select-modern:focus {
-  border-color: var(--bs-primary);
+.form-control-mobile:focus {
+  border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
   outline: none;
 }
 
-/* Checkbox styling */
-.form-check-modern {
+.input-group-mobile {
+  display: flex;
+  margin-bottom: var(--spacing-sm);
+}
+
+.input-group-mobile .input-addon {
+  background: var(--primary-color);
+  color: white;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  border: 2px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+
+.input-group-mobile .form-control-mobile {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  margin-bottom: 0;
+  border-left: none;
+}
+
+/* Mobile Checkbox Grid */
+.checkbox-grid-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+}
+
+.checkbox-card-mobile {
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  border: 2px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 1rem;
-  margin-bottom: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
 }
 
-.form-check-modern::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.1), transparent);
-  transition: left 0.5s ease;
+.checkbox-card-mobile:hover,
+.checkbox-card-mobile.checked {
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.05), rgba(99, 102, 241, 0.02));
+  transform: translateY(-1px);
+  box-shadow: var(--card-shadow-hover);
 }
 
-.form-check-modern:hover {
-  border-color: var(--bs-primary);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.15);
-}
-
-.form-check-modern:hover::before {
-  left: 100%;
-}
-
-.form-check-input-modern {
+.checkbox-input-mobile {
   width: 1.25rem;
   height: 1.25rem;
-  border: 2px solid #cbd5e1;
+  margin-right: var(--spacing-sm);
+  accent-color: var(--primary-color);
+}
+
+.checkbox-label-mobile {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Filter Sections */
+.filter-section-mobile {
+  margin-bottom: var(--spacing-md);
+}
+
+.filter-title-mobile {
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin: 0 calc(-1 * var(--spacing-md)) var(--spacing-md);
+  font-weight: 700;
+  font-size: 1rem;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+/* Experimental Badge */
+.experimental-badge-mobile {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background: linear-gradient(45deg, var(--warning-color), #f97316);
+  color: white;
+  font-size: 0.6rem;
+  padding: 0.2rem 0.4rem;
   border-radius: 6px;
-  transition: all 0.3s ease;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 1;
 }
 
-.form-check-input-modern:checked {
-  background-color: var(--bs-primary);
-  border-color: var(--bs-primary);
-  transform: scale(1.1);
-}
-
-/* Buttons */
-.btn-modern {
-  border-radius: 12px;
-  padding: 0.875rem 2rem;
-  font-weight: 600;
-  text-transform: none;
-  transition: all 0.3s ease;
+/* Mobile Buttons */
+.btn-mobile {
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-weight: 700;
+  font-size: 1rem;
   border: none;
-  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.btn-primary-mobile {
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  color: white;
+  box-shadow: var(--card-shadow);
+}
+
+.btn-primary-mobile:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.btn-success-mobile {
+  background: linear-gradient(135deg, var(--success-color), #10b981);
+  color: white;
+  box-shadow: var(--card-shadow);
+}
+
+.btn-success-mobile:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Mobile Video Container */
+.video-container-mobile {
+  margin: var(--spacing-lg) var(--spacing-sm);
+  border-radius: var(--border-radius);
   overflow: hidden;
+  box-shadow: var(--card-shadow-hover);
 }
 
-.btn-primary-modern {
-  background: var(--gradient-primary);
-  color: white;
-  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+.yt-lite {
+  position: relative;
+  display: block;
+  background: #000;
+  aspect-ratio: 16/9;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
 }
 
-.btn-primary-modern:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
-  color: white;
+.yt-lite > .yt-play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
 }
 
-.btn-success-modern {
-  background: var(--gradient-success);
-  color: white;
-  box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
-}
-
-.btn-success-modern:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(5, 150, 105, 0.4);
-  color: white;
-}
-
-/* Feature icons */
-.feature-icon {
+.yt-lite > .yt-play::before {
+  content: "";
   width: 60px;
-  height: 60px;
-  border-radius: 16px;
-  background: var(--gradient-primary);
+  height: 42px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 48'><path fill='%23f00' d='M66.5 7.0c-0.7-2.6-2.7-4.6-5.3-5.3C55.9 0 34 0 34 0s-21.9 0-27.2 1.7c-2.6.7-4.6 2.7-5.3 5.3C0 12.3 0 24 0 24s0 11.7 1.5 17.0c.7 2.6 2.7 4.6 5.3 5.3C12.1 48 34 48 34 48s21.9 0 27.2-1.7c2.6-.7 4.6-2.7 5.3-5.3C68 35.7 68 24 68 24s0-11.7-1.5-17.0z'/%3E%3Cpath fill='%23fff' d='M45 24L27 14v20z'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+/* Mobile Features Grid */
+.features-mobile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+  margin: var(--spacing-lg) var(--spacing-sm);
+}
+
+.feature-card-mobile {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.feature-card-mobile:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.feature-icon-mobile {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--border-radius);
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  margin: 0 auto 1rem;
-  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+  margin: 0 auto var(--spacing-sm);
 }
 
-/* Trust badges */
-.trust-badge {
+/* Mobile Accordion */
+.accordion-mobile {
+  margin: var(--spacing-lg) var(--spacing-sm);
+}
+
+.accordion-item-mobile {
   background: white;
-  border-radius: 12px;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-.trust-badge:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-}
-
-/* Experimental label */
-.experimental-label {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background: linear-gradient(45deg, #f59e0b, #f97316);
-  color: white;
-  font-size: 0.7rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 6px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* Video embed */
-.video-wrapper {
   border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-sm);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
 }
 
-.video-wrapper:hover {
-  transform: scale(1.02);
-  box-shadow: var(--shadow-xl);
+.accordion-header-mobile {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: var(--spacing-md);
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Problem cards */
-.problem-card {
+.accordion-body-mobile {
+  padding: var(--spacing-md);
   background: white;
-  border: 2px solid #fee2e2;
-  border-radius: var(--border-radius);
-  padding: 2rem;
-  height: 100%;
-  transition: all 0.3s ease;
-  position: relative;
 }
 
-.problem-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #ef4444, #f97316);
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
-}
-
-.problem-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
-/* Footer */
-.footer-container {
+/* Mobile Footer */
+.footer-mobile {
   background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
   color: #d1d5db;
-  padding: 3rem 2rem;
+  padding: var(--spacing-lg) var(--spacing-sm);
+  margin-top: var(--spacing-xl);
 }
 
-.footer-container a {
-  color: #60a5fa !important;
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-links a {
+  color: #60a5fa;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: 0.875rem;
 }
 
-.footer-container a:hover {
-  color: #93c5fd !important;
+/* Mobile Share Bar */
+.share-bar-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  padding: var(--spacing-sm);
+  z-index: 1020;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile optimizations */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 2rem 0;
+.share-bar-mobile.show {
+  transform: translateY(0);
+}
+
+.share-buttons {
+  display: flex;
+  gap: var(--spacing-xs);
+  justify-content: center;
+}
+
+.share-btn {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.share-btn-success {
+  background: var(--success-color);
+  color: white;
+}
+
+.share-btn-secondary {
+  background: #6b7280;
+  color: white;
+}
+
+.share-btn-outline {
+  background: transparent;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+/* Progress Indicator */
+.progress-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-md) var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+}
+
+.progress-step-mobile {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.progress-step-mobile.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.progress-step-mobile.completed {
+  background: var(--success-color);
+  color: white;
+}
+
+/* Mobile Utilities */
+.text-center { text-align: center; }
+.text-muted { color: #6b7280; }
+.fw-bold { font-weight: 700; }
+.fw-semibold { font-weight: 600; }
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 1rem; }
+.px-3 { padding-left: 1rem; padding-right: 1rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+
+/* Show/Hide Classes */
+.d-none { display: none; }
+.d-block { display: block; }
+.d-flex { display: flex; }
+
+/* Responsive Adjustments */
+@media (min-width: 576px) {
+  .features-mobile {
+    grid-template-columns: repeat(4, 1fr);
   }
   
-  .accordion-modern .accordion-button {
-    padding: 1rem;
-    font-size: 1rem;
+  .checkbox-grid-mobile {
+    grid-template-columns: repeat(2, 1fr);
   }
   
-  .accordion-modern .accordion-body {
-    padding: 1.5rem;
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    margin: var(--spacing-lg) auto;
+    max-width: 800px;
   }
   
-  .form-check-modern {
-    padding: 0.75rem;
+  .checkbox-grid-mobile {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .share-bar-mobile {
+    display: none;
   }
 }
 
 /* Animations */
-@keyframes fadeInUp {
+@keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -381,915 +591,853 @@
   }
 }
 
-.fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
 }
 
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
+/* Touch Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .checkbox-card-mobile:hover {
+    transform: none;
+  }
+  
+  .feature-card-mobile:hover {
+    transform: none;
+  }
+  
+  .btn-primary-mobile:hover,
+  .btn-success-mobile:hover {
+    transform: none;
+  }
+}
+
+/* Focus States for Accessibility */
+.btn-mobile:focus,
+.form-control-mobile:focus,
+.checkbox-input-mobile:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #f9fafb;
+    --bg-color: #111827;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .search-container,
+  .feature-card-mobile,
+  .accordion-item-mobile {
+    background: #1f2937;
+    color: var(--text-color);
+  }
+  
+  .step-body-mobile,
+  .accordion-body-mobile {
+    background: #1f2937;
+  }
+}
 </style>
 </head>
+
 <body>
-
-<!-- Modern Navbar -->
-<nav class="navbar navbar-expand-lg navbar-modern fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <i class="bi bi-lightning-charge-fill me-2"></i>
-      Deal Shopper Pro
-    </a>
-    
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <i class="bi bi-list text-white fs-4"></i>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#search">Search</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#features">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#faq">FAQ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/help.html">Help</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact.html">Contact</a>
-        </li>
-      </ul>
+  <!-- Mobile Navigation -->
+  <nav class="navbar-mobile">
+    <div class="container-fluid px-3">
+      <div class="d-flex justify-content-between align-items-center w-100">
+        <a class="navbar-brand-mobile" href="/">
+          <i class="bi bi-lightning-charge-fill me-1"></i>
+          Deal Shopper Pro
+        </a>
+        <button class="nav-menu-btn" type="button" onclick="toggleMobileMenu()">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main style="padding-top: 100px;">
-
-<!-- Hero Section -->
-<section class="hero-section">
-  <div class="container">
-    <div class="hero-content text-center">
-      <h1 class="display-3 fw-bold glow-text mb-4 fade-in-up">
-        Amazon Deal Finder
-      </h1>
-      <p class="lead mb-4 fade-in-up stagger-1" style="font-size: 1.25rem; opacity: 0.95;">
-        Advanced Amazon Search & Coupon Finder – Stop Missing Hidden Deals
-      </p>
-      <p class="mb-5 fade-in-up stagger-2" style="font-size: 1.1rem; opacity: 0.9;">
-        Discover Prime‑Only offers, hidden discounts, and coupon‑stacked deals – fast.
-      </p>
+  <!-- Hero Section -->
+  <section class="hero-mobile">
+    <div class="animate-slide-up">
+      <h1 class="hero-title">Amazon Deal Finder</h1>
+      <p class="hero-subtitle">Find Prime deals, Lightning Deals, and hidden coupons in seconds</p>
       
-      <div class="row justify-content-center mb-4 fade-in-up stagger-3">
-        <div class="col-lg-8">
-          <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
-            <span class="badge bg-white text-primary px-3 py-2 fs-6">
-              <i class="bi bi-search me-1"></i> Smart Filters
-            </span>
-            <span class="badge bg-white text-primary px-3 py-2 fs-6">
-              <i class="bi bi-lightning-fill me-1"></i> Real Amazon Results
-            </span>
-            <span class="badge bg-white text-primary px-3 py-2 fs-6">
-              <i class="bi bi-shield-check me-1"></i> No Signup Required
-            </span>
-          </div>
-        </div>
+      <div class="trust-badges">
+        <span class="trust-badge">
+          <i class="bi bi-shield-check"></i>
+          Secure
+        </span>
+        <span class="trust-badge">
+          <i class="bi bi-person-check"></i>
+          No Signup
+        </span>
+        <span class="trust-badge">
+          <i class="bi bi-lightning-fill"></i>
+          Real Results
+        </span>
       </div>
       
-      <a href="#search" class="btn btn-modern btn-success-modern btn-lg px-5 py-3 fade-in-up stagger-3">
-        <i class="bi bi-search me-2"></i>
-        Try the Smart Amazon Search Now
+      <a href="#search-form" class="btn-mobile btn-success-mobile mt-3" onclick="scrollToForm()">
+        <i class="bi bi-search"></i>
+        Start Searching Now
       </a>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Trust Signals -->
-<section class="py-5 bg-light" id="features">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-6 col-md-3">
-        <div class="trust-badge">
-          <div class="feature-icon">
-            <i class="bi bi-shield-lock"></i>
-          </div>
-          <h6 class="fw-bold">Secure & Private</h6>
-          <p class="small text-muted mb-0">No tracking, no data collected</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="trust-badge">
-          <div class="feature-icon">
-            <i class="bi bi-person-check"></i>
-          </div>
-          <h6 class="fw-bold">No Signup</h6>
-          <p class="small text-muted mb-0">Start searching instantly</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="trust-badge">
-          <div class="feature-icon">
-            <i class="bi bi-cloud-check"></i>
-          </div>
-          <h6 class="fw-bold">Cloud-Based</h6>
-          <p class="small text-muted mb-0">Always up-to-date results</p>
-        </div>
-      </div>
-      <div class="col-6 col-md-3">
-        <div class="trust-badge">
-          <div class="feature-icon">
-            <i class="bi bi-cpu"></i>
-          </div>
-          <h6 class="fw-bold">AI-Enhanced</h6>
-          <p class="small text-muted mb-0">Smart filtering technology</p>
-        </div>
-      </div>
+  <!-- Progress Indicator -->
+  <div class="progress-mobile" id="progress-indicator">
+    <div class="progress-step-mobile active" data-step="1">1</div>
+    <div class="progress-step-mobile" data-step="2">2</div>
+    <div class="progress-step-mobile" data-step="3">3</div>
+    <div class="progress-step-mobile" data-step="4">4</div>
+    <div class="progress-step-mobile" data-step="5">5</div>
+    <div class="progress-step-mobile" data-step="6">6</div>
+  </div>
+
+  <!-- Video Demo -->
+  <div class="video-container-mobile">
+    <div class="yt-lite" data-id="wpj1l1XUunw" data-title="How to Find Amazon Deals">
+      <!-- Video will be loaded by JavaScript -->
+    </div>
+    <div class="text-center p-3">
+      <small class="text-muted">Watch: How to find Lightning Deals in 30 seconds</small>
     </div>
   </div>
-</section>
 
-<!-- Video Demo -->
-<section class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold mb-3">
-        <i class="bi bi-play-circle me-2"></i>
-        Watch: How to Filter Lightning Deals on Amazon in 30 Seconds
-      </h2>
-      <p class="text-muted">See how to instantly find Lightning Deals using Deal Shopper Pro</p>
-    </div>
-    
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="video-wrapper">
-          <div class="yt-lite rounded-3" data-id="wpj1l1XUunw" data-title="How to Filter Lightning Deals on Amazon in 30 Seconds" style="background-image: url('https://i.ytimg.com/vi/wpj1l1XUunw/hqdefault.jpg');">
-            <button class="yt-play" aria-label="Play video">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48" width="68" height="48">
-                <path fill="#f00" d="M66.5 7.0c-0.7-2.6-2.7-4.6-5.3-5.3C55.9 0 34 0 34 0s-21.9 0-27.2 1.7c-2.6.7-4.6 2.7-5.3 5.3C0 12.3 0 24 0 24s0 11.7 1.5 17.0c.7 2.6 2.7 4.6 5.3 5.3C12.1 48 34 48 34 48s21.9 0 27.2-1.7c2.6-.7 4.6-2.7 5.3-5.3C68 35.7 68 24 68 24s0-11.7-1.5-17.0z"/>
-                <path fill="#fff" d="M45 24L27 14v20z"/>
-              </svg>
+  <!-- Main Search Form -->
+  <div class="search-container" id="search-form">
+    <form id="amazon-search-form" method="get" novalidate>
+      
+      <!-- Step 1: Search -->
+      <div class="step-card-mobile">
+        <button type="button" class="step-header-mobile" data-toggle="collapse" data-target="step1">
+          <span class="step-number-mobile">1</span>
+          <div class="flex-grow-1">
+            <div class="fw-semibold">Search Products</div>
+            <small class="text-muted d-block">Enter what you're looking for</small>
+          </div>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="step-body-mobile" id="step1-body">
+          <div class="input-group-mobile">
+            <span class="input-addon">
+              <i class="bi bi-search"></i>
+            </span>
+            <input type="text" class="form-control-mobile" id="mainSearchInput" name="q" 
+                   placeholder="Search Amazon products..." autocomplete="off">
+          </div>
+          <small class="text-muted">Try: "wireless headphones", "kitchen gadgets", or "gaming mouse"</small>
+        </div>
+      </div>
+
+      <!-- Step 2: Price Range -->
+      <div class="step-card-mobile">
+        <button type="button" class="step-header-mobile collapsed" data-toggle="collapse" data-target="step2">
+          <span class="step-number-mobile">2</span>
+          <div class="flex-grow-1">
+            <div class="fw-semibold">Price Range</div>
+            <small class="text-muted d-block">Set your budget</small>
+          </div>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="step-body-mobile d-none" id="step2-body">
+          <div class="row">
+            <div class="col-6">
+              <label class="form-label fw-semibold">Min Price</label>
+              <div class="input-group-mobile">
+                <span class="input-addon">$</span>
+                <input type="number" class="form-control-mobile" id="minPrice" name="min-price" 
+                       placeholder="10" step="0.01">
+              </div>
+            </div>
+            <div class="col-6">
+              <label class="form-label fw-semibold">Max Price</label>
+              <div class="input-group-mobile">
+                <span class="input-addon">$</span>
+                <input type="number" class="form-control-mobile" id="maxPrice" name="max-price" 
+                       placeholder="100" step="0.01">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Quick Filters -->
+      <div class="step-card-mobile">
+        <button type="button" class="step-header-mobile collapsed" data-toggle="collapse" data-target="step3">
+          <span class="step-number-mobile">3</span>
+          <div class="flex-grow-1">
+            <div class="fw-semibold">Quick Filters</div>
+            <small class="text-muted d-block">Rating, discount, sort order</small>
+          </div>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="step-body-mobile d-none" id="step3-body">
+          <label class="form-label fw-semibold">Sort By</label>
+          <select class="form-control-mobile" id="sortOrder" name="sort">
+            <option value="relevance">Best Match</option>
+            <option value="price-asc-rank">Price: Low to High</option>
+            <option value="price-desc-rank">Price: High to Low</option>
+            <option value="review-rank">Customer Reviews</option>
+            <option value="date-desc-rank">Newest</option>
+          </select>
+          
+          <label class="form-label fw-semibold">Minimum Rating</label>
+          <select class="form-control-mobile" id="minRating" name="min-rating">
+            <option value="">Any Rating</option>
+            <option value="4">4+ Stars</option>
+            <option value="3">3+ Stars</option>
+          </select>
+          
+          <label class="form-label fw-semibold">Minimum Discount</label>
+          <select class="form-control-mobile" id="minDiscount" name="min-discount">
+            <option value="">Any Discount</option>
+            <option value="10">10%+</option>
+            <option value="20">20%+</option>
+            <option value="30">30%+</option>
+            <option value="50">50%+</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Step 4: Brand Filter -->
+      <div class="step-card-mobile">
+        <button type="button" class="step-header-mobile collapsed" data-toggle="collapse" data-target="step4">
+          <span class="step-number-mobile">4</span>
+          <div class="flex-grow-1">
+            <div class="fw-semibold">Brand Filter</div>
+            <small class="text-muted d-block">Filter by specific brands</small>
+          </div>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="step-body-mobile d-none" id="step4-body">
+          <label class="form-label fw-semibold">Include Brands</label>
+          <input type="text" class="form-control-mobile" id="brandInclude" name="brand-include" 
+                 placeholder="e.g. Apple, Samsung, Nike">
+          <small class="text-muted">Separate multiple brands with commas</small>
+        </div>
+      </div>
+
+      <!-- Step 5: Deal Filters -->
+      <div class="step-card-mobile">
+        <button type="button" class="step-header-mobile collapsed" data-toggle="collapse" data-target="step5">
+          <span class="step-number-mobile">5</span>
+          <div class="flex-grow-1">
+            <div class="fw-semibold">Deal Filters</div>
+            <small class="text-muted d-block">Prime, Lightning Deals, Coupons</small>
+          </div>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="step-body-mobile d-none" id="step5-body">
+          
+          <!-- Popular Deals -->
+          <div class="filter-section-mobile">
+            <div class="filter-title-mobile">
+              <i class="bi bi-lightning-fill"></i>
+              Popular Deals
+            </div>
+            <div class="checkbox-grid-mobile">
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('primeOnly')">
+                <label class="checkbox-label-mobile" for="primeOnly">
+                  <input class="checkbox-input-mobile" id="primeOnly" name="prime-only" type="checkbox">
+                  <i class="bi bi-star-fill text-warning me-2"></i>
+                  Prime Only
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('lightningDeals')">
+                <label class="checkbox-label-mobile" for="lightningDeals">
+                  <input class="checkbox-input-mobile" id="lightningDeals" name="lightning-deals" type="checkbox">
+                  <i class="bi bi-lightning-charge-fill text-warning me-2"></i>
+                  Lightning Deals
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('coupons')">
+                <label class="checkbox-label-mobile" for="coupons">
+                  <input class="checkbox-input-mobile" id="coupons" name="coupons" type="checkbox">
+                  <i class="bi bi-ticket-perforated me-2"></i>
+                  Coupons
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('freeShipping')">
+                <label class="checkbox-label-mobile" for="freeShipping">
+                  <input class="checkbox-input-mobile" id="freeShipping" name="free-shipping" type="checkbox">
+                  <i class="bi bi-truck me-2"></i>
+                  Free Shipping
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- More Deal Types -->
+          <div class="filter-section-mobile">
+            <div class="filter-title-mobile">
+              <i class="bi bi-fire"></i>
+              More Deal Types
+            </div>
+            <div class="checkbox-grid-mobile">
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('todaysDeals')">
+                <span class="experimental-badge-mobile">NEW</span>
+                <label class="checkbox-label-mobile" for="todaysDeals">
+                  <input class="checkbox-input-mobile" id="todaysDeals" name="todays-deals" type="checkbox">
+                  <i class="bi bi-fire me-2"></i>
+                  Today's Deals
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('outletDeals')">
+                <label class="checkbox-label-mobile" for="outletDeals">
+                  <input class="checkbox-input-mobile" id="outletDeals" name="outlet-deals" type="checkbox">
+                  <i class="bi bi-shop me-2"></i>
+                  Outlet Deals
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('bestSellerDeals')">
+                <span class="experimental-badge-mobile">HOT</span>
+                <label class="checkbox-label-mobile" for="bestSellerDeals">
+                  <input class="checkbox-input-mobile" id="bestSellerDeals" name="best-seller-deals" type="checkbox">
+                  <i class="bi bi-trophy me-2"></i>
+                  Best Sellers
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('clearanceDeals')">
+                <label class="checkbox-label-mobile" for="clearanceDeals">
+                  <input class="checkbox-input-mobile" id="clearanceDeals" name="clearance-deals" type="checkbox">
+                  <i class="bi bi-cart-dash me-2"></i>
+                  Clearance
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipping & Stock -->
+          <div class="filter-section-mobile">
+            <div class="filter-title-mobile">
+              <i class="bi bi-box-seam"></i>
+              Shipping & Stock
+            </div>
+            <div class="checkbox-grid-mobile">
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('inStock')">
+                <label class="checkbox-label-mobile" for="inStock">
+                  <input class="checkbox-input-mobile" id="inStock" name="in-stock" type="checkbox">
+                  <i class="bi bi-box-seam me-2"></i>
+                  In Stock
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('fbaOnly')">
+                <label class="checkbox-label-mobile" for="fbaOnly">
+                  <input class="checkbox-input-mobile" id="fbaOnly" name="fba-only" type="checkbox">
+                  <i class="bi bi-box me-2"></i>
+                  Fulfilled by Amazon
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Eco-Friendly -->
+          <div class="filter-section-mobile">
+            <div class="filter-title-mobile">
+              <i class="bi bi-leaf"></i>
+              Eco-Friendly
+            </div>
+            <div class="checkbox-grid-mobile">
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('climatePledge')">
+                <label class="checkbox-label-mobile" for="climatePledge">
+                  <input class="checkbox-input-mobile" id="climatePledge" name="climate-pledge" type="checkbox">
+                  <i class="bi bi-globe-americas me-2"></i>
+                  Climate Pledge
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('smallBusiness')">
+                <label class="checkbox-label-mobile" for="smallBusiness">
+                  <input class="checkbox-input-mobile" id="smallBusiness" name="small-business" type="checkbox">
+                  <i class="bi bi-shop-window me-2"></i>
+                  Small Business
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 6: Submit -->
+      <div class="step-card-mobile">
+        <button type="button" class="step-header-mobile collapsed" data-toggle="collapse" data-target="step6">
+          <span class="step-number-mobile">6</span>
+          <div class="flex-grow-1">
+            <div class="fw-semibold">Search Amazon</div>
+            <small class="text-muted d-block">Get your filtered results</small>
+          </div>
+          <i class="bi bi-chevron-down"></i>
+        </button>
+        <div class="step-body-mobile d-none" id="step6-body">
+          <div class="text-center">
+            <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
+            <h4 class="fw-bold mt-3 mb-3">Ready to Search!</h4>
+            <p class="text-muted mb-4">Click below to see your filtered Amazon results</p>
+            <button type="submit" class="btn-mobile btn-primary-mobile">
+              <i class="bi bi-search"></i>
+              Search Amazon Now
             </button>
           </div>
         </div>
-        <p class="text-center text-muted small mt-3">
-          <em>Deal Shopper Pro is an independent tool and is not affiliated with Amazon.</em>
-        </p>
       </div>
+
+    </form>
+  </div>
+
+  <!-- Features Grid -->
+  <div class="features-mobile">
+    <div class="feature-card-mobile">
+      <div class="feature-icon-mobile">
+        <i class="bi bi-shield-lock"></i>
+      </div>
+      <h6 class="fw-bold mb-1">Secure</h6>
+      <small class="text-muted">No tracking</small>
+    </div>
+    <div class="feature-card-mobile">
+      <div class="feature-icon-mobile">
+        <i class="bi bi-person-check"></i>
+      </div>
+      <h6 class="fw-bold mb-1">No Signup</h6>
+      <small class="text-muted">Start instantly</small>
+    </div>
+    <div class="feature-card-mobile">
+      <div class="feature-icon-mobile">
+        <i class="bi bi-lightning-fill"></i>
+      </div>
+      <h6 class="fw-bold mb-1">Fast Results</h6>
+      <small class="text-muted">Real Amazon data</small>
+    </div>
+    <div class="feature-card-mobile">
+      <div class="feature-icon-mobile">
+        <i class="bi bi-cpu"></i>
+      </div>
+      <h6 class="fw-bold mb-1">Smart Filters</h6>
+      <small class="text-muted">AI-enhanced</small>
     </div>
   </div>
-</section>
 
-<!-- Main Search Form -->
-<section class="py-5 bg-light" id="search">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        
-        <div class="text-center mb-5">
-          <h2 class="fw-bold text-primary mb-3">Advanced Amazon Search – 6 Steps to Find Deals & Coupons</h2>
-          <p class="text-muted mb-3">
-            Use as many filters as you like – <strong>Prime</strong>, <strong>Lightning Deals</strong>, brand, rating, coupons, and more – to uncover exactly what you want.
-          </p>
-          <div class="badge bg-success text-white px-3 py-2">
-            <i class="bi bi-check-circle me-1"></i>
-            Real Amazon search • No extensions • No signup
-          </div>
-        </div>
-
-        <form id="amazon-search-form" method="get" novalidate>
-          <div class="accordion accordion-modern" id="filterAccordion">
-            
-            <!-- Step 1: Search -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingStep1">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep1" aria-expanded="true">
-                  <i class="bi bi-search me-2"></i>
-                  <span class="badge bg-success me-2">1</span>
-                  Start Your Product Search
-                </button>
-              </h2>
-              <div id="collapseStep1" class="accordion-collapse collapse show">
-                <div class="accordion-body">
-                  <div class="input-group input-group-lg">
-                    <span class="input-group-text bg-primary text-white">
-                      <i class="bi bi-search"></i>
-                    </span>
-                    <input type="text" class="form-control form-control-modern" id="mainSearchInput" name="q" 
-                           placeholder="Search Amazon: Keyword, ASIN, ISBN, or UPC" autocomplete="off">
-                  </div>
-                  <div class="form-text">Try searching for products, brands, or specific item codes</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 2: Price Range -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingStep2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep2">
-                  <i class="bi bi-currency-dollar me-2"></i>
-                  <span class="badge bg-warning me-2">2</span>
-                  Set Your Price Range
-                </button>
-              </h2>
-              <div id="collapseStep2" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <div class="row g-4">
-                    <div class="col-md-4">
-                      <label class="form-label fw-semibold">Currency</label>
-                      <select class="form-select form-select-modern" id="currencySelect" name="currency">
-                        <option value="usd" selected>USD ($)</option>
-                        <option value="eur">EUR (€)</option>
-                        <option value="gbp">GBP (£)</option>
-                        <option value="jpy">JPY (¥)</option>
-                        <option value="inr">INR (₹)</option>
-                      </select>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="form-label fw-semibold">Min Price</label>
-                      <div class="input-group">
-                        <span class="input-group-text">$</span>
-                        <input type="number" class="form-control form-control-modern" id="minPrice" name="min-price" 
-                               placeholder="e.g. 10" step="0.01">
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="form-label fw-semibold">Max Price</label>
-                      <div class="input-group">
-                        <span class="input-group-text">$</span>
-                        <input type="number" class="form-control form-control-modern" id="maxPrice" name="max-price" 
-                               placeholder="e.g. 100" step="0.01">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 3: Sort & Filters -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingStep3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep3">
-                  <i class="bi bi-funnel me-2"></i>
-                  <span class="badge bg-info me-2">3</span>
-                  Sort, Rating & Discount Filters
-                </button>
-              </h2>
-              <div id="collapseStep3" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <div class="row g-4">
-                    <div class="col-md-4">
-                      <label class="form-label fw-semibold">Sort Results</label>
-                      <select class="form-select form-select-modern" id="sortOrder" name="sort">
-                        <option value="relevance">Relevance</option>
-                        <option value="price-asc-rank">Price: Low to High</option>
-                        <option value="price-desc-rank">Price: High to Low</option>
-                        <option value="review-rank">Customer Reviews</option>
-                        <option value="date-desc-rank">Newest Arrivals</option>
-                      </select>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="form-label fw-semibold">Minimum Rating</label>
-                      <select class="form-select form-select-modern" id="minRating" name="min-rating">
-                        <option value="">Any Rating</option>
-                        <option value="1">1 star & up</option>
-                        <option value="2">2 stars & up</option>
-                        <option value="3">3 stars & up</option>
-                        <option value="4">4 stars & up</option>
-                        <option value="5">5 stars only</option>
-                      </select>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="form-label fw-semibold">Minimum Discount</label>
-                      <select class="form-select form-select-modern" id="min-discount" name="min-discount">
-                        <option value="">Any Discount</option>
-                        <option value="5">5%+</option>
-                        <option value="10">10%+</option>
-                        <option value="15">15%+</option>
-                        <option value="20">20%+</option>
-                        <option value="25">25%+</option>
-                        <option value="30">30%+</option>
-                        <option value="40">40%+</option>
-                        <option value="50">50%+</option>
-                        <option value="75">75%+</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 4: Brand Filter -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingStep4">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep4">
-                  <i class="bi bi-tag me-2"></i>
-                  <span class="badge bg-secondary me-2">4</span>
-                  Filter by Brand
-                </button>
-              </h2>
-              <div id="collapseStep4" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <label class="form-label fw-semibold">Brand(s) to include</label>
-                  <input type="text" class="form-control form-control-modern" id="brand-include" name="brand-include" 
-                         placeholder="e.g. Nike, Samsung, Apple">
-                  <div class="form-text">You can enter multiple brands separated by commas</div>
-                  
-                  <div class="form-check-modern mt-3">
-                    <input class="form-check-input form-check-input-modern" type="checkbox" id="include-only" name="include-only">
-                    <label class="form-check-label fw-medium" for="include-only">
-                      Only include results from these brands
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 5: Extra Filters -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingStep5">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep5">
-                  <i class="bi bi-lightning-charge me-2"></i>
-                  <span class="badge bg-danger me-2">5</span>
-                  Extra Filters & Deals, Deals, Deals!
-                </button>
-              </h2>
-              <div id="collapseStep5" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <p class="text-muted mb-4">Prime-eligible, Lightning Deals, Free Shipping, In Stock, Eco-Friendly, Coupons, and more.</p>
-
-                  <div class="row g-4">
-                    
-                    <!-- Shipping & Availability -->
-                    <div class="col-lg-6">
-                      <div class="modern-card p-4">
-                        <h5 class="fw-bold mb-3 text-primary">
-                          <i class="bi bi-truck me-2"></i>
-                          Shipping & Availability
-                        </h5>
-                        
-                        <div class="form-check-modern position-relative">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="primeOnly" name="prime-only">
-                          <label class="form-check-label fw-medium" for="primeOnly">
-                            <i class="bi bi-star-fill text-warning me-2"></i>
-                            Prime Only
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="freeShipping" name="free-shipping">
-                          <label class="form-check-label fw-medium" for="freeShipping">
-                            <i class="bi bi-truck me-2"></i>
-                            Free Shipping
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="inStock" name="in-stock">
-                          <label class="form-check-label fw-medium" for="inStock">
-                            <i class="bi bi-box-seam me-2"></i>
-                            In Stock
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="fbaOnly" name="fba-only">
-                          <label class="form-check-label fw-medium" for="fbaOnly">
-                            <i class="bi bi-box me-2"></i>
-                            Fulfilled by Amazon (FBA)
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="shipsFromUS" name="ships-from-us">
-                          <label class="form-check-label fw-medium" for="shipsFromUS">
-                            <i class="bi bi-flag-usa me-2"></i>
-                            Ships from United States
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Deals & Discounts -->
-                    <div class="col-lg-6">
-                      <div class="modern-card p-4">
-                        <h5 class="fw-bold mb-3 text-danger">
-                          <i class="bi bi-lightning-fill me-2"></i>
-                          Deals & Discounts
-                        </h5>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="lightningDeals" name="lightning-deals">
-                          <label class="form-check-label fw-medium" for="lightningDeals">
-                            <i class="bi bi-lightning-charge-fill text-warning me-2"></i>
-                            Lightning Deals
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="coupons" name="coupons">
-                          <label class="form-check-label fw-medium" for="coupons">
-                            <i class="bi bi-ticket-perforated me-2"></i>
-                            Coupons
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="outletDeals" name="outlet-deals">
-                          <label class="form-check-label fw-medium" for="outletDeals">
-                            <i class="bi bi-shop me-2"></i>
-                            Amazon Outlet Deals
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="amazon-brands" name="amazon-brands">
-                          <label class="form-check-label fw-medium" for="amazon-brands">
-                            <i class="bi bi-award me-2"></i>
-                            Amazon Brands
-                          </label>
-                        </div>
-                        
-                        <!-- Experimental Deals -->
-                        <div class="mt-3">
-                          <div class="d-flex align-items-center mb-2">
-                            <small class="text-warning fw-bold">
-                              <i class="bi bi-exclamation-triangle me-1"></i>
-                              Experimental Features
-                            </small>
-                          </div>
-                          
-                          <div class="form-check-modern position-relative">
-                            <span class="experimental-label">BETA</span>
-                            <input class="form-check-input form-check-input-modern experimental" type="checkbox" id="todaysDeals" name="todays-deals">
-                            <label class="form-check-label fw-medium" for="todaysDeals">
-                              <i class="bi bi-fire me-2"></i>
-                              Today's Deals
-                            </label>
-                          </div>
-                          
-                          <div class="form-check-modern position-relative">
-                            <span class="experimental-label">BETA</span>
-                            <input class="form-check-input form-check-input-modern experimental" type="checkbox" id="bestSellerDeals" name="best-seller-deals">
-                            <label class="form-check-label fw-medium" for="bestSellerDeals">
-                              <i class="bi bi-trophy me-2"></i>
-                              Best Seller Deals
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Eco & Ethical -->
-                    <div class="col-lg-6">
-                      <div class="modern-card p-4">
-                        <h5 class="fw-bold mb-3 text-success">
-                          <i class="bi bi-leaf me-2"></i>
-                          Eco & Ethical
-                        </h5>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="ecoFriendlyToggle" name="eco-friendly">
-                          <label class="form-check-label fw-medium" for="ecoFriendlyToggle">
-                            <i class="bi bi-recycle me-2"></i>
-                            Eco-Friendly
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="veganProducts" name="vegan-products">
-                          <label class="form-check-label fw-medium" for="veganProducts">
-                            <i class="bi bi-heart-fill text-success me-2"></i>
-                            Vegan
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="organicProducts" name="organic-products">
-                          <label class="form-check-label fw-medium" for="organicProducts">
-                            <i class="bi bi-flower1 me-2"></i>
-                            Organic
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="crueltyFreeToggle" name="cruelty-free">
-                          <label class="form-check-label fw-medium" for="crueltyFreeToggle">
-                            <i class="bi bi-shield-heart me-2"></i>
-                            Cruelty-Free
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="climate-pledge" name="climate-pledge">
-                          <label class="form-check-label fw-medium" for="climate-pledge">
-                            <i class="bi bi-globe-americas me-2"></i>
-                            Climate Pledge Picks
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Special Categories -->
-                    <div class="col-lg-6">
-                      <div class="modern-card p-4">
-                        <h5 class="fw-bold mb-3 text-info">
-                          <i class="bi bi-star me-2"></i>
-                          Special Categories
-                        </h5>
-                        
-                        <div class="form-check-modern">
-                          <input class="form-check-input form-check-input-modern" type="checkbox" id="smallBusiness" name="small-business">
-                          <label class="form-check-label fw-medium" for="smallBusiness">
-                            <i class="bi bi-shop-window me-2"></i>
-                            Small Business
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern position-relative">
-                          <span class="experimental-label">BETA</span>
-                          <input class="form-check-input form-check-input-modern experimental" type="checkbox" id="new-release" name="new-release">
-                          <label class="form-check-label fw-medium" for="new-release">
-                            <i class="bi bi-stars me-2"></i>
-                            Just Released
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern position-relative">
-                          <span class="experimental-label">BETA</span>
-                          <input class="form-check-input form-check-input-modern experimental" type="checkbox" id="trending-now" name="trending-now">
-                          <label class="form-check-label fw-medium" for="trending-now">
-                            <i class="bi bi-graph-up-arrow me-2"></i>
-                            Trending Now
-                          </label>
-                        </div>
-                        
-                        <div class="form-check-modern position-relative">
-                          <span class="experimental-label">BETA</span>
-                          <input class="form-check-input form-check-input-modern experimental" type="checkbox" id="budget-essentials" name="budget-essentials">
-                          <label class="form-check-label fw-medium" for="budget-essentials">
-                            <i class="bi bi-piggy-bank me-2"></i>
-                            Budget Essentials
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Gift Ideas -->
-                    <div class="col-12">
-                      <div class="modern-card p-4">
-                        <h5 class="fw-bold mb-3 text-purple">
-                          <i class="bi bi-gift me-2"></i>
-                          Gift Ideas
-                        </h5>
-                        
-                        <div class="row g-3">
-                          <div class="col-md-4">
-                            <div class="form-check-modern position-relative">
-                              <span class="experimental-label">BETA</span>
-                              <input class="form-check-input form-check-input-modern experimental" type="checkbox" id="giftsForHer" name="gifts-for-her">
-                              <label class="form-check-label fw-medium" for="giftsForHer">
-                                <i class="bi bi-heart me-2"></i>
-                                Gifts for Her
-                              </label>
-                            </div>
-                          </div>
-                          
-                          <div class="col-md-4">
-                            <div class="form-check-modern position-relative">
-                              <span class="experimental-label">BETA</span>
-                              <input class="form-check-input form-check-input-modern experimental" type="checkbox" id="giftsForHim" name="gifts-for-him">
-                              <label class="form-check-label fw-medium" for="giftsForHim">
-                                <i class="bi bi-person me-2"></i>
-                                Gifts for Him
-                              </label>
-                            </div>
-                          </div>
-                          
-                          <div class="col-md-4">
-                            <div class="form-check-modern position-relative">
-                              <span class="experimental-label">BETA</span>
-                              <input class="form-check-input form-check-input-modern experimental" type="checkbox" id="giftsForKids" name="gifts-for-kids">
-                              <label class="form-check-label fw-medium" for="giftsForKids">
-                                <i class="bi bi-balloon me-2"></i>
-                                Gifts for Kids
-                              </label>
-                            </div>
-                          </div>
-                          
-                          <div class="col-md-4">
-                            <div class="form-check-modern position-relative">
-                              <span class="experimental-label">BETA</span>
-                              <input class="form-check-input form-check-input-modern experimental" type="checkbox" id="birthdayGifts" name="birthday-gifts">
-                              <label class="form-check-label fw-medium" for="birthdayGifts">
-                                <i class="bi bi-cake2 me-2"></i>
-                                Birthday Gifts
-                              </label>
-                            </div>
-                          </div>
-                          
-                          <div class="col-md-4">
-                            <div class="form-check-modern position-relative">
-                              <span class="experimental-label">BETA</span>
-                              <input class="form-check-input form-check-input-modern experimental" type="checkbox" id="holidayGiftPicks" name="holiday-gift-picks">
-                              <label class="form-check-label fw-medium" for="holidayGiftPicks">
-                                <i class="bi bi-tree me-2"></i>
-                                Holiday Gift Picks
-                              </label>
-                            </div>
-                          </div>
-                          
-                          <div class="col-md-4">
-                            <div class="form-check-modern position-relative">
-                              <span class="experimental-label">BETA</span>
-                              <input class="form-check-input form-check-input-modern experimental" type="checkbox" id="giftUnder25" name="giftUnder25">
-                              <label class="form-check-label fw-medium" for="giftUnder25">
-                                <i class="bi bi-currency-dollar me-2"></i>
-                                Gifts Under $25
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 6: View Results -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingStep6">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStep6">
-                  <i class="bi bi-graph-up me-2"></i>
-                  <span class="badge bg-success me-2">6</span>
-                  View Results on Amazon
-                </button>
-              </h2>
-              <div id="collapseStep6" class="accordion-collapse collapse">
-                <div class="accordion-body text-center">
-                  <div class="mb-4">
-                    <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
-                  </div>
-                  <h4 class="fw-bold mb-3">You're Ready!</h4>
-                  <p class="text-muted mb-4">Click the "Search Amazon Now" button below to see matching results on Amazon.</p>
-                  
-                  <button type="submit" class="btn btn-modern btn-success-modern btn-lg px-5 py-3">
-                    <i class="bi bi-search me-2"></i>
-                    Search Amazon Now
-                  </button>
-                  
-                  <div class="alert alert-warning mt-4" role="alert">
-                    <i class="bi bi-exclamation-triangle me-2"></i>
-                    <strong>Pro Tip:</strong> Too many filters may return no results. Start with fewer filters and add more as needed.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Problem/Solution Section -->
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-5 text-danger">Amazon Filters Not Working? – Try Our Advanced Amazon Search & Coupon Finder</h2>
+  <!-- FAQ Section -->
+  <div class="accordion-mobile">
+    <h2 class="text-center fw-bold mb-4">Frequently Asked Questions</h2>
     
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="problem-card">
-          <div class="text-center mb-3">
-            <i class="bi bi-x-circle-fill text-danger" style="font-size: 2.5rem;"></i>
-          </div>
-          <h4 class="fw-bold text-danger mb-3">Amazon filters don't work right</h4>
-          <p class="text-muted mb-3">They often show sponsored or irrelevant results, wasting your time.</p>
-          <hr>
-          <h6 class="text-success fw-bold mb-2">
-            <i class="bi bi-check-circle me-1"></i>
-            Your Solution:
-          </h6>
-          <p class="mb-0">Use precision filters for Prime-only, in-stock, discounted, or coupon-backed items – instantly.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-        <div class="problem-card">
-          <div class="text-center mb-3">
-            <i class="bi bi-clock-fill text-warning" style="font-size: 2.5rem;"></i>
-          </div>
-          <h4 class="fw-bold text-warning mb-3">You miss deals before they expire</h4>
-          <p class="text-muted mb-3">Lightning Deals, BOGO offers, and coupons disappear before you find them.</p>
-          <hr>
-          <h6 class="text-success fw-bold mb-2">
-            <i class="bi bi-check-circle me-1"></i>
-            Your Solution:
-          </h6>
-          <p class="mb-0">Spot live, time-sensitive deals faster – no need to refresh Amazon pages manually.</p>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-        <div class="problem-card">
-          <div class="text-center mb-3">
-            <i class="bi bi-search text-info" style="font-size: 2.5rem;"></i>
-          </div>
-          <h4 class="fw-bold text-info mb-3">It's hard to find exactly what you want</h4>
-          <p class="text-muted mb-3">You can't combine filters like Prime, brand, coupon, and rating in Amazon search.</p>
-          <hr>
-          <h6 class="text-success fw-bold mb-2">
-            <i class="bi bi-check-circle me-1"></i>
-            Your Solution:
-          </h6>
-          <p class="mb-0">Our guided form lets you stack advanced filters for hyper-specific results – in seconds.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA Section -->
-<section class="py-5 bg-primary text-white">
-  <div class="container text-center">
-    <h2 class="fw-bold mb-3">Amazon Coupon Finder – Filter by Prime, Deals & More</h2>
-    <p class="lead mb-4">Find Prime-only discounts, Lightning Deals, hidden coupons, and more with a single search.</p>
-    <a href="#search" class="btn btn-modern btn-success-modern btn-lg px-5">
-      <i class="bi bi-search me-2"></i>
-      Find Amazon Deals Now
-    </a>
-  </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="py-5 bg-light" id="faq">
-  <div class="container">
-    <h2 class="fw-bold text-center mb-5">Frequently Asked Questions</h2>
-    
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="accordion accordion-modern" id="faqAccordion">
-          
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-q1">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a1" aria-expanded="true">
-                What is Deal Shopper Pro Amazon deal finder?
-              </button>
-            </h3>
-            <div id="faq-a1" class="accordion-collapse collapse show">
-              <div class="accordion-body">
-                Deal Shopper Pro is a free Amazon deal search tool that helps you filter by price, rating, Prime, coupons, and more.
-              </div>
-            </div>
-          </div>
-          
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-q2">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a2">
-                How do I find Prime‑only deals on Amazon fast?
-              </button>
-            </h3>
-            <div id="faq-a2" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Use the 'Extra Filters' section and check the 'Prime Only' box. Then submit your search to open Prime‑eligible deals directly on Amazon.
-              </div>
-            </div>
-          </div>
-          
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-q3">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a3">
-                How does the advanced Amazon search work?
-              </button>
-            </h3>
-            <div id="faq-a3" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Yes. Use the 6‑step guided search form to combine multiple filters including price, brand, ratings, and special deals like Lightning Deals or coupons.
-              </div>
-            </div>
-          </div>
-          
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-q4">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a4">
-                Does the Amazon coupon finder work with all Amazon coupons?
-              </button>
-            </h3>
-            <div id="faq-a4" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                Yes. Our advanced filters can reveal hidden discounts like coupons, Lightning Deals, Subscribe & Save deals, and limited‑time offers that don't show up in standard Amazon searches.
-              </div>
-            </div>
-          </div>
-          
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-q5">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-a5">
-                Is Deal Shopper Pro affiliated with Amazon?
-              </button>
-            </h3>
-            <div id="faq-a5" class="accordion-collapse collapse">
-              <div class="accordion-body">
-                No. Deal Shopper Pro is an independent site that uses the Amazon Associates API to help users find products more efficiently. We are not affiliated with or endorsed by Amazon.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Share Section -->
-<section class="py-5">
-  <div class="container text-center">
-    <h2 class="fw-bold mb-3">Share with Friends</h2>
-    <p class="text-muted mb-4">Send this to someone who needs smarter Amazon filters:</p>
-    
-    <div class="d-flex flex-wrap justify-content-center gap-3">
-      <a href="https://wa.me/?text=Check%20out%20this%20free%20Amazon%20deal%20filter%3A%20https%3A%2F%2Fwww.dealshopperpro.com" 
-         class="btn btn-modern btn-success-modern" target="_blank" rel="noopener">
-        <i class="bi bi-whatsapp me-2"></i>
-        WhatsApp
-      </a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dealshopperpro.com" 
-         class="btn btn-modern btn-primary-modern" target="_blank" rel="noopener">
-        <i class="bi bi-facebook me-2"></i>
-        Facebook
-      </a>
-      <a href="https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here%3A%20https%3A%2F%2Fwww.dealshopperpro.com" 
-         class="btn btn-modern btn-info text-white" target="_blank" rel="noopener">
-        <i class="bi bi-twitter me-2"></i>
-        Twitter
-      </a>
-      <button class="btn btn-modern btn-secondary text-white" id="copyLinkBtn">
-        <i class="bi bi-link-45deg me-2"></i>
-        Copy Link
+    <div class="accordion-item-mobile">
+      <button class="accordion-header-mobile" onclick="toggleAccordion('faq1')">
+        <span>What is Deal Shopper Pro?</span>
+        <i class="bi bi-chevron-down" id="faq1-icon"></i>
       </button>
+      <div class="accordion-body-mobile d-none" id="faq1-body">
+        Deal Shopper Pro is a free Amazon search tool that helps you find deals using advanced filters for Prime, coupons, Lightning Deals, and more.
+      </div>
+    </div>
+
+    <div class="accordion-item-mobile">
+      <button class="accordion-header-mobile" onclick="toggleAccordion('faq2')">
+        <span>How do I find Prime-only deals?</span>
+        <i class="bi bi-chevron-down" id="faq2-icon"></i>
+      </button>
+      <div class="accordion-body-mobile d-none" id="faq2-body">
+        Simply check the "Prime Only" box in Step 5, then submit your search to see Prime-eligible deals directly on Amazon.
+      </div>
+    </div>
+
+    <div class="accordion-item-mobile">
+      <button class="accordion-header-mobile" onclick="toggleAccordion('faq3')">
+        <span>Is this free to use?</span>
+        <i class="bi bi-chevron-down" id="faq3-icon"></i>
+      </button>
+      <div class="accordion-body-mobile d-none" id="faq3-body">
+        Yes, completely free! No signup required, no credit card needed. Just start searching for deals immediately.
+      </div>
+    </div>
+
+    <div class="accordion-item-mobile">
+      <button class="accordion-header-mobile" onclick="toggleAccordion('faq4')">
+        <span>Does this work on mobile?</span>
+        <i class="bi bi-chevron-down" id="faq4-icon"></i>
+      </button>
+      <div class="accordion-body-mobile d-none" id="faq4-body">
+        Absolutely! This tool is optimized for mobile devices and works great on phones and tablets.
+      </div>
     </div>
   </div>
-</section>
 
-</main>
-
-<!-- Footer (keeping as requested) -->
-<footer>
-  <div class="footer-container">
-    <p>
-      <a href="https://www.dealshopperpro.com/contact.html">Contact Us</a> |
-      <a href="https://www.dealshopperpro.com/about.html">About Deal Shopper Pro</a> |
-      <a href="https://www.dealshopperpro.com/help.html">Help Guide</a> |
-      <a href="https://www.dealshopperpro.com/media.html">Articles & Videos</a> |
-      <a href="https://www.dealshopperpro.com/sitemap.html">Sitemap</a> |
-      <a class="text-primary fw-semibold" href="https://www.facebook.com/share/g/1C1BARo5YJ/" rel="noopener noreferrer" target="_blank">💬 Facebook Group</a> |
-      <a href="https://www.dealshopperpro.com/privacy.html">Privacy Policy</a> |
-      <a href="https://www.dealshopperpro.com/terms.html">Terms of Use</a>
-    </p>
-    <p>
-      <strong>Disclaimer:</strong>
-      Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries.<br>
-      <strong>As an Amazon Associate I earn from qualifying purchases.</strong><br>
-      <small>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</small>
-    </p>
-    <p>
-      Discover top Amazon deals with advanced filters for Lightning Deals, Prime-eligible items, in-stock products, and hidden coupons.
-    </p>
-    <p class="mb-1 fw-bold text-danger" style="font-size: 1rem;">Featured</p>
-    <p class="fw-semibold" style="font-size: 1rem;">
-      🔥 <a href="https://www.dealshopperpro.com/index.html">Advanced Amazon Search Tool</a><br>
-      🔥 <a href="https://www.dealshopperpro.com/lightning-deals.html">How To Find Lightning Deals On Amazon</a>
-    </p>
-    <p><strong>© 2025 Deal Shopper Pro. All rights reserved.</strong></p>
-  </div>
-</footer>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Custom JavaScript -->
-<script>
-// Initialize tooltips
-document.addEventListener('DOMContentLoaded', function() {
-  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
-  });
-});
-
-// Lite YouTube functionality
-document.addEventListener('DOMContentLoaded', function() {
-  const ytLiteElements = document.querySelectorAll('.yt-lite');
-  
-  ytLiteElements.forEach(function(el) {
-    const videoId = el.dataset.id;
-    const videoTitle = el.dataset.title || 'YouTube video';
+  <!-- Footer -->
+  <footer class="footer-mobile">
+    <div class="footer-links">
+      <a href="/about.html">About</a>
+      <a href="/help.html">Help</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/contact.html">Contact</a>
+    </div>
     
-    // Create play button
-    const playBtn = document.createElement('button');
-    playBtn.className = 'yt-play position-absolute top-50 start-50 translate-middle border-0 bg-transparent';
-    playBtn.setAttribute('aria-label', `Play video: ${videoTitle}`);
-    playBtn.innerHTML = `
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48" width="68" height="48">
-        <path fill="#f00" d="M66.5 7.0c-
+    <div class="text-center">
+      <p class="mb-2">
+        <strong>Disclaimer:</strong> Deal Shopper Pro is independent and not affiliated with Amazon.
+      </p>
+      <p class="mb-2">
+        <small>As an Amazon Associate I earn from qualifying purchases.</small>
+      </p>
+      <p class="mb-0">
+        <strong>© 2025 Deal Shopper Pro</strong>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Mobile Share Bar -->
+  <div class="share-bar-mobile" id="shareBar">
+    <div class="d-flex justify-content-between align-items-center">
+      <span class="small text-muted">Share this tool</span>
+      <div class="share-buttons">
+        <a href="#" class="share-btn share-btn-success" onclick="shareWhatsApp(event)">
+          <i class="bi bi-whatsapp"></i>
+          WhatsApp
+        </a>
+        <button class="share-btn share-btn-secondary" onclick="shareSMS()">
+          <i class="bi bi-chat-dots"></i>
+          SMS
+        </button>
+        <button class="share-btn share-btn-outline" onclick="copyLink()">
+          <i class="bi bi-link-45deg"></i>
+          Copy
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+  // Mobile-optimized JavaScript
+  (function() {
+    'use strict';
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+
+    function init() {
+      initYouTubePlayer();
+      initProgressTracker();
+      initFormHandling();
+      initMobileFeatures();
+      setupFormValidation();
+    }
+
+    // YouTube Lite Player
+    function initYouTubePlayer() {
+      const ytElements = document.querySelectorAll('.yt-lite');
+      ytElements.forEach(element => {
+        const videoId = element.dataset.id;
+        if (!videoId) return;
+        
+        // Set thumbnail
+        element.style.backgroundImage = `url(https://i.ytimg.com/vi/${videoId}/hqdefault.jpg)`;
+        
+        // Create play button
+        const playButton = document.createElement('button');
+        playButton.className = 'yt-play';
+        playButton.setAttribute('aria-label', 'Play video');
+        element.appendChild(playButton);
+        
+        // Handle click
+        element.addEventListener('click', function() {
+          if (element.classList.contains('activated')) return;
+          
+          element.classList.add('activated');
+          const iframe = document.createElement('iframe');
+          iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0`;
+          iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+          iframe.allowFullscreen = true;
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.border = 'none';
+          
+          element.innerHTML = '';
+          element.appendChild(iframe);
+        });
+      });
+    }
+
+    // Progress Tracker
+    function initProgressTracker() {
+      const steps = document.querySelectorAll('.step-header-mobile');
+      const progressSteps = document.querySelectorAll('.progress-step-mobile');
+      
+      steps.forEach((step, index) => {
+        step.addEventListener('click', () => {
+          // Update progress indicator
+          progressSteps.forEach((progStep, progIndex) => {
+            progStep.classList.remove('active');
+            if (progIndex <= index) {
+              progStep.classList.add('completed');
+            } else {
+              progStep.classList.remove('completed');
+            }
+          });
+          
+          if (progressSteps[index]) {
+            progressSteps[index].classList.add('active');
+          }
+        });
+      });
+    }
+
+    // Form Handling
+    function initFormHandling() {
+      const form = document.getElementById('amazon-search-form');
+      if (!form) return;
+      
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          const originalText = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Searching...';
+          submitBtn.disabled = true;
+          
+          // Reset after delay
+          setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          }, 3000);
+        }
+        
+        // Build Amazon URL
+        const amazonUrl = buildAmazonUrl();
+        
+        // Show share bar
+        showShareBar();
+        
+        // Open Amazon (delayed to show loading state)
+        setTimeout(() => {
+          window.open(amazonUrl, '_blank', 'noopener,noreferrer');
+        }, 500);
+      });
+    }
+
+    // Mobile-specific features
+    function initMobileFeatures() {
+      // Touch-friendly checkbox toggling
+      window.toggleCheckbox = function(checkboxId) {
+        const checkbox = document.getElementById(checkboxId);
+        if (checkbox) {
+          checkbox.checked = !checkbox.checked;
+          
+          // Update card appearance
+          const card = checkbox.closest('.checkbox-card-mobile');
+          if (card) {
+            card.classList.toggle('checked', checkbox.checked);
+          }
+          
+          // Haptic feedback on supported devices
+          if (navigator.vibrate) {
+            navigator.vibrate(10);
+          }
+        }
+      };
+
+      // Smooth scrolling
+      window.scrollToForm = function() {
+        const form = document.getElementById('search-form');
+        if (form) {
+          form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      };
+
+      // Mobile menu toggle
+      window.toggleMobileMenu = function() {
+        // Implement mobile menu if needed
+        console.log('Mobile menu toggled');
+      };
+
+      // Accordion functionality
+      window.toggleAccordion = function(accordionId) {
+        const body = document.getElementById(accordionId + '-body');
+        const icon = document.getElementById(accordionId + '-icon');
+        
+        if (body && icon) {
+          const isVisible = !body.classList.contains('d-none');
+          
+          // Close all accordions first
+          document.querySelectorAll('.accordion-body-mobile').forEach(acc => {
+            acc.classList.add('d-none');
+          });
+          document.querySelectorAll('.accordion-header-mobile i').forEach(ic => {
+            ic.classList.remove('bi-chevron-up');
+            ic.classList.add('bi-chevron-down');
+          });
+          
+          // Open this one if it wasn't visible
+          if (!isVisible) {
+            body.classList.remove('d-none');
+            icon.classList.remove('bi-chevron-down');
+            icon.classList.add('bi-chevron-up');
+          }
+        }
+      };
+    }
+
+    // Form validation
+    function setupFormValidation() {
+      const searchInput = document.getElementById('mainSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', function() {
+          const submitBtn = document.querySelector('button[type="submit"]');
+          if (submitBtn) {
+            submitBtn.disabled = !this.value.trim();
+          }
+        });
+      }
+    }
+
+    // Step toggle functionality
+    window.toggleStep = function(stepNumber) {
+      const body = document.getElementById(`step${stepNumber}-body`);
+      const header = document.querySelector(`[data-target="step${stepNumber}"]`);
+      
+      if (body && header) {
+        const isVisible = !body.classList.contains('d-none');
+        
+        if (isVisible) {
+          body.classList.add('d-none');
+          header.classList.add('collapsed');
+          header.querySelector('i').classList.remove('bi-chevron-up');
+          header.querySelector('i').classList.add('bi-chevron-down');
+        } else {
+          body.classList.remove('d-none');
+          header.classList.remove('collapsed');
+          header.querySelector('i').classList.remove('bi-chevron-down');
+          header.querySelector('i').classList.add('bi-chevron-up');
+        }
+      }
+    };
+
+    // Attach step toggle to headers
+    document.querySelectorAll('.step-header-mobile').forEach((header, index) => {
+      header.addEventListener('click', () => toggleStep(index + 1));
+    });
+
+    // Build Amazon search URL
+    function buildAmazonUrl() {
+      const form = document.getElementById('amazon-search-form');
+      const formData = new FormData(form);
+      
+      let url = 'https://www.amazon.com/s?';
+      const params = new URLSearchParams();
+      
+      // Main search query
+      const query = formData.get('q');
+      if (query) {
+        params.append('k', query);
+      }
+      
+      // Price range
+      const minPrice = formData.get('min-price');
+      const maxPrice = formData.get('max-price');
+      if (minPrice) params.append('low-price', minPrice);
+      if (maxPrice) params.append('high-price', maxPrice);
+      
+      // Sort order
+      const sort = formData.get('sort');
+      if (sort && sort !== 'relevance') {
+        params.append('s', sort);
+      }
+      
+      // Rating filter
+      const minRating = formData.get('min-rating');
+      if (minRating) {
+        params.append('rh', `p_72:1248879011`); // 4+ stars
+      }
+      
+      // Deal filters
+      const filters = [];
+      if (formData.get('prime-only')) filters.push('p_85:2470955011');
+      if (formData.get('lightning-deals')) filters.push('p_n_deal_type:14047755011');
+      if (formData.get('free-shipping')) filters.push('p_76:1249137011');
+      if (formData.get('in-stock')) filters.push('p_n_availability:1248801011');
+      
+      if (filters.length > 0) {
+        params.append('rh', filters.join(','));
+      }
+      
+      // Add affiliate tag
+      params.append('tag', 'dealshopperpro-20');
+      
+      return url + params.toString();
+    }
+
+    // Show mobile share bar
+    function showShareBar() {
+      const shareBar = document.getElementById('shareBar');
+      if (shareBar && window.innerWidth <= 768) {
+        shareBar.classList.add('show');
+        
+        // Auto-hide after 10 seconds
+        setTimeout(() => {
+          shareBar.classList.remove('show');
+        }, 10000);
+      }
+    }
+
+    // Share functions
+    window.shareWhatsApp = function(e) {
+      e.preventDefault();
+      const message = encodeURIComponent('Check out this Amazon deal finder: ' + window.location.href);
+      window.open(`https://wa.me/?text=${message}`, '_blank', 'noopener');
+    };
+
+    window.shareSMS = function() {
+      const message = encodeURIComponent('Check out this Amazon deal finder: ' + window.location.href);
+      window.location.href = `sms:?body=${message}`;
+    };
+
+    window.copyLink = function() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        // Show feedback
+        const btn = event.target.closest('.share-btn');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="bi bi-check"></i> Copied!';
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+        }, 2000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = window.location.href;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+      });
+    };
+
+    // Auto-open first step
+    setTimeout(() => {
+      const firstStep = document.querySelector('.step-header-mobile');
+      if (firstStep && !firstStep.classList.contains('collapsed')) {
+        // First step is already open, focus on search input
+        const searchInput = document.getElementById('mainSearchInput');
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }
+    }, 500);
+
+  })();
+  </script>
+
+</body>
+</html>
