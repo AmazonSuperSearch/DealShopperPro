@@ -337,6 +337,7 @@ body {
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--card-shadow-hover);
+  background: #000;
 }
 
 .yt-lite {
@@ -344,25 +345,63 @@ body {
   display: block;
   background: #000;
   aspect-ratio: 16/9;
-  background-position: center;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
   cursor: pointer;
+  overflow: hidden;
+}
+
+/* Fix for mobile video sizing */
+@media (max-width: 768px) {
+  .yt-lite {
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .yt-lite > .yt-play {
   position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 0;
   background: transparent;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .yt-lite > .yt-play::before {
   content: "";
-  width: 60px;
-  height: 42px;
+  width: 68px;
+  height: 48px;
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 48'><path fill='%23f00' d='M66.5 7.0c-0.7-2.6-2.7-4.6-5.3-5.3C55.9 0 34 0 34 0s-21.9 0-27.2 1.7c-2.6.7-4.6 2.7-5.3 5.3C0 12.3 0 24 0 24s0 11.7 1.5 17.0c.7 2.6 2.7 4.6 5.3 5.3C12.1 48 34 48 34 48s21.9 0 27.2-1.7c2.6-.7 4.6-2.7 5.3-5.3C68 35.7 68 24 68 24s0-11.7-1.5-17.0z'/%3E%3Cpath fill='%23fff' d='M45 24L27 14v20z'/%3E%3C/svg%3E") center/contain no-repeat;
+  transition: transform 0.3s ease;
+}
+
+.yt-lite:hover > .yt-play::before {
+  transform: scale(1.1);
+}
+
+.yt-lite.activated {
+  padding-bottom: 0;
+  height: auto;
+}
+
+.yt-lite.activated iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Mobile Features Grid */
@@ -510,11 +549,11 @@ body {
 /* Progress Indicator */
 .progress-mobile {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-xs);
   margin: var(--spacing-md) var(--spacing-sm);
-  padding: var(--spacing-sm);
+  padding: var(--spacing-md);
   background: white;
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
@@ -717,12 +756,17 @@ body {
 
   <!-- Progress Indicator -->
   <div class="progress-mobile" id="progress-indicator">
-    <div class="progress-step-mobile active" data-step="1">1</div>
-    <div class="progress-step-mobile" data-step="2">2</div>
-    <div class="progress-step-mobile" data-step="3">3</div>
-    <div class="progress-step-mobile" data-step="4">4</div>
-    <div class="progress-step-mobile" data-step="5">5</div>
-    <div class="progress-step-mobile" data-step="6">6</div>
+    <div class="text-center w-100 mb-2">
+      <small class="text-muted fw-semibold">Search Progress</small>
+    </div>
+    <div class="d-flex justify-content-center align-items-center gap-2 w-100">
+      <div class="progress-step-mobile active" data-step="1">1</div>
+      <div class="progress-step-mobile" data-step="2">2</div>
+      <div class="progress-step-mobile" data-step="3">3</div>
+      <div class="progress-step-mobile" data-step="4">4</div>
+      <div class="progress-step-mobile" data-step="5">5</div>
+      <div class="progress-step-mobile" data-step="6">6</div>
+    </div>
   </div>
 
   <!-- Video Demo -->
