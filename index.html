@@ -661,6 +661,13 @@ body {
   box-shadow: var(--card-shadow-hover);
   background: #000;
 }
+/* Ensure the caption under the video is visible on the dark background */
+.video-container-mobile .text-center small,
+.video-container-mobile small,
+.video-container-mobile .text-muted {
+  color: #f9fafb !important;   /* light/near-white */
+  opacity: 0.92;               /* keep it subtle but readable */
+}
 
 .yt-lite {
   position: relative;
