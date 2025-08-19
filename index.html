@@ -546,9 +546,13 @@ body {
   box-shadow: var(--card-shadow-hover) !important;
 }
 
-.checkbox-card-mobile.checked .checkbox-label-mobile {
-  color: #1f2937 !important;
+/* When a checkbox card is selected, make label text/icons clearly visible */
+.checkbox-card-mobile.checked .checkbox-label-mobile,
+.checkbox-card-mobile.checked .checkbox-label-mobile i,
+.checkbox-card-mobile.checked .experimental-badge-mobile {
+  color: #ffffff !important;   /* white text on dark bg */
   font-weight: 600;
+  opacity: 1 !important;
 }
 
 .checkbox-label-mobile {
