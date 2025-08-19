@@ -451,6 +451,8 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .checkbox-card-mobile:hover,
@@ -465,19 +467,47 @@ body {
   width: 1.25rem;
   height: 1.25rem;
   margin-right: var(--spacing-sm);
-  accent-color: var(--primary-color);
   cursor: pointer;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  background-color: white;
+  position: relative;
+  flex-shrink: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .checkbox-input-mobile:checked {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  background-color: #4f46e5 !important;
+  border-color: #4f46e5 !important;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m13.854 3.646-7.5 7.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6 10.293l7.146-7.147a.5.5 0 0 1 .708.708z'/%3e%3c/svg%3e") !important;
+  background-size: 80% 80% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.checkbox-input-mobile:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Make sure the label doesn't interfere */
+.checkbox-label-mobile {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 0;
+  color: #374151;
+  user-select: none;
+  margin-left: 0.5rem;
 }
 
 .checkbox-card-mobile.checked {
-  border-color: var(--primary-color);
-  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(99, 102, 241, 0.05));
-  box-shadow: var(--card-shadow-hover);
+  border-color: var(--primary-color) !important;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(99, 102, 241, 0.05)) !important;
+  box-shadow: var(--card-shadow-hover) !important;
 }
 
 .checkbox-label-mobile {
@@ -1161,30 +1191,30 @@ body {
               Popular Deals
             </div>
             <div class="checkbox-grid-mobile">
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('primeOnly')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="primeOnly" name="prime-only" type="checkbox">
                 <label class="checkbox-label-mobile" for="primeOnly">
-                  <input class="checkbox-input-mobile" id="primeOnly" name="prime-only" type="checkbox">
                   <i class="bi bi-star-fill text-warning me-2"></i>
                   Prime Only
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('lightningDeals')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="lightningDeals" name="lightning-deals" type="checkbox">
                 <label class="checkbox-label-mobile" for="lightningDeals">
-                  <input class="checkbox-input-mobile" id="lightningDeals" name="lightning-deals" type="checkbox">
                   <i class="bi bi-lightning-charge-fill text-warning me-2"></i>
                   Lightning Deals
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('coupons')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="coupons" name="coupons" type="checkbox">
                 <label class="checkbox-label-mobile" for="coupons">
-                  <input class="checkbox-input-mobile" id="coupons" name="coupons" type="checkbox">
                   <i class="bi bi-ticket-perforated me-2"></i>
                   Coupons
                 </label>
               </div>
-              <div class="checkbox-card-mobile" onclick="toggleCheckbox('freeShipping')">
+              <div class="checkbox-card-mobile">
+                <input class="checkbox-input-mobile" id="freeShipping" name="free-shipping" type="checkbox">
                 <label class="checkbox-label-mobile" for="freeShipping">
-                  <input class="checkbox-input-mobile" id="freeShipping" name="free-shipping" type="checkbox">
                   <i class="bi bi-truck me-2"></i>
                   Free Shipping
                 </label>
@@ -1787,31 +1817,37 @@ body {
         }
       };
 
-      // Also add direct click handlers for checkbox cards
-      document.querySelectorAll('.checkbox-card-mobile').forEach(card => {
-        card.addEventListener('click', function(e) {
-          // Don't trigger if clicking directly on the checkbox or label
-          if (e.target.tagName === 'INPUT' || e.target.tagName === 'LABEL') return;
-          
-          const checkbox = card.querySelector('.checkbox-input-mobile');
-          if (checkbox) {
-            checkbox.checked = !checkbox.checked;
-            card.classList.toggle('checked', checkbox.checked);
-            checkbox.dispatchEvent(new Event('change', { bubbles: true }));
-            
-            if (navigator.vibrate) {
-              navigator.vibrate(10);
-            }
-          }
-        });
-      });
-
-      // Add change listeners to update card appearance
+      // Simple and reliable checkbox handling
       document.querySelectorAll('.checkbox-input-mobile').forEach(checkbox => {
+        // Simple change event for any way the checkbox gets toggled
         checkbox.addEventListener('change', function() {
           const card = this.closest('.checkbox-card-mobile');
           if (card) {
-            card.classList.toggle('checked', this.checked);
+            if (this.checked) {
+              card.classList.add('checked');
+            } else {
+              card.classList.remove('checked');
+            }
+          }
+        });
+        
+        // Initialize on page load
+        const card = checkbox.closest('.checkbox-card-mobile');
+        if (card && checkbox.checked) {
+          card.classList.add('checked');
+        }
+      });
+
+      // Simple card click handling
+      document.querySelectorAll('.checkbox-card-mobile').forEach(card => {
+        card.addEventListener('click', function(e) {
+          // If clicking on the checkbox itself, let it handle naturally
+          if (e.target.type === 'checkbox') return;
+          
+          // Otherwise, toggle the checkbox
+          const checkbox = card.querySelector('.checkbox-input-mobile');
+          if (checkbox) {
+            checkbox.click(); // This will trigger the change event above
           }
         });
       });
