@@ -671,16 +671,23 @@ body {
       <div class="trust-badges">
         <span class="trust-badge">
           <i class="bi bi-shield-check"></i>
-          Secure
+          Secure & Private
         </span>
         <span class="trust-badge">
           <i class="bi bi-person-check"></i>
-          No Signup
+          No Signup Required
         </span>
         <span class="trust-badge">
           <i class="bi bi-lightning-fill"></i>
-          Real Results
+          Real Amazon Data
         </span>
+      </div>
+      
+      <div class="text-center mt-3">
+        <div class="badge bg-success text-white px-3 py-2 fs-6 rounded-pill">
+          <i class="bi bi-check-circle me-1"></i>
+          100% Free Tool
+        </div>
       </div>
       
       <a href="#search-form" class="btn-mobile btn-success-mobile mt-3" onclick="scrollToForm()">
@@ -911,6 +918,38 @@ body {
                   Clearance
                 </label>
               </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('bogoDeals')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="bogoDeals">
+                  <input class="checkbox-input-mobile" id="bogoDeals" name="bogo-deals" type="checkbox">
+                  <i class="bi bi-plus-circle me-2"></i>
+                  Buy One Get One
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('limitedTimeDeals')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="limitedTimeDeals">
+                  <input class="checkbox-input-mobile" id="limitedTimeDeals" name="limited-time-deals" type="checkbox">
+                  <i class="bi bi-clock me-2"></i>
+                  Limited-Time
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('flashSales')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="flashSales">
+                  <input class="checkbox-input-mobile" id="flashSales" name="flash-sales" type="checkbox">
+                  <i class="bi bi-lightning me-2"></i>
+                  Flash Sales
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('under25Deals')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="under25Deals">
+                  <input class="checkbox-input-mobile" id="under25Deals" name="under-25-deals" type="checkbox">
+                  <i class="bi bi-piggy-bank me-2"></i>
+                  Under $25
+                </label>
+              </div>
             </div>
           </div>
 
@@ -918,7 +957,7 @@ body {
           <div class="filter-section-mobile">
             <div class="filter-title-mobile">
               <i class="bi bi-box-seam"></i>
-              Shipping & Stock
+              Shipping & Availability
             </div>
             <div class="checkbox-grid-mobile">
               <div class="checkbox-card-mobile" onclick="toggleCheckbox('inStock')">
@@ -935,14 +974,29 @@ body {
                   Fulfilled by Amazon
                 </label>
               </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('shipsFromUS')">
+                <label class="checkbox-label-mobile" for="shipsFromUS">
+                  <input class="checkbox-input-mobile" id="shipsFromUS" name="ships-from-us" type="checkbox">
+                  <i class="bi bi-flag-usa me-2"></i>
+                  Ships from US
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('nextDayShipping')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="nextDayShipping">
+                  <input class="checkbox-input-mobile" id="nextDayShipping" name="next-day-shipping" type="checkbox">
+                  <i class="bi bi-rocket-takeoff me-2"></i>
+                  Next-Day Shipping
+                </label>
+              </div>
             </div>
           </div>
 
-          <!-- Eco-Friendly -->
+          <!-- Eco-Friendly & Ethical -->
           <div class="filter-section-mobile">
             <div class="filter-title-mobile">
               <i class="bi bi-leaf"></i>
-              Eco-Friendly
+              Eco-Friendly & Ethical
             </div>
             <div class="checkbox-grid-mobile">
               <div class="checkbox-card-mobile" onclick="toggleCheckbox('climatePledge')">
@@ -957,6 +1011,165 @@ body {
                   <input class="checkbox-input-mobile" id="smallBusiness" name="small-business" type="checkbox">
                   <i class="bi bi-shop-window me-2"></i>
                   Small Business
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('ecoFriendly')">
+                <label class="checkbox-label-mobile" for="ecoFriendly">
+                  <input class="checkbox-input-mobile" id="ecoFriendly" name="eco-friendly" type="checkbox">
+                  <i class="bi bi-recycle me-2"></i>
+                  Eco-Friendly
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('organicProducts')">
+                <label class="checkbox-label-mobile" for="organicProducts">
+                  <input class="checkbox-input-mobile" id="organicProducts" name="organic-products" type="checkbox">
+                  <i class="bi bi-flower2 me-2"></i>
+                  Organic
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('veganProducts')">
+                <label class="checkbox-label-mobile" for="veganProducts">
+                  <input class="checkbox-input-mobile" id="veganProducts" name="vegan-products" type="checkbox">
+                  <i class="bi bi-heart-fill text-success me-2"></i>
+                  Vegan
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('crueltyFree')">
+                <label class="checkbox-label-mobile" for="crueltyFree">
+                  <input class="checkbox-input-mobile" id="crueltyFree" name="cruelty-free" type="checkbox">
+                  <i class="bi bi-shield-heart me-2"></i>
+                  Cruelty-Free
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('fairTrade')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="fairTrade">
+                  <input class="checkbox-input-mobile" id="fairTrade" name="fair-trade" type="checkbox">
+                  <i class="bi bi-handshake me-2"></i>
+                  Fair Trade
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('madeInUSA')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="madeInUSA">
+                  <input class="checkbox-input-mobile" id="madeInUSA" name="made-in-usa" type="checkbox">
+                  <i class="bi bi-flag-usa me-2"></i>
+                  Made in USA
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gift Ideas -->
+          <div class="filter-section-mobile">
+            <div class="filter-title-mobile">
+              <i class="bi bi-gift"></i>
+              Gift Ideas
+            </div>
+            <div class="checkbox-grid-mobile">
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('giftsForHer')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="giftsForHer">
+                  <input class="checkbox-input-mobile" id="giftsForHer" name="gifts-for-her" type="checkbox">
+                  <i class="bi bi-heart me-2"></i>
+                  Gifts for Her
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('giftsForHim')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="giftsForHim">
+                  <input class="checkbox-input-mobile" id="giftsForHim" name="gifts-for-him" type="checkbox">
+                  <i class="bi bi-person me-2"></i>
+                  Gifts for Him
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('giftsForKids')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="giftsForKids">
+                  <input class="checkbox-input-mobile" id="giftsForKids" name="gifts-for-kids" type="checkbox">
+                  <i class="bi bi-balloon me-2"></i>
+                  Gifts for Kids
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('giftUnder25')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="giftUnder25">
+                  <input class="checkbox-input-mobile" id="giftUnder25" name="gifts-under-25" type="checkbox">
+                  <i class="bi bi-currency-dollar me-2"></i>
+                  Gifts Under $25
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('birthdayGifts')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="birthdayGifts">
+                  <input class="checkbox-input-mobile" id="birthdayGifts" name="birthday-gifts" type="checkbox">
+                  <i class="bi bi-cake2 me-2"></i>
+                  Birthday Gifts
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('holidayGifts')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="holidayGifts">
+                  <input class="checkbox-input-mobile" id="holidayGifts" name="holiday-gifts" type="checkbox">
+                  <i class="bi bi-tree me-2"></i>
+                  Holiday Gifts
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Special Categories -->
+          <div class="filter-section-mobile">
+            <div class="filter-title-mobile">
+              <i class="bi bi-star"></i>
+              Special Categories
+            </div>
+            <div class="checkbox-grid-mobile">
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('amazonBrands')">
+                <label class="checkbox-label-mobile" for="amazonBrands">
+                  <input class="checkbox-input-mobile" id="amazonBrands" name="amazon-brands" type="checkbox">
+                  <i class="bi bi-award me-2"></i>
+                  Amazon Brands
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('newReleases')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="newReleases">
+                  <input class="checkbox-input-mobile" id="newReleases" name="new-releases" type="checkbox">
+                  <i class="bi bi-sparkles me-2"></i>
+                  New Releases
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('trendingNow')">
+                <span class="experimental-badge-mobile">HOT</span>
+                <label class="checkbox-label-mobile" for="trendingNow">
+                  <input class="checkbox-input-mobile" id="trendingNow" name="trending-now" type="checkbox">
+                  <i class="bi bi-graph-up-arrow me-2"></i>
+                  Trending Now
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('warehouseDeals')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="warehouseDeals">
+                  <input class="checkbox-input-mobile" id="warehouseDeals" name="warehouse-deals" type="checkbox">
+                  <i class="bi bi-tools me-2"></i>
+                  Warehouse Deals
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('openBoxDeals')">
+                <span class="experimental-badge-mobile">BETA</span>
+                <label class="checkbox-label-mobile" for="openBoxDeals">
+                  <input class="checkbox-input-mobile" id="openBoxDeals" name="open-box-deals" type="checkbox">
+                  <i class="bi bi-box-arrow-up me-2"></i>
+                  Open Box
+                </label>
+              </div>
+              <div class="checkbox-card-mobile" onclick="toggleCheckbox('endsSoon')">
+                <span class="experimental-badge-mobile">URGENT</span>
+                <label class="checkbox-label-mobile" for="endsSoon">
+                  <input class="checkbox-input-mobile" id="endsSoon" name="ends-soon" type="checkbox">
+                  <i class="bi bi-alarm me-2"></i>
+                  Ends Soon
                 </label>
               </div>
             </div>
