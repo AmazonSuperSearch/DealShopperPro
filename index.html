@@ -1013,6 +1013,21 @@ body {
     </div>
   </div>
 
+  <!-- Progress Indicator -->
+  <div class="progress-mobile" id="progress-indicator">
+    <div class="text-center w-100 mb-2">
+      <small class="text-muted fw-semibold">Find Better Deals</small>
+    </div>
+    <div class="d-flex justify-content-center align-items-center gap-2 w-100">
+      <div class="progress-step-mobile active" data-step="1">1</div>
+      <div class="progress-step-mobile" data-step="2">2</div>
+      <div class="progress-step-mobile" data-step="3">3</div>
+      <div class="progress-step-mobile" data-step="4">4</div>
+      <div class="progress-step-mobile" data-step="5">5</div>
+      <div class="progress-step-mobile" data-step="6">6</div>
+    </div>
+  </div>
+
   <!-- Main Search Form -->
   <div class="search-container" id="search-form">
     <form id="amazon-search-form" method="get" novalidate>
@@ -1762,12 +1777,44 @@ body {
             card.classList.toggle('checked', checkbox.checked);
           }
           
+          // Trigger change event for any listeners
+          checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+          
           // Haptic feedback on supported devices
           if (navigator.vibrate) {
             navigator.vibrate(10);
           }
         }
       };
+
+      // Also add direct click handlers for checkbox cards
+      document.querySelectorAll('.checkbox-card-mobile').forEach(card => {
+        card.addEventListener('click', function(e) {
+          // Don't trigger if clicking directly on the checkbox or label
+          if (e.target.tagName === 'INPUT' || e.target.tagName === 'LABEL') return;
+          
+          const checkbox = card.querySelector('.checkbox-input-mobile');
+          if (checkbox) {
+            checkbox.checked = !checkbox.checked;
+            card.classList.toggle('checked', checkbox.checked);
+            checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+            
+            if (navigator.vibrate) {
+              navigator.vibrate(10);
+            }
+          }
+        });
+      });
+
+      // Add change listeners to update card appearance
+      document.querySelectorAll('.checkbox-input-mobile').forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+          const card = this.closest('.checkbox-card-mobile');
+          if (card) {
+            card.classList.toggle('checked', this.checked);
+          }
+        });
+      });
 
       // Smooth scrolling
       window.scrollToForm = function() {
