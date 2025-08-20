@@ -1997,24 +1997,7 @@ body {
   <script src="/navbar-loader.js"></script>
   <script src="searchlogic-v2.js"></script>
 
-<!-- Share With Friends helper -->
-<script>
-(function() {
-  const btn = document.getElementById('copyLinkBtn');
-  if (btn && navigator.clipboard) {
-    btn.addEventListener('click', async () => {
-      try {
-        const url = btn.dataset.link || window.location.href;
-        await navigator.clipboard.writeText(url);
-        btn.textContent = 'Copied!';
-        setTimeout(() => (btn.textContent = 'Copy Page Link'), 1500);
-      } catch (e) {
-        console.error('Copy failed', e);
-      }
-    });
-  }
-})();
-</script>
+  
 <script>
 // YouTube video fix
 document.addEventListener('DOMContentLoaded', function() {
