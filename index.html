@@ -1991,6 +1991,60 @@ body {
   }
 })();
 </script>
-
+<script>
+// YouTube video fix
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('YouTube fix loaded');
+  
+  // Wait a bit for page to fully load
+  setTimeout(function() {
+    const ytElements = document.querySelectorAll('.yt-lite');
+    console.log('Found YT elements:', ytElements.length);
+    
+    ytElements.forEach(element => {
+      const videoId = element.dataset.id;
+      console.log('Processing video ID:', videoId);
+      
+      if (!videoId) return;
+      
+      // Force set background image
+      const imgUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+      element.style.backgroundImage = `url("${imgUrl}")`;
+      element.style.backgroundSize = 'cover';
+      element.style.backgroundPosition = 'center';
+      
+      // Create play button if it doesn't exist
+      if (!element.querySelector('.yt-play')) {
+        const playButton = document.createElement('button');
+        playButton.className = 'yt-play';
+        playButton.setAttribute('aria-label', 'Play video');
+        element.appendChild(playButton);
+      }
+      
+      // Add click handler
+      element.addEventListener('click', function() {
+        if (element.classList.contains('activated')) return;
+        
+        console.log('Video clicked, loading iframe');
+        element.classList.add('activated');
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0`;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = 'none';
+        iframe.style.position = 'absolute';
+        iframe.style.top = '0';
+        iframe.style.left = '0';
+        
+        element.innerHTML = '';
+        element.appendChild(iframe);
+      });
+    });
+  }, 1000); // Wait 1 second for everything to load
+});
+</script>
 </body>
 </html>
