@@ -104,29 +104,15 @@ document.addEventListener('DOMContentLoaded', () => {
       return n;
     }
 
-  // % Off mapping for amazon.com (US)
-// Keys = % off step, Values = Amazon facet codes
-const PCT_TO_RH = {
-  5:  'p_8:5-',
-  10: 'p_8:10-',
-  15: 'p_8:15-',
-  20: 'p_8:20-',
-  25: 'p_8:25-',
-  30: 'p_8:30-',
-  35: 'p_8:35-',
-  40: 'p_8:40-',
-  45: 'p_8:45-',
-  50: 'p_8:50-',
-  55: 'p_8:55-',
-  60: 'p_8:60-',
-  65: 'p_8:65-',
-  70: 'p_8:70-',
-  75: 'p_8:75-',
-  80: 'p_8:80-',
-  85: 'p_8:85-',
-  90: 'p_8:90-'
-};
-
+    // TODO: Fill with VERIFIED facet IDs for your marketplace (.com codes)
+    // Keys are 5,10,15,...,95; values like "p_n_pct-off-with-tax:XXXXXXXX"
+    const PCT_TO_RH = {
+      // 5:  'p_n_pct-off-with-tax:________',
+      // 10: 'p_n_pct-off-with-tax:________',
+      // 15: 'p_n_pct-off-with-tax:________',
+      // ...
+      // 95: 'p_n_pct-off-with-tax:________',
+    };
 
     function percentOffToRh(pct) {
       const n = normalizePercentStep(pct);
@@ -198,10 +184,10 @@ if (sort && sort !== 'relevance') params.set('s', sort);
       'fair-trade': 'p_n_feature_seven_browse-bin:21246940011',
 
       // ♻️ Badge
-      'climate-pledge': 'p_n_cpf_eligible:23523564011',
+      'climate-pledge': 'p_n_cpf_eligible:5191495011',
 
       // 🏪 Small Business (⚠️ verify code; placeholder uses same CPF id)
-      'small-business': 'p_n_sb_certificate_id:13187369011'
+      'small-business': 'p_n_cpf_eligible:5191495011'
     };
 
     Object.entries(rhMap).forEach(([field, code]) => pushRh(field, code));
@@ -252,6 +238,3 @@ if (sort && sort !== 'relevance') params.set('s', sort);
     if (!win) location.href = url;
   });
 });
-
-
-
