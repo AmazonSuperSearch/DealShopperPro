@@ -550,10 +550,16 @@ body {
 .checkbox-card-mobile.checked .checkbox-label-mobile,
 .checkbox-card-mobile.checked .checkbox-label-mobile i,
 .checkbox-card-mobile.checked .experimental-badge-mobile {
-  color: #ffffff !important;   /* white text on dark bg */
+  color: #ffffff !important;   /* white text */
   font-weight: 600;
   opacity: 1 !important;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;  /* black outline for visibility */
 }
+
 
 .checkbox-label-mobile {
   display: flex;
