@@ -104,15 +104,29 @@ document.addEventListener('DOMContentLoaded', () => {
       return n;
     }
 
-    // TODO: Fill with VERIFIED facet IDs for your marketplace (.com codes)
-    // Keys are 5,10,15,...,95; values like "p_n_pct-off-with-tax:XXXXXXXX"
-    const PCT_TO_RH = {
-      // 5:  'p_n_pct-off-with-tax:________',
-      // 10: 'p_n_pct-off-with-tax:________',
-      // 15: 'p_n_pct-off-with-tax:________',
-      // ...
-      // 95: 'p_n_pct-off-with-tax:________',
-    };
+  // % Off mapping for amazon.com (US)
+// Keys = % off step, Values = Amazon facet codes
+const PCT_TO_RH = {
+  5:  'p_8:5-',
+  10: 'p_8:10-',
+  15: 'p_8:15-',
+  20: 'p_8:20-',
+  25: 'p_8:25-',
+  30: 'p_8:30-',
+  35: 'p_8:35-',
+  40: 'p_8:40-',
+  45: 'p_8:45-',
+  50: 'p_8:50-',
+  55: 'p_8:55-',
+  60: 'p_8:60-',
+  65: 'p_8:65-',
+  70: 'p_8:70-',
+  75: 'p_8:75-',
+  80: 'p_8:80-',
+  85: 'p_8:85-',
+  90: 'p_8:90-'
+};
+
 
     function percentOffToRh(pct) {
       const n = normalizePercentStep(pct);
@@ -238,4 +252,5 @@ if (sort && sort !== 'relevance') params.set('s', sort);
     if (!win) location.href = url;
   });
 });
+
 
