@@ -253,6 +253,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initCheckboxes();
   setupFormValidation();
   
+  // ACCORDION FIX: Make step headers clickable
+  document.querySelectorAll('.step-header-mobile').forEach((btn, i) => {
+    btn.onclick = () => toggleStep(i + 1);
+  });
   
   // Auto-open first step and focus search input
   setTimeout(() => {
@@ -536,4 +540,3 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!win) location.href = url;
   });
 });
-
