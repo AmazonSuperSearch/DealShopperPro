@@ -503,23 +503,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Tidy query
     q = q.replace(/\s+/g, ' ').trim();
 
-    // 7) Final URL
-    if (rh.length) {
-      rh = [...new Set(rh)]; // de-dupe
-      params.set('rh', rh.join(','));
-    }
-    params.set('k', q);
-    params.set('tag', 'dealshopperpr-20');
+   // 7) Final URL
+if (rh.length) {
+  rh = [...new Set(rh)]; // de-dupe
+  params.set('rh', rh.join(','));
+}
+params.set('k', q);
+params.set('tag', 'dealshopperpr-20'); // keep your active US store ID
 
-    const hostMap = {
-      usd: 'www.amazon.com',
-      eur: 'www.amazon.de',
-      gbp: 'www.amazon.co.uk',
-      jpy: 'www.amazon.co.jp',
-      inr: 'www.amazon.in'
-    };
-    const host = hostMap[data.get('currency')] || 'www.amazon.com';
-    const url = `https://${host}/s?${params.toString()}`;
+// Always use amazon.com for OneLink
+const url = `https://www.amazon.com/s?${params.toString()}`;
 
     // ✅ Show "Opening..." toast
     const toast = document.getElementById('searchToast');
@@ -540,3 +533,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!win) location.href = url;
   });
 });
+
