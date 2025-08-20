@@ -1849,7 +1849,47 @@ body {
   </div>
 
   <!-- Footer -->
-  <footer class="footer-mobile">
+  
+<!-- ===== Share With Friends (inserted) ===== -->
+<section class="container my-5">
+  <div class="card shadow-sm border-0 rounded-4">
+    <div class="card-body p-4 p-md-5">
+      <!-- begin imported block -->
+      <div class="text-center my-4">
+<h2 class="h5">📲 Share with Friends</h2>
+<p class="text-muted">Send this to someone who needs smarter Amazon filters:</p>
+<div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+<!-- WhatsApp -->
+<a class="btn btn-success" href="https://wa.me/?text=https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
+      WhatsApp
+    </a>
+<!-- Messenger -->
+<a class="btn btn-primary" href="fb-messenger://share?link=https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
+      Messenger
+    </a>
+<!-- SMS -->
+<a class="btn btn-secondary" href="sms:?body=Check%20out%20this%20free%20Amazon%20deal%20filter:%20https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
+      Text Message
+    </a>
+<!-- Twitter / X -->
+<a class="btn btn-info" href="https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here:%20https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
+      Twitter / X
+    </a>
+<!-- Facebook -->
+<a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
+      Facebook
+    </a>
+<!-- Copy Link -->
+<button aria-label="Copy page link to clipboard" class="btn btn-dark" data-link="https://www.dealshopperpro.com" id="copyLinkBtn" type="button">
+  Copy Page Link
+</button>
+</div>
+</div>
+      <!-- end imported block -->
+    </div>
+  </div>
+</section>
+<footer class="footer-mobile">
     <div class="footer-links">
       <a href="/about.html">About</a>
       <a href="/help.html">Help</a>
@@ -2258,6 +2298,26 @@ body {
 
   })();
   </script>
+
+
+<!-- Share With Friends helper -->
+<script>
+(function() {
+  const btn = document.getElementById('copyLinkBtn');
+  if (btn && navigator.clipboard) {
+    btn.addEventListener('click', async () => {
+      try {
+        const url = btn.dataset.link || window.location.href;
+        await navigator.clipboard.writeText(url);
+        btn.textContent = 'Copied!';
+        setTimeout(() => (btn.textContent = 'Copy Page Link'), 1500);
+      } catch (e) {
+        console.error('Copy failed', e);
+      }
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
