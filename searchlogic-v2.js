@@ -33,17 +33,264 @@ function initYouTubePlayer() {
   });
 }
 
-// Main search form logic
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize YouTube player
-  initYouTubePlayer();
+// Step toggle functionality
+function toggleStep(stepNumber) {
+  const body = document.getElementById(`step${stepNumber}-body`);
+  const header = document.querySelector(`[data-target="step${stepNumber}"]`);
   
+  if (body && header) {
+    const isVisible = !body.classList.contains('d-none');
+    
+    if (isVisible) {
+      body.classList.add('d-none');
+      header.classList.add('collapsed');
+      const icon = header.querySelector('i');
+      if (icon) {
+        icon.classList.remove('bi-chevron-up');
+        icon.classList.add('bi-chevron-down');
+      }
+    } else {
+      body.classList.remove('d-none');
+      header.classList.remove('collapsed');
+      const icon = header.querySelector('i');
+      if (icon) {
+        icon.classList.remove('bi-chevron-down');
+        icon.classList.add('bi-chevron-up');
+      }
+    }
+  }
+}
+
+// Accordion functionality for FAQ
+function toggleAccordion(accordionId) {
+  const body = document.getElementById(accordionId + '-body');
+  const icon = document.getElementById(accordionId + '-icon');
+  
+  if (body && icon) {
+    const isVisible = !body.classList.contains('d-none');
+    
+    // Close all accordions first
+    document.querySelectorAll('.accordion-body-mobile').forEach(acc => {
+      acc.classList.add('d-none');
+    });
+    document.querySelectorAll('.accordion-header-mobile i').forEach(ic => {
+      ic.classList.remove('bi-chevron-up');
+      ic.classList.add('bi-chevron-down');
+    });
+    
+    // Open this one if it wasn't visible
+    if (!isVisible) {
+      body.classList.remove('d-none');
+      icon.classList.remove('bi-chevron-down');
+      icon.classList.add('bi-chevron-up');
+    }
+  }
+}
+
+// Progress Tracker
+function initProgressTracker() {
+  const steps = document.querySelectorAll('.step-header-mobile');
+  const progressSteps = document.querySelectorAll('.progress-step-mobile');
+  
+  steps.forEach((step, index) => {
+    step.addEventListener('click', () => {
+      // Update progress indicator
+      progressSteps.forEach((progStep, progIndex) => {
+        progStep.classList.remove('active');
+        if (progIndex <= index) {
+          progStep.classList.add('completed');
+        } else {
+          progStep.classList.remove('completed');
+        }
+      });
+      
+      if (progressSteps[index]) {
+        progressSteps[index].classList.add('active');
+      }
+    });
+  });
+}
+
+// Checkbox handling
+function initCheckboxes() {
+  document.querySelectorAll('.checkbox-input-mobile').forEach(checkbox => {
+    // Simple change event for any way the checkbox gets toggled
+    checkbox.addEventListener('change', function() {
+      const card = this.closest('.checkbox-card-mobile');
+      if (card) {
+        if (this.checked) {
+          card.classList.add('checked');
+        } else {
+          card.classList.remove('checked');
+        }
+      }
+    });
+    
+    // Initialize on page load
+    const card = checkbox.closest('.checkbox-card-mobile');
+    if (card && checkbox.checked) {
+      card.classList.add('checked');
+    }
+  });
+
+  // Simple card click handling
+  document.querySelectorAll('.checkbox-card-mobile').forEach(card => {
+    card.addEventListener('click', function(e) {
+      // If clicking on the checkbox itself, let it handle naturally
+      if (e.target.type === 'checkbox') return;
+      
+      // Otherwise, toggle the checkbox
+      const checkbox = card.querySelector('.checkbox-input-mobile');
+      if (checkbox) {
+        checkbox.click(); // This will trigger the change event above
+      }
+    });
+  });
+}
+
+// Touch-friendly checkbox toggling
+function toggleCheckbox(checkboxId) {
+  const checkbox = document.getElementById(checkboxId);
+  if (checkbox) {
+    checkbox.checked = !checkbox.checked;
+    
+    // Update card appearance
+    const card = checkbox.closest('.checkbox-card-mobile');
+    if (card) {
+      card.classList.toggle('checked', checkbox.checked);
+    }
+    
+    // Trigger change event for any listeners
+    checkbox.dispatchEvent(new Event('change', { bubbles: true }));
+    
+    // Haptic feedback on supported devices
+    if (navigator.vibrate) {
+      navigator.vibrate(10);
+    }
+  }
+}
+
+// Form validation
+function setupFormValidation() {
+  const searchInput = document.getElementById('mainSearchInput');
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      const submitBtn = document.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = !this.value.trim();
+      }
+    });
+  }
+}
+
+// Smooth scrolling
+function scrollToForm() {
+  const form = document.getElementById('search-form');
+  if (form) {
+    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+// Show mobile share bar
+function showShareBar() {
+  const shareBar = document.getElementById('shareBar');
+  if (shareBar && window.innerWidth <= 768) {
+    shareBar.classList.add('show');
+    
+    // Auto-hide after 10 seconds
+    setTimeout(() => {
+      shareBar.classList.remove('show');
+    }, 10000);
+  }
+}
+
+// Share functions
+function shareWhatsApp(e) {
+  e.preventDefault();
+  const message = encodeURIComponent('Check out this Amazon deal finder: ' + window.location.href);
+  window.open(`https://wa.me/?text=${message}`, '_blank', 'noopener');
+}
+
+function shareSMS() {
+  const message = encodeURIComponent('Check out this Amazon deal finder: ' + window.location.href);
+  window.location.href = `sms:?body=${message}`;
+}
+
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    // Show feedback
+    const btn = event.target.closest('.share-btn');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<i class="bi bi-check"></i> Copied!';
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+    }, 2000);
+  }).catch(() => {
+    // Fallback for older browsers
+    const textArea = document.createElement('textarea');
+    textArea.value = window.location.href;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+  });
+}
+
+// Make functions global so HTML can access them
+window.toggleStep = toggleStep;
+window.toggleAccordion = toggleAccordion;
+window.scrollToForm = scrollToForm;
+window.toggleCheckbox = toggleCheckbox;
+window.shareWhatsApp = shareWhatsApp;
+window.shareSMS = shareSMS;
+window.copyLink = copyLink;
+
+// Main initialization
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize all components
+  initYouTubePlayer();
+  initProgressTracker();
+  initCheckboxes();
+  setupFormValidation();
+  
+  // Attach step toggle to headers
+  document.querySelectorAll('.step-header-mobile').forEach((header, index) => {
+    header.addEventListener('click', () => toggleStep(index + 1));
+  });
+  
+  // Auto-open first step and focus search input
+  setTimeout(() => {
+    const firstStep = document.querySelector('.step-header-mobile');
+    if (firstStep && !firstStep.classList.contains('collapsed')) {
+      // First step is already open, focus on search input
+      const searchInput = document.getElementById('mainSearchInput');
+      if (searchInput) {
+        searchInput.focus();
+      }
+    }
+  }, 500);
+
+  // Main search form logic
   const form = document.getElementById('amazon-search-form');
   if (!form) return;
 
   form.addEventListener('submit', e => {
     e.preventDefault();
     const data = new FormData(form);
+
+    // Show loading state
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Searching...';
+      submitBtn.disabled = true;
+      
+      // Reset after delay
+      setTimeout(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }, 3000);
+    }
 
     // ── Init query-builder ──
     const params = new URLSearchParams();
@@ -69,7 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'limited-time-deals': 'limited time deals',
       'ends-soon-deals': 'ends soon deals',
       'under-25-deals': 'under $25',
-      'expiring-coupons': 'expiring coupons',  // <-- fixed missing comma
+      'expiring-coupons': 'expiring coupons',
       'lowest-price': 'lowest price',
       'flash-sales': 'flash sale',
       'trending-deals': 'trending deals',
@@ -185,8 +432,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (rating === '5') rh.push('p_72:1248884011');
 
     // ✅ Updated sort handling
-const sort = (data.get('sort') || '').trim();
-if (sort && sort !== 'relevance') params.set('s', sort);
+    const sort = (data.get('sort') || '').trim();
+    if (sort && sort !== 'relevance') params.set('s', sort);
 
     // 4) Brand filters
     let raw = data.get('brand-include') || '';
@@ -284,6 +531,9 @@ if (sort && sort !== 'relevance') params.set('s', sort);
         setTimeout(() => toast.style.display = 'none', 500);
       }, 2500);
     }
+
+    // Show share bar
+    showShareBar();
 
     // ✅ Open Amazon in new tab (with fallback if blocked)
     const win = window.open(url, '_blank');
