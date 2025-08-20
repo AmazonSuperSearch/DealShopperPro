@@ -216,10 +216,11 @@ function shareSMS() {
   window.location.href = `sms:?body=${message}`;
 }
 
-function copyLink() {
+function copyLink(e) {
   navigator.clipboard.writeText(window.location.href).then(() => {
     // Show feedback
-    const btn = event.target.closest('.share-btn');
+    const btn = e.target.closest('.share-btn');
+    if (!btn) return;
     const originalText = btn.innerHTML;
     btn.innerHTML = '<i class="bi bi-check"></i> Copied!';
     setTimeout(() => {
@@ -534,3 +535,41 @@ const url = `https://www.amazon.com/s?${params.toString()}`;
   });
 });
 
+
+// ===== Share Functions =====
+function shareMessenger(e) {
+  e.preventDefault();
+  const url = encodeURIComponent(window.location.href);
+  // Try native app, else fallback to web dialog
+  if (/FBAN|FBAV/i.test(navigator.userAgent)) {
+    window.location.href = `fb-messenger://share?link=${url}`;
+  } else {
+    window.open(
+      `https://www.facebook.com/dialog/send?link=${url}&app_id=YOUR_APP_ID&redirect_uri=${url}`,
+      '_blank','noopener'
+    );
+  }
+}
+
+function shareSMS(e) {
+  e.preventDefault();
+  const message = encodeURIComponent(`Found this free Amazon deal finder – makes filters actually work ${window.location.href}`);
+  window.location.href = `sms:?body=${message}`;
+}
+
+function shareTwitter(e) {
+  e.preventDefault();
+  const message = encodeURIComponent(`Found this free Amazon deal finder – makes filters actually work ${window.location.href}`);
+  // Try app, else fallback to intent
+  if (/Twitter/i.test(navigator.userAgent)) {
+    window.location.href = `twitter://post?message=${message}`;
+  } else {
+    window.open(`https://twitter.com/intent/tweet?text=${message}`, '_blank','noopener');
+  }
+}
+
+function shareFacebook(e) {
+  e.preventDefault();
+  const url = encodeURIComponent(window.location.href);
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank','noopener');
+}
