@@ -198,10 +198,10 @@ if (sort && sort !== 'relevance') params.set('s', sort);
       'fair-trade': 'p_n_feature_seven_browse-bin:21246940011',
 
       // ♻️ Badge
-      'climate-pledge': 'p_n_cpf_eligible:5191495011',
+      'climate-pledge': 'p_n_cpf_eligible:23523564011',
 
       // 🏪 Small Business (⚠️ verify code; placeholder uses same CPF id)
-      'small-business': 'p_n_cpf_eligible:5191495011'
+      'small-business': 'p_n_sb_certificate_id:13187369011'
     };
 
     Object.entries(rhMap).forEach(([field, code]) => pushRh(field, code));
@@ -252,5 +252,6 @@ if (sort && sort !== 'relevance') params.set('s', sort);
     if (!win) location.href = url;
   });
 });
+
 
 
