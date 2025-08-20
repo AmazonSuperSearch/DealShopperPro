@@ -253,10 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCheckboxes();
   setupFormValidation();
   
-  // Attach step toggle to headers
-  document.querySelectorAll('.step-header-mobile').forEach((header, index) => {
-    header.addEventListener('click', () => toggleStep(index + 1));
-  });
   
   // Auto-open first step and focus search input
   setTimeout(() => {
@@ -540,3 +536,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!win) location.href = url;
   });
 });
+
