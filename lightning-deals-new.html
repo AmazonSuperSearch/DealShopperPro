@@ -657,6 +657,11 @@
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+    /* Ensure navbar doesn't get affected by modern card styles */
+#navbar-placeholder,
+#navbar-placeholder * {
+  backdrop-filter: none;
+}
   </style>
 </head>
 
