@@ -1184,9 +1184,74 @@ body {
 
   <meta name="color-scheme" content="light dark">
 
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-P25-08-20">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","@id":"https://www.dealshopperpro.com/#howto-amazon-deals","name":"How to Find Amazon Deals Fast with Deal Shopper Pro","description":"A simple 6-step guide to search Amazon with advanced filters for Prime-only deals, Lightning Deals, coupons, price range, ratings, and brands.","url":"https://www.dealshopperpro.com/","image":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/og-image.jpg"},"totalTime":"PT1M","tool":[{"@type":"HowToTool","name":"Web browser"}],"estimatedCost":{"@type":"MonetaryAmount","currency":"USD","value":"0"},"step":[{"@type":"HowToStep","name":"Search Products","text":"Enter a product keyword, ASIN, ISBN, or UPC in Step 1 to start your Amazon search.","position":1},{"@type":"HowToStep","name":"Set Your Price Range","text":"Optionally add a minimum and/or maximum price to narrow results to your budget.","position":2},{"@type":"HowToStep","name":"Refine by Rating, Discount & Sort","text":"Choose sort order (price, reviews, newest), set minimum star rating, and optionally a minimum discount.","position":3},{"@type":"HowToStep","name":"Filter by Brand","text":"Enter one or more brand names (comma-separated) to include only specific brands.","position":4},{"@type":"HowToStep","name":"Choose Deal Filters","text":"Select Prime Only, Lightning Deals, Coupons, and other filters such as Today's Deals, Outlet, Clearance, and Free Shipping.","position":5},{"@type":"HowToStep","name":"View Your Results","text":"Submit the form to open your filtered results directly on Amazon in a new tab.","position":6}],"publisher":{"@id":"https://www.dealshopperpro.com/#organization"}}</script>
+ <meta name="referrer" content="strict-origin-when-cross-origin">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "@id": "https://www.dealshopperpro.com/#howto-amazon-deals",
+  "name": "How to Find Amazon Deals Fast with Deal Shopper Pro",
+  "description": "A simple 6-step guide to search Amazon with advanced filters for Prime-only deals, Lightning Deals, coupons, price range, ratings, and brands.",
+  "url": "https://www.dealshopperpro.com/",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.dealshopperpro.com/og-image.jpg"
+  },
+  "totalTime": "PT1M",
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Web browser"
+    }
+  ],
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": "0"
+  },
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Search Products",
+      "text": "Enter a product keyword, ASIN, ISBN, or UPC in Step 1 to start your Amazon search.",
+      "position": 1
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Set Your Price Range",
+      "text": "Optionally add a minimum and/or maximum price to narrow results to your budget.",
+      "position": 2
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Refine by Rating, Discount & Sort",
+      "text": "Choose sort order (price, reviews, newest), set minimum star rating, and optionally a minimum discount.",
+      "position": 3
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Filter by Brand",
+      "text": "Enter one or more brand names (comma-separated) to include only specific brands.",
+      "position": 4
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Choose Deal Filters",
+      "text": "Select Prime Only, Lightning Deals, Coupons, and other filters such as Today's Deals, Outlet, Clearance, and Free Shipping.",
+      "position": 5
+    },
+    {
+      "@type": "HowToStep",
+      "name": "View Your Results",
+      "text": "Submit the form to open your filtered results directly on Amazon in a new tab.",
+      "position": 6
+    }
+  ],
+  "publisher": {
+    "@id": "https://www.dealshopperpro.com/#organization"
+  }
+}
+</script>
 </head>
 
 <body>
@@ -1270,14 +1335,14 @@ P25-08-20">
       
       <!-- Step 1: Search -->
       <div class="step-card-mobile">
-        <button type="button" class="step-header-mobile" data-toggle="collapse" data-target="step1">
-          <span class="step-number-mobile">1</span>
-          <div class="flex-grow-1">
-            <div class="fw-semibold">Search Products</div>
-            <small class="text-muted d-block">Enter what you're looking for</small>
-          </div>
-          <i class="bi bi-chevron-down"></i>
-        </button>
+        <button type="button" class="step-header-mobile" data-bs-toggle="collapse" data-bs-target="#step1-body" aria-controls="step1-body" aria-expanded="true">
+  <span class="step-number-mobile" aria-hidden="true">1</span>
+  <span class="flex-grow-1">
+    <span class="fw-semibold">Search Products</span>
+    <small class="text-muted d-block">Enter what you're looking for</small>
+  </span>
+  <i class="bi bi-chevron-down" aria-hidden="true"></i>
+</button>
         <div class="step-body-mobile" id="step1-body">
           <div class="input-group-mobile">
             <span class="input-addon">
@@ -1292,14 +1357,20 @@ P25-08-20">
 
       <!-- Step 2: Price Range -->
       <div class="step-card-mobile">
-        <button type="button" class="step-header-mobile collapsed" data-toggle="collapse" data-target="step2">
-          <span class="step-number-mobile">2</span>
-          <div class="flex-grow-1">
-            <div class="fw-semibold">Price Range</div>
-            <small class="text-muted d-block">Set your budget</small>
-          </div>
-          <i class="bi bi-chevron-down"></i>
-        </button>
+        <button type="button" 
+        class="step-header-mobile collapsed" 
+        data-toggle="collapse" 
+        data-target="#step2-body" 
+        aria-expanded="false" 
+        aria-controls="step2-body">
+  <span class="step-number-mobile">2</span>
+  <span class="flex-grow-1 d-flex flex-column text-start">
+    <span class="fw-semibold">Price Range</span>
+    <small class="text-muted">Set your budget</small>
+  </span>
+  <i class="bi bi-chevron-down"></i>
+</button>
+
         <div class="step-body-mobile d-none" id="step2-body">
           <div class="row">
             <div class="col-6">
@@ -1324,14 +1395,20 @@ P25-08-20">
 
       <!-- Step 3: Quick Filters -->
       <div class="step-card-mobile">
-        <button type="button" class="step-header-mobile collapsed" data-toggle="collapse" data-target="step3">
-          <span class="step-number-mobile">3</span>
-          <div class="flex-grow-1">
-            <div class="fw-semibold">Quick Filters</div>
-            <small class="text-muted d-block">Rating, discount, sort order</small>
-          </div>
-          <i class="bi bi-chevron-down"></i>
-        </button>
+       <button type="button"
+        class="step-header-mobile collapsed"
+        data-toggle="collapse"
+        data-target="#step3-body"
+        aria-expanded="false"
+        aria-controls="step3-body">
+  <span class="step-number-mobile">3</span>
+  <span class="flex-grow-1 d-flex flex-column text-start">
+    <span class="fw-semibold">Quick Filters</span>
+    <small class="text-muted">Rating, discount, sort order</small>
+  </span>
+  <i class="bi bi-chevron-down"></i>
+</button>
+
         <div class="step-body-mobile d-none" id="step3-body">
           <label class="form-label fw-semibold">Sort By</label>
           <select class="form-control-mobile" id="sortOrder" name="sort">
@@ -1364,14 +1441,20 @@ P25-08-20">
 
       <!-- Step 4: Brand Filter -->
       <div class="step-card-mobile">
-        <button type="button" class="step-header-mobile collapsed" data-toggle="collapse" data-target="step4">
-          <span class="step-number-mobile">4</span>
-          <div class="flex-grow-1">
-            <div class="fw-semibold">Brand Filter</div>
-            <small class="text-muted d-block">Filter by specific brands</small>
-          </div>
-          <i class="bi bi-chevron-down"></i>
-        </button>
+        <button type="button"
+        class="step-header-mobile collapsed"
+        data-toggle="collapse"
+        data-target="#step4-body"
+        aria-expanded="false"
+        aria-controls="step4-body">
+  <span class="step-number-mobile">4</span>
+  <span class="flex-grow-1 d-flex flex-column text-start">
+    <span class="fw-semibold">Brand Filter</span>
+    <small class="text-muted">Filter by specific brands</small>
+  </span>
+  <i class="bi bi-chevron-down"></i>
+</button>
+
         <div class="step-body-mobile d-none" id="step4-body">
           <label class="form-label fw-semibold">Include Brands</label>
           <input type="text" class="form-control-mobile" id="brandInclude" name="brand-include" 
@@ -1382,14 +1465,20 @@ P25-08-20">
 
       <!-- Step 5: Deal Filters -->
       <div class="step-card-mobile">
-        <button type="button" class="step-header-mobile collapsed" data-toggle="collapse" data-target="step5">
-          <span class="step-number-mobile">5</span>
-          <div class="flex-grow-1">
-            <div class="fw-semibold">Deal Filters</div>
-            <small class="text-muted d-block">Prime, Lightning Deals, Coupons</small>
-          </div>
-          <i class="bi bi-chevron-down"></i>
-        </button>
+        <button type="button" 
+        class="step-header-mobile collapsed" 
+        data-toggle="collapse" 
+        data-target="#step5-body" 
+        aria-expanded="false" 
+        aria-controls="step5-body">
+  <span class="step-number-mobile">5</span>
+  <span class="flex-grow-1 d-flex flex-column text-start">
+    <span class="fw-semibold">Deal Filters</span>
+    <small class="text-muted">Prime, Lightning Deals, Coupons</small>
+  </span>
+  <i class="bi bi-chevron-down"></i>
+</button>
+
         <div class="step-body-mobile d-none" id="step5-body">
           
           <!-- Popular Deals -->
@@ -1728,14 +1817,20 @@ P25-08-20">
 
       <!-- Step 6: Submit -->
       <div class="step-card-mobile">
-        <button type="button" class="step-header-mobile collapsed" data-toggle="collapse" data-target="step6">
-          <span class="step-number-mobile">6</span>
-          <div class="flex-grow-1">
-            <div class="fw-semibold">Search Amazon</div>
-            <small class="text-muted d-block">Get your filtered results</small>
-          </div>
-          <i class="bi bi-chevron-down"></i>
-        </button>
+       <button type="button" 
+        class="step-header-mobile collapsed" 
+        data-toggle="collapse" 
+        data-target="#step6-body" 
+        aria-expanded="false" 
+        aria-controls="step6-body">
+  <span class="step-number-mobile">6</span>
+  <span class="flex-grow-1 d-flex flex-column text-start">
+    <span class="fw-semibold">Search Amazon</span>
+    <small class="text-muted">Get your filtered results</small>
+  </span>
+  <i class="bi bi-chevron-down"></i>
+</button>
+
         <div class="step-body-mobile d-none" id="step6-body">
           <div class="text-center">
             <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
