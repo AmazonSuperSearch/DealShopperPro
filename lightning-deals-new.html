@@ -62,6 +62,8 @@
   <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube.com" crossorigin>
+  <link rel="preconnect" href="https://img.youtube.com" crossorigin>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -129,7 +131,7 @@
   <script defer src="/navbar-loader.js"></script>
 
   <!-- LCP image -->
-  <img src="how-to-find-lightning-deals-amazon.webp" width="480" height="270" alt="How to find Lightning Deals on Amazon with Prime, price and coupon filters" class="intro-image" fetchpriority="high" decoding="async" loading="eager">
+  <img src="/how-to-find-lightning-deals-amazon.webp" width="480" height="270" alt="How to find Lightning Deals on Amazon with Prime, price and coupon filters" class="intro-image" fetchpriority="high" decoding="async" loading="eager">
 
   <main id="main-content" tabindex="-1">
     <div class="container text-center">
@@ -227,12 +229,12 @@
           <p class="text-secondary fs-5">Use our 6‑step advanced system to surface only the <strong>best Amazon lightning deals</strong> for your budget.</p>
         </div>
         <div class="p-2">
-          <div class="step-container"><div class="d-flex gap-3 align-items-start"><div class="step-number">1</div><div><h3 class="h5">Step 1: Enter a Product Name or Keyword</h3><img src="amazon-lightning-deals-keyword-search.png" width="800" height="450" loading="lazy" alt="Keyword search for Amazon lightning deals" class="step-image"></div></div></div>
-          <div class="step-container"><div class="d-flex gap-3 align-items-start"><div class="step-number">2</div><div><h3 class="h5">Step 2: Select Currency & Set Price Range</h3><img src="amazon-lightning-deals-price-rating-filter.png" width="800" height="450" loading="lazy" alt="Price and rating filters for Lightning Deals" class="step-image"></div></div></div>
-          <div class="step-container"><div class="d-flex gap-3 align-items-start"><div class="step-number">3</div><div><h3 class="h5">Step 3: Filter by Discount %, Rating & Sort Order</h3><img src="refine-by-rating-discount-sort-order.png" width="800" height="450" loading="lazy" alt="Rating, discount and sort filters for Lightning Deals" class="step-image"></div></div></div>
-          <div class="step-container"><div class="d-flex gap-3 align-items-start"><div class="step-number">4</div><div><h3 class="h5">Step 4: Filter by Brand</h3><img src="amazon-lightning-deals-brand-filter.png" width="800" height="450" loading="lazy" alt="Brand filter for Amazon Lightning Deals" class="step-image"></div></div></div>
-          <div class="step-container"><div class="d-flex gap-3 align-items-start"><div class="step-number">5</div><div><h3 class="h5">Step 5: Turn On Prime &amp; Lightning Deals</h3><img src="amazon-lightning-deals-enable-lightning-deals-filter.png" width="800" height="450" loading="lazy" alt="Enable Prime and Lightning Deals filters" class="step-image"></div></div></div>
-          <div class="step-container"><div class="d-flex gap-3 align-items-start"><div class="step-number">6</div><div><h3 class="h5">Step 6: Browse Results — Only Lightning Deals</h3><img src="amazon-lightning-deals-view-results.png" width="800" height="450" loading="lazy" alt="Filtered results showing only Amazon Lightning Deals" class="step-image"></div></div></div>
+          <div class="step-container" id="option3-step1"><div class="d-flex gap-3 align-items-start"><div class="step-number">1</div><div><h3 class="h5">Step 1: Enter a Product Name or Keyword</h3><img src="amazon-lightning-deals-keyword-search.png" width="800" height="450" loading="lazy" alt="Keyword search for Amazon lightning deals" class="step-image"></div></div></div>
+          <div class="step-container" id="option3-step2"><div class="d-flex gap-3 align-items-start"><div class="step-number">2</div><div><h3 class="h5">Step 2: Select Currency & Set Price Range</h3><img src="amazon-lightning-deals-price-rating-filter.png" width="800" height="450" loading="lazy" alt="Price and rating filters for Lightning Deals" class="step-image"></div></div></div>
+          <div class="step-container" id="option3-step3"><div class="d-flex gap-3 align-items-start"><div class="step-number">3</div><div><h3 class="h5">Step 3: Filter by Discount %, Rating & Sort Order</h3><img src="refine-by-rating-discount-sort-order.png" width="800" height="450" loading="lazy" alt="Rating, discount and sort filters for Lightning Deals" class="step-image"></div></div></div>
+          <div class="step-container" id="option3-step4"><div class="d-flex gap-3 align-items-start"><div class="step-number">4</div><div><h3 class="h5">Step 4: Filter by Brand</h3><img src="amazon-lightning-deals-brand-filter.png" width="800" height="450" loading="lazy" alt="Brand filter for Amazon Lightning Deals" class="step-image"></div></div></div>
+          <div class="step-container" id="option3-step5"><div class="d-flex gap-3 align-items-start"><div class="step-number">5</div><div><h3 class="h5">Step 5: Turn On Prime &amp; Lightning Deals</h3><img src="amazon-lightning-deals-enable-lightning-deals-filter.png" width="800" height="450" loading="lazy" alt="Enable Prime and Lightning Deals filters" class="step-image"></div></div></div>
+          <div class="step-container" id="option3-step6"><div class="d-flex gap-3 align-items-start"><div class="step-number">6</div><div><h3 class="h5">Step 6: Browse Results — Only Lightning Deals</h3><img src="amazon-lightning-deals-view-results.png" width="800" height="450" loading="lazy" alt="Filtered results showing only Amazon Lightning Deals" class="step-image"></div></div></div>
         </div>
       </div>
     </section>
@@ -244,7 +246,7 @@
         <ol>
           <li><strong>Check often.</strong> Deals refresh all day; mornings and early evenings see spikes.</li>
           <li><strong>Use brand + price together.</strong> Narrow to your budget and brand to avoid noise.</li>
-          <li><strong>Sort by newest.</strong> Our form sends \"date-desc-rank\" to prioritize fresh deals.</li>
+          <li><strong>Sort by newest.</strong> Our form sends “date-desc-rank” to prioritize fresh deals.</li>
           <li><strong>Watch the claim bar.</strong> If you see 80%+ claimed, buy now or join the waitlist.</li>
           <li><strong>Stack coupons.</strong> Clip the extra savings box on the product page when available.</li>
         </ol>
@@ -273,7 +275,7 @@
         </details>
         <details>
           <summary>How to get lightning deals on Amazon?</summary>
-          <p>Click \"View All Lightning Deals\" for a fast scan, then turn on filters (Prime‑only, coupons, price range) to narrow down to your needs.</p>
+          <p>Click “View All Lightning Deals” for a fast scan, then turn on filters (Prime‑only, coupons, price range) to narrow down to your needs.</p>
         </details>
         <details>
           <summary>What are the best Amazon lightning deals today?</summary>
@@ -422,7 +424,7 @@
     "mainEntity":[
       {"@type":"Question","name":"How do I find lightning deals on Amazon?","acceptedAnswer":{"@type":"Answer","text":"Use our Lightning Deals finder to filter by keyword, price, Prime, rating and coupons—no login required. Or browse all current deals in Option 1."}},
       {"@type":"Question","name":"How to search Amazon lightning deals?","acceptedAnswer":{"@type":"Answer","text":"Use the keyword & price form in Option 2. It builds a live Amazon results URL filtered to Lightning Deals only."}},
-      {"@type":"Question","name":"How to get lightning deals on Amazon?","acceptedAnswer":{"@type":"Answer","text":"Click \"View All Lightning Deals\" for a fast scan, then turn on filters (Prime‑only, coupons, price range) to narrow down to your needs."}},
+      {"@type":"Question","name":"How to get lightning deals on Amazon?","acceptedAnswer":{"@type":"Answer","text":"Click “View All Lightning Deals” for a fast scan, then turn on filters (Prime‑only, coupons, price range) to narrow down to your needs."}},
       {"@type":"Question","name":"What are the best Amazon lightning deals today?","acceptedAnswer":{"@type":"Answer","text":"Start with Option 1 to see everything, then apply rating (4★+), discount %, and coupons in Option 3 to surface the best Amazon lightning deals today."}},
       {"@type":"Question","name":"Are Lightning Deals only for Prime members?","acceptedAnswer":{"@type":"Answer","text":"Not always. Many are public, but some are Prime‑exclusive. Use the Prime checkbox in Option 3 to filter for Prime‑eligible offers."}},
       {"@type":"Question","name":"How long do Lightning Deals last?","acceptedAnswer":{"@type":"Answer","text":"Typically a few hours or until stock runs out. Watch the percentage‑claimed bar and act quickly."}}
@@ -463,5 +465,21 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.3/src/lite-yt-embed.css">
   <script type="module" src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.3/src/lite-yt-embed.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Structured Data: ItemList (3 Methods) -->
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "@id":"https://www.dealshopperpro.com/lightning-deals.html#methods",
+    "name":"Ways to Find Amazon Lightning Deals Today",
+    "itemListOrder":"Ascending",
+    "numberOfItems":3,
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"View All Amazon Lightning Deals (Live)","url":"https://www.dealshopperpro.com/lightning-deals.html#option1"},
+      {"@type":"ListItem","position":2,"name":"Find Lightning Deals on Amazon by Keyword & Price","url":"https://www.dealshopperpro.com/lightning-deals.html#option2"},
+      {"@type":"ListItem","position":3,"name":"Advanced Amazon Deal Finder — Filter Prime Lightning Deals in 6 Steps","url":"https://www.dealshopperpro.com/lightning-deals.html#option3"}
+    ]
+  }</script>
+
 </body>
 </html>
