@@ -6,30 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
 
-  <!-- Title & Description -->
-  <title>Amazon Lightning Deals: 3 Fast Ways to Find Them (2025 Guide) | Deal Shopper Pro</title>
-  <meta name="description" content="Find Amazon Lightning Deals in seconds — browse live deals, run keyword + price searches, or use a 6-step advanced filter for Prime-only, coupons, and more. No login needed.">
+  <!-- Title & Description (GSC-informed keywords) -->
+  <title>Find Amazon Lightning Deals Today | Prime Lightning Deals Finder – Deal Shopper Pro</title>
+  <meta name="description" content="Find Amazon Lightning Deals today. Learn how to find lightning deals on Amazon fast — browse all, search by keyword & price, or use our Prime Lightning Deals finder with coupon and rating filters.">
 
   <!-- Canonical & Hreflang -->
   <link rel="canonical" href="https://www.dealshopperpro.com/lightning-deals.html">
   <link rel="alternate" hreflang="en-US" href="https://www.dealshopperpro.com/lightning-deals.html">
   <link rel="alternate" hreflang="x-default" href="https://www.dealshopperpro.com/lightning-deals.html">
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="article">
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://www.dealshopperpro.com/lightning-deals.html">
   <meta property="og:site_name" content="Deal Shopper Pro">
-  <meta property="og:title" content="Amazon Lightning Deals: 3 Fast Ways to Find Them (2025 Guide)">
-  <meta property="og:description" content="Find Amazon Lightning Deals in seconds — browse live deals, run keyword + price searches, or use a 6-step advanced filter for Prime-only, coupons, and more.">
+  <meta property="og:title" content="Amazon Lightning Deals Today – Find Prime Lightning Deals Fast">
+  <meta property="og:description" content="How to find lightning deals on Amazon: browse all, run keyword & price searches, or use a 6-step advanced Amazon deal finder to surface the best Amazon lightning deals today.">
   <meta property="og:image" content="https://www.dealshopperpro.com/images/howto-lightning-deals.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="How to quickly find Amazon Lightning Deals with filters for price, rating, Prime, and coupons">
+  <meta property="og:image:alt" content="Amazon Lightning Deals Finder with Prime, price, rating, and coupon filters">
 
   <!-- Publishing dates -->
   <meta content="2025-06-29T00:00:00+00:00" property="article:published_time">
-  <meta content="2025-08-01T00:00:00+00:00" property="article:modified_time">
+  <meta content="2025-08-21T00:00:00+00:00" property="article:modified_time">
 
   <!-- Favicons -->
   <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
@@ -51,1334 +51,400 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap CSS -->
+  <!-- Preload critical CSS/JS -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.3/src/lite-yt-embed.css" as="style">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" as="script">
+
+  <!-- Bootstrap CSS & Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="/navbar.css">
 
   <!-- Custom Styles -->
   <style>
     :root {
-      /* Modern color palette */
-      --primary: #6366f1;
-      --primary-hover: #5b21b6;
-      --secondary: #ec4899;
-      --accent: #06b6d4;
-      --success: #10b981;
-      --warning: #f59e0b;
-      --danger: #ef4444;
-      
-      /* Gradients */
-      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-      --gradient-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-      --gradient-warning: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-      --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      
-      /* Glass morphism */
-      --glass-bg: rgba(255, 255, 255, 0.25);
-      --glass-border: rgba(255, 255, 255, 0.18);
-      --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-      
-      /* Text colors */
-      --text-primary: #1f2937;
-      --text-secondary: #6b7280;
-      --text-muted: #9ca3af;
-      
-      /* Spacing and borders */
-      --border-radius: 16px;
-      --border-radius-lg: 24px;
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+      --primary:#6366f1; --primary-hover:#5b21b6; --secondary:#ec4899; --accent:#06b6d4;
+      --success:#10b981; --warning:#f59e0b; --danger:#ef4444;
+      --gradient-primary:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+      --gradient-hero:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+      --text-primary:#1f2937; --text-secondary:#6b7280; --text-muted:#9ca3af;
+      --border-radius:16px; --border-radius-lg:24px; --transition:all .3s cubic-bezier(.4,0,.2,1);
+      --shadow:0 10px 25px rgba(0,0,0,.1); --shadow-hover:0 20px 40px rgba(0,0,0,.15);
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing:border-box; }
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      color: var(--text-primary);
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      min-height: 100vh;
-      font-weight: 400;
-    }
-
-    /* Skip link accessibility */
-    .visually-hidden-focusable {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    .visually-hidden-focusable:focus {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 9999;
-      width: auto;
-      height: auto;
-      padding: 12px 20px;
-      margin: 0;
-      overflow: visible;
-      clip: auto;
-      white-space: normal;
-      background: var(--text-primary);
-      color: white;
-      border-radius: var(--border-radius);
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: var(--shadow);
-    }
-
-    /* Intro image */
-    .intro-image {
-      display: block;
-      margin: 2rem auto 3rem;
-      max-width: 100%;
-      height: auto;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-    }
-
-    .intro-image:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    @media (min-width: 768px) {
-      .intro-image {
-        width: 480px;
-      }
-    }
-
-    /* Hero section */
-    .hero-banner {
-      background: var(--gradient-hero);
-      color: white;
-      position: relative;
-      overflow: hidden;
-      border-radius: 0 0 50px 50px;
-      margin-bottom: 4rem;
-    }
-
-    .hero-banner::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="100" fill="rgba(255,255,255,0.1)"/><circle cx="800" cy="300" r="150" fill="rgba(255,255,255,0.05)"/><circle cx="400" cy="700" r="120" fill="rgba(255,255,255,0.08)"/></svg>');
-      pointer-events: none;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-heading {
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 800;
-      margin-bottom: 1.5rem;
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      letter-spacing: -0.02em;
-    }
-
-    .hero-tagline {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      opacity: 0.95;
-    }
-
-    .hero-subtitle {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-      font-weight: 400;
-    }
-
-    /* Modern cards */
-    .modern-card {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-      overflow: hidden;
-    }
-
-    .modern-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    /* Modern buttons */
-    .btn-modern {
-      border: none;
-      border-radius: var(--border-radius);
-      padding: 14px 28px;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      letter-spacing: 0.025em;
-    }
-
-    .btn-modern::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-      transition: left 0.6s;
-    }
-
-    .btn-modern:hover::before {
-      left: 100%;
-    }
-
-    .btn-modern:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    .btn-primary-modern {
-      background: var(--gradient-primary);
-      color: white;
-    }
-
-    .btn-success-modern {
-      background: var(--gradient-success);
-      color: white;
-    }
-
-    .btn-warning-modern {
-      background: var(--gradient-warning);
-      color: var(--text-primary);
-    }
-
-    .btn-glow {
-      background: var(--gradient-accent);
-      color: white;
-      box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
-      animation: glow-pulse 3s ease-in-out infinite alternate;
-    }
-
-    @keyframes glow-pulse {
-      from { 
-        box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
-        transform: scale(1);
-      }
-      to { 
-        box-shadow: 0 12px 35px rgba(79, 172, 254, 0.6), 0 0 40px rgba(79, 172, 254, 0.3);
-        transform: scale(1.02);
-      }
-    }
-
-    .btn-glow:hover {
-      animation: none;
-      transform: translateY(-3px) scale(1.05);
-    }
-
-    /* Outline buttons for hero */
-    .btn-outline-modern {
-      background: transparent;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      color: white;
-      backdrop-filter: blur(10px);
-    }
-
-    .btn-outline-modern:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.5);
-      color: white;
-    }
-
-    /* Badge styling */
-    .badge-modern {
-      border-radius: 20px;
-      padding: 10px 18px;
-      font-weight: 600;
-      font-size: 0.875rem;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      transition: var(--transition);
-      margin: 4px;
-    }
-
-    .badge-modern:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Form styling */
-    .form-modern {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: var(--border-radius);
-      padding: 2.5rem;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(20px);
-    }
-
-    .form-control-modern {
-      border: 2px solid rgba(102, 126, 234, 0.15);
-      border-radius: 12px;
-      padding: 16px 20px;
-      font-size: 1.1rem;
-      transition: var(--transition);
-      background: rgba(255, 255, 255, 0.9);
-      font-weight: 500;
-    }
-
-    .form-control-modern:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
-      background: white;
-      outline: none;
-    }
-
-    .form-control-modern::placeholder {
-      color: var(--text-muted);
-      font-weight: 400;
-    }
-
-    /* Step styling */
-    .step-container {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: var(--border-radius);
-      padding: 2rem;
-      margin-bottom: 2rem;
-      border-left: 5px solid var(--primary);
-      transition: var(--transition);
-      box-shadow: var(--shadow);
-    }
-
-    .step-container:hover {
-      transform: translateX(8px);
-      box-shadow: var(--shadow-hover);
-    }
-
-    .step-number {
-      background: var(--gradient-primary);
-      color: white;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-    }
-
-    .step-image {
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-      width: 100%;
-      height: auto;
-    }
-
-    .step-image:hover {
-      transform: scale(1.02);
-      box-shadow: var(--shadow-hover);
-    }
-
-    /* FAQ styling */
-    .faq-section {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(20px);
-      border-radius: var(--border-radius-lg);
-      padding: 3rem;
-      box-shadow: var(--shadow);
-    }
-
-    details {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border: 1px solid rgba(102, 126, 234, 0.1);
-      transition: var(--transition);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    details:hover {
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-      transform: translateY(-2px);
-    }
-
-    details[open] {
-      background: rgba(102, 126, 234, 0.05);
-      border-color: var(--primary);
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 700;
-      color: var(--text-primary);
-      transition: var(--transition);
-      font-size: 1.1rem;
-    }
-
-    summary:hover {
-      color: var(--primary);
-    }
-
-    /* Video container */
-    .video-container {
-      border-radius: var(--border-radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: var(--transition);
-    }
-
-    .video-container:hover {
-      transform: scale(1.02);
-      box-shadow: var(--shadow-hover);
-    }
-
-    /* Share buttons */
-    .share-button {
-      border-radius: 12px;
-      padding: 12px 24px;
-      font-weight: 600;
-      transition: var(--transition);
-      border: none;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin: 4px;
-    }
-
-    .share-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Footer */
-    .footer-modern {
-      background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-      color: white;
-      border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
-      margin-top: 4rem;
-      padding: 3rem 2rem 2rem;
-    }
-
-    .footer-modern a {
-      color: rgba(255, 255, 255, 0.8);
-      text-decoration: none;
-      transition: var(--transition);
-    }
-
-    .footer-modern a:hover {
-      color: white;
-      text-decoration: underline;
-    }
-
-    /* Background decorations */
-    .bg-pattern {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .bg-pattern::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(102, 126, 234, 0.1)"/></svg>');
-      background-size: 50px 50px;
-      pointer-events: none;
-      opacity: 0.5;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .hero-banner {
-        border-radius: 0 0 30px 30px;
-        padding: 2rem 1rem;
-      }
-      
-      .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-      
-      .form-modern {
-        padding: 2rem 1.5rem;
-      }
-      
-      .faq-section {
-        padding: 2rem 1.5rem;
-      }
-
-      .step-container {
-        padding: 1.5rem;
-      }
-
-      .hero-heading {
-        font-size: clamp(2rem, 8vw, 3rem);
-      }
-
-      .hero-tagline {
-        font-size: 1.2rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1rem;
-      }
-    }
-
-    /* Animation utilities */
-    .fade-in {
-      animation: fadeIn 0.8s ease-out;
-    }
-
-    @keyframes fadeIn {
-      from { 
-        opacity: 0; 
-        transform: translateY(30px); 
-      }
-      to { 
-        opacity: 1; 
-        transform: translateY(0); 
-      }
-    }
-
-    .slide-up {
-      animation: slideUp 0.6s ease-out;
-    }
-
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Updated date styling */
-    .update-badge {
-      background: rgba(16, 185, 129, 0.1);
-      color: var(--success);
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      display: inline-block;
-      margin-bottom: 2rem;
-      border: 1px solid rgba(16, 185, 129, 0.2);
-    }
-
-    /* Section spacing */
-    .section-modern {
-      margin: 4rem 0;
-    }
-
-    /* List styling */
-    .modern-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .modern-list li {
-      padding: 12px 0;
-      border-bottom: 1px solid rgba(102, 126, 234, 0.1);
-      font-weight: 500;
-    }
-
-    .modern-list li:last-child {
-      border-bottom: none;
-    }
-
-    /* Disclosure styling */
-    .disclosure-badge {
-      background: rgba(99, 102, 241, 0.1);
-      border: 1px solid rgba(99, 102, 241, 0.2);
-      border-radius: var(--border-radius);
-      padding: 1.5rem;
-      margin: 2rem 0;
-      backdrop-filter: blur(10px);
-    }
-
-    /* Loading animation for buttons */
-    .btn-loading {
-      position: relative;
-      color: transparent;
-    }
-
-    .btn-loading::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 20px;
-      height: 20px;
-      margin: -10px 0 0 -10px;
-      border: 2px solid transparent;
-      border-top: 2px solid white;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    /* Ensure navbar doesn't get affected by modern card styles */
-#navbar-placeholder,
-#navbar-placeholder * {
-  backdrop-filter: none;
-}
+      font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+      background:linear-gradient(135deg,#f8fafc 0%,#e2e8f0 100%); color:var(--text-primary);
+      line-height:1.6; min-height:100vh;
+    }
+    .visually-hidden-focusable { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
+    .visually-hidden-focusable:focus { position:fixed;top:20px;left:20px;z-index:9999;width:auto;height:auto;padding:12px 20px;margin:0;overflow:visible;clip:auto;white-space:normal;background:#111;color:#fff;border-radius:12px;text-decoration:none;font-weight:600;box-shadow:var(--shadow); }
+    .intro-image { display:block;margin:2rem auto 3rem;max-width:100%;height:auto;border-radius:var(--border-radius);box-shadow:var(--shadow);transition:var(--transition); }
+    .intro-image:hover { transform:translateY(-4px);box-shadow:var(--shadow-hover); }
+    @media (min-width:768px){ .intro-image{ width:480px; } }
+    .hero-banner { background:var(--gradient-hero); color:#fff; position:relative; border-radius:0 0 50px 50px; margin-bottom:4rem; overflow:hidden; }
+    .hero-content { position:relative; z-index:1; }
+    .hero-heading { font-size:clamp(2.4rem,6vw,4rem); font-weight:800; letter-spacing:-.02em; margin-bottom:1rem; }
+    .hero-tagline { font-size:1.5rem; font-weight:600; opacity:.95; }
+    .hero-subtitle { font-size:1.1rem; opacity:.9; }
+    .modern-card { background:rgba(255,255,255,.95); border:1px solid rgba(255,255,255,.2); border-radius:var(--border-radius); box-shadow:var(--shadow); backdrop-filter:blur(20px); }
+    .btn-modern { border:none; border-radius:14px; padding:14px 24px; font-weight:700; display:inline-flex; gap:10px; align-items:center; transition:var(--transition); }
+    .btn-modern:hover { transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.15); }
+    .btn-outline-modern { background:transparent; border:2px solid rgba(255,255,255,.35); color:#fff; }
+    .btn-primary-modern { background:var(--gradient-primary); color:#fff; }
+    .update-badge { background:rgba(16,185,129,.1); color:#10b981; border:1px solid rgba(16,185,129,.2); padding:8px 16px; border-radius:20px; font-weight:700; display:inline-block; }
+    .section-modern { margin:4rem 0; }
+    .modern-list { list-style:none; padding:0; }
+    .modern-list li { padding:10px 0; border-bottom:1px solid rgba(99,102,241,.12); }
+    .step-container { background:#fff; border-left:5px solid var(--primary); border-radius:16px; padding:1.75rem; margin-bottom:1.25rem; box-shadow:var(--shadow); }
+    .step-number { background:var(--gradient-primary); color:#fff; width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; }
+    .step-image { border-radius:12px; width:100%; height:auto; box-shadow:var(--shadow); }
+    .faq-section { background:rgba(255,255,255,.9); border-radius:24px; padding:2rem; box-shadow:var(--shadow); }
+    details { border:1px solid rgba(99,102,241,.2); border-radius:12px; padding:1.25rem; margin-bottom:1rem; }
+    summary { cursor:pointer; font-weight:700; }
+    .footer-modern { background:linear-gradient(135deg,#2c3e50 0%,#34495e 100%); color:#fff; border-radius:24px 24px 0 0; padding:3rem 2rem; }
   </style>
 </head>
-
 <body>
   <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
-  
   <div id="navbar-placeholder"></div>
   <script defer src="/navbar-loader.js"></script>
 
-  <img alt="How to Find Lightning Deals on Amazon" class="intro-image fade-in" src="how-to-find-lightning-deals-amazon.webp" width="480">
+  <!-- LCP image -->
+  <img src="how-to-find-lightning-deals-amazon.webp" width="480" height="270" alt="How to find Lightning Deals on Amazon with Prime, price and coupon filters" class="intro-image" fetchpriority="high" decoding="async" loading="eager">
 
   <main id="main-content" tabindex="-1">
     <div class="container text-center">
-      <div class="update-badge fade-in">
-        <i class="bi bi-check-circle-fill me-2"></i>
-        Updated August 2025 — All methods tested and working
-      </div>
+      <span class="update-badge mt-4">Updated 2025-08-21 • Methods tested & working</span>
     </div>
 
-    <!-- Hero Banner -->
-    <header aria-labelledby="page-title" class="hero-banner">
+    <!-- HERO -->
+    <header class="hero-banner" aria-labelledby="page-title">
       <div class="container hero-content text-center py-5">
-        <h1 class="hero-heading slide-up" id="page-title">How to Find Lightning Deals on Amazon</h1>
-        <p class="hero-tagline slide-up">⚡ Discover limited-time Amazon deals in seconds ⚡</p>
-        <p class="hero-subtitle slide-up">Use our free Amazon savings tool—no login, no fluff, just hidden discounts and fast-expiring offers.</p>
-        
-        <div class="row justify-content-center mb-4">
-          <div class="col-lg-8">
-            <p class="mb-4 slide-up">Want to skip the clutter and go straight to Amazon's most time-sensitive offers? Deal Shopper Pro helps you uncover hidden coupons and top discounts before they disappear.</p>
-            
-            <ul class="modern-list text-start slide-up">
-              <li><strong>Option 1:</strong> One-click browse of all active Lightning Deals.</li>
-              <li><strong>Option 2:</strong> Enter a keyword and set a price range—our Amazon lightning deals search does the rest.</li>
-              <li><strong>Option 3:</strong> Follow our 6-step advanced guide for precise filtering—your ultimate Amazon deal finder.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="disclosure-badge slide-up">
-          <p class="mb-0">
-            <strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. 
-            We may also earn a commission from Amazon links on this page at no extra cost to you.
-          </p>
-        </div>
-
-        <p class="mb-4 slide-up">This free service never tracks you. See our <a href="#footer" class="text-white text-decoration-underline">privacy policy</a> below, and share with friends to help them find lightning deals on Amazon faster.</p>
-
-        <h2 class="h4 mb-4 text-white slide-up">Master How to Find Lightning Deals on Amazon: 3 Easy Methods</h2>
-
-        <div class="d-flex flex-wrap justify-content-center gap-3 slide-up">
-          <a class="btn btn-modern btn-outline-modern" href="#option1">
-            <i class="bi bi-search"></i> View All Lightning Deals
-          </a>
-          <a class="btn btn-modern btn-outline-modern" href="#option2">
-            <i class="bi bi-lightning"></i> Keyword & Price Search
-          </a>
-          <a class="btn btn-modern btn-outline-modern" href="#option3">
-            <i class="bi bi-funnel"></i> 6-Step Advanced Filter
-          </a>
+        <h1 id="page-title" class="hero-heading">Amazon Lightning Deals Finder – Today’s Best Lightning Deals</h1>
+        <p class="hero-tagline">⚡ Find Amazon Lightning Deals today with stacked filters Amazon’s own site doesn’t let you combine.</p>
+        <p class="hero-subtitle">Three fast methods below: browse all Lightning Deals, search by keyword and price, or use our 6‑step advanced <em>Amazon deal finder</em> for Prime Lightning Deals, coupons and more.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+          <a href="#option1" class="btn btn-modern btn-outline-modern"><i class="bi bi-lightning"></i> View All Lightning Deals</a>
+          <a href="#option2" class="btn btn-modern btn-outline-modern"><i class="bi bi-search"></i> Keyword &amp; Price Search</a>
+          <a href="#option3" class="btn btn-modern btn-outline-modern"><i class="bi bi-funnel"></i> 6‑Step Advanced Filters</a>
         </div>
       </div>
     </header>
 
-    <!-- Feature Badges -->
-    <section aria-labelledby="filter-tags-heading" class="container section-modern">
-      <div class="modern-card p-4 text-center fade-in">
-        <h2 class="h4 mb-3" id="filter-tags-heading">🎁 Bonus: Option 3 – Advanced Lightning Deal Search</h2>
-        <p class="mb-4 fw-semibold text-secondary">Filter by:</p>
-        <div class="d-flex flex-wrap justify-content-center">
-          <span class="badge badge-modern bg-primary text-white">🤩 Prime‑Only</span>
-          <span class="badge badge-modern bg-warning text-dark">⚡ Lightning Deals</span>
-          <span class="badge badge-modern bg-danger text-white">🔥 Today's Deals</span>
-          <span class="badge badge-modern bg-success text-white">🚚 Free Shipping</span>
-          <span class="badge badge-modern bg-info text-white">📦 In Stock</span>
-          <span class="badge badge-modern bg-dark text-white">🏷️ Coupons</span>
-          <span class="badge badge-modern bg-secondary text-white">💲 Currency</span>
-          <span class="badge badge-modern bg-primary text-white">📉 Discount %</span>
-          <span class="badge badge-modern bg-warning text-dark">⭐ Min Rating</span>
-          <span class="badge badge-modern bg-success text-white">🏷️ Brand Filter</span>
-          <span class="badge badge-modern bg-primary text-white">💰 Min Price</span>
-          <span class="badge badge-modern bg-primary text-white">💵 Max Price</span>
-          <span class="badge badge-modern bg-info text-white">🔁 Subscribe & Save</span>
-          <span class="badge badge-modern bg-light text-dark border">🎀 Gifts for Her</span>
-          <span class="badge badge-modern bg-light text-dark border">👔 Gifts for Him</span>
-          <span class="badge badge-modern bg-light text-dark border">🎂 Birthday</span>
-          <span class="badge badge-modern bg-light text-dark border">💝 Anniversary</span>
-          <span class="badge badge-modern bg-light text-dark border">🎄 Holiday</span>
-          <span class="badge badge-modern bg-success text-white">♻️ Eco‑Friendly</span>
-          <span class="badge badge-modern bg-light text-dark border">🌱 Vegan</span>
-          <span class="badge badge-modern bg-light text-dark border">🌿 Organic</span>
-          <span class="badge badge-modern bg-light text-dark border">🚴 Carbon‑Neutral</span>
-          <span class="badge badge-modern bg-light text-dark border">🐰 Cruelty‑Free</span>
-          <span class="badge badge-modern bg-light text-dark border">📦 Warehouse</span>
-          <span class="badge badge-modern bg-light text-dark border">🏪 Small Business</span>
+    <!-- How Lightning Deals Work -->
+    <section class="container section-modern" aria-labelledby="how-work">
+      <div class="modern-card p-5">
+        <h2 id="how-work" class="h3 mb-3">How Amazon Lightning Deals Work</h2>
+        <p><strong>Lightning Deals</strong> are limited‑time, limited‑quantity promotions that appear throughout the day on Amazon. Each deal has a percentage‑claimed bar; when it hits 100% or the timer expires, the deal ends. Some offers are <em>Prime‑exclusive</em>, others are open to all shoppers. Because inventory moves quickly, the fastest way to win is to <strong>filter for the exact items you want</strong> instead of scrolling through thousands of listings.</p>
+        <ul class="modern-list">
+          <li><strong>Time window:</strong> Deals rotate all day; many last a few hours or until stock is gone.</li>
+          <li><strong>Quantity:</strong> If a deal is sold out, you may see <em>Join Waitlist</em>—still worth it for high‑demand items.</li>
+          <li><strong>Prime benefits:</strong> Many Lightning Deals stack with Prime free shipping; some are <em>Prime Lightning Deals</em> only.</li>
+          <li><strong>Coupons:</strong> Some listings include an extra digital coupon—our tool surfaces these so you get the <em>best Amazon lightning deals</em> today.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="container section-modern" aria-labelledby="benefits">
+      <div class="modern-card p-5 text-center">
+        <h2 id="benefits" class="h3 mb-3">Why Use a Lightning Deals Finder?</h2>
+        <p class="text-secondary">Amazon’s site doesn’t allow you to <em>stack</em> all the filters you want. Deal Shopper Pro combines Lightning Deals with price, rating, Prime‑only, brand, coupon, and more so you can <strong>find Lightning Deals on Amazon</strong> that actually match your needs.</p>
+        <div class="row mt-3 g-3">
+          <div class="col-md-4"><div class="step-container"><span class="step-number">1</span> Discover <strong>Amazon lightning deals today</strong> with one click.</div></div>
+          <div class="col-md-4"><div class="step-container"><span class="step-number">2</span> Target <strong>Prime lightning deals</strong>, free shipping, and in‑stock items.</div></div>
+          <div class="col-md-4"><div class="step-container"><span class="step-number">3</span> Filter by brand, rating, discount %, and price range.</div></div>
         </div>
-        <p class="mt-4 text-muted">
-          These filters are only available in <a class="fw-semibold text-decoration-none" href="#option3">Option 3: Advanced Lightning Deal Search</a>.
-        </p>
       </div>
     </section>
 
     <!-- Option 1 -->
     <section class="container section-modern" id="option1" aria-labelledby="option1-heading">
-      <div class="modern-card p-5 text-center fade-in">
-        <h2 class="h3 mb-4" id="option1-heading">Option 1: How to Find Lightning Deals on Amazon — View All Active Deals</h2>
-        <p class="mb-4 text-secondary fs-5">Instantly browse every live Amazon lightning deal in one place.</p>
-        <a class="btn btn-modern btn-glow btn-lg" href="https://www.amazon.com/gp/goldbox?dealType=lightningDeals&tag=dealshopperpr-20" rel="sponsored noopener noreferrer" target="_blank">
-          <i class="bi bi-star-fill"></i>
-          View All Lightning Deals
+      <div class="modern-card p-5 text-center">
+        <h2 id="option1-heading" class="h3 mb-3">Option 1: View All Amazon Lightning Deals (Live)</h2>
+        <p class="text-secondary fs-5">Instantly browse every live Lightning Deal in one place—great for a quick scan of what’s hot.</p>
+        <a class="btn btn-modern btn-primary-modern btn-lg" href="https://www.amazon.com/gp/goldbox?dealType=lightningDeals&tag=dealshopperpr-20" target="_blank" rel="sponsored noopener noreferrer">
+          <i class="bi bi-stars"></i> View All Lightning Deals
         </a>
       </div>
     </section>
 
     <!-- Option 2 -->
     <section class="container section-modern" id="option2" aria-labelledby="option2-heading">
-      <div class="modern-card fade-in">
-        <div class="text-center p-4 pb-0">
-          <h2 class="h3 mb-4" id="option2-heading">Option 2: Find Lightning Deals on Amazon by Keyword & Price</h2>
-          <p class="text-secondary fs-5 mb-4">Quickly surface lightning deals that match your search term and budget—no app, no login.</p>
+      <div class="modern-card">
+        <div class="p-4 text-center">
+          <h2 id="option2-heading" class="h3 mb-3">Option 2: Find Lightning Deals on Amazon by Keyword &amp; Price</h2>
+          <p class="text-secondary fs-5">Perfect for shoppers asking <em>how to find lightning deals on Amazon</em> for a specific brand or product.</p>
         </div>
-
-        <div class="form-modern">
+        <div class="p-4">
           <form class="row g-4 justify-content-center align-items-end" id="lightning-search-form">
             <div class="col-sm-6">
-              <label class="visually-hidden" for="q-lightning">Search term</label>
-              <input class="form-control form-control-modern" id="q-lightning" name="q" placeholder="Search term (e.g. headphones)" required type="text">
+              <label class="visually-hidden" for="q">Search term</label>
+              <input id="q" name="q" type="text" class="form-control" placeholder="Search term (e.g., headphones)" required>
             </div>
             <div class="col-sm-3">
-              <label class="visually-hidden" for="low-lightning">Minimum price</label>
-              <input class="form-control form-control-modern" id="low-lightning" name="low-price" placeholder="Min $" type="number">
+              <label class="visually-hidden" for="low">Minimum price</label>
+              <input id="low" name="low-price" type="number" class="form-control" placeholder="Min $">
             </div>
             <div class="col-sm-3">
-              <label class="visually-hidden" for="high-lightning">Maximum price</label>
-              <input class="form-control form-control-modern" id="high-lightning" name="high-price" placeholder="Max $" type="number">
+              <label class="visually-hidden" for="high">Maximum price</label>
+              <input id="high" name="high-price" type="number" class="form-control" placeholder="Max $">
             </div>
             <div class="col-12 text-center">
-              <button aria-label="Search Lightning Deals" class="btn btn-modern btn-glow btn-lg" type="submit">
-                <i class="bi bi-search"></i>
-                Find Matching Deals
-              </button>
+              <button type="submit" class="btn btn-modern btn-primary-modern btn-lg"><i class="bi bi-search"></i> Find Matching Deals</button>
             </div>
           </form>
-
-          <a aria-label="View matching Lightning Deals on Amazon" class="btn btn-modern btn-glow btn-lg mt-4 d-none" href="#" id="lightningAffiliateLink" rel="sponsored noopener noreferrer" target="_blank">
-            <i class="bi bi-search"></i>
-            View Lightning Deals on Amazon
-          </a>
-          <small class="text-muted d-block text-center mt-3">
-            As an Amazon Associate, we earn from qualifying purchases.
-          </small>
+          <a id="affLink" class="btn btn-modern btn-primary-modern btn-lg mt-3 d-none" target="_blank" rel="sponsored noopener noreferrer">View Lightning Deals on Amazon</a>
+          <small class="text-muted d-block text-center mt-2">As an Amazon Associate, we earn from qualifying purchases.</small>
         </div>
       </div>
     </section>
 
     <!-- Option 3 -->
     <section class="container section-modern" id="option3" aria-labelledby="option3-heading">
-      <div class="modern-card fade-in">
-        <div class="text-center p-4 pb-2">
-          <h2 class="h3 mb-4" id="option3-heading">Option 3: Advanced Amazon Deal Finder — Filter Lightning Deals in 6 Steps</h2>
-          <p class="text-secondary fs-5 mb-4">Use our 6-step advanced guide to pinpoint the perfect lightning deals—filter by keyword, price, rating, discount, brand and more.</p>
+      <div class="modern-card p-4">
+        <div class="text-center">
+          <h2 id="option3-heading" class="h3 mb-3">Option 3: Advanced Amazon Deal Finder — Filter Prime Lightning Deals in 6 Steps</h2>
+          <p class="text-secondary fs-5">Use our 6‑step advanced system to surface only the <strong>best Amazon lightning deals</strong> for your budget.</p>
         </div>
-
-        <div class="p-4">
-          <!-- Step 1 -->
-          <div class="step-container" id="option3-step1">
-            <div class="d-flex align-items-start gap-4">
-              <div class="step-number">1</div>
-              <div class="flex-grow-1">
-                <h4 class="h5 mb-3 fw-bold">Step 1: Enter a Product Name</h4>
-                <img alt="Keyword search input for Amazon Lightning Deals" class="step-image" height="450" loading="lazy" src="amazon-lightning-deals-keyword-search.png" width="800">
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="step-container" id="option3-step2">
-            <div class="d-flex align-items-start gap-4">
-              <div class="step-number">2</div>
-              <div class="flex-grow-1">
-                <h4 class="h5 mb-3 fw-bold">Step 2: Select Currency & Set Price Range</h4>
-                <img alt="Price and rating filter options for Amazon Lightning Deals" class="step-image" height="450" loading="lazy" src="amazon-lightning-deals-price-rating-filter.png" width="800">
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="step-container" id="option3-step3">
-            <div class="d-flex align-items-start gap-4">
-              <div class="step-number">3</div>
-              <div class="flex-grow-1">
-                <h4 class="h5 mb-3 fw-bold">Step 3: Filter by Discount, Rating & Sort Order</h4>
-                <img alt="Rating, discount, and sort order filter controls for Amazon Lightning Deals" class="step-image" height="450" loading="lazy" src="refine-by-rating-discount-sort-order.png" width="800">
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="step-container" id="option3-step4">
-            <div class="d-flex align-items-start gap-4">
-              <div class="step-number">4</div>
-              <div class="flex-grow-1">
-                <h4 class="h5 mb-3 fw-bold">Step 4: Filter by Brand</h4>
-                <img alt="Brand filter options for Amazon Lightning Deals" class="step-image" height="450" loading="lazy" src="amazon-lightning-deals-brand-filter.png" width="800">
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 5 -->
-          <div class="step-container" id="option3-step5">
-            <div class="d-flex align-items-start gap-4">
-              <div class="step-number">5</div>
-              <div class="flex-grow-1">
-                <h4 class="h5 mb-3 fw-bold">Step 5: Enable Prime & Lightning Deal Filters</h4>
-                <img alt="Checkboxes for filtering Prime-Only and Lightning Deals on Amazon" class="step-image" height="450" loading="lazy" src="amazon-lightning-deals-enable-lightning-deals-filter.png" width="800">
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 6 -->
-          <div class="step-container" id="option3-step6">
-            <div class="d-flex align-items-start gap-4">
-              <div class="step-number">6</div>
-              <div class="flex-grow-1">
-                <h4 class="h5 mb-3 fw-bold">Step 6: Browse Results — Only Lightning Deals</h4>
-                <img alt="Filtered Amazon search results showing only Prime Lightning Deals" class="step-image" height="450" loading="lazy" src="amazon-lightning-deals-view-results.png" width="800">
-              </div>
-            </div>
-          </div>
-
-          <div class="text-center mt-5">
-            <a aria-label="Try the advanced Lightning-Deals search on Deal Shopper Pro" class="btn btn-modern btn-primary-modern btn-lg">
-              <i class="bi bi-search"></i>
-              Try the Advanced Lightning-Deals Search
-            </a>
-          </div>
+        <div class="p-2">
+          <div class="step-container"><div class="d-flex gap-3 align-items-start"><div class="step-number">1</div><div><h3 class="h5">Step 1: Enter a Product Name or Keyword</h3><img src="amazon-lightning-deals-keyword-search.png" width="800" height="450" loading="lazy" alt="Keyword search for Amazon lightning deals" class="step-image"></div></div></div>
+          <div class="step-container"><div class="d-flex gap-3 align-items-start"><div class="step-number">2</div><div><h3 class="h5">Step 2: Select Currency & Set Price Range</h3><img src="amazon-lightning-deals-price-rating-filter.png" width="800" height="450" loading="lazy" alt="Price and rating filters for Lightning Deals" class="step-image"></div></div></div>
+          <div class="step-container"><div class="d-flex gap-3 align-items-start"><div class="step-number">3</div><div><h3 class="h5">Step 3: Filter by Discount %, Rating & Sort Order</h3><img src="refine-by-rating-discount-sort-order.png" width="800" height="450" loading="lazy" alt="Rating, discount and sort filters for Lightning Deals" class="step-image"></div></div></div>
+          <div class="step-container"><div class="d-flex gap-3 align-items-start"><div class="step-number">4</div><div><h3 class="h5">Step 4: Filter by Brand</h3><img src="amazon-lightning-deals-brand-filter.png" width="800" height="450" loading="lazy" alt="Brand filter for Amazon Lightning Deals" class="step-image"></div></div></div>
+          <div class="step-container"><div class="d-flex gap-3 align-items-start"><div class="step-number">5</div><div><h3 class="h5">Step 5: Turn On Prime &amp; Lightning Deals</h3><img src="amazon-lightning-deals-enable-lightning-deals-filter.png" width="800" height="450" loading="lazy" alt="Enable Prime and Lightning Deals filters" class="step-image"></div></div></div>
+          <div class="step-container"><div class="d-flex gap-3 align-items-start"><div class="step-number">6</div><div><h3 class="h5">Step 6: Browse Results — Only Lightning Deals</h3><img src="amazon-lightning-deals-view-results.png" width="800" height="450" loading="lazy" alt="Filtered results showing only Amazon Lightning Deals" class="step-image"></div></div></div>
         </div>
       </div>
     </section>
 
-    <!-- Video Demo -->
-    <section class="container section-modern bg-pattern" aria-labelledby="video-demo-heading">
-      <div class="modern-card p-5 text-center fade-in">
-        <h2 class="h3 mb-4" id="video-demo-heading">🎥 How to Find Amazon Lightning Deals Fast (Video Demo) 🎬</h2>
-        
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-lg-6">
-            <div class="video-container">
-              <lite-youtube playlabel="Play: Lightning Deals Demo" style="background-color: #000; border-radius: 12px; display: block; max-width: 100%; aspect-ratio: 16 / 9;" title="How to Filter Lightning Deals on Amazon in 30 Seconds (2025 Guide)" videoid="wpj1l1XUunw">
-              </lite-youtube>
-            </div>
-          </div>
-        </div>
+    <!-- Pro Tips -->
+    <section class="container section-modern" aria-labelledby="tips">
+      <div class="modern-card p-5">
+        <h2 id="tips" class="h3 mb-3">Pro Tips to Get the Best Amazon Lightning Deals</h2>
+        <ol>
+          <li><strong>Check often.</strong> Deals refresh all day; mornings and early evenings see spikes.</li>
+          <li><strong>Use brand + price together.</strong> Narrow to your budget and brand to avoid noise.</li>
+          <li><strong>Sort by newest.</strong> Our form sends \"date-desc-rank\" to prioritize fresh deals.</li>
+          <li><strong>Watch the claim bar.</strong> If you see 80%+ claimed, buy now or join the waitlist.</li>
+          <li><strong>Stack coupons.</strong> Clip the extra savings box on the product page when available.</li>
+        </ol>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section aria-labelledby="faq-wrapper-heading" class="container section-modern">
-      <div class="faq-section fade-in">
-        <h2 class="h3 mb-5 text-center text-primary" id="faq-wrapper-heading">📘 FAQ: How to Find Lightning Deals</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <details class="mb-4">
-              <summary>How do I find Lightning Deals on Amazon?</summary>
-              <div class="mt-3">
-                <p><strong>Find Amazon Lightning Deals in 6 Simple Steps</strong><br>
-                <em>No account or login required!</em></p>
-                <ul>
-                  <li><strong>Start your search</strong> – Type in the product name or keyword you want in Step 1.</li>
-                  <li><strong>Refine your results</strong> – In Steps 2–5, you can set your price range, choose Prime-only, filter by rating, or look for coupons.</li>
-                  <li><strong>Don’t forget Step 5</strong> – Make sure to check the “Lightning Deals” box.</li>
-                  <li><strong>Mix and match filters</strong> – Use as many filters as you like. That’s what makes this tool powerful!</li>
-                </ul>
-                <p>Unlike Amazon’s own site and app, which limit how you can filter, 
-                <a href="https://www.dealshopperpro.com/#amazon-search-form">DealShopperPro.com</a> lets you stack filters together so you can find exactly what you want — fast.</p>
-              </div>
-            </details>
-            
-            <details class="mb-4">
-              <summary>How to search Amazon lightning deals?</summary>
-              <p class="mt-3">Enter a search term and optional filters to browse current Lightning Deals in real time—sorted by what matters to you.</p>
-            </details>
-            
-            <details class="mb-4">
-              <summary>How to get lightning deals on Amazon?</summary>
-              <p class="mt-3">Click "View All Deals" or try the 6-step advanced search to uncover fast-selling, limited-time offers.</p>
-            </details>
-          </div>
-        </div>
+    <!-- Why Trust Us -->
+    <section class="container section-modern" aria-labelledby="trust">
+      <div class="modern-card p-5">
+        <h2 id="trust" class="h3 mb-3">Why Trust Us to Find the Best Amazon Lightning Deals Today?</h2>
+        <p>I built DealShopperPro.com as an independent tool to make Amazon shopping more transparent. We regularly test searches against Amazon’s own interface and keep this guide updated. We never sell your data and we clearly disclose our <strong>Amazon Associates</strong> relationship. Our mission is simple: help you <em>find lightning deals on Amazon</em> faster and cheaper.</p>
       </div>
     </section>
 
-    <div class="container">
-      <p class="text-center text-secondary">
-        You can also use 
-        <a href="https://www.dealshopperpro.com" class="text-decoration-none fw-semibold">Deal Shopper Pro</a> 
-        to combine lightning deals with other filters like coupons or ratings.
-      </p>
-    </div>
+    <!-- Visible FAQ (matches schema) -->
+    <section class="container section-modern" aria-labelledby="faq-title">
+      <div class="faq-section">
+        <h2 id="faq-title" class="h3 mb-4">FAQ: Amazon Lightning Deals</h2>
+        <details open>
+          <summary>How do I find lightning deals on Amazon?</summary>
+          <p>Use our Lightning Deals finder to filter by keyword, price, Prime, rating and coupons—no login required. Or browse all current deals in Option 1 above.</p>
+        </details>
+        <details>
+          <summary>How to search Amazon lightning deals?</summary>
+          <p>Use the keyword &amp; price form in Option 2. It builds a live Amazon results URL filtered to Lightning Deals only.</p>
+        </details>
+        <details>
+          <summary>How to get lightning deals on Amazon?</summary>
+          <p>Click \"View All Lightning Deals\" for a fast scan, then turn on filters (Prime‑only, coupons, price range) to narrow down to your needs.</p>
+        </details>
+        <details>
+          <summary>What are the best Amazon lightning deals today?</summary>
+          <p>Start with Option 1 to see everything, then apply rating (4★+), discount %, and coupons in Option 3. That surfaces the <em>best Amazon lightning deals today</em> for your budget.</p>
+        </details>
+        <details>
+          <summary>Are Lightning Deals only for Prime members?</summary>
+          <p>Not always. Many are public, but some are <em>Prime lightning deals</em>. Use the Prime checkbox in Option 3 to filter for Prime‑eligible offers.</p>
+        </details>
+        <details>
+          <summary>How long do Lightning Deals last?</summary>
+          <p>Typically a few hours or until stock runs out. Watch the percentage‑claimed bar and act quickly.</p>
+        </details>
+      </div>
+    </section>
 
-    <!-- Share Section -->
-    <section class="container section-modern" aria-labelledby="share-heading">
-      <div class="modern-card p-5 text-center fade-in">
-        <h2 class="h4 mb-3" id="share-heading">📲 Share with Friends</h2>
-        <p class="text-secondary mb-4">Send this to someone who needs smarter Amazon filters:</p>
-        
-        <div class="d-flex flex-wrap justify-content-center gap-2">
-          <a class="share-button btn-success" href="https://wa.me/?text=https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
-            <i class="bi bi-whatsapp"></i> WhatsApp
-          </a>
-          <a class="share-button btn-primary" href="fb-messenger://share?link=https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
-            <i class="bi bi-messenger"></i> Messenger
-          </a>
-          <a class="share-button btn-secondary" href="sms:?body=Check%20out%20this%20free%20Amazon%20deal%20filter:%20https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
-            <i class="bi bi-chat-text"></i> Text Message
-          </a>
-          <a class="share-button btn-info" href="https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here:%20https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
-            <i class="bi bi-twitter-x"></i> Twitter / X
-          </a>
-          <a class="share-button btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
-            <i class="bi bi-facebook"></i> Facebook
-          </a>
-          <button aria-label="Copy page link to clipboard" class="share-button btn-dark" data-link="https://www.dealshopperpro.com" id="copyLinkBtn" type="button">
-            <i class="bi bi-link-45deg"></i> Copy Page Link
-          </button>
-        </div>
+    <!-- Related Guides -->
+    <section class="container section-modern" aria-labelledby="related">
+      <div class="modern-card p-4">
+        <h2 id="related" class="visually-hidden">Related Guides</h2>
+        <p class="mb-0"><strong>More ways to save:</strong>
+          <a class="ms-1 me-3" href="/prime-only-deals.html">Prime lightning deals</a>
+          <a class="me-3" href="/best-deals-today.html">Best Amazon lightning deals today</a>
+          <a class="me-3" href="/how-it-works.html">How the Amazon deal finder works</a>
+        </p>
       </div>
     </section>
   </main>
 
-  <!-- Related Guides -->
-  <section class="container my-5" aria-labelledby="related-guides-heading">
-    <div class="modern-card p-4">
-      <h2 class="visually-hidden" id="related-guides-heading">Related Guides</h2>
-      <h3 class="h6 text-muted mb-2">Related guides:</h3>
-      <p class="mb-0">
-        <a href="/lightning-deals.html" class="text-decoration-none me-3">amazon lightning deals</a>
-        <a href="/best-deals-today.html" class="text-decoration-none me-3">best amazon lightning deals today</a>
-        <a href="/prime-only-deals.html" class="text-decoration-none">how to find lightning deals on amazon</a>
-      </p>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer id="footer" class="footer-modern">
     <div class="container text-center">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <p class="mb-4">
-            <strong>Disclaimer:</strong>
-            Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries.<br>
-            <strong>As an Amazon Associate I earn from qualifying purchases.</strong><br>
-            <small>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</small>
-          </p>
-          
-          <p class="mb-4">
-            Discover top Amazon deals with advanced filters for Lightning Deals, Prime-eligible items, in-stock products, and hidden coupons.
-          </p>
-          
-          <div class="mb-4">
-            <p class="h6 text-danger mb-2">Featured</p>
-            <p class="fw-semibold">
-              🔥 <a href="https://www.dealshopperpro.com/index.html">Advanced Amazon Search Tool</a><br>
-              🔥 <a href="https://www.dealshopperpro.com/lightning-deals.html">Find Lightning Deals on Amazon</a>
-            </p>
-          </div>
-          
-          <p class="small">
-            <a href="https://www.dealshopperpro.com/contact.html">Contact Us</a> |
-            <a href="https://www.dealshopperpro.com/about.html">About Deal Shopper Pro</a> |
-            <a href="https://www.dealshopperpro.com/help.html">Help Guide</a> |
-            <a href="https://www.dealshopperpro.com/media.html">Articles & Videos</a> |
-            <a href="https://www.dealshopperpro.com/sitemap.html">Sitemap</a> |
-            <a href="https://www.facebook.com/share/g/1C1BARo5YJ/" rel="noopener noreferrer" target="_blank">💬 Facebook Group</a> |
-            <a href="https://www.dealshopperpro.com/privacy.html">Privacy Policy</a> |
-            <a href="https://www.dealshopperpro.com/terms.html">Terms of Use</a>
-          </p>
-          
-          <p class="fw-bold">
-            © 2025 Deal Shopper Pro. All rights reserved.
-          </p>
-        </div>
-      </div>
+      <p class="mb-2"><strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases.</p>
+      <p class="small">Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries. Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</p>
+      <p class="small"><a href="/privacy.html" class="text-white-50">Privacy</a> • <a href="/terms.html" class="text-white-50">Terms</a> • <a href="/sitemap.html" class="text-white-50">Sitemap</a></p>
+      <p class="fw-bold">© 2025 Deal Shopper Pro</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- JS -->
   <script>
-    document.getElementById('lightning-search-form')?.addEventListener('submit', function(e){
+    // Build filtered Amazon URL for Option 2
+    const form = document.getElementById('lightning-search-form');
+    form?.addEventListener('submit', function(e) {
       e.preventDefault();
-      const q = this.q.value.trim();
+      const q = (this.q.value || '').trim();
+      if(!q) return alert('Enter a search term.');
       const low = this['low-price'].value;
       const high = this['high-price'].value;
-      
-      if (!q) { 
-        alert('Enter a search term.'); 
-        return; 
-      }
 
       const params = new URLSearchParams();
       params.set('k', q);
-      params.set('rh', 'p_n_deal_type:23566065011');
-
+      params.set('rh', 'p_n_deal_type:23566065011'); // Lightning Deals
       if (low) params.set('low-price', low);
       if (high) params.set('high-price', high);
-
+      params.set('s', 'date-desc-rank'); // newest
       params.set('tag', 'dealshopperpr-20');
-      params.set('s', 'date-desc-rank');
 
       const url = 'https://www.amazon.com/s?' + params.toString();
-
-      const link = document.getElementById('lightningAffiliateLink');
+      const link = document.getElementById('affLink');
       link.href = url;
+      link.textContent = 'View Lightning Deals on Amazon';
       link.classList.remove('d-none');
       link.focus();
     });
-
-    document.getElementById('copyLinkBtn')?.addEventListener('click', function() {
-      const link = this.dataset.link;
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(link)
-          .then(() => alert('Page link copied to clipboard!'))
-          .catch(err => console.error('Copy failed:', err));
-      } else {
-        const input = document.createElement('input');
-        document.body.appendChild(input);
-        input.value = link;
-        input.select();
-        document.execCommand('copy');
-        document.body.removeChild(input);
-        alert('Page link copied to clipboard!');
-      }
-    });
   </script>
 
-  <!-- All the original structured data scripts -->
+  <!-- Structured Data: Organization -->
   <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Deal Shopper Pro",
-    "url": "https://www.dealshopperpro.com",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "url": "https://www.dealshopperpro.com/contact.html",
-      "contactType": "Customer Support"
-    },
-    "mainEntityOfPage": {
-      "@id": "https://www.dealshopperpro.com/lightning-deals.html"
-    },
-    "@id": "https://www.dealshopperpro.com/#organization"
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "@id":"https://www.dealshopperpro.com/#organization",
+    "name":"Deal Shopper Pro",
+    "url":"https://www.dealshopperpro.com",
+    "logo":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/logo.png"},
+    "contactPoint":{"@type":"ContactPoint","contactType":"Customer Support","url":"https://www.dealshopperpro.com/contact.html"}
   }</script>
 
+  <!-- Structured Data: WebPage + Speakable -->
   <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "@id": "https://www.dealshopperpro.com/lightning-deals.html#howto",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.dealshopperpro.com/lightning-deals.html"
-    },
-    "name": "How to Find Lightning Deals on Amazon",
-    "inLanguage": "en-US",
-    "operatingSystem": "All",
-    "description": "Follow our 6-step advanced guide to filter Amazon Lightning Deals by keyword, currency, price, rating, discount, brand, and view results.",
-    "totalTime": "PT2M",
-    "estimatedCost": {
-      "@type": "MonetaryAmount",
-      "currency": "USD",
-      "value": "0"
-    },
-    "tool": [
-      "Deal Shopper Pro Advanced Search"
-    ],
-    "supply": [
-      "Amazon.com website"
-    ],
-    "publisher": {
-      "@type": "Organization",
-      "name": "Deal Shopper Pro",
-      "url": "https://www.dealshopperpro.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.dealshopperpro.com/logo.png"
-      }
-    },
-    "step": [
-      {
-        "@type": "HowToStep",
-        "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step1",
-        "name": "Step 1: Enter a Product Name",
-        "image": "https://www.dealshopperpro.com/enter-amazon-search-keyword.png",
-        "itemListElement": {
-          "@type": "HowToDirection",
-          "text": "Enter the product keyword into the search field."
-        }
-      },
-      {
-        "@type": "HowToStep",
-        "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step2",
-        "name": "Step 2: Select Currency & Set Price Range",
-        "image": "https://www.dealshopperpro.com/apply-amazon-filters-price-rating.png",
-        "itemListElement": {
-          "@type": "HowToDirection",
-          "text": "Choose a currency and price range to narrow down your product search."
-        }
-      },
-      {
-        "@type": "HowToStep",
-        "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step3",
-        "name": "Step 3: Filter by Discount, Rating & Sort Order",
-        "image": "https://www.dealshopperpro.com/refine-by-rating-discount-sort-order.png",
-        "itemListElement": {
-          "@type": "HowToDirection",
-          "text": "Adjust filters to narrow deals by percent savings, customer rating, and order preference."
-        }
-      },
-      {
-        "@type": "HowToStep",
-        "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step4",
-        "name": "Step 4: Filter by Brand",
-        "image": "https://www.dealshopperpro.com/filter-amazon-deals-by-brand-name.png",
-        "itemListElement": {
-          "@type": "HowToDirection",
-          "text": "Select specific brands to include in your results."
-        }
-      },
-      {
-        "@type": "HowToStep",
-        "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step5",
-        "name": "Step 5: Check the Lightning Deals Box",
-        "image": "https://www.dealshopperpro.com/check-lightning-deals-box.png",
-        "itemListElement": {
-          "@type": "HowToDirection",
-          "text": "Enable the Lightning Deals filter checkbox."
-        }
-      },
-      {
-        "@type": "HowToStep",
-        "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step6",
-        "name": "Step 6: View Filtered Results",
-        "image": "https://www.dealshopperpro.com/click-view-filtered-results-button.png",
-        "itemListElement": {
-          "@type": "HowToDirection",
-          "text": "Click "View Filtered Results" to see your deals."
-        }
-      }
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "@id":"https://www.dealshopperpro.com/lightning-deals.html",
+    "url":"https://www.dealshopperpro.com/lightning-deals.html",
+    "name":"Amazon Lightning Deals Finder – Today’s Best Lightning Deals | Deal Shopper Pro",
+    "description":"Find Amazon Lightning Deals today — browse all live deals or use our Amazon deal finder with Prime, price, rating & coupon filters to surface the best Amazon lightning deals fast.",
+    "inLanguage":"en-US",
+    "speakable":{"@type":"SpeakableSpecification","cssSelector":["#page-title",".hero-subtitle","#faq-title"]},
+    "dateModified":"2025-08-21",
+    "publisher":{"@type":"Organization","name":"Deal Shopper Pro","logo":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/logo.png"}},
+    "breadcrumb":{"@id":"https://www.dealshopperpro.com/lightning-deals.html#breadcrumb"}
+  }</script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "@id":"https://www.dealshopperpro.com/lightning-deals.html#breadcrumb",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.dealshopperpro.com/"},
+      {"@type":"ListItem","position":2,"name":"Lightning Deals","item":"https://www.dealshopperpro.com/lightning-deals.html"}
     ]
   }</script>
 
+  <!-- Structured Data: Article (E-E-A-T) -->
   <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": "https://www.dealshopperpro.com/lightning-deals.html#breadcrumb",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.dealshopperpro.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Lightning Deals",
-        "item": "https://www.dealshopperpro.com/lightning-deals.html"
-      }
-    ],
-    "mainEntityOfPage": {
-      "@id": "https://www.dealshopperpro.com/lightning-deals.html"
-    }
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"How to Find Amazon Lightning Deals in 2025 – 3 Fast Methods",
+    "description":"Three ways to find Amazon Lightning Deals: browse all, use a keyword & price search, or filter with a 6‑step advanced Amazon deal finder for Prime lightning deals and coupons.",
+    "image":"https://www.dealshopperpro.com/images/howto-lightning-deals.png",
+    "author":{"@type":"Person","name":"Duane Romualdo","url":"https://www.dealshopperpro.com/my-story.html"},
+    "publisher":{"@type":"Organization","name":"Deal Shopper Pro","logo":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/logo.png"}},
+    "datePublished":"2025-06-29",
+    "dateModified":"2025-08-21",
+    "wordCount":"1300",
+    "mainEntityOfPage":"https://www.dealshopperpro.com/lightning-deals.html"
   }</script>
 
+  <!-- Structured Data: HowTo -->
   <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": "https://www.dealshopperpro.com/lightning-deals.html#faq",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I find lightning deals on Amazon?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Use our Lightning Deals finder to filter Amazon deals by keyword, price, Prime, rating, and coupon status—no login required."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How to search Amazon lightning deals?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Enter a search term and optional filters to browse current Lightning Deals in real time—sorted by what matters to you."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How to get lightning deals on Amazon?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Click "View All Deals" or try the 6-step advanced search to uncover fast-selling, limited-time offers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I find Amazon Lightning Deals with free shipping?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To find Lightning Deals with free shipping on Amazon, use Deal Shopper Pro and check the 'Free Shipping' box in step 5 of the filter form."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I filter Lightning Deals by brand and discount on Amazon?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes! Use Deal Shopper Pro to enter your brand name in step 4, then choose your desired discount percentage in step 3 to filter Lightning Deals accordingly."
-        }
-      }
-    ],
-    "mainEntityOfPage": {
-      "@id": "https://www.dealshopperpro.com/lightning-deals.html"
-    },
-    "dateModified": "2025-08-01"
+    "@context":"https://schema.org",
+    "@type":"HowTo",
+    "@id":"https://www.dealshopperpro.com/lightning-deals.html#howto",
+    "name":"How to Find Lightning Deals on Amazon (6 Steps)",
+    "description":"Follow our 6‑step system to find Prime Lightning Deals by keyword, price, brand, rating, discount and coupons.",
+    "inLanguage":"en-US",
+    "totalTime":"PT2M",
+    "tool":["Deal Shopper Pro Advanced Search","Deal Shopper Pro Lightning Deals Finder"],
+    "supply":["Amazon.com website","Amazon account (optional)"],
+    "step":[
+      {"@type":"HowToStep","name":"Step 1: Enter a Product Name or Keyword","url":"https://www.dealshopperpro.com/lightning-deals.html#option3-step1","image":"https://www.dealshopperpro.com/enter-amazon-search-keyword.png","itemListElement":{"@type":"HowToDirection","text":"Type your product keyword to start."}},
+      {"@type":"HowToStep","name":"Step 2: Select Currency & Set Price Range","url":"https://www.dealshopperpro.com/lightning-deals.html#option3-step2","image":"https://www.dealshopperpro.com/apply-amazon-filters-price-rating.png","itemListElement":{"@type":"HowToDirection","text":"Choose min/max price and your preferred currency."}},
+      {"@type":"HowToStep","name":"Step 3: Filter by Discount %, Rating & Sort Order","url":"https://www.dealshopperpro.com/lightning-deals.html#option3-step3","image":"https://www.dealshopperpro.com/refine-by-rating-discount-sort-order.png","itemListElement":{"@type":"HowToDirection","text":"Pick your minimum rating and discount percentage; sort by newest."}},
+      {"@type":"HowToStep","name":"Step 4: Filter by Brand","url":"https://www.dealshopperpro.com/lightning-deals.html#option3-step4","image":"https://www.dealshopperpro.com/filter-amazon-deals-by-brand-name.png","itemListElement":{"@type":"HowToDirection","text":"Add one or more brands to narrow results."}},
+      {"@type":"HowToStep","name":"Step 5: Turn On Prime & Lightning Deals","url":"https://www.dealshopperpro.com/lightning-deals.html#option3-step5","image":"https://www.dealshopperpro.com/check-lightning-deals-box.png","itemListElement":{"@type":"HowToDirection","text":"Enable Prime‑only and the Lightning Deals checkbox."}},
+      {"@type":"HowToStep","name":"Step 6: Browse Results — Only Lightning Deals","url":"https://www.dealshopperpro.com/lightning-deals.html#option3-step6","image":"https://www.dealshopperpro.com/click-view-filtered-results-button.png","itemListElement":{"@type":"HowToDirection","text":"Click \"View Filtered Results\" to see your deals."}}
+    ]
   }</script>
 
+  <!-- Structured Data: FAQPage (matches visible FAQ) -->
   <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://www.dealshopperpro.com/lightning-deals.html",
-    "url": "https://www.dealshopperpro.com/lightning-deals.html",
-    "name": "How to Find Lightning Deals on Amazon | Deal Shopper Pro",
-    "description": "Follow 3 methods to find Amazon Lightning Deals—browse all live deals, search by keyword and price, or use our 6-step advanced filter guide. No login needed.",
-    "inLanguage": "en-US",
-    "mainEntity": [
-      {
-        "@type": "HowTo",
-        "@id": "https://www.dealshopperpro.com/lightning-deals.html#howto"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.dealshopperpro.com/lightning-deals.html#breadcrumb"
-      }
-    ],
-    "publisher": {
-      "@type": "Organization",
-      "name": "Deal Shopper Pro",
-      "url": "https://www.dealshopperpro.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.dealshopperpro.com/logo.png"
-      }
-    },
-    "mainEntityOfPage": {
-      "@id": "https://www.dealshopperpro.com/lightning-deals.html"
-    },
-    "dateModified": "2025-08-01"
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "@id":"https://www.dealshopperpro.com/lightning-deals.html#faq",
+    "mainEntity":[
+      {"@type":"Question","name":"How do I find lightning deals on Amazon?","acceptedAnswer":{"@type":"Answer","text":"Use our Lightning Deals finder to filter by keyword, price, Prime, rating and coupons—no login required. Or browse all current deals in Option 1."}},
+      {"@type":"Question","name":"How to search Amazon lightning deals?","acceptedAnswer":{"@type":"Answer","text":"Use the keyword & price form in Option 2. It builds a live Amazon results URL filtered to Lightning Deals only."}},
+      {"@type":"Question","name":"How to get lightning deals on Amazon?","acceptedAnswer":{"@type":"Answer","text":"Click \"View All Lightning Deals\" for a fast scan, then turn on filters (Prime‑only, coupons, price range) to narrow down to your needs."}},
+      {"@type":"Question","name":"What are the best Amazon lightning deals today?","acceptedAnswer":{"@type":"Answer","text":"Start with Option 1 to see everything, then apply rating (4★+), discount %, and coupons in Option 3 to surface the best Amazon lightning deals today."}},
+      {"@type":"Question","name":"Are Lightning Deals only for Prime members?","acceptedAnswer":{"@type":"Answer","text":"Not always. Many are public, but some are Prime‑exclusive. Use the Prime checkbox in Option 3 to filter for Prime‑eligible offers."}},
+      {"@type":"Question","name":"How long do Lightning Deals last?","acceptedAnswer":{"@type":"Answer","text":"Typically a few hours or until stock runs out. Watch the percentage‑claimed bar and act quickly."}}
+    ]
   }</script>
 
+  <!-- Structured Data: SoftwareApplication -->
   <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "@id": "https://www.dealshopperpro.com/lightning-deals.html#app",
-    "name": "Deal Shopper Pro – Amazon Lightning Deals Finder",
-    "operatingSystem": "All",
-    "applicationCategory": "ShoppingApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0.00",
-      "priceCurrency": "USD"
-    },
-    "featureList": [
-      "Amazon Lightning Deals search",
-      "Advanced filtering by price, rating, Prime status, and brand",
-      "One-click browse and keyword-based search",
-      "Mobile-friendly and free to use"
-    ],
-    "url": "https://www.dealshopperpro.com/lightning-deals.html",
-    "author": {
-      "@type": "Organization",
-      "name": "Deal Shopper Pro"
-    }
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "@id":"https://www.dealshopperpro.com/lightning-deals.html#app",
+    "name":"Deal Shopper Pro – Amazon Lightning Deals Finder",
+    "applicationCategory":"ShoppingApplication",
+    "operatingSystem":"All",
+    "offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD"},
+    "featureList":["Amazon Lightning Deals search","Prime‑only, coupon, rating and price filters","Keyword & price search builder","Fast, mobile‑friendly interface"],
+    "url":"https://www.dealshopperpro.com/lightning-deals.html",
+    "author":{"@type":"Organization","name":"Deal Shopper Pro"}
   }</script>
 
+  <!-- Structured Data: VideoObject (valid hasPart) -->
   <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "ImageObject",
-    "contentUrl": "https://img.youtube.com/vi/wpj1l1XUunw/hqdefault.jpg",
-    "name": "Lightning Deals Demo Video Thumbnail",
-    "description": "Thumbnail preview for the Deal Shopper Pro Lightning Deals demo video.",
-    "url": "https://www.dealshopperpro.com/lightning-deals.html#video",
-    "inLanguage": "en-US"
+    "@context":"https://schema.org",
+    "@type":"VideoObject",
+    "@id":"https://www.dealshopperpro.com/lightning-deals.html#video",
+    "name":"How to Filter Lightning Deals on Amazon in 30 Seconds (2025 Guide)",
+    "description":"Watch how to quickly find Prime Lightning Deals using Deal Shopper Pro's advanced filters.",
+    "thumbnailUrl":["https://img.youtube.com/vi/wpj1l1XUunw/hqdefault.jpg"],
+    "uploadDate":"2025-08-21T00:00:00Z",
+    "duration":"PT30S",
+    "embedUrl":"https://www.youtube.com/embed/wpj1l1XUunw",
+    "isAccessibleForFree":true,
+    "publisher":{"@type":"Organization","name":"Deal Shopper Pro","logo":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/logo.png"}},
+    "hasPart":{"@type":"Clip","name":"Step 1 Walkthrough","startOffset":0,"endOffset":10}
   }</script>
 
-  <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "@id": "https://www.dealshopperpro.com/lightning-deals.html#video",
-    "name": "How to Filter Lightning Deals on Amazon in 30 Seconds (2025 Guide)",
-    "description": "Watch how to quickly find Prime-Only Lightning Deals on Amazon using Deal Shopper Pro's advanced filters.",
-    "thumbnailUrl": [
-      "https://img.youtube.com/vi/wpj1l1XUunw/hqdefault.jpg"
-    ],
-    "uploadDate": "2025-08-01T00:00:00Z",
-    "duration": "PT30S",
-    "embedUrl": "https://www.youtube.com/embed/wpj1l1XUunw",
-    "isAccessibleForFree": true,
-    "publisher": {
-      "@type": "Organization",
-      "name": "Deal Shopper Pro",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.dealshopperpro.com/logo.png"
-      }
-    }
-  }</script>
-
-  <!-- External Resources -->
-  <link href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.3/src/lite-yt-embed.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.3/src/lite-yt-embed.js" type="module"></script>
+  <!-- External assets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.3/src/lite-yt-embed.css">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.3/src/lite-yt-embed.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
