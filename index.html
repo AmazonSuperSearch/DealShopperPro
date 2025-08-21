@@ -2195,5 +2195,20 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 1000); // Wait 1 second for everything to load
 });
 </script>
+  <script>
+function toggleAccordion(id){
+  const body = document.getElementById(id + '-body');
+  const btn  = document.querySelector('button[onclick*="' + id + '"]');
+  if (!body || !btn) return;
+
+  const willOpen = body.classList.contains('d-none');
+  body.classList.toggle('d-none', !willOpen);
+  btn.classList.toggle('collapsed', !willOpen);
+  btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+  const icon = btn.querySelector('.bi');
+  if (icon) icon.style.transform = willOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+}
+</script>
+
 </body>
 </html>
