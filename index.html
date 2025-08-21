@@ -1851,122 +1851,100 @@ body {
   </div>
 </div>
 
+<!-- ✅ CLOSE the form and its container BEFORE features/FAQ -->
+</form>
+</div><!-- /.search-container -->
 
-  <!-- Features Grid -->
-  <div class="features-mobile">
-    <div class="feature-card-mobile">
-      <div class="feature-icon-mobile">
-        <i class="bi bi-shield-lock"></i>
-      </div>
-      <h6 class="fw-bold mb-1">Secure</h6>
-      <small class="text-muted">No tracking</small>
-    </div>
-    <div class="feature-card-mobile">
-      <div class="feature-icon-mobile">
-        <i class="bi bi-person-check"></i>
-      </div>
-      <h6 class="fw-bold mb-1">No Signup</h6>
-      <small class="text-muted">Start instantly</small>
-    </div>
-    <div class="feature-card-mobile">
-      <div class="feature-icon-mobile">
-        <i class="bi bi-lightning-fill"></i>
-      </div>
-      <h6 class="fw-bold mb-1">Fast Results</h6>
-      <small class="text-muted">Real Amazon data</small>
-    </div>
-    <div class="feature-card-mobile">
-      <div class="feature-icon-mobile">
-        <i class="bi bi-cpu"></i>
-      </div>
-      <h6 class="fw-bold mb-1">Smart Filters</h6>
-      <small class="text-muted">AI-enhanced</small>
+<!-- Features Grid (outside the form) -->
+<div class="features-mobile">
+  <!-- ...unchanged... -->
+</div>
+
+<!-- ✅ FAQ Section (outside the form, one container) -->
+<section class="accordion-mobile" id="faqs">
+  <h2 class="text-center fw-bold mb-4">Frequently Asked Questions</h2>
+
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faq0')">
+      <span>Do I need to complete all 6 steps?</span>
+      <i class="bi bi-chevron-down" id="faq0-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faq0-body">
+      No! Only Step 1 is required...
     </div>
   </div>
 
-  <!-- FAQ Section -->
-  <div class="accordion-mobile">
-    <h2 class="text-center fw-bold mb-4">Frequently Asked Questions</h2>
-    
-    <div class="accordion-item-mobile">
-      <button class="accordion-header-mobile" onclick="toggleAccordion('faq0')">
-        <span>Do I need to complete all 6 steps?</span>
-        <i class="bi bi-chevron-down" id="faq0-icon"></i>
-      </button>
-      <div class="accordion-body-mobile d-none" id="faq0-body">
-        No! Only Step 1 is required - you can search Amazon immediately after entering what you're looking for. Steps 2-6 are optional filters to help you find better deals. For example, if you just want Lightning Deals on electronics, simply enter "electronics" in Step 1 and check "Lightning Deals" in Step 5 - you're done!
-      </div>
-    </div>
-    
-    <div class="accordion-item-mobile">
-      <button class="accordion-header-mobile" onclick="toggleAccordion('faq1')">
-        <span>What is Deal Shopper Pro?</span>
-        <i class="bi bi-chevron-down" id="faq1-icon"></i>
-      </button>
-      <div class="accordion-body-mobile d-none" id="faq1-body">
-        Deal Shopper Pro is a free Amazon search tool that helps you find deals using advanced filters for Prime, coupons, Lightning Deals, and more.
-      </div>
-    </div>
-
-    <div class="accordion-item-mobile">
-      <button class="accordion-header-mobile" onclick="toggleAccordion('faq2')">
-        <span>How do I find Prime-only deals?</span>
-        <i class="bi bi-chevron-down" id="faq2-icon"></i>
-      </button>
-      <div class="accordion-body-mobile d-none" id="faq2-body">
-        Simply check the "Prime Only" box in Step 5, then submit your search to see Prime-eligible deals directly on Amazon.
-      </div>
-    </div>
-
-    <div class="accordion-item-mobile">
-      <button class="accordion-header-mobile" onclick="toggleAccordion('faq3')">
-        <span>Is this free to use?</span>
-        <i class="bi bi-chevron-down" id="faq3-icon"></i>
-      </button>
-      <div class="accordion-body-mobile d-none" id="faq3-body">
-        Yes, completely free! No signup required, no credit card needed. Just start searching for deals immediately.
-      </div>
-    </div>
-
-    <div class="accordion-item-mobile">
-      <button class="accordion-header-mobile" onclick="toggleAccordion('faq4')">
-        <span>Does this work on mobile?</span>
-        <i class="bi bi-chevron-down" id="faq4-icon"></i>
-      </button>
-      <div class="accordion-body-mobile d-none" id="faq4-body">
-        Absolutely! This tool is optimized for mobile devices and works great on phones and tablets.
-      </div>
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faq1')">
+      <span>What is Deal Shopper Pro?</span>
+      <i class="bi bi-chevron-down" id="faq1-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faq1-body">
+      Deal Shopper Pro is a free Amazon search tool...
     </div>
   </div>
-    <div class="accordion-item-mobile">
-      <button class="accordion-header-mobile" onclick="toggleAccordion('faqNew1')">
-        <span>How do I find Lightning Deals on Amazon?</span>
-        <i class="bi bi-chevron-down" id="faqNew1-icon"></i>
-      </button>
-      <div class="accordion-body-mobile d-none" id="faqNew1-body">
-        Use the Lightning Deals filter in Step 5. Enter your product in Step 1, check “Lightning Deals,” and submit — we’ll take you straight to active time-sensitive offers on Amazon.
-      </div>
-    </div>
 
-    <div class="accordion-item-mobile">
-      <button class="accordion-header-mobile" onclick="toggleAccordion('faqNew2')">
-        <span>Can I filter Amazon deals by Prime only?</span>
-        <i class="bi bi-chevron-down" id="faqNew2-icon"></i>
-      </button>
-      <div class="accordion-body-mobile d-none" id="faqNew2-body">
-        Yes. Just check “Prime Only” in Step 5 to limit results to Prime-eligible items, so you only see products with Prime benefits.
-      </div>
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faq2')">
+      <span>How do I find Prime-only deals?</span>
+      <i class="bi bi-chevron-down" id="faq2-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faq2-body">
+      Simply check the "Prime Only" box...
     </div>
+  </div>
 
-    <div class="accordion-item-mobile">
-      <button class="accordion-header-mobile" onclick="toggleAccordion('faqNew3')">
-        <span>Does Deal Shopper Pro cost money?</span>
-        <i class="bi bi-chevron-down" id="faqNew3-icon"></i>
-      </button>
-      <div class="accordion-body-mobile d-none" id="faqNew3-body">
-        No. It’s 100% free — no signup and no hidden fees.
-      </div>
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faq3')">
+      <span>Is this free to use?</span>
+      <i class="bi bi-chevron-down" id="faq3-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faq3-body">
+      Yes, completely free! ...
     </div>
+  </div>
+
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faq4')">
+      <span>Does this work on mobile?</span>
+      <i class="bi bi-chevron-down" id="faq4-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faq4-body">
+      Absolutely! ...
+    </div>
+  </div>
+
+  <!-- Moved the “new” FAQs INTO the same container -->
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faqNew1')">
+      <span>How do I find Lightning Deals on Amazon?</span>
+      <i class="bi bi-chevron-down" id="faqNew1-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faqNew1-body">
+      Use the Lightning Deals filter in Step 5...
+    </div>
+  </div>
+
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faqNew2')">
+      <span>Can I filter Amazon deals by Prime only?</span>
+      <i class="bi bi-chevron-down" id="faqNew2-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faqNew2-body">
+      Yes. Just check “Prime Only” in Step 5...
+    </div>
+  </div>
+
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faqNew3')">
+      <span>Does Deal Shopper Pro cost money?</span>
+      <i class="bi bi-chevron-down" id="faqNew3-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faqNew3-body">
+      No. It’s 100% free — no signup and no hidden fees.
+    </div>
+  </div>
+</section>
 
 
   <!-- Footer -->
