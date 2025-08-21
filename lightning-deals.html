@@ -2313,6 +2313,34 @@ body {
   .accordion-header-mobile i,
   .step-header-mobile i { color: #f9fafb; }
 }
+<style>
+/* FAQ header contrast (collapsed = dark text, open = white text) */
+.accordion-header-mobile{
+  background:#f8fafc;
+  color:#111827 !important;
+}
+.accordion-header-mobile i{ color:currentColor !important; }
+
+/* Open state – works with either a custom `.expanded` class or aria */
+.accordion-header-mobile.expanded,
+.accordion-header-mobile[aria-expanded="true"]{
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  color:#ffffff !important;
+}
+.accordion-header-mobile.expanded i,
+.accordion-header-mobile[aria-expanded="true"] i{
+  color:#ffffff !important;
+}
+
+/* Dark mode: readable by default */
+@media (prefers-color-scheme: dark){
+  .accordion-header-mobile{
+    background:#111827;
+    color:#f9fafb !important;
+    border-color:#374151;
+  }
+}
+</style>
 
 </style><script type="application/ld+json">{"@context":"https://schema.org","@type":"AffiliateDisclosure","@id":"https://www.dealshopperpro.com/lightning-deals.html#affiliate-disclosure","name":"Amazon Affiliate Disclosure","description":"As an Amazon Associate I earn from qualifying purchases. Deal Shopper Pro may earn commissions on purchases made through links on this site."}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","@id":"https://www.dealshopperpro.com/lightning-deals.html#methods","name":"Ways to Find Amazon Lightning Deals","dateModified":"2025-08-21","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.dealshopperpro.com/lightning-deals.html#option1","name":"Browse All Lightning Deals"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://www.dealshopperpro.com/lightning-deals.html#option2","name":"Search Lightning Deals by Keyword & Price"}},{"@type":"ListItem","position":3,"item":{"@type":"WebPage","@id":"https://www.dealshopperpro.com/lightning-deals.html#option3","name":"Use the 6\u2011Step Advanced Lightning Deals Filter"}}]}</script>
