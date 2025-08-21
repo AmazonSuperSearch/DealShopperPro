@@ -1252,6 +1252,61 @@ body {
   }
 }
 </script>
+  <style>
+/* === Contrast Hotfix (mobile-first) === */
+:root{
+  --ds-text-dark:#111827; --ds-text-light:#f9fafb;
+}
+
+/* Dark containers -> light text */
+.hero-mobile, .video-container-mobile, .footer-mobile,
+.navbar, .navbar-dark {
+  color: var(--ds-text-light) !important;
+}
+.hero-mobile :is(h1,h2,h3,h4,h5,h6,p,small,a,.text-muted,.nav-link,
+.accordion-header-mobile,.accordion-header-mobile i,
+.step-header-mobile,.step-header-mobile i),
+.video-container-mobile :is(p,small,.text-muted),
+.footer-mobile :is(p,small,a,.text-muted){
+  color: var(--ds-text-light) !important;
+}
+
+/* Light containers -> dark text */
+body, .search-container, .accordion-item-mobile, .feature-card-mobile {
+  color: var(--ds-text-dark);
+}
+.search-container :is(h1,h2,h3,h4,h5,h6,p,small,label,.text-muted,
+.accordion-header-mobile i,.step-header-mobile i){
+  color: var(--ds-text-dark) !important;
+}
+
+/* Accordion / Step headers use Bootstrap's collapsed state */
+.accordion-header-mobile, .step-header-mobile{
+  background:#f8fafc; color:var(--ds-text-dark) !important; border:1px solid #e5e7eb;
+}
+.accordion-header-mobile:not(.collapsed),
+.step-header-mobile:not(.collapsed){
+  background:linear-gradient(135deg, var(--primary-color), #6366f1);
+  color:#fff !important;
+}
+.accordion-header-mobile i, .step-header-mobile i{ color:currentColor !important; }
+
+/* Dark mode: keep contrast strong */
+@media (prefers-color-scheme: dark){
+  body{ color:var(--ds-text-light); }
+  .search-container, .accordion-item-mobile, .feature-card-mobile{ background:#1f2937; color:var(--ds-text-light); }
+  .accordion-header-mobile, .step-header-mobile{
+    background:#111827; color:var(--ds-text-light) !important; border-color:#374151;
+  }
+  .accordion-header-mobile:not(.collapsed),
+  .step-header-mobile:not(.collapsed){
+    background:linear-gradient(135deg, var(--primary-color), #6366f1); color:#fff !important;
+  }
+  /* Video captions on dark bg */
+  .video-container-mobile .text-muted, .video-container-mobile small{ color:var(--ds-text-light) !important; opacity:.92; }
+}
+</style>
+
 </head>
 
 <body>
