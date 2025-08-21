@@ -473,21 +473,42 @@
     "author":{"@type":"Organization","name":"Deal Shopper Pro"}
   }</script>
 
-  <!-- Structured Data: VideoObject (valid hasPart) -->
-  <script type="application/ld+json">{
-    "@context":"https://schema.org",
-    "@type":"VideoObject",
-    "@id":"https://www.dealshopperpro.com/lightning-deals.html#video",
-    "name":"How to Filter Lightning Deals on Amazon in 30 Seconds (2025 Guide)",
-    "description":"Watch how to quickly find Prime Lightning Deals using Deal Shopper Pro's advanced filters.",
-    "thumbnailUrl":["https://img.youtube.com/vi/wpj1l1XUunw/hqdefault.jpg"],
-    "uploadDate":"2025-08-21T00:00:00Z",
-    "duration":"PT30S",
-    "embedUrl":"https://www.youtube.com/embed/wpj1l1XUunw",
-    "isAccessibleForFree":true,
-    "publisher":{"@type":"Organization","name":"Deal Shopper Pro","logo":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/logo.png"}},
-    "hasPart":{"@type":"Clip","name":"Step 1 Walkthrough","startOffset":0,"endOffset":10}
-  }</script>
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://www.dealshopperpro.com/lightning-deals.html#video",
+  "url": "https://www.dealshopperpro.com/lightning-deals.html#video",
+  "name": "How to Filter Lightning Deals on Amazon in 30 Seconds (2025 Guide)",
+  "description": "Watch how to quickly find Prime Lightning Deals using Deal Shopper Pro's advanced filters.",
+  "thumbnailUrl": ["https://img.youtube.com/vi/wpj1l1XUunw/hqdefault.jpg"],
+  "uploadDate": "2025-08-21T00:00:00Z",
+  "duration": "PT30S",
+  "embedUrl": "https://www.youtube.com/embed/wpj1l1XUunw",
+  "isAccessibleForFree": true,
+  "publisher": {
+    "@type": "Organization",
+    "name": "Deal Shopper Pro",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.dealshopperpro.com/logo.png"
+    }
+  },
+  "hasPart": {
+    "@type": "Clip",
+    "name": "Step 1 Walkthrough",
+    "url": "https://www.youtube.com/watch?v=wpj1l1XUunw&t=0s",
+    "startOffset": 0,
+    "endOffset": 10
+  },
+  "potentialAction": {
+    "@type": "SeekToAction",
+    "target": "https://www.youtube.com/watch?v=wpj1l1XUunw&t={seek_to_second_number}",
+    "startOffset-input": "required name=seek_to_second_number"
+  }
+}
+</script>
+
 
   <!-- External assets -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.1.3/src/lite-yt-embed.css">
