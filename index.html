@@ -1119,6 +1119,26 @@ body {
     background:#1e293b; color:#f8fafc; border:1px solid #334155;
   }
   .form-control-mobile::placeholder { color:#cbd5e1; }
+
+  /* Footer is dark on mobile: force light text */
+  footer,
+  .site-footer,
+  .section-dark,
+  .bg-dark,
+  .bg-slate-900 {
+    background-color: #0f172a !important;
+    color: #e5e7eb !important;           /* light text on dark */
+  }
+  footer a,
+  .site-footer a,
+  .section-dark a,
+  .bg-dark a,
+  .bg-slate-900 a {
+    color: #93c5fd !important;           /* readable links */
+    text-decoration: underline;
+  }
+  footer .text-dark,
+  .site-footer .text-dark { color: #e5e7eb !important; }
 }
 
 /* Expanded header gradient (both) */
@@ -1133,6 +1153,7 @@ body {
 /* Video caption on dark background */
 .video-container-mobile .text-muted,
 .video-container-mobile small { color:#f9fafb !important; opacity:.92; }
+
 </style>
 
 
