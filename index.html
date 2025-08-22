@@ -1472,7 +1472,80 @@ body, .search-container, .accordion-item-mobile, .feature-card-mobile {
     color: #fff !important;
   }
   </style>
+<style>
+/* --- Accordion / Step Contrast Fix --- */
 
+/* Default = desktop (light theme) */
+.step-header-mobile,
+.accordion-header-mobile {
+  background: #f8fafc;
+  color: #111827 !important; /* dark text */
+  border: 1px solid #e5e7eb;
+}
+.step-header-mobile small,
+.accordion-header-mobile small,
+.step-header-mobile .text-muted,
+.accordion-header-mobile .text-muted {
+  color: #475569 !important; /* dim dark */
+}
+.step-body-mobile,
+.accordion-body-mobile {
+  background: #ffffff;
+  color: #111827 !important;
+}
+.step-body-mobile .text-muted,
+.accordion-body-mobile .text-muted {
+  color: #475569 !important;
+}
+.form-control-mobile {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+.form-control-mobile::placeholder { color: #6b7280; }
+
+/* Mobile (<=576px) = dark theme */
+@media (max-width: 576px) {
+  .step-header-mobile,
+  .accordion-header-mobile {
+    background: #111827;
+    color: #f9fafb !important;
+    border: 1px solid #374151;
+  }
+  .step-header-mobile small,
+  .accordion-header-mobile small,
+  .step-header-mobile .text-muted,
+  .accordion-header-mobile .text-muted {
+    color: #cbd5e1 !important;
+  }
+  .step-body-mobile,
+  .accordion-body-mobile {
+    background: #0b1220;
+    color: #f9fafb !important;
+  }
+  .step-body-mobile .text-muted,
+  .accordion-body-mobile .text-muted {
+    color: #cbd5e1 !important;
+  }
+  .form-control-mobile {
+    background: #1e293b;
+    color: #f8fafc;
+    border: 1px solid #334155;
+  }
+  .form-control-mobile::placeholder { color: #cbd5e1; }
+}
+
+/* Expanded header state (both desktop & mobile) */
+.step-header-mobile:not(.collapsed),
+.accordion-header-mobile:not(.collapsed) {
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  color: #fff !important;
+}
+.step-header-mobile:not(.collapsed) i,
+.accordion-header-mobile:not(.collapsed) i {
+  color: #fff !important;
+}
+</style>
 </head>
 
 <body>
