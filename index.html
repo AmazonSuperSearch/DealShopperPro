@@ -1154,6 +1154,48 @@ body {
 .video-container-mobile .text-muted,
 .video-container-mobile small { color:#f9fafb !important; opacity:.92; }
 
+  /* === MOBILE CONTRAST HARD FIX (≤576px) === */
+@media (max-width: 576px) {
+
+  /* 1) WHITE CARD / STEPS AREA: force dark text, remove accidental opacity */
+  .card,
+  .accordion,
+  .accordion-item,
+  .accordion-body {
+    background-color: #ffffff !important;
+  }
+  .card h1, .card h2, .card h3, .card h4, .card h5, .card h6,
+  .card p, .card li, .card span, .card label,
+  .accordion h1, .accordion h2, .accordion h3, .accordion h4, .accordion h5, .accordion h6,
+  .accordion p, .accordion li, .accordion span, .accordion label {
+    color: #111827 !important;     /* readable on white */
+    opacity: 1 !important;          /* kill faded text */
+    mix-blend-mode: normal !important;
+  }
+  /* links inside the white card */
+  .card a, .accordion a { color: #1d4ed8 !important; text-decoration: underline; }
+
+  /* If any utility forced white text in the card, override it */
+  .card .text-white, .accordion .text-white,
+  .card .text-light, .accordion .text-light { color: #111827 !important; }
+
+  /* 2) DARK FOOTER: force light text everywhere */
+  footer, .site-footer, .bg-dark, .bg-slate-900 {
+    background-color: #0f172a !important;
+  }
+  footer *, .site-footer *, .bg-dark *, .bg-slate-900 * {
+    color: #e5e7eb !important;      /* readable on dark */
+    opacity: 1 !important;
+  }
+  /* links in dark footer */
+  footer a, .site-footer a, .bg-dark a, .bg-slate-900 a {
+    color: #93c5fd !important;
+    text-decoration: underline;
+  }
+  /* in case utilities forced dark text in footer */
+  footer .text-dark, .site-footer .text-dark { color: #e5e7eb !important; }
+}
+
 </style>
 
 
