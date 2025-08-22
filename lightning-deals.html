@@ -190,36 +190,53 @@
       </div>
     </section>
 
-    <!-- Option 2 -->
-    <section class="container section-modern" id="option2" aria-labelledby="option2-heading">
-      <div class="modern-card">
-        <div class="p-4 text-center">
-          <h2 id="option2-heading" class="h3 mb-3">Option 2: Find Lightning Deals on Amazon by Keyword &amp; Price</h2>
-          <p class="text-secondary fs-5">Perfect for shoppers asking <em>how to find lightning deals on Amazon</em> for a specific brand or product.</p>
+  <!-- Option 2 -->
+<section class="container section-modern" id="option2" aria-labelledby="option2-heading">
+  <div class="modern-card">
+    <div class="p-4 text-center">
+      <h2 id="option2-heading" class="h3 mb-3">Option 2: Find Lightning Deals on Amazon by Keyword &amp; Price</h2>
+      <p class="text-secondary fs-5">Perfect for shoppers asking <em>how to find lightning deals on Amazon</em> for a specific brand or product.</p>
+    </div>
+
+    <div class="p-4">
+      <form class="row g-4 justify-content-center align-items-end" id="lightning-search-form" novalidate>
+        <div class="col-sm-6">
+          <label class="visually-hidden" for="q">Search term</label>
+          <input id="q" name="q" type="text" class="form-control" placeholder="Search term (e.g., headphones)" required>
         </div>
-        <div class="p-4">
-          <form class="row g-4 justify-content-center align-items-end" id="lightning-search-form">
-            <div class="col-sm-6">
-              <label class="visually-hidden" for="q">Search term</label>
-              <input id="q" name="q" type="text" class="form-control" placeholder="Search term (e.g., headphones)" required>
-            </div>
-            <div class="col-sm-3">
-              <label class="visually-hidden" for="low">Minimum price</label>
-              <input id="low" name="low-price" type="number" class="form-control" placeholder="Min $">
-            </div>
-            <div class="col-sm-3">
-              <label class="visually-hidden" for="high">Maximum price</label>
-              <input id="high" name="high-price" type="number" class="form-control" placeholder="Max $">
-            </div>
-            <div class="col-12 text-center">
-              <button type="submit" class="btn btn-modern btn-primary-modern btn-lg"><i class="bi bi-search"></i> Find Matching Deals</button>
-            </div>
-          </form>
-          <a id="affLink" class="btn btn-modern btn-primary-modern btn-lg mt-3 d-none" target="_blank" rel="sponsored noopener noreferrer">View Lightning Deals on Amazon</a>
-          <small class="text-muted d-block text-center mt-2">As an Amazon Associate, we earn from qualifying purchases.</small>
+        <div class="col-sm-3">
+          <label class="visually-hidden" for="low">Minimum price</label>
+          <input id="low" name="low-price" type="number" class="form-control" placeholder="Min $" min="0" inputmode="decimal">
         </div>
+        <div class="col-sm-3">
+          <label class="visually-hidden" for="high">Maximum price</label>
+          <input id="high" name="high-price" type="number" class="form-control" placeholder="Max $" min="0" inputmode="decimal">
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-modern btn-primary-modern btn-lg">
+            <i class="bi bi-search"></i> Find Matching Deals
+          </button>
+        </div>
+      </form>
+
+      <!-- This link stays hidden until JS sets a real URL -->
+      <div class="text-center" aria-live="polite">
+        <a id="affLink"
+           href="#"
+           class="btn btn-modern btn-primary-modern btn-lg mt-3 d-none"
+           target="_blank"
+           rel="sponsored noopener noreferrer">
+          View Latest Deals
+        </a>
       </div>
-    </section>
+
+      <small class="text-muted d-block text-center mt-2">
+        As an Amazon Associate, we earn from qualifying purchases.
+      </small>
+    </div>
+  </div>
+</section>
+
 
     <!-- Option 3 -->
 <section class="container section-modern" id="option3" aria-labelledby="option3-heading">
