@@ -1307,6 +1307,172 @@ body, .search-container, .accordion-item-mobile, .feature-card-mobile {
 }
 </style>
 
+
+  <!-- Accordion Contrast Patch: mobile (dark) + desktop (light) -->
+  <style>
+  :root{
+    /* Light (desktop) */
+    --dsp-bg-light: #ffffff;
+    --dsp-text-dark: #0f172a;
+    --dsp-text-dim-dark: #475569;
+    --dsp-input-bg: #ffffff;
+    --dsp-input-border: #cbd5e1;
+
+    /* Dark (mobile) */
+    --dsp-surface: #0b1220;
+    --dsp-surface-2:#111827;
+    --dsp-text:    #f8fafc;
+    --dsp-text-dim:#cbd5e1;
+    --dsp-border:  #1f2937;
+  }
+
+  /* MOBILE (<=576px): force DARK contrast */
+  @media (max-width: 576px){
+    .accordion .accordion-item,
+    .accordion-item-mobile{
+      background: var(--dsp-surface);
+      border: 1px solid var(--dsp-border);
+      border-radius: .75rem;
+      overflow: hidden;
+    }
+
+    .accordion .accordion-button,
+    .accordion-header-mobile,
+    .step-header-mobile{
+      background: var(--dsp-surface-2);
+      color: var(--dsp-text) !important;
+    }
+    .accordion .accordion-button.collapsed{
+      background: var(--dsp-surface-2);
+      color: var(--dsp-text) !important;
+    }
+    .accordion .accordion-button::after{ filter: invert(1) opacity(.9); }
+
+    .accordion .accordion-button small,
+    .accordion .accordion-button .subtext,
+    .accordion .accordion-button .text-muted,
+    .accordion-header-mobile small,
+    .step-header-mobile small,
+    .accordion-header-mobile .text-muted,
+    .step-header-mobile .text-muted{
+      color: var(--dsp-text-dim) !important;
+      font-weight: 500;
+    }
+
+    .accordion .accordion-button:not(.collapsed){
+      background: var(--dsp-surface-2);
+      color: var(--dsp-text) !important;
+      box-shadow: inset 0 -1px 0 rgba(255,255,255,.08);
+    }
+    .accordion .accordion-collapse,
+    .accordion .accordion-body,
+    .accordion-body-mobile,
+    .step-body-mobile{
+      background: var(--dsp-surface);
+      color: var(--dsp-text) !important;
+    }
+
+    .accordion .accordion-body p,
+    .accordion .accordion-body li,
+    .accordion .accordion-body label,
+    .accordion .accordion-body .form-label,
+    .accordion .accordion-body .text-muted,
+    .accordion-body-mobile p,
+    .accordion-body-mobile li,
+    .accordion-body-mobile label,
+    .accordion-body-mobile .form-label,
+    .accordion-body-mobile .text-muted,
+    .step-body-mobile p,
+    .step-body-mobile li,
+    .step-body-mobile label,
+    .step-body-mobile .form-label,
+    .step-body-mobile .text-muted{
+      color: var(--dsp-text) !important;
+      opacity: .95;
+    }
+
+    .accordion .form-control,
+    .accordion .form-select,
+    .form-control-mobile,
+    .step-body-mobile .form-control-mobile{
+      background: #0f172a;
+      color: #f8fafc;
+      border-color: #334155;
+    }
+    .form-control-mobile::placeholder { color: var(--dsp-text-dim); }
+  }
+
+  /* DESKTOP (>=577px): force LIGHT theme */
+  @media (min-width: 577px){
+    .accordion .accordion-item,
+    .accordion-item-mobile{
+      background: var(--dsp-bg-light);
+      border: 1px solid var(--dsp-input-border);
+      border-radius: .75rem;
+    }
+
+    .accordion .accordion-button,
+    .accordion-header-mobile,
+    .step-header-mobile{
+      background: var(--dsp-bg-light);
+      color: var(--dsp-text-dark) !important;
+      border-color: var(--dsp-input-border);
+    }
+    .accordion .accordion-button.collapsed{
+      background: var(--dsp-bg-light);
+      color: var(--dsp-text-dark) !important;
+    }
+    .accordion .accordion-button::after{ filter: none; }
+
+    .accordion .accordion-button small,
+    .accordion .accordion-button .subtext,
+    .accordion .accordion-button .text-muted,
+    .accordion-header-mobile small,
+    .step-header-mobile small,
+    .accordion-header-mobile .text-muted,
+    .step-header-mobile .text-muted{
+      color: var(--dsp-text-dim-dark) !important;
+      font-weight: 500;
+    }
+
+    .accordion .accordion-button:not(.collapsed){
+      color: var(--dsp-text-dark) !important;
+    }
+
+    .accordion .accordion-body,
+    .accordion-body-mobile,
+    .step-body-mobile,
+    .accordion .accordion-body p,
+    .accordion .accordion-body li,
+    .accordion .accordion-body label,
+    .accordion .accordion-body .form-label{
+      color: var(--dsp-text-dark) !important;
+    }
+    .accordion .accordion-body .text-muted,
+    .accordion-body-mobile .text-muted,
+    .step-body-mobile .text-muted{
+      color: var(--dsp-text-dim-dark) !important;
+    }
+
+    .accordion .form-control,
+    .accordion .form-select,
+    .form-control-mobile{
+      background: var(--dsp-input-bg);
+      color: var(--dsp-text-dark);
+      border: 1px solid var(--dsp-input-border);
+    }
+    .form-control-mobile::placeholder { color: var(--dsp-text-dim-dark); }
+  }
+
+  /* Expanded state headers with your purple gradient keep strong contrast */
+  .accordion .accordion-button:not(.collapsed),
+  .step-header-mobile:not(.collapsed),
+  .accordion-header-mobile:not(.collapsed){
+    background: linear-gradient(135deg, var(--primary-color), #6366f1);
+    color: #fff !important;
+  }
+  </style>
+
 </head>
 
 <body>
