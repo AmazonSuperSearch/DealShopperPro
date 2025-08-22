@@ -1154,50 +1154,91 @@ body {
 .video-container-mobile .text-muted,
 .video-container-mobile small { color:#f9fafb !important; opacity:.92; }
 
-  /* === MOBILE CONTRAST HARD FIX (≤576px) === */
-@media (max-width: 576px) {
+/* === MOBILE CONTRAST HARD FIX (≤576px) — corrected === */
+@media (max-width:576px){
 
-  /* 1) WHITE CARD / STEPS AREA: force dark text, remove accidental opacity */
+  /* 1) White card/accordion areas must also set text color */
   .card,
   .accordion,
   .accordion-item,
   .accordion-body {
     background-color: #ffffff !important;
+    color: #111827 !important;                 /* <-- add this */
   }
-  .card h1, .card h2, .card h3, .card h4, .card h5, .card h6,
-  .card p, .card li, .card span, .card label,
-  .accordion h1, .accordion h2, .accordion h3, .accordion h4, .accordion h5, .accordion h6,
-  .accordion p, .accordion li, .accordion span, .accordion label {
-    color: #111827 !important;     /* readable on white */
-    opacity: 1 !important;          /* kill faded text */
+
+  /* Make *all* child text inherit the dark color (kills body:white) */
+  .card *, .accordion *, .accordion-item *, .accordion-body * {
+    color: inherit !important;
+    opacity: 1 !important;
     mix-blend-mode: normal !important;
   }
-  /* links inside the white card */
-  .card a, .accordion a { color: #1d4ed8 !important; text-decoration: underline; }
 
-  /* If any utility forced white text in the card, override it */
-  .card .text-white, .accordion .text-white,
-  .card .text-light, .accordion .text-light { color: #111827 !important; }
-
-  /* 2) DARK FOOTER: force light text everywhere */
-  footer, .site-footer, .bg-dark, .bg-slate-900 {
-    background-color: #0f172a !important;
+  /* Links inside the white areas */
+  .card a, .accordion a, .accordion-body a {
+    color: #1d4ed8 !important;
+    text-decoration: underline;
   }
-  footer *, .site-footer *, .bg-dark *, .bg-slate-900 * {
-    color: #e5e7eb !important;      /* readable on dark */
+
+  /* 2) Footer and any dark sections: light text */
+  footer, .site-footer, .footer-mobile, .bg-dark, .bg-slate-900 {
+    background-color: #0f172a !important;
+    color: #e5e7eb !important;                 /* ensure base color */
+  }
+  footer *, .site-footer *, .footer-mobile *, .bg-dark *, .bg-slate-900 * {
+    color: #e5e7eb !important;
     opacity: 1 !important;
   }
-  /* links in dark footer */
-  footer a, .site-footer a, .bg-dark a, .bg-slate-900 a {
+  footer a, .site-footer a, .footer-mobile a, .bg-dark a, .bg-slate-900 a {
     color: #93c5fd !important;
     text-decoration: underline;
   }
-  /* in case utilities forced dark text in footer */
-  footer .text-dark, .site-footer .text-dark { color: #e5e7eb !important; }
+
+  /* Progress card at the top should also be readable */
+  .progress-mobile {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
 }
 
-</style>
+/* === FINAL MOBILE CONTRAST PATCH (paste at very end) === */
 
+/* 1) Progress/FAQ blurb card: readable on white */
+@media (max-width:576px){
+  .progress-mobile{
+    background:#ffffff !important;
+    color:#111827 !important;                  /* base text on white */
+  }
+  .progress-mobile *{
+    color:inherit !important;                  /* defeat body: white */
+    opacity:1 !important;
+    mix-blend-mode:normal !important;
+  }
+}
+
+/* 2) Anything "muted" on dark backgrounds must be light */
+@media (prefers-color-scheme: dark) and (max-width:576px){
+  /* Global muted text on dark */
+  .text-muted{ color:#cbd5e1 !important; }
+
+  /* Bottom areas */
+  #trending-deals{ color:#f9fafb !important; }
+  #trending-deals a{ color:#93c5fd !important; text-decoration:underline; }
+
+  footer, .footer-mobile{
+    background:#0f172a !important;
+    color:#e5e7eb !important;
+  }
+  footer *, .footer-mobile *{
+    color:#e5e7eb !important;
+    opacity:1 !important;
+  }
+  footer a, .footer-mobile a{
+    color:#93c5fd !important;
+    text-decoration:underline;
+  }
+}
+  
+</style>
 
 
 
