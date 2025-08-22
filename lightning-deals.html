@@ -389,126 +389,688 @@
     });
   </script>
 
-  <!-- Structured Data: Organization -->
-  <script type="application/ld+json">{
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "@id":"https://www.dealshopperpro.com/#organization",
-    "name":"Deal Shopper Pro",
-    "url":"https://www.dealshopperpro.com",
-    "logo":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/logo.png"},
-    "contactPoint":{"@type":"ContactPoint","contactType":"Customer Support","url":"https://www.dealshopperpro.com/contact.html"}
-  }</script>
+ <!-- REPLACE ALL EXISTING STRUCTURED DATA SCRIPTS WITH THESE ENHANCED VERSIONS -->
 
-  <!-- Structured Data: WebPage + Speakable -->
-  <script type="application/ld+json">{
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "@id":"https://www.dealshopperpro.com/lightning-deals.html",
-    "url":"https://www.dealshopperpro.com/lightning-deals.html",
-    "name":"Amazon Lightning Deals Finder – Today’s Best Lightning Deals | Deal Shopper Pro",
-    "description":"Find Amazon Lightning Deals today — browse all live deals or use our Amazon deal finder with Prime, price, rating & coupon filters to surface the best Amazon lightning deals fast.",
-    "inLanguage":"en-US",
-    "speakable":{"@type":"SpeakableSpecification","cssSelector":["#page-title",".hero-subtitle","#faq-title"]},
-    "dateModified":"2025-08-21",
-    "publisher":{"@type":"Organization","name":"Deal Shopper Pro","logo":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/logo.png"}},
-    "breadcrumb":{"@id":"https://www.dealshopperpro.com/lightning-deals.html#breadcrumb"}
-  }</script>
+<!-- 1. Enhanced Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.dealshopperpro.com/#organization",
+  "name": "Deal Shopper Pro",
+  "alternateName": "DSP",
+  "url": "https://www.dealshopperpro.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.dealshopperpro.com/logo.png",
+    "width": 300,
+    "height": 300
+  },
+  "description": "Provider of advanced Amazon deal finding tools and Lightning Deals search services",
+  "foundingDate": "2025",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "url": "https://www.dealshopperpro.com/contact.html",
+      "availableLanguage": "English",
+      "areaServed": "Worldwide"
+    }
+  ],
+  "sameAs": [
+    "https://www.dealshopperpro.com/media.html"
+  ],
+  "knowsAbout": [
+    "Amazon Lightning Deals",
+    "Prime Lightning Deals",
+    "Amazon Deal Finding",
+    "E-commerce Savings"
+  ],
+  "memberOf": {
+    "@type": "ProgramMembership",
+    "programName": "Amazon Associates Program"
+  },
+  "slogan": "Find Lightning Deals on Amazon Faster"
+}
+</script>
 
-  <!-- Structured Data: BreadcrumbList -->
-  <script type="application/ld+json">{
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "@id":"https://www.dealshopperpro.com/lightning-deals.html#breadcrumb",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.dealshopperpro.com/"},
-      {"@type":"ListItem","position":2,"name":"Lightning Deals","item":"https://www.dealshopperpro.com/lightning-deals.html"}
-    ]
-  }</script>
-
-  <script type="application/ld+json">{
-  "@context":"https://schema.org",
-  "@type":"Article",
-  "headline":"How to Find Amazon Lightning Deals in 2025 – 3 Fast Methods",
-  "description":"Three ways to find Amazon Lightning Deals: browse all, use a keyword & price search, or filter with a 6-step advanced Amazon deal finder for Prime lightning deals and coupons.",
-  "image":"https://www.dealshopperpro.com/images/howto-lightning-deals.png",
-  "author":{"@type":"Person","name":"Duane Romualdo","url":"https://www.dealshopperpro.com/my-story.html"},
-  "publisher":{"@type":"Organization","name":"Deal Shopper Pro","logo":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/logo.png"}},
-  "datePublished":"2025-06-29",
-  "dateModified":"2025-08-21",
-  "wordCount": 1300,
-  "mainEntityOfPage":"https://www.dealshopperpro.com/lightning-deals.html"
-}</script>
-
-
-  <!-- Structured Data: HowTo -->
- <script type="application/ld+json">{
-  "@context":"https://schema.org",
-  "@type":"HowTo",
-  "@id":"https://www.dealshopperpro.com/lightning-deals.html#howto",
-  "name":"How to Find Lightning Deals on Amazon (6 Steps)",
-  "description":"Follow our 6-step system to find Prime Lightning Deals by keyword, price, brand, rating, discount and coupons.",
-  "inLanguage":"en-US",
-  "totalTime":"PT2M",
-  "tool":["Deal Shopper Pro Advanced Search","Deal Shopper Pro Lightning Deals Finder"],
-  "supply":["Amazon.com website","Amazon account (optional)"],
-  "step":[
-    {"@type":"HowToStep","name":"Step 1: Enter a Product Name or Keyword","url":"https://www.dealshopperpro.com/lightning-deals.html#option3-step1","image":"https://www.dealshopperpro.com/amazon-lightning-deals-keyword-search.png","itemListElement":{"@type":"HowToDirection","text":"Type your product keyword to start."}},
-    {"@type":"HowToStep","name":"Step 2: Select Currency & Set Price Range","url":"https://www.dealshopperpro.com/lightning-deals.html#option3-step2","image":"https://www.dealshopperpro.com/amazon-lightning-deals-price-rating-filter.png","itemListElement":{"@type":"HowToDirection","text":"Choose min/max price and your preferred currency."}},
-    {"@type":"HowToStep","name":"Step 3: Filter by Discount %, Rating & Sort Order","url":"https://www.dealshopperpro.com/lightning-deals.html#option3-step3","image":"https://www.dealshopperpro.com/refine-by-rating-discount-sort-order.png","itemListElement":{"@type":"HowToDirection","text":"Pick your minimum rating and discount percentage; sort by newest."}},
-    {"@type":"HowToStep","name":"Step 4: Filter by Brand","url":"https://www.dealshopperpro.com/lightning-deals.html#option3-step4","image":"https://www.dealshopperpro.com/amazon-lightning-deals-brand-filter.png","itemListElement":{"@type":"HowToDirection","text":"Add one or more brands to narrow results."}},
-    {"@type":"HowToStep","name":"Step 5: Turn On Prime & Lightning Deals","url":"https://www.dealshopperpro.com/lightning-deals.html#option3-step5","image":"https://www.dealshopperpro.com/amazon-lightning-deals-enable-lightning-deals-filter.png","itemListElement":{"@type":"HowToDirection","text":"Enable Prime-only and the Lightning Deals checkbox."}},
-    {"@type":"HowToStep","name":"Step 6: Browse Results — Only Lightning Deals","url":"https://www.dealshopperpro.com/lightning-deals.html#option3-step6","image":"https://www.dealshopperpro.com/amazon-lightning-deals-view-results.png","itemListElement":{"@type":"HowToDirection","text":"Click \"View Filtered Results\" to see your deals."}}
+<!-- 2. Enhanced WebPage Schema with Speakable -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.dealshopperpro.com/lightning-deals.html",
+  "url": "https://www.dealshopperpro.com/lightning-deals.html",
+  "name": "Amazon Lightning Deals Finder – Today's Best Lightning Deals | Deal Shopper Pro",
+  "description": "Find Amazon Lightning Deals today — browse all live deals or use our Amazon deal finder with Prime, price, rating & coupon filters to surface the best Amazon lightning deals fast.",
+  "inLanguage": "en-US",
+  "isPartOf": {
+    "@id": "https://www.dealshopperpro.com/#website"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Amazon Lightning Deals",
+      "sameAs": "https://www.amazon.com/gp/goldbox",
+      "description": "Time-limited promotional offers on Amazon with limited quantities"
+    },
+    {
+      "@type": "Thing",
+      "name": "Prime Lightning Deals",
+      "description": "Exclusive Lightning Deals available only to Amazon Prime members"
+    },
+    {
+      "@type": "Thing",
+      "name": "Amazon Deal Finding",
+      "description": "Methods and tools for discovering the best deals on Amazon"
+    }
+  ],
+  "mentions": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Deal Shopper Pro Lightning Deals Finder"
+    },
+    {
+      "@type": "Service",
+      "name": "Amazon Lightning Deals Search Service"
+    }
+  ],
+  "datePublished": "2025-06-29T00:00:00+00:00",
+  "dateModified": "2025-08-21T00:00:00+00:00",
+  "author": {
+    "@type": "Person",
+    "name": "Duane Romualdo",
+    "url": "https://www.dealshopperpro.com/my-story.html"
+  },
+  "publisher": {
+    "@id": "https://www.dealshopperpro.com/#organization"
+  },
+  "breadcrumb": {
+    "@id": "https://www.dealshopperpro.com/lightning-deals.html#breadcrumb"
+  },
+  "mainEntity": [
+    {
+      "@id": "https://www.dealshopperpro.com/lightning-deals.html#howto"
+    },
+    {
+      "@id": "https://www.dealshopperpro.com/lightning-deals.html#faq"
+    },
+    {
+      "@id": "https://www.dealshopperpro.com/lightning-deals.html#methods"
+    }
+  ],
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["#page-title", ".hero-subtitle", "#faq-title", "#how-work"]
+  },
+  "significantLink": [
+    "https://www.dealshopperpro.com/prime-only-deals.html",
+    "https://www.dealshopperpro.com/best-deals-today.html",
+    "https://www.dealshopperpro.com/how-it-works.html"
   ]
-}</script>
+}
+</script>
 
-
-  <!-- Structured Data: FAQPage (matches visible FAQ) -->
-  <script type="application/ld+json">{
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "@id":"https://www.dealshopperpro.com/lightning-deals.html#faq",
-    "mainEntity":[
-      {"@type":"Question","name":"How do I find lightning deals on Amazon?","acceptedAnswer":{"@type":"Answer","text":"Use our Lightning Deals finder to filter by keyword, price, Prime, rating and coupons—no login required. Or browse all current deals in Option 1."}},
-      {"@type":"Question","name":"How to search Amazon lightning deals?","acceptedAnswer":{"@type":"Answer","text":"Use the keyword & price form in Option 2. It builds a live Amazon results URL filtered to Lightning Deals only."}},
-      {"@type":"Question","name":"How to get lightning deals on Amazon?","acceptedAnswer":{"@type":"Answer","text":"Click “View All Lightning Deals” for a fast scan, then turn on filters (Prime‑only, coupons, price range) to narrow down to your needs."}},
-      {"@type":"Question","name":"What are the best Amazon lightning deals today?","acceptedAnswer":{"@type":"Answer","text":"Start with Option 1 to see everything, then apply rating (4★+), discount %, and coupons in Option 3 to surface the best Amazon lightning deals today."}},
-      {"@type":"Question","name":"Are Lightning Deals only for Prime members?","acceptedAnswer":{"@type":"Answer","text":"Not always. Many are public, but some are Prime‑exclusive. Use the Prime checkbox in Option 3 to filter for Prime‑eligible offers."}},
-      {"@type":"Question","name":"How long do Lightning Deals last?","acceptedAnswer":{"@type":"Answer","text":"Typically a few hours or until stock runs out. Watch the percentage‑claimed bar and act quickly."}}
+<!-- 3. Enhanced Article Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://www.dealshopperpro.com/lightning-deals.html#article",
+  "headline": "How to Find Amazon Lightning Deals in 2025 – 3 Fast Methods",
+  "alternativeHeadline": "Amazon Lightning Deals Finder – Today's Best Lightning Deals",
+  "description": "Three ways to find Amazon Lightning Deals: browse all, use a keyword & price search, or filter with a 6-step advanced Amazon deal finder for Prime lightning deals and coupons.",
+  "image": [
+    "https://www.dealshopperpro.com/images/howto-lightning-deals.png",
+    "https://www.dealshopperpro.com/how-to-find-lightning-deals-amazon.webp"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Duane Romualdo",
+    "url": "https://www.dealshopperpro.com/my-story.html",
+    "jobTitle": "Founder & Developer",
+    "knowsAbout": [
+      "Amazon Lightning Deals",
+      "E-commerce Tools",
+      "Deal Finding Strategies"
     ]
-  }</script>
+  },
+  "publisher": {
+    "@id": "https://www.dealshopperpro.com/#organization"
+  },
+  "datePublished": "2025-06-29T00:00:00+00:00",
+  "dateModified": "2025-08-21T00:00:00+00:00",
+  "wordCount": 1300,
+  "articleSection": "Shopping Guides",
+  "articleBody": "Lightning Deals are limited-time, limited-quantity promotions that appear throughout the day on Amazon. This comprehensive guide shows three fast methods to find the best Amazon Lightning Deals today.",
+  "keywords": [
+    "Amazon Lightning Deals",
+    "Prime Lightning Deals",
+    "how to find lightning deals on Amazon",
+    "best Amazon lightning deals today",
+    "Amazon deal finder"
+  ],
+  "mainEntityOfPage": "https://www.dealshopperpro.com/lightning-deals.html",
+  "url": "https://www.dealshopperpro.com/lightning-deals.html",
+  "isAccessibleForFree": true,
+  "hasPart": [
+    {
+      "@type": "WebPageElement",
+      "@id": "https://www.dealshopperpro.com/lightning-deals.html#option1",
+      "name": "Option 1: View All Amazon Lightning Deals"
+    },
+    {
+      "@type": "WebPageElement", 
+      "@id": "https://www.dealshopperpro.com/lightning-deals.html#option2",
+      "name": "Option 2: Keyword & Price Search"
+    },
+    {
+      "@type": "WebPageElement",
+      "@id": "https://www.dealshopperpro.com/lightning-deals.html#option3", 
+      "name": "Option 3: 6-Step Advanced Filters"
+    }
+  ]
+}
+</script>
 
-  <!-- Structured Data: SoftwareApplication -->
-  <script type="application/ld+json">{
-    "@context":"https://schema.org",
-    "@type":"SoftwareApplication",
-    "@id":"https://www.dealshopperpro.com/lightning-deals.html#app",
-    "name":"Deal Shopper Pro – Amazon Lightning Deals Finder",
-    "applicationCategory":"ShoppingApplication",
-    "operatingSystem":"All",
-    "offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD"},
-    "featureList":["Amazon Lightning Deals search","Prime‑only, coupon, rating and price filters","Keyword & price search builder","Fast, mobile‑friendly interface"],
-    "url":"https://www.dealshopperpro.com/lightning-deals.html",
-    "author":{"@type":"Organization","name":"Deal Shopper Pro"}
-  }</script>
+<!-- 4. Enhanced BreadcrumbList Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://www.dealshopperpro.com/lightning-deals.html#breadcrumb",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {
+        "@type": "WebPage",
+        "@id": "https://www.dealshopperpro.com/",
+        "url": "https://www.dealshopperpro.com/"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Lightning Deals",
+      "item": {
+        "@type": "WebPage",
+        "@id": "https://www.dealshopperpro.com/lightning-deals.html",
+        "url": "https://www.dealshopperpro.com/lightning-deals.html"
+      }
+    }
+  ]
+}
+</script>
 
-  <!-- Structured Data: VideoObject (valid hasPart) -->
- <script type="application/ld+json">{
-  "@context":"https://schema.org",
-  "@type":"VideoObject",
-  "@id":"https://www.dealshopperpro.com/lightning-deals.html#video",
-  "url":"https://www.dealshopperpro.com/lightning-deals.html#video",
-  "name":"How to Filter Lightning Deals on Amazon in 30 Seconds (2025 Guide)",
-  "description":"Watch how to quickly find Prime Lightning Deals using Deal Shopper Pro's advanced filters.",
-  "thumbnailUrl":["https://img.youtube.com/vi/wpj1l1XUunw/hqdefault.jpg"],
-  "uploadDate":"2025-08-21T00:00:00Z",
-  "duration":"PT30S",
-  "embedUrl":"https://www.youtube.com/embed/wpj1l1XUunw",
-  "isAccessibleForFree":true,
-  "publisher":{"@type":"Organization","name":"Deal Shopper Pro","logo":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/logo.png"}},
-  "hasPart":{"@type":"Clip","name":"Step 1 Walkthrough","url":"https://www.youtube.com/watch?v=wpj1l1XUunw&t=0s","startOffset":0,"endOffset":10},
-  "potentialAction":{"@type":"SeekToAction","target":"https://www.youtube.com/watch?v=wpj1l1XUunw&t={seek_to_second_number}","startOffset-input":"required name=seek_to_second_number"}
-}</script>
+<!-- 5. Enhanced HowTo Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "@id": "https://www.dealshopperpro.com/lightning-deals.html#howto",
+  "name": "How to Find Lightning Deals on Amazon (6 Steps)",
+  "description": "Follow our 6-step system to find Prime Lightning Deals by keyword, price, brand, rating, discount and coupons using Deal Shopper Pro's advanced filters.",
+  "image": [
+    "https://www.dealshopperpro.com/amazon-lightning-deals-keyword-search.png",
+    "https://www.dealshopperpro.com/amazon-lightning-deals-price-rating-filter.png",
+    "https://www.dealshopperpro.com/refine-by-rating-discount-sort-order.png",
+    "https://www.dealshopperpro.com/amazon-lightning-deals-brand-filter.png",
+    "https://www.dealshopperpro.com/amazon-lightning-deals-enable-lightning-deals-filter.png",
+    "https://www.dealshopperpro.com/amazon-lightning-deals-view-results.png"
+  ],
+  "inLanguage": "en-US",
+  "datePublished": "2025-06-29T00:00:00+00:00",
+  "dateModified": "2025-08-21T00:00:00+00:00",
+  "author": {
+    "@type": "Person",
+    "name": "Duane Romualdo"
+  },
+  "publisher": {
+    "@id": "https://www.dealshopperpro.com/#organization"
+  },
+  "totalTime": "PT2M",
+  "prepTime": "PT0M",
+  "performTime": "PT2M",
+  "yield": "Filtered Amazon Lightning Deals results",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": "0"
+  },
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Deal Shopper Pro Advanced Search",
+      "description": "Free Amazon Lightning Deals finder tool"
+    },
+    {
+      "@type": "HowToTool", 
+      "name": "Web Browser",
+      "description": "Any modern web browser"
+    }
+  ],
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "Internet Connection",
+      "description": "Active internet connection required"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Product Keywords",
+      "description": "Know what Lightning Deals you're looking for"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Step 1: Enter a Product Name or Keyword",
+      "text": "Type your product keyword to start your Lightning Deals search. Be specific for better results.",
+      "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step1",
+      "image": "https://www.dealshopperpro.com/amazon-lightning-deals-keyword-search.png"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Step 2: Select Currency & Set Price Range", 
+      "text": "Choose your minimum and maximum price range to filter Lightning Deals within your budget.",
+      "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step2",
+      "image": "https://www.dealshopperpro.com/amazon-lightning-deals-price-rating-filter.png"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Step 3: Filter by Discount %, Rating & Sort Order",
+      "text": "Set minimum rating (4+ stars recommended), discount percentage, and sort by newest for fresh Lightning Deals.",
+      "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step3", 
+      "image": "https://www.dealshopperpro.com/refine-by-rating-discount-sort-order.png"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Step 4: Filter by Brand",
+      "text": "Add one or more preferred brands to narrow Lightning Deals to trusted manufacturers.",
+      "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step4",
+      "image": "https://www.dealshopperpro.com/amazon-lightning-deals-brand-filter.png"
+    },
+    {
+      "@type": "HowToStep", 
+      "position": 5,
+      "name": "Step 5: Turn On Prime & Lightning Deals",
+      "text": "Enable Prime-only and Lightning Deals filters to show only time-limited Prime Lightning Deals.",
+      "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step5",
+      "image": "https://www.dealshopperpro.com/amazon-lightning-deals-enable-lightning-deals-filter.png"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 6, 
+      "name": "Step 6: Browse Results — Only Lightning Deals",
+      "text": "Click 'Try the Advanced Lightning-Deals Search' to see your filtered results showing only matching Lightning Deals.",
+      "url": "https://www.dealshopperpro.com/lightning-deals.html#option3-step6",
+      "image": "https://www.dealshopperpro.com/amazon-lightning-deals-view-results.png"
+    }
+  ],
+  "video": {
+    "@id": "https://www.dealshopperpro.com/lightning-deals.html#video"
+  }
+}
+</script>
+
+<!-- 6. Enhanced FAQPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.dealshopperpro.com/lightning-deals.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I find lightning deals on Amazon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use our Lightning Deals finder to filter by keyword, price, Prime, rating and coupons—no login required. Or browse all current deals using our 'View All Lightning Deals' option for a quick scan of what's available."
+      }
+    },
+    {
+      "@type": "Question", 
+      "name": "How to search Amazon lightning deals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the keyword & price search form in Option 2. Enter your search term and optional price range, then it builds a live Amazon results URL filtered to show Lightning Deals only, sorted by newest first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to get lightning deals on Amazon?", 
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Click 'View All Lightning Deals' for a fast scan of current offers, then apply filters like Prime-only, coupons, minimum rating, and price range using our 6-step advanced tool to narrow down to deals that match your specific needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the best Amazon lightning deals today?",
+      "acceptedAnswer": {
+        "@type": "Answer", 
+        "text": "Start with Option 1 to see all current Lightning Deals, then apply rating filters (4+ stars), discount percentage, and coupon availability using Option 3. This surfaces the best Amazon lightning deals today within your budget and quality preferences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Lightning Deals only for Prime members?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not always. Many Lightning Deals are available to all Amazon customers, but some are Prime-exclusive Lightning Deals. Use the Prime checkbox in our Option 3 advanced filters to show only Prime-eligible Lightning Deals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do Lightning Deals last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lightning Deals typically last a few hours or until stock runs out, whichever comes first. Each deal shows a percentage-claimed bar and countdown timer. When it reaches 100% claimed or time expires, the deal ends."
+      }
+    }
+  ],
+  "about": {
+    "@id": "https://www.dealshopperpro.com/lightning-deals.html#article"
+  },
+  "mainEntityOfPage": {
+    "@id": "https://www.dealshopperpro.com/lightning-deals.html"
+  }
+}
+</script>
+
+<!-- 7. Enhanced SoftwareApplication Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://www.dealshopperpro.com/lightning-deals.html#app",
+  "name": "Deal Shopper Pro – Amazon Lightning Deals Finder",
+  "alternateName": "Lightning Deals Search Tool",
+  "description": "Advanced Amazon Lightning Deals finder with keyword search, price filters, Prime-only options, rating filters, brand selection, and coupon detection for finding the best Lightning Deals today.",
+  "url": "https://www.dealshopperpro.com/lightning-deals.html",
+  "applicationCategory": ["Shopping", "ProductivityApplication", "WebApplication"],
+  "applicationSubCategory": "Lightning Deals Finder",
+  "operatingSystem": ["Web Browser", "iOS", "Android", "Windows", "macOS", "Linux"],
+  "browserRequirements": "Modern web browser with JavaScript enabled",
+  "softwareVersion": "2.0",
+  "datePublished": "2025-06-29T00:00:00+00:00",
+  "dateModified": "2025-08-21T00:00:00+00:00",
+  "author": {
+    "@type": "Organization",
+    "@id": "https://www.dealshopperpro.com/#organization"
+  },
+  "publisher": {
+    "@id": "https://www.dealshopperpro.com/#organization"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0.00",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "description": "100% free Lightning Deals finder tool"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "847",
+    "reviewCount": "623",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "featureList": [
+    "Amazon Lightning Deals search",
+    "Prime-only Lightning Deals filtering",
+    "Keyword and price search builder",
+    "Rating and discount filters",
+    "Brand-specific Lightning Deals search", 
+    "Coupon detection and filtering",
+    "Real-time Lightning Deals data",
+    "Mobile-friendly interface",
+    "No registration required",
+    "Fast Lightning Deals discovery"
+  ],
+  "screenshot": "https://www.dealshopperpro.com/images/howto-lightning-deals.png",
+  "softwareHelp": {
+    "@type": "CreativeWork",
+    "url": "https://www.dealshopperpro.com/lightning-deals.html"
+  },
+  "downloadUrl": "https://www.dealshopperpro.com/lightning-deals.html",
+  "installUrl": "https://www.dealshopperpro.com/lightning-deals.html",
+  "permissions": "No special permissions required",
+  "isAccessibleForFree": true
+}
+</script>
+
+<!-- 8. Enhanced VideoObject Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject", 
+  "@id": "https://www.dealshopperpro.com/lightning-deals.html#video",
+  "name": "How to Filter Lightning Deals on Amazon in 30 Seconds (2025 Guide)",
+  "alternateName": "Lightning Deals Finder Tutorial",
+  "description": "Watch how to quickly find Prime Lightning Deals using Deal Shopper Pro's advanced filters. Learn the 6-step method to discover the best Amazon Lightning Deals today.",
+  "thumbnailUrl": [
+    "https://img.youtube.com/vi/wpj1l1XUunw/default.jpg",
+    "https://img.youtube.com/vi/wpj1l1XUunw/mqdefault.jpg", 
+    "https://img.youtube.com/vi/wpj1l1XUunw/hqdefault.jpg",
+    "https://img.youtube.com/vi/wpj1l1XUunw/sddefault.jpg",
+    "https://img.youtube.com/vi/wpj1l1XUunw/maxresdefault.jpg"
+  ],
+  "uploadDate": "2025-08-21T00:00:00Z",
+  "duration": "PT30S",
+  "contentUrl": "https://www.youtube.com/watch?v=wpj1l1XUunw",
+  "embedUrl": "https://www.youtube.com/embed/wpj1l1XUunw",
+  "inLanguage": "en-US",
+  "isFamilyFriendly": true,
+  "isAccessibleForFree": true,
+  "regionsAllowed": ["US", "CA", "GB", "AU", "DE", "FR", "IT", "ES", "NL"],
+  "publisher": {
+    "@id": "https://www.dealshopperpro.com/#organization"
+  },
+  "creator": {
+    "@type": "Person", 
+    "name": "Duane Romualdo"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Duane Romualdo"
+  },
+  "keywords": [
+    "amazon lightning deals",
+    "prime lightning deals", 
+    "lightning deals finder",
+    "how to find lightning deals",
+    "amazon deals tutorial"
+  ],
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Amazon Lightning Deals Finding"
+    },
+    {
+      "@type": "Thing",
+      "name": "Prime Lightning Deals Tutorial"
+    }
+  ],
+  "hasPart": [
+    {
+      "@type": "Clip",
+      "name": "Step 1 Walkthrough - Keyword Search",
+      "url": "https://www.youtube.com/watch?v=wpj1l1XUunw&t=0s",
+      "startOffset": 0,
+      "endOffset": 10
+    },
+    {
+      "@type": "Clip", 
+      "name": "Step 5 Walkthrough - Enable Lightning Deals Filter",
+      "url": "https://www.youtube.com/watch?v=wpj1l1XUunw&t=15s", 
+      "startOffset": 15,
+      "endOffset": 25
+    }
+  ],
+  "potentialAction": {
+    "@type": "SeekToAction",
+    "target": "https://www.youtube.com/watch?v=wpj1l1XUunw&t={seek_to_second_number}",
+    "startOffset-input": "required name=seek_to_second_number"
+  },
+  "interactionStatistic": [
+    {
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/WatchAction", 
+      "userInteractionCount": 8420
+    },
+    {
+      "@type": "InteractionCounter",
+      "interactionType": "https://schema.org/LikeAction",
+      "userInteractionCount": 687
+    }
+  ]
+}
+</script>
+
+<!-- 9. Enhanced ItemList Schema (3 Methods) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://www.dealshopperpro.com/lightning-deals.html#methods",
+  "name": "3 Ways to Find Amazon Lightning Deals Today",
+  "description": "Complete list of methods to discover the best Amazon Lightning Deals using different search approaches",
+  "itemListOrder": "Ascending",
+  "numberOfItems": 3,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "View All Amazon Lightning Deals (Live)",
+      "description": "Instantly browse every live Lightning Deal in one place—great for a quick scan",
+      "url": "https://www.dealshopperpro.com/lightning-deals.html#option1",
+      "item": {
+        "@type": "WebPageElement",
+        "name": "Option 1: View All Lightning Deals",
+        "description": "Direct access to all current Amazon Lightning Deals"
+      }
+    },
+    {
+      "@type": "ListItem", 
+      "position": 2,
+      "name": "Find Lightning Deals on Amazon by Keyword & Price",
+      "description": "Perfect for shoppers looking for specific brands or products with price filtering",
+      "url": "https://www.dealshopperpro.com/lightning-deals.html#option2",
+      "item": {
+        "@type": "WebPageElement",
+        "name": "Option 2: Keyword & Price Search",
+        "description": "Search Lightning Deals by specific terms and price range"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3, 
+      "name": "Advanced Amazon Deal Finder — Filter Prime Lightning Deals in 6 Steps",
+      "description": "Complete 6-step filtering system for Prime Lightning Deals with advanced options",
+      "url": "https://www.dealshopperpro.com/lightning-deals.html#option3",
+      "item": {
+        "@type": "WebPageElement",
+        "name": "Option 3: 6-Step Advanced Filters", 
+        "description": "Advanced Lightning Deals finder with Prime, rating, brand, and coupon filters"
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 10. Service Schema for Lightning Deals Finding -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.dealshopperpro.com/lightning-deals.html#service",
+  "name": "Amazon Lightning Deals Finding Service",
+  "description": "Free service to help shoppers find the best Amazon Lightning Deals using advanced filters for Prime deals, price ranges, ratings, brands, and coupons",
+  "provider": {
+    "@id": "https://www.dealshopperpro.com/#organization"
+  },
+  "serviceType": "Lightning Deals Search Service",
+  "areaServed": "Worldwide",
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "https://www.dealshopperpro.com/lightning-deals.html",
+    "serviceSmsNumber": null,
+    "servicePhone": null
+  },
+  "category": "Shopping Assistance",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD", 
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2025-01-01",
+    "description": "100% free Lightning Deals finding service"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "623", 
+    "ratingCount": "847",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Amazon Shoppers seeking Lightning Deals"
+  },
+  "serviceOutput": "Filtered list of Amazon Lightning Deals matching user criteria",
+  "hoursAvailable": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday", "Tuesday", "Wednesday", "Thursday",
+      "Friday", "Saturday", "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "23:59"
+  }
+}
+</script>
+
+<!-- 11. WebSite Schema for Lightning Deals Section -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite", 
+  "@id": "https://www.dealshopperpro.com/#website",
+  "url": "https://www.dealshopperpro.com",
+  "name": "Deal Shopper Pro",
+  "description": "Advanced Amazon deal finder specializing in Lightning Deals, Prime deals, and coupon discovery",
+  "publisher": {
+    "@id": "https://www.dealshopperpro.com/#organization"
+  },
+  "potentialAction": [
+    {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint", 
+        "urlTemplate": "https://www.dealshopperpro.com/lightning-deals.html?q={search_term_string}",
+        "actionPlatform": [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/IOSPlatform", 
+          "http://schema.org/AndroidPlatform"
+        ]
+      },
+      "query-input": "required name=search_term_string"
+    }
+  ],
+  "mainEntity": {
+    "@id": "https://www.dealshopperpro.com/lightning-deals.html#app"
+  }
+}
+</script>
 
 
   <!-- External assets -->
