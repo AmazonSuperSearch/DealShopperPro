@@ -389,8 +389,6 @@
     });
   </script>
 
- <!-- REPLACE ALL EXISTING STRUCTURED DATA SCRIPTS WITH THESE ENHANCED VERSIONS -->
-
 <!-- 1. Enhanced Organization Schema -->
 <script type="application/ld+json">
 {
@@ -784,7 +782,7 @@
 }
 </script>
 
-<!-- 7. Enhanced SoftwareApplication Schema -->
+<!-- 7. Enhanced SoftwareApplication Schema - FAKE RATINGS REMOVED -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -815,14 +813,6 @@
     "availability": "https://schema.org/InStock",
     "description": "100% free Lightning Deals finder tool"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "ratingCount": "847",
-    "reviewCount": "623",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "featureList": [
     "Amazon Lightning Deals search",
     "Prime-only Lightning Deals filtering",
@@ -847,7 +837,7 @@
 }
 </script>
 
-<!-- 8. Enhanced VideoObject Schema -->
+<!-- 8. Enhanced VideoObject Schema - FAKE STATISTICS REMOVED -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -919,19 +909,7 @@
     "@type": "SeekToAction",
     "target": "https://www.youtube.com/watch?v=wpj1l1XUunw&t={seek_to_second_number}",
     "startOffset-input": "required name=seek_to_second_number"
-  },
-  "interactionStatistic": [
-    {
-      "@type": "InteractionCounter",
-      "interactionType": "https://schema.org/WatchAction", 
-      "userInteractionCount": 8420
-    },
-    {
-      "@type": "InteractionCounter",
-      "interactionType": "https://schema.org/LikeAction",
-      "userInteractionCount": 687
-    }
-  ]
+  }
 }
 </script>
 
@@ -986,7 +964,7 @@
 }
 </script>
 
-<!-- 10. Service Schema for Lightning Deals Finding -->
+<!-- 10. Service Schema for Lightning Deals Finding - FAKE RATINGS REMOVED -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1013,14 +991,6 @@
     "availability": "https://schema.org/InStock",
     "validFrom": "2025-01-01",
     "description": "100% free Lightning Deals finding service"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "623", 
-    "ratingCount": "847",
-    "bestRating": "5",
-    "worstRating": "1"
   },
   "audience": {
     "@type": "Audience",
