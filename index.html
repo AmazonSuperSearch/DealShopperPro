@@ -2082,6 +2082,16 @@ body {
   </div>
 </section>
 
+  <section id="trending-deals" class="px-3 py-4">
+  <h2 class="mb-3">Today’s trending deals on Amazon</h2>
+  <p class="text-muted mb-3">Updated daily — examples of popular searches you can open instantly.</p>
+  <ul class="mb-3">
+    <li><a href="#search-form">Wireless earbuds under $50</a></li>
+    <li><a href="#search-form">Kitchen gadgets with coupons</a></li>
+    <li><a href="#search-form">Gaming mice 4★ & up</a></li>
+  </ul>
+  <small class="text-muted">Tip: Use the <strong>Lightning Deals</strong> and <strong>Prime Only</strong> toggles in Step 5 to refine these further.</small>
+</section>
 
 <footer class="footer-mobile">
   <div class="footer-links">
@@ -2211,16 +2221,19 @@ function toggleAccordion(id){
 }
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lite-youtube-embed@0.3.1/src/lite-yt-embed.js" defer></script>
+<script src="/navbar-loader.js" defer></script>
+<script src="/searchlogic-v2.js" defer></script>
 
-<section id="trending-deals" class="px-3 py-4">
-  <h2 class="mb-3">Today’s trending deals on Amazon</h2>
-  <p class="text-muted mb-3">Updated daily — examples of popular searches you can open instantly.</p>
-  <ul class="mb-3">
-    <li><a href="#search-form">Wireless earbuds under $50</a></li>
-    <li><a href="#search-form">Kitchen gadgets with coupons</a></li>
-    <li><a href="#search-form">Gaming mice 4★ & up</a></li>
-  </ul>
-  <small class="text-muted">Tip: Use the <strong>Lightning Deals</strong> and <strong>Prime Only</strong> toggles in Step 5 to refine these further.</small>
-</section>
+<script defer>
+  function scrollToForm(){
+    const el = document.getElementById('search-form');
+    if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  }
+</script>
+</body>
+</html>
+
 </body>
 </html>
