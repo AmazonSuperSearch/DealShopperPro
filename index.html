@@ -2262,5 +2262,36 @@ function toggleAccordion(id){
     if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   }
 </script>
+  <script defer>
+  function shareWhatsApp(e){ if(e) e.preventDefault();
+    const msg = encodeURIComponent('Check this free Amazon deal finder: ' + location.href);
+    window.open('https://wa.me/?text=' + msg, '_blank', 'noopener,noreferrer');
+  }
+  function shareMessenger(e){ if(e) e.preventDefault();
+    const u = encodeURIComponent(location.href);
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + u, '_blank', 'noopener,noreferrer');
+  }
+  function shareSMS(e){ if(e) e.preventDefault();
+    const m = encodeURIComponent('Check this free Amazon deal finder: ' + location.href);
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) location.href = 'sms:?body=' + m;
+    else alert('SMS sharing is mobile-only. Message:\n\n' + decodeURIComponent(m));
+  }
+  function shareTwitter(e){ if(e) e.preventDefault();
+    const t = encodeURIComponent('Smart Amazon deal hunting starts here: ' + location.href);
+    window.open('https://twitter.com/intent/tweet?text=' + t, '_blank', 'noopener,noreferrer');
+  }
+  function shareFacebook(e){ if(e) e.preventDefault();
+    const u = encodeURIComponent(location.href);
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + u, '_blank', 'noopener,noreferrer');
+  }
+  function copyLink(e){
+    if(e) e.preventDefault();
+    navigator.clipboard.writeText(location.href).then(()=>{
+      const btn = (e && (e.target.closest('button')||e.target)) || null;
+      if(btn){ const t=btn.textContent; btn.textContent='Copied!'; setTimeout(()=>btn.textContent=t,2000); }
+    }).catch(()=>alert('Failed to copy link.'));
+  }
+</script>
+
 </body>
 </html>
