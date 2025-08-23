@@ -1247,27 +1247,25 @@ body {
   <meta property="og:updated_time" content="2025-08-21T00:00:00+00:00">
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://www.dealshopperpro.com/#website","url":"https://www.dealshopperpro.com/","name":"Deal Shopper Pro","potentialAction":{"@type":"SearchAction","target":"https://www.dealshopperpro.com/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<!-- WebSite -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@type":"WebPage",
-  "@id":"https://www.dealshopperpro.com/#webpage",
+  "@type":"WebSite",
+  "@id":"https://www.dealshopperpro.com/#website",
   "url":"https://www.dealshopperpro.com/",
-  "name":"Advanced Amazon Search Tool — Find Today’s Best Deals Fast",
-  "description":"Find today’s best Amazon deals fast. Use our advanced search tool to uncover Prime-only offers, Lightning Deals & hidden coupons instantly.",
+  "name":"Deal Shopper Pro",
+  "description":"Advanced Amazon deal search with filters for Prime, Lightning Deals, coupons, and clearance.",
   "inLanguage":"en",
-  "about":[
-    {"@type":"Thing","name":"Amazon","sameAs":"https://www.amazon.com"},
-    {"@type":"Thing","name":"Lightning Deals","sameAs":"https://www.amazon.com/gp/goldbox"},
-    {"@type":"Thing","name":"Coupons","sameAs":"https://www.amazon.com/coupons"}
-  ]
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://www.dealshopperpro.com/?q={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
 }
 </script>
 
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"VideoObject","name":"How to Find Amazon Deals","description":"Watch: How to find Lightning Deals in 30 seconds","thumbnailUrl":["https://i.ytimg.com/vi/wpj1l1XUunw/hqdefault.jpg"],"embedUrl":"https://www.youtube-nocookie.com/embed/wpj1l1XUunw","uploadDate":"2025-06-18","duration":"PT1M","publisher":{"@id":"https://www.dealshopperpro.com/#organization"},"potentialAction":{"@type":"WatchAction","target":"https://www.youtube.com/watch?v=wpj1l1XUunw"}}
-</script>
+<!-- Organization (publisher) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -1275,6 +1273,12 @@ body {
   "@id":"https://www.dealshopperpro.com/#organization",
   "name":"Deal Shopper Pro",
   "url":"https://www.dealshopperpro.com/",
+  "logo":{
+    "@type":"ImageObject",
+    "url":"https://www.dealshopperpro.com/logo.png",
+    "width":600,
+    "height":60
+  },
   "sameAs":[
     "https://www.youtube.com/@dealshopperpro",
     "https://medium.com/@dealshopperpro",
@@ -1286,20 +1290,122 @@ body {
     "contactType":"customer support",
     "email":"drdizzle613@proton.me",
     "availableLanguage":["en"]
-  }]
+  }],
+  "founder":{"@id":"https://www.dealshopperpro.com/#person"}
 }
 </script>
 
+<!-- Person (founder/author) -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","@id":"https://www.dealshopperpro.com/#person","name":"Duane Romualdo","url":"https://www.dealshopperpro.com/","email":"mailto:drdizzle613@proton.me"}
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "@id":"https://www.dealshopperpro.com/#person",
+  "name":"Duane Romualdo",
+  "url":"https://www.dealshopperpro.com/",
+  "email":"mailto:drdizzle613@proton.me",
+  "jobTitle":"Founder"
+}
 </script>
+
+<!-- WebApplication (the tool) -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"HowTo","@id":"https://www.dealshopperpro.com/#howto","name":"How to Find Amazon Deals Fast in 6 Steps","description":"Use Deal Shopper Pro’s guided filters to search Amazon with precision: start with a product, set a budget, add ratings/discounts, include brands, apply deal filters, and view results on Amazon.","mainEntityOfPage":{"@id":"https://www.dealshopperpro.com/#webpage"},"inLanguage":"en","totalTime":"PT1M","step":[{"@type":"HowToStep","name":"Search Products","text":"Enter keywords, ASIN, ISBN, or UPC to start your search."},{"@type":"HowToStep","name":"Set Price Range","text":"Choose your minimum and maximum price."},{"@type":"HowToStep","name":"Quick Filters","text":"Choose sort order, set a minimum rating, and add a discount threshold."},{"@type":"HowToStep","name":"Brand Filter","text":"Include specific brands to narrow the results."},{"@type":"HowToStep","name":"Deal Filters","text":"Toggle Prime-only, Lightning Deals, Coupons, and more deal types."},{"@type":"HowToStep","name":"Search Amazon","text":"Submit to open filtered results directly on Amazon."}]}
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "@id":"https://www.dealshopperpro.com/#app",
+  "name":"Deal Shopper Pro — Advanced Amazon Search Tool",
+  "url":"https://www.dealshopperpro.com/",
+  "applicationCategory":"ShoppingApplication",
+  "operatingSystem":"Web",
+  "isAccessibleForFree":true,
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "publisher":{"@id":"https://www.dealshopperpro.com/#organization"}
+}
 </script>
+
+<!-- WebPage (home) -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","@id":"https://www.dealshopperpro.com/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dealshopperpro.com/"}]}
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "@id":"https://www.dealshopperpro.com/#webpage",
+  "url":"https://www.dealshopperpro.com/",
+  "name":"Advanced Amazon Search Tool — Find Today’s Best Deals Fast",
+  "description":"Find today’s best Amazon deals fast. Use our advanced search tool to uncover Prime-only offers, Lightning Deals & hidden coupons instantly.",
+  "inLanguage":"en",
+  "isPartOf":{"@id":"https://www.dealshopperpro.com/#website"},
+  "publisher":{"@id":"https://www.dealshopperpro.com/#organization"},
+  "primaryImageOfPage":{
+    "@type":"ImageObject",
+    "url":"https://www.dealshopperpro.com/og-image.jpg",
+    "width":1200,
+    "height":630
+  },
+  "about":[
+    {"@type":"Thing","name":"Amazon","sameAs":"https://www.amazon.com"},
+    {"@type":"Thing","name":"Lightning Deals","sameAs":"https://www.amazon.com/gp/goldbox"},
+    {"@type":"Thing","name":"Coupons","sameAs":"https://www.amazon.com/coupons"},
+    {"@type":"Thing","name":"Clearance","sameAs":"https://www.amazon.com/outlet"}
+  ],
+  "breadcrumb":{"@id":"https://www.dealshopperpro.com/#breadcrumbs"}
+}
 </script>
-</head>
+
+<!-- Video -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"VideoObject",
+  "@id":"https://www.dealshopperpro.com/#video",
+  "name":"How to Find Amazon Deals",
+  "description":"Watch: How to find Lightning Deals in 30 seconds",
+  "thumbnailUrl":["https://i.ytimg.com/vi/wpj1l1XUunw/hqdefault.jpg"],
+  "embedUrl":"https://www.youtube-nocookie.com/embed/wpj1l1XUunw",
+  "uploadDate":"2025-06-18",
+  "duration":"PT1M",
+  "inLanguage":"en",
+  "isFamilyFriendly":true,
+  "publisher":{"@id":"https://www.dealshopperpro.com/#organization"},
+  "partOf":{"@id":"https://www.dealshopperpro.com/#webpage"},
+  "potentialAction":{"@type":"WatchAction","target":"https://www.youtube.com/watch?v=wpj1l1XUunw"}
+}
+</script>
+
+<!-- HowTo -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HowTo",
+  "@id":"https://www.dealshopperpro.com/#howto",
+  "name":"How to Find Amazon Deals Fast in 6 Steps",
+  "description":"Use Deal Shopper Pro’s guided filters to search Amazon with precision: start with a product, set a budget, add ratings/discounts, include brands, apply deal filters, and view results on Amazon.",
+  "inLanguage":"en",
+  "totalTime":"PT1M",
+  "mainEntityOfPage":{"@id":"https://www.dealshopperpro.com/#webpage"},
+  "step":[
+    {"@type":"HowToStep","name":"Search Products","text":"Enter keywords, ASIN, ISBN, or UPC to start your search."},
+    {"@type":"HowToStep","name":"Set Price Range","text":"Choose your minimum and maximum price."},
+    {"@type":"HowToStep","name":"Quick Filters","text":"Choose sort order, set a minimum rating, and add a discount threshold."},
+    {"@type":"HowToStep","name":"Brand Filter","text":"Include specific brands to narrow the results."},
+    {"@type":"HowToStep","name":"Deal Filters","text":"Toggle Prime-only, Lightning Deals, Coupons, and more deal types."},
+    {"@type":"HowToStep","name":"Search Amazon","text":"Submit to open filtered results directly on Amazon."}
+  ]
+}
+</script>
+
+<!-- Breadcrumbs -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "@id":"https://www.dealshopperpro.com/#breadcrumbs",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.dealshopperpro.com/"}
+  ]
+}
+</script>
+
 
 <body>
   <div id="navbar-placeholder"></div>
