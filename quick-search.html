@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4f46e5">
+  <title>Deal Shopper Pro: Find Amazon Prime Deals & Lightning Deals Fast</title>
+  <meta name="description" content="Find Amazon Prime deals, Lightning Deals & hidden coupons instantly. Simple 3-step search. 100% free, no signup.">
+  
+  <link rel="canonical" href="https://www.dealshopperpro.com/">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+  :root {
+    --primary: #4f46e5;
+    --success: #059669;
+    --warning: #f59e0b;
+    --gold: #FFD700;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f8fafc;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--gold), #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero .subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+  }
+
+  .quick-search {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: -2rem 1rem 3rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+  }
+
+  .quick-btn {
+    background: linear-gradient(135deg, var(--primary), #6366f1);
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .quick-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+  }
+
+  .quick-btn.lightning { background: linear-gradient(135deg, #f59e0b, #f97316); }
+  .quick-btn.prime { background: linear-gradient(135deg, #0ea5e9, #0284c7); }
+  .quick-btn.budget { background: linear-gradient(135deg, var(--success), #10b981); }
+
+  .search-form {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  .form-control {
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  }
+
+  .filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .filter-card {
+    background: #f8fafc;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .filter-card:hover, .filter-card.active {
+    border-color: var(--primary);
+    background: rgba(79, 70, 229, 0.05);
+    transform: translateY(-2px);
+  }
+
+  .filter-card.active {
+    border-color: var(--primary);
+    background: rgba(79, 70, 229, 0.1);
+  }
+
+  .search-btn {
+    background: linear-gradient(135deg, var(--success), #10b981);
+    color: white;
+    border: none;
+    padding: 1.25rem 2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .search-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(5, 150, 105, 0.3);
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .feature {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), #6366f1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 24px;
+    color: white;
+  }
+
+  .footer {
+    background: #1f2937;
+    color: #d1d5db;
+    padding: 3rem 1rem 2rem;
+    text-align: center;
+  }
+
+  .footer a {
+    color: #60a5fa;
+    text-decoration: none;
+    margin: 0 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .hero .subtitle { font-size: 1.1rem; }
+    .quick-search, .search-form { margin: 1rem 0.5rem; }
+  }
+  </style>
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Find Amazon Deals Fast</h1>
+    <p class="subtitle">Prime deals, Lightning Deals & hidden coupons in 3 simple steps</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+      <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 25px; font-size: 0.9rem;">
+        <i class="bi bi-shield-check me-2"></i>100% Free
+      </span>
+      <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 25px; font-size: 0.9rem;">
+        <i class="bi bi-lightning-fill me-2"></i>Instant Results
+      </span>
+      <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 25px; font-size: 0.9rem;">
+        <i class="bi bi-star-fill me-2"></i>No Signup
+      </span>
+    </div>
+  </section>
+
+  <!-- Quick Search Options -->
+  <div class="quick-search">
+    <h2 style="text-align: center; margin-bottom: 1.5rem; color: #1f2937;">🚀 Popular Searches</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+      <button class="quick-btn lightning" onclick="quickSearch('lightning')">
+        ⚡ Today's Lightning Deals
+      </button>
+      <button class="quick-btn prime" onclick="quickSearch('prime')">
+        ⭐ Prime-Only Deals
+      </button>
+      <button class="quick-btn budget" onclick="quickSearch('budget')">
+        💰 Deals Under $25
+      </button>
+      <button class="quick-btn" onclick="quickSearch('tech')">
+        📱 Tech & Electronics
+      </button>
+      <button class="quick-btn" onclick="quickSearch('home')">
+        🏠 Home & Kitchen
+      </button>
+      <button class="quick-btn" onclick="quickSearch('gifts')">
+        🎁 Gift Ideas
+      </button>
+    </div>
+    <p style="text-align: center; margin-top: 1.5rem; color: #6b7280;">
+      Or create a custom search below ↓
+    </p>
+  </div>
+
+  <!-- Simple Search Form -->
+  <div class="search-form">
+    <form id="amazon-search-form">
+      <h3 style="text-align: center; margin-bottom: 1.5rem; color: #1f2937;">🎯 Custom Search</h3>
+      
+      <!-- Step 1: Search -->
+      <div style="margin-bottom: 2rem;">
+        <label style="font-weight: 600; color: #374151; display: block; margin-bottom: 0.5rem;">
+          1. What are you looking for?
+        </label>
+        <input type="text" 
+               class="form-control" 
+               id="searchInput" 
+               placeholder="e.g. wireless headphones, coffee maker, yoga mat..."
+               style="font-size: 1.1rem;">
+      </div>
+
+      <!-- Step 2: Deal Types (Visual Cards) -->
+      <div style="margin-bottom: 2rem;">
+        <label style="font-weight: 600; color: #374151; display: block; margin-bottom: 1rem;">
+          2. What type of deals? (optional - select any)
+        </label>
+        <div class="filter-grid">
+          <div class="filter-card" data-filter="prime" onclick="toggleFilter(this, 'prime')">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⭐</div>
+            <div style="font-weight: 600;">Prime Only</div>
+            <small style="color: #6b7280;">Free shipping & benefits</small>
+          </div>
+          <div class="filter-card" data-filter="lightning" onclick="toggleFilter(this, 'lightning')">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+            <div style="font-weight: 600;">Lightning Deals</div>
+            <small style="color: #6b7280;">Limited-time offers</small>
+          </div>
+          <div class="filter-card" data-filter="coupons" onclick="toggleFilter(this, 'coupons')">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎫</div>
+            <div style="font-weight: 600;">Coupons</div>
+            <small style="color: #6b7280;">Extra discount codes</small>
+          </div>
+          <div class="filter-card" data-filter="budget" onclick="toggleFilter(this, 'budget')">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">💰</div>
+            <div style="font-weight: 600;">Under $25</div>
+            <small style="color: #6b7280;">Budget-friendly finds</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Price Range (Simple) -->
+      <div style="margin-bottom: 2rem;">
+        <label style="font-weight: 600; color: #374151; display: block; margin-bottom: 1rem;">
+          3. Price range? (optional)
+        </label>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div>
+            <input type="number" class="form-control" id="minPrice" placeholder="Min $" style="text-align: center;">
+          </div>
+          <div>
+            <input type="number" class="form-control" id="maxPrice" placeholder="Max $" style="text-align: center;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="search-btn">
+        <i class="bi bi-search me-2"></i>
+        Search Amazon Now
+      </button>
+      
+      <p style="text-align: center; margin-top: 1rem; color: #6b7280; font-size: 0.9rem;">
+        Results open directly on Amazon with your filters applied
+      </p>
+    </form>
+  </div>
+
+  <!-- Features -->
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">
+        <i class="bi bi-lightning-fill"></i>
+      </div>
+      <h4>Lightning Fast</h4>
+      <p style="color: #6b7280;">Find deals in seconds, not minutes. Skip the endless scrolling.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">
+        <i class="bi bi-star-fill"></i>
+      </div>
+      <h4>Prime Deals</h4>
+      <p style="color: #6b7280;">Access exclusive Prime-only offers and free shipping deals.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">
+        <i class="bi bi-shield-check"></i>
+      </div>
+      <h4>100% Free</h4>
+      <p style="color: #6b7280;">No signup, no fees, no tracking. Just better Amazon search.</p>
+    </div>
+  </div>
+
+  <!-- Simple FAQ -->
+  <div style="max-width: 600px; margin: 3rem auto; padding: 0 1rem;">
+    <h3 style="text-align: center; margin-bottom: 2rem;">❓ Quick Questions</h3>
+    
+    <div style="background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <strong>Is this really free?</strong>
+      <p style="margin: 0.5rem 0 0; color: #6b7280;">Yes! Completely free. We earn a small commission from Amazon when you buy something, but you pay the same price.</p>
+    </div>
+    
+    <div style="background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <strong>How is this different from Amazon search?</strong>
+      <p style="margin: 0.5rem 0 0; color: #6b7280;">We combine multiple filters that Amazon separates, so you can find Prime deals, Lightning Deals, and coupons all in one search.</p>
+    </div>
+    
+    <div style="background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <strong>Do I need to create an account?</strong>
+      <p style="margin: 0.5rem 0 0; color: #6b7280;">Nope! Just search and go. Your results open directly on Amazon.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div style="margin-bottom: 2rem;">
+      <strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases.
+    </div>
+    <div style="margin-bottom: 2rem;">
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <p style="font-size: 0.9rem; color: #9ca3af;">
+      © 2025 Deal Shopper Pro - Independent tool, not affiliated with Amazon
+    </p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/navbar-loader.js"></script>
+  <script src="/search-logic.js"></script>
+
+  <script>
+  // Quick search functions
+  function quickSearch(type) {
+    const searchInput = document.getElementById('searchInput');
+    const minPrice = document.getElementById('minPrice');
+    const maxPrice = document.getElementById('maxPrice');
+    
+    // Clear previous selections
+    document.querySelectorAll('.filter-card').forEach(card => card.classList.remove('active'));
+    
+    switch(type) {
+      case 'lightning':
+        toggleFilter(document.querySelector('[data-filter="lightning"]'), 'lightning');
+        break;
+      case 'prime':
+        toggleFilter(document.querySelector('[data-filter="prime"]'), 'prime');
+        break;
+      case 'budget':
+        toggleFilter(document.querySelector('[data-filter="budget"]'), 'budget');
+        maxPrice.value = '25';
+        break;
+      case 'tech':
+        searchInput.value = 'electronics';
+        break;
+      case 'home':
+        searchInput.value = 'home kitchen';
+        break;
+      case 'gifts':
+        searchInput.value = 'gifts';
+        break;
+    }
+    
+    // Scroll to form
+    document.getElementById('searchInput').scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => document.getElementById('searchInput').focus(), 500);
+  }
+
+  // Toggle filter cards
+  function toggleFilter(card, filterType) {
+    card.classList.toggle('active');
+    
+    // You can add logic here to track selected filters
+    // Your search-logic.js will handle the form submission
+  }
+
+  // Simple form validation
+  document.getElementById('amazon-search-form').addEventListener('submit', function(e) {
+    const searchInput = document.getElementById('searchInput');
+    if (!searchInput.value.trim()) {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.style.borderColor = '#dc2626';
+      setTimeout(() => {
+        searchInput.style.borderColor = '#e5e7eb';
+      }, 3000);
+      return;
+    }
+    
+    // Your search-logic.js will handle the rest
+  });
+  </script>
+</body>
+</html>
