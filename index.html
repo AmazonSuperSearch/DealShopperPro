@@ -1246,165 +1246,164 @@ body {
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://www.dealshopperpro.com/#website",
-  "url": "https://www.dealshopperpro.com/",
-  "name": "Deal Shopper Pro",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.dealshopperpro.com/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://www.dealshopperpro.com/#organization",
-  "name": "Deal Shopper Pro",
-  "url": "https://www.dealshopperpro.com/",
-  "sameAs": [
-    "https://www.youtube.com/@dealshopperpro",
-    "https://medium.com/@dealshopperpro",
-    "https://www.tumblr.com/dealshopperpro",
-    "https://www.pinterest.com/dealshopperpro/"
-  ],
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "contactType": "customer support",
-    "email": "drdizzle613@proton.me",
-    "availableLanguage": ["en"]
-  }],
-  "founder": { "@id": "https://www.dealshopperpro.com/#person" }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://www.dealshopperpro.com/#person",
-  "name": "Duane Romualdo",
-  "url": "https://www.dealshopperpro.com/",
-  "email": "mailto:drdizzle613@proton.me",
-  "jobTitle": "Founder"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "@id": "https://www.dealshopperpro.com/#app",
-  "name": "Deal Shopper Pro — Advanced Amazon Search Tool",
-  "url": "https://www.dealshopperpro.com/",
-  "applicationCategory": "ShoppingApplication",
-  "operatingSystem": "Web",
-  "isAccessibleForFree": true,
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "publisher": { "@id": "https://www.dealshopperpro.com/#organization" }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://www.dealshopperpro.com/#webpage",
-  "url": "https://www.dealshopperpro.com/",
-  "name": "Advanced Amazon Search Tool — Find Today’s Best Deals Fast",
-  "description": "Find today’s best Amazon deals fast. Use our advanced search tool to uncover Prime-only offers, Lightning Deals & hidden coupons instantly.",
-  "inLanguage": "en",
-  "isPartOf": { "@id": "https://www.dealshopperpro.com/#website" },
-  "publisher": { "@id": "https://www.dealshopperpro.com/#organization" },
-  "primaryImageOfPage": {
-    "@type": "ImageObject",
-    "url": "https://www.dealshopperpro.com/og-image.jpg",
-    "width": 1200, "height": 630
-  },
-  "breadcrumb": { "@id": "https://www.dealshopperpro.com/#breadcrumbs" }
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "@id": "https://www.dealshopperpro.com/#breadcrumbs",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dealshopperpro.com/" }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "How to Find Amazon Deals",
-  "description": "Watch: How to find Lightning Deals in 30 seconds",
-  "thumbnailUrl": ["https://i.ytimg.com/vi/wpj1l1XUunw/hqdefault.jpg"],
-  "embedUrl": "https://www.youtube-nocookie.com/embed/wpj1l1XUunw",
-  "contentUrl": "https://www.youtube.com/watch?v=wpj1l1XUunw",
-  "uploadDate": "2025-06-18T00:00:00+00:00",
-  "duration": "PT1M",
-  "publisher": { "@id": "https://www.dealshopperpro.com/#organization" },
-  "potentialAction": {
-    "@type": "WatchAction",
-    "target": "https://www.youtube.com/watch?v=wpj1l1XUunw"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
+  "@graph": [
     {
-      "@type":"Question",
-      "name":"Do I need to complete all 6 steps?",
-      "acceptedAnswer":{"@type":"Answer","text":"No—only Step 1 is required. Type a product keyword and tap Search Amazon Now. Steps 2–5 add optional Amazon search filters (price range, rating, brand includes, Prime-only deals, Lightning Deals, and coupons) so you can find today’s best Amazon deals fast."}
+      "@type": "WebSite",
+      "@id": "https://www.dealshopperpro.com/#website",
+      "url": "https://www.dealshopperpro.com/",
+      "name": "Deal Shopper Pro",
+      "description": "Advanced Amazon search tool with Prime-only, Lightning Deals & coupon filters.",
+      "publisher": { "@id": "https://www.dealshopperpro.com/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.dealshopperpro.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     },
     {
-      "@type":"Question",
-      "name":"What is Deal Shopper Pro?",
-      "acceptedAnswer":{"@type":"Answer","text":"Deal Shopper Pro is a free, advanced Amazon search tool and deal finder. It uncovers Prime-only offers, Amazon Lightning Deals, and hidden coupons in seconds—no signup required."}
+      "@type": "Organization",
+      "@id": "https://www.dealshopperpro.com/#organization",
+      "name": "Deal Shopper Pro",
+      "url": "https://www.dealshopperpro.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.dealshopperpro.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.youtube.com/@dealshopperpro",
+        "https://medium.com/@dealshopperpro",
+        "https://www.pinterest.com/dealshopperpro",
+        "https://dealshopperpro.tumblr.com",
+        "https://www.linkedin.com/in/duane-romualdo"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "mailto:drdizzle613@proton.me"
+      },
+      "founder": { "@id": "https://www.dealshopperpro.com/#founder" }
     },
     {
-      "@type":"Question",
-      "name":"How do I find Prime-only deals?",
-      "acceptedAnswer":{"@type":"Answer","text":"Open Step 5 – Deal Filters and toggle Prime Only. For the strongest results, combine it with Minimum Discount or Minimum Rating in Step 3 and sort by Newest to highlight today’s best Prime deals."}
+      "@type": "Person",
+      "@id": "https://www.dealshopperpro.com/#founder",
+      "name": "Duane Romualdo",
+      "url": "https://www.dealshopperpro.com/my-story.html",
+      "sameAs": [
+        "https://www.linkedin.com/in/duane-romualdo",
+        "https://medium.com/@dealshopperpro"
+      ]
     },
     {
-      "@type":"Question",
-      "name":"Is this free to use?",
-      "acceptedAnswer":{"@type":"Answer","text":"Yes—100% free. No account, no paywalls, and no subscriptions. We may earn a commission from qualifying purchases (Amazon Associate), but using this Amazon deal finder costs you nothing."}
+      "@type": "WebApplication",
+      "@id": "https://www.dealshopperpro.com/#app",
+      "name": "Deal Shopper Pro",
+      "operatingSystem": "Web",
+      "applicationCategory": "ShoppingApplication",
+      "url": "https://www.dealshopperpro.com/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Prime-only search",
+        "Lightning Deals",
+        "Coupon filters",
+        "Advanced brand & price filters",
+        "Eco & ethical filters"
+      ],
+      "screenshot": "https://www.dealshopperpro.com/screenshot.jpg"
     },
     {
-      "@type":"Question",
-      "name":"Does this work on mobile?",
-      "acceptedAnswer":{"@type":"Answer","text":"Absolutely. Deal Shopper Pro is mobile-first and fast on iPhone, Android, and tablets. It works great in Chrome, Safari, and Edge so you can find Amazon deals on the go."}
+      "@type": "WebPage",
+      "@id": "https://www.dealshopperpro.com/#webpage",
+      "url": "https://www.dealshopperpro.com/",
+      "name": "Advanced Amazon Search Tool — Find Today’s Best Deals Fast",
+      "isPartOf": { "@id": "https://www.dealshopperpro.com/#website" },
+      "about": { "@id": "https://www.dealshopperpro.com/#app" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.dealshopperpro.com/og-image.jpg"
+      },
+      "breadcrumb": { "@id": "https://www.dealshopperpro.com/#breadcrumb" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "xpath": [
+          "/html/head/title",
+          "/html/head/meta[@name='description']/@content"
+        ]
+      },
+      "datePublished": "2025-06-18",
+      "dateModified": "2025-08-23"
     },
     {
-      "@type":"Question",
-      "name":"How do I find Lightning Deals on Amazon?",
-      "acceptedAnswer":{"@type":"Answer","text":"In Step 5, check Lightning Deals, then sort by Newest to surface time-sensitive Lightning Deals that are live right now. These deals expire quickly—refresh often during Prime Day, Black Friday, and holidays."}
+      "@type": "VideoObject",
+      "@id": "https://www.dealshopperpro.com/#video",
+      "name": "How to Filter Lightning Deals on Amazon in 30 Seconds (2025 Guide)",
+      "description": "Learn how to filter Amazon Lightning Deals fast with Deal Shopper Pro.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/wpj1l1XUunw/hqdefault.jpg"
+      ],
+      "embedUrl": "https://www.youtube-nocookie.com/embed/wpj1l1XUunw",
+      "uploadDate": "2025-06-18",
+      "publisher": { "@id": "https://www.dealshopperpro.com/#organization" },
+      "duration": "PT1M",
+      "potentialAction": {
+        "@type": "WatchAction",
+        "target": "https://www.youtube.com/watch?v=wpj1l1XUunw"
+      }
     },
     {
-      "@type":"Question",
-      "name":"Can I filter Amazon deals by Prime only?",
-      "acceptedAnswer":{"@type":"Answer","text":"Yes. Toggle Prime Only in Step 5. For faster delivery, combine it with In Stock, Fulfilled by Amazon (FBA), or Ships from US to prioritize Prime-eligible discounts."}
+      "@type": "FAQPage",
+      "@id": "https://www.dealshopperpro.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Deal Shopper Pro free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Deal Shopper Pro is 100% free to use with no signup required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Deal Shopper Pro show Amazon prices directly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, prices are displayed only on Amazon. Deal Shopper Pro redirects you to Amazon for accurate prices."
+          }
+        }
+      ]
     },
     {
-      "@type":"Question",
-      "name":"Does Deal Shopper Pro cost money?",
-      "acceptedAnswer":{"@type":"Answer","text":"No—Deal Shopper Pro is free. It’s a free Amazon search tool that builds optimized queries to help you find today’s best Amazon deals, including coupons, Lightning Deals, and Prime-only offers."}
+      "@type": "HowTo",
+      "@id": "https://www.dealshopperpro.com/#howto",
+      "name": "How to Use Deal Shopper Pro",
+      "step": [
+        { "@type": "HowToStep", "text": "Start your product search with a keyword, ASIN, or ISBN." },
+        { "@type": "HowToStep", "text": "Set your price range and currency." },
+        { "@type": "HowToStep", "text": "Refine by discount, rating, or sort order." },
+        { "@type": "HowToStep", "text": "Filter by brand or include/exclude sellers." },
+        { "@type": "HowToStep", "text": "Apply extra filters like Prime, coupons, or eco-friendly options." },
+        { "@type": "HowToStep", "text": "View your results on Amazon." }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dealshopperpro.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dealshopperpro.com/"
+        }
+      ]
     }
   ]
 }
 </script>
+
 
 
 </head>
