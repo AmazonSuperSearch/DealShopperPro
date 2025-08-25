@@ -2435,5 +2435,14 @@ function toggleAccordion(id){
     }).catch(()=>alert('Failed to copy link.'));
   }
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Only reset to top if there's no hash in the URL
+  if (!window.location.hash && document.getElementById("step1")?.classList.contains("show")) {
+    window.scrollTo(0, 0);
+  }
+});
+</script>
+
 </body>
 </html>
