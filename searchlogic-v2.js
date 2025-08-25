@@ -260,16 +260,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
   // Auto-open first step and focus search input
-  setTimeout(() => {
-    const firstStep = document.querySelector('.step-header-mobile');
-    if (firstStep && !firstStep.classList.contains('collapsed')) {
-      // First step is already open, focus on search input
-      const searchInput = document.getElementById('mainSearchInput');
-      if (searchInput) {
-        searchInput.focus();
-      }
+ setTimeout(() => {
+  const firstStep = document.querySelector('.step-header-mobile');
+  if (firstStep && !firstStep.classList.contains('collapsed')) {
+    const searchInput = document.getElementById('mainSearchInput');
+
+    // Only focus when there’s a hash (deep link), and don’t scroll the page
+    if (searchInput && window.location.hash) {
+      searchInput.focus({ preventScroll: true });
     }
-  }, 500);
+  }
+}, 500);
+
 
   // Main search form logic
   const form = document.getElementById('amazon-search-form');
@@ -573,3 +575,4 @@ function shareFacebook(e) {
   const url = encodeURIComponent(window.location.href);
   window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank','noopener');
 }
+
