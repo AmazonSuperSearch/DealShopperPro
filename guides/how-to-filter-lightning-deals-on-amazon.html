@@ -1,166 +1,121 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Amazon Lightning Deals Today: Current & Ending‑Soon Offers (2025)</title>
-  <meta name="description" content="See current Amazon Lightning Deals today and filter fast. Find active and ending-soon offers with Prime-only, coupon, price, and rating filters." />
-  <link rel="canonical" href="https://www.dealshopperpro.com/amazon-lightning-deals-today.html" />
+  <title>How to Filter Lightning Deals on Amazon (Fast, Accurate Guide)</title>
+  <meta name="description" content="Learn the fastest way to filter Amazon Lightning Deals by price, brand, rating, Prime-only, and coupons. Step-by-step instructions with quick presets and examples." />
+  <link rel="canonical" href="https://www.dealshopperpro.com/how-to-filter-lightning-deals-on-amazon.html" />
   <meta name="robots" content="index,follow" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Amazon Lightning Deals Today: Current & Ending‑Soon Offers (2025)" />
-  <meta property="og:description" content="Discover current Lightning Deals on Amazon. Filter by price, rating, coupons, and Prime-only to find active deals ending soon." />
-  <meta property="og:url" content="https://www.dealshopperpro.com/amazon-lightning-deals-today.html" />
+  <meta property="og:title" content="How to Filter Lightning Deals on Amazon (Fast, Accurate Guide)" />
+  <meta property="og:description" content="Step-by-step instructions to filter Amazon Lightning Deals precisely — price, brand, rating, Prime-only, coupons — with quick presets." />
+  <meta property="og:url" content="https://www.dealshopperpro.com/how-to-filter-lightning-deals-on-amazon.html" />
   <meta property="og:site_name" content="Deal Shopper Pro" />
-  <meta property="og:image" content="https://www.dealshopperpro.com/og-image.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://www.dealshopperpro.com/og-image.jpg" />
-  <meta name="twitter:image:alt" content="Deal Shopper Pro — Amazon Lightning Deals guide" />
-  <!-- Article time metadata for consistency across previews -->
-  <meta property="article:published_time" content="2025-08-25">
-  <meta property="article:modified_time"  content="2025-08-25">
-  <meta property="og:updated_time"        content="2025-08-25">
 
-  <!-- Preconnects (perf) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Preconnects -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Fonts & CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-  <link href="/navbar.css" rel="stylesheet"> <!-- ensure injected nav picks up theme -->
 
   <style>
+    /* Reserve space for fixed navbar to prevent CLS */
     :root { --nav-h: 56px; }
     @media (min-width: 576px){ :root { --nav-h: 64px; } }
-    body { padding-top: var(--nav-h); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif; }
-    .hero-wrap { background:#0b1220; color:#fff; }
-    .hero-badge { display:inline-block; padding:.35rem .6rem; border-radius:999px; background:#111827; border:1px solid #1f2937; font-size:.85rem; }
-    .cta-btn { font-weight:700; }
-    .step-card { border:1px solid #e5e7eb; border-radius:1rem; padding:1rem 1.25rem; background:#fff; }
-    .check i { color:#198754; }
+    body { padding-top: var(--nav-h); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+    /* Page visuals */
+    .hero-wrap{ background:#0b1220; color:#fff; }
+    .hero-badge{ display:inline-block; padding:.35rem .6rem; border-radius:999px; background:#111827; border:1px solid #1f2937; font-size:.85rem; }
+    .cta-btn{ font-weight:700; }
+    .icon-chip{ display:inline-flex; align-items:center; gap:.4rem; padding:.35rem .6rem; border:1px solid #e5e7eb; border-radius:.6rem; background:#f9fafb; }
+    .step-card{ border:1px solid #e5e7eb; border-radius:1rem; padding:1rem 1.25rem; background:#fff; }
+    .defer-viewport{ content-visibility:auto; contain-intrinsic-size: 1px 1000px; } /* perf */
+
+    /* Accessibility: strong link contrast in the footer */
     .footer-container a.text-primary { color:#004080 !important; font-weight:600; }
     .footer-container a.text-primary:hover { color:#00264d !important; }
-    /* Active state style for current nav link */
-    .navbar .nav-link.active { color:#FFD700 !important; background:rgba(255,215,0,.12); border-radius:.5rem; }
+
+    /* List checkmarks */
+    .check i{ color:#198754; }
+
+    /* Small utility */
+    .kbd{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background:#111827; color:#fff; padding:.15rem .35rem; border-radius:.35rem; font-size:.8rem; }
   </style>
 
-  <!-- Structured Data: Article (enriched) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "@id": "https://www.dealshopperpro.com/amazon-lightning-deals-today.html",
-    "headline": "Amazon Lightning Deals Today: Current & Ending‑Soon Offers (2025)",
-    "description": "See current Amazon Lightning Deals today and filter fast. Find active and ending-soon offers with Prime-only, coupon, price, and rating filters.",
-    "image": {"@type":"ImageObject","url":"https://www.dealshopperpro.com/og-image.jpg","width":1200,"height":630},
-    "datePublished": "2025-08-25",
-    "dateModified": "2025-08-25",
-    "author": {
-      "@type": "Person",
-      "name": "Duane Romualdo",
-      "url": "https://www.dealshopperpro.com/my-story.html",
-      "sameAs": [
-        "https://www.linkedin.com/in/duane-romualdo",
-        "https://medium.com/@dealshopperpro"
-      ]
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Deal Shopper Pro",
-      "url": "https://www.dealshopperpro.com/",
-      "logo": {"@type":"ImageObject","url":"https://www.dealshopperpro.com/logo.png","width":512,"height":512}
-    },
-    "mainEntityOfPage": "https://www.dealshopperpro.com/amazon-lightning-deals-today.html",
-    "articleSection": "Shopping Guides",
-    "inLanguage": "en-US"
-  }
-  </script>
-
-  <!-- Structured Data: FAQPage (FIXED - order matches HTML) -->
+  <!-- BreadcrumbList + WebPage + HowTo + FAQPage (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
+    "@graph":[
       {
-        "@type":"Question",
-        "name":"What Lightning Deals are active today?",
-        "acceptedAnswer":{"@type":"Answer","text":"Open the Lightning Deals finder to see today's active Lightning Deals, then sort by Newest and use the Lightning Deals only filter to surface current offers."}
+        "@type":"WebPage",
+        "@id":"https://www.dealshopperpro.com/how-to-filter-lightning-deals-on-amazon.html",
+        "url":"https://www.dealshopperpro.com/how-to-filter-lightning-deals-on-amazon.html",
+        "name":"How to Filter Lightning Deals on Amazon",
+        "isPartOf":{"@id":"https://www.dealshopperpro.com/#website"},
+        "datePublished":"2025-08-16",
+        "dateModified":"2025-08-16",
+        "description":"Learn how to filter Amazon Lightning Deals quickly and precisely by price, brand, rating, Prime-only, and coupons with quick presets and examples."
       },
       {
-        "@type":"Question",
-        "name":"How do I see current Lightning Deals on Amazon?",
-        "acceptedAnswer":{"@type":"Answer","text":"Use a Lightning Deals search tool and apply the Lightning Deals only filter, then sort by Newest. Check the timer and % claimed badges to verify deals are currently active."}
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://www.dealshopperpro.com/"},
+          {"@type":"ListItem","position":2,"name":"Guides","item":"https://www.dealshopperpro.com/media.html"},
+          {"@type":"ListItem","position":3,"name":"How to Filter Lightning Deals on Amazon","item":"https://www.dealshopperpro.com/how-to-filter-lightning-deals-on-amazon.html"}
+        ]
       },
       {
-        "@type":"Question",
-        "name":"How often do Lightning Deals update?",
-        "acceptedAnswer":{"@type":"Answer","text":"Deals rotate throughout the day and can sell out quickly. Check back in a few hours if you don't see what you need."}
+        "@type":"HowTo",
+        "name":"How to Filter Amazon Lightning Deals",
+        "totalTime":"PT1M",
+        "supply":["Amazon account (optional)"],
+        "tool":["Deal Shopper Pro Lightning Deals finder"],
+        "step":[
+          {"@type":"HowToStep","name":"Open the Lightning Deals finder","text":"Go to the Lightning Deals page and choose a quick preset or start a guided search."},
+          {"@type":"HowToStep","name":"Enter keywords or pick a category","text":"Use product keywords, ASIN/ISBN/UPC, or choose a category if you want broader browsing."},
+          {"@type":"HowToStep","name":"Set price and rating","text":"Choose your minimum rating and a price range that matches your budget."},
+          {"@type":"HowToStep","name":"Turn on Lightning Deals only","text":"Enable the Lightning Deals filter so results only include active Lightning Deals."},
+          {"@type":"HowToStep","name":"Add optional filters","text":"Prime-only, brand include, coupons, shipping, refurbished, eco options, gift ideas, and more."},
+          {"@type":"HowToStep","name":"Open results on Amazon","text":"Click View Results to open a fully filtered results page on Amazon in a new tab."}
+        ]
       },
       {
-        "@type":"Question",
-        "name":"Why can't I see Lightning Deals on Amazon?",
-        "acceptedAnswer":{"@type":"Answer","text":"Lightning Deals appear only while inventory lasts and may be hidden by other filters. Use the Lightning Deals only filter, clear conflicting filters, and sort by Newest to surface current offers."}
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Can I filter Lightning Deals by brand and price?","acceptedAnswer":{"@type":"Answer","text":"Yes. Start a guided search, include one or more brands, and set a minimum rating and price range. When Lightning Deals only is enabled, your results will include active Lightning Deals that match those filters."}},
+          {"@type":"Question","name":"Why can’t I find a Lightning Deals filter on Amazon?","acceptedAnswer":{"@type":"Answer","text":"Amazon surfaces Lightning Deals in several places, but a global 'Lightning Deals only' toggle is not always visible. This guide shows how to apply a precise filter combination and open the results directly on Amazon."}},
+          {"@type":"Question","name":"How often do Lightning Deals change?","acceptedAnswer":{"@type":"Answer","text":"Lightning Deals are time-limited and rotate frequently throughout the day. If you don’t see what you want, refresh later or start with a broader search and narrow down."}},
+          {"@type":"Question","name":"Is this free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. Deal Shopper Pro is free to use. As an Amazon Associate, we earn from qualifying purchases made after you click through to Amazon."}}
+        ]
       },
       {
-        "@type":"Question",
-        "name":"How do I get notified of Lightning Deals?",
-        "acceptedAnswer":{"@type":"Answer","text":"You can check today's active Lightning Deals frequently and use a dedicated deals finder tool. For time‑sensitive items, bookmark the page and revisit during peak deal windows such as mornings and early evenings."}
+        "@type":"Organization",
+        "@id":"https://www.dealshopperpro.com/#org",
+        "name":"Deal Shopper Pro",
+        "url":"https://www.dealshopperpro.com/",
+        "logo":"https://www.dealshopperpro.com/img/logo.png",
+        "contactPoint":[{
+          "@type":"ContactPoint",
+          "email":"drdizzle613@proton.me",
+          "contactType":"customer support"
+        }]
       },
       {
-        "@type":"Question",
-        "name":"Do Lightning Deals come back on Amazon?",
-        "acceptedAnswer":{"@type":"Answer","text":"Sometimes. Popular items may return as new Lightning Deals during larger events or promotions, but restocks are not guaranteed."}
-      },
-      {
-        "@type":"Question",
-        "name":"Can I combine multiple filters?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Layer price, rating, brand, and Lightning Deals filters. You can also add Prime‑only or coupon options."}
-      },
-      {
-        "@type":"Question",
-        "name":"Is this free to use?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. Deal Shopper Pro is 100% free. As an Amazon Associate, we earn from qualifying purchases."}
+        "@type":"WebSite",
+        "@id":"https://www.dealshopperpro.com/#website",
+        "url":"https://www.dealshopperpro.com/",
+        "name":"Deal Shopper Pro"
       }
-    ]
-  }
-  </script>
-
-  <!-- Structured Data: HowTo (FIXED - aligned with today's focus) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"HowTo",
-    "name":"How to Find Amazon Lightning Deals Today",
-    "image":"https://www.dealshopperpro.com/og-image.jpg",
-    "totalTime":"PT2M",
-    "tool":[{"@type":"HowToTool","name":"Deal Shopper Pro Lightning Deals finder"}],
-    "step":[
-      {"@type":"HowToStep","text":"Open the Amazon Lightning Deals finder to see today's active offers."},
-      {"@type":"HowToStep","text":"Sort by Newest to surface current Lightning Deals."},
-      {"@type":"HowToStep","text":"Enable Lightning Deals only filter to hide unrelated results."},
-      {"@type":"HowToStep","text":"Set price range and minimum rating for your preferences."},
-      {"@type":"HowToStep","text":"Add Prime‑only, coupons, or brand filters for precision."},
-      {"@type":"HowToStep","text":"Check % claimed and timer badges to verify deals are active today."}
-    ]
-  }
-  </script>
-
-  <!-- Structured Data: BreadcrumbList -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.dealshopperpro.com/"},
-      {"@type":"ListItem","position":2,"name":"Amazon Lightning Deals Today","item":"https://www.dealshopperpro.com/amazon-lightning-deals-today.html"}
     ]
   }
   </script>
@@ -168,176 +123,211 @@
 
 <body>
   <!-- Universal Navbar -->
-  <div id="navbar-placeholder"></div>
+  <div id="navbar-placeholder" aria-label="Site navigation"></div>
 
   <!-- Hero -->
   <header class="hero-wrap py-5">
     <div class="container">
-      <span class="hero-badge mb-2">2025 Guide</span>
-      <!-- FIXED H1 - now includes full target keyword -->
-      <h1 class="display-6 fw-bold mt-2 mb-3">Amazon Lightning Deals Today — Current & Ending‑Soon Offers</h1>
-      <p class="lead mb-4">
-        See <strong>current Amazon Lightning Deals</strong>, filter for <em>active</em> and <em>ending soon</em> offers, and narrow by price, rating, coupons, and Prime‑only. This guide shows you how to move fast and skip the noise.
-      </p>
-      <a class="btn btn-primary btn-lg cta-btn" href="https://www.dealshopperpro.com/lightning-deals.html">Open the Lightning Deals finder tool</a>
-      <p class="mt-3 mb-0"><small>As an Amazon Associate, we earn from qualifying purchases.</small></p>
+      <nav class="mb-3" aria-label="Breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a class="link-light" href="/">Home</a></li>
+          <li class="breadcrumb-item"><a class="link-light" href="/media.html">Guides</a></li>
+          <li class="breadcrumb-item active text-white" aria-current="page">How to Filter Lightning Deals on Amazon</li>
+        </ol>
+      </nav>
+
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-8">
+          <span class="hero-badge mb-2">1-Minute Guide</span>
+          <h1 class="display-6 fw-bold mt-2 mb-3">How to Filter Lightning Deals on Amazon — Fast & Accurate</h1>
+          <p class="lead mb-4">
+            Here’s the quickest way to isolate <strong>Lightning Deals</strong> that actually match your budget, brand, rating, and delivery needs.
+            Start with a quick preset or use the guided 6-step search, then open your results directly on Amazon.
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <a class="btn btn-primary btn-lg cta-btn" href="/lightning-deals.html#option1">Browse Lightning Deals</a>
+            <a class="btn btn-outline-light btn-lg" href="/lightning-deals.html#option3">Advanced Lightning Deals Filter</a>
+          </div>
+          <p class="mt-3 mb-0"><small>As an Amazon Associate, we earn from qualifying purchases.</small></p>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="d-flex flex-wrap gap-2">
+            <span class="icon-chip"><i class="bi bi-bolt-fill" aria-hidden="true"></i> Lightning-only</span>
+            <span class="icon-chip"><i class="bi bi-cash-coin" aria-hidden="true"></i> Price &amp; Coupons</span>
+            <span class="icon-chip"><i class="bi bi-star-fill" aria-hidden="true"></i> Min Rating</span>
+            <span class="icon-chip"><i class="bi bi-truck" aria-hidden="true"></i> Prime &amp; Shipping</span>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Visible Breadcrumb -->
-  <nav aria-label="Breadcrumb" class="container my-2">
-    <ol class="breadcrumb small mb-0">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Amazon Lightning Deals Today</li>
-    </ol>
-  </nav>
-
+  <!-- How-To Steps -->
   <main id="content" class="container my-5">
+    <section aria-labelledby="howto" class="mb-5">
+      <h2 id="howto" class="fw-bold mb-3">Step-by-Step: Filter Amazon Lightning Deals</h2>
 
-    <!-- New high-intent section -->
-    <section class="mb-5">
-      <h2 class="fw-bold mb-3">Today's Active Amazon Lightning Deals</h2>
-      <p>
-        Start with our <a href="https://www.dealshopperpro.com/lightning-deals.html">Lightning Deals search tool for Amazon</a> to see <strong>Amazon Lightning Deals today</strong> in real time. Use the <em>Lightning Deals only</em> toggle to hide unrelated results (i.e., the "Lightning Deals only filter" on Amazon‑style results), then sort by <strong>Newest</strong> to surface <em>current</em> and <em>active</em> offers first — including those <strong>ending soon</strong>.
-      </p>
-      <ul class="mb-0">
-        <li>Looking for the hottest discounts today? Check <a href="https://www.dealshopperpro.com/best-deals-today.html">best Amazon deals today</a>.</li>
-        <li>Want Prime‑exclusive offers? Try the <a href="https://www.dealshopperpro.com/prime-only-deals.html">Prime‑only deals tool</a> and <a href="https://www.dealshopperpro.com/find-prime-only-lightning-deals.html">find Prime‑only Lightning Deals</a>.</li>
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="step-card h-100">
+            <h3 class="h5 fw-bold">1) Open the Lightning Deals finder</h3>
+            <p>Go to the dedicated page and pick a quick preset or start the full guided search.</p>
+            <a class="btn btn-primary" href="/lightning-deals.html#option1">Open Lightning Deals</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="step-card h-100">
+            <h3 class="h5 fw-bold">2) Add keywords or choose a category</h3>
+            <p>Use product keywords, an ASIN/ISBN/UPC, or select a category to cast a wider net.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="step-card h-100">
+            <h3 class="h5 fw-bold">3) Set your price, rating &amp; sort</h3>
+            <ul class="mb-0">
+              <li class="check"><i class="bi bi-check2" aria-hidden="true"></i> Minimum rating filter (e.g., 4★+)</li>
+              <li class="check"><i class="bi bi-check2" aria-hidden="true"></i> Price range (e.g., $15–$50)</li>
+              <li class="check"><i class="bi bi-check2" aria-hidden="true"></i> Sort by <span class="kbd">price-asc</span> or <span class="kbd">review-rank</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="step-card h-100">
+            <h3 class="h5 fw-bold">4) Turn on <em>Lightning Deals only</em></h3>
+            <p>This narrows results to active time-limited offers. If nothing matches right now, try a broader search or check again later.</p>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="step-card">
+            <h3 class="h5 fw-bold">5) Add optional filters (highly recommended)</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <ul>
+                  <li class="check"><i class="bi bi-check2"></i> Prime-only</li>
+                  <li class="check"><i class="bi bi-check2"></i> Brand include</li>
+                  <li class="check"><i class="bi bi-check2"></i> Coupons available</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li class="check"><i class="bi bi-check2"></i> Shipping &amp; availability</li>
+                  <li class="check"><i class="bi bi-check2"></i> Eco &amp; ethical options</li>
+                  <li class="check"><i class="bi bi-check2"></i> Gift ideas &amp; special categories</li>
+                </ul>
+              </div>
+            </div>
+            <p class="mb-0">When you’re ready, click <strong>View Results</strong> — your filtered Lightning Deals will open directly on Amazon in a new tab.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Presets / Examples -->
+    <section aria-labelledby="examples" class="mb-5 defer-viewport">
+      <h2 id="examples" class="fw-bold mb-3">Quick Presets &amp; Examples</h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="p-3 border rounded-3 h-100">
+            <h3 class="h6 fw-bold">Under $25 • 4★+</h3>
+            <p class="mb-2">Great for stocking stuffers and small gadgets.</p>
+            <a class="btn btn-outline-primary btn-sm" href="/lightning-deals.html#option2">Try preset</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 border rounded-3 h-100">
+            <h3 class="h6 fw-bold">Prime-only &amp; Coupons</h3>
+            <p class="mb-2">Stacks fast delivery with extra discounts.</p>
+            <a class="btn btn-outline-primary btn-sm" href="/lightning-deals.html#option3">Use advanced filter</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 border rounded-3 h-100">
+            <h3 class="h6 fw-bold">Brand include</h3>
+            <p class="mb-2">Lock results to the brands you actually want.</p>
+            <a class="btn btn-outline-primary btn-sm" href="/lightning-deals.html#option3">Add brands</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related guides (exact-match anchors) -->
+    <section aria-labelledby="related" class="mb-5">
+      <h2 id="related" class="fw-bold mb-3">Related Guides</h2>
+      <ul class="list-unstyled">
+        <li>Better ways to search: <a href="/lightning-deals.html">how to find lightning deals on amazon</a></li>
+        <li>Today’s deals roundup: <a href="/best-deals-today.html">best amazon lightning deals today</a></li>
+        <li>Prime filter walkthrough: <a href="/prime-only-deals.html">how to get lightning deals on amazon</a></li>
       </ul>
     </section>
 
-    <!-- Speed/efficiency section -->
-    <section class="mb-5">
-      <h2 class="fw-bold mb-3">How to Find Current Lightning Deals Faster</h2>
-      <ol>
-        <li>Open the <a href="https://www.dealshopperpro.com/lightning-deals.html">best Lightning Deals finder tool</a>.</li>
-        <li>Enter a keyword or category (e.g., "air fryer", "gaming mouse").</li>
-        <li>Set price range and choose a minimum rating (e.g., 4★+).</li>
-        <li>Turn on <strong>Lightning Deals only</strong> to filter out regular listings.</li>
-        <li>Layer <em>Prime‑only</em>, <em>Coupons</em>, and <em>Brand includes</em> for precision.</li>
-        <li>Click <em>View Results</em> to open filtered results directly on Amazon.</li>
-      </ol>
-      <p class="mb-0"><small>Tip: Re‑check during peak times (morning & early evening) when new deals often go live.</small></p>
-    </section>
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="faqh" class="mb-5 defer-viewport">
+      <h2 id="faqh" class="fw-bold mb-3">Lightning Deals — FAQ</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="q1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+              Can I combine Lightning Deals with Prime-only and coupons?
+            </button>
+          </h3>
+          <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Yes. Enable <em>Lightning Deals only</em> and then add Prime-only and Coupons in the same search. Your results will reflect all filters at once.</div>
+          </div>
+        </div>
 
-    <!-- Ending soon / urgency section -->
-    <section class="mb-5">
-      <h2 class="fw-bold mb-3">Lightning Deals Ending Soon — Don't Miss Out</h2>
-      <ul>
-        <li><strong>Sort by Newest</strong> to catch just‑posted offers, then scan the <em>timer</em> and <em>% claimed</em> badge to spot items ending within the next 2—4 hours.</li>
-        <li>Prioritize <em>Active</em> deals with <strong>low % claimed</strong> for better odds; if you see 90%+, it's close to selling out.</li>
-        <li>Use <em>Prime‑only</em> + <em>In stock</em> to reduce out‑of‑stock clicks and speed checkout.</li>
-      </ul>
-    </section>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="q2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+              Why do results change so often?
+            </button>
+          </h3>
+          <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Lightning Deals are time-boxed and inventory-sensitive. If nothing matches right now, try again later or broaden your filters.</div>
+          </div>
+        </div>
 
-    <!-- Category guide section -->
-    <section class="mb-5">
-      <h2 class="fw-bold mb-3">Lightning Deals by Category Guide</h2>
-      <p>
-        Use category keywords (e.g., "electronics", "home & kitchen", "toys") plus the <em>Lightning Deals only</em> filter to zero‑in fast. You can also include brand names to build a tighter set of results — essentially building an "Amazon Lightning Deals by category" view.
-      </p>
-      <ul>
-        <li><strong>Electronics:</strong> Add "4★ & up" and "Coupon" to prioritize quality with extra savings.</li>
-        <li><strong>Home & Kitchen:</strong> Combine "Under $25" ideas with coupons for budget picks.</li>
-        <li><strong>Beauty & Personal Care:</strong> Try "Prime‑only" for faster shipping on time‑sensitive items.</li>
-      </ul>
-    </section>
-
-    <!-- Original structured how-to (quick-start) -->
-    <section class="mb-5">
-      <h2 class="fw-bold mb-3">Step‑by‑Step: Smarter Deal Filtering</h2>
-      <ol>
-        <li>Open the <a href="https://www.dealshopperpro.com/lightning-deals.html">Amazon Lightning Deals finder</a> and browse current offers.</li>
-        <li>Enter a keyword or category to target the type of product you want.</li>
-        <li>Set your price range and choose a minimum rating (e.g., 4★+).</li>
-        <li>Turn on the "Lightning Deals only" filter so expired or unrelated items are excluded.</li>
-        <li>Enhance your search with extra options like <a href="https://www.dealshopperpro.com/prime-only-deals.html">Prime‑only deals</a>, coupons, brand filters, and shipping preferences.</li>
-        <li>Click "View Results" and you'll be taken directly to Amazon with your filters applied.</li>
-      </ol>
-    </section>
-
-    <!-- Tool positioning with exact keyword -->
-    <section class="mb-5">
-      <h2 class="fw-bold mb-3">Best Lightning Deals Finder Tool for Amazon</h2>
-      <p>
-        Amazon's interface doesn't always make it easy to isolate Lightning Deals. Our <strong>Lightning Deals finder tool</strong> functions as an <em>advanced Amazon search tool</em> that exposes practical filters Amazon spreads around. It's the fastest way to focus on <strong>current</strong>, <strong>active</strong>, and <strong>ending‑soon</strong> offers without scrolling.
-      </p>
-    </section>
-
-    <!-- Related guides (anchors kept) -->
-    <section class="mb-5">
-      <h2 class="fw-bold mb-3">Related Guides</h2>
-      <ul>
-        <li>Explore today's best offers: <a href="https://www.dealshopperpro.com/best-deals-today.html">best Amazon deals today</a></li>
-        <li>Find exclusive member discounts: <a href="https://www.dealshopperpro.com/prime-only-deals.html">Prime‑only deals tool</a></li>
-        <li>Learn the system step by step: <a href="https://www.dealshopperpro.com/how-it-works.html">step‑by‑step guide to Deal Shopper Pro</a></li>
-        <li>Target Prime‑only Lightning Deals: <a href="https://www.dealshopperpro.com/find-prime-only-lightning-deals.html">find Prime‑only Lightning Deals</a></li>
-      </ul>
-    </section>
-
-    <!-- Expanded FAQ with question-based keywords -->
-    <section class="mb-5">
-      <h2 class="fw-bold mb-3">Lightning Deals FAQ</h2>
-      <h3>What Lightning Deals are active today?</h3>
-      <p>Open the <a href="https://www.dealshopperpro.com/lightning-deals.html">Lightning Deals finder</a>, switch on <em>Lightning Deals only</em>, and sort by <strong>Newest</strong>. This shows current Lightning Deals today, including ones posted recently.</p>
-
-      <h3>How do I see current Lightning Deals on Amazon?</h3>
-      <p>Use the tool to filter by <em>Lightning Deals only</em> and scan the <em>% claimed</em> and <em>time remaining</em> badges. Low claimed percentages typically indicate deals that are still active.</p>
-    
-      <h3>How often do Lightning Deals update?</h3>
-      <p>Deals rotate throughout the day and often run out of stock quickly. If you don't see what you want, check back in a few hours.</p>
-
-      <h3>Why can't I see Lightning Deals on Amazon?</h3>
-      <p>Lightning Deals can disappear when inventory sells out or if other filters hide them. Use the <em>Lightning Deals only</em> filter, clear conflicting filters, and sort by <em>Newest</em> to surface current offers.</p>
-
-      <h3>How do I get notified of Lightning Deals?</h3>
-      <p>Check <a href="https://www.dealshopperpro.com/lightning-deals.html">today's active Lightning Deals</a> frequently and bookmark the page for quick access at peak times.</p>
-
-      <h3>Do Lightning Deals come back on Amazon?</h3>
-      <p>Sometimes—popular items may return as new Lightning Deals during bigger events, but restocks aren't guaranteed.</p>
-
-      <h3>Can I combine multiple filters?</h3>
-      <p>Yes. You can layer price, rating, and brand filters with the <a href="https://www.dealshopperpro.com/lightning-deals.html">Lightning Deals finder</a> and even add Prime‑only or coupon options.</p>
-
-      <h3>Is this free to use?</h3>
-      <p>Absolutely. Deal Shopper Pro is 100% free. As an Amazon Associate, we earn from qualifying purchases.</p>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="q3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+              Is this page affiliated with Amazon?
+            </button>
+          </h3>
+          <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com, Inc. As an Amazon Associate, we earn from qualifying purchases.</div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- Simple footer (you can keep your global footer if you prefer) -->
   <footer class="footer-container border-top py-4">
     <div class="container small text-muted">
-      <p><strong>Disclaimer:</strong> Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries. As an Amazon Associate, we earn from qualifying purchases.</p>
-      <p>
-        <a class="text-primary" href="https://www.dealshopperpro.com/about.html">About</a> ·
-        <a class="text-primary" href="https://www.dealshopperpro.com/help.html">Help</a> ·
-        <a class="text-primary" href="https://www.dealshopperpro.com/my-story.html">Duane Romualdo's story</a>
+      <p class="mb-2"><strong>Disclaimer:</strong> Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries. As an Amazon Associate, we earn from qualifying purchases — this supports our free service.</p>
+      <p class="mb-0">
+        <a class="text-primary" href="/contact.html">Contact</a> ·
+        <a class="text-primary" href="/about.html">About</a> ·
+        <a class="text-primary" href="/help.html">Help</a>
       </p>
     </div>
   </footer>
 
-  <!-- JS (deferred) -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="/navbar-loader.js" defer></script>
-
-  <!-- Active link highlighter (robust) -->
   <script>
-  (() => {
-    const markActive = () => {
-      const path = location.pathname.replace(/\/+$/, '') || '/';
-      document.querySelectorAll('.navbar .nav-link').forEach(a => {
-        const href = a.getAttribute('href'); if (!href) return;
-        const normalized = href.replace(/\/+$/, '') || '/';
-        if (normalized === path) a.classList.add('active');
+    // Initialize tooltips lazily (if any)
+    window.addEventListener('load', () => {
+      (window.requestIdleCallback || ((fn)=>setTimeout(fn,0)))(() => {
+        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+          try { new bootstrap.Tooltip(el); } catch(e){}
+        });
       });
-    };
-    document.addEventListener('DOMContentLoaded', () => {
-      if (document.querySelector('.navbar')) { markActive(); return; }
-      const obs = new MutationObserver(() => {
-        if (document.querySelector('.navbar')) { markActive(); obs.disconnect(); }
-      });
-      obs.observe(document.body, { childList: true, subtree: true });
     });
-  })();
   </script>
 </body>
 </html>
