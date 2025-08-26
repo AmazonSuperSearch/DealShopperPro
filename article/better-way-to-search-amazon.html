@@ -104,7 +104,7 @@
     /* Media */
     @media (min-width: 900px){ .hero{ grid-template-columns: 1fr auto; align-items:center } }
   </style>
-
+<link href="/footer.css" rel="stylesheet">
   <!-- Structured Data (unchanged, preserved from source) -->
   <script type="application/ld+json">
   {
@@ -358,16 +358,23 @@
       <h2 id="cta">🚀 Ready to Try a Smarter Amazon Search?</h2>
       <p>If you’re tired of wasting time with broken filters or irrelevant search results, use our <a href="https://www.dealshopperpro.com"> Amazon search tool</a> and take back control of your shopping experience.</p>
       <p><strong>Start filtering smarter → Find out <a href="https://www.dealshopperpro.com">how to find Amazon deals</a></strong> with DealShopperPro.com</p>
-
-      <!-- Amazon Affiliate Disclosure (preserved) -->
-      <p class="disclosure">Disclosure: As an Amazon Associate, I earn from qualifying purchases. This helps support my free tools — thank you!</p>
     </article>
   </main>
 
   <!-- Floating CTA -->
-  <div class="floating-cta" role="complementary" aria-label="Quick actions">
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18"><path d="M3 6h18"><path d="M3 18h18"></svg>
-    <a href="https://www.dealshopperpro.com" target="_blank" rel="noopener" aria-label="Open the Amazon deal finder in a new tab">Open Deal Finder</a>
-  </div>
+ <div class="floating-cta" role="complementary" aria-label="Quick actions">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+       viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M3 6h18"></path>
+    <path d="M3 12h18"></path>
+    <path d="M3 18h18"></path>
+  </svg>
+  <a href="https://www.dealshopperpro.com" target="_blank" rel="noopener noreferrer"
+     aria-label="Open the Amazon deal finder in a new tab">Open Deal Finder</a>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="/footer-loader.js" defer></script>
 </body>
 </html>
