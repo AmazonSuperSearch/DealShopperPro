@@ -1,8 +1,7 @@
 <!-- /footer.html -->
-<footer class="footer-mobile border-top py-4">
-  <div class="container">
+<footer class="footer-mobile border-top py-4" role="contentinfo">
+  <div class="container text-center small">
     <div class="footer-card">
-      <!-- Footer Navigation Links -->
       <nav class="footer-links mb-3" aria-label="Footer navigation">
         <a href="/index.html" class="footer-home-link">Advanced Search Tool</a>
         <a href="/about.html">About</a>
@@ -15,7 +14,6 @@
         <a href="/how-it-works.html">How Deal Shopper Pro Works</a>
       </nav>
 
-      <!-- Amazon Affiliate Disclaimer -->
       <p class="mb-2">
         <strong>Disclaimer:</strong> Deal Shopper Pro is independent and not affiliated with Amazon.
       </p>
@@ -26,17 +24,9 @@
         <small>As an Amazon Associate I earn from qualifying purchases.</small>
       </p>
 
-      <!-- Dynamic Year -->
       <p class="mb-0">
         <strong>© <span id="dsp-year"></span> Deal Shopper Pro</strong>
       </p>
     </div>
   </div>
 </footer>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const y = document.getElementById('dsp-year');
-    if (y) y.textContent = new Date().getFullYear();
-  });
-</script>
