@@ -2370,13 +2370,13 @@ function toggleAccordion(id){
 <script src="/navbar-loader.js" defer></script>
 <script src="/searchlogic-v2.js" defer></script>
 
-<script defer>
+<script>
   function scrollToForm(){
     const el = document.getElementById('search-form');
     if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   }
 </script>
-  <script defer>
+  <script>
   function shareWhatsApp(e){ if(e) e.preventDefault();
     const msg = encodeURIComponent('Check this free Amazon deal finder: ' + location.href);
     window.open('https://wa.me/?text=' + msg, '_blank', 'noopener,noreferrer');
