@@ -429,7 +429,7 @@ body {
   display: flex;
 }
 </style>
-
+<link href="/footer.css" rel="stylesheet"> 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -1023,16 +1023,6 @@ body {
     </div>
   </div>
 
-  <div class="footer-link">
-    <p>
-      Learn how we built 
-      <a href="https://www.dealshopperpro.com" rel="follow">a better way to search Amazon deals</a> 
-      using advanced filters you won't find anywhere else.
-    </p>
-    <p>Many shoppers ask why Amazon filters don't work the way they expect. We cover this in detail in our 
-      <a href="/article/better-way-to-search-amazon.html">guide to advanced Amazon search filters</a>.
-    </p>
-  </div>
 </main>
 
 <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
@@ -1183,5 +1173,7 @@ document.addEventListener('focusout', (e) => {
   }
 });
 </script>
+  <div id="footer-placeholder"></div>
+<script src="/footer-loader.js" defer></script>
 </body>
 </html>
