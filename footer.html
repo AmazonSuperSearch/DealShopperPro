@@ -3,37 +3,29 @@
   <div class="container">
     <div class="footer-card">
       <nav class="footer-links mb-3" aria-label="Footer navigation">
-        <a href="/index.html" class="footer-home-link">Advanced Search Tool</a>
+        <a href="/" class="footer-home-link">Advanced Search Tool</a>
         <a href="/about.html">About</a>
         <a href="/help.html">Help</a>
         <a href="/privacy.html">Privacy</a>
         <a href="/terms.html">Terms</a>
         <a href="/contact.html">Contact</a>
         <a href="/lightning-deals.html">Amazon Lightning Deals</a>
-<a href="/prime-only-deals.html">Prime-Only Deals</a>
-<a href="/how-it-works.html">How Deal Shopper Pro Works</a>
-<a href="/amazon-lightning-deals-today.html">Amazon Lightning Deals Today</a>
-<a href="/my-story.html" class="footer-story-link">
-  <img src="/duane-romualdo.jpg" alt="Duane Romualdo" class="footer-avatar">
-  <span>My Story</span>
-</a>
-
-
+        <a href="/prime-only-deals.html">Prime-Only Deals</a>
+        <a href="/how-it-works.html">How Deal Shopper Pro Works</a>
+        <a href="/better-way-to-search-amazon.html">Better Way to Search Amazon</a>
+        <a href="/amazon-lightning-deals-today.html">Amazon Lightning Deals Today</a>
+        <a href="/my-story.html" class="footer-story-link">
+          <img src="/duane-romualdo.jpg" alt="Duane Romualdo" class="footer-avatar"
+               loading="lazy" width="32" height="32">
+          <span>My Story</span>
+        </a>
       </nav>
 
-      <p class="mb-2">
-        <strong>Disclaimer:</strong> Deal Shopper Pro is independent and not affiliated with Amazon.
-      </p>
-      <p class="mb-2">
-        <small>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</small>
-      </p>
-      <p class="mb-2">
-        <small>As an Amazon Associate I earn from qualifying purchases.</small>
-      </p>
+      <p class="mb-2"><strong>Disclaimer:</strong> Deal Shopper Pro is independent and not affiliated with Amazon.</p>
+      <p class="mb-2"><small>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</small></p>
+      <p class="mb-2"><small>As an Amazon Associate I earn from qualifying purchases.</small></p>
 
-      <p class="mb-0">
-        <strong>© <span id="dsp-year"></span> Deal Shopper Pro</strong>
-      </p>
+      <p class="mb-0"><strong>© <span id="dsp-year"></span> Deal Shopper Pro</strong></p>
     </div>
   </div>
 </footer>
@@ -42,5 +34,14 @@
   document.addEventListener('DOMContentLoaded', () => {
     const y = document.getElementById('dsp-year');
     if (y) y.textContent = new Date().getFullYear();
+
+    // Optional: mark current page in footer, too
+    const current = location.pathname.replace(/\/+$/, '') || '/';
+    document.querySelectorAll('.footer-links a[href]').forEach(a => {
+      let href = a.getAttribute('href') || '';
+      href = href.replace(/\/+$/, '') || '/';
+      if (href.endsWith('/index.html')) href = href.slice(0, -11) || '/';
+      if (href === current) a.setAttribute('aria-current', 'page');
+    });
   });
 </script>
