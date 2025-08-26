@@ -46,6 +46,32 @@
   color: #00264d;           /* darker blue hover */
 }
 
+/* Avatar + link styling for "My Story" */
+.footer-links .footer-story-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 24px;
+  vertical-align: middle;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.06);
+}
+
+/* Slightly tighter on very small screens */
+@media (max-width: 576px) {
+  .footer-avatar {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+
 /* Highlight homepage CTA */
 .footer-card .footer-links .footer-home-link {
   background: #FFD700;      /* gold button look */
