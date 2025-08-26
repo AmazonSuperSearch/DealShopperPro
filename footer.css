@@ -1,20 +1,24 @@
 /* Base footer wrapper */
 .footer-mobile {
-  background: #f9fafb; /* light background */
-  font-size: 0.9rem;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
 }
 
-/* Card style container */
+/* Card container */
 .footer-card {
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  background: #ffffff;                /* white background */
+  border: 1px solid #e5e7eb;          /* light gray border */
+  border-radius: 0.75rem;             /* rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  max-width: 960px;
+  width: 100%;
   padding: 2rem 1.5rem;
   text-align: center;
+  color: #374151;                     /* dark neutral text */
 }
 
-/* Footer nav links */
+/* Navigation links */
 .footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -41,19 +45,20 @@
   font-weight: 700;
   padding: 0.4rem 0.9rem;
   border-radius: 0.4rem;
+  text-decoration: none;
 }
 
 .footer-links .footer-home-link:hover {
   background: #e6c200;
 }
 
-/* Disclaimer */
-.footer-mobile p {
+/* Disclaimer text */
+.footer-card p {
   margin-bottom: 0.5rem;
   line-height: 1.4;
 }
 
-.footer-mobile small {
+.footer-card small {
   font-size: 0.85em;
   display: block;
 }
