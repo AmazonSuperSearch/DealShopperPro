@@ -1,36 +1,20 @@
-/* /footer.css */
-
 /* Base footer wrapper */
 .footer-mobile {
-  background: #fff;
-  color: #6c757d; /* muted text */
+  background: #f9fafb; /* light background */
   font-size: 0.9rem;
 }
 
-/* Container alignment */
-.footer-mobile .container {
-  max-width: 960px;
-  margin: 0 auto;
+/* Card style container */
+.footer-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem;
   text-align: center;
 }
 
-/* Highlight homepage link as CTA button */
-.footer-links .footer-home-link {
-  background: #004080;      /* dark blue background */
-  color: #fff !important;   /* white text */
-  font-weight: 700;
-  padding: 0.4rem 0.9rem;
-  border-radius: 0.4rem;
-  text-decoration: none;
-  transition: background 0.2s ease-in-out;
-}
-
-.footer-links .footer-home-link:hover {
-  background: #00264d;      /* darker on hover */
-  text-decoration: none;
-}
-
-/* Navigation links */
+/* Footer nav links */
 .footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -50,7 +34,20 @@
   color: #00264d;
 }
 
-/* Disclaimer and small text */
+/* Highlight homepage CTA */
+.footer-links .footer-home-link {
+  background: #FFD700;
+  color: #0b1220 !important;
+  font-weight: 700;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.4rem;
+}
+
+.footer-links .footer-home-link:hover {
+  background: #e6c200;
+}
+
+/* Disclaimer */
 .footer-mobile p {
   margin-bottom: 0.5rem;
   line-height: 1.4;
@@ -61,21 +58,11 @@
   display: block;
 }
 
-/* Divider line */
-.footer-mobile.border-top {
-  border-top: 1px solid #e5e7eb;
-}
-
 /* Responsive tweaks */
 @media (max-width: 576px) {
   .footer-links {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-  }
-
-  .footer-links .footer-home-link {
-    display: inline-block;
-    width: auto;
   }
 }
