@@ -1,0 +1,40 @@
+<!-- /footer.html -->
+<footer class="footer-mobile border-top py-4">
+  <div class="container text-center small text-muted">
+    
+    <!-- Footer Navigation Links -->
+    <nav class="footer-links mb-3" aria-label="Footer navigation">
+      <a href="/about.html">About</a>
+      <a href="/help.html">Help</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/lightning-deals.html">Amazon Lightning Deals</a>
+      <a href="/prime-only-deals.html">Prime-Only Deals</a>
+      <a href="/how-it-works.html">How Deal Shopper Pro Works</a>
+    </nav>
+
+    <!-- Amazon Affiliate Disclaimer -->
+    <p class="mb-2">
+      <strong>Disclaimer:</strong> Deal Shopper Pro is independent and not affiliated with Amazon.
+    </p>
+    <p class="mb-2">
+      <small>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</small>
+    </p>
+    <p class="mb-2">
+      <small>As an Amazon Associate I earn from qualifying purchases.</small>
+    </p>
+
+    <!-- Dynamic Year -->
+    <p class="mb-0">
+      <strong>© <span id="dsp-year"></span> Deal Shopper Pro</strong>
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const y = document.getElementById('dsp-year');
+    if (y) y.textContent = new Date().getFullYear();
+  });
+</script>
