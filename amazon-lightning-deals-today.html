@@ -78,7 +78,7 @@
     summary{cursor:pointer;list-style:none}
     summary::-webkit-details-marker{display:none}
   </style>
-
+<link href="/footer.css" rel="stylesheet"> 
   <!-- Unified, cross-linked structured data (with SearchAction + thumbnailUrl) -->
 <script type="application/ld+json">
 {
@@ -494,17 +494,6 @@
     </section>
   </main>
 
-  <footer class="footer-container border-top py-4">
-    <div class="container small text-muted">
-      <p><strong>Disclaimer:</strong> Deal Shopper Pro is an independent tool and is not affiliated with Amazon.com, Inc. or its subsidiaries. As an Amazon Associate, we earn from qualifying purchases.</p>
-      <p>
-        <a class="text-primary" href="/about.html">About</a> &middot;
-        <a class="text-primary" href="/help.html">Help</a> &middot;
-        <a class="text-primary" href="/my-story.html">Duane Romualdo's story</a>
-      </p>
-    </div>
-  </footer>
-
   <!-- JS (deferred) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="/navbar-loader.js" defer></script>
@@ -543,6 +532,7 @@
     }
   });
   </script>
-
+<div id="footer-placeholder"></div>
+<script src="/footer-loader.js" defer></script>
 </body>
 </html>
