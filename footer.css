@@ -14,6 +14,18 @@
   text-align: center;
 }
 
+/* Highlight the homepage link in footer */
+.footer-links .footer-home-link {
+  font-weight: 700;
+  color: #FFD700; /* gold to match your active nav highlight */
+}
+
+.footer-links .footer-home-link:hover {
+  color: #cc9900;
+  text-decoration: underline;
+}
+
+
 /* Navigation links */
 .footer-links {
   display: flex;
