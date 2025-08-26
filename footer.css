@@ -3,29 +3,28 @@
    Universal Footer Card
    ========================= */
 
-/* Outer wrapper ensures spacing from page content */
+/* Outer wrapper – neutral backdrop & spacing */
 .footer-mobile {
-  background: #f9fafb; /* light neutral background */
+  background: #f9fafb;
   padding: 2rem 0;
   font-size: 0.9rem;
 }
 
-/* Card container */
+/* Card container (locked to white so it matches everywhere) */
 .footer-card {
-  background: #ffffff;             /* white card */
-  border: 1px solid #e5e7eb;       /* light gray border */
-  border-radius: 0.75rem;          /* rounded corners */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08); /* subtle shadow */
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   padding: 2rem 1.5rem;
   margin: 0 auto;
   max-width: 960px;
   text-align: center;
-
-  /* Lock text color */
-  color: #111111;
+  isolation: isolate; /* keep outside effects from bleeding in */
 }
 
-/* Footer links container */
+/* --- LINKS ROW --- */
 .footer-card .footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -34,23 +33,31 @@
   margin-bottom: 1rem;
 }
 
-/* Footer links */
 .footer-card .footer-links a {
-  color: #004080;           /* strong blue */
+  color: #004080;
   font-weight: 600;
   text-decoration: none;
+  line-height: 1;              /* tighter alignment with avatar */
 }
 
 .footer-card .footer-links a:hover {
+  color: #00264d;
   text-decoration: underline;
-  color: #00264d;           /* darker blue hover */
 }
 
-/* Avatar + link styling for "My Story" */
+/* Keyboard focus (accessibility) */
+.footer-card .footer-links a:focus-visible {
+  outline: 2px solid #FFD700;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* --- “My Story” with avatar --- */
 .footer-links .footer-story-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
+  white-space: nowrap;         /* keep avatar + text together */
 }
 
 .footer-avatar {
@@ -61,20 +68,18 @@
   flex: 0 0 24px;
   vertical-align: middle;
   box-shadow: 0 0 0 1px rgba(0,0,0,.06);
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
-/* Slightly tighter on very small screens */
+/* Slightly tighter on small screens */
 @media (max-width: 576px) {
-  .footer-avatar {
-    width: 22px;
-    height: 22px;
-  }
+  .footer-avatar { width: 22px; height: 22px; }
 }
 
-
-/* Highlight homepage CTA */
+/* --- Highlighted home CTA --- */
 .footer-card .footer-links .footer-home-link {
-  background: #FFD700;      /* gold button look */
+  background: #FFD700;
   color: #0b1220 !important;
   font-weight: 700;
   padding: 0.4rem 0.9rem;
@@ -83,26 +88,44 @@
 
 .footer-card .footer-links .footer-home-link:hover {
   background: #e6c200;
+  text-decoration: none;
 }
 
-/* Disclaimer & copyright */
+.footer-card .footer-links .footer-home-link:focus-visible {
+  outline: 2px solid #0b1220;
+  outline-offset: 2px;
+}
+
+/* --- Text blocks --- */
 .footer-card p {
   margin-bottom: 0.5rem;
-  line-height: 1.4;
-  color: #111111;           /* lock text color */
+  line-height: 1.45;
+  color: #111111;
 }
 
 .footer-card small {
   font-size: 0.85em;
   display: block;
-  color: #444444;           /* slightly muted but still readable */
+  color: #444444;
 }
 
-/* Responsive tweaks */
+/* --- Responsive tweaks --- */
 @media (max-width: 576px) {
   .footer-card .footer-links {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
   }
+}
+
+/* --- Dark mode: keep the card white, adjust page backdrop --- */
+@media (prefers-color-scheme: dark) {
+  .footer-mobile { background: #0f172a; }      /* dark page backdrop */
+  .footer-card {
+    background: #ffffff;                        /* stay white */
+    color: #111111;
+    border-color: #e5e7eb;
+  }
+  .footer-card .footer-links a { color: #004080; }
+  .footer-card .footer-links a:hover { color: #00264d; }
 }
