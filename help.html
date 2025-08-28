@@ -1210,73 +1210,64 @@ document.addEventListener('focusout', (e) => {
   /* keep space so layout doesn't jump while nav loads */
   #navbar-placeholder:empty { display:block; min-height:56px; }
 
-  /* Nav shell */
-  #navbar-placeholder .site-nav{
-    position: sticky; top:0; z-index:1000;
-    background:#0b0f1a; /* or #fff if you prefer */
-    border-bottom:1px solid #e2e8f0;
-    box-shadow:0 1px 2px rgba(0,0,0,.06);
-  }
-
-  /* Layout: brand left, links area right (scrolls if needed) */
-  #navbar-placeholder .site-nav .nav-inner{
+  /* generic: handle either .nav-links, a UL, or a DIV container */
+  #navbar-placeholder nav .nav-links,
+  #navbar-placeholder nav .nav-inner > ul,
+  #navbar-placeholder nav .nav-inner > div,
+  #navbar-placeholder nav > ul,
+  #navbar-placeholder nav > div {
     display:flex; align-items:center; gap:.75rem;
-    padding:.75rem 1rem;
-  }
-  #navbar-placeholder .site-nav .brand{
-    flex:0 0 auto; white-space:nowrap;
-  }
-
-  /* Case A: your partial uses a .nav-links container */
-  #navbar-placeholder .site-nav .nav-links{
-    display:flex; align-items:center; gap:.75rem;
-    flex:1 1 auto;          /* <-- let it shrink */
-    min-width:0;            /* <-- allow overflow area to exist */
-    white-space:nowrap;     /* <-- single row */
-    overflow-x:auto;        /* <-- scroll to reveal hidden items */
-    overflow-y:hidden;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:thin;
-  }
-  #navbar-placeholder .site-nav .nav-links > *{ flex:0 0 auto; }
-
-  /* Case B: your partial uses a UL directly in .nav-inner */
-  #navbar-placeholder .site-nav .nav-inner > ul{
-    list-style:none; margin:0; padding:0;
-    display:flex; align-items:center; gap:.75rem;
-    flex:1 1 auto; min-width:0;
-    white-space:nowrap; overflow-x:auto; overflow-y:hidden;
+    flex-wrap:nowrap; white-space:nowrap;
+    overflow-x:auto; overflow-y:hidden;
     -webkit-overflow-scrolling:touch; scrollbar-width:thin;
+    min-width:0; flex:1 1 auto;
   }
-  #navbar-placeholder .site-nav .nav-inner > ul > li{ flex:0 0 auto; }
+  #navbar-placeholder nav li { list-style:none; }
+  #navbar-placeholder nav li, 
+  #navbar-placeholder nav a { flex:0 0 auto; }
 
-  /* Links */
-  #navbar-placeholder .site-nav a{
-    text-decoration:none !important;
-    display:inline-block; white-space:nowrap;
-    color:#e2e8f0; /* light text on dark header */
+  /* basic link look so it’s readable even if global CSS misses */
+  #navbar-placeholder nav a{
+    text-decoration:none; display:inline-block; white-space:nowrap;
     padding:.5rem .75rem; border-radius:8px; font-weight:600;
+    color:#e2e8f0; /* light on dark header; change to #475569 if you use a light header */
   }
-  #navbar-placeholder .site-nav a:hover,
-  #navbar-placeholder .site-nav a.active,
-  #navbar-placeholder .site-nav a[aria-current="page"]{
+  #navbar-placeholder nav a:hover,
+  #navbar-placeholder nav a.active,
+  #navbar-placeholder nav a[aria-current="page"]{
     color:#fff; background:#6366f1;
   }
-
-  /* If you have little superscripts like “Hot”, keep them from forcing wrap */
-  #navbar-placeholder .site-nav sup, 
-  #navbar-placeholder .site-nav small{
-    white-space:nowrap; line-height:1; vertical-align:baseline;
-  }
-
-  /* On wide screens, remove the scroll bar if everything fits */
-  @media (min-width: 992px){
-    #navbar-placeholder .site-nav .nav-links,
-    #navbar-placeholder .site-nav .nav-inner > ul{
-      overflow-x:visible;
-    }
-  }
 </style>
+
+<script>
+/* JS fallback: if the structure is unusual, force flex on whatever holds the links */
+(function(){
+  const slot = document.getElementById('navbar-placeholder');
+  let tries = 0;
+  const apply = () => {
+    const nav = slot && (slot.querySelector('.site-nav') || slot.querySelector('nav'));
+    if (!nav) { if (++tries < 60) return requestAnimationFrame(apply); }
+
+    const links =
+      nav.querySelector('.nav-links') ||
+      nav.querySelector('.nav-inner > ul') ||
+      nav.querySelector('.nav-inner > div') ||
+      nav.querySelector(':scope > ul') ||
+      nav.querySelector(':scope > div');
+
+    if (links) {
+      Object.assign(links.style, {
+        display: 'flex', alignItems: 'center', gap: '.75rem',
+        flexWrap: 'nowrap', whiteSpace: 'nowrap',
+        overflowX: 'auto', overflowY: 'hidden'
+      });
+      links.querySelectorAll(':scope > *').forEach(el => el.style.flex = '0 0 auto');
+    }
+  };
+  apply();
+})();
+</script>
+
 
 
 
