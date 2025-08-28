@@ -640,73 +640,76 @@
             line-height: 1.6;
         }
 
-        /* FAQ */
-        .faq {
-            background: var(--surface);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            border: 1px solid var(--border-light);
-            box-shadow: var(--shadow-md);
-        }
+  /* FAQ */
+.faq {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+}
 
-        .faq-item {
-            border-bottom: 1px solid var(--border-light);
-        }
+.faq-item {
+  border-bottom: 1px solid var(--border-light);
+}
 
-        .faq-item:last-child {
-            border-bottom: none;
-        }
+.faq-item:last-child {
+  border-bottom: none;
+}
 
-        .faq-question {
-            width: 100%;
-            background: none;
-            border: none;
-            padding: 2rem;
-            text-align: left;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: all 0.3s ease;
-        }
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 2rem;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: color .3s ease, background-color .3s ease;
+}
 
-        .faq-question:hover {
-            background: var(--surface-2);
-            color: var(--primary);
-        }
+.faq-question:hover {
+  background: var(--surface-2);
+  color: var(--primary);
+}
 
-        .faq-question:focus {
-            outline: 2px solid var(--primary);
-            outline-offset: -2px;
-        }
+.faq-question:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
 
-        .js .faq-answer {
-            padding: 0 2rem 2rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 1.05rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
+/* collapsed */
+.js .faq-answer {
+  padding: 0 2rem 0;   /* no bottom padding when collapsed */
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  will-change: max-height;
+}
 
-        .faq-item.active .js .faq-answer {
-            max-height: 500px;
-            padding: 0 2rem 2rem;
-        }
+/* expanded (correct selector: .js is the ancestor) */
+.js .faq-item.active .faq-answer {
+  max-height: 500px;   /* increase if your answers are taller */
+  padding: 0 2rem 2rem;
+}
 
-        .faq-icon {
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-            color: var(--primary);
-        }
+.faq-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  color: var(--primary);
+}
 
-        .faq-item.active .faq-icon {
-            transform: rotate(180deg);
-        }
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
 
         /* Alert Box */
         .alert {
@@ -2023,5 +2026,43 @@
   ]
 }
     </script>
+    <script>document.documentElement.classList.add('js');</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const items = document.querySelectorAll('.faq-item');
+
+  items.forEach(item => {
+    const btn = item.querySelector('.faq-question');
+    const ans = item.querySelector('.faq-answer');
+    if (!btn || !ans) return;
+
+    // Start collapsed
+    btn.setAttribute('aria-expanded', 'false');
+    ans.style.maxHeight = '0';
+
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+
+      // (Accordion behavior) close others
+      items.forEach(other => {
+        if (other !== item) {
+          other.classList.remove('active');
+          const ob = other.querySelector('.faq-question');
+          const oa = other.querySelector('.faq-answer');
+          if (ob) ob.setAttribute('aria-expanded', 'false');
+          if (oa) oa.style.maxHeight = '0';
+        }
+      });
+
+      // Toggle current
+      item.classList.toggle('active', !isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      // Smooth height
+      ans.style.maxHeight = !isOpen ? ans.scrollHeight + 'px' : '0';
+    });
+  });
+});
+</script>
+
 </body>
 </html>
