@@ -716,24 +716,6 @@ body {
   "dateModified": "2025-08-01"
 }</script>
 
-<script defer>
-(async () => {
-  try {
-    const slot = document.getElementById('navbar-placeholder');
-    if (!slot) return;
-    const res = await fetch('/partials/navbar.html', { credentials: 'omit' });
-    slot.innerHTML = await res.text();
-
-    // highlight current page
-    const path = location.pathname.replace(/\/$/, '') || '/';
-    slot.querySelectorAll('a[data-path]').forEach(a => {
-      const ap = (a.getAttribute('data-path') || '').replace(/\/$/, '') || '/';
-      if (ap === path) { a.setAttribute('aria-current','page'); a.classList.add('active'); }
-    });
-  } catch (e) { console.error('Navbar load failed', e); }
-})();
-</script>
-
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
