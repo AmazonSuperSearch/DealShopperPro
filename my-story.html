@@ -670,6 +670,31 @@ footer p{ color: var(--footer-text); opacity: .95; }
 footer small{ color: var(--footer-muted); }
 footer a{ color: var(--footer-text); text-decoration: underline; text-underline-offset: 3px; }
 
+  /* --- Mobile image sanity (non-destructive) --- */
+
+/* 1) Make all media scale down to the container on small screens */
+img, video, iframe { max-width: 100%; height: auto; }
+
+/* 2) Tidy story figures */
+.story-image { margin: 1.25rem 0; }
+.story-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+/* 3) Slightly smaller avatar on phones */
+@media (max-width: 480px) {
+  .hero-portrait { width: 112px; height: 112px; }
+}
+
+/* 4) Ease padding so big images don't feel huge on phones */
+@media (max-width: 480px) {
+  .content-section { padding: 1.25rem; }
+}
+
 </style>
 <meta property="og:locale" content="en_US">
 <link href="/footer.css" rel="stylesheet"> 
