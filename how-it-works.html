@@ -151,20 +151,49 @@
   </script>
 
   <!-- FAQPage JSON-LD (ID + linkage) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": "https://www.dealshopperpro.com/how-it-works.html#faq",
-    "mainEntity": [
-      { "@type": "Question", "name": "How many filters should I use when searching for Amazon deals?", "acceptedAnswer": { "@type": "Answer", "text": "Start with 2-3 filters to avoid getting zero results, then gradually add more to narrow your search. The most effective approach is to begin broad and progressively refine your criteria until you find the right balance of options and specificity." } },
-      { "@type": "Question", "name": "What's the difference between using keywords vs ASIN codes?", "acceptedAnswer": { "@type": "Answer", "text": "Keywords like 'wireless headphones' provide broad search results showing various products and brands. ASIN codes (like B0C1234XYZ) target one specific product, useful when you know exactly what you want to find deals on." } },
-      { "@type": "Question", "name": "Can I search for Lightning Deals specifically?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Deal Shopper Pro includes a Lightning Deals filter that shows only time-limited Amazon deals. You can combine this with other filters like Prime Only or specific price ranges to find Lightning Deals that match your criteria." } },
-      { "@type": "Question", "name": "What should I do if my search returns no results?", "acceptedAnswer": { "@type": "Answer", "text": "If you see no results, remove one or two filters and search again. Often, having too many restrictive filters simultaneously can eliminate all options. Start with broader criteria and gradually add specificity." } }
-    ],
-    "isPartOf": { "@id": "https://www.dealshopperpro.com/how-it-works.html#webpage" }
-  }
-  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.dealshopperpro.com/how-it-works.html#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many filters should I use when searching for Amazon deals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with 2–3 filters to avoid getting zero results, then gradually add more to narrow your search. Begin broad and progressively refine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between using keywords vs ASIN codes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Keywords reveal a broad set of options; ASIN (e.g., B0C1234XYZ) targets one exact product."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I search for Lightning Deals specifically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes—enable Lightning Deals and combine with Prime Only or a price range to find time-limited bargains."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do if my search returns no results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Remove one or two restrictive filters and search again."
+      }
+    }
+  ],
+  "isPartOf": { "@id": "https://www.dealshopperpro.com/how-it-works.html#webpage" }
+}
+</script>
+
 
   <!-- BreadcrumbList JSON-LD (ID) -->
   <script type="application/ld+json">
@@ -285,6 +314,10 @@
     <section class="mb-5">
       <h2 id="guide-start">Master Amazon Deal Hunting: Your 6-Step System</h2>
       <p class="mb-4">Follow this proven methodology used by smart shoppers to consistently find better deals on Amazon. Each step builds on the previous one, creating a powerful search strategy that saves both time and money.</p>
+
+      <p class="text-center small">
+  <a href="#faq">Jump to FAQs</a>
+</p>
 
       <!-- Step 1 -->
       <div class="step-card" id="step-1">
@@ -457,6 +490,23 @@
         <div class="alert alert-primary mt-3"><strong>Pro Strategy:</strong> Start broad with 2-3 basic filters, then progressively add specificity until your results feel "just right"—typically 20-100 relevant options to choose from.</div>
       </div>
     </section>
+
+<section id="faq" aria-labelledby="faq-heading" class="my-5">
+  <h2 id="faq-heading" class="h4">FAQs: Filtering Amazon Deals</h2>
+  <details><summary>How many filters should I use when searching for Amazon deals?</summary>
+    <p>Start with 2–3 filters to avoid getting zero results, then gradually add more to narrow your search. Begin broad and progressively refine.</p>
+  </details>
+  <details><summary>What's the difference between using keywords vs ASIN codes?</summary>
+    <p>Keywords reveal a broad set of options; ASIN (e.g., B0C1234XYZ) targets one exact product.</p>
+  </details>
+  <details><summary>Can I search for Lightning Deals specifically?</summary>
+    <p>Yes—enable Lightning Deals and combine with Prime Only or a price range to find time-limited bargains.</p>
+  </details>
+  <details><summary>What should I do if my search returns no results?</summary>
+    <p>Remove one or two restrictive filters and search again.</p>
+  </details>
+</section>
+    
   </main>
 
   <!-- Progress bar script (engagement; no visual change beyond intended behavior) -->
