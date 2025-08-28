@@ -1207,64 +1207,77 @@ document.addEventListener('focusout', (e) => {
 </script>
   <script src="/navbar-loader.js" defer></script>
 <style id="help-page-nav-fix">
-  /* Page-only navbar normalization (scoped to this page) */
+  /* keep space so layout doesn't jump while nav loads */
   #navbar-placeholder:empty { display:block; min-height:56px; }
 
+  /* Nav shell */
   #navbar-placeholder .site-nav{
     position: sticky; top:0; z-index:1000;
-    background:#fff; border-bottom:1px solid #e2e8f0;
-    box-shadow:0 1px 2px rgba(0,0,0,.04);
+    background:#0b0f1a; /* or #fff if you prefer */
+    border-bottom:1px solid #e2e8f0;
+    box-shadow:0 1px 2px rgba(0,0,0,.06);
   }
+
+  /* Layout: brand left, links area right (scrolls if needed) */
   #navbar-placeholder .site-nav .nav-inner{
-    display:flex; align-items:center; justify-content:center; gap:1rem;
+    display:flex; align-items:center; gap:.75rem;
     padding:.75rem 1rem;
   }
-
-  /* --- ONE ROW: prefer no wrapping; allow horizontal scroll on narrow screens --- */
-  /* Works if your partial uses a <ul> */
-  #navbar-placeholder nav ul{
-    list-style:none; margin:0; padding:.75rem 1rem;
-    display:flex; align-items:center; gap:.75rem;
-    flex-wrap:nowrap;
-    white-space:nowrap;
-    overflow-x:auto; -webkit-overflow-scrolling:touch;
-    scrollbar-width:thin;
+  #navbar-placeholder .site-nav .brand{
+    flex:0 0 auto; white-space:nowrap;
   }
-  #navbar-placeholder nav li{ margin:0; flex:0 0 auto; }
 
-  /* Works if your partial uses a .nav-links container instead of a <ul> */
+  /* Case A: your partial uses a .nav-links container */
   #navbar-placeholder .site-nav .nav-links{
     display:flex; align-items:center; gap:.75rem;
-    flex-wrap:nowrap; white-space:nowrap;
-    overflow-x:auto; -webkit-overflow-scrolling:touch;
+    flex:1 1 auto;          /* <-- let it shrink */
+    min-width:0;            /* <-- allow overflow area to exist */
+    white-space:nowrap;     /* <-- single row */
+    overflow-x:auto;        /* <-- scroll to reveal hidden items */
+    overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
   }
+  #navbar-placeholder .site-nav .nav-links > *{ flex:0 0 auto; }
 
-  /* Link look */
-  #navbar-placeholder nav a,
-  #navbar-placeholder .site-nav .nav-links a{
+  /* Case B: your partial uses a UL directly in .nav-inner */
+  #navbar-placeholder .site-nav .nav-inner > ul{
+    list-style:none; margin:0; padding:0;
+    display:flex; align-items:center; gap:.75rem;
+    flex:1 1 auto; min-width:0;
+    white-space:nowrap; overflow-x:auto; overflow-y:hidden;
+    -webkit-overflow-scrolling:touch; scrollbar-width:thin;
+  }
+  #navbar-placeholder .site-nav .nav-inner > ul > li{ flex:0 0 auto; }
+
+  /* Links */
+  #navbar-placeholder .site-nav a{
     text-decoration:none !important;
-    color:#64748b;
-    padding:.5rem .75rem;
-    border-radius:8px;
-    font-weight:500;
-    display:inline-block;
-    white-space:nowrap;
+    display:inline-block; white-space:nowrap;
+    color:#e2e8f0; /* light text on dark header */
+    padding:.5rem .75rem; border-radius:8px; font-weight:600;
   }
-  #navbar-placeholder nav a:hover,
-  #navbar-placeholder nav a.active,
-  #navbar-placeholder nav a[aria-current="page"],
-  #navbar-placeholder .site-nav .nav-links a:hover,
-  #navbar-placeholder .site-nav .nav-links a.active,
-  #navbar-placeholder .site-nav .nav-links a[aria-current="page"]{
-    color:#fff !important; background:#6366f1 !important;
+  #navbar-placeholder .site-nav a:hover,
+  #navbar-placeholder .site-nav a.active,
+  #navbar-placeholder .site-nav a[aria-current="page"]{
+    color:#fff; background:#6366f1;
   }
 
-  /* On wider screens, show without scroll */
+  /* If you have little superscripts like “Hot”, keep them from forcing wrap */
+  #navbar-placeholder .site-nav sup, 
+  #navbar-placeholder .site-nav small{
+    white-space:nowrap; line-height:1; vertical-align:baseline;
+  }
+
+  /* On wide screens, remove the scroll bar if everything fits */
   @media (min-width: 992px){
-    #navbar-placeholder nav ul,
-    #navbar-placeholder .site-nav .nav-links{ overflow-x:visible; }
+    #navbar-placeholder .site-nav .nav-links,
+    #navbar-placeholder .site-nav .nav-inner > ul{
+      overflow-x:visible;
+    }
   }
 </style>
+
 
 
 </body>
