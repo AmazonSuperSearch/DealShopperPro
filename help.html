@@ -438,7 +438,7 @@ body {
 .scroll-to-top.visible {
   display: flex;
 }
-</style> 
+</style>
  <link rel="stylesheet" href="/navbar.css">
   <link href="/footer.css" rel="stylesheet">
 <!-- Navbar / Footer CSS -->
@@ -1061,7 +1061,24 @@ body {
    
 <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
   ↑
-</button
+</button>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p><strong>Deal Shopper Pro</strong> - Making Amazon deal hunting simple, fast, and effective.</p>
+            <p>
+                Created by <a href="/my-story.html">Duane Romualdo</a> &bull; 
+                <a href="/contact.html">Contact</a> &bull; 
+                <a href="/privacy.html">Privacy</a> &bull; 
+                <a href="/terms.html">Terms</a>
+            </p>
+            <p style="font-size: 0.875rem; opacity: 0.7; margin-top: 1rem;">
+                As an Amazon Associate, we earn from qualifying purchases.<br>
+                Last updated: August 2025 &bull; Page load time: <span id="load-time"></span>ms
+            </p>
+            <p class="mb-2"><small>Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</small></p>
+        </div>
+    </footer>
 <script>
 // Search functionality
 const searchInput = document.getElementById('searchInput');
@@ -1206,7 +1223,6 @@ document.addEventListener('focusout', (e) => {
   }
 });
 </script>
- <div id="footer-placeholder"></div>
-<script src="/footer-loader.js" defer></script>
+  <script src="/navbar-loader.js" defer></script>
 </body>
 </html>
