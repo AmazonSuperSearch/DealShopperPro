@@ -716,14 +716,6 @@ body {
   "dateModified": "2025-08-01"
 }</script>
 
-<script defer>
-(async () => {
-  try {
-    const slot = document.getElementById('navbar-placeholder');
-    if (!slot) return;
-    const res = await fetch('/partials/navbar.html', { credentials: 'omit' });
-    slot.innerHTML = await res.text();
-
     // highlight current page
     const path = location.pathname.replace(/\/$/, '') || '/';
     slot.querySelectorAll('a[data-path]').forEach(a => {
@@ -1223,6 +1215,7 @@ document.addEventListener('focusout', (e) => {
   }
 });
 </script>
-  <script src="/navbar-loader.js" defer></script>
+ <div id="footer-placeholder"></div>
+<script src="/footer-loader.js" defer></script>
 </body>
 </html>
