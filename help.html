@@ -1206,37 +1206,66 @@ document.addEventListener('focusout', (e) => {
 });
 </script>
   <script src="/navbar-loader.js" defer></script>
- <style>
-  /* Page-only navbar normalization (scoped to the injected area) */
+<style id="help-page-nav-fix">
+  /* Page-only navbar normalization (scoped to this page) */
   #navbar-placeholder:empty { display:block; min-height:56px; }
 
-  /* If the partial contains a UL/LIs, lay them out horizontally */
-  #navbar-placeholder nav ul {
-    list-style: none;
-    margin: 0;
-    padding: .75rem 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
+  #navbar-placeholder .site-nav{
+    position: sticky; top:0; z-index:1000;
+    background:#fff; border-bottom:1px solid #e2e8f0;
+    box-shadow:0 1px 2px rgba(0,0,0,.04);
   }
-  #navbar-placeholder nav li { margin: 0; }
+  #navbar-placeholder .site-nav .nav-inner{
+    display:flex; align-items:center; justify-content:center; gap:1rem;
+    padding:.75rem 1rem;
+  }
 
-  /* Make links look like your normal navbar */
-  #navbar-placeholder nav a {
-    text-decoration: none;
-    color: #64748b;
-    padding: .5rem .75rem;
-    border-radius: 8px;
-    font-weight: 500;
-    display: inline-block;
+  /* --- ONE ROW: prefer no wrapping; allow horizontal scroll on narrow screens --- */
+  /* Works if your partial uses a <ul> */
+  #navbar-placeholder nav ul{
+    list-style:none; margin:0; padding:.75rem 1rem;
+    display:flex; align-items:center; gap:.75rem;
+    flex-wrap:nowrap;
+    white-space:nowrap;
+    overflow-x:auto; -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+  }
+  #navbar-placeholder nav li{ margin:0; flex:0 0 auto; }
+
+  /* Works if your partial uses a .nav-links container instead of a <ul> */
+  #navbar-placeholder .site-nav .nav-links{
+    display:flex; align-items:center; gap:.75rem;
+    flex-wrap:nowrap; white-space:nowrap;
+    overflow-x:auto; -webkit-overflow-scrolling:touch;
+  }
+
+  /* Link look */
+  #navbar-placeholder nav a,
+  #navbar-placeholder .site-nav .nav-links a{
+    text-decoration:none !important;
+    color:#64748b;
+    padding:.5rem .75rem;
+    border-radius:8px;
+    font-weight:500;
+    display:inline-block;
+    white-space:nowrap;
   }
   #navbar-placeholder nav a:hover,
   #navbar-placeholder nav a.active,
-  #navbar-placeholder nav a[aria-current="page"] {
-    color: #fff;
-    background: #6366f1;
+  #navbar-placeholder nav a[aria-current="page"],
+  #navbar-placeholder .site-nav .nav-links a:hover,
+  #navbar-placeholder .site-nav .nav-links a.active,
+  #navbar-placeholder .site-nav .nav-links a[aria-current="page"]{
+    color:#fff !important; background:#6366f1 !important;
+  }
+
+  /* On wider screens, show without scroll */
+  @media (min-width: 992px){
+    #navbar-placeholder nav ul,
+    #navbar-placeholder .site-nav .nav-links{ overflow-x:visible; }
   }
 </style>
+
 
 </body>
 </html>
