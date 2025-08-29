@@ -716,6 +716,24 @@ body {
   "dateModified": "2025-08-01"
 }</script>
 
+<script defer>
+(async () => {
+  try {
+    const slot = document.getElementById('navbar-placeholder');
+    if (!slot) return;
+    const res = await fetch('/partials/navbar.html', { credentials: 'omit' });
+    slot.innerHTML = await res.text();
+
+    // highlight current page
+    const path = location.pathname.replace(/\/$/, '') || '/';
+    slot.querySelectorAll('a[data-path]').forEach(a => {
+      const ap = (a.getAttribute('data-path') || '').replace(/\/$/, '') || '/';
+      if (ap === path) { a.setAttribute('aria-current','page'); a.classList.add('active'); }
+    });
+  } catch (e) { console.error('Navbar load failed', e); }
+})();
+</script>
+
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
@@ -1206,90 +1224,5 @@ document.addEventListener('focusout', (e) => {
 });
 </script>
   <script src="/navbar-loader.js" defer></script>
-<style id="help-page-nav-fix">
-  /* keep space so layout doesn't jump while nav loads */
-  #navbar-placeholder:empty { display:block; min-height:56px; }
-
-  /* Style the injected navbar regardless of its internal structure */
-  nav.site-nav { position: sticky; top: 0; z-index: 1000; }
-
-  /* Reset UL defaults so it doesn't stack */
-  nav.site-nav ul { margin: 0 !important; padding: 0 !important; list-style: none !important; }
-
-  /* SINGLE ROW, SCROLL IF NEEDED — hit all likely containers */
-  nav.site-nav .nav-links,
-  nav.site-nav .nav-inner > ul,
-  nav.site-nav .nav-inner > div,
-  nav.site-nav > ul,
-  nav.site-nav > div {
-    display: flex !important;
-    align-items: center !important;
-    gap: .75rem !important;
-    flex-wrap: nowrap !important;      /* no wrapping */
-    white-space: nowrap !important;     /* keep items on one line */
-    overflow-x: auto !important;        /* allow horizontal scroll when narrow */
-    overflow-y: hidden !important;
-    -webkit-overflow-scrolling: touch;
-    min-width: 0 !important;
-    flex: 1 1 auto !important;
-  }
-
-  /* make each item non-flexing so they line up horizontally */
-  nav.site-nav li { flex: 0 0 auto !important; }
-
-  /* readable link look even if global CSS doesn't load */
-  nav.site-nav a {
-    display: inline-block !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
-    padding: .5rem .75rem !important;
-    border-radius: 8px !important;
-    font-weight: 600 !important;
-    color: #e2e8f0 !important; /* tweak if your header is light */
-  }
-  nav.site-nav a:hover,
-  nav.site-nav a.active,
-  nav.site-nav a[aria-current="page"] {
-    color: #fff !important;
-    background: #6366f1 !important;
-  }
-</style>
-
-<script>
-/* Fallback: if the nav loads after styles, apply row layout to whatever holds the links */
-(function () {
-  const slot = document.getElementById('navbar-placeholder');
-  let tries = 0;
-  function apply() {
-    const nav = slot && (slot.querySelector('.site-nav') || slot.querySelector('nav'));
-    if (!nav) { if (++tries < 120) return requestAnimationFrame(apply); return; } // ~2s retry
-
-    const links =
-      nav.querySelector('.nav-links') ||
-      nav.querySelector('.nav-inner > ul') ||
-      nav.querySelector('.nav-inner > div') ||
-      nav.querySelector(':scope > ul') ||
-      nav.querySelector(':scope > div');
-
-    if (links) {
-      links.style.display = 'flex';
-      links.style.flexWrap = 'nowrap';
-      links.style.whiteSpace = 'nowrap';
-      links.style.overflowX = 'auto';
-      links.style.alignItems = 'center';
-      links.style.gap = '.75rem';
-      links.style.minWidth = '0';
-      links.style.flex = '1 1 auto';
-      links.querySelectorAll(':scope > *').forEach(el => el.style.flex = '0 0 auto');
-    }
-  }
-  apply();
-})();
-</script>
-
-
-
-
-
 </body>
 </html>
