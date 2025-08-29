@@ -735,6 +735,27 @@ body {
 
 </head>
 <body>
+ <!-- Home link -->
+<style>
+  .home-link{
+    display:inline-flex; align-items:center; gap:.5rem;
+    font-weight:600; text-decoration:none;
+    color:#fff; /* visible on your dark header */
+  }
+  .home-link:hover{ opacity:.9; }
+  .home-link:focus-visible{
+    outline:2px solid #fff; outline-offset:2px; border-radius:.5rem;
+  }
+  .home-link svg{ width:20px; height:20px; flex:0 0 20px; }
+</style>
+
+<a href="https://www.dealshopperpro.com/" class="home-link" aria-label="Home" title="Home">
+  <!-- House icon (SVG) -->
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M11.29 2.27a1 1 0 0 1 1.42 0l8.5 8.5a1 1 0 1 1-1.42 1.42l-.79-.79V20a2 2 0 0 1-2 2h-3a1 1 0 0 1-1-1v-4.5a1.5 1.5 0 0 0-3 0V21a1 1 0 0 1-1 1H6.5A2 2 0 0 1 4.5 20v-8.6l-.79.79a1 1 0 0 1-1.42-1.42l8.5-8.5Z"/>
+  </svg>
+  <span>Home</span>
+</a>
 <a href="#main" class="skip-link">Skip to content</a>
 <div id="navbar-placeholder"></div>
 <header class="header">
