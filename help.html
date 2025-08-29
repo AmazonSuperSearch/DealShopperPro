@@ -438,6 +438,16 @@ body {
 .scroll-to-top.visible {
   display: flex;
 }
+ /* keep skip-link hidden until focused (what you're seeing is normal when focused) */
+.skip-link{position:absolute;top:-40px;left:6px;background:var(--primary,#6366f1);color:#fff;padding:8px 16px;border-radius:4px;font-weight:600;z-index:1000}
+.skip-link:focus{top:6px}
+
+/* Home link in header */
+.home-bar{display:flex;justify-content:flex-start;align-items:center;margin-bottom:0.5rem}
+.home-link{display:inline-flex;gap:.5rem;align-items:center;text-decoration:none;font-weight:600;color:var(--primary,#6366f1)}
+.home-link:hover{text-decoration:underline}
+.home-link svg{width:20px;height:20px}
+
 </style>
   <link href="/footer.css" rel="stylesheet">
 <!-- Navbar / Footer CSS -->
