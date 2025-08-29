@@ -1210,43 +1210,59 @@ document.addEventListener('focusout', (e) => {
   /* keep space so layout doesn't jump while nav loads */
   #navbar-placeholder:empty { display:block; min-height:56px; }
 
-  /* generic: handle either .nav-links, a UL, or a DIV container */
-  #navbar-placeholder nav .nav-links,
-  #navbar-placeholder nav .nav-inner > ul,
-  #navbar-placeholder nav .nav-inner > div,
-  #navbar-placeholder nav > ul,
-  #navbar-placeholder nav > div {
-    display:flex; align-items:center; gap:.75rem;
-    flex-wrap:nowrap; white-space:nowrap;
-    overflow-x:auto; overflow-y:hidden;
-    -webkit-overflow-scrolling:touch; scrollbar-width:thin;
-    min-width:0; flex:1 1 auto;
-  }
-  #navbar-placeholder nav li { list-style:none; }
-  #navbar-placeholder nav li, 
-  #navbar-placeholder nav a { flex:0 0 auto; }
+  /* Style the injected navbar regardless of its internal structure */
+  nav.site-nav { position: sticky; top: 0; z-index: 1000; }
 
-  /* basic link look so it’s readable even if global CSS misses */
-  #navbar-placeholder nav a{
-    text-decoration:none; display:inline-block; white-space:nowrap;
-    padding:.5rem .75rem; border-radius:8px; font-weight:600;
-    color:#e2e8f0; /* light on dark header; change to #475569 if you use a light header */
+  /* Reset UL defaults so it doesn't stack */
+  nav.site-nav ul { margin: 0 !important; padding: 0 !important; list-style: none !important; }
+
+  /* SINGLE ROW, SCROLL IF NEEDED — hit all likely containers */
+  nav.site-nav .nav-links,
+  nav.site-nav .nav-inner > ul,
+  nav.site-nav .nav-inner > div,
+  nav.site-nav > ul,
+  nav.site-nav > div {
+    display: flex !important;
+    align-items: center !important;
+    gap: .75rem !important;
+    flex-wrap: nowrap !important;      /* no wrapping */
+    white-space: nowrap !important;     /* keep items on one line */
+    overflow-x: auto !important;        /* allow horizontal scroll when narrow */
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
   }
-  #navbar-placeholder nav a:hover,
-  #navbar-placeholder nav a.active,
-  #navbar-placeholder nav a[aria-current="page"]{
-    color:#fff; background:#6366f1;
+
+  /* make each item non-flexing so they line up horizontally */
+  nav.site-nav li { flex: 0 0 auto !important; }
+
+  /* readable link look even if global CSS doesn't load */
+  nav.site-nav a {
+    display: inline-block !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    padding: .5rem .75rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    color: #e2e8f0 !important; /* tweak if your header is light */
+  }
+  nav.site-nav a:hover,
+  nav.site-nav a.active,
+  nav.site-nav a[aria-current="page"] {
+    color: #fff !important;
+    background: #6366f1 !important;
   }
 </style>
 
 <script>
-/* JS fallback: if the structure is unusual, force flex on whatever holds the links */
-(function(){
+/* Fallback: if the nav loads after styles, apply row layout to whatever holds the links */
+(function () {
   const slot = document.getElementById('navbar-placeholder');
   let tries = 0;
-  const apply = () => {
+  function apply() {
     const nav = slot && (slot.querySelector('.site-nav') || slot.querySelector('nav'));
-    if (!nav) { if (++tries < 60) return requestAnimationFrame(apply); }
+    if (!nav) { if (++tries < 120) return requestAnimationFrame(apply); return; } // ~2s retry
 
     const links =
       nav.querySelector('.nav-links') ||
@@ -1256,17 +1272,21 @@ document.addEventListener('focusout', (e) => {
       nav.querySelector(':scope > div');
 
     if (links) {
-      Object.assign(links.style, {
-        display: 'flex', alignItems: 'center', gap: '.75rem',
-        flexWrap: 'nowrap', whiteSpace: 'nowrap',
-        overflowX: 'auto', overflowY: 'hidden'
-      });
+      links.style.display = 'flex';
+      links.style.flexWrap = 'nowrap';
+      links.style.whiteSpace = 'nowrap';
+      links.style.overflowX = 'auto';
+      links.style.alignItems = 'center';
+      links.style.gap = '.75rem';
+      links.style.minWidth = '0';
+      links.style.flex = '1 1 auto';
       links.querySelectorAll(':scope > *').forEach(el => el.style.flex = '0 0 auto');
     }
-  };
+  }
   apply();
 })();
 </script>
+
 
 
 
