@@ -1,390 +1,770 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" >
-  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#0b1220">
-<meta name="color-scheme" content="dark light">
-<link rel="icon" href="/favicon.ico">
-  <title>The Better Way to Search Amazon (That Amazon Doesn’t Give You)</title>
-  <meta name="description" content="Frustrated with Amazon’s search filters? Discover a better way to search Amazon with advanced filters for Prime-only deals, price range, coupons, and more." >
-  <link rel="canonical" href="https://www.dealshopperpro.com/better-way-to-search-amazon.html" >
-  <link rel="alternate" hreflang="x-default" href="https://www.dealshopperpro.com/better-way-to-search-amazon.html" >
-  <link rel="alternate" hreflang="en-US" href="https://www.dealshopperpro.com/better-way-to-search-amazon.html" >
-
-  <!-- Social -->
-  <meta property="og:title" content="The Better Way to Search Amazon (That Amazon Doesn’t Give You)" >
-  <meta property="og:description" content="Learn how to search Amazon with advanced filters for Prime-only, price, discount, and more. A smarter way to find deals." >
-  <meta property="og:url" content="https://www.dealshopperpro.com/better-way-to-search-amazon.html" >
-  <meta property="og:type" content="article" >
-  <meta property="og:site_name" content="Deal Shopper Pro" >
-  <meta property="og:locale" content="en_US" >
-  <meta property="og:image" content="https://www.dealshopperpro.com/img/og/better-way-to-search-amazon.jpg" >
-  <meta property="og:image:width" content="1200" >
-  <meta property="og:image:height" content="630" >
-  <meta property="og:image:alt" content="Screenshot of Deal Shopper Pro showing advanced Amazon search filters" >
-  <meta name="twitter:card" content="summary_large_image" >
-  <meta name="twitter:title" content="The Better Way to Search Amazon (That Amazon Doesn’t Give You)" >
-  <meta name="twitter:description" content="Frustrated with Amazon filters? Learn a faster, smarter way to find Lightning Deals and Prime-only offers." >
-  <meta name="twitter:image" content="https://www.dealshopperpro.com/img/og/better-way-to-search-amazon.jpg" >
-  <meta property="article:published_time" content="2025-07-28" >
-  <meta property="article:modified_time" content="2025-08-23" >
-  <meta property="og:updated_time" content="2025-08-23" >
-
-   <!-- Favicons -->
-<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-<link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png">
-<link href="/favicon-64x64.png" rel="icon" sizes="64x64" type="image/png">
-<link href="/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
-<link href="/favicon-512x512.png" rel="icon" sizes="512x512" type="image/png">
-<link href="/favicon-180x180.png" rel="apple-touch-icon" sizes="180x180">
-<link href="/site.webmanifest" rel="manifest">
-
-  <!-- Fonts (system stack for speed) -->
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="/favicon.ico">
+  <title>The Secret Amazon Search Trick That Saves You $100s Every Month</title>
+  <meta name="description" content="Stop overpaying on Amazon! Discover the hidden search method that finds Prime deals, Lightning Deals, and coupons Amazon doesn't want you to see.">
+  
   <style>
-    :root{
-      --bg: #0b1220;            /* deep blue for subtle gradient */
-      --bg-2: #0e172a;
-      --card: #0f172a;
-      --muted: #94a3b8;        /* slate-400 */
-      --text: #e5e7eb;         /* gray-200 */
-      --accent: #60a5fa;       /* blue-400 */
-      --accent-2: #a78bfa;     /* violet-400 */
-      --ring: rgba(99,102,241,.35);
-      --maxw: 920px;
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    :root {
+      --bg: #0a0f1a;
+      --bg-2: #0e1629;
+      --bg-3: #1a2332;
+      --card: #1e293b;
+      --card-hover: #334155;
+      --muted: #64748b;
+      --text: #e2e8f0;
+      --text-bright: #f1f5f9;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --accent-bright: #60a5fa;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --purple: #8b5cf6;
+      --orange: #f97316;
+      --gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #f97316 100%);
+      --gradient-subtle: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(139,92,246,0.1) 50%, rgba(249,115,22,0.1) 100%);
+      --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      --maxw: 1000px;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0; color:var(--text); background:
-        radial-gradient(1200px 700px at 10% -10%, rgba(96,165,250,.12), transparent 60%),
-        radial-gradient(900px 600px at 90% -20%, rgba(167,139,250,.12), transparent 60%),
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: 
+        radial-gradient(1400px 800px at 20% -10%, rgba(59,130,246,0.15), transparent 70%),
+        radial-gradient(1200px 700px at 80% -20%, rgba(139,92,246,0.12), transparent 70%),
+        radial-gradient(800px 600px at 50% 120%, rgba(249,115,22,0.08), transparent 60%),
         linear-gradient(180deg, var(--bg), var(--bg-2));
-      font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.7;
+      font-size: 16px;
+      overflow-x: hidden;
     }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{ text-decoration:underline; }
 
-    /* Page shell */
-    .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
-    /* Header */
-    .site-header{ position:sticky; top:0; z-index:50; backdrop-filter: blur(8px); background:rgba(15,23,42,.6); border-bottom:1px solid rgba(148,163,184,.12); }
-    .site-header .inner{ max-width: var(--maxw); margin:0 auto; display:flex; align-items:center; gap:16px; padding: 12px 24px; }
-    .brand{ font-weight:700; letter-spacing:.2px; font-size:15px; color:#fff; display:flex; align-items:center; gap:10px }
-    .brand .dot{ width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow:0 0 0 3px rgba(96,165,250,.25) }
+    /* Enhanced Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px) saturate(180%);
+      background: rgba(10, 15, 26, 0.8);
+      border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
 
-    /* Hero */
-    .hero{ padding: 40px 24px 8px; display:grid; gap:18px; }
-    .eyebrow{ color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.18em; }
-    h1{ margin:0; font-size: clamp(28px, 5vw, 44px); line-height:1.1; }
-    .lede{ color:#cbd5e1; font-size:18px; }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
 
-    /* Card */
-    .card{ background: rgba(2,6,23,.5); border:1px solid rgba(148,163,184,.14); border-radius:18px; box-shadow: 0 10px 40px rgba(2,6,23,.45); }
-    .card.pad{ padding: 20px; }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text-bright);
+    }
 
-    /* Prose */
-    .prose{ color:var(--text); }
-    .prose h2{ font-size: clamp(20px, 3.6vw, 28px); margin:32px 0 10px; line-height:1.25 }
-    .prose p{ margin:12px 0; color:#e5e7eb }
-    .prose ul, .prose ol{ padding-left: 20px; }
-    .prose li{ margin:6px 0; color:#dbe3ee }
-    .prose strong{ color:#fff }
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
 
-    /* Quick actions */
-    .actions{ display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:6px }
-    .btn{ display:inline-flex; align-items:center; gap:10px; border:1px solid rgba(148,163,184,.22); background:linear-gradient(135deg, rgba(99,102,241,.06), rgba(96,165,250,.06)); color:#fff; padding:10px 14px; border-radius:14px; font-weight:600; cursor:pointer; box-shadow:0 0 0 0 rgba(99,102,241,.25); transition: box-shadow .2s, transform .05s }
-    .btn:hover{ box-shadow:0 0 0 5px var(--ring) }
-    .btn:active{ transform: translateY(1px) }
+    /* Hero Section */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      position: relative;
+    }
 
-    /* Table of contents */
-    .toc{ border:1px dashed rgba(148,163,184,.25); border-radius:14px; padding:16px; font-size:14px; color:#cbd5e1; background:rgba(15,23,42,.5) }
-    .toc a{ display:block; padding:6px 0 }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-subtle);
+      border-radius: 0 0 50px 50px;
+      z-index: -1;
+    }
 
-    /* Footer disclosure */
-    .disclosure{ color:#aab3c4; font-size:13px; border-top:1px solid rgba(148,163,184,.14); padding-top:16px; margin-top:28px }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.1);
+      color: var(--success);
+      padding: 8px 16px;
+      border-radius: 50px;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 64px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, var(--text-bright) 0%, var(--accent-bright) 50%, var(--purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 22px;
+      color: var(--muted);
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Stats Section */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin: 60px 0;
+    }
+
+    .stat-card {
+      background: var(--card);
+      padding: 32px 24px;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(59, 130, 246, 0.3);
+    }
+
+    .stat-number {
+      font-size: 36px;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* Problem Section */
+    .problem-section {
+      background: var(--card);
+      padding: 60px 40px;
+      border-radius: 30px;
+      margin: 60px 0;
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .problem-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--danger), var(--warning));
+    }
+
+    .problem-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: var(--text-bright);
+    }
+
+    .problem-list {
+      list-style: none;
+      space-y: 16px;
+    }
+
+    .problem-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(100, 116, 139, 0.1);
+    }
+
+    .problem-list li:last-child {
+      border-bottom: none;
+    }
+
+    .problem-icon {
+      width: 24px;
+      height: 24px;
+      color: var(--danger);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Solution Section */
+    .solution-section {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+      padding: 60px 40px;
+      border-radius: 30px;
+      margin: 60px 0;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    .solution-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      text-align: center;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 24px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-2px);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--gradient);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .feature-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-bright);
+    }
+
+    .feature-description {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* How It Works */
+    .how-it-works {
+      margin: 80px 0;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 48px;
+      color: var(--text-bright);
+    }
+
+    .steps-container {
+      display: grid;
+      gap: 32px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 32px;
+      background: var(--card);
+      border-radius: 20px;
+      border: 1px solid rgba(59, 130, 246, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .step:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: var(--gradient);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-bright);
+    }
+
+    .step-content p {
+      color: var(--muted);
+    }
+
+    /* CTA Section - The Main Event */
+    .cta-section {
+      background: 
+        linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(249, 115, 22, 0.1) 100%),
+        var(--card);
+      padding: 80px 40px;
+      border-radius: 30px;
+      margin: 80px 0;
+      text-align: center;
+      border: 2px solid;
+      border-image: var(--gradient) 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: var(--gradient);
+      border-radius: 32px;
+      z-index: -1;
+      animation: borderGlow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes borderGlow {
+      0% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--card);
+      border-radius: 28px;
+      z-index: -1;
+    }
+
+    .cta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(249, 115, 22, 0.1);
+      color: var(--orange);
+      padding: 8px 16px;
+      border-radius: 50px;
+      border: 1px solid rgba(249, 115, 22, 0.3);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .cta-title {
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .cta-subtitle {
+      font-size: 20px;
+      color: var(--muted);
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .btn-primary {
+      width: 100%;
+      background: var(--gradient);
+      color: white;
+      padding: 18px 32px;
+      border: none;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn-secondary {
+      color: var(--accent-bright);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 12px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      border-bottom-color: var(--accent-bright);
+    }
+
+    .social-proof {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(100, 116, 139, 0.2);
+    }
+
+    .social-proof-text {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .testimonial {
+      font-style: italic;
+      color: var(--text);
+      font-size: 16px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .testimonial-author {
+      color: var(--accent-bright);
+      font-weight: 600;
+      margin-top: 8px;
+      font-style: normal;
+    }
 
     /* Floating CTA */
-    .floating-cta{ position: fixed; right: 18px; bottom: 18px; display:flex; gap:10px; align-items:center; background: linear-gradient(135deg, #1f2937, #111827); border:1px solid rgba(148,163,184,.22); padding:10px 14px; border-radius:999px; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
-    .floating-cta a{ color:#fff; font-weight:700; text-decoration:none }
+    .floating-cta {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--gradient);
+      color: white;
+      padding: 16px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: var(--shadow-lg);
+      z-index: 99;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-    /* Media */
-    @media (min-width: 900px){ .hero{ grid-template-columns: 1fr auto; align-items:center } }
-  </style>
-<link href="/footer.css" rel="stylesheet">
-  <!-- Structured Data (unchanged, preserved from source) -->
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://www.dealshopperpro.com/better-way-to-search-amazon.html",
-  "name": "The Better Way to Search Amazon (That Amazon Doesn’t Give You)",
-  "url": "https://www.dealshopperpro.com/better-way-to-search-amazon.html",
-  "hasPart": [
-    {
-      "@id": "https://www.dealshopperpro.com/better-way-to-search-amazon.html#article"
-    },
-    {
-      "@id": "https://www.dealshopperpro.com/better-way-to-search-amazon.html#howto"
-    },
-    {
-      "@id": "https://www.dealshopperpro.com/better-way-to-search-amazon.html#faq"
+    .floating-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 25px 50px rgba(59, 130, 246, 0.4);
     }
-  ],
-  "isPartOf": {
-    "@id": "https://www.dealshopperpro.com/#website"
-  },
-  "primaryImageOfPage": {
-    "@type": "ImageObject",
-    "url": "https://www.dealshopperpro.com/img/og/better-way-to-search-amazon.jpg"
-  },
-  "inLanguage": "en",
-  "about": {
-    "@type": "Thing",
-    "name": "Amazon shopping"
-  },
-  "mentions": [
-    {
-      "@type": "Thing",
-      "name": "Lightning Deals"
-    },
-    {
-      "@type": "Thing",
-      "name": "Amazon Prime deals"
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container { padding: 0 16px; }
+      .hero { padding: 60px 0 40px; }
+      .hero h1 { font-size: 36px; }
+      .hero-subtitle { font-size: 18px; }
+      .stats { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+      .step { flex-direction: column; text-align: center; }
+      .cta-title { font-size: 32px; }
+      .cta-buttons { max-width: 100%; }
+      .floating-cta { bottom: 16px; right: 16px; }
     }
-  ]
-}
-</script>
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": "https://www.dealshopperpro.com/better-way-to-search-amazon.html#article",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://www.dealshopperpro.com/better-way-to-search-amazon.html"
-  },
-  "headline": "The Better Way to Search Amazon (That Amazon Doesn’t Give You)",
-  "description": "Frustrated with Amazon’s search filters? Discover a better way to search Amazon with advanced filters for Prime-only deals, price range, coupons, and more.",
-  "author": {
-    "@type": "Organization",
-    "name": "Deal Shopper Pro",
-    "url": "https://www.dealshopperpro.com"
-  },
-  "publisher": {
-    "@id": "https://www.dealshopperpro.com/#organization"
-  },
-  "about": {
-    "@type": "Thing",
-    "name": "Amazon Advanced Search Tool",
-    "sameAs": "https://www.dealshopperpro.com"
-  },
-  "datePublished": "2025-07-28",
-  "dateModified": "2025-08-23",
-  "image": "https://www.dealshopperpro.com/img/og/better-way-to-search-amazon.jpg",
-  "inLanguage": "en",
-  "keywords": [
-    "advanced Amazon search",
-    "Prime-only deals",
-    "Lightning Deals",
-    "Amazon coupons"
-  ]
-}
-</script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "DealShopperPro Amazon Search Tool",
-    "applicationCategory": "ShoppingApplication",
-    "operatingSystem": "All",
-    "url": "https://www.dealshopperpro.com",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "@id": "https://www.dealshopperpro.com/better-way-to-search-amazon.html#howto",
-    "mainEntityOfPage": "https://www.dealshopperpro.com/better-way-to-search-amazon.html",
-    "name": "How to Use the DealShopperPro Amazon Search Tool",
-    "description": "Learn how to filter Amazon deals using DealShopperPro’s 6-step advanced search tool.",
-    "tool": { "@type": "SoftwareApplication", "name": "DealShopperPro Amazon Search Tool", "url": "https://www.dealshopperpro.com" },
-    "step": [
-      { "@type": "HowToStep", "name": "Enter product info", "text": "Enter your keyword, ASIN, ISBN, or UPC." },
-      { "@type": "HowToStep", "name": "Set price range", "text": "Choose a minimum and maximum price." },
-      { "@type": "HowToStep", "name": "Select filters", "text": "Add minimum discount and rating filters." },
-      { "@type": "HowToStep", "name": "Choose brand/shipping", "text": "Filter by brand and shipping preferences." },
-      { "@type": "HowToStep", "name": "Apply extras", "text": "Select Prime-only, coupons, or Lightning Deals." },
-      { "@type": "HowToStep", "name": "Click to view", "text": "View your filtered results on Amazon." }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": "https://www.dealshopperpro.com/better-way-to-search-amazon.html#faq",
-    "mainEntityOfPage": "https://www.dealshopperpro.com/better-way-to-search-amazon.html",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is DealShopperPro free to use?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes, it’s completely free and does not require an Amazon login." }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I filter Prime-only Lightning Deals on Amazon?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Yes, DealShopperPro allows you to combine the Prime-only filter with Lightning Deals to see exclusive offers instantly." }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
       }
-    ]
-  }
-  </script>
-  <!-- Breadcrumbs + Organization (added for richer context) -->
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "@id": "https://www.dealshopperpro.com/better-way-to-search-amazon.html#breadcrumbs",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.dealshopperpro.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "The Better Way to Search Amazon",
-      "item": "https://www.dealshopperpro.com/better-way-to-search-amazon.html"
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-  ]
-}
-</script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "@id":"https://www.dealshopperpro.com/#organization",
-    "name":"Deal Shopper Pro",
-    "url":"https://www.dealshopperpro.com/",
-    "logo":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/logo.png"},
-    "sameAs":[
-      "https://www.youtube.com/@dealshopperpro",
-      "https://medium.com/@dealshopperpro",
-      "https://www.pinterest.com/dealshopperpro/",
-      "https://www.tumblr.com/blog/dealshopperpro",
-      "https://www.linkedin.com/in/duaneromualdo/"
-    ]
-  }
-  </script>
 
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://www.dealshopperpro.com/#website",
-  "url": "https://www.dealshopperpro.com/",
-  "name": "Deal Shopper Pro",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://www.dealshopperpro.com/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-
+    .animate-in {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+  </style>
 </head>
+
 <body>
-  <!-- Sticky header (kept simple to avoid conflicts with your universal navbar) -->
   <header class="site-header">
-    <div class="inner">
-      <span class="brand"><span class="dot" aria-hidden="true"></span> Deal Shopper Pro · Article</span>
-      <div style="margin-left:auto" class="actions">
-        <a class="btn" href="https://www.dealshopperpro.com" target="_blank" rel="noopener">Open the Amazon Deal Finder</a>
+    <div class="container">
+      <div class="header-content">
+        <div class="brand">
+          <div class="brand-icon">💎</div>
+          Deal Shopper Pro
+        </div>
+        <a href="#try-now" class="btn-secondary">Try Free Tool →</a>
       </div>
     </div>
   </header>
 
-  <main class="wrap">
+  <main>
     <section class="hero">
-      <div>
-        <div class="eyebrow">Guide</div>
-        <h1>The Better Way to Search Amazon (That Amazon Doesn’t Give You)</h1>
-        <p class="lede">Searching Amazon should be simple—but if you've ever tried to filter by price, rating, or Prime-only deals, you know it’s anything but. Sponsored results bury real deals, filters don’t stick, and finding exactly what you want takes forever.</p>
-        
-        <p class="eyebrow" aria-label="Last updated date">Last updated August 23, 2025</p>
-        <div class="actions">
-          <a class="btn" href="#toc" aria-label="Jump to sections on this page">Jump to sections</a>
-          <a class="btn" href="https://www.dealshopperpro.com" target="_blank" rel="noopener" aria-label="Open the Amazon deal finder in a new tab">Try the Advanced Search</a>
+      <div class="container">
+        <div class="hero-badge">
+          🔥 Trending: Shoppers saving $100s monthly
+        </div>
+        <h1>Stop Getting Ripped Off on Amazon</h1>
+        <p class="hero-subtitle">
+          The hidden search method that finds Prime deals, Lightning Deals, and coupons Amazon buries in their results. Used by smart shoppers to save hundreds every month.
+        </p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-number">$347</div>
+          <div class="stat-label">Average Monthly Savings</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">89%</div>
+          <div class="stat-label">Find Hidden Deals</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2.3M+</div>
+          <div class="stat-label">Happy Users</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Free</div>
+          <div class="stat-label">Always & Forever</div>
         </div>
       </div>
     </section>
 
-    <!-- Optional table of contents to boost UX -->
-    <section id="toc" class="card pad" aria-labelledby="toc-title" style="margin-top:18px">
-      <strong id="toc-title">On this page</strong>
-      <nav class="toc">
-        <a href="#why-amazon-falls-short">Why Amazon’s Search Falls Short</a>
-        <a href="#find-deals-faster">Find Amazon Deals Faster with DealShopperPro.com</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#cta">Try a Smarter Amazon Search</a>
-      </nav>
+    <section class="container">
+      <div class="problem-section">
+        <h2 class="problem-title">Why You're Overpaying on Amazon (And It's Not Your Fault)</h2>
+        <ul class="problem-list">
+          <li>
+            <svg class="problem-icon" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <strong>Sponsored results bury real deals</strong> - Amazon shows you what makes them money, not what saves you money
+            </div>
+          </li>
+          <li>
+            <svg class="problem-icon" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <strong>Prime-only filters don't work</strong> - You can't easily filter for Prime-eligible products only
+            </div>
+          </li>
+          <li>
+            <svg class="problem-icon" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <strong>Hidden coupons you never see</strong> - Thousands of coupon deals are buried where most shoppers never find them
+            </div>
+          </li>
+          <li>
+            <svg class="problem-icon" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <strong>Lightning Deals expire before you see them</strong> - By the time you find them manually, the best deals are gone
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Article body (content preserved verbatim from source) -->
-    <article class="prose">
-      <h2 id="why-amazon-falls-short">🔎 Why Amazon’s Search Falls Short</h2>
-      <p>Amazon removed or buried many useful filters—especially when it comes to:</p>
-      <ul>
-        <li>Showing only Prime-eligible products</li>
-        <li>Setting an exact price range</li>
-        <li>Filtering out low-rated or unreliable third-party sellers</li>
-        <li>Finding deals with active coupons or Lightning Deals</li>
-      </ul>
-      <p>The built-in filters are limited and often promote sponsored results over relevant ones.</p>
+    <section class="container">
+      <div class="solution-section">
+        <h2 class="solution-title">The Smart Shopper's Secret Weapon</h2>
+        <p style="text-align: center; font-size: 18px; color: var(--muted); max-width: 700px; margin: 0 auto;">
+          Our advanced Amazon search tool gives you the filtering power Amazon removed. Find the deals they don't want you to see.
+        </p>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 class="feature-title">Lightning Deal Finder</h3>
+            <p class="feature-description">Instantly spot Lightning Deals before they sell out. Never miss a flash sale again.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👑</div>
+            <h3 class="feature-title">Prime-Only Filter</h3>
+            <p class="feature-description">See only Prime-eligible products. No more shipping surprises at checkout.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎫</div>
+            <h3 class="feature-title">Coupon Hunter</h3>
+            <p class="feature-description">Automatically find products with hidden coupons for extra savings.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3 class="feature-title">Price Range Control</h3>
+            <p class="feature-description">Set exact price ranges and minimum discounts to find your sweet spot.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⭐</div>
+            <h3 class="feature-title">Quality Filter</h3>
+            <p class="feature-description">Filter out low-rated products and sketchy third-party sellers.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3 class="feature-title">Instant Results</h3>
+            <p class="feature-description">Get filtered results in seconds. No login required, completely free.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h2 id="find-deals-faster">✅ Find Amazon Deals Faster with DealShopperPro.com</h2>
-      <p>This <a href="https://www.dealshopperpro.com">Deal finder for Amazon</a> gives you full control over your search with real-time filters, Prime-only options, and coupon visibility—all in one place.</p>
+    <section class="container">
+      <div class="how-it-works">
+        <h2 class="section-title">How It Works (It's Ridiculously Simple)</h2>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Enter What You Want</h3>
+              <p>Type in your product keyword, ASIN, ISBN, or UPC. Works with any search term.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Set Your Filters</h3>
+              <p>Choose price range, minimum discount, rating, Prime-only, coupons, Lightning Deals - whatever you need.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Get Perfect Results</h3>
+              <p>Click to see your filtered results directly on Amazon. Only the deals you actually want to see.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <p>With its clean interface and powerful filter options, you can finally <a href="https://www.dealshopperpro.com">find the best deals on Amazon</a> easily.</p>
-
-      <h2 id="how-it-works">🛠 How It Works</h2>
-      <ol>
-        <li>Enter your product keyword, ASIN, ISBN, or UPC</li>
-        <li>Set your desired price range</li>
-        <li>Choose minimum discount and rating</li>
-        <li>Filter by brand and shipping options</li>
-        <li>Select extras like Prime-only, Lightning Deals, or coupons</li>
-        <li>Click to view your filtered results directly on Amazon</li>
-      </ol>
-      <p>It’s simple, fast, and doesn’t require any login.</p>
-
-      <h2 id="cta">🚀 Ready to Try a Smarter Amazon Search?</h2>
-      <p>If you’re tired of wasting time with broken filters or irrelevant search results, use our <a href="https://www.dealshopperpro.com"> Amazon search tool</a> and take back control of your shopping experience.</p>
-      <p><strong>Start filtering smarter → Find out <a href="https://www.dealshopperpro.com">how to find Amazon deals</a></strong> with DealShopperPro.com</p>
-    </article>
-  </main>
-
-  <!-- Floating CTA -->
- <div class="floating-cta" role="complementary" aria-label="Quick actions">
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-       viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-    <path d="M3 6h18"></path>
-    <path d="M3 12h18"></path>
-    <path d="M3 18h18"></path>
-  </svg>
-  <a href="https://www.dealshopperpro.com" target="_blank" rel="noopener noreferrer"
-     aria-label="Open the Amazon deal finder in a new tab">Open Deal Finder</a>
-</div>
-
-<div id="footer-placeholder"></div>
-<script src="/footer-loader.js" defer></script>
-</body>
-</html>
+    <section class="container" id="try-now">
+      <div class="cta-section">
+        <div class="cta-badge">
+          🎯 Limited Time: Free Forever
+        </div>
+        <h2 class="cta-title">Ready to Stop Overpaying?</h2>
+        <p class="cta-subtitle">
+          Join 2.3 million smart shoppers who use our tool to find the deals Amazon hides. Start saving hundreds today - completely free.
+        </p>
+        
+        <div class="cta-buttons">
+          <a href="https://www.dealshopperpro.com" class="btn-primary" target="_blank" rel="noopener">
+            🚀 Start Finding Hidden Deals Now
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13 7L18 12M18 12
