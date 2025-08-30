@@ -190,7 +190,7 @@
         transition: var(--transition) !important;
     }
 
-    a[href*="Today's"] {
+    a.btn-today {
         background: linear-gradient(135deg, #f59e0b, #d97706) !important;
         color: white !important;
         padding: 0.6rem 1.2rem !important;
@@ -205,12 +205,12 @@
         border: none !important;
     }
 
-    a[href*="Today's"]:hover {
+    a.btn-today:hover {
         transform: translateY(-2px) !important;
         box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4) !important;
     }
 
-    a[href*="Lightning"] {
+    a.btn-lightning {
         background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
         color: white !important;
         padding: 0.6rem 1.2rem !important;
@@ -225,7 +225,7 @@
         border: none !important;
     }
 
-    a[href*="Lightning"]:hover {
+    a.btn-lightning:hover {
         transform: translateY(-2px) !important;
         box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4) !important;
     }
@@ -411,8 +411,8 @@
             padding: 1.25rem !important;
         }
 
-        a[href*="Today's"],
-        a[href*="Lightning"] {
+        a.btn-today,
+        a.btn-lightning {
             display: block !important;
             margin: 0.5rem 0 !important;
             text-align: center !important;
@@ -489,36 +489,7 @@
  <link href="/footer.css" rel="stylesheet"> 
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.dealshopperpro.com/#organization","name":"Deal Shopper Pro","url":"https://www.dealshopperpro.com","logo":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/logo.png"},"sameAs":["https://www.youtube.com/@dealshopperpro","https://www.pinterest.com/dealshopperpro"],"contactPoint":{"@type":"ContactPoint","url":"https://www.dealshopperpro.com/contact.html","contactType":"Customer Support"}},{"@type":"WebSite","@id":"https://www.dealshopperpro.com/#website","url":"https://www.dealshopperpro.com/","name":"Deal Shopper Pro","description":"Smarter Amazon deal filters that help shoppers instantly find Prime-only items, Lightning Deals, coupons, and hidden discounts.","publisher":{"@id":"https://www.dealshopperpro.com/#organization"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.dealshopperpro.com/best-deals-today.html","url":"https://www.dealshopperpro.com/best-deals-today.html","name":"Best Amazon Lightning Deals Today – Headphones, Air Purifiers","description":"Use Deal Shopper Pro to instantly find the best Amazon Lightning Deals on headphones, air purifiers, and trending products. Updated daily.","isPartOf":{"@id":"https://www.dealshopperpro.com/#website"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/og-image.png"},"breadcrumb":{"@id":"https://www.dealshopperpro.com/best-deals-today.html#breadcrumb"},"inLanguage":"en-US","datePublished":"2025-08-30T00:00:00+00:00","dateModified":"2025-08-30T00:00:00+00:00"},{"@type":"BreadcrumbList","@id":"https://www.dealshopperpro.com/best-deals-today.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dealshopperpro.com"},{"@type":"ListItem","position":2,"name":"Best Deals Today","item":"https://www.dealshopperpro.com/best-deals-today.html"}]}]}</script>
 
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How do I find the best Amazon Lightning Deals?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Use Deal Shopper Pro to search by price range, Prime eligibility, and real-time filters to uncover the best Lightning Deals instantly."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are the deals updated daily?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The links provided fetch Amazon's daily and real-time Lightning Deals directly based on the latest filters."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is Deal Shopper Pro affiliated with Amazon?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Deal Shopper Pro is an independent tool that uses Amazon's affiliate program and public search filters to find better deals."
-      }
-    }
-  ]
-}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I find the best Amazon Lightning Deals?","acceptedAnswer":{"@type":"Answer","text":"Use Deal Shopper Pro to search by price range, Prime eligibility, and real-time filters to uncover the best Lightning Deals instantly."}},{"@type":"Question","name":"Are the deals updated daily?","acceptedAnswer":{"@type":"Answer","text":"Yes. The links provided fetch Amazon's daily and real-time Lightning Deals directly based on the latest filters."}},{"@type":"Question","name":"Is Deal Shopper Pro affiliated with Amazon?","acceptedAnswer":{"@type":"Answer","text":"No. Deal Shopper Pro is an independent tool that uses Amazon's affiliate program and public search filters to find better deals."}}],"inLanguage":"en-US"}</script>
 
   <meta property="og:site_name" content="Deal Shopper Pro">
   <meta property="og:locale" content="en_US">
@@ -536,10 +507,10 @@
 <h2 class="h5 text-primary">🎧 Headphone Deals</h2>
 <ul>
 <li>Apple EarPods with Lightning Connector
-<a href="https://www.amazon.com/s?k=Apple+EarPods+with+Lightning+Connector&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Apple+EarPods+with+Lightning+Connector&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20">[Lightning Deals]</a>
+<a href="https://www.amazon.com/s?k=Apple+EarPods+with+Lightning+Connector&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20" class="btn-today">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Apple+EarPods+with+Lightning+Connector&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20" class="btn-lightning">[Lightning Deals]</a>
 </li>
 <li>Classic wired earbuds
-        <a href="https://www.amazon.com/s?k=Apple+EarPods+(3.5%E2%80%AFmm)&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Apple+EarPods+(3.5%E2%80%AFmm)&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20">[Lightning Deals]</a>
+        <a href="https://www.amazon.com/s?k=Apple+EarPods+(3.5%E2%80%AFmm)&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20" class="btn-today">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Apple+EarPods+(3.5%E2%80%AFmm)&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20" class="btn-lightning">[Lightning Deals]</a>
 </li>
 </ul>
 </div>
@@ -547,10 +518,10 @@
 <h2 class="h5 text-success">🌬️ Air Purifier Deals</h2>
 <ul>
 <li>H13 Smart HEPA filter
-        <a href="https://www.amazon.com/s?k=H13+Smart+HEPA+filter&s=relevance&tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=H13+Smart+HEPA+filter&rh=p_n_deal_type%3A23566065011&s=relevance&tag=dealshopperpr-20">[Lightning Deals]</a>
+        <a href="https://www.amazon.com/s?k=H13+Smart+HEPA+filter&amp;s=relevance&amp;tag=dealshopperpr-20" class="btn-today">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=H13+Smart+HEPA+filter&amp;rh=p_n_deal_type%3A23566065011&amp;s=relevance&amp;tag=dealshopperpr-20" class="btn-lightning">[Lightning Deals]</a>
 </li>
 <li>HEPA purifier for medium/large rooms
-        <a href="https://www.amazon.com/s?k=HEPA+purifier+for+medium%2Flarge+rooms&amp;s=relevance&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=HEPA+purifier+for+medium%2Flarge+rooms&amp;rh=p_n_deal_type%3A23566065011&amp;s=relevance&tag=dealshopperpr-20">[Lightning Deals]</a>
+        <a href="https://www.amazon.com/s?k=HEPA+purifier+for+medium%2Flarge+rooms&amp;s=relevance&amp;tag=dealshopperpr-20" class="btn-today">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=HEPA+purifier+for+medium%2Flarge+rooms&amp;rh=p_n_deal_type%3A23566065011&amp;s=relevance&amp;tag=dealshopperpr-20" class="btn-lightning">[Lightning Deals]</a>
 </li>
 </ul>
 </div>
@@ -561,19 +532,19 @@
 <h2 class="h5 text-warning">🔥 Trending Amazon Lightning Deals</h2>
 <ul>
 <li>Amazon Fire TV Stick 4K
-<a href="https://www.amazon.com/s?k=Amazon+Fire+TV+Stick+4K&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Amazon+Fire+TV+Stick+4K&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20">[Lightning Deals]</a>
+<a href="https://www.amazon.com/s?k=Amazon+Fire+TV+Stick+4K&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20" class="btn-today">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Amazon+Fire+TV+Stick+4K&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20" class="btn-lightning">[Lightning Deals]</a>
 </li>
 <li>MFi‑certified braided cable
-        <a href="https://www.amazon.com/s?k=Amazon+Basics+Lightning‑to‑USB‑A+Cable&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Amazon+Basics+Lightning‑to‑USB‑A+Cable&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20">[Lightning Deals]</a>
+        <a href="https://www.amazon.com/s?k=Amazon+Basics+Lightning‑to‑USB‑A+Cable&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20" class="btn-today">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Amazon+Basics+Lightning‑to‑USB‑A+Cable&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20" class="btn-lightning">[Lightning Deals]</a>
 </li>
 <li>Entry‑level tablets
-        <a href="https://www.amazon.com/s?k=Apple+iPad+(standard)&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Apple+iPad+(standard)&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20">[Lightning Deals]</a>
+        <a href="https://www.amazon.com/s?k=Apple+iPad+(standard)&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20" class="btn-today">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Apple+iPad+(standard)&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20" class="btn-lightning">[Lightning Deals]</a>
 </li>
 <li>Retro toys
-        <a href="https://www.amazon.com/s?k=Retro+Collection+Toy&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Retro+Collection+Toy&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20">[Lightning Deals]</a>
+        <a href="https://www.amazon.com/s?k=Retro+Collection+Toy&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20" class="btn-today">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Retro+Collection+Toy&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20" class="btn-lightning">[Lightning Deals]</a>
 </li>
 <li>Dinosaur LEGO set
-        <a href="https://www.amazon.com/s?k=LEGO+Creator+Mighty+Dinosaurs&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=LEGO+Creator+Mighty+Dinosaurs&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20">[Lightning Deals]</a>
+        <a href="https://www.amazon.com/s?k=LEGO+Creator+Mighty+Dinosaurs&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20" class="btn-today">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=LEGO+Creator+Mighty+Dinosaurs&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20" class="btn-lightning">[Lightning Deals]</a>
 </li>
 </ul>
 </div>
