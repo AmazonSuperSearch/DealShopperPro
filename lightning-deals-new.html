@@ -415,23 +415,60 @@
       </div>
     </section>
 
-    <!-- (Keep the rest of your qualitative research/FAQ as-is for SEO depth) -->
-    <section class="container section-modern" aria-labelledby="comparison">
-      <div class="modern-card p-5">
-        <h2 id="comparison" class="h3 mb-3">Method Comparison: Which Works Best?</h2>
-        <div class="comparison-table">
-          <table class="table table-striped mb-0">
-            <caption class="visually-hidden">Comparison of Lightning Deal discovery methods</caption>
-            <thead class="table-dark"><tr><th scope="col">Method</th><th scope="col">Best For</th><th scope="col">Time Required</th><th scope="col">Expected Outcome</th><th scope="col">Skill Level</th></tr></thead>
-            <tbody>
-              <tr><th scope="row"><strong>Browse All Deals</strong></th><td>Discovery, casual browsing</td><td>15–30 minutes</td><td>Varies</td><td>Beginner</td></tr>
-              <tr><th scope="row"><strong>Keyword + Price</strong></th><td>Specific products</td><td>2–5 minutes</td><td>Often successful</td><td>Beginner</td></tr>
-              <tr><th scope="row"><strong>6-Step Advanced</strong></th><td>Targeted shopping with multiple criteria</td><td>5–10 minutes</td><td>Typically strongest</td><td>Intermediate</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+
+   <!-- Method Comparison (patched: responsive + no cut-off) -->
+<section class="container section-modern" aria-labelledby="comparison">
+  <div class="modern-card p-5">
+    <h2 id="comparison" class="h3 mb-3">Method Comparison: Which Works Best?</h2>
+
+    <div class="comparison-table table-responsive" style="overflow-x:auto;">
+      <table class="table table-striped mb-0 align-middle" style="min-width:720px;">
+        <caption class="visually-hidden">Comparison of Lightning Deal discovery methods</caption>
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Method</th>
+            <th scope="col">Best For</th>
+            <th scope="col" class="text-nowrap">Time Required</th>
+            <th scope="col">Expected Outcome</th>
+            <th scope="col">Skill Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><strong>Browse All Deals</strong></th>
+            <td>Discovery, casual browsing</td>
+            <td class="text-nowrap">15–30 minutes</td>
+            <td>Varies</td>
+            <td>Beginner</td>
+          </tr>
+          <tr>
+            <th scope="row"><strong>Keyword + Price</strong></th>
+            <td>Specific products</td>
+            <td class="text-nowrap">2–5 minutes</td>
+            <td>Often successful</td>
+            <td>Beginner</td>
+          </tr>
+          <tr>
+            <th scope="row"><strong>6-Step Advanced</strong></th>
+            <td>Targeted shopping with multiple criteria</td>
+            <td class="text-nowrap">5–10 minutes</td>
+            <td>Typically strongest</td>
+            <td>Intermediate</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-3">
+      <p class="mb-2"><strong>Which works best?</strong></p>
+      <ul class="mb-0">
+        <li><strong>Best overall (precision & value):</strong> <em>6-Step Advanced</em> — stack Prime, rating, brand, and discount for the tightest matches.</li>
+        <li><strong>Fastest to a target item:</strong> <em>Keyword + Price</em> — usually 2–5 minutes.</li>
+        <li><strong>Best for discovery:</strong> <em>Browse All Deals</em> — great when you’re exploring categories.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
     <section id="faq" class="container section-modern" aria-labelledby="faq-title">
       <div class="modern-card p-5">
