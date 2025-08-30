@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,113 +36,458 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 <link href="/navbar.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+    :root {
+        --primary-blue: #4f46e5;
+        --primary-purple: #7c3aed;
+        --accent-orange: #f97316;
+        --accent-pink: #ec4899;
+        --success-green: #10b981;
+        --warning-yellow: #f59e0b;
+        --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        --card-hover-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        --border-radius: 16px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
     body {
-      font-family: "Inter", sans-serif;
-      background-color: #fdfdfd;
-      color: #333;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+        color: #1e293b !important;
+        line-height: 1.6;
+        font-weight: 400;
     }
-    h1, h2, h3 {
-      color: #1a1a1a;
+
+    .container {
+        background: white !important;
+        border-radius: 24px !important;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08) !important;
+        position: relative !important;
+        overflow: hidden !important;
+        border: 1px solid rgba(226, 232, 240, 0.5) !important;
     }
+
+    .container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(--bg-gradient);
+        z-index: 1;
+    }
+
+    /* Typography */
+    h1 {
+        background: var(--bg-gradient) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        font-weight: 800 !important;
+        font-size: clamp(2.5rem, 5vw, 3.5rem) !important;
+        line-height: 1.1 !important;
+        margin-bottom: 1.5rem !important;
+        letter-spacing: -0.02em !important;
+    }
+
+    h2, h3 {
+        color: #0f172a !important;
+        font-weight: 700 !important;
+    }
+
+    p {
+        color: #64748b !important;
+        font-size: 1.125rem !important;
+        line-height: 1.7 !important;
+    }
+
+    /* Cards */
+    .card {
+        background: white !important;
+        border: 1px solid rgba(226, 232, 240, 0.8) !important;
+        border-radius: var(--border-radius) !important;
+        box-shadow: var(--card-shadow) !important;
+        transition: var(--transition) !important;
+        overflow: hidden !important;
+        position: relative !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        transition: var(--transition);
+    }
+
+    .card:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: var(--card-hover-shadow) !important;
+        border-color: rgba(79, 70, 229, 0.3) !important;
+    }
+
+    /* Category-specific gradients */
+    .card:nth-of-type(1)::before {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    }
+
+    .card:nth-of-type(2)::before {
+        background: linear-gradient(135deg, var(--success-green), #06b6d4);
+    }
+
+    .card:nth-of-type(4)::before {
+        background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink));
+    }
+
+    .card .h5 {
+        font-size: 1.5rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 1.5rem !important;
+        color: #0f172a !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+    }
+
+    /* Lists */
     ul {
-      padding-left: 1.2rem;
+        list-style: none !important;
+        padding-left: 0 !important;
     }
+
     ul li {
-      margin-bottom: 1rem;
-      line-height: 1.6;
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+        border: 1px solid rgba(226, 232, 240, 0.6) !important;
+        border-radius: 12px !important;
+        padding: 1.5rem !important;
+        margin-bottom: 1.25rem !important;
+        transition: var(--transition) !important;
+        position: relative !important;
+        line-height: 1.6 !important;
+        font-weight: 500 !important;
     }
+
+    ul li:hover {
+        background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%) !important;
+        transform: translateX(8px) !important;
+        border-color: rgba(79, 70, 229, 0.3) !important;
+        box-shadow: 0 4px 15px rgba(79, 70, 229, 0.1) !important;
+    }
+
+    /* Enhanced link styling */
     a {
-      color: #0d6efd;
-      text-decoration: none;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+        transition: var(--transition) !important;
     }
-    a:hover {
-      text-decoration: underline;
+
+    a[href*="Today's"] {
+        background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+        color: white !important;
+        padding: 0.6rem 1.2rem !important;
+        border-radius: 20px !important;
+        display: inline-block !important;
+        margin: 0.25rem !important;
+        font-size: 0.875rem !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3) !important;
+        border: none !important;
     }
-    .fun-icon::before {
-      content: "💥 ";
+
+    a[href*="Today's"]:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4) !important;
     }
+
+    a[href*="Lightning"] {
+        background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+        color: white !important;
+        padding: 0.6rem 1.2rem !important;
+        border-radius: 20px !important;
+        display: inline-block !important;
+        margin: 0.25rem !important;
+        font-size: 0.875rem !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3) !important;
+        border: none !important;
+    }
+
+    a[href*="Lightning"]:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4) !important;
+    }
+
+    /* Section highlight */
     .section-highlight {
-      background: linear-gradient(90deg, #fffbe6, #fff1d0);
-      padding: 1rem;
-      border-left: 4px solid #ffc107;
-      margin-bottom: 2rem;
-      border-radius: 0.5rem;
+        background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%) !important;
+        border: 1px solid rgba(245, 158, 11, 0.3) !important;
+        border-radius: var(--border-radius) !important;
+        padding: 2rem !important;
+        margin: 2.5rem 0 !important;
+        box-shadow: var(--card-shadow) !important;
+        position: relative !important;
+        overflow: hidden !important;
+        font-weight: 600 !important;
+        font-size: 1.125rem !important;
     }
-    .share-buttons a {
-      min-width: 120px;
+
+    .section-highlight::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(135deg, #f59e0b, #d97706);
     }
-  </style>
- <link href="/footer.css" rel="stylesheet"> 
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://www.dealshopperpro.com/#organization",
-      "name": "Deal Shopper Pro",
-      "url": "https://www.dealshopperpro.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.dealshopperpro.com/logo.png"
-      },
-      "sameAs": [
-        "https://www.facebook.com/share/g/1C1BARo5YJ/",
-        "https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here:%20https://www.dealshopperpro.com"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "url": "https://www.dealshopperpro.com/contact.html",
-        "contactType": "Customer Support"
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.dealshopperpro.com/#website",
-      "url": "https://www.dealshopperpro.com/",
-      "name": "Deal Shopper Pro",
-      "description": "Smarter Amazon deal filters that help shoppers instantly find Prime-only items, Lightning Deals, coupons, and hidden discounts.",
-      "publisher": {
-        "@id": "https://www.dealshopperpro.com/#organization"
-      }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://www.dealshopperpro.com/best-deals-today.html",
-      "url": "https://www.dealshopperpro.com/best-deals-today.html",
-      "name": "Best Amazon Lightning Deals Today – Headphones, Air Purifiers",
-      "description": "Use Deal Shopper Pro to instantly find the best Amazon Lightning Deals on headphones, air purifiers, and trending products. Updated daily.",
-      "isPartOf": {
-        "@id": "https://www.dealshopperpro.com/#website"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://www.dealshopperpro.com/og-image.png"
-      },
-      "breadcrumb": {
-        "@id": "https://www.dealshopperpro.com/best-deals-today.html#breadcrumb"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.dealshopperpro.com/best-deals-today.html#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.dealshopperpro.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Best Deals Today",
-          "item": "https://www.dealshopperpro.com/best-deals-today.html"
+
+    .section-highlight::after {
+        content: '💡';
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 2rem;
+        opacity: 0.4;
+    }
+
+    /* Buttons */
+    .btn {
+        font-weight: 700 !important;
+        padding: 1rem 2.5rem !important;
+        border-radius: 50px !important;
+        font-size: 1.125rem !important;
+        transition: var(--transition) !important;
+        border: none !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    .btn-warning {
+        background: var(--bg-gradient) !important;
+        color: white !important;
+        box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3) !important;
+    }
+
+    .btn-warning:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 12px 35px rgba(79, 70, 229, 0.4) !important;
+        color: white !important;
+    }
+
+    /* Social sharing buttons */
+    .share-buttons .btn {
+        min-width: 140px !important;
+        margin: 0.5rem 0.25rem !important;
+        font-size: 0.95rem !important;
+        padding: 0.875rem 1.5rem !important;
+        font-weight: 600 !important;
+    }
+
+    .btn-success {
+        background: linear-gradient(135deg, #25d366, #128c7e) !important;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #1877f2, #42a5f5) !important;
+    }
+
+    .btn-secondary {
+        background: linear-gradient(135deg, #6c757d, #495057) !important;
+    }
+
+    .btn-info {
+        background: linear-gradient(135deg, #1da1f2, #0d8bd9) !important;
+    }
+
+    .btn-dark {
+        background: linear-gradient(135deg, #374151, #1f2937) !important;
+    }
+
+    .share-buttons .btn:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    /* Affiliate disclosure */
+    small {
+        background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%) !important;
+        border: 1px solid rgba(79, 70, 229, 0.2) !important;
+        border-radius: 12px !important;
+        padding: 1.25rem !important;
+        display: block !important;
+        margin-bottom: 2rem !important;
+        font-size: 0.95rem !important;
+        font-weight: 600 !important;
+        color: #1e293b !important;
+        position: relative !important;
+    }
+
+    small::before {
+        content: '📋';
+        margin-right: 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    /* Fun animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
         }
-      ]
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-  ]
-}</script>
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .card {
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    .card:nth-child(2) { animation-delay: 0.1s; }
+    .card:nth-child(3) { animation-delay: 0.2s; }
+    .card:nth-child(4) { animation-delay: 0.3s; }
+    .card:nth-child(5) { animation-delay: 0.4s; }
+
+    ul li {
+        animation: slideIn 0.5s ease-out forwards;
+    }
+
+    ul li:nth-child(2) { animation-delay: 0.1s; }
+    ul li:nth-child(3) { animation-delay: 0.2s; }
+    ul li:nth-child(4) { animation-delay: 0.3s; }
+    ul li:nth-child(5) { animation-delay: 0.4s; }
+
+    /* Enhanced focus states for accessibility */
+    .btn:focus,
+    a:focus {
+        outline: 3px solid rgba(79, 70, 229, 0.5) !important;
+        outline-offset: 2px !important;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .container {
+            margin: 1rem !important;
+            padding: 1.5rem !important;
+            border-radius: 16px !important;
+        }
+
+        h1 {
+            font-size: 2.5rem !important;
+        }
+
+        .card {
+            margin-bottom: 1.5rem !important;
+        }
+
+        ul li {
+            padding: 1.25rem !important;
+        }
+
+        a[href*="Today's"],
+        a[href*="Lightning"] {
+            display: block !important;
+            margin: 0.5rem 0 !important;
+            text-align: center !important;
+        }
+
+        .share-buttons .btn {
+            width: 100% !important;
+            margin: 0.25rem 0 !important;
+        }
+
+        .d-flex.flex-wrap {
+            flex-direction: column !important;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 2.25rem !important;
+        }
+
+        .card {
+            padding: 1rem !important;
+        }
+
+        ul li {
+            padding: 1rem !important;
+        }
+
+        .section-highlight {
+            padding: 1.5rem !important;
+            margin: 1.5rem 0 !important;
+        }
+    }
+
+    /* Fun icon styling */
+    .fun-icon::before {
+        content: "💥 " !important;
+        font-size: 1.25em !important;
+        margin-right: 0.5rem !important;
+    }
+
+    /* Subtle background pattern */
+    .container::after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle, rgba(79, 70, 229, 0.05) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    /* Ensure content is above the background pattern */
+    .container > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Enhanced hover effects for better interactivity */
+    .card:hover .h5 {
+        color: var(--primary-blue) !important;
+        transition: var(--transition);
+    }
+
+    /* Loading state for links */
+    a[href*="amazon.com"]:active {
+        transform: scale(0.95) !important;
+    }
+</style>
+ <link href="/footer.css" rel="stylesheet"> 
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.dealshopperpro.com/#organization","name":"Deal Shopper Pro","url":"https://www.dealshopperpro.com","logo":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/logo.png"},"sameAs":["https://www.youtube.com/@dealshopperpro","https://www.pinterest.com/dealshopperpro"],"contactPoint":{"@type":"ContactPoint","url":"https://www.dealshopperpro.com/contact.html","contactType":"Customer Support"}},{"@type":"WebSite","@id":"https://www.dealshopperpro.com/#website","url":"https://www.dealshopperpro.com/","name":"Deal Shopper Pro","description":"Smarter Amazon deal filters that help shoppers instantly find Prime-only items, Lightning Deals, coupons, and hidden discounts.","publisher":{"@id":"https://www.dealshopperpro.com/#organization"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.dealshopperpro.com/best-deals-today.html","url":"https://www.dealshopperpro.com/best-deals-today.html","name":"Best Amazon Lightning Deals Today – Headphones, Air Purifiers","description":"Use Deal Shopper Pro to instantly find the best Amazon Lightning Deals on headphones, air purifiers, and trending products. Updated daily.","isPartOf":{"@id":"https://www.dealshopperpro.com/#website"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://www.dealshopperpro.com/og-image.png"},"breadcrumb":{"@id":"https://www.dealshopperpro.com/best-deals-today.html#breadcrumb"},"inLanguage":"en-US","datePublished":"2025-08-30T00:00:00+00:00","dateModified":"2025-08-30T00:00:00+00:00"},{"@type":"BreadcrumbList","@id":"https://www.dealshopperpro.com/best-deals-today.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dealshopperpro.com"},{"@type":"ListItem","position":2,"name":"Best Deals Today","item":"https://www.dealshopperpro.com/best-deals-today.html"}]}]}</script>
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -176,6 +520,8 @@
   ]
 }</script>
 
+  <meta property="og:site_name" content="Deal Shopper Pro">
+  <meta property="og:locale" content="en_US">
 </head>
 <body>
 <div id="navbar-placeholder"></div>
@@ -184,7 +530,7 @@
 <h1 class="display-6 fw-bold mb-3 text-center">⚡ Best Amazon Lightning Deals Today</h1>
 <p class="text-center">Use Deal Shopper Pro to find the best Amazon Lightning Deals – headphones, air purifiers, and more. We filter by price, Prime-only, rating, and hidden coupons.</p>
  <!-- Short affiliate disclosure (above the fold) -->
-<small><strong>As an Amazon Associate, we earn from qualifying purchases.</strong> This comes at no extra cost to you.</small>
+<small><strong>As an Amazon Associate, I earn from qualifying purchases.</strong> This comes at no extra cost to you.</small>
 
 <div class="card p-3 mb-4 border shadow-sm">
 <h2 class="h5 text-primary">🎧 Headphone Deals</h2>
@@ -201,15 +547,15 @@
 <h2 class="h5 text-success">🌬️ Air Purifier Deals</h2>
 <ul>
 <li>H13 Smart HEPA filter
-        <a href="https://www.amazon.com/s?k=H13+Smart+HEPA+filter&amp;rh=p_n_deal_type%3A23566065011&amp;s=relevance&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=H13+Smart+HEPA+filter&amp;s=relevance&amp;tag=dealshopperpr-20">[Lightning Deals]</a>
+        <a href="https://www.amazon.com/s?k=H13+Smart+HEPA+filter&s=relevance&tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=H13+Smart+HEPA+filter&rh=p_n_deal_type%3A23566065011&s=relevance&tag=dealshopperpr-20">[Lightning Deals]</a>
 </li>
 <li>HEPA purifier for medium/large rooms
-        <a href="https://www.amazon.com/s?k=HEPA+purifier+for+medium%2Flarge+rooms&amp;s=relevance&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=HEPA+purifier+for+medium%2Flarge+rooms&amp;rh=p_n_deal_type%3A23566065011&amp;s=relevance&amp;tag=dealshopperpr-20">[Lightning Deals]</a>
+        <a href="https://www.amazon.com/s?k=HEPA+purifier+for+medium%2Flarge+rooms&amp;s=relevance&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=HEPA+purifier+for+medium%2Flarge+rooms&amp;rh=p_n_deal_type%3A23566065011&amp;s=relevance&tag=dealshopperpr-20">[Lightning Deals]</a>
 </li>
 </ul>
 </div>
 <div class="section-highlight">
-    🔎 Tip: Click both "Today's Deals" and "Lightning Deals" to compare savings.
+    🔍 Tip: Click both "Today's Deals" and "Lightning Deals" to compare savings.
   </div>
 <div class="card p-3 mb-4 border shadow-sm">
 <h2 class="h5 text-warning">🔥 Trending Amazon Lightning Deals</h2>
@@ -218,7 +564,7 @@
 <a href="https://www.amazon.com/s?k=Amazon+Fire+TV+Stick+4K&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Amazon+Fire+TV+Stick+4K&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20">[Lightning Deals]</a>
 </li>
 <li>MFi‑certified braided cable
-        <a href="https://www.amazon.com/s?k=Amazon+Basics+Lightning%E2%80%91to%E2%80%91USB%E2%80%91A+Cable&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Amazon+Basics+Lightning%E2%80%91to%E2%80%91USB%E2%80%91A+Cable&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20">[Lightning Deals]</a>
+        <a href="https://www.amazon.com/s?k=Amazon+Basics+Lightning‑to‑USB‑A+Cable&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Amazon+Basics+Lightning‑to‑USB‑A+Cable&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20">[Lightning Deals]</a>
 </li>
 <li>Entry‑level tablets
         <a href="https://www.amazon.com/s?k=Apple+iPad+(standard)&amp;i=deals-intl-ship&amp;tag=dealshopperpr-20">[Today's Deals]</a> <a href="https://www.amazon.com/s?k=Apple+iPad+(standard)&amp;rh=p_n_deal_type%3A23566065011&amp;tag=dealshopperpr-20">[Lightning Deals]</a>
@@ -238,36 +584,10 @@
 <div class="text-center my-4">
 <h2 class="h5">📲 Share with Friends</h2>
 <p class="text-muted">Send this to someone who needs smarter Amazon filters:</p>
-<div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+<div class="d-flex flex-wrap justify-content-center gap-2 mt-3 share-buttons">
 <!-- WhatsApp -->
 <a class="btn btn-success" href="https://wa.me/?text=https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
       WhatsApp
     </a>
 <!-- Messenger -->
-<a class="btn btn-primary" href="fb-messenger://share?link=https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
-      Messenger
-    </a>
-<!-- SMS -->
-<a class="btn btn-secondary" href="sms:?body=Check%20out%20this%20free%20Amazon%20deal%20filter:%20https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
-      Text Message
-    </a>
-<!-- Twitter / X -->
-<a class="btn btn-info" href="https://twitter.com/intent/tweet?text=Smarter%20Amazon%20shopping%20starts%20here:%20https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
-      Twitter / X
-    </a>
-<!-- Facebook -->
-<a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dealshopperpro.com" rel="noopener noreferrer" target="_blank">
-      Facebook
-    </a>
-<!-- Copy Link -->
-<button aria-label="Copy page link to clipboard" class="btn btn-dark" data-link="https://www.dealshopperpro.com" id="copyLinkBtn" type="button">
-  Copy Page Link
-</button>
-</div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script crossorigin="anonymous" data-cf-beacon='{"rayId":"96b1777baeb27b0b","version":"2025.7.0","r":1,"token":"89878fa8891c44b6b06e401e14e01df3","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' defer="" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"></script>
-</div>
-<div id="footer-placeholder"></div>
-<script src="/footer-loader.js" defer></script>
-</body>
-</html>
+<a class="btn btn-primary" href="fb
