@@ -1,0 +1,2420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>Advanced Amazon Search Tool — Find Today’s Best Deals Fast</title>
+  <meta name="description" content="Find today’s best Amazon deals fast. Use our advanced search tool to uncover Prime-only offers, Lightning Deals & hidden coupons instantly.">
+
+  <!-- Canonical & Social -->
+  <link rel="canonical" href="https://www.dealshopperpro.com/">
+  <link rel="alternate" hreflang="x-default" href="https://www.dealshopperpro.com/">
+  <link rel="alternate" hreflang="en-US" href="https://www.dealshopperpro.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Advanced Amazon Search Tool — Find Today’s Best Deals Fast">
+<meta property="og:description" content="Find today’s best Amazon deals fast. Use our advanced search tool to uncover Prime-only offers, Lightning Deals & hidden coupons instantly.">
+  <meta property="og:url" content="https://www.dealshopperpro.com/">
+  <meta property="og:image" content="https://www.dealshopperpro.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:site_name" content="Deal Shopper Pro">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Find Amazon Prime-only deals, Lightning Deals and coupons fast with Deal Shopper Pro">
+
+  <meta name="twitter:title" content="Advanced Amazon Search Tool — Find Today’s Best Deals Fast">
+<meta name="twitter:description" content="Find today’s best Amazon deals fast. Use our advanced search tool to uncover Prime-only offers, Lightning Deals & hidden coupons instantly.">
+  <meta name="twitter:image" content="https://www.dealshopperpro.com/og-image.jpg">
+  <meta name="twitter:image:alt" content="Search Amazon fast: Prime-only, Lightning Deals, coupons">
+
+ <!-- Favicons -->
+<link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png">
+<link href="/favicon-64x64.png" rel="icon" sizes="64x64" type="image/png">
+<link href="/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/favicon-512x512.png" rel="icon" sizes="512x512" type="image/png">
+<link href="/favicon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/site.webmanifest" rel="manifest">
+
+  <!-- Preconnect for performance -->
+  <link rel="preload" as="image" href="https://i.ytimg.com/vi/wpj1l1XUunw/hqdefault.jpg">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin>
+  <link rel="dns-prefetch" href="//i.ytimg.com">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" media="print" onload="this.media='all'" rel="stylesheet">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+/* ===== MODERN NAVBAR CSS ===== */
+.navbar-custom {
+  background: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 2px 8px rgba(255, 215, 0, 0.1);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  z-index: 1030;
+  position: sticky;
+  top: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-custom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 215, 0, 0.05) 50%, 
+    transparent 100%);
+  pointer-events: none;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.navbar-custom .navbar-brand {
+  color: #FFD700 !important;
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-shadow: 
+    0 0 10px rgba(255, 215, 0, 0.6),
+    0 2px 4px rgba(0, 0, 0, 0.8);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 2s ease-in-out infinite;
+  text-decoration: none;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.navbar-custom .navbar-brand:hover {
+  transform: scale(1.1) rotate(2deg);
+  filter: brightness(1.2);
+  text-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.8),
+    0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-custom .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem !important;
+  margin: 0 0.2rem;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+
+.navbar-custom .nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    transparent, 
+    rgba(255, 215, 0, 0.3), 
+    transparent
+  );
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-custom .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
+}
+
+.navbar-custom .nav-link:hover {
+  color: #FFD700 !important;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 8px 25px rgba(255, 215, 0, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.navbar-custom .nav-link:hover::before {
+  left: 100%;
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 80%;
+}
+
+.navbar-custom .nav-link.active {
+  color: #FFD700 !important;
+  background: linear-gradient(135deg, 
+    rgba(255, 215, 0, 0.15), 
+    rgba(255, 165, 0, 0.1));
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  box-shadow: 
+    inset 0 2px 8px rgba(255, 215, 0, 0.2),
+    0 4px 15px rgba(255, 215, 0, 0.15);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+}
+
+.navbar-custom .nav-link.active::after {
+  width: 90%;
+  height: 3px;
+  background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+}
+
+.navbar-toggler {
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 12px;
+  padding: 0.4rem 0.6rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 215, 0, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-toggler:hover {
+  border-color: rgba(255, 215, 0, 0.6);
+  background: rgba(255, 215, 0, 0.1);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 
+    0 0 0 3px rgba(255, 215, 0, 0.3),
+    0 4px 15px rgba(255, 215, 0, 0.2);
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 30 30'%3E%3Cpath stroke='%23FFD700' stroke-width='3' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  transform: rotate(180deg);
+  filter: brightness(1.2);
+}
+
+/* Mobile specific enhancements */
+@media (max-width: 991.98px) {
+  .navbar-custom .navbar-collapse {
+    background: linear-gradient(135deg, 
+      rgba(0, 0, 0, 0.95), 
+      rgba(26, 26, 46, 0.95));
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.6),
+      0 4px 12px rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+  }
+  
+  .navbar-custom .nav-link {
+    margin: 0.3rem 0;
+    text-align: center;
+  }
+  
+  .navbar-custom .nav-link:hover {
+    transform: translateX(8px) scale(1.02);
+  }
+  
+  .navbar-custom .navbar-brand {
+    font-size: 1.25rem;
+  }
+}
+
+.navbar-custom.scrolled {
+  background: linear-gradient(135deg, 
+    rgba(0, 0, 0, 0.98) 0%, 
+    rgba(26, 26, 46, 0.98) 50%, 
+    rgba(22, 33, 62, 0.98) 100%) !important;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.6),
+    0 4px 16px rgba(255, 215, 0, 0.15);
+}
+
+@keyframes brandPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.navbar-custom .navbar-brand {
+  animation: brandPulse 2s ease-in-out infinite;
+}
+
+.navbar-custom .navbar-brand:hover {
+  animation: none;
+}
+
+/* Hot badge animation */
+.nav-link .badge {
+  animation: pulse 2s infinite;
+  font-size: 0.6rem;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Icons for better visual hierarchy */
+.navbar-custom .nav-link i {
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.navbar-custom .nav-link:hover i {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Mobile-First Variables */
+:root {
+  --primary-color: #4f46e5;
+  --accent-gold: #FFD700;
+  --success-color: #059669;
+  --warning-color: #f59e0b;
+  --danger-color: #dc2626;
+  --dark-bg: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%);
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background-color: #f9fafb;
+}
+
+
+
+/* Hero Section - Mobile Optimized */
+.hero-mobile {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: var(--spacing-lg) var(--spacing-sm);
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-sm);
+  background: linear-gradient(45deg, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.95;
+}
+
+/* Mobile Trust Badges */
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-md) 0;
+}
+
+.trust-badge {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--primary-color);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Mobile-First Form Design */
+.search-container {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  margin: var(--spacing-md) var(--spacing-sm);
+  overflow: hidden;
+}
+
+.step-card-mobile {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.step-header-mobile {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: var(--spacing-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.step-header-mobile:not(.collapsed) .checkbox-label-mobile {
+  color: white;
+}
+
+.step-number-mobile {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--success-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.step-body-mobile {
+  padding: var(--spacing-md);
+  background: white;
+}
+
+/* Mobile Form Controls */
+.form-control-mobile {
+  border: 2px solid #d1d5db;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: var(--spacing-sm);
+}
+
+.form-control-mobile:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  outline: none;
+}
+
+.input-group-mobile {
+  display: flex;
+  margin-bottom: var(--spacing-sm);
+}
+
+.input-group-mobile .input-addon {
+  background: var(--primary-color);
+  color: white;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  border: 2px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+
+.input-group-mobile .form-control-mobile {
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  margin-bottom: 0;
+  border-left: none;
+}
+
+/* Mobile Checkbox Grid */
+.checkbox-grid-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+}
+
+.checkbox-card-mobile {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 2px solid #e5e7eb;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-card-mobile:hover,
+.checkbox-card-mobile.checked {
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.05), rgba(99, 102, 241, 0.02));
+  transform: translateY(-1px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.checkbox-input-mobile {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: var(--spacing-sm);
+  cursor: pointer;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  background-color: white;
+  position: relative;
+  flex-shrink: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox-input-mobile:checked {
+  background-color: #4f46e5 !important;
+  border-color: #4f46e5 !important;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m13.854 3.646-7.5 7.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6 10.293l7.146-7.147a.5.5 0 0 1 .708.708z'/%3e%3c/svg%3e") !important;
+  background-size: 80% 80% !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.checkbox-input-mobile:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Make sure the label doesn't interfere */
+.checkbox-label-mobile {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 0;
+  color: #374151;
+  user-select: none;
+  margin-left: 0.5rem;
+}
+
+.checkbox-card-mobile.checked {
+  border-color: var(--primary-color) !important;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(99, 102, 241, 0.03)) !important;
+  box-shadow: var(--card-shadow-hover) !important;
+}
+
+/* When a checkbox card is selected, make label text/icons clearly visible */
+.checkbox-card-mobile.checked .checkbox-label-mobile,
+.checkbox-card-mobile.checked .checkbox-label-mobile i,
+.checkbox-card-mobile.checked .experimental-badge-mobile {
+  color: #ffffff !important;   /* white text */
+  font-weight: 600;
+  opacity: 1 !important;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;  /* black outline for visibility */
+}
+
+
+.checkbox-label-mobile {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  margin: 0;
+  color: #374151;
+}
+
+/* Filter Sections */
+.filter-section-mobile {
+  margin-bottom: var(--spacing-md);
+}
+
+.step-header-mobile:not(.collapsed) {
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  color: white;
+}
+
+.step-header-mobile:not(.collapsed) .checkbox-label-mobile {
+  color: white;
+}
+
+/* Ensure text visibility in all filter cards */
+.checkbox-card-mobile .checkbox-label-mobile {
+  color: #374151;
+}
+
+.filter-title-mobile {
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin: 0 calc(-1 * var(--spacing-md)) var(--spacing-md);
+  font-weight: 700;
+  font-size: 1rem;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+/* Experimental Badge */
+.experimental-badge-mobile {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background: linear-gradient(45deg, var(--warning-color), #f97316);
+  color: white;
+  font-size: 0.6rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 1;
+}
+
+/* Mobile Buttons */
+.btn-mobile {
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.btn-primary-mobile {
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  color: white;
+  box-shadow: var(--card-shadow);
+}
+
+.btn-primary-mobile:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.btn-success-mobile {
+  background: linear-gradient(135deg, var(--success-color), #10b981);
+  color: white;
+  box-shadow: var(--card-shadow);
+}
+
+.btn-success-mobile:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Mobile Video Container */
+.video-container-mobile {
+  margin: var(--spacing-lg) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow-hover);
+  background: #000;
+}
+/* Ensure the caption under the video is visible on the dark background */
+.video-container-mobile .text-center small,
+.video-container-mobile small,
+.video-container-mobile .text-muted {
+  color: #f9fafb !important;   /* light/near-white */
+  opacity: 0.92;               /* keep it subtle but readable */
+}
+
+.yt-lite {
+  position: relative;
+  display: block;
+  background: #000;
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Fix for mobile video sizing */
+@media (max-width: 768px) {
+  .yt-lite {
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.yt-lite > .yt-play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.yt-lite > .yt-play::before {
+  content: "";
+  width: 68px;
+  height: 48px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 48'><path fill='%23f00' d='M66.5 7.0c-0.7-2.6-2.7-4.6-5.3-5.3C55.9 0 34 0 34 0s-21.9 0-27.2 1.7c-2.6.7-4.6 2.7-5.3 5.3C0 12.3 0 24 0 24s0 11.7 1.5 17.0c.7 2.6 2.7 4.6 5.3 5.3C12.1 48 34 48 34 48s21.9 0 27.2-1.7c2.6-.7 4.6-2.7 5.3-5.3C68 35.7 68 24 68 24s0-11.7-1.5-17.0z'/%3E%3Cpath fill='%23fff' d='M45 24L27 14v20z'/%3E%3C/svg%3E") center/contain no-repeat;
+  transition: transform 0.3s ease;
+}
+
+.yt-lite:hover > .yt-play::before {
+  transform: scale(1.1);
+}
+
+.yt-lite.activated {
+  padding-bottom: 0;
+  height: auto;
+}
+
+.yt-lite.activated iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mobile Features Grid */
+.features-mobile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+  margin: var(--spacing-lg) var(--spacing-sm);
+}
+
+.feature-card-mobile {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+.feature-card-mobile:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.feature-icon-mobile {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--border-radius);
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto var(--spacing-sm);
+}
+
+/* Mobile Accordion */
+.accordion-mobile {
+  margin: var(--spacing-lg) var(--spacing-sm);
+}
+
+.accordion-item-mobile {
+  background: white;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-sm);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.accordion-header-mobile {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: var(--spacing-md);
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-body-mobile {
+  padding: var(--spacing-md);
+  background: white;
+}
+
+/* Mobile Footer */
+.footer-mobile {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  color: #d1d5db;
+  padding: var(--spacing-lg) var(--spacing-sm);
+  margin-top: var(--spacing-xl);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-links a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+/* Mobile Share Bar */
+.share-bar-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  padding: var(--spacing-sm);
+  z-index: 1020;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.share-bar-mobile.show {
+  transform: translateY(0);
+}
+
+.share-buttons {
+  display: flex;
+  gap: var(--spacing-xs);
+  justify-content: center;
+}
+
+.share-btn {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.share-btn-success {
+  background: var(--success-color);
+  color: white;
+}
+
+.share-btn-secondary {
+  background: #6b7280;
+  color: white;
+}
+
+.share-btn-outline {
+  background: transparent;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+/* Progress Indicator */
+.progress-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: var(--spacing-md) var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+}
+
+.progress-step-mobile {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.progress-step-mobile.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.progress-step-mobile.completed {
+  background: var(--success-color);
+  color: white;
+}
+
+/* Mobile Utilities */
+.text-center { text-align: center; }
+.text-muted { color: #6b7280; }
+.fw-bold { font-weight: 700; }
+.fw-semibold { font-weight: 600; }
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 1rem; }
+.px-3 { padding-left: 1rem; padding-right: 1rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+
+/* Show/Hide Classes */
+.d-none { display: none; }
+.d-block { display: block; }
+.d-flex { display: flex; }
+
+/* Responsive Adjustments */
+@media (min-width: 576px) {
+  .features-mobile {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .checkbox-grid-mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .search-container {
+    margin: var(--spacing-lg) auto;
+    max-width: 800px;
+  }
+  
+  .checkbox-grid-mobile {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .share-bar-mobile {
+    display: none;
+  }
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Touch Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .checkbox-card-mobile:hover {
+    transform: none;
+  }
+  
+  .feature-card-mobile:hover {
+    transform: none;
+  }
+  
+  .btn-primary-mobile:hover,
+  .btn-success-mobile:hover {
+    transform: none;
+  }
+}
+
+/* Focus States for Accessibility */
+.btn-mobile:focus,
+.form-control-mobile:focus,
+.checkbox-input-mobile:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #f9fafb;
+    --bg-color: #111827;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .search-container,
+  .feature-card-mobile,
+  .accordion-item-mobile {
+    background: #1f2937;
+    color: var(--text-color);
+  }
+  
+  .step-body-mobile,
+  .accordion-body-mobile {
+    background: #1f2937;
+  }
+}
+  /* === Fix FAQ/Step header contrast in all themes === */
+.accordion-header-mobile,
+.step-header-mobile {
+  color: #111827;              /* force dark text on light header */
+}
+
+.accordion-header-mobile i,
+.step-header-mobile i {
+  color: #111827;              /* make the chevron/icons visible too */
+}
+
+/* If you visually mark open state, keep strong contrast on brand bg */
+.accordion-header-mobile.expanded,
+.step-header-mobile.expanded {
+  background: linear-gradient(135deg, var(--primary-color), #6366f1);
+  color: #ffffff;
+}
+.accordion-header-mobile.expanded i,
+.step-header-mobile.expanded i { color: #ffffff; }
+
+/* === Dark mode override: give headers a dark background so white text is readable === */
+@media (prefers-color-scheme: dark) {
+  .accordion-header-mobile,
+  .step-header-mobile {
+    background: #111827;       /* dark header in dark mode */
+    color: #f9fafb;            /* readable on dark background */
+    border-color: #374151;
+  }
+  .accordion-header-mobile i,
+  .step-header-mobile i { color: #f9fafb; }
+}
+
+
+
+
+/* ===== Single Source of Truth: Accordion & Step Contrast ===== */
+/* Desktop default: light theme */
+.step-header-mobile, .accordion-header-mobile {
+  background:#f8fafc;
+  color:#111827 !important;
+  border:1px solid #e5e7eb;
+}
+.step-header-mobile small, .accordion-header-mobile small,
+.step-header-mobile .text-muted, .accordion-header-mobile .text-muted {
+  color:#475569 !important;
+}
+.step-body-mobile, .accordion-body-mobile {
+  background:#ffffff;
+  color:#111827 !important;
+}
+.step-body-mobile .text-muted, .accordion-body-mobile .text-muted {
+  color:#475569 !important;
+}
+.form-control-mobile {
+  background:#ffffff; color:#111827; border:1px solid #d1d5db;
+}
+.form-control-mobile::placeholder { color:#6b7280; }
+
+/* Mobile <=576px: dark theme */
+@media (max-width:576px){
+  .step-header-mobile, .accordion-header-mobile {
+    background:#111827;
+    color:#f9fafb !important;
+    border:1px solid #374151;
+  }
+  .step-header-mobile small, .accordion-header-mobile small,
+  .step-header-mobile .text-muted, .accordion-header-mobile .text-muted {
+    color:#cbd5e1 !important;
+  }
+  .step-body-mobile, .accordion-body-mobile {
+    background:#0b1220;
+    color:#f9fafb !important;
+  }
+  .step-body-mobile .text-muted, .accordion-body-mobile .text-muted {
+    color:#cbd5e1 !important;
+  }
+  .form-control-mobile {
+    background:#1e293b; color:#f8fafc; border:1px solid #334155;
+  }
+  .form-control-mobile::placeholder { color:#cbd5e1; }
+
+  /* Footer is dark on mobile: force light text */
+  footer,
+  .site-footer,
+  .section-dark,
+  .bg-dark,
+  .bg-slate-900 {
+    background-color: #0f172a !important;
+    color: #e5e7eb !important;           /* light text on dark */
+  }
+  footer a,
+  .site-footer a,
+  .section-dark a,
+  .bg-dark a,
+  .bg-slate-900 a {
+    color: #93c5fd !important;           /* readable links */
+    text-decoration: underline;
+  }
+  footer .text-dark,
+  .site-footer .text-dark { color: #e5e7eb !important; }
+}
+
+/* Expanded header gradient (both) */
+.step-header-mobile:not(.collapsed),
+.accordion-header-mobile:not(.collapsed) {
+  background:linear-gradient(135deg, var(--primary-color), #6366f1);
+  color:#fff !important;
+}
+.step-header-mobile:not(.collapsed) i,
+.accordion-header-mobile:not(.collapsed) i { color:#fff !important; }
+
+/* Video caption on dark background */
+.video-container-mobile .text-muted,
+.video-container-mobile small { color:#f9fafb !important; opacity:.92; }
+
+/* === MOBILE CONTRAST HARD FIX (≤576px) — corrected === */
+@media (max-width:576px){
+
+  /* 1) White card/accordion areas must also set text color */
+  .card,
+  .accordion,
+  .accordion-item,
+  .accordion-body {
+    background-color: #ffffff !important;
+    color: #111827 !important;                 /* <-- add this */
+  }
+
+  /* Make *all* child text inherit the dark color (kills body:white) */
+  .card *, .accordion *, .accordion-item *, .accordion-body * {
+    color: inherit !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+  }
+
+  /* Links inside the white areas */
+  .card a, .accordion a, .accordion-body a {
+    color: #1d4ed8 !important;
+    text-decoration: underline;
+  }
+
+  /* 2) Footer and any dark sections: light text */
+  footer, .site-footer, .footer-mobile, .bg-dark, .bg-slate-900 {
+    background-color: #0f172a !important;
+    color: #e5e7eb !important;                 /* ensure base color */
+  }
+  footer *, .site-footer *, .footer-mobile *, .bg-dark *, .bg-slate-900 * {
+    color: #e5e7eb !important;
+    opacity: 1 !important;
+  }
+  footer a, .site-footer a, .footer-mobile a, .bg-dark a, .bg-slate-900 a {
+    color: #93c5fd !important;
+    text-decoration: underline;
+  }
+
+  /* Progress card at the top should also be readable */
+  .progress-mobile {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+}
+
+/* === FINAL MOBILE CONTRAST PATCH (paste at very end) === */
+
+/* 1) Progress/FAQ blurb card: readable on white */
+@media (max-width:576px){
+  .progress-mobile{
+    background:#ffffff !important;
+    color:#111827 !important;                  /* base text on white */
+  }
+  .progress-mobile *{
+    color:inherit !important;                  /* defeat body: white */
+    opacity:1 !important;
+    mix-blend-mode:normal !important;
+  }
+}
+
+/* 2) Anything "muted" on dark backgrounds must be light */
+@media (prefers-color-scheme: dark) and (max-width:576px){
+  /* Global muted text on dark */
+  .text-muted{ color:#cbd5e1 !important; }
+
+  /* Bottom areas */
+  #trending-deals{ color:#f9fafb !important; }
+  #trending-deals a{ color:#93c5fd !important; text-decoration:underline; }
+
+  footer, .footer-mobile{
+    background:#0f172a !important;
+    color:#e5e7eb !important;
+  }
+  footer *, .footer-mobile *{
+    color:#e5e7eb !important;
+    opacity:1 !important;
+  }
+  footer a, .footer-mobile a{
+    color:#93c5fd !important;
+    text-decoration:underline;
+  }
+}
+  
+</style>
+
+<link href="/footer.css" rel="stylesheet">
+
+  <meta property="article:modified_time" content="2025-08-21T00:00:00+00:00">
+  <meta property="og:updated_time" content="2025-08-21T00:00:00+00:00">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.dealshopperpro.com/#website",
+      "url": "https://www.dealshopperpro.com/",
+      "name": "Deal Shopper Pro",
+      "description": "Advanced Amazon search tool with Prime-only, Lightning Deals & coupon filters.",
+      "publisher": { "@id": "https://www.dealshopperpro.com/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.dealshopperpro.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.dealshopperpro.com/#organization",
+      "name": "Deal Shopper Pro",
+      "url": "https://www.dealshopperpro.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.dealshopperpro.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.youtube.com/@dealshopperpro",
+        "https://medium.com/@dealshopperpro",
+        "https://www.pinterest.com/dealshopperpro",
+        "https://dealshopperpro.tumblr.com",
+        "https://www.linkedin.com/in/duane-romualdo"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "mailto:drdizzle613@proton.me"
+      },
+      "founder": { "@id": "https://www.dealshopperpro.com/#founder" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.dealshopperpro.com/#founder",
+      "name": "Duane Romualdo",
+      "url": "https://www.dealshopperpro.com/my-story.html",
+      "sameAs": [
+        "https://www.linkedin.com/in/duane-romualdo",
+        "https://medium.com/@dealshopperpro"
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://www.dealshopperpro.com/#app",
+      "name": "Deal Shopper Pro",
+      "operatingSystem": "Web",
+      "applicationCategory": "ShoppingApplication",
+      "url": "https://www.dealshopperpro.com/",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Prime-only search",
+        "Lightning Deals",
+        "Coupon filters",
+        "Advanced brand & price filters",
+        "Eco & ethical filters"
+      ],
+      "screenshot": "https://www.dealshopperpro.com/screenshot.jpg"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.dealshopperpro.com/#webpage",
+      "url": "https://www.dealshopperpro.com/",
+      "name": "Advanced Amazon Search Tool — Find Today’s Best Deals Fast",
+      "isPartOf": { "@id": "https://www.dealshopperpro.com/#website" },
+      "about": { "@id": "https://www.dealshopperpro.com/#app" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.dealshopperpro.com/og-image.jpg"
+      },
+      "breadcrumb": { "@id": "https://www.dealshopperpro.com/#breadcrumb" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "xpath": [
+          "/html/head/title",
+          "/html/head/meta[@name='description']/@content"
+        ]
+      },
+      "datePublished": "2025-06-18",
+      "dateModified": "2025-08-23"
+    },
+    {
+  "@type": "VideoObject",
+  "@id": "https://www.dealshopperpro.com/#video",
+  "name": "How to Filter Lightning Deals on Amazon in 30 Seconds (2025 Guide)",
+  "description": "Learn how to filter Amazon Lightning Deals fast with Deal Shopper Pro.",
+  "thumbnailUrl": [
+    "https://i.ytimg.com/vi/wpj1l1XUunw/hqdefault.jpg"
+  ],
+  "embedUrl": "https://www.youtube-nocookie.com/embed/wpj1l1XUunw",
+  "uploadDate": "2025-06-18T12:00:00+00:00",
+  "publisher": {
+    "@id": "https://www.dealshopperpro.com/#organization"
+  },
+  "duration": "PT1M",
+  "potentialAction": {
+    "@type": "WatchAction",
+    "target": "https://www.youtube.com/watch?v=wpj1l1XUunw"
+  }
+},
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.dealshopperpro.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Deal Shopper Pro free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Deal Shopper Pro is 100% free to use with no signup required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Deal Shopper Pro show Amazon prices directly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, prices are displayed only on Amazon. Deal Shopper Pro redirects you to Amazon for accurate prices."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.dealshopperpro.com/#howto",
+      "name": "How to Use Deal Shopper Pro",
+      "step": [
+        { "@type": "HowToStep", "text": "Start your product search with a keyword, ASIN, or ISBN." },
+        { "@type": "HowToStep", "text": "Set your price range and currency." },
+        { "@type": "HowToStep", "text": "Refine by discount, rating, or sort order." },
+        { "@type": "HowToStep", "text": "Filter by brand or include/exclude sellers." },
+        { "@type": "HowToStep", "text": "Apply extra filters like Prime, coupons, or eco-friendly options." },
+        { "@type": "HowToStep", "text": "View your results on Amazon." }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.dealshopperpro.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.dealshopperpro.com/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <!-- Hero Section -->
+  <section class="hero-mobile">
+    <div class="animate-slide-up">
+      <p class="text-muted small">✅ Updated August 2025</p>
+<h1 class="hero-title">Amazon Deal Finder — Find Today’s Best Deals Fast</h1>
+      <p class="hero-subtitle">Find Prime deals, Lightning Deals, and hidden coupons in seconds</p>
+<p class="text-muted"><small>🔥 Today’s trending deals: headphones, air fryers, gaming laptops</small></p>
+      
+      <div class="trust-badges">
+        <span class="trust-badge">
+          <i class="bi bi-shield-check"></i>
+          Secure & Private
+        </span>
+        <span class="trust-badge">
+          <i class="bi bi-person-check"></i>
+          No Signup Required
+        </span>
+        <span class="trust-badge">
+          <i class="bi bi-lightning-fill"></i>
+          Real Amazon Data
+        </span>
+      </div>
+      
+      <div class="text-center mt-3">
+        <div class="badge bg-success text-white px-3 py-2 fs-6 rounded-pill">
+          <i class="bi bi-check-circle me-1"></i>
+          100% Free Tool
+        </div>
+      </div>
+      
+      <a href="#search-form" class="btn-mobile btn-success-mobile mt-3" onclick="scrollToForm()">
+        <i class="bi bi-search"></i>
+        Start Searching Now
+      </a>
+    </div>
+  </section>
+<!-- Short affiliate disclosure (above the fold) -->
+<div class="affiliate-disclosure text-center py-2" style="background:#fff; font-size:0.9rem; color:#333;">
+  <p class="mb-0">
+    <strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. I may also earn a commission from Amazon links on this page at no extra cost to you.
+  </p>
+</div>
+  
+<div class="text-center py-1" style="background:#fff;">
+  <small class="text-muted">Last updated: August 21, 2025</small>
+</div>
+<!-- Video Demo -->
+  <div class="video-container-mobile">
+    <div class="yt-lite" data-id="wpj1l1XUunw" data-title="How to Find Amazon Deals">
+      <!-- Video will be loaded by JavaScript -->
+    </div>
+    <div class="text-center p-3">
+      <small class="text-muted">Watch: How to find Lightning Deals in 30 seconds</small>
+    </div>
+  </div>
+  <noscript id="video-fallback">
+    <a href="https://www.youtube-nocookie.com/embed/wpj1l1XUunw">
+      <img src="https://i.ytimg.com/vi/wpj1l1XUunw/hqdefault.jpg" alt="How to Find Amazon Deals video thumbnail" width="1200" height="675">
+    </a>
+  </noscript>
+
+
+  <!-- Progress Indicator -->
+  <div class="progress-mobile" id="progress-indicator">
+    <div class="text-center w-100 mb-2">
+      <small class="text-muted fw-semibold">Find Better Deals</small>
+    </div>
+    <div class="d-flex justify-content-center align-items-center gap-2 w-100">
+      <div class="progress-step-mobile active" data-step="1">1</div>
+      <div class="progress-step-mobile" data-step="2">2</div>
+      <div class="progress-step-mobile" data-step="3">3</div>
+      <div class="progress-step-mobile" data-step="4">4</div>
+      <div class="progress-step-mobile" data-step="5">5</div>
+      <div class="progress-step-mobile" data-step="6">6</div>
+    </div>
+<section class="seo-keywords px-3 py-3" aria-label="Popular how-to topics">
+  <h2 class="mb-2">How do I filter Amazon results by seller?</h2>
+  <p class="mb-3">Use seller filters and brand includes to narrow results to specific sellers or brands without leaving the search page.</p>
+  <h3 class="mb-2">What’s the best way to find Amazon Lightning Deals today?</h3>
+  <p class="mb-0">Check the <strong>Lightning Deals</strong> filter in Step 5 and sort by <em>Newest</em> to surface time‑sensitive offers first.</p>
+
+<p class="mt-2 px-3">
+  Learn more: 
+  <a href="/lightning-deals.html">Amazon Lightning Deals</a>, 
+  <a href="/prime-only-deals.html">Prime‑Only Deals</a>, and 
+  <a href="/how-it-works.html">How Deal Shopper Pro Works</a>.
+</p>
+
+</section>
+
+  </div>
+
+  <!-- Main Search Form -->
+  <div class="search-container" id="search-form">
+    <form id="amazon-search-form" method="get" novalidate>
+      
+   <!-- Step 1: Search -->
+<div class="step-card-mobile">
+  <button type="button"
+          class="step-header-mobile"
+          data-bs-toggle="collapse"
+          data-bs-target="#step1"
+          aria-controls="step1"
+          aria-expanded="true">
+    <span class="step-number-mobile" aria-hidden="true">1</span>
+    <span class="flex-grow-1">
+      <span class="fw-semibold">Search Products</span>
+      <small class="text-white d-block">Enter what you're looking for</small>
+
+    </span>
+    <i class="bi bi-chevron-down" aria-hidden="true"></i>
+  </button>
+
+  <div class="step-body-mobile collapse show" id="step1">
+    <div class="input-group-mobile">
+      <span class="input-addon"><i class="bi bi-search"></i></span>
+      <input type="text"
+             class="form-control-mobile"
+             id="mainSearchInput"
+             name="q"
+             placeholder="Search Amazon products..."
+             autocomplete="off">
+    </div>
+    <small class="text-muted">Try: "wireless headphones", "kitchen gadgets", or "gaming mouse"</small>
+  </div>
+</div>
+
+<!-- Step 2: Price Range -->
+<div class="step-card-mobile">
+  <button type="button"
+          class="step-header-mobile collapsed"
+          data-bs-toggle="collapse"
+          data-bs-target="#step2"
+          aria-controls="step2"
+          aria-expanded="false">
+    <span class="step-number-mobile" aria-hidden="true">2</span>
+    <span class="flex-grow-1 d-flex flex-column text-start">
+      <span class="fw-semibold">Price Range</span>
+      <small class="text-white">Set your budget</small>
+
+    </span>
+    <i class="bi bi-chevron-down" aria-hidden="true"></i>
+  </button>
+
+  <div class="step-body-mobile collapse" id="step2">
+    <div class="row">
+      <div class="col-6">
+        <label class="form-label fw-semibold" for="minPrice">Min Price</label>
+        <div class="input-group-mobile">
+          <span class="input-addon">$</span>
+          <input type="number" class="form-control-mobile" id="minPrice" name="min-price" placeholder="10" step="0.01">
+        </div>
+      </div>
+      <div class="col-6">
+        <label class="form-label fw-semibold" for="maxPrice">Max Price</label>
+        <div class="input-group-mobile">
+          <span class="input-addon">$</span>
+          <input type="number" class="form-control-mobile" id="maxPrice" name="max-price" placeholder="100" step="0.01">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Step 3: Quick Filters -->
+<div class="step-card-mobile">
+  <button type="button"
+          class="step-header-mobile collapsed"
+          data-bs-toggle="collapse"
+          data-bs-target="#step3"
+          aria-controls="step3"
+          aria-expanded="false">
+    <span class="step-number-mobile" aria-hidden="true">3</span>
+    <span class="flex-grow-1 d-flex flex-column text-start">
+      <span class="fw-semibold">Quick Filters</span>
+      <small class="text-white">Rating, discount, sort order</small>
+
+    </span>
+    <i class="bi bi-chevron-down" aria-hidden="true"></i>
+  </button>
+
+  <div class="step-body-mobile collapse" id="step3">
+    <label class="form-label fw-semibold" for="sortOrder">Sort By</label>
+    <select class="form-control-mobile" id="sortOrder" name="sort">
+      <option value="relevance">Best Match</option>
+      <option value="price-asc-rank">Price: Low to High</option>
+      <option value="price-desc-rank">Price: High to Low</option>
+      <option value="review-rank">Customer Reviews</option>
+      <option value="date-desc-rank">Newest</option>
+    </select>
+
+    <label class="form-label fw-semibold" for="minRating">Minimum Rating</label>
+    <select class="form-control-mobile" id="minRating" name="min-rating">
+      <option value="">Any Rating</option>
+      <option value="1">1+ Stars</option>
+      <option value="2">2+ Stars</option>
+      <option value="3">3+ Stars</option>
+      <option value="4">4+ Stars</option>
+    </select>
+
+    <label class="form-label fw-semibold" for="minDiscount">Minimum Discount</label>
+    <select class="form-control-mobile" id="minDiscount" name="min-discount">
+      <option value="">Any Discount</option>
+      <option value="10">10%+</option>
+      <option value="20">20%+</option>
+      <option value="30">30%+</option>
+      <option value="50">50%+</option>
+    </select>
+  </div>
+</div>
+
+<!-- Step 4: Brand Filter -->
+<div class="step-card-mobile">
+  <button type="button"
+          class="step-header-mobile collapsed"
+          data-bs-toggle="collapse"
+          data-bs-target="#step4"
+          aria-controls="step4"
+          aria-expanded="false">
+    <span class="step-number-mobile" aria-hidden="true">4</span>
+    <span class="flex-grow-1 d-flex flex-column text-start">
+      <span class="fw-semibold">Brand Filter</span>
+      <small class="text-white">Filter by specific brands</small>
+
+    </span>
+    <i class="bi bi-chevron-down" aria-hidden="true"></i>
+  </button>
+
+  <div class="step-body-mobile collapse" id="step4">
+    <label class="form-label fw-semibold" for="brandInclude">Include Brands</label>
+    <input type="text" class="form-control-mobile" id="brandInclude" name="brand-include" placeholder="e.g. Apple, Samsung, Nike">
+    <small class="text-muted">Separate multiple brands with commas</small>
+  </div>
+</div>
+
+<!-- Step 5: Deal Filters -->
+<div class="step-card-mobile">
+  <button type="button"
+          class="step-header-mobile collapsed"
+          data-bs-toggle="collapse"
+          data-bs-target="#step5"
+          aria-controls="step5"
+          aria-expanded="false">
+    <span class="step-number-mobile" aria-hidden="true">5</span>
+    <span class="flex-grow-1 d-flex flex-column text-start">
+      <span class="fw-semibold">Deal Filters</span>
+      <small class="text-white">Prime, Lightning Deals, Coupons</small>
+
+    </span>
+    <i class="bi bi-chevron-down" aria-hidden="true"></i>
+  </button>
+
+  <div class="step-body-mobile collapse" id="step5">
+    <!-- Popular Deals -->
+    <div class="filter-section-mobile">
+      <div class="filter-title-mobile">
+        <i class="bi bi-lightning-fill"></i>
+        Popular Deals
+      </div>
+      <div class="checkbox-grid-mobile">
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="primeOnly" name="prime-only" type="checkbox">
+          <label class="checkbox-label-mobile" for="primeOnly">
+            <i class="bi bi-star-fill me-2"></i>
+            Prime Only
+          </label>
+        </div>
+
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="lightningDeals" name="lightning-deals" type="checkbox">
+          <label class="checkbox-label-mobile" for="lightningDeals">
+            <i class="bi bi-lightning-charge-fill me-2"></i>
+            Lightning Deals
+          </label>
+        </div>
+
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="coupons" name="coupons" type="checkbox">
+          <label class="checkbox-label-mobile" for="coupons">
+            <i class="bi bi-ticket-perforated me-2"></i>
+            Coupons
+          </label>
+        </div>
+
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="freeShipping" name="free-shipping" type="checkbox">
+          <label class="checkbox-label-mobile" for="freeShipping">
+            <i class="bi bi-truck me-2"></i>
+            Free Shipping
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- More Deal Types -->
+    <div class="filter-section-mobile">
+      <div class="filter-title-mobile">
+        <i class="bi bi-fire"></i>
+        More Deal Types
+      </div>
+      <div class="checkbox-grid-mobile">
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="todaysDeals" name="todays-deals" type="checkbox">
+          <span class="experimental-badge-mobile">NEW</span>
+          <label class="checkbox-label-mobile" for="todaysDeals">
+            <i class="bi bi-fire me-2"></i>
+            Today's Deals
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="outletDeals" name="outlet-deals" type="checkbox">
+          <label class="checkbox-label-mobile" for="outletDeals">
+            <i class="bi bi-shop me-2"></i>
+            Outlet Deals
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="bestSellerDeals" name="best-seller-deals" type="checkbox">
+          <span class="experimental-badge-mobile">HOT</span>
+          <label class="checkbox-label-mobile" for="bestSellerDeals">
+            <i class="bi bi-trophy me-2"></i>
+            Best Sellers
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="clearanceDeals" name="clearance-deals" type="checkbox">
+          <label class="checkbox-label-mobile" for="clearanceDeals">
+            <i class="bi bi-cart-dash me-2"></i>
+            Clearance
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="bogoDeals" name="bogo-deals" type="checkbox">
+          <span class="experimental-badge-mobile">BETA</span>
+          <label class="checkbox-label-mobile" for="bogoDeals">
+            <i class="bi bi-plus-circle me-2"></i>
+            Buy One Get One
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="limitedTimeDeals" name="limited-time-deals" type="checkbox">
+          <span class="experimental-badge-mobile">BETA</span>
+          <label class="checkbox-label-mobile" for="limitedTimeDeals">
+            <i class="bi bi-clock me-2"></i>
+            Limited-Time
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="flashSales" name="flash-sales" type="checkbox">
+          <span class="experimental-badge-mobile">BETA</span>
+          <label class="checkbox-label-mobile" for="flashSales">
+            <i class="bi bi-lightning me-2"></i>
+            Flash Sales
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="under25Deals" name="under-25-deals" type="checkbox">
+          <span class="experimental-badge-mobile">BETA</span>
+          <label class="checkbox-label-mobile" for="under25Deals">
+            <i class="bi bi-piggy-bank me-2"></i>
+            Under $25
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shipping & Stock -->
+    <div class="filter-section-mobile">
+      <div class="filter-title-mobile">
+        <i class="bi bi-box-seam"></i>
+        Shipping & Availability
+      </div>
+      <div class="checkbox-grid-mobile">
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="inStock" name="in-stock" type="checkbox">
+          <label class="checkbox-label-mobile" for="inStock">
+            <i class="bi bi-box-seam me-2"></i>
+            In Stock
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="fbaOnly" name="fba-only" type="checkbox">
+          <label class="checkbox-label-mobile" for="fbaOnly">
+            <i class="bi bi-box me-2"></i>
+            Fulfilled by Amazon
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="shipsFromUS" name="ships-from-us" type="checkbox">
+          <label class="checkbox-label-mobile" for="shipsFromUS">
+           <i class="bi bi-flag-fill me-2" aria-hidden="true"></i>
+
+            Ships from US
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="nextDayShipping" name="next-day-shipping" type="checkbox">
+          <span class="experimental-badge-mobile">BETA</span>
+          <label class="checkbox-label-mobile" for="nextDayShipping">
+            <i class="bi bi-rocket-takeoff me-2"></i>
+            Next-Day Shipping
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Eco-Friendly & Ethical -->
+    <div class="filter-section-mobile">
+      <div class="filter-title-mobile">
+        <i class="bi bi-leaf"></i>
+        Eco-Friendly & Ethical
+      </div>
+      <div class="checkbox-grid-mobile">
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="climatePledge" name="climate-pledge" type="checkbox">
+          <label class="checkbox-label-mobile" for="climatePledge">
+            <i class="bi bi-globe-americas me-2"></i>
+            Climate Pledge
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="smallBusiness" name="small-business" type="checkbox">
+          <label class="checkbox-label-mobile" for="smallBusiness">
+            <i class="bi bi-shop-window me-2"></i>
+            Small Business
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="ecoFriendly" name="eco-friendly" type="checkbox">
+          <label class="checkbox-label-mobile" for="ecoFriendly">
+            <i class="bi bi-recycle me-2"></i>
+            Eco-Friendly
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="organicProducts" name="organic-products" type="checkbox">
+          <label class="checkbox-label-mobile" for="organicProducts">
+            <i class="bi bi-flower2 me-2"></i>
+            Organic
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="veganProducts" name="vegan-products" type="checkbox">
+          <label class="checkbox-label-mobile" for="veganProducts">
+            <i class="bi bi-heart-fill me-2"></i>
+            Vegan
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="crueltyFree" name="cruelty-free" type="checkbox">
+          <label class="checkbox-label-mobile" for="crueltyFree">
+            <i class="bi bi-shield-heart me-2"></i>
+            Cruelty-Free
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="fairTrade" name="fair-trade" type="checkbox">
+          <span class="experimental-badge-mobile">BETA</span>
+          <label class="checkbox-label-mobile" for="fairTrade">
+            <i class="bi bi-handshake me-2"></i>
+            Fair Trade
+          </label>
+        </div>
+        <div class="checkbox-card-mobile">
+          <input class="checkbox-input-mobile" id="madeInUSA" name="made-in-usa" type="checkbox">
+          <span class="experimental-badge-mobile">BETA</span>
+          <label class="checkbox-label-mobile" for="madeInUSA">
+            <i class="bi bi-flag me-2" aria-hidden="true"></i>
+            Made in USA
+          </label>
+        </div>
+      </div>
+    </div>
+
+  <!-- Gift Ideas -->
+<div class="filter-section-mobile">
+  <div class="filter-title-mobile">
+    <i class="bi bi-gift"></i>
+    Gift Ideas
+  </div>
+  <div class="checkbox-grid-mobile">
+
+    <div class="checkbox-card-mobile">
+      <input class="checkbox-input-mobile" id="giftsForHer" name="gifts-for-her" type="checkbox">
+      <span class="experimental-badge-mobile">BETA</span>
+      <label class="checkbox-label-mobile" for="giftsForHer">
+        <i class="bi bi-heart me-2"></i>
+        Gifts for Her
+      </label>
+    </div>
+
+    <div class="checkbox-card-mobile">
+      <input class="checkbox-input-mobile" id="giftsForHim" name="gifts-for-him" type="checkbox">
+      <span class="experimental-badge-mobile">BETA</span>
+      <label class="checkbox-label-mobile" for="giftsForHim">
+        <i class="bi bi-person me-2"></i>
+        Gifts for Him
+      </label>
+    </div>
+
+    <div class="checkbox-card-mobile">
+      <input class="checkbox-input-mobile" id="giftsForKids" name="gifts-for-kids" type="checkbox">
+      <span class="experimental-badge-mobile">BETA</span>
+      <label class="checkbox-label-mobile" for="giftsForKids">
+        <i class="bi bi-balloon me-2"></i>
+        Gifts for Kids
+      </label>
+    </div>
+
+    <div class="checkbox-card-mobile">
+      <input class="checkbox-input-mobile" id="giftUnder25" name="gifts-under-25" type="checkbox">
+      <span class="experimental-badge-mobile">BETA</span>
+      <label class="checkbox-label-mobile" for="giftUnder25">
+        <i class="bi bi-currency-dollar me-2"></i>
+        Gifts Under $25
+      </label>
+    </div>
+
+    <div class="checkbox-card-mobile">
+      <input class="checkbox-input-mobile" id="birthdayGifts" name="birthday-gifts" type="checkbox">
+      <span class="experimental-badge-mobile">BETA</span>
+      <label class="checkbox-label-mobile" for="birthdayGifts">
+        <i class="bi bi-cake2 me-2"></i>
+        Birthday Gifts
+      </label>
+    </div>
+
+    <div class="checkbox-card-mobile">
+      <input class="checkbox-input-mobile" id="holidayGifts" name="holiday-gifts" type="checkbox">
+      <span class="experimental-badge-mobile">BETA</span>
+      <label class="checkbox-label-mobile" for="holidayGifts">
+        <i class="bi bi-tree me-2"></i>
+        Holiday Gifts
+      </label>
+    </div>
+
+  </div>
+</div>
+
+<!-- Special Categories -->
+<div class="filter-section-mobile">
+  <div class="filter-title-mobile">
+    <i class="bi bi-star"></i>
+    Special Categories
+  </div>
+  <div class="checkbox-grid-mobile">
+
+    <div class="checkbox-card-mobile">
+      <input class="checkbox-input-mobile" id="amazonBrands" name="amazon-brands" type="checkbox">
+      <label class="checkbox-label-mobile" for="amazonBrands">
+        <i class="bi bi-award me-2"></i>
+        Amazon Brands
+      </label>
+    </div>
+
+    <div class="checkbox-card-mobile">
+      <input class="checkbox-input-mobile" id="newReleases" name="new-releases" type="checkbox">
+      <span class="experimental-badge-mobile">BETA</span>
+      <label class="checkbox-label-mobile" for="newReleases">
+        <i class="bi bi-sparkles me-2"></i>
+        New Releases
+      </label>
+    </div>
+
+    <div class="checkbox-card-mobile">
+      <input class="checkbox-input-mobile" id="trendingNow" name="trending-now" type="checkbox">
+      <span class="experimental-badge-mobile">HOT</span>
+      <label class="checkbox-label-mobile" for="trendingNow">
+        <i class="bi bi-graph-up-arrow me-2"></i>
+        Trending Now
+      </label>
+    </div>
+
+    <div class="checkbox-card-mobile">
+      <input class="checkbox-input-mobile" id="warehouseDeals" name="warehouse-deals" type="checkbox">
+      <span class="experimental-badge-mobile">BETA</span>
+      <label class="checkbox-label-mobile" for="warehouseDeals">
+        <i class="bi bi-tools me-2"></i>
+        Warehouse Deals
+      </label>
+    </div>
+
+    <div class="checkbox-card-mobile">
+      <input class="checkbox-input-mobile" id="openBoxDeals" name="open-box-deals" type="checkbox">
+      <span class="experimental-badge-mobile">BETA</span>
+      <label class="checkbox-label-mobile" for="openBoxDeals">
+        <i class="bi bi-box-arrow-up me-2"></i>
+        Open Box
+      </label>
+    </div>
+
+    <div class="checkbox-card-mobile">
+      <input class="checkbox-input-mobile" id="endsSoon" name="ends-soon" type="checkbox">
+      <span class="experimental-badge-mobile">URGENT</span>
+      <label class="checkbox-label-mobile" for="endsSoon">
+        <i class="bi bi-alarm me-2"></i>
+        Ends Soon
+      </label>
+    </div>
+
+  </div>
+</div>
+
+  </div>
+</div>
+
+<!-- Step 6: Submit -->
+<div class="step-card-mobile">
+  <button type="button"
+          class="step-header-mobile collapsed"
+          data-bs-toggle="collapse"
+          data-bs-target="#step6"
+          aria-controls="step6"
+          aria-expanded="false">
+    <span class="step-number-mobile" aria-hidden="true">6</span>
+    <span class="flex-grow-1 d-flex flex-column text-start">
+      <span class="fw-semibold">Search Amazon</span>
+      <small class="text-muted">Get your filtered results</small>
+    </span>
+    <i class="bi bi-chevron-down" aria-hidden="true"></i>
+  </button>
+
+  <div class="step-body-mobile collapse" id="step6">
+    <div class="text-center">
+      <i class="bi bi-check-circle-fill" style="font-size: 3rem;"></i>
+      <h4 class="fw-bold mt-3 mb-3">Ready to Search!</h4>
+      <p class="text-muted mb-4">Click below to see your filtered Amazon results</p>
+      <button type="submit" class="btn-mobile btn-primary-mobile">
+        <i class="bi bi-search"></i>
+        Search Amazon Now
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ CLOSE the form and its container BEFORE features/FAQ -->
+</form>
+</div><!-- /.search-container -->
+
+<!-- Features Grid (outside the form) -->
+<div class="features-mobile">
+  <!-- ...unchanged... -->
+</div>
+
+<!-- ✅ FAQ Section (outside the form, one container) -->
+<section class="accordion-mobile" id="faqs">
+  <h2 class="text-center fw-bold mb-4">Amazon Deals & Advanced Search Tool — FAQs</h2>
+
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faq0')" aria-controls="faq0-body" aria-expanded="false">
+      <span>Do I need to complete all 6 steps?</span>
+      <i class="bi bi-chevron-down" id="faq0-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faq0-body">
+      <p><strong>No—only Step 1 is required.</strong> Type a product keyword (e.g., “wireless earbuds”) and tap <em>Search Amazon Now</em>. Steps 2–5 add optional <strong>Amazon search filters</strong> (price range, rating, brand includes, <strong>Prime-only deals</strong>, <strong>Lightning Deals</strong>, and coupons) so you can <strong>find today’s best Amazon deals fast</strong>.</p>
+      <p><a href="#search-form">Start your Amazon deal search now</a></p>
+    </div>
+  </div>
+
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faq1')" aria-controls="faq1-body" aria-expanded="false">
+      <span>What is Deal Shopper Pro?</span>
+      <i class="bi bi-chevron-down" id="faq1-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faq1-body">
+      <p><strong>Deal Shopper Pro is a free Advanced Amazon Search Tool</strong> and deal finder. It layers smart filters on top of live Amazon results to uncover <strong>Prime-only offers</strong>, <strong>Amazon Lightning Deals</strong>, and <strong>hidden coupons</strong> in seconds—no signup required.</p>
+      <p>Use it as your go-to <strong>Amazon discount finder</strong> to save time and money with cleaner, faster results than default Amazon filters.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faq2')" aria-controls="faq2-body" aria-expanded="false">
+      <span>How do I find Prime-only deals?</span>
+      <i class="bi bi-chevron-down" id="faq2-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faq2-body">
+      <p>Open <strong>Step 5 – Deal Filters</strong> and toggle <strong>Prime Only</strong>. For the strongest results, combine it with <em>Minimum Discount</em> or <em>Minimum Rating</em> in Step 3 and sort by <em>Newest</em>. This highlights <strong>today’s best Prime deals</strong> with fast shipping.</p>
+      <p><a href="/prime-only-deals.html">Learn more about Prime-only deals</a></p>
+    </div>
+  </div>
+
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faq3')" aria-controls="faq3-body" aria-expanded="false">
+      <span>Is this free to use?</span>
+      <i class="bi bi-chevron-down" id="faq3-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faq3-body">
+      <p><strong>Yes—100% free.</strong> No account, no paywalls, and no subscriptions. We may earn a commission from qualifying purchases (Amazon Associate), but using this <strong>Amazon Deal Finder</strong> costs you nothing.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faq4')" aria-controls="faq4-body" aria-expanded="false">
+      <span>Does this work on mobile?</span>
+      <i class="bi bi-chevron-down" id="faq4-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faq4-body">
+      <p><strong>Absolutely.</strong> Deal Shopper Pro is mobile-first and fast on iPhone, Android, and tablets. It loads quickly and works great in Chrome, Safari, and Edge so you can <strong>find Amazon deals on the go</strong> with a <strong>mobile Amazon deal finder</strong>.</p>
+    </div>
+  </div>
+
+  <!-- New FAQs -->
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faqNew1')" aria-controls="faqNew1-body" aria-expanded="false">
+      <span>How do I find Lightning Deals on Amazon?</span>
+      <i class="bi bi-chevron-down" id="faqNew1-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faqNew1-body">
+      <p>Go to <strong>Step 5 – Deal Filters</strong> and check <strong>Lightning Deals</strong>. Then sort by <em>Newest</em> to surface <strong>time-sensitive Lightning Deals</strong> that are live right now. These deals expire quickly—refresh often during Prime Day, Black Friday, and holiday events.</p>
+      <p><a href="/lightning-deals.html">Guide: Finding Amazon Lightning Deals</a></p>
+    </div>
+  </div>
+
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faqNew2')" aria-controls="faqNew2-body" aria-expanded="false">
+      <span>Can I filter Amazon deals by Prime only?</span>
+      <i class="bi bi-chevron-down" id="faqNew2-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faqNew2-body">
+      <p><strong>Yes.</strong> Toggle <strong>Prime Only</strong> in Step 5. For faster delivery, combine it with <strong>In Stock</strong>, <strong>Fulfilled by Amazon (FBA)</strong>, or <strong>Ships from US</strong>. This stacks filters to reveal <strong>Prime-eligible discounts</strong> first.</p>
+      <p><a href="/prime-only-deals.html">Prime-only deals tips</a></p>
+    </div>
+  </div>
+
+  <div class="accordion-item-mobile">
+    <button class="accordion-header-mobile" onclick="toggleAccordion('faqNew3')" aria-controls="faqNew3-body" aria-expanded="false">
+      <span>Does Deal Shopper Pro cost money?</span>
+      <i class="bi bi-chevron-down" id="faqNew3-icon"></i>
+    </button>
+    <div class="accordion-body-mobile d-none" id="faqNew3-body">
+      <p><strong>No—Deal Shopper Pro is free.</strong> It’s a <strong>free Amazon search tool</strong> that builds optimized queries to help you find <strong>today’s best Amazon deals</strong>, including <strong>coupons</strong>, <strong>Lightning Deals</strong>, and <strong>Prime-only offers</strong>.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<p>
+  Curious about why we built this tool? Read our guide, 
+  <a href="/article/better-way-to-search-amazon.html">Better Way to Search Amazon</a>, 
+  which explains the limitations of Amazon’s filters and how Deal Shopper Pro solves them.
+</p>
+
+  
+<!-- ===== Share With Friends ===== -->
+<section class="container my-5">
+  <div class="card shadow-sm border-0 rounded-4">
+    <div class="card-body p-4 p-md-5">
+      <div class="text-center my-4">
+        <h2 class="h5">📲 Share with Friends</h2>
+        <p class="text-muted">Send this to someone who needs smarter Amazon filters:</p>
+        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+          
+          <!-- WhatsApp -->
+          <a class="btn btn-success share-btn"
+             href="#"
+             onclick="shareWhatsApp(event)"
+             aria-label="Share this page on WhatsApp">
+            WhatsApp
+          </a>
+
+          <!-- Messenger -->
+          <a class="btn btn-primary share-btn"
+             href="#"
+             onclick="shareMessenger(event)"
+             aria-label="Share this page on Messenger">
+            Messenger
+          </a>
+
+          <!-- SMS -->
+          <a class="btn btn-secondary share-btn"
+             href="#"
+             onclick="shareSMS(event)"
+             aria-label="Send this page via Text Message">
+            Text Message
+          </a>
+
+          <!-- Twitter / X -->
+          <a class="btn btn-info share-btn"
+             href="#"
+             onclick="shareTwitter(event)"
+             aria-label="Share this page on Twitter / X">
+            Twitter / X
+          </a>
+
+          <!-- Facebook -->
+          <a class="btn btn-primary share-btn"
+             href="#"
+             onclick="shareFacebook(event)"
+             aria-label="Share this page on Facebook">
+            Facebook
+          </a>
+
+          <!-- Copy Link -->
+          <button class="btn btn-dark share-btn"
+                  type="button"
+                  aria-label="Copy page link to clipboard"
+                  onclick="copyLink(event)">
+            Copy Page Link
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container my-5">
+  <div class="text-center">
+    <h2 class="h4 fw-bold mb-3">✅ Why Shoppers Choose Deal Shopper Pro</h2>
+    <p class="lead">
+      Deal Shopper Pro is more than just another Amazon search box — it’s an 
+      <strong>advanced product filter</strong> designed to uncover the exact items you want, 
+      including hidden coupons and daily discounts. Shoppers use our tool as their 
+      go-to <strong>Amazon discount finder</strong> because it saves time, money, 
+      and frustration compared to Amazon’s default filters.
+    </p>
+    <p>
+      Whether you’re searching for Prime-only deals, Lightning Deals, or just 
+      want the fastest <strong>Amazon search tool</strong> for today’s best prices, 
+      Deal Shopper Pro helps you shop smarter in seconds.
+    </p>
+  </div>
+</section>
+
+  <section id="trending-deals" class="px-3 py-4">
+  <h2 class="mb-3">Today’s trending deals on Amazon</h2>
+  <p class="text-muted mb-3">Updated daily — examples of popular searches you can open instantly.</p>
+  <ul class="mb-3">
+    <li><a href="#search-form">Wireless earbuds under $50</a></li>
+    <li><a href="#search-form">Kitchen gadgets with coupons</a></li>
+    <li><a href="#search-form">Gaming mice 4★ & up</a></li>
+  </ul>
+  <small class="text-muted">Tip: Use the <strong>Lightning Deals</strong> and <strong>Prime Only</strong> toggles in Step 5 to refine these further.</small>
+</section>
+
+<!-- Call-to-Action: Lightning Deals -->
+<section class="text-center my-4 px-3">
+  <h2 class="fw-bold mb-3">Want the Hottest Discounts Right Now?</h2>
+  <p class="mb-3">
+    Discover the best limited-time offers instantly with our 
+    <a href="https://www.dealshopperpro.com/lightning-deals.html">
+      Amazon Lightning Deals finder
+    </a>. 
+    Updated in real time, it’s the fastest way to catch deals before they expire.
+  </p>
+  <a href="https://www.dealshopperpro.com/lightning-deals.html" 
+     class="btn-mobile btn-primary-mobile">
+    ⚡ Browse Amazon Lightning Deals
+  </a>
+</section>
+
+<!-- Call-to-Action: My Story -->
+<section class="text-center my-4 px-3" aria-labelledby="cta-my-story">
+  <h2 id="cta-my-story" class="fw-bold mb-3">Overcoming Adversity — My Story</h2>
+  <p class="mb-3">
+    Looking for real motivation? Read my 
+    <a href="https://www.dealshopperpro.com/my-story.html">
+      overcoming adversity success story
+    </a>
+    — a true account of determination and resilience after losing everything.
+  </p>
+  <a href="https://www.dealshopperpro.com/my-story.html" 
+     class="btn-mobile btn-success-mobile"
+     aria-label="Read my story of overcoming adversity and rebuilding life">
+    📖 Read the full story
+  </a>
+</section>
+
+
+  <!-- Mobile Share Bar -->
+<div class="share-bar-mobile" id="shareBar">
+  <div class="d-flex justify-content-between align-items-center">
+    <span class="small text-muted">Share this tool</span>
+    <div class="share-buttons">
+      <a href="#" class="share-btn share-btn-success" onclick="shareWhatsApp(event)">
+        <i class="bi bi-whatsapp"></i>
+        WhatsApp
+      </a>
+      <button class="share-btn share-btn-secondary" onclick="shareSMS(event)">
+        <i class="bi bi-chat-dots"></i>
+        SMS
+      </button>
+      <button class="share-btn share-btn-outline" onclick="copyLink(event)">
+        <i class="bi bi-link-45deg"></i>
+        Copy
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+// YouTube video fix
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('YouTube fix loaded');
+  
+  // Wait a bit for page to fully load
+  setTimeout(function() {
+    const ytElements = document.querySelectorAll('.yt-lite');
+    console.log('Found YT elements:', ytElements.length);
+    
+    ytElements.forEach(element => {
+      const videoId = element.dataset.id;
+      console.log('Processing video ID:', videoId);
+      
+      if (!videoId) return;
+      
+      // Force set background image
+      const imgUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+      element.style.backgroundImage = `url("${imgUrl}")`;
+      element.style.backgroundSize = 'cover';
+      element.style.backgroundPosition = 'center';
+      
+      // Create play button if it doesn't exist
+      if (!element.querySelector('.yt-play')) {
+        const playButton = document.createElement('button');
+        playButton.className = 'yt-play';
+        playButton.setAttribute('aria-label', 'Play video');
+        element.appendChild(playButton);
+      }
+      
+      // Add click handler
+      element.addEventListener('click', function() {
+        if (element.classList.contains('activated')) return;
+        
+        console.log('Video clicked, loading iframe');
+        element.classList.add('activated');
+        
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0`;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.border = 'none';
+        iframe.style.position = 'absolute';
+        iframe.style.top = '0';
+        iframe.style.left = '0';
+        
+        element.innerHTML = '';
+        element.appendChild(iframe);
+      });
+    });
+  }, 1000); // Wait 1 second for everything to load
+});
+</script>
+  <script>
+function toggleAccordion(id){
+  const body = document.getElementById(id + '-body');
+  const btn  = document.querySelector('button[onclick*="' + id + '"]');
+  if (!body || !btn) return;
+
+  const willOpen = body.classList.contains('d-none');
+  body.classList.toggle('d-none', !willOpen);
+  btn.classList.toggle('collapsed', !willOpen);
+  btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+  const icon = btn.querySelector('.bi');
+  if (icon) icon.style.transform = willOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="/navbar-loader.js" defer></script>
+<script src="/searchlogic-v2.js" defer></script>
+
+<script>
+  function scrollToForm(){
+    const el = document.getElementById('search-form');
+    if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  }
+</script>
+  <script>
+  function shareWhatsApp(e){ if(e) e.preventDefault();
+    const msg = encodeURIComponent('Check this free Amazon deal finder: ' + location.href);
+    window.open('https://wa.me/?text=' + msg, '_blank', 'noopener,noreferrer');
+  }
+  function shareMessenger(e){ if(e) e.preventDefault();
+    const u = encodeURIComponent(location.href);
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + u, '_blank', 'noopener,noreferrer');
+  }
+  function shareSMS(e){ if(e) e.preventDefault();
+    const m = encodeURIComponent('Check this free Amazon deal finder: ' + location.href);
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) location.href = 'sms:?body=' + m;
+    else alert('SMS sharing is mobile-only. Message:\n\n' + decodeURIComponent(m));
+  }
+  function shareTwitter(e){ if(e) e.preventDefault();
+    const t = encodeURIComponent('Smart Amazon deal hunting starts here: ' + location.href);
+    window.open('https://twitter.com/intent/tweet?text=' + t, '_blank', 'noopener,noreferrer');
+  }
+  function shareFacebook(e){ if(e) e.preventDefault();
+    const u = encodeURIComponent(location.href);
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + u, '_blank', 'noopener,noreferrer');
+  }
+  function copyLink(e){
+    if(e) e.preventDefault();
+    navigator.clipboard.writeText(location.href).then(()=>{
+      const btn = (e && (e.target.closest('button')||e.target)) || null;
+      if(btn){ const t=btn.textContent; btn.textContent='Copied!'; setTimeout(()=>btn.textContent=t,2000); }
+    }).catch(()=>alert('Failed to copy link.'));
+  }
+</script>
+  <div id="footer-placeholder"></div>
+<script src="/footer-loader.js" defer></script>
+
+</body>
+</html>
