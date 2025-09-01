@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -1410,1011 +1412,247 @@ body {
 </head>
 
 <body>
-  <div id="navbar-placeholder"></div>
-
-  <!-- Hero Section -->
-  <section class="hero-mobile">
-    <div class="animate-slide-up">
-      <p class="text-muted small">✅ Updated August 2025</p>
-<h1 class="hero-title">Amazon Deal Finder — Find Today’s Best Deals Fast</h1>
-      <p class="hero-subtitle">Find Prime deals, Lightning Deals, and hidden coupons in seconds</p>
-<p class="text-muted"><small>🔥 Today’s trending deals: headphones, air fryers, gaming laptops</small></p>
-      
-      <div class="trust-badges">
-        <span class="trust-badge">
-          <i class="bi bi-shield-check"></i>
-          Secure & Private
-        </span>
-        <span class="trust-badge">
-          <i class="bi bi-person-check"></i>
-          No Signup Required
-        </span>
-        <span class="trust-badge">
-          <i class="bi bi-lightning-fill"></i>
-          Real Amazon Data
-        </span>
-      </div>
-      
-      <div class="text-center mt-3">
-        <div class="badge bg-success text-white px-3 py-2 fs-6 rounded-pill">
-          <i class="bi bi-check-circle me-1"></i>
-          100% Free Tool
-        </div>
-      </div>
-      
-      <a href="#search-form" class="btn-mobile btn-success-mobile mt-3" onclick="scrollToForm()">
-        <i class="bi bi-search"></i>
-        Start Searching Now
-      </a>
-    </div>
-  </section>
-<!-- Short affiliate disclosure (above the fold) -->
-<div class="affiliate-disclosure text-center py-2" style="background:#fff; font-size:0.9rem; color:#333;">
-  <p class="mb-0">
-    <strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. I may also earn a commission from Amazon links on this page at no extra cost to you.
-  </p>
-</div>
-  
-<div class="text-center py-1" style="background:#fff;">
-  <small class="text-muted">Last updated: August 21, 2025</small>
-</div>
-<!-- Video Demo -->
-  <div class="video-container-mobile">
-    <div class="yt-lite" data-id="wpj1l1XUunw" data-title="How to Find Amazon Deals">
-      <!-- Video will be loaded by JavaScript -->
-    </div>
-    <div class="text-center p-3">
-      <small class="text-muted">Watch: How to find Lightning Deals in 30 seconds</small>
-    </div>
-  </div>
-  <noscript id="video-fallback">
-    <a href="https://www.youtube-nocookie.com/embed/wpj1l1XUunw">
-      <img src="https://i.ytimg.com/vi/wpj1l1XUunw/hqdefault.jpg" alt="How to Find Amazon Deals video thumbnail" width="1200" height="675">
-    </a>
-  </noscript>
-
-
-  <!-- Progress Indicator -->
-  <div class="progress-mobile" id="progress-indicator">
-    <div class="text-center w-100 mb-2">
-      <small class="text-muted fw-semibold">Find Better Deals</small>
-    </div>
-    <div class="d-flex justify-content-center align-items-center gap-2 w-100">
-      <div class="progress-step-mobile active" data-step="1">1</div>
-      <div class="progress-step-mobile" data-step="2">2</div>
-      <div class="progress-step-mobile" data-step="3">3</div>
-      <div class="progress-step-mobile" data-step="4">4</div>
-      <div class="progress-step-mobile" data-step="5">5</div>
-      <div class="progress-step-mobile" data-step="6">6</div>
-    </div>
-<section class="seo-keywords px-3 py-3" aria-label="Popular how-to topics">
-  <h2 class="mb-2">How do I filter Amazon results by seller?</h2>
-  <p class="mb-3">Use seller filters and brand includes to narrow results to specific sellers or brands without leaving the search page.</p>
-  <h3 class="mb-2">What’s the best way to find Amazon Lightning Deals today?</h3>
-  <p class="mb-0">Check the <strong>Lightning Deals</strong> filter in Step 5 and sort by <em>Newest</em> to surface time‑sensitive offers first.</p>
-
-<p class="mt-2 px-3">
-  Learn more: 
-  <a href="/lightning-deals.html">Amazon Lightning Deals</a>, 
-  <a href="/prime-only-deals.html">Prime‑Only Deals</a>, and 
-  <a href="/how-it-works.html">How Deal Shopper Pro Works</a>.
-</p>
-
-</section>
-
-  </div>
-
-  <!-- Main Search Form -->
-  <div class="search-container" id="search-form">
+  <!-- Minimal, focused layout per spec: top search bar, then accordion. -->
+  <main class="container my-4" style="max-width: 980px;">
+    <!-- Top Search Bar -->
     <form id="amazon-search-form" method="get" novalidate>
-      
-   <!-- Step 1: Search -->
-<div class="step-card-mobile">
-  <button type="button"
-          class="step-header-mobile"
-          data-bs-toggle="collapse"
-          data-bs-target="#step1"
-          aria-controls="step1"
-          aria-expanded="true">
-    <span class="step-number-mobile" aria-hidden="true">1</span>
-    <span class="flex-grow-1">
-      <span class="fw-semibold">Search Products</span>
-      <small class="text-white d-block">Enter what you're looking for</small>
-
-    </span>
-    <i class="bi bi-chevron-down" aria-hidden="true"></i>
-  </button>
-
-  <div class="step-body-mobile collapse show" id="step1">
-    <div class="input-group-mobile">
-      <span class="input-addon"><i class="bi bi-search"></i></span>
-      <input type="text"
-             class="form-control-mobile"
-             id="mainSearchInput"
-             name="q"
-             placeholder="Search Amazon products..."
-             autocomplete="off">
-    </div>
-    <small class="text-muted">Try: "wireless headphones", "kitchen gadgets", or "gaming mouse"</small>
-  </div>
-</div>
-
-<!-- Step 2: Price Range -->
-<div class="step-card-mobile">
-  <button type="button"
-          class="step-header-mobile collapsed"
-          data-bs-toggle="collapse"
-          data-bs-target="#step2"
-          aria-controls="step2"
-          aria-expanded="false">
-    <span class="step-number-mobile" aria-hidden="true">2</span>
-    <span class="flex-grow-1 d-flex flex-column text-start">
-      <span class="fw-semibold">Price Range</span>
-      <small class="text-white">Set your budget</small>
-
-    </span>
-    <i class="bi bi-chevron-down" aria-hidden="true"></i>
-  </button>
-
-  <div class="step-body-mobile collapse" id="step2">
-    <div class="row">
-      <div class="col-6">
-        <label class="form-label fw-semibold" for="minPrice">Min Price</label>
+      <div class="search-container p-3" style="margin:0 auto;">
         <div class="input-group-mobile">
-          <span class="input-addon">$</span>
-          <input type="number" class="form-control-mobile" id="minPrice" name="min-price" placeholder="10" step="0.01">
+          <span class="input-addon"><i class="bi bi-search"></i></span>
+          <input type="text"
+                 class="form-control-mobile"
+                 id="topSearchInput"
+                 name="q"
+                 placeholder="Search Amazon products..."
+                 autocomplete="off">
         </div>
+        <small class="text-muted">Try: "wireless headphones", "kitchen gadgets", or "gaming mouse"</small>
       </div>
-      <div class="col-6">
-        <label class="form-label fw-semibold" for="maxPrice">Max Price</label>
-        <div class="input-group-mobile">
-          <span class="input-addon">$</span>
-          <input type="number" class="form-control-mobile" id="maxPrice" name="max-price" placeholder="100" step="0.01">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- Step 3: Quick Filters -->
-<div class="step-card-mobile">
-  <button type="button"
-          class="step-header-mobile collapsed"
-          data-bs-toggle="collapse"
-          data-bs-target="#step3"
-          aria-controls="step3"
-          aria-expanded="false">
-    <span class="step-number-mobile" aria-hidden="true">3</span>
-    <span class="flex-grow-1 d-flex flex-column text-start">
-      <span class="fw-semibold">Quick Filters</span>
-      <small class="text-white">Rating, discount, sort order</small>
+      <!-- Accordion starts directly under search bar -->
+      <div class="accordion-mobile" id="filtersAccordion">
 
-    </span>
-    <i class="bi bi-chevron-down" aria-hidden="true"></i>
-  </button>
-
-  <div class="step-body-mobile collapse" id="step3">
-    <label class="form-label fw-semibold" for="sortOrder">Sort By</label>
-    <select class="form-control-mobile" id="sortOrder" name="sort">
-      <option value="relevance">Best Match</option>
-      <option value="price-asc-rank">Price: Low to High</option>
-      <option value="price-desc-rank">Price: High to Low</option>
-      <option value="review-rank">Customer Reviews</option>
-      <option value="date-desc-rank">Newest</option>
-    </select>
-
-    <label class="form-label fw-semibold" for="minRating">Minimum Rating</label>
-    <select class="form-control-mobile" id="minRating" name="min-rating">
-      <option value="">Any Rating</option>
-      <option value="1">1+ Stars</option>
-      <option value="2">2+ Stars</option>
-      <option value="3">3+ Stars</option>
-      <option value="4">4+ Stars</option>
-    </select>
-
-    <label class="form-label fw-semibold" for="minDiscount">Minimum Discount</label>
-    <select class="form-control-mobile" id="minDiscount" name="min-discount">
-      <option value="">Any Discount</option>
-      <option value="10">10%+</option>
-      <option value="20">20%+</option>
-      <option value="30">30%+</option>
-      <option value="50">50%+</option>
-    </select>
-  </div>
-</div>
-
-<!-- Step 4: Brand Filter -->
-<div class="step-card-mobile">
-  <button type="button"
-          class="step-header-mobile collapsed"
-          data-bs-toggle="collapse"
-          data-bs-target="#step4"
-          aria-controls="step4"
-          aria-expanded="false">
-    <span class="step-number-mobile" aria-hidden="true">4</span>
-    <span class="flex-grow-1 d-flex flex-column text-start">
-      <span class="fw-semibold">Brand Filter</span>
-      <small class="text-white">Filter by specific brands</small>
-
-    </span>
-    <i class="bi bi-chevron-down" aria-hidden="true"></i>
-  </button>
-
-  <div class="step-body-mobile collapse" id="step4">
-    <label class="form-label fw-semibold" for="brandInclude">Include Brands</label>
-    <input type="text" class="form-control-mobile" id="brandInclude" name="brand-include" placeholder="e.g. Apple, Samsung, Nike">
-    <small class="text-muted">Separate multiple brands with commas</small>
-  </div>
-</div>
-
-<!-- Step 5: Deal Filters -->
-<div class="step-card-mobile">
-  <button type="button"
-          class="step-header-mobile collapsed"
-          data-bs-toggle="collapse"
-          data-bs-target="#step5"
-          aria-controls="step5"
-          aria-expanded="false">
-    <span class="step-number-mobile" aria-hidden="true">5</span>
-    <span class="flex-grow-1 d-flex flex-column text-start">
-      <span class="fw-semibold">Deal Filters</span>
-      <small class="text-white">Prime, Lightning Deals, Coupons</small>
-
-    </span>
-    <i class="bi bi-chevron-down" aria-hidden="true"></i>
-  </button>
-
-  <div class="step-body-mobile collapse" id="step5">
-    <!-- Popular Deals -->
-    <div class="filter-section-mobile">
-      <div class="filter-title-mobile">
-        <i class="bi bi-lightning-fill"></i>
-        Popular Deals
-      </div>
-      <div class="checkbox-grid-mobile">
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="primeOnly" name="prime-only" type="checkbox">
-          <label class="checkbox-label-mobile" for="primeOnly">
-            <i class="bi bi-star-fill me-2"></i>
-            Prime Only
-          </label>
-        </div>
-
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="lightningDeals" name="lightning-deals" type="checkbox">
-          <label class="checkbox-label-mobile" for="lightningDeals">
-            <i class="bi bi-lightning-charge-fill me-2"></i>
-            Lightning Deals
-          </label>
-        </div>
-
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="coupons" name="coupons" type="checkbox">
-          <label class="checkbox-label-mobile" for="coupons">
-            <i class="bi bi-ticket-perforated me-2"></i>
-            Coupons
-          </label>
-        </div>
-
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="freeShipping" name="free-shipping" type="checkbox">
-          <label class="checkbox-label-mobile" for="freeShipping">
-            <i class="bi bi-truck me-2"></i>
-            Free Shipping
-          </label>
-        </div>
-      </div>
-    </div>
-
-    <!-- More Deal Types -->
-    <div class="filter-section-mobile">
-      <div class="filter-title-mobile">
-        <i class="bi bi-fire"></i>
-        More Deal Types
-      </div>
-      <div class="checkbox-grid-mobile">
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="todaysDeals" name="todays-deals" type="checkbox">
-          <span class="experimental-badge-mobile">NEW</span>
-          <label class="checkbox-label-mobile" for="todaysDeals">
-            <i class="bi bi-fire me-2"></i>
-            Today's Deals
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="outletDeals" name="outlet-deals" type="checkbox">
-          <label class="checkbox-label-mobile" for="outletDeals">
-            <i class="bi bi-shop me-2"></i>
-            Outlet Deals
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="bestSellerDeals" name="best-seller-deals" type="checkbox">
-          <span class="experimental-badge-mobile">HOT</span>
-          <label class="checkbox-label-mobile" for="bestSellerDeals">
-            <i class="bi bi-trophy me-2"></i>
-            Best Sellers
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="clearanceDeals" name="clearance-deals" type="checkbox">
-          <label class="checkbox-label-mobile" for="clearanceDeals">
-            <i class="bi bi-cart-dash me-2"></i>
-            Clearance
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="bogoDeals" name="bogo-deals" type="checkbox">
-          <span class="experimental-badge-mobile">BETA</span>
-          <label class="checkbox-label-mobile" for="bogoDeals">
-            <i class="bi bi-plus-circle me-2"></i>
-            Buy One Get One
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="limitedTimeDeals" name="limited-time-deals" type="checkbox">
-          <span class="experimental-badge-mobile">BETA</span>
-          <label class="checkbox-label-mobile" for="limitedTimeDeals">
-            <i class="bi bi-clock me-2"></i>
-            Limited-Time
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="flashSales" name="flash-sales" type="checkbox">
-          <span class="experimental-badge-mobile">BETA</span>
-          <label class="checkbox-label-mobile" for="flashSales">
-            <i class="bi bi-lightning me-2"></i>
-            Flash Sales
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="under25Deals" name="under-25-deals" type="checkbox">
-          <span class="experimental-badge-mobile">BETA</span>
-          <label class="checkbox-label-mobile" for="under25Deals">
-            <i class="bi bi-piggy-bank me-2"></i>
-            Under $25
-          </label>
-        </div>
-      </div>
-    </div>
-
-    <!-- Shipping & Stock -->
-    <div class="filter-section-mobile">
-      <div class="filter-title-mobile">
-        <i class="bi bi-box-seam"></i>
-        Shipping & Availability
-      </div>
-      <div class="checkbox-grid-mobile">
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="inStock" name="in-stock" type="checkbox">
-          <label class="checkbox-label-mobile" for="inStock">
-            <i class="bi bi-box-seam me-2"></i>
-            In Stock
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="fbaOnly" name="fba-only" type="checkbox">
-          <label class="checkbox-label-mobile" for="fbaOnly">
-            <i class="bi bi-box me-2"></i>
-            Fulfilled by Amazon
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="shipsFromUS" name="ships-from-us" type="checkbox">
-          <label class="checkbox-label-mobile" for="shipsFromUS">
-           <i class="bi bi-flag-fill me-2" aria-hidden="true"></i>
-
-            Ships from US
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="nextDayShipping" name="next-day-shipping" type="checkbox">
-          <span class="experimental-badge-mobile">BETA</span>
-          <label class="checkbox-label-mobile" for="nextDayShipping">
-            <i class="bi bi-rocket-takeoff me-2"></i>
-            Next-Day Shipping
-          </label>
-        </div>
-      </div>
-    </div>
-
-    <!-- Eco-Friendly & Ethical -->
-    <div class="filter-section-mobile">
-      <div class="filter-title-mobile">
-        <i class="bi bi-leaf"></i>
-        Eco-Friendly & Ethical
-      </div>
-      <div class="checkbox-grid-mobile">
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="climatePledge" name="climate-pledge" type="checkbox">
-          <label class="checkbox-label-mobile" for="climatePledge">
-            <i class="bi bi-globe-americas me-2"></i>
-            Climate Pledge
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="smallBusiness" name="small-business" type="checkbox">
-          <label class="checkbox-label-mobile" for="smallBusiness">
-            <i class="bi bi-shop-window me-2"></i>
-            Small Business
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="ecoFriendly" name="eco-friendly" type="checkbox">
-          <label class="checkbox-label-mobile" for="ecoFriendly">
-            <i class="bi bi-recycle me-2"></i>
-            Eco-Friendly
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="organicProducts" name="organic-products" type="checkbox">
-          <label class="checkbox-label-mobile" for="organicProducts">
-            <i class="bi bi-flower2 me-2"></i>
-            Organic
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="veganProducts" name="vegan-products" type="checkbox">
-          <label class="checkbox-label-mobile" for="veganProducts">
-            <i class="bi bi-heart-fill me-2"></i>
-            Vegan
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="crueltyFree" name="cruelty-free" type="checkbox">
-          <label class="checkbox-label-mobile" for="crueltyFree">
-            <i class="bi bi-shield-heart me-2"></i>
-            Cruelty-Free
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="fairTrade" name="fair-trade" type="checkbox">
-          <span class="experimental-badge-mobile">BETA</span>
-          <label class="checkbox-label-mobile" for="fairTrade">
-            <i class="bi bi-handshake me-2"></i>
-            Fair Trade
-          </label>
-        </div>
-        <div class="checkbox-card-mobile">
-          <input class="checkbox-input-mobile" id="madeInUSA" name="made-in-usa" type="checkbox">
-          <span class="experimental-badge-mobile">BETA</span>
-          <label class="checkbox-label-mobile" for="madeInUSA">
-            <i class="bi bi-flag me-2" aria-hidden="true"></i>
-            Made in USA
-          </label>
-        </div>
-      </div>
-    </div>
-
-  <!-- Gift Ideas -->
-<div class="filter-section-mobile">
-  <div class="filter-title-mobile">
-    <i class="bi bi-gift"></i>
-    Gift Ideas
-  </div>
-  <div class="checkbox-grid-mobile">
-
-    <div class="checkbox-card-mobile">
-      <input class="checkbox-input-mobile" id="giftsForHer" name="gifts-for-her" type="checkbox">
-      <span class="experimental-badge-mobile">BETA</span>
-      <label class="checkbox-label-mobile" for="giftsForHer">
-        <i class="bi bi-heart me-2"></i>
-        Gifts for Her
-      </label>
-    </div>
-
-    <div class="checkbox-card-mobile">
-      <input class="checkbox-input-mobile" id="giftsForHim" name="gifts-for-him" type="checkbox">
-      <span class="experimental-badge-mobile">BETA</span>
-      <label class="checkbox-label-mobile" for="giftsForHim">
-        <i class="bi bi-person me-2"></i>
-        Gifts for Him
-      </label>
-    </div>
-
-    <div class="checkbox-card-mobile">
-      <input class="checkbox-input-mobile" id="giftsForKids" name="gifts-for-kids" type="checkbox">
-      <span class="experimental-badge-mobile">BETA</span>
-      <label class="checkbox-label-mobile" for="giftsForKids">
-        <i class="bi bi-balloon me-2"></i>
-        Gifts for Kids
-      </label>
-    </div>
-
-    <div class="checkbox-card-mobile">
-      <input class="checkbox-input-mobile" id="giftUnder25" name="gifts-under-25" type="checkbox">
-      <span class="experimental-badge-mobile">BETA</span>
-      <label class="checkbox-label-mobile" for="giftUnder25">
-        <i class="bi bi-currency-dollar me-2"></i>
-        Gifts Under $25
-      </label>
-    </div>
-
-    <div class="checkbox-card-mobile">
-      <input class="checkbox-input-mobile" id="birthdayGifts" name="birthday-gifts" type="checkbox">
-      <span class="experimental-badge-mobile">BETA</span>
-      <label class="checkbox-label-mobile" for="birthdayGifts">
-        <i class="bi bi-cake2 me-2"></i>
-        Birthday Gifts
-      </label>
-    </div>
-
-    <div class="checkbox-card-mobile">
-      <input class="checkbox-input-mobile" id="holidayGifts" name="holiday-gifts" type="checkbox">
-      <span class="experimental-badge-mobile">BETA</span>
-      <label class="checkbox-label-mobile" for="holidayGifts">
-        <i class="bi bi-tree me-2"></i>
-        Holiday Gifts
-      </label>
-    </div>
-
-  </div>
-</div>
-
-<!-- Special Categories -->
-<div class="filter-section-mobile">
-  <div class="filter-title-mobile">
-    <i class="bi bi-star"></i>
-    Special Categories
-  </div>
-  <div class="checkbox-grid-mobile">
-
-    <div class="checkbox-card-mobile">
-      <input class="checkbox-input-mobile" id="amazonBrands" name="amazon-brands" type="checkbox">
-      <label class="checkbox-label-mobile" for="amazonBrands">
-        <i class="bi bi-award me-2"></i>
-        Amazon Brands
-      </label>
-    </div>
-
-    <div class="checkbox-card-mobile">
-      <input class="checkbox-input-mobile" id="newReleases" name="new-releases" type="checkbox">
-      <span class="experimental-badge-mobile">BETA</span>
-      <label class="checkbox-label-mobile" for="newReleases">
-        <i class="bi bi-sparkles me-2"></i>
-        New Releases
-      </label>
-    </div>
-
-    <div class="checkbox-card-mobile">
-      <input class="checkbox-input-mobile" id="trendingNow" name="trending-now" type="checkbox">
-      <span class="experimental-badge-mobile">HOT</span>
-      <label class="checkbox-label-mobile" for="trendingNow">
-        <i class="bi bi-graph-up-arrow me-2"></i>
-        Trending Now
-      </label>
-    </div>
-
-    <div class="checkbox-card-mobile">
-      <input class="checkbox-input-mobile" id="warehouseDeals" name="warehouse-deals" type="checkbox">
-      <span class="experimental-badge-mobile">BETA</span>
-      <label class="checkbox-label-mobile" for="warehouseDeals">
-        <i class="bi bi-tools me-2"></i>
-        Warehouse Deals
-      </label>
-    </div>
-
-    <div class="checkbox-card-mobile">
-      <input class="checkbox-input-mobile" id="openBoxDeals" name="open-box-deals" type="checkbox">
-      <span class="experimental-badge-mobile">BETA</span>
-      <label class="checkbox-label-mobile" for="openBoxDeals">
-        <i class="bi bi-box-arrow-up me-2"></i>
-        Open Box
-      </label>
-    </div>
-
-    <div class="checkbox-card-mobile">
-      <input class="checkbox-input-mobile" id="endsSoon" name="ends-soon" type="checkbox">
-      <span class="experimental-badge-mobile">URGENT</span>
-      <label class="checkbox-label-mobile" for="endsSoon">
-        <i class="bi bi-alarm me-2"></i>
-        Ends Soon
-      </label>
-    </div>
-
-  </div>
-</div>
-
-  </div>
-</div>
-
-<!-- Step 6: Submit -->
-<div class="step-card-mobile">
-  <button type="button"
-          class="step-header-mobile collapsed"
-          data-bs-toggle="collapse"
-          data-bs-target="#step6"
-          aria-controls="step6"
-          aria-expanded="false">
-    <span class="step-number-mobile" aria-hidden="true">6</span>
-    <span class="flex-grow-1 d-flex flex-column text-start">
-      <span class="fw-semibold">Search Amazon</span>
-      <small class="text-muted">Get your filtered results</small>
-    </span>
-    <i class="bi bi-chevron-down" aria-hidden="true"></i>
-  </button>
-
-  <div class="step-body-mobile collapse" id="step6">
-    <div class="text-center">
-      <i class="bi bi-check-circle-fill" style="font-size: 3rem;"></i>
-      <h4 class="fw-bold mt-3 mb-3">Ready to Search!</h4>
-      <p class="text-muted mb-4">Click below to see your filtered Amazon results</p>
-      <button type="submit" class="btn-mobile btn-primary-mobile">
-        <i class="bi bi-search"></i>
-        Search Amazon Now
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- ✅ CLOSE the form and its container BEFORE features/FAQ -->
-</form>
-</div><!-- /.search-container -->
-
-<!-- Features Grid (outside the form) -->
-<div class="features-mobile">
-  <!-- ...unchanged... -->
-</div>
-
-<!-- ✅ FAQ Section (outside the form, one container) -->
-<section class="accordion-mobile" id="faqs">
-  <h2 class="text-center fw-bold mb-4">Amazon Deals & Advanced Search Tool — FAQs</h2>
-
-  <div class="accordion-item-mobile">
-    <button class="accordion-header-mobile" onclick="toggleAccordion('faq0')" aria-controls="faq0-body" aria-expanded="false">
-      <span>Do I need to complete all 6 steps?</span>
-      <i class="bi bi-chevron-down" id="faq0-icon"></i>
-    </button>
-    <div class="accordion-body-mobile d-none" id="faq0-body">
-      <p><strong>No—only Step 1 is required.</strong> Type a product keyword (e.g., “wireless earbuds”) and tap <em>Search Amazon Now</em>. Steps 2–5 add optional <strong>Amazon search filters</strong> (price range, rating, brand includes, <strong>Prime-only deals</strong>, <strong>Lightning Deals</strong>, and coupons) so you can <strong>find today’s best Amazon deals fast</strong>.</p>
-      <p><a href="#search-form">Start your Amazon deal search now</a></p>
-    </div>
-  </div>
-
-  <div class="accordion-item-mobile">
-    <button class="accordion-header-mobile" onclick="toggleAccordion('faq1')" aria-controls="faq1-body" aria-expanded="false">
-      <span>What is Deal Shopper Pro?</span>
-      <i class="bi bi-chevron-down" id="faq1-icon"></i>
-    </button>
-    <div class="accordion-body-mobile d-none" id="faq1-body">
-      <p><strong>Deal Shopper Pro is a free Advanced Amazon Search Tool</strong> and deal finder. It layers smart filters on top of live Amazon results to uncover <strong>Prime-only offers</strong>, <strong>Amazon Lightning Deals</strong>, and <strong>hidden coupons</strong> in seconds—no signup required.</p>
-      <p>Use it as your go-to <strong>Amazon discount finder</strong> to save time and money with cleaner, faster results than default Amazon filters.</p>
-    </div>
-  </div>
-
-  <div class="accordion-item-mobile">
-    <button class="accordion-header-mobile" onclick="toggleAccordion('faq2')" aria-controls="faq2-body" aria-expanded="false">
-      <span>How do I find Prime-only deals?</span>
-      <i class="bi bi-chevron-down" id="faq2-icon"></i>
-    </button>
-    <div class="accordion-body-mobile d-none" id="faq2-body">
-      <p>Open <strong>Step 5 – Deal Filters</strong> and toggle <strong>Prime Only</strong>. For the strongest results, combine it with <em>Minimum Discount</em> or <em>Minimum Rating</em> in Step 3 and sort by <em>Newest</em>. This highlights <strong>today’s best Prime deals</strong> with fast shipping.</p>
-      <p><a href="/prime-only-deals.html">Learn more about Prime-only deals</a></p>
-    </div>
-  </div>
-
-  <div class="accordion-item-mobile">
-    <button class="accordion-header-mobile" onclick="toggleAccordion('faq3')" aria-controls="faq3-body" aria-expanded="false">
-      <span>Is this free to use?</span>
-      <i class="bi bi-chevron-down" id="faq3-icon"></i>
-    </button>
-    <div class="accordion-body-mobile d-none" id="faq3-body">
-      <p><strong>Yes—100% free.</strong> No account, no paywalls, and no subscriptions. We may earn a commission from qualifying purchases (Amazon Associate), but using this <strong>Amazon Deal Finder</strong> costs you nothing.</p>
-    </div>
-  </div>
-
-  <div class="accordion-item-mobile">
-    <button class="accordion-header-mobile" onclick="toggleAccordion('faq4')" aria-controls="faq4-body" aria-expanded="false">
-      <span>Does this work on mobile?</span>
-      <i class="bi bi-chevron-down" id="faq4-icon"></i>
-    </button>
-    <div class="accordion-body-mobile d-none" id="faq4-body">
-      <p><strong>Absolutely.</strong> Deal Shopper Pro is mobile-first and fast on iPhone, Android, and tablets. It loads quickly and works great in Chrome, Safari, and Edge so you can <strong>find Amazon deals on the go</strong> with a <strong>mobile Amazon deal finder</strong>.</p>
-    </div>
-  </div>
-
-  <!-- New FAQs -->
-  <div class="accordion-item-mobile">
-    <button class="accordion-header-mobile" onclick="toggleAccordion('faqNew1')" aria-controls="faqNew1-body" aria-expanded="false">
-      <span>How do I find Lightning Deals on Amazon?</span>
-      <i class="bi bi-chevron-down" id="faqNew1-icon"></i>
-    </button>
-    <div class="accordion-body-mobile d-none" id="faqNew1-body">
-      <p>Go to <strong>Step 5 – Deal Filters</strong> and check <strong>Lightning Deals</strong>. Then sort by <em>Newest</em> to surface <strong>time-sensitive Lightning Deals</strong> that are live right now. These deals expire quickly—refresh often during Prime Day, Black Friday, and holiday events.</p>
-      <p><a href="/lightning-deals.html">Guide: Finding Amazon Lightning Deals</a></p>
-    </div>
-  </div>
-
-  <div class="accordion-item-mobile">
-    <button class="accordion-header-mobile" onclick="toggleAccordion('faqNew2')" aria-controls="faqNew2-body" aria-expanded="false">
-      <span>Can I filter Amazon deals by Prime only?</span>
-      <i class="bi bi-chevron-down" id="faqNew2-icon"></i>
-    </button>
-    <div class="accordion-body-mobile d-none" id="faqNew2-body">
-      <p><strong>Yes.</strong> Toggle <strong>Prime Only</strong> in Step 5. For faster delivery, combine it with <strong>In Stock</strong>, <strong>Fulfilled by Amazon (FBA)</strong>, or <strong>Ships from US</strong>. This stacks filters to reveal <strong>Prime-eligible discounts</strong> first.</p>
-      <p><a href="/prime-only-deals.html">Prime-only deals tips</a></p>
-    </div>
-  </div>
-
-  <div class="accordion-item-mobile">
-    <button class="accordion-header-mobile" onclick="toggleAccordion('faqNew3')" aria-controls="faqNew3-body" aria-expanded="false">
-      <span>Does Deal Shopper Pro cost money?</span>
-      <i class="bi bi-chevron-down" id="faqNew3-icon"></i>
-    </button>
-    <div class="accordion-body-mobile d-none" id="faqNew3-body">
-      <p><strong>No—Deal Shopper Pro is free.</strong> It’s a <strong>free Amazon search tool</strong> that builds optimized queries to help you find <strong>today’s best Amazon deals</strong>, including <strong>coupons</strong>, <strong>Lightning Deals</strong>, and <strong>Prime-only offers</strong>.</p>
-    </div>
-  </div>
-</section>
-
-
-
-<p>
-  Curious about why we built this tool? Read our guide, 
-  <a href="/article/better-way-to-search-amazon.html">Better Way to Search Amazon</a>, 
-  which explains the limitations of Amazon’s filters and how Deal Shopper Pro solves them.
-</p>
-
-  
-<!-- ===== Share With Friends ===== -->
-<section class="container my-5">
-  <div class="card shadow-sm border-0 rounded-4">
-    <div class="card-body p-4 p-md-5">
-      <div class="text-center my-4">
-        <h2 class="h5">📲 Share with Friends</h2>
-        <p class="text-muted">Send this to someone who needs smarter Amazon filters:</p>
-        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
-          
-          <!-- WhatsApp -->
-          <a class="btn btn-success share-btn"
-             href="#"
-             onclick="shareWhatsApp(event)"
-             aria-label="Share this page on WhatsApp">
-            WhatsApp
-          </a>
-
-          <!-- Messenger -->
-          <a class="btn btn-primary share-btn"
-             href="#"
-             onclick="shareMessenger(event)"
-             aria-label="Share this page on Messenger">
-            Messenger
-          </a>
-
-          <!-- SMS -->
-          <a class="btn btn-secondary share-btn"
-             href="#"
-             onclick="shareSMS(event)"
-             aria-label="Send this page via Text Message">
-            Text Message
-          </a>
-
-          <!-- Twitter / X -->
-          <a class="btn btn-info share-btn"
-             href="#"
-             onclick="shareTwitter(event)"
-             aria-label="Share this page on Twitter / X">
-            Twitter / X
-          </a>
-
-          <!-- Facebook -->
-          <a class="btn btn-primary share-btn"
-             href="#"
-             onclick="shareFacebook(event)"
-             aria-label="Share this page on Facebook">
-            Facebook
-          </a>
-
-          <!-- Copy Link -->
-          <button class="btn btn-dark share-btn"
-                  type="button"
-                  aria-label="Copy page link to clipboard"
-                  onclick="copyLink(event)">
-            Copy Page Link
+        <!-- First Accordion: Selected Filters (everything checked in screenshots) -->
+        <div class="accordion-item-mobile">
+          <button class="accordion-header-mobile" type="button" data-bs-toggle="collapse" data-bs-target="#selectedFilters" aria-expanded="true" aria-controls="selectedFilters">
+            <span class="fw-semibold">Selected Filters</span>
+            <i class="bi bi-chevron-down"></i>
           </button>
-
+          <div id="selectedFilters" class="accordion-body-mobile collapse show">
+            <div class="filter-section-mobile">
+              <div class="filter-title-mobile">
+                <i class="bi bi-grid"></i>
+                Special Categories
+              </div>
+              <div class="checkbox-grid-mobile">
+                <!-- From screenshot #2: Warehouse Deals is checked -->
+                <label class="checkbox-card-mobile checked" for="warehouseDeals">
+                  <input class="checkbox-input-mobile" id="warehouseDeals" name="warehouse-deals" type="checkbox" checked>
+                  <span class="checkbox-label-mobile"><i class="bi bi-wrench-adjustable me-2"></i>Warehouse Deals</span>
+                </label>
+              </div>
+              <small class="text-muted d-block mt-2">Add or remove more filters in the sections below — this panel just shows your pre‑selected choices.</small>
+            </div>
+          </div>
         </div>
+
+        <!-- Price Range -->
+        <div class="accordion-item-mobile">
+          <button class="accordion-header-mobile collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#priceRange" aria-expanded="false" aria-controls="priceRange">
+            <span class="fw-semibold">Price Range</span>
+            <small class="text-muted">Set your budget</small>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div id="priceRange" class="accordion-body-mobile collapse">
+            <div class="row">
+              <div class="col-6">
+                <label class="form-label fw-semibold" for="minPrice">Min Price</label>
+                <div class="input-group-mobile">
+                  <span class="input-addon">$</span>
+                  <input type="number" class="form-control-mobile" id="minPrice" name="min-price" placeholder="10" step="0.01">
+                </div>
+              </div>
+              <div class="col-6">
+                <label class="form-label fw-semibold" for="maxPrice">Max Price</label>
+                <div class="input-group-mobile">
+                  <span class="input-addon">$</span>
+                  <input type="number" class="form-control-mobile" id="maxPrice" name="max-price" placeholder="100" step="0.01">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Filters -->
+        <div class="accordion-item-mobile">
+          <button class="accordion-header-mobile collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#quickFilters" aria-expanded="false" aria-controls="quickFilters">
+            <span class="fw-semibold">Quick Filters</span>
+            <small class="text-muted">Rating, discount, sort order</small>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div id="quickFilters" class="accordion-body-mobile collapse">
+            <label class="form-label fw-semibold" for="sortOrder">Sort By</label>
+            <select class="form-control-mobile" id="sortOrder" name="sort">
+              <option value="relevance">Best Match</option>
+              <option value="price-asc-rank">Price: Low to High</option>
+              <option value="price-desc-rank">Price: High to Low</option>
+              <option value="review-rank">Customer Reviews</option>
+              <option value="date-desc-rank">Newest</option>
+            </select>
+
+            <label class="form-label fw-semibold" for="minRating">Minimum Rating</label>
+            <select class="form-control-mobile" id="minRating" name="min-rating">
+              <option value="">Any Rating</option>
+              <option value="1">1+ Stars</option>
+              <option value="2">2+ Stars</option>
+              <option value="3">3+ Stars</option>
+              <option value="4">4+ Stars</option>
+            </select>
+
+            <label class="form-label fw-semibold" for="minDiscount">Minimum Discount</label>
+            <select class="form-control-mobile" id="minDiscount" name="min-discount">
+              <option value="">Any Discount</option>
+              <option value="10">10%+</option>
+              <option value="20">20%+</option>
+              <option value="30">30%+</option>
+              <option value="50">50%+</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Brand Filter -->
+        <div class="accordion-item-mobile">
+          <button class="accordion-header-mobile collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#brandFilter" aria-expanded="false" aria-controls="brandFilter">
+            <span class="fw-semibold">Brand Filter</span>
+            <small class="text-muted">Filter by specific brands</small>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div id="brandFilter" class="accordion-body-mobile collapse">
+            <label class="form-label fw-semibold" for="brandInclude">Include Brands</label>
+            <input type="text" class="form-control-mobile" id="brandInclude" name="brand-include" placeholder="e.g. Adidas, Apple, Samsung">
+            <small class="text-muted">Separate multiple brands with commas</small>
+          </div>
+        </div>
+
+        <!-- Deal Filters (keep same as source) -->
+        <div class="accordion-item-mobile">
+          <button class="accordion-header-mobile collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dealFilters" aria-expanded="false" aria-controls="dealFilters">
+            <span class="fw-semibold">Deal Filters</span>
+            <small class="text-muted">Prime, Lightning Deals, Coupons</small>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div id="dealFilters" class="accordion-body-mobile collapse">
+            <div class="filter-section-mobile">
+              <div class="filter-title-mobile"><i class="bi bi-lightning-fill"></i> Popular Deals</div>
+              <div class="checkbox-grid-mobile">
+                <label class="checkbox-card-mobile" for="primeOnly">
+                  <input class="checkbox-input-mobile" id="primeOnly" name="prime-only" type="checkbox">
+                  <span class="checkbox-label-mobile"><i class="bi bi-star-fill me-2"></i>Prime Only</span>
+                </label>
+                <label class="checkbox-card-mobile" for="lightningDeals">
+                  <input class="checkbox-input-mobile" id="lightningDeals" name="lightning-deals" type="checkbox">
+                  <span class="checkbox-label-mobile"><i class="bi bi-lightning-charge-fill me-2"></i>Lightning Deals</span>
+                </label>
+                <label class="checkbox-card-mobile" for="coupons">
+                  <input class="checkbox-input-mobile" id="coupons" name="coupons" type="checkbox">
+                  <span class="checkbox-label-mobile"><i class="bi bi-ticket-perforated me-2"></i>Coupons</span>
+                </label>
+                <label class="checkbox-card-mobile" for="freeShipping">
+                  <input class="checkbox-input-mobile" id="freeShipping" name="free-shipping" type="checkbox">
+                  <span class="checkbox-label-mobile"><i class="bi bi-truck me-2"></i>Free Shipping</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="filter-section-mobile">
+              <div class="filter-title-mobile"><i class="bi bi-box-seam"></i> Shipping & Availability</div>
+              <div class="checkbox-grid-mobile">
+                <label class="checkbox-card-mobile" for="inStock">
+                  <input class="checkbox-input-mobile" id="inStock" name="in-stock" type="checkbox">
+                  <span class="checkbox-label-mobile"><i class="bi bi-box-seam me-2"></i>In Stock</span>
+                </label>
+                <label class="checkbox-card-mobile" for="fbaOnly">
+                  <input class="checkbox-input-mobile" id="fbaOnly" name="fba-only" type="checkbox">
+                  <span class="checkbox-label-mobile"><i class="bi bi-box me-2"></i>Fulfilled by Amazon</span>
+                </label>
+                <label class="checkbox-card-mobile" for="shipsFromUS">
+                  <input class="checkbox-input-mobile" id="shipsFromUS" name="ships-from-us" type="checkbox">
+                  <span class="checkbox-label-mobile"><i class="bi bi-flag-fill me-2"></i>Ships from US</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="filter-section-mobile">
+              <div class="filter-title-mobile"><i class="bi bi-leaf"></i> Eco‑Friendly & Ethical</div>
+              <div class="checkbox-grid-mobile">
+                <label class="checkbox-card-mobile" for="climatePledge">
+                  <input class="checkbox-input-mobile" id="climatePledge" name="climate-pledge" type="checkbox">
+                  <span class="checkbox-label-mobile"><i class="bi bi-globe-americas me-2"></i>Climate Pledge</span>
+                </label>
+                <label class="checkbox-card-mobile" for="smallBusiness">
+                  <input class="checkbox-input-mobile" id="smallBusiness" name="small-business" type="checkbox">
+                  <span class="checkbox-label-mobile"><i class="bi bi-shop-window me-2"></i>Small Business</span>
+                </label>
+                <label class="checkbox-card-mobile" for="ecoFriendly">
+                  <input class="checkbox-input-mobile" id="ecoFriendly" name="eco-friendly" type="checkbox">
+                  <span class="checkbox-label-mobile"><i class="bi bi-recycle me-2"></i>Eco‑Friendly</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit/Search Amazon -->
+        <div class="accordion-item-mobile">
+          <button class="accordion-header-mobile collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#searchAmazon" aria-expanded="false" aria-controls="searchAmazon">
+            <span class="fw-semibold">Search Amazon</span>
+            <small class="text-muted">Get your filtered results</small>
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <div id="searchAmazon" class="accordion-body-mobile collapse">
+            <button class="btn-mobile btn-primary-mobile" type="submit">
+              <i class="bi bi-search"></i> Search Amazon
+            </button>
+            <small class="text-muted d-block mt-2">Disclosure: As an Amazon Associate I earn from qualifying purchases.</small>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </div>
-</section>
+    </form>
+  </main>
 
-<section class="container my-5">
-  <div class="text-center">
-    <h2 class="h4 fw-bold mb-3">✅ Why Shoppers Choose Deal Shopper Pro</h2>
-    <p class="lead">
-      Deal Shopper Pro is more than just another Amazon search box — it’s an 
-      <strong>advanced product filter</strong> designed to uncover the exact items you want, 
-      including hidden coupons and daily discounts. Shoppers use our tool as their 
-      go-to <strong>Amazon discount finder</strong> because it saves time, money, 
-      and frustration compared to Amazon’s default filters.
-    </p>
-    <p>
-      Whether you’re searching for Prime-only deals, Lightning Deals, or just 
-      want the fastest <strong>Amazon search tool</strong> for today’s best prices, 
-      Deal Shopper Pro helps you shop smarter in seconds.
-    </p>
-  </div>
-</section>
+  <!-- Bootstrap JS for accordion -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
-  <section id="trending-deals" class="px-3 py-4">
-  <h2 class="mb-3">Today’s trending deals on Amazon</h2>
-  <p class="text-muted mb-3">Updated daily — examples of popular searches you can open instantly.</p>
-  <ul class="mb-3">
-    <li><a href="#search-form">Wireless earbuds under $50</a></li>
-    <li><a href="#search-form">Kitchen gadgets with coupons</a></li>
-    <li><a href="#search-form">Gaming mice 4★ & up</a></li>
-  </ul>
-  <small class="text-muted">Tip: Use the <strong>Lightning Deals</strong> and <strong>Prime Only</strong> toggles in Step 5 to refine these further.</small>
-</section>
+  <!-- Simple URL builder placeholder (non-destructive) -->
+  <script>
+    // If you have searchlogic-v2.js, load/replace this.
+    document.getElementById('amazon-search-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const q = document.getElementById('topSearchInput').value.trim();
+      const params = new URLSearchParams();
+      if (q) params.set('k', q);
 
-<!-- Call-to-Action: Lightning Deals -->
-<section class="text-center my-4 px-3">
-  <h2 class="fw-bold mb-3">Want the Hottest Discounts Right Now?</h2>
-  <p class="mb-3">
-    Discover the best limited-time offers instantly with our 
-    <a href="https://www.dealshopperpro.com/lightning-deals.html">
-      Amazon Lightning Deals finder
-    </a>. 
-    Updated in real time, it’s the fastest way to catch deals before they expire.
-  </p>
-  <a href="https://www.dealshopperpro.com/lightning-deals.html" 
-     class="btn-mobile btn-primary-mobile">
-    ⚡ Browse Amazon Lightning Deals
-  </a>
-</section>
-
-<!-- Call-to-Action: My Story -->
-<section class="text-center my-4 px-3" aria-labelledby="cta-my-story">
-  <h2 id="cta-my-story" class="fw-bold mb-3">Overcoming Adversity — My Story</h2>
-  <p class="mb-3">
-    Looking for real motivation? Read my 
-    <a href="https://www.dealshopperpro.com/my-story.html">
-      overcoming adversity success story
-    </a>
-    — a true account of determination and resilience after losing everything.
-  </p>
-  <a href="https://www.dealshopperpro.com/my-story.html" 
-     class="btn-mobile btn-success-mobile"
-     aria-label="Read my story of overcoming adversity and rebuilding life">
-    📖 Read the full story
-  </a>
-</section>
-
-
-  <!-- Mobile Share Bar -->
-<div class="share-bar-mobile" id="shareBar">
-  <div class="d-flex justify-content-between align-items-center">
-    <span class="small text-muted">Share this tool</span>
-    <div class="share-buttons">
-      <a href="#" class="share-btn share-btn-success" onclick="shareWhatsApp(event)">
-        <i class="bi bi-whatsapp"></i>
-        WhatsApp
-      </a>
-      <button class="share-btn share-btn-secondary" onclick="shareSMS(event)">
-        <i class="bi bi-chat-dots"></i>
-        SMS
-      </button>
-      <button class="share-btn share-btn-outline" onclick="copyLink(event)">
-        <i class="bi bi-link-45deg"></i>
-        Copy
-      </button>
-    </div>
-  </div>
-</div>
-
-<script>
-// YouTube video fix
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('YouTube fix loaded');
-  
-  // Wait a bit for page to fully load
-  setTimeout(function() {
-    const ytElements = document.querySelectorAll('.yt-lite');
-    console.log('Found YT elements:', ytElements.length);
-    
-    ytElements.forEach(element => {
-      const videoId = element.dataset.id;
-      console.log('Processing video ID:', videoId);
-      
-      if (!videoId) return;
-      
-      // Force set background image
-      const imgUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
-      element.style.backgroundImage = `url("${imgUrl}")`;
-      element.style.backgroundSize = 'cover';
-      element.style.backgroundPosition = 'center';
-      
-      // Create play button if it doesn't exist
-      if (!element.querySelector('.yt-play')) {
-        const playButton = document.createElement('button');
-        playButton.className = 'yt-play';
-        playButton.setAttribute('aria-label', 'Play video');
-        element.appendChild(playButton);
+      // Example rh for Warehouse Deals (checked by default)
+      if (document.getElementById('warehouseDeals').checked) {
+        // Amazon Warehouse Deals browse node varies; placeholder facet:
+        params.append('rh', 'p_n_deal_type:warehouse_deals');
       }
-      
-      // Add click handler
-      element.addEventListener('click', function() {
-        if (element.classList.contains('activated')) return;
-        
-        console.log('Video clicked, loading iframe');
-        element.classList.add('activated');
-        
-        const iframe = document.createElement('iframe');
-        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&modestbranding=1&rel=0`;
-        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-        iframe.allowFullscreen = true;
-        iframe.style.width = '100%';
-        iframe.style.height = '100%';
-        iframe.style.border = 'none';
-        iframe.style.position = 'absolute';
-        iframe.style.top = '0';
-        iframe.style.left = '0';
-        
-        element.innerHTML = '';
-        element.appendChild(iframe);
-      });
+      if (document.getElementById('primeOnly').checked) params.append('rh', 'p_85:2470955011');
+      if (document.getElementById('lightningDeals').checked) params.append('rh', 'p_n_deal_type:lightning_deal');
+      if (document.getElementById('coupons').checked) params.append('rh', 'p_n_is_coupon_eligible:1');
+      if (document.getElementById('freeShipping').checked) params.append('rh', 'p_76:1249156011');
+
+      const minP = document.getElementById('minPrice').value;
+      const maxP = document.getElementById('maxPrice').value;
+      if (minP) params.set('low-price', minP);
+      if (maxP) params.set('high-price', maxP);
+
+      // Open on Amazon
+      const url = 'https://www.amazon.com/s?' + params.toString();
+      window.open(url, '_blank', 'noopener');
     });
-  }, 1000); // Wait 1 second for everything to load
-});
-</script>
-  <script>
-function toggleAccordion(id){
-  const body = document.getElementById(id + '-body');
-  const btn  = document.querySelector('button[onclick*="' + id + '"]');
-  if (!body || !btn) return;
-
-  const willOpen = body.classList.contains('d-none');
-  body.classList.toggle('d-none', !willOpen);
-  btn.classList.toggle('collapsed', !willOpen);
-  btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-  const icon = btn.querySelector('.bi');
-  if (icon) icon.style.transform = willOpen ? 'rotate(180deg)' : 'rotate(0deg)';
-}
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-<script src="/navbar-loader.js" defer></script>
-<script src="/searchlogic-v2.js" defer></script>
-
-<script>
-  function scrollToForm(){
-    const el = document.getElementById('search-form');
-    if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-  }
-</script>
-  <script>
-  function shareWhatsApp(e){ if(e) e.preventDefault();
-    const msg = encodeURIComponent('Check this free Amazon deal finder: ' + location.href);
-    window.open('https://wa.me/?text=' + msg, '_blank', 'noopener,noreferrer');
-  }
-  function shareMessenger(e){ if(e) e.preventDefault();
-    const u = encodeURIComponent(location.href);
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + u, '_blank', 'noopener,noreferrer');
-  }
-  function shareSMS(e){ if(e) e.preventDefault();
-    const m = encodeURIComponent('Check this free Amazon deal finder: ' + location.href);
-    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) location.href = 'sms:?body=' + m;
-    else alert('SMS sharing is mobile-only. Message:\n\n' + decodeURIComponent(m));
-  }
-  function shareTwitter(e){ if(e) e.preventDefault();
-    const t = encodeURIComponent('Smart Amazon deal hunting starts here: ' + location.href);
-    window.open('https://twitter.com/intent/tweet?text=' + t, '_blank', 'noopener,noreferrer');
-  }
-  function shareFacebook(e){ if(e) e.preventDefault();
-    const u = encodeURIComponent(location.href);
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + u, '_blank', 'noopener,noreferrer');
-  }
-  function copyLink(e){
-    if(e) e.preventDefault();
-    navigator.clipboard.writeText(location.href).then(()=>{
-      const btn = (e && (e.target.closest('button')||e.target)) || null;
-      if(btn){ const t=btn.textContent; btn.textContent='Copied!'; setTimeout(()=>btn.textContent=t,2000); }
-    }).catch(()=>alert('Failed to copy link.'));
-  }
-</script>
-  <div id="footer-placeholder"></div>
-<script src="/footer-loader.js" defer></script>
-
+  </script>
 </body>
+
 </html>
